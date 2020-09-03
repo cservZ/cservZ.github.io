@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-	<title>Bence Cservenák</title>
+	<title>Cservenák Bence</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="./assets/img/icon.png">
@@ -11,12 +11,14 @@
 	<link rel="stylesheet" href="./assets/css/fixed.css">
 </head>
 <body data-target="#navbarResponsive">
+    <!-- Start of Home Section -->
+
 	<div id="home">
-		<!-- Navigation -->
+		<!-- Start of Navigation -->
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<a href="#" class="navbar-brand js-scroll">
-				<h1>Bence Cservenák</h1>
+				<h1>Cservenák Bence</h1>
 			</a>
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
@@ -25,16 +27,18 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a href="#home" class="nav-link js-scroll">Home</a>
+						<a href="#home" class="nav-link js-scroll">Főoldal</a>
 					</li>
 					<li class="nav-item">
-						<a href="#teaching" class="nav-link js-scroll">Teaching (In Hungarian)</a>
+						<a href="#teaching" class="nav-link js-scroll">Oktatás</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 
-		<!-- Landing Area -->
+        <!-- End of Navigation -->
+
+		<!-- Start of Landing Area -->
 
 		<div class="landing">
 			<div class="home-wrap">
@@ -42,40 +46,32 @@
 			</div>
 		</div>
 
-		<div class="profile">
-			<div class="row d-flex justify-content-center">
-				<div class="col-lg-5 col-md-8 col-sm-8 col-xs-10">
-					<div class="business-card">
-						<div class="media">
-								<div class="media-left">
-									<img src="./assets/img/profile.jpg" alt="Profile Image" class="media-object img-circle profile-img">
-								</div>
-								<div class="media-body">
-									<h2 class="media-heading">Bence Cservenák</h2>
-									<div class="job">University of Szeged</div>
-									<hr>
-									<div class="department">
-										<i class="fa fa-briefcase"></i> &nbsp;Department of Software Engineering
-									</div>
-									<div class="mail">
-										<i class="fa fa-envelope"></i> Cservenak.Bence@stud.u-szeged.hu
-									</div>
-								</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="profile text-center">
+			<div class="name">Cservenák Bence</div>
+            <div class="personal-info studies">Programtervező informatikus BSc, 3. évfolyam</div>
+            <div class="personal-info email">
+                <i class="fa fa-envelope fa-x"></i>
+                Cservenak.Bence@stud.u-szeged.hu
+            </div>
 		</div>
+
+        <!-- End of Landing Area -->
 	</div>
+
+    <!-- End of Home Section -->
 
 	<!-- Teaching Section -->
 
 	<div id="teaching">
 		<div class="jumbotron">
 			<div class="col-12 text-center">
-				<h3 class="heading">Teaching</h3>
+				<h3 class="heading">Oktatás</h3>
 				<div class="heading-underline"></div>
     		</div>
+
+            <div class="col-10" style="margin: auto">
+                <p>Kattints a kedvenc tárgyadra, és máris láthatod a hozzá tartozó anyagot!</p>
+            </div>
 
     		<div class="col-10 courses">
     			<div id="accordion">
@@ -96,7 +92,7 @@
     								<li>BASH: <a href="./teaching/os/B1.sh" target="_blank">B1</a>, <a href="./teaching/os/B2.sh" target="_blank">B2</a>, <a href="./teaching/os/B3.sh" target="_blank">B3</a></li>
     								<li>AWK: A1, A2, A3</li>
     							</ul>
-    							<p><a href="https://www.youtube.com/playlist?list=PLIS5LOjVe6zA9ih2xVXUJ8RORzz6k6fiY" target="_blank">Távoktatás playlist</a> <img src="https://image.flaticon.com/icons/png/128/600/600176.png" alt="Hot Deal" class="hot-deal"></p>
+    							<p><a href="https://www.youtube.com/playlist?list=PLIS5LOjVe6zA9ih2xVXUJ8RORzz6k6fiY" target="_blank">Távoktatás playlist</a></p>
     						</div>
     					</div>
     				</div>
@@ -155,20 +151,19 @@
     							<hr>
     							<h5>Gyakorlati anyag</h5>
 
-    							<ul>
-    								<li>1. gyakorlat: Követelmények, Python alapok (<a href="./teaching/szkriptnyelvek/gyak01.pdf" target="_blank">diasor</a>)</li>
-    								<li>2. gyakorlat: Python - Vezérlési szerkezetek (<a href="./teaching/szkriptnyelvek/gyak02.pdf" target="_blank">diasor</a>)</li>
-    								<li>3. gyakorlat: Python - Függvények, stringek, listák (<a href="./teaching/szkriptnyelvek/gyak03.pdf" target="_blank">diasor</a>)</li>
-    								<li>4. gyakorlat: Python - Dictionary-k, objektumorientáltság (<a href="./teaching/szkriptnyelvek/gyak04.pdf" target="_blank">diasor</a>)</li>
-    								<li>5. gyakorlat: Python - Kivételkezelés, fájlkezelés (<a href="./teaching/szkriptnyelvek/gyak05.pdf" target="_blank">diasor</a>)</li>
-    								<li>6. gyakorlat: <span class="red">1. ZH (Python)</span></li>
-    								<li>7. gyakorlat: HTML és CSS ismétlés, JavaScript alapok (<a href="./teaching/szkriptnyelvek/gyak07.pdf" target="_blank">diasor</a>)</li>
-    								<li>8. gyakorlat: JavaScript - Vezérlési szerkezetek, függvények, stringek (diasor)</li>
-    								<li>9. gyakorlat: JavaScript - Adatszerkezetek (diasor)</li>
-    								<li>10. gyakorlat: JavaScript - Objektumorientáltság (diasor)</li>
-    								<li>11. gyakorlat: <span class="red">2. ZH (JavaScript)</span></li>
-    								<li>12. gyakorlat: Javító ZH</li>
-    							</ul>
+    							<p>A gyakorlati anyag elérhető <a href="https://okt.sed.hu/szkriptnyelvek/" target="_blank">ezen a linken</a>.</p>
+                                <p><a href="https://www.youtube.com/channel/UCYzRAs55YzQTEvQDJg6yDaQ" target="_blank">Keleti Márton csatornája (heti livestream-ek)</a></p>
+
+
+                                <hr>
+                                <h5>Feladatsorok az online konzultációkra</h5>
+
+                                <ul>
+                                    <li><a href="#">1. feladatsor</a> (Python nyelvi alapok, vezérlési szerkezetek)</li>
+                                    <li><a href="#">2. feladatsor</a> (Python függvények, stringek)</li>
+                                    <li><a href="#">3. feladatsor</a> (Python adatszerkezetek: lista, dictionary)</li>
+                                    <li><a href="#">4. feladatsor</a> (Python OOP, kivételkezelés, fájlkezelés)</li>
+                                </ul>
     						</div>
     					</div>
     				</div>
@@ -193,7 +188,7 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
+	<!-- Start of Footer -->
 
 	<div id="footer">
 		<footer>
@@ -202,6 +197,8 @@
 			</div>
 		</footer>
 	</div>
+
+    <!-- End of Footer -->
 
 	<!-- Scripts -->
 

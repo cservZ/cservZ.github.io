@@ -27,12 +27,37 @@ ul li {
 	margin-top: 5px;
 }
 
+.jumbotron {
+	margin: 0;
+	padding: 1.5rem 0 3.5rem;
+	border-radius: 0;
+}
+
+h3.heading {
+	font-size: 1.9rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 1.2rem;
+}
+
+.heading-underline {
+	width: 16rem;
+	height: .2rem;
+	background-color: #1EBBA3;
+	margin: 0 auto 1rem;
+}
+
 .bold {
 	font-weight: bold;
 }
 
 .red {
 	color: red;
+}
+
+.btn {
+	width: 100%;
+	text-align: left;
 }
 
 .btn-link {
@@ -79,7 +104,7 @@ ul li {
 	color: #1EBBA3 !important;
 }
 
-/* Landing Area */
+/* === LANDING AREA === */
 
 .home-inner {
 	background-image: url('../img/banner.jpg');
@@ -92,79 +117,29 @@ ul li {
 	top: 40%;
 	z-index: 1;
 	margin: auto;
+	color: #fff;
 }
 
-/* Business Card */
-
-@keyframes showBusinessCard {
-	from { opacity: 0; }
-	to { opacity: 1;  }
-}
-
-.business-card {
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 1.5rem 1rem;
-	box-shadow: 2px 2px 5px #000;
-	opacity: 0;
-	animation: showBusinessCard 2s 1s forwards;
-}
-
-.media-left {
-	margin-right: 20px;
-}
-
-.profile-img {
-	height: 160px;
-	background-color: #fff;
-	border-radius: 10px;
-}
-
-.media-heading {
-	margin-bottom: 0;
-}
-
-.job {
-	color: #777;
-	font-size: 17px;
-}
-
-.mail {
-	font-size: 16px;
-	font-family: monospace;
-	margin-top: 10px;
-}
-
-.department {
-	font-size: 16px;
-}
-
-.fa {
-	margin-right: 3px;
-}
-
-/* Teaching */
-
-.jumbotron {
-	margin: 0;
-	padding: 1.5rem 0 3.5rem;
-	border-radius: 0;
-}
-
-h3.heading {
-	font-size: 1.9rem;
-	font-weight: 500;
+.profile .name {
+	font-size: 3.4rem;
+	font-weight: 700;
+	letter-spacing: .3rem;
+	text-shadow: .1rem .1rem .8rem #000;
 	text-transform: uppercase;
-	margin-bottom: 1.2rem;
+	margin-bottom: .6rem;
 }
 
-.heading-underline {
-	width: 16rem;
-	height: .2rem;
-	background-color: #1EBBA3;
-	margin: 0 auto 1rem;
+.profile .personal-info {
+	font-size: 1.8rem;
+	text-shadow: .1rem .1rem .5rem #000;
+	padding-bottom: .8rem;
 }
+
+.profile .email {
+	font-family: monospace;
+}
+
+/* === TEACHING SECTION === */
 
 .courses {
 	margin: auto;
@@ -182,12 +157,7 @@ h3.heading {
 	font-size: 16px;
 }
 
-.hot-deal {
-	width: 32px;
-	height: 32px;
-}
-
-/* Footer */
+/* === FOOTER === */
 
 #footer::before {
 	margin-top: 2.5rem;
