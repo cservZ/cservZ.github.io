@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* Global Styles */
+
+body {
+	overflow-x: hidden;
+	font: 18px 'Open Sans', sans-serif;
+}
+
+.offset::before {
+	display: block;
+	content: "";
+	height: 4rem;
+	margin-top: -4rem;
+}
+
+h5 {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+img {
+	margin-bottom: 1rem;
+}
+
+ul li {
+	margin-top: 5px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.red {
+	color: red;
+}
+
+.btn-link {
+	text-decoration: none !important;
+	outline: none !important;
+	color: #000 !important;
+}
+
+.btn-link:hover {
+	color: gray;
+}
+
+/* Navigation */
+
+.navbar {
+	background-color: rgb(0, 0, 0, 0.6) !important;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+}
+
+.navbar-brand h1 {
+	height: 2rem;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.navbar-nav li {
+	padding-right: .7rem;
+}
+
+.navbar-dark .nav-link {
+	color: #fff !important;
+	padding-top: .8rem;
+}
+
+.navbar-dark .nav-link:hover {
+	color: #1EBBA3 !important;
+}
+
+.highlighted {
+	color: #1EBBA3 !important;
+}
+
+/* Landing Area */
+
+.home-inner {
+	background-image: url('../img/banner.jpg');
+}
+
+.profile {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 40%;
+	z-index: 1;
+	margin: auto;
+}
+
+/* Business Card */
+
+@keyframes showBusinessCard {
+	from { opacity: 0; }
+	to { opacity: 1;  }
+}
+
+.business-card {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 1.5rem 1rem;
+	box-shadow: 2px 2px 5px #000;
+	opacity: 0;
+	animation: showBusinessCard 2s 1s forwards;
+}
+
+.media-left {
+	margin-right: 20px;
+}
+
+.profile-img {
+	height: 160px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.media-heading {
+	margin-bottom: 0;
+}
+
+.job {
+	color: #777;
+	font-size: 17px;
+}
+
+.mail {
+	font-size: 16px;
+	font-family: monospace;
+	margin-top: 10px;
+}
+
+.department {
+	font-size: 16px;
+}
+
+.fa {
+	margin-right: 3px;
+}
+
+/* Teaching */
+
+.jumbotron {
+	margin: 0;
+	padding: 1.5rem 0 3.5rem;
+	border-radius: 0;
+}
+
+h3.heading {
+	font-size: 1.9rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 1.2rem;
+}
+
+.heading-underline {
+	width: 16rem;
+	height: .2rem;
+	background-color: #1EBBA3;
+	margin: 0 auto 1rem;
+}
+
+.courses {
+	margin: auto;
+}
+
+.card {
+	margin-bottom: 10px;
+}
+
+.card-header .btn {
+	font-size: 18px;
+}
+
+.card-body {
+	font-size: 16px;
+}
+
+.hot-deal {
+	width: 32px;
+	height: 32px;
+}
+
+/* Footer */
+
+#footer::before {
+	margin-top: 2.5rem;
+}
+
+footer {
+	background-color: #40474E;
+	color: #fff;
+	padding-top: 1rem;
+}
+
+footer p {
+	text-transform: uppercase;
+}
