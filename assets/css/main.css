@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-/* Global Styles */
+/* === GLOBAL STYLES === */
 
 body {
 	overflow-x: hidden;
@@ -45,7 +45,7 @@ ul li {
 	color: gray;
 }
 
-/* Navigation */
+/* === NAVIGATION === */
 
 .navbar {
 	background-color: rgb(0, 0, 0, 0.6) !important;
@@ -57,7 +57,8 @@ ul li {
 
 .navbar-brand h1 {
 	height: 2rem;
-	font-size: 2rem;
+	padding-top: .5rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 }
 
