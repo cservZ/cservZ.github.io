@@ -127,6 +127,7 @@ h3.heading {
 	text-shadow: .1rem .1rem .8rem #000;
 	text-transform: uppercase;
 	margin-bottom: .6rem;
+	cursor: pointer;
 }
 
 .profile .personal-info {
@@ -171,4 +172,46 @@ footer {
 
 footer p {
 	text-transform: uppercase;
+}
+
+/* === MEDIA QUERIES === */
+
+@media (max-width: 653px) {
+	.profile .name {
+		font-size: 3rem;
+	}
+
+	.profile .personal-info {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 522px) {
+	.profile .name {
+		font-size: 2.6rem;
+	}
+
+	.profile .personal-info {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 464px) {
+	.profile .name {
+		font-size: 2.2rem;
+	}
+
+	.profile .personal-info {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 368px) {
+	.profile .name {
+		font-size: 2rem;
+	}
+
+	.profile .personal-info {
+		font-size: 1rem;
+	}
 }
