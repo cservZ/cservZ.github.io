@@ -37,3 +37,7 @@ Egy moziban összesen 50 darab ülőhely van, ezek 1-től 50-ig vannak számozva
 46
 49
 ```
+
+
+### 3. feladat: Csokigyár
+
