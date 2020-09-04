@@ -1,3 +1,7 @@
+<style>
+	h1:first-of-type { display: none; }
+</style>
+
 # Szkriptnyelvek - 1. gyakorló feladatsor
 
 ## Python nyelvi alapok, vezérlési szerkezetek
