@@ -22,7 +22,7 @@ Egy kisvárosi moziban összesen 40 szék van, amelyek 1-től 40-ig vannak szám
 
 **Elvárt kimenet:**
 
-```python
+```
 1
 4
 7
@@ -48,7 +48,7 @@ Jónás, a csokigyáros úgy döntött, hogy nyereményjátékot hirdet: minden 
 
 **Példa:**
 
-```python
+```
 Csoki gyártási száma: 40
 Gratulálok, nyertél!
 ```
@@ -64,7 +64,7 @@ Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifo
 
 **Példa:**
 
-```python
+```
 Hőmérséklet (F): 77
 77.0 F = 25.0 C
 ```
@@ -78,7 +78,7 @@ Ricsi idén megfogadta, hogy minél jobb átlagot szeretne elérni az egyetemen,
 
 **Példa:**
 
-```python
+```
 Hány jegyet kaptál?: 5
 Add meg a jegyeidet:
 3
