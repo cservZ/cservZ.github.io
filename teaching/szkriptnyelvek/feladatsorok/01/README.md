@@ -22,7 +22,7 @@ Egy kisvárosi moziban összesen 40 szék van, amelyek 1-től 40-ig vannak szám
 
 **Elvárt kimenet:**
 
-```
+```python
 1
 4
 7
@@ -48,7 +48,7 @@ Jónás, a csokigyáros úgy döntött, hogy nyereményjátékot hirdet: minden 
 
 **Példa:**
 
-```
+```python
 Csoki gyártási száma: 40
 Gratulálok, nyertél!
 ```
@@ -64,7 +64,28 @@ Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifo
 
 **Példa:**
 
-```
+```python
 Hőmérséklet (F): 77
 77.0 F = 25.0 C
+```
+
+
+### 5. feladat: Átlagszámítás
+
+Ricsi idén megfogadta, hogy minél jobb átlagot szeretne elérni az egyetemen, hogy az ösztöndíjból vehessen egy új laptopot (amire aztán Arch Linuxot telepít).
+
+Írj programot, amely először beolvassa, hogy összesen hány jegyet kapott Ricsi a félévben (egész szám), majd ennyi érdemjegyet beolvas a standard inputról (az érdemjegyek szintén egész számok). A program számítsa ki ezeknek az érdemjegyeknek az átlagát. (Az átlag kiszámítása: jegyek összege / jegyek darabszáma)
+
+**Példa:**
+
+```python
+Hány jegyet kaptál?: 5
+Add meg a jegyeidet:
+3
+5
+5
+4
+5
+-------------------------------
+A jegyek átlaga: 4.4
 ```
