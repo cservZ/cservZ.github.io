@@ -56,6 +56,15 @@ Gratulálok, nyertél!
 
 ### 4. feladat: Hőmérséklet
 
-Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az USA többek között arról híres, hogy az európai ember számára érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérseklet mérésére használt Fahrenheit skálának a megértését.
+Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az USA többek között arról híres, hogy az európai ember számára szinte érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérseklet mérésére használt Fahrenheit skálát.
 
-Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra!
+Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra! Az átváltási képlet:
+
+```Hőmérséklet (°C) = (Hőmérséklet (°F) - 32) * 5/9```
+
+**Példa:**
+
+```
+Hőmérséklet (F): 77
+77.0 F = 25.0 C
+```
