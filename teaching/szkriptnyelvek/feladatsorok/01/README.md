@@ -56,4 +56,6 @@ Gratulálok, nyertél!
 
 ### 4. feladat: Hőmérséklet
 
-Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba.
+Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az USA többek között arról híres, hogy az európai ember számára érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérseklet mérésére használt Fahrenheit skálának a megértését.
+
+Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra!
