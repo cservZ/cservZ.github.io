@@ -16,7 +16,7 @@ A gimnazista Károly informatikaórán odafigyelés helyett mémeket nézegetett
 
 ### 2. feladat: Mozi
 
-Egy moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Annak érdekében, hogy a moziba járók be tudják tartani a javasolt másfél méteres védőtávolságot, a mozi igazgatója úgy dönt, hogy csak minden harmadik ülőhelyet engedik lefoglalni a weboldalukon.
+Egy kisvárosi moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Annak érdekében, hogy a moziba járók be tudják tartani a javasolt másfél méteres védőtávolságot, a mozi igazgatója úgy dönt, hogy csak minden harmadik ülőhelyet engedik lefoglalni a weboldalukon.
 
 Írj Python szkriptet, amely kiírja 1-től 40-ig minden harmadik szék számát! A kiíratás az 1-es sorszámú székkel kezdődjön!
 
@@ -41,3 +41,19 @@ Egy moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Annak
 
 
 ### 3. feladat: Csokigyár
+
+Jónás, a csokigyáros úgy döntött, hogy nyereményjátékot hirdet: minden 10. legyártott tábla csokoládéba egy aranyszelvényt helyez. A szelvények szerencsés megtalálói egy különleges látogatást tehetnek Jónás gyokigyárába.
+
+Írj Python szkriptet, amely beolvassa a konzolról egy csoki gyártási sorszámát (egész szám). Ha a szám 10-zel osztható, akkor írasd ki a `Gratulálok, nyertél!`, ellenkező esetben pedig a `Sajnos nem nyert!` szöveget a konzolra!
+
+**Példa:**
+
+```
+Csoki gyártási száma: 40
+Gratulálok, nyertél!
+```
+
+
+### 4. feladat: Hőmérséklet
+
+Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba.
