@@ -58,23 +58,24 @@ Gratulálok, nyertél!
 
 Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az USA többek között arról híres, hogy az európai ember számára szinte érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérseklet mérésére használt Fahrenheit skálát.
 
-Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra! Az átváltási képlet:
+Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra! Képlet az átváltáshoz:
 
 ```Hőmérséklet (°C) = (Hőmérséklet (°F) - 32) * 5/9```
 
 **Példa:**
 
 ```
-Hőmérséklet (F): 77
+Hőmérséklet Fahrenheitben: 77
+-------------------------------
 77.0 F = 25.0 C
 ```
 
 
 ### 5. feladat: Átlagszámítás
 
-Ricsi idén megfogadta, hogy minél jobb átlagot szeretne elérni az egyetemen, hogy az ösztöndíjból vehessen egy új laptopot (amire aztán Arch Linuxot telepít).
+Ricsi idén megfogadta, hogy minél jobb átlagot szeretne elérni az egyetemen, hogy az ösztöndíjból egy új laptopot vehessen.
 
-Írj programot, amely először beolvassa, hogy összesen hány jegyet kapott Ricsi a félévben (egész szám), majd ennyi érdemjegyet beolvas a standard inputról (az érdemjegyek szintén egész számok). A program számítsa ki ezeknek az érdemjegyeknek az átlagát. (Az átlag kiszámítása: jegyek összege / jegyek darabszáma)
+Írj Python szkriptet, amely először beolvassa, hogy hány jegyet kapott Ricsi összesen a félévben (egész szám), majd ezt követően beolvas ennyi darab érdemjegyet (egész számok)! A szkript számítsa ki a jegyek átlagát! Az átlagot a jegyek összegének és darabszámának hányadosaként kapjuk meg.
 
 **Példa:**
 
@@ -89,3 +90,75 @@ Add meg a jegyeidet:
 -------------------------------
 A jegyek átlaga: 4.4
 ```
+
+
+### 6. feladat: Gyakorlati jegy
+
+A szkriptnyelvek gyakorlat osztályozása a következő ponthatárok alapján történik:
+
+|  Ponthatárok  |   Érdemjegy   |
+|:-------------:|:-------------:|
+| 89 - 100 pont | Jeles (5)     |
+|  76 - 88 pont | Jó (4)        |
+|  63 - 75 pont | Közepes (3)   |
+|  50 - 62 pont | Elégséges (2) |
+|  0 - 49 pont  | Elégtelen (1) |
+
+Írj Python programot, amely beolvassa a gyakorlaton elért pontszámot (egész szám), és kiírja a pontszámnak megfelelő érdemjegyet!
+
+**Példa:**
+
+```
+A pontszámod: 96
+--------------------------
+Az érdemjegyed: Jeles (5)
+```
+
+
+### 7. Stonks
+
+A csokigyáros Jónás nyereményjátéka nagy sikert aratott a vásárlók körében. A statisztikák alapján Jónás minden nap dupla annyi csokit ad el, mint az előző napon.
+
+Jónás ki szeretné számolni, hogy egy héten várhatóan mennyi csokit fog eladni. Írj Python szkriptet, amely beolvassa a hétfőn eladott csokik számát (egész szám), majd kiszámítja, hogy 7 nap alatt összesen mennyi csokit fog Jónás eladni, ha minden nap kétszer annyi csokit ad el, mint az előző nap?
+
+**Példa:**
+
+```
+A hétfőn eladott csokik száma: 500
+-------------------------------------
+A héten 63500 csokit adunk el.
+```
+
+
+### 8. Számológép
+
+Pomeló Zoltán egy zöldségesboltot üzemeltet. Ahhoz, hogy az árakat könnyebben tudja számolni, szüksége van egy számológépre.
+
+Írj Python nyelven egy egyszerű számológépet, amely a négy alapműveletet (összeadás, kivonás, szorzás, osztás) tudja értelmezni!
+
+* A program beolvas két valós számot és egy műveleti jelet (szöveg).
+* Ha a műveleti jel helyes (`+`, `-`, `*`, `/` szimbólumok valamelyike), végezzük el a megfelelő műveletet!
+* A felsorolt négy jeltől eltérő műveleti jel esetén írassunk ki hibaüzenetet!
+* Kezeljük le a nullával osztás esetét is: ha nullával szeretnénk osztani, írassunk ki hibaüzenetet!
+
+**Példa:**
+
+```
+Első szám: 3.8
+Második szám: 4.2
+Művelet: *
+---------------------------
+Az eredmény: 15.96
+```
+
+```
+Első szám: 5.0
+Második szám: 0.0
+Művelet: /
+---------------------------
+HIBA: Nullával nem osztunk!
+```
+
+
+### 9. Négyzetgyök
+
