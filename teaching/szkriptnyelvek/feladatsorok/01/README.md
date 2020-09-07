@@ -42,7 +42,7 @@ Egy moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Azér
 
 ### 3. feladat: Csokigyár
 
-Jónás, a csokigyáros úgy döntött, hogy nyereményjátékot hirdet: minden 10. legyártott tábla csokoládéba egy aranyszelvényt helyez. A szelvények szerencsés megtalálói egy különleges látogatást tehetnek Jónás gyokigyárába.
+Jónás, a csokigyáros úgy döntött, hogy nyereményjátékot hirdet: minden 10. legyártott tábla csokoládéba egy aranyszelvényt helyez. A szelvények szerencsés megtalálói egy különleges látogatást tehetnek Jónás csokigyárába.
 
 Írj Python szkriptet, amely beolvassa a konzolról egy csoki gyártási sorszámát (egész szám). Ha a szám 10-zel osztható, akkor írasd ki a `Gratulálok, nyertél!`, ellenkező esetben pedig a `Sajnos nem nyert!` szöveget a konzolra!
 
@@ -56,7 +56,7 @@ Gratulálok, nyertél!
 
 ### 4. feladat: Hőmérséklet
 
-Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az USA többek között arról híres, hogy az európai ember számára szinte érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérseklet mérésére használt Fahrenheit skálát.
+Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az USA többek között arról híres, hogy az európai ember számára szinte érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérséklet mérésére használt Fahrenheit skálát.
 
 Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra! Képlet az átváltáshoz:
 
@@ -177,3 +177,32 @@ Adj meg egy számot: 2
 
 ### 10. Gondoltam egy számra
 
+Készíts egy egyszerű számkitalálós játékot Python nyelven! A gép "gondol" egy számra 1 és 1000 között (az 1 és az 1000 is még beletartozik a lehetséges számok intervallumába), és a felhasználó ezt a számot próbálja meg minél kevesebb tippből kitalálni. A felhasználónak a játék elején 20 élete (próbálkozása) van.
+
+* Hozz létre egy változót a felhasználói életeinek számára! Ez kezdetben legyen 20!
+* Hozz létre egy változót a gondolt számnak! Ez lehet fix szám vagy [véletlenszerűen generált érték](https://www.w3schools.com/python/ref_random_randint.asp).
+* A játék során minden körben olvasd be a felhasználó aktuális tippjét a konzolról (egész szám)!
+* Ha a felhasználó nem találja el a gondolt számot, akkor írasd ki, hogy a gondolt szám kisebb-e vagy nagyobb-e a felhasználó tippjénél! Csökkentsd a felhasználó életeinek számát 1-gyel!
+* Ha a felhasználó eltalálja a gondolt számot, akkor a játéknak vége, és a felhasználó nyert. Ebben az esetben írasd ki a `Nyertél!` szöveget, a gondolt számot és a megmaradt életek számát!
+* Ha elfogynak a felhasználó életei, akkor a játéknak vége, és a felhasználó veszít. Ebben az esetben írasd ki a `Sajnos nem nyert!` szöveget, és a gondolt számot!
+
+**Példa:**
+
+```
+Gondoltam egy számra 1 és 1000 között, találd ki melyikre! Életek száma: 20
+Tipp: 500
+Kisebb
+Tipp: 250
+Nagyobb
+Tipp: 350
+Nagyobb
+Tipp: 400
+Nagyobb
+Tipp: 450
+Kisebb
+Tipp: 420
+--------------------------------
+Gratulálok, nyertél!
+A gondolt szám valóban 420 volt.
+Felhasznált életek: 5
+```
