@@ -9,7 +9,7 @@
 
 ### 1. feladat: Károly
 
-A gimnazista Károly informatikaórán odafigyelés helyett mémeket nézegetett, ezért az informatikatanártól azt a régimódi büntetést kapta, hogy le kell írnia a nevét 100-szor.
+A gimnazista Károly informatikaórán odafigyelés helyett mémeket nézegetett, ezért az informatikatanártól azt a régimódi büntetést kapta, hogy le kell írnia 100-szor a nevét.
 
 Írj Python szkriptet, amely kiírja a konzolra a `Károly` szöveget 100 alkalommal!
 
@@ -56,7 +56,7 @@ Gratulálok, nyertél!
 
 ### 4. feladat: Hőmérséklet
 
-Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az USA többek között arról híres, hogy az európai ember számára szinte érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérséklet mérésére használt Fahrenheit skálát.
+Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az amerikaiak többek között arról híresek, hogy az európai ember számára szinte érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérséklet mérésére használt Fahrenheit skálát.
 
 Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra! Képlet az átváltáshoz:
 
