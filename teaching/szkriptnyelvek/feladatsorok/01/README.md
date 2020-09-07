@@ -204,5 +204,5 @@ Tipp: 420
 --------------------------------
 Gratulálok, nyertél!
 A gondolt szám valóban 420 volt.
-Felhasznált életek: 5
+Megmaradt életek: 15
 ```
