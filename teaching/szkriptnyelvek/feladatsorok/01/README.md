@@ -16,7 +16,7 @@ A gimnazista Károly informatikaórán odafigyelés helyett mémeket nézegetett
 
 ### 2. feladat: Mozi
 
-Egy kisvárosi moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Annak érdekében, hogy a moziba járók be tudják tartani a javasolt másfél méteres védőtávolságot, a mozi igazgatója úgy dönt, hogy csak minden harmadik ülőhelyet engedik lefoglalni a weboldalukon.
+Egy moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Azért, hogy a moziba járók be tudják tartani a javasolt másfél méteres védőtávolságot, a mozi igazgatója úgy dönt, hogy csak minden harmadik ülőhelyet engedik lefoglalni a weboldalukon.
 
 Írj Python szkriptet, amely kiírja 1-től 40-ig minden harmadik szék számát! A kiíratás az 1-es sorszámú székkel kezdődjön!
 
@@ -161,4 +161,19 @@ HIBA: Nullával nem osztunk!
 
 
 ### 9. Négyzetgyök
+
+Zoltán egyik nap úgy dönt, hogy szeretné, ha a számológépe négyzetgyököt is tudna vonni.
+
+Készíts Python szkriptet, amely beolvas egy egész számot a konzolról! Ha ez a szám nemnegatív, a program számítsa ki a négyzetgyökét! Ellenkező esetben, negatív szám esetén írass ki hibaüzenetet! Tipp: *n* négyzetgyöke megyezik az *n<sup>1/2</sup>* értékével.
+
+**Példa:**
+
+```
+Adj meg egy számot: 2
+-----------------------------------
+2 négyzetgyöke: 1.4142135623730951
+```
+
+
+### 10. Gondoltam egy számra
 
