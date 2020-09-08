@@ -54,20 +54,22 @@ Gratulálok, nyertél!
 ```
 
 
-### 4. feladat: Hőmérséklet
+### 4. feladat: Piramis
 
-Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik az Egyesült Államokba. Az amerikaiak többek között arról híresek, hogy az európai ember számára szinte érthetetlen mértékegységeket használnak. Noémi különösen összezavarónak találja a hőmérséklet mérésére használt Fahrenheit skálát.
+Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik a világban. Egyik kedvenc látnivalója a egyiptomi piramisok.
 
-Írj programot, amely beolvas egy valós hőmérsékleti értéket Fahrenheitben, és átváltja ezt Celsiusra! Képlet az átváltáshoz:
-
-```Hőmérséklet (°C) = (Hőmérséklet (°F) - 32) * 5/9```
+Írj programot, amely beolvas egy magasság értéket (egész szám), majd kirajzol a konzolra egy ilyen magas piramist `*` (csillag) karakterekből, a példán látható módon!
 
 **Példa:**
 
 ```
-Hőmérséklet Fahrenheitben: 77
--------------------------------
-77.0 F = 25.0 C
+Add meg, hogy milyen magas legyen a piramis: 5
+
+    *
+   ***
+  *****
+ *******
+*********
 ```
 
 
