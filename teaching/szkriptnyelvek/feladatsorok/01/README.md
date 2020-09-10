@@ -16,7 +16,7 @@ A gimnazista Károly informatikaórán odafigyelés helyett mémeket nézegetett
 
 ### 2. feladat: Mozi
 
-Egy moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Azért, hogy a moziba járók be tudják tartani a javasolt másfél méteres védőtávolságot, a mozi üzemeltetői úgy döntenek, hogy csak minden harmadik ülőhelyet engedik lefoglalni a weboldalukon.
+Egy moziban összesen 40 szék van, amelyek 1-től 40-ig vannak számozva. Azért, hogy a moziba járók be tudják tartani a javasolt másfél méteres védőtávolságot, a mozi üzemeltetői úgy döntenek, hogy csak minden harmadik ülőhelyet engednek lefoglalni a weboldalukon.
 
 Írj Python szkriptet, amely kiírja 1-től 40-ig minden harmadik szék számát! A kiíratás az 1-es sorszámú székkel kezdődjön!
 
