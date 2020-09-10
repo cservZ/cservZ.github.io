@@ -128,7 +128,7 @@ Jónás ki szeretné számolni, hogy egy héten várhatóan mennyi csokit fog el
 ```
 A hétfőn eladott csokik száma: 500
 -------------------------------------
-A héten 32000 csokit adunk el.
+A héten 63500 csokit adunk el.
 ```
 
 
