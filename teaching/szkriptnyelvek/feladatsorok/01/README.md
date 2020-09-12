@@ -58,7 +58,7 @@ Gratulálok, nyertél!
 
 Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik a világban. Egyik kedvenc látnivalója a egyiptomi piramisok.
 
-Írj programot, amely beolvas egy magasság értéket (egész szám), majd kirajzol a konzolra egy ilyen magas piramist `*` (csillag) karakterekből, a példán látható módon!
+Írj Python programot, amely beolvas egy magasság értéket (egész szám), majd kirajzol a konzolra egy ilyen magas piramist `*` (csillag) karakterekből a példán látható módon! Hibakezeléssel nem kell foglalkoznod.
 
 **Példa:**
 
@@ -164,7 +164,7 @@ HIBA: Nullával nem osztunk!
 
 ### 9. Négyzetgyök
 
-Zoltán egyik nap úgy dönt, hogy szeretné, ha a számológépe négyzetgyököt is tudna vonni.
+Zoltán egyik nap úgy döntött, hogy szeretné, ha a számológépe négyzetgyököt is tudna vonni.
 
 Készíts Python szkriptet, amely beolvas egy egész számot a konzolról! Ha ez a szám nemnegatív, a program számítsa ki a négyzetgyökét! Ellenkező esetben, negatív szám esetén írass ki hibaüzenetet! Tipp: *n* négyzetgyöke megyezik az *n<sup>1/2</sup>* értékével.
 
@@ -185,8 +185,8 @@ Készíts egy egyszerű számkitalálós játékot Python nyelven! A gép "gondo
 * Hozz létre egy változót a gondolt számnak! Ez lehet fix szám vagy [véletlenszerűen generált érték](https://www.w3schools.com/python/ref_random_randint.asp).
 * A játék során minden körben olvasd be a felhasználó aktuális tippjét a konzolról (egész szám)!
 * Ha a felhasználó nem találja el a gondolt számot, akkor írasd ki, hogy a gondolt szám kisebb-e vagy nagyobb-e a felhasználó tippjénél! Csökkentsd a felhasználó életeinek számát 1-gyel!
-* Ha a felhasználó eltalálja a gondolt számot, akkor a játéknak vége, és a felhasználó nyert. Ebben az esetben írasd ki a `Nyertél!` szöveget, a gondolt számot és a megmaradt életek számát!
-* Ha elfogynak a felhasználó életei, akkor a játéknak vége, és a felhasználó veszít. Ebben az esetben írasd ki a `Sajnos nem nyert!` szöveget, és a gondolt számot!
+* Ha a felhasználó eltalálja a gondolt számot, akkor a játéknak vége, és a felhasználó nyert. Ebben az esetben írasd ki a `Gratuálok, nyertél!` szöveget, a gondolt számot és a megmaradt életek számát!
+* Ha elfogynak a felhasználó életei, akkor a játéknak vége, és a felhasználó veszít. Ebben az esetben írasd ki a `Sajnos nem nyertél!` szöveget, és a gondolt számot!
 
 **Példa:**
 
