@@ -56,7 +56,7 @@ Gratulálok, nyertél!
 
 ### 4. feladat: Piramis
 
-Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik a világban. Egyik kedvenc látnivalója a egyiptomi piramisok.
+Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik a világban. Egyik kedvenc látnivalója az egyiptomi piramisok.
 
 Írj Python programot, amely beolvas egy magasság értéket (egész szám), majd kirajzol a konzolra egy ilyen magas piramist `*` (csillag) karakterekből a példán látható módon! Hibakezeléssel nem kell foglalkoznod.
 
