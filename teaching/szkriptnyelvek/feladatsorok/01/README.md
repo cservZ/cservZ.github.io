@@ -58,7 +58,7 @@ Gratulálok, nyertél!
 
 Noémi, a Flying Duck Travels légitársaság utaskísérője munkájából kifolyólag sokat utazik a világban. Egyik kedvenc látnivalója az egyiptomi piramisok.
 
-Írj Python programot, amely beolvas egy magasság értéket (egész szám), majd kirajzol a konzolra egy ilyen magas piramist `*` (csillag) karakterekből a példán látható módon! Hibakezeléssel nem kell foglalkoznod.
+Írj Python programot, amely beolvas egy magasság értéket (egész szám), majd kirajzol a konzolra egy ilyen magas piramist `*` (csillag) karakterekből, a példán látható módon! Hibakezeléssel nem kell foglalkoznod.
 
 **Példa:**
 
@@ -75,7 +75,7 @@ Add meg, hogy milyen magas legyen a piramis: 5
 
 ### 5. feladat: Átlagszámítás
 
-Ricsi idén megfogadta, hogy minél jobb átlagot szeretne elérni az egyetemen, hogy az ösztöndíjból egy új laptopot vehessen.
+Ricsi idén elhatározta, hogy minél jobb átlagot szeretne elérni az egyetemen, hogy az ösztöndíjból egy új laptopot vehessen.
 
 Írj Python szkriptet, amely először beolvassa, hogy hány jegyet kapott Ricsi összesen a félévben (egész szám), majd ezt követően beolvas ennyi darab érdemjegyet (egész számok)! A szkript számítsa ki a jegyek átlagát! Az átlagot a jegyek összegének és darabszámának hányadosaként kapjuk meg.
 
@@ -119,9 +119,9 @@ Az érdemjegyed: Jeles (5)
 
 ### 7. Stonks
 
-A csokigyáros Jónás nyereményjátéka nagy sikert aratott a vásárlók körében. A statisztikák alapján Jónás minden nap dupla annyi csokit ad el, mint az előző napon.
+A csokigyáros Jónás nyereményjátéka nagy sikert aratott a vásárlók körében. A statisztikák alapján a csokigyár minden nap dupla annyi csokit ad el, mint az előző napon. Jónás ki szeretné számolni, hogy egy héten várhatóan mennyi csokit fog eladni. 
 
-Jónás ki szeretné számolni, hogy egy héten várhatóan mennyi csokit fog eladni. Írj Python szkriptet, amely beolvassa a hétfőn eladott csokik számát (egész szám), majd kiszámítja, hogy 7 nap alatt összesen mennyi csokit fog Jónás eladni, ha minden nap kétszer annyi csokit ad el, mint az előző nap?
+Írj Python szkriptet, amely beolvassa a hétfőn eladott csokik számát (egész szám), majd kiszámítja, hogy 7 nap alatt összesen mennyi csokit fog Jónás eladni, ha minden nap kétszer annyi csokit ad el, mint az előző napon!
 
 **Példa:**
 
@@ -166,7 +166,7 @@ HIBA: Nullával nem osztunk!
 
 Zoltán egyik nap úgy döntött, hogy szeretné, ha a számológépe négyzetgyököt is tudna vonni.
 
-Készíts Python szkriptet, amely beolvas egy egész számot a konzolról! Ha ez a szám nemnegatív, a program számítsa ki a négyzetgyökét! Ellenkező esetben, negatív szám esetén írass ki hibaüzenetet! Tipp: *n* négyzetgyöke megyezik az *n<sup>1/2</sup>* értékével.
+Készíts Python szkriptet, amely beolvas egy egész számot a konzolról! Ha ez a szám nemnegatív, a program számítsa ki a négyzetgyökét! Ellenkező esetben, ha a szám negatív, írass ki hibaüzenetet! Tipp: *n* négyzetgyöke megyezik az *n<sup>1/2</sup>* értékével.
 
 **Példa:**
 
@@ -179,7 +179,7 @@ Adj meg egy számot: 2
 
 ### 10. Gondoltam egy számra
 
-Készíts egy egyszerű számkitalálós játékot Python nyelven! A gép "gondol" egy számra 1 és 1000 között (az 1 és az 1000 is még beletartozik a lehetséges számok intervallumába), és a felhasználó ezt a számot próbálja meg minél kevesebb tippből kitalálni. A felhasználónak a játék elején 20 élete (próbálkozása) van.
+Készíts egy egyszerű számkitalálós játékot Python nyelven! A gép "gondol" egy számra 1 és 1000 között (az 1 és az 1000 is még beletartozik a lehetséges számok intervallumába), és a felhasználó ezt a számot próbálja meg minél kevesebb próbálkozással kitalálni. A felhasználónak a játék elején 20 élete (próbálkozása) van.
 
 * Hozz létre egy változót a felhasználói életeinek számára! Ez kezdetben legyen 20!
 * Hozz létre egy változót a gondolt számnak! Ez lehet fix szám vagy [véletlenszerűen generált érték](https://www.w3schools.com/python/ref_random_randint.asp).
