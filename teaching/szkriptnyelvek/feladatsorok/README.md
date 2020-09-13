@@ -13,6 +13,6 @@ Az egyes feladatokhoz referenciamegoldást is teszek közzé a feladat kiírása
 ## Python gyakorló feladatok
 
 * [Python nyelvi alapok, vezérlési szerkezetek](./01)
-* Függvények, stringek
+* [Függvények, stringek](./02)
 * Fontosabb adatszerkezetek: lista és dictionary
 * Objektumorientáltság, kivételkezelés, fájlkezelés

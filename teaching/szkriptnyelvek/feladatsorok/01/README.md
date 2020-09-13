@@ -9,7 +9,7 @@
 
 ### 1. feladat: Károly
 
-A gimnazista Károly informatikaórán odafigyelés helyett mémeket nézegetett, ezért az informatikatanártól azt a régimódi büntetést kapta, hogy le kell írnia 100-szor a nevét.
+A gimnazista Károly informatikaórán odafigyelés helyett mémeket nézegetett, ezért az informatikatanártól azt a régimódi büntetést kapta, hogy le kell írnia a nevét 100-szor.
 
 Írj Python szkriptet, amely kiírja a konzolra a `Károly` szöveget 100 alkalommal!
 
