@@ -11,9 +11,9 @@
 
 Elliot egy kiberbiztonsági cégnél dolgozik programozóként. Egyik nap a felettese egy jelszó-erősség mérő szkript írásával bízta meg.
 
-Készíts egy `jelszo_erosseg` nevű függvényt, ami egy szöveges paramétert vár, és a paraméterben érkező jelszóról eldönti, hogy mennyire erős! A visszatérési érték a jelszó erőssége legyen.
+Készíts egy `jelszo_erosseg` nevű függvényt, amely egy szöveges paramétert vár, és a paraméterben érkező jelszóról eldönti, hogy mennyire erős! A visszatérési érték a jelszó erőssége legyen.
 
-Szabályok:
+Szabályok a jelszóerősség kiszámítására:
 
 * Alapból minden jelszó 1 erős
 * Legalább 5 karakter hosszú jelszó: +1 erősség
