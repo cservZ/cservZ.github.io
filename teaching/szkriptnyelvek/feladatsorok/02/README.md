@@ -7,7 +7,7 @@
 ## Python függvények, stringek
 
 
-# 1. feladat: Jelszó-erősség mérő
+### 1. feladat: Jelszó-erősség mérő
 
 Elliot egy kiberbiztonsági cégnél dolgozik programozóként. Egyik nap a felettese egy jelszó-erősség mérő szkript írásával bízta meg.
 
@@ -22,9 +22,14 @@ Szabályok a jelszóerősség kiszámítására:
 * Ha tartalmazza a `jelszo` vagy `123456` részstringet, akkor a jelszó automatikusan 0 erős
 * Ha a jelszó 3 karakternél rövidebb, akkor szintén automatikusan 0 erős.
 
-**Példa:**
+**Input:**
 
 ```
-Input: hazi_macska_9
-Return: 7
+hazi_macska_9
+```
+
+**Return:**
+
+```
+7
 ```
