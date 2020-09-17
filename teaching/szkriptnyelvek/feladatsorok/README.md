@@ -12,7 +12,7 @@ Az egyes feladatokhoz referenciamegoldást is teszek közzé a feladat kiírása
 
 ## Python gyakorló feladatok
 
-* [Python nyelvi alapok, vezérlési szerkezetek](./01) ([megoldás (ZIP)](./01/feladatsor01_megoldas.zip))
+* [Python nyelvi alapok, vezérlési szerkezetek](./01) ([megoldás](./01/feladatsor01_megoldas.zip))
 * [Függvények, stringek](./02)
 * Fontosabb adatszerkezetek: lista és dictionary
 * Objektumorientáltság, kivételkezelés, fájlkezelés
