@@ -9,7 +9,7 @@
 
 ### 1. feladat: Felhasználónév generátor
 
-Írj Pythonban egy `felhasznalonevet_general` függvényt, amely két paramétert vár: egy felhasználó teljes nevét (vezetéknév és keresztnév), illetve születési évét! A függvény a kapott paraméterekből készít egy felhasználónevet úgy, hogy a felhasználó keresztnevét (több keresztnév esetén a legutolsó keresztnevet) csupa kisbetűssé alakítja, majd ehhez hozzáfűzi a születési évet. Az így kapott felhasználónév legyen a visszatérési érték! A születési év paramétert ne legyen kötelező megadni, alapértéke legyen 1970!
+Írj Pythonban egy `felhasznalonevet_general` függvényt, amely két paramétert vár: egy felhasználó teljes nevét (vezetéknév és keresztnév), illetve születési évét! A függvény a kapott paraméterekből generál egy felhasználónevet úgy, hogy a felhasználó keresztnevét (több keresztnév esetén a legutolsó keresztnevet) csupa kisbetűssé alakítja, majd ehhez hozzáfűzi a születési évet. Az így kapott felhasználónév legyen a visszatérési érték! A születési év paramétert ne legyen kötelező megadni, alapértéke legyen 1970!
 
 **Input:**
 
@@ -29,7 +29,7 @@ odon2000
 Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti el, hogy a szerver bizonyos felhasználóinak a nevét átírja a következőképpen:
 
 * A felhasználónév végére egy `.` (pont) karaktert tesz, amennyiben az eredetileg nem végződik pontra
-* Ellenkező esetben, a pont karakterre végződő felhasználónevek esetén pedig eltávolítja a név végéről a pontot.
+* Ellenkező esetben, a pont karakterre végződő felhasználónevek esetén eltávolítja a név végéről a pontot.
 
 Írj egy `kuba` függvényt, ami egy felhasználónevet vár paraméterül, elvégzi a fenti szabályok alapján a név átalakítását, majd visszatér az átalakított felhasználónévvel!
 
@@ -48,7 +48,19 @@ korte98.
 
 ### 3. feladat: Kódfejtés
 
-...
+Írj egy `dekodol` nevű függvényt, amely egy szöveget (kód) és egy egész számot (n) kap paraméterül! A függvény első paramétere egy kód, amit úgy fejthetünk vissza, ha a szöveg elejétől elindulva minden n-edik karaktert összeolvasunk. A függvény visszatérési értéke a dekódolt szöveg.
+
+**Input:**
+
+```
+kxxexxcxxsxxkxxex, 3
+```
+
+**Return:**
+
+```
+kecske
+```
 
 
 ### 4. feladat: Jelszó-erősség mérő
