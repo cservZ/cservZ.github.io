@@ -1,5 +1,6 @@
 <style>
 	h1:first-of-type { display: none; }
+	img { display: block; margin: auto; }
 </style>
 
 # Szkriptnyelvek - 2. gyakorló feladatsor
@@ -144,7 +145,7 @@ A palindrom egy olyan szó vagy szókapcsolat, amely visszafelé olvasva is ugya
 <b>Return:</b> False
 </pre>
 
-#### Palindrom DELUXE
+#### Palindrom (deluxe edition)
 
 Alakítsd át a fenti függvényt úgy, hogy ne csak szavakra, hanem akár mondatokra is működjön! 
 
@@ -162,4 +163,6 @@ Alakítsd át a fenti függvényt úgy, hogy ne csak szavakra, hanem akár monda
 
 ### 10. feladat: SzÖvEg áTaLaKíTáS
 
-TODO
+Ki ne emlékezne az alábbi mém formátumra?
+
+![](./meme.png)
