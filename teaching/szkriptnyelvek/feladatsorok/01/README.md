@@ -6,7 +6,7 @@
 
 ## Python nyelvi alapok, vezérlési szerkezetek
 
-A feladatokhoz tartozó mintamegoldás letölthető [innen](./feladatsor01_megoldas.zip)
+A feladatokhoz tartozó mintamegoldás letölthető [ide kattintva](./feladatsor01_megoldas.zip)
 
 
 ### 1. feladat: Károly
