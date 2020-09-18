@@ -1,6 +1,6 @@
 <style>
 	h1:first-of-type { display: none; }
-	img { display: block; margin: auto; }
+	img { display: block; margin: auto; height: 80%; }
 </style>
 
 # Szkriptnyelvek - 2. gyakorló feladatsor
@@ -163,6 +163,17 @@ Alakítsd át a fenti függvényt úgy, hogy ne csak szavakra, hanem akár monda
 
 ### 10. feladat: SzÖvEg áTaLaKíTáS
 
-Ki ne emlékezne az alábbi mém formátumra?
+Ki ne emlékezne az alábbi mémre és annak jellegzetes szövegformátumára?
 
 ![](./meme.png)
+
+A feladat egy olyan függvény írása, amely egy megadott szöveget a képen látható formába alakít át.
+
+Hozz létre egy `mocking_spongebob` függvényt, amely egyetlen szöveget kap paraméterül! A függvény alakítsa át a szöveget úgy, hogy a páros indexen lévő karakterek kisbetűvel, míg a páratlan indexen lévő karakterek nagybetűvel jelenjenek meg! A visszatérési érték az átalakított szöveg.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> A Szkriptnyelvek meg konnyu targynak szamit.
+<b>Return:</b> a sZkRiPtNyElVeK MeG KoNnYu tArGyNaK SzAmIt.                                                                                                                       
+</pre>
