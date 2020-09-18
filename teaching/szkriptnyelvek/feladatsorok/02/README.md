@@ -1,6 +1,6 @@
 <style>
 	h1:first-of-type { display: none; }
-	img { display: block; margin: auto; height: 60%; }
+	img { display: block; margin: auto; height: 300px; }
 </style>
 
 # Szkriptnyelvek - 2. gyakorló feladatsor
