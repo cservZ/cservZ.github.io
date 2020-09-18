@@ -13,10 +13,8 @@
 
 **Példa:**
 
-<pre>
-	<b>Input:</b> 120
-	<b>Return:</b> 3660
-</pre>
+<pre><b>Input:</b> 120
+<b>Return:</b> 3660</pre>
 
 ### 2. feladat: Felhasználónév generátor
 
@@ -29,13 +27,11 @@ Egy chatalkalmazásban a felhasználóneveket a felhasználók teljes nevéből 
 
 **Példa:**
 
-<pre>
-	<b>Input:</b> Zsiros Balint Odon, 2001
-	<b>Output:</b> odon2001
+<pre><b>Input:</b> Zsiros Balint Odon, 2001
+<b>Output:</b> odon2001
 
-	<b>Input:</b> Vincs Eszter
-	<b>Output:</b> eszter1970
-</pre>
+<b>Input:</b> Vincs Eszter
+<b>Output:</b> eszter1970</pre>
 
 
 ### 3. feladat: Kuba
@@ -47,13 +43,11 @@ Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti el, h
 
 Írj egy `kuba` függvényt, ami egy felhasználónevet vár paraméterül, elvégzi a fenti szabályok alapján a név átalakítását, majd visszatér az átalakított felhasználónévvel!
 
-<pre>
-	<b>Input:</b> Korte98
-	<b>Return:</b> Korte98.
+<pre><b>Input:</b> Korte98
+<b>Return:</b> Korte98.
 
-	<b>Input:</b> Dante.
-	<b>Return:</b> Dante
-</pre>
+<b>Input:</b> Dante.
+<b>Return:</b> Dante</pre>
 
 
 ### 4. feladat: Kódfejtés
@@ -62,10 +56,8 @@ Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti el, h
 
 **Példa:**
 
-<pre>
-	<b>Input:</b> kxxexxcxxsxxkxxex, 3
-	<b>Output:</b> kecske
-</pre>
+<pre><b>Input:</b> kxxexxcxxsxxkxxex, 3
+<b>Output:</b> kecske</pre>
 
 
 ### 5. feladat: Jelszó-erősség mérő
@@ -85,7 +77,5 @@ Szabályok a jelszóerősség kiszámítására:
 
 **Példa:**
 
-<pre>
-	<b>Input:</b> hazi_macska_9
-	<b>Return:</b> 7
-</pre>
+<pre><b>Input:</b> hazi_macska_9
+<b>Return:</b> 7</pre>
