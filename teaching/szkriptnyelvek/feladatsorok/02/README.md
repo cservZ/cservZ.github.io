@@ -7,24 +7,38 @@
 ## Python függvények, stringek
 
 
-### 1. feladat: Felhasználónév generátor
+### 1. feladat: Páros számok összege
 
-Írj Pythonban egy `felhasznalonevet_general` függvényt, amely két paramétert vár: egy felhasználó teljes nevét (vezetéknév és keresztnév), illetve születési évét! A függvény a kapott paraméterekből generál egy felhasználónevet úgy, hogy a felhasználó keresztnevét (több keresztnév esetén a legutolsó keresztnevet) csupa kisbetűssé alakítja, majd ehhez hozzáfűzi a születési évet. Az így kapott felhasználónév legyen a visszatérési érték! A születési év paramétert ne legyen kötelező megadni, alapértéke legyen 1970!
+Írj Pythonban egy `paros_osszeg` nevű függvényt, amely egy egész számot vár paraméterül! A függvény adja össze a páros számokat 1-től a paraméterben kapott értékig (a paramétert is beleértve, amennyiben az páros)! A visszatérési érték az így kapott összeg.
 
-**Input:**
+**Példa:**
 
-```
-Zsíros Bálint Ödön, 2000
-```
+<pre>
+	<b>Input:</b> 120
+	<b>Return:</b> 3660
+</pre>
 
-**Return:**
+### 2. feladat: Felhasználónév generátor
 
-```
-odon2000
-```
+Egy chatalkalmazásban a felhasználóneveket a felhasználók teljes nevéből (vezetéknév és keresztnév) és születési évéből generáljuk a következőképpen:
+
+* a keresztnevet (több keresztnév esetén a legutolsó keresztnevet) csupa kisbetűssé alakítjuk
+* a csupa kisbetűssé alakított keresztnévhez hozzáfűzzük a születési évet.
+
+Írj egy `felhasznalonevet_general` függvényt, amely két paramétert vár: a felhasználó teljes nevét (szöveg) és születési évét (egész szám)! A függvény generálja le a felhasználónevet a paraméterekből a fenti leírás alapján, és térjen vissza az így kapott felhasználónévvel! A születési név paramétert ne legyen kötelező megadni, alapértéke legyen 1970!
+
+**Példa:**
+
+<pre>
+	<b>Input:</b> Zsiros Balint Odon, 2001
+	<b>Output:</b> odon2001
+
+	<b>Input:</b> Vincs Eszter
+	<b>Output:</b> eszter1970
+</pre>
 
 
-### 2. feladat: Kuba
+### 3. feladat: Kuba
 
 Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti el, hogy a szerver bizonyos felhasználóinak a nevét átírja a következőképpen:
 
@@ -33,37 +47,28 @@ Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti el, h
 
 Írj egy `kuba` függvényt, ami egy felhasználónevet vár paraméterül, elvégzi a fenti szabályok alapján a név átalakítását, majd visszatér az átalakított felhasználónévvel!
 
-**Input:**
+<pre>
+	<b>Input:</b> Korte98
+	<b>Return:</b> Korte98.
 
-```
-korte98
-```
-
-**Return:**
-
-```
-korte98.
-```
+	<b>Input:</b> Dante.
+	<b>Return:</b> Dante
+</pre>
 
 
-### 3. feladat: Kódfejtés
+### 4. feladat: Kódfejtés
 
 Írj egy `dekodol` nevű függvényt, amely egy szöveget (kód) és egy egész számot (n) kap paraméterül! A függvény első paramétere egy kód, amit úgy fejthetünk vissza, ha a szöveg elejétől elindulva minden n-edik karaktert összeolvasunk. A függvény visszatérési értéke a dekódolt szöveg.
 
-**Input:**
+**Példa:**
 
-```
-kxxexxcxxsxxkxxex, 3
-```
-
-**Return:**
-
-```
-kecske
-```
+<pre>
+	<b>Input:</b> kxxexxcxxsxxkxxex, 3
+	<b>Output:</b> kecske
+</pre>
 
 
-### 4. feladat: Jelszó-erősség mérő
+### 5. feladat: Jelszó-erősség mérő
 
 Elliot egy kiberbiztonsági cégnél dolgozik programozóként. Egyik nap a felettese egy jelszó-erősség mérő szkript írásával bízta meg.
 
@@ -78,14 +83,9 @@ Szabályok a jelszóerősség kiszámítására:
 * Ha tartalmazza a `jelszo` vagy `123456` részstringet, akkor a jelszó automatikusan 0 erős
 * Ha a jelszó 3 karakternél rövidebb, akkor szintén automatikusan 0 erős.
 
-**Input:**
+**Példa:**
 
-```
-hazi_macska_9
-```
-
-**Return:**
-
-```
-7
-```
+<pre>
+	<b>Input:</b> hazi_macska_9
+	<b>Return:</b> 7
+</pre>
