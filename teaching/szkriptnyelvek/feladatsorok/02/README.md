@@ -1,6 +1,6 @@
 <style>
 	h1:first-of-type { display: none; }
-	img { display: block; margin: auto; height: 300px; }
+	img { display: block; margin: auto; height: 250px; }
 </style>
 
 # Szkriptnyelvek - 2. gyakorló feladatsor
@@ -167,7 +167,7 @@ Ki ne emlékezne az alábbi mémre és annak jellegzetes szövegformátumára?
 
 ![](./meme.png)
 
-A feladat egy olyan függvény írása, amely egy megadott szöveget a képen látható formába alakít át.
+A feladat egy olyan függvény írása, amely egy megadott szöveget a képen látható formára alakít át.
 
 Hozz létre egy `mocking_spongebob` függvényt, amely egyetlen szöveget kap paraméterül! A függvény alakítsa át a szöveget úgy, hogy a páros indexen lévő karakterek kisbetűvel, míg a páratlan indexen lévő karakterek nagybetűvel jelenjenek meg! A visszatérési érték az átalakított szöveg.
 
