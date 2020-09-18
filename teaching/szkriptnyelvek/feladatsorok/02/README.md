@@ -31,7 +31,7 @@
 
 ### 3. feladat: Felhasználónév generátor
 
-Egy chatalkalmazásban a felhasználóneveket a felhasználók teljes nevéből (vezetéknév + keresztév) és születési évéből generáljuk a következőképpen:
+Egy chat alkalmazásban a felhasználóneveket a felhasználók teljes nevéből (vezetéknév + keresztév) és születési évéből generáljuk a következőképpen:
 
 * a keresztnevet (több keresztnév esetén a legutolsó keresztnevet) csupa kisbetűssé alakítjuk
 * a csupa kisbetűssé alakított keresztnévhez hozzáfűzzük a születési évet.
@@ -61,8 +61,8 @@ Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti, hogy
 **Példa:**
 
 <pre>
-<b>Input:</b> Korte98
-<b>Return:</b> Korte98.
+<b>Input:</b> Dinnye23
+<b>Return:</b> Dinnye23.
 
 <b>Input:</b> Goethe.
 <b>Return:</b> Goethe
@@ -118,12 +118,46 @@ Szabályok a jelszó erőséggének kiszámítására:
 
 ### 8. feladat: Magánhangzó eltávolítás
 
-TODO
+Írj egy `maganhangzot_torol` függvényt, amely egy szöveget vár paraméterül! A függvény alakítsa csupa kisbetűssé a szöveget, távolítsa el a benne szereplő összes magánhangzót, majd térjen vissza a magánhangzók nélküli szöveggel! A szövegben ékezetes betűk garantáltan nem szereplnek.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> Figyelem, figyelem asszonyok! Megerkezett a tollfelvasarlo.
+<b>Return:</b> fgylm, fgylm ssznyk! mgrkztt  tllflvsrl.
+</pre>
 
 
 ### 9. feladat: Palindrom
 
-TODO
+A palindrom egy olyan szó vagy szókapcsolat, amely visszafelé olvasva is ugyanaz. Például a "görög" szó egy tipikus példája a palindromoknak.
+
+Írj egy `palindrom` függvényt, amely egyetlen szót kap paraméterként! A függvény visszatérési értéke egy logikai érték (igaz vagy hamis) attól függően, hogy a paraméterül kapott szó palindrom-e vagy sem.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> gorog
+<b>Return:</b> True
+
+<b>Input:</b> magyar
+<b>Return:</b> False
+</pre>
+
+#### Palindrom DELUXE
+
+Alakítsd át a fenti függvényt úgy, hogy ne csak szavakra, hanem akár mondatokra is működjön! 
+
+* Először alakítsd csupa kisbetűssé a paraméterül kapott mondatot!
+* Ezt követően távolítsd el a szövegből az összes szóközt és írásjelet!
+* Végül vizsgáld meg, hogy az így kapott szöveg megegyezik-e a fordítottjával!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> Indul a gorog aludni.
+<b>Return:</b> True
+</pre>
 
 
 ### 10. feladat: SzÖvEg áTaLaKíTáS
