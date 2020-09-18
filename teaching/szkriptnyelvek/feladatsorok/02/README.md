@@ -106,10 +106,17 @@ Szabályok a jelszó erőséggének kiszámítására:
 
 ### 7. feladat: Szavak száma
 
-TODO
+Írj egy `szavak_szama` függvényt, amely egy szöveget vár paraméterül, és visszaadja, hogy az mennyi szóból áll!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> Jaj, bocsánat! Be van kapcsolva? Ujujujujujuj!
+<b>Return:</b> 6
+</pre>
 
 
-### 8. feladat: Mássalhangzó eltávolítás
+### 8. feladat: Magánhangzó eltávolítás
 
 TODO
 
@@ -119,6 +126,6 @@ TODO
 TODO
 
 
-### 10. feladat: sZöVeG áTaLaKíTáS
+### 10. feladat: SzÖvEg áTaLaKíTáS
 
 TODO
