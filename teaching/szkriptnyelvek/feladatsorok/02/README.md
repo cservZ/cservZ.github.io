@@ -10,7 +10,7 @@
 
 ### 1. feladat: Abszolútérték maximum
 
-Írj Pythonban egy `abs_max` nevű függvényt, amely két egész számot vár paraméterül, és visszatér ennek a két számnak az abszolútérték-maximumával! Tehát vesszük mindkét szám abszolútértékét, és ezek közül visszaadjuk a nagyobbikat.
+Írj Pythonban egy `abs_max` nevű függvényt, amely két egész számot vár paraméterül, és visszatér ennek a két számnak az abszolútérték-maximumával! Tehát vesszük mindkét szám abszolútértékét, és ezek közül visszaadjuk a nagyobbat.
 
 **Példa:**
 
@@ -94,7 +94,7 @@ Szabályok a jelszó erőséggének kiszámítására:
 * Legalább 5 karakter hosszú jelszó: +1 erősség
 * Legalább 8 karakter hosszú jelszó: +2 erősség
 * Ha a jelszóban van alulvonás, kötőjel vagy pont karakterek valamelyike: +3 erősség
-* Ha a jelszó tartalmazza a `jelszo` vagy `123456` részstringet, akkor automaikusan 0 erős
+* Ha a jelszó tartalmazza a `jelszo` vagy `123456` részstringet, akkor automatikusan 0 erős
 * Ha a jelszó 0 karakter hosszú, akkor szintén automatikusan 0 erős.
 
 **Példa:**
@@ -119,7 +119,7 @@ Szabályok a jelszó erőséggének kiszámítására:
 
 ### 8. feladat: Magánhangzó eltávolítás
 
-Írj egy `maganhangzot_torol` függvényt, amely egy szöveget vár paraméterül! A függvény alakítsa csupa kisbetűssé a szöveget, távolítsa el a benne szereplő összes magánhangzót, majd térjen vissza a magánhangzók nélküli szöveggel! A szövegben ékezetes betűk garantáltan nem szereplnek.
+Írj egy `maganhangzot_torol` függvényt, amely egy szöveget vár paraméterül! A függvény alakítsa csupa kisbetűssé a szöveget, távolítsa el a benne szereplő összes magánhangzót, majd térjen vissza a magánhangzók nélküli szöveggel! A szövegben ékezetes betűk garantáltan nem szerepelnek.
 
 **Példa:**
 
