@@ -1,6 +1,6 @@
 <style>
 	h1:first-of-type { display: none; }
-	img { display: block; margin: auto; height: 80%; }
+	img { display: block; margin: auto; height: 60%; }
 </style>
 
 # Szkriptnyelvek - 2. gyakorló feladatsor
@@ -8,7 +8,7 @@
 ## Python függvények, stringek
 
 
-### 1. feladat: Abszolútérték-maximum
+### 1. feladat: Abszolútérték maximum
 
 Írj Pythonban egy `abs_max` nevű függvényt, amely két egész számot vár paraméterül, és visszatér ennek a két számnak az abszolútérték-maximumával! Tehát vesszük mindkét szám abszolútértékét, és ezek közül visszaadjuk a nagyobbikat.
 
