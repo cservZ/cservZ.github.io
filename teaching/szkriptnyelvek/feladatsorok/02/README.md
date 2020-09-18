@@ -71,3 +71,29 @@ Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti, hogy
 
 ### 5. feladat: Kódfejtés
 
+TODO
+
+
+### 6. feladat: Jelszó-erősség mérő
+
+TODO
+
+
+### 7. feladat: Szavak száma
+
+TODO
+
+
+### 8. feladat: Mássalhangzó eltávolítás
+
+TODO
+
+
+### 9. feladat: Palindrom
+
+TODO
+
+
+### 10. feladat: sZöVeG áTaLaKíTáS
+
+TODO
