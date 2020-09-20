@@ -72,7 +72,7 @@ Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti, hogy
 
 ### 5. feladat: Kódfejtés
 
-Robi és Misi jó barátok, és történetesen ugyanannál a cégnél munkatársak. Kitalálták, hogy azért, hogy a főnökük ne érthesse meg az egymásnak írt üzeneteiket, egy titkos kódot használnak. A küldő kódolja az üzenetet az elküldés előtt, a fogadó pedig visszafejti azt.
+Robi és Misi jó barátok, sőt történetesen ugyanannál a cégnél munkatársak. Kitalálták, hogy azért, hogy a főnökük ne érthesse meg az egymásnak írt üzeneteiket, egy titkos kódot használnak. A küldő kódolja az üzenetet az elküldés előtt, a fogadó pedig visszafejti azt.
 
 Írj egy `dekodol` nevű függvényt, amely egy kódolt szöveget és egy egész számot (n) kap paraméterül! A függvény első paraméterében érkező kódot úgy tudjuk visszafejteni, hogy a szöveg elejétől elindulva minden n-edik karaktert olvasunk össze. A függvény visszatérési értéke a dekódolt szöveg.
 
@@ -86,7 +86,7 @@ Robi és Misi jó barátok, és történetesen ugyanannál a cégnél munkatárs
 
 ### 6. feladat: Jelszó-erősség mérő
 
-Elliot egy kiberbiztonsági cégnél dolgozik programozóként. Egyik nap a felettese egy jelszó-erősség mérő szkript írásával bízta meg.
+Elliot egy kiberbiztonsági cégnél dolgozik. Egyik nap a felettese egy jelszó-erősség mérő szkript írásával bízta meg.
 
 Készíts egy `jelszo_erosseg` nevű függvényt, amely egy jelszót kap paraméterül, és eldönti, hogy az mennyire erős! A visszatérési érték a jelszó erőssége legyen.
 
@@ -126,15 +126,15 @@ Szabályok a jelszó erőséggének kiszámítására:
 
 ### 8. feladat: Magánhangzó eltávolítás
 
-Balázs szabadidejében sokat posztol Twitteren, viszont a Tweet-ek hosszúságára vonatkozó 280-as karakterlimitbe gyakran nem fér bele. Egyik nap Balázs kitalálta, hogy ha a posztjaiból kiveszi a magánhangzókat, akkor a karakterlimittel már kevésbé gyűlik meg a baja.
+Dávid a szabadidejében sokat posztol Twitteren, viszont a tweet-ek hosszúságára vonatkozó 280-as karakterlimitbe gyakran nem fér bele. Egyik nap kitalálta, hogy ha a posztjaiból kiveszi a magánhangzókat, akkor a karakterlimittel már kevésbé gyűlik meg a baja.
 
 Írj egy `maganhangzot_torol` függvényt, amely egy szöveget vár paraméterül! A függvény alakítsa csupa kisbetűssé a szöveget, távolítsa el a benne szereplő összes magánhangzót, majd térjen vissza a magánhangzók nélküli szöveggel! A szövegben ékezetes betűk garantáltan nem szerepelnek.
 
 **Példa:**
 
 <pre>
-<b>Input:</b> Figyelem, figyelem asszonyok! Megerkezett a tollfelvasarlo.
-<b>Return:</b> fgylm, fgylm ssznyk! mgrkztt  tllflvsrl.
+<b>Input:</b> Hali! Auchanos zsemlet cserelnek kedd esti Prog2 gyakra.
+<b>Return:</b> hl! chns zsmlt csrlnk kdd st prg2 gykr. 
 </pre>
 
 
@@ -176,7 +176,7 @@ Ki ne emlékezne az alábbi mémre és annak jellegzetes szövegformátumára?
 
 ![](./meme.png)
 
-A feladat egy olyan függvény írása, amely egy megadott szöveget a képen látható formára alakít át.
+A feladat egy olyan függvény írása, amely egy megadott szöveget a képen látható formátumra alakít át.
 
 Hozz létre egy `mocking_spongebob` függvényt, amely egyetlen szöveget kap paraméterül! A függvény alakítsa át a szöveget úgy, hogy a páros indexen lévő karakterek kisbetűvel, míg a páratlan indexen lévő karakterek nagybetűvel jelenjenek meg! A visszatérési érték az átalakított szöveg.
 
