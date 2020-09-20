@@ -10,7 +10,7 @@
 
 ### 1. feladat: Abszolútérték maximum
 
-Írj Pythonban egy `abs_max` nevű függvényt, amely két egész számot vár paraméterül, és visszatér ennek a két számnak az abszolútérték-maximumával! Tehát vesszük mindkét szám abszolútértékét, és ezek közül visszaadjuk a nagyobbat.
+Írj Pythonban egy `abs_max` nevű függvényt, amely két egész számot vár paraméterül, és visszatér ezek abszolútérték-maximumával! Tehát vesszük mindkét szám abszolútértékét, és ezek közül visszaadjuk a nagyobbat.
 
 **Példa:**
 
@@ -25,8 +25,8 @@
 Írj egy `paros_osszeg` nevű függvényt, amely egy egész számot vár paraméterül! A függvény adja össze a páros számokat 1-től a paraméterben kapott értékig (a paramétert is beleértve, amennyiben az páros)! A visszatérési érték az így kapott összeg.
 
 <pre>
-<b>Input:</b> 120
-<b>Return:</b> 3660
+<b>Input:</b> 200
+<b>Return:</b> 10100                                                                          
 </pre>
 
 
@@ -72,13 +72,15 @@ Kuba egy online szerveren moderátor. A szabadidejét sokszor azzal tölti, hogy
 
 ### 5. feladat: Kódfejtés
 
+Robi és Misi jó barátok, és történetesen ugyanannál a cégnél munkatársak. Kitalálták, hogy azért, hogy a főnökük ne érthesse meg az egymásnak írt üzeneteiket, egy titkos kódot használnak. A küldő kódolja az üzenetet az elküldés előtt, a fogadó pedig visszafejti azt.
+
 Írj egy `dekodol` nevű függvényt, amely egy kódolt szöveget és egy egész számot (n) kap paraméterül! A függvény első paraméterében érkező kódot úgy tudjuk visszafejteni, hogy a szöveg elejétől elindulva minden n-edik karaktert olvasunk össze. A függvény visszatérési értéke a dekódolt szöveg.
 
 **Példa:**
 
 <pre>
-<b>Input:</b> kxxexxcxxsxxkxxex, 3
-<b>Output:</b> kecske
+<b>Input:</b> pxxixxzxxzxxaxxdxxéxxlxxbxxexxnxx?x, 3
+<b>Output:</b> pizzadélben?
 </pre>
 
 
@@ -104,6 +106,11 @@ Szabályok a jelszó erőséggének kiszámítására:
 <b>Return:</b> 7
 </pre>
 
+<pre>
+<b>Input:</b> ez1feltorhetetlenjelszo
+<b>Return:</b> 0
+</pre>
+
 
 ### 7. feladat: Szavak száma
 
@@ -118,6 +125,8 @@ Szabályok a jelszó erőséggének kiszámítására:
 
 
 ### 8. feladat: Magánhangzó eltávolítás
+
+Balázs szabadidejében sokat posztol Twitteren, viszont a Tweet-ek hosszúságára vonatkozó 280-as karakterlimitbe gyakran nem fér bele. Egyik nap Balázs kitalálta, hogy ha a posztjaiból kiveszi a magánhangzókat, akkor a karakterlimittel már kevésbé gyűlik meg a baja.
 
 Írj egy `maganhangzot_torol` függvényt, amely egy szöveget vár paraméterül! A függvény alakítsa csupa kisbetűssé a szöveget, távolítsa el a benne szereplő összes magánhangzót, majd térjen vissza a magánhangzók nélküli szöveggel! A szövegben ékezetes betűk garantáltan nem szerepelnek.
 
