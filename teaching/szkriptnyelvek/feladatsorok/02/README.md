@@ -7,6 +7,8 @@
 
 ## Python függvények, stringek
 
+A feladatokhoz tartozó mintamegoldás elérhető [ide kattintva](./megoldasok.py)
+
 
 ### 1. feladat: Abszolútérték maximum
 
