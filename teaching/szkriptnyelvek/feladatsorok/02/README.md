@@ -32,7 +32,7 @@
 
 ### 3. feladat: Felhasználónév generátor
 
-Egy chat alkalmazásban a felhasználóneveket a felhasználók teljes nevéből (vezetéknév + keresztév) és születési évéből generáljuk a következőképpen:
+Egy chat alkalmazásban a felhasználóneveket a felhasználók teljes nevéből (vezetéknév + keresztnév) és születési évéből generáljuk a következőképpen:
 
 * a keresztnevet (több keresztnév esetén a legutolsó keresztnevet) csupa kisbetűssé alakítjuk
 * a csupa kisbetűssé alakított keresztnévhez hozzáfűzzük a születési évet.
