@@ -9,7 +9,7 @@
 
 ### 1. feladat: Leghosszabb szó
 
-Írj Pythonban egy `leghosszabb_szo` nevű függvényt, amely egy szöveget vár paraméterül! A szöveg szóközzel elválasztott szavakat tartalmaz. A függvény keresse meg a szövegben található leghosszabb szót, és térjen vissza vele! Ha a paraméterül kapott szöveg az üres string, akkor -1 legyen a visszatérési érték!
+Írj Pythonban egy `leghosszabb_szo` nevű függvényt, amely egy szöveget vár paraméterül! A szöveg szóközzel elválasztott szavakat tartalmaz. A függvény keresse meg a szövegben található leghosszabb szót, és térjen vissza vele! Ha a paraméterül kapott szöveg az üres string, akkor a visszatérési érték szintén üres string legyen!
 
 **Példa:**
 
@@ -19,9 +19,11 @@
 </pre>
 
 
-### 2. feladat: Paritás ellenőrző
+### 2. feladat: Gyorsétterem
 
-Írj egy `paritas_ellenorzo` függvényt, amely egy egész számokból álló listát kap paraméterül! A függvény először rendezze a paraméterben érkező lista számait növekvő sorrendbe, majd csoportosítsa őket "páros" és "páratlan" kategóriákba! Az eredményt a függvény adja vissza egy dictionary-ben a példában látható formátumban!
+A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, amely alapján leadhatják a rendelésüket. Az étteremben két kassza üzemel: az egyiknél a páros, a másiknál pedig a páratlan sorszámmal rendelkező vendégeket szolgálják ki.
+
+Írj egy `kasszahoz_rendel` függvényt, amely egy sorszámokból (egész értékek) álló listát kap paraméterül! A függvény először rendezze a lista elemeit növekvő sorrendbe, majd csoportosítsa őket "páros" és "páratlan" kategóriákba! Az eredményt a függvény adja vissza egy dictionary-ben a példában látható formátumban!
 
 **Példa:**
 
