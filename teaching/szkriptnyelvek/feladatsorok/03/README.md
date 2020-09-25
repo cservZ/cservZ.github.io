@@ -28,8 +28,8 @@ A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, 
 **Példa:**
 
 <pre>
-<b>Input:</b> [7, 4, 1, 0, 2, 5, 21]
-<b>Return:</b> { 'paros': [0, 2, 4], 'paratlan': [1, 5, 7, 21] }
+<b>Input:</b> [7, 4, 1, 6, 2, 5, 3]
+<b>Return:</b> { 'paros': [2, 4, 6], 'paratlan': [1, 3, 5, 7] }
 </pre>
 
 
