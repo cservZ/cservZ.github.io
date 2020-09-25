@@ -17,3 +17,29 @@
 <b>Input:</b> A Bekescsabarol Szegedre tarto vonat varhatoan fel orat kesik. Az okozott kellemetlensegert szives elnezesuket kerjuk.
 <b>Return:</b> kellemetlensegert           
 </pre>
+
+
+### 2. feladat: Paritás ellenőrző
+
+Írj egy `paritas_ellenorzo` függvényt, amely egy egész számokból álló listát kap paraméterül! A függvény először rendezze a paraméterben érkező lista számait növekvő sorrendbe, majd csoportosítsa őket "páros" és "páratlan" kategóriákba! Az eredményt a függvény adja vissza egy dictionary-ben a példában látható formátumban!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> [7, 4, 1, 0, 2, 5, 21]
+<b>Return:</b> { 'paros': [0, 2, 4], 'paratlan': [1, 5, 7, 21] }
+</pre>
+
+
+### 3. feladat: Fájlcsoportosítás
+
+Krisztián szeretne statisztikát készíteni a Letöltések mappájában található fájlokról, ezért egy Python szkriptet ír. A szkript feladata, hogy megszámolja, hogy az adott mappán belül a különböző kiterejesztésű fájlokból mennyi található.
+
+Írj egy `statisztika` nevű függgvényt, amely egy listát kap paraméterül! Ez a lista tartalmazza a mappában szereplő fájlok neveit kiterjesztéssel együtt (a kiterjesztés mindig a **legutolsó** pont karakter után szerepel). A függvény számolja meg, hogy a különböző kiterjesztésekből mennyi fordul elő a mappában, és az eredményt adja vissza egy dictionary-ben a példában látható formában! A feladatot úgy oldjuk meg, hogy a fájlok nevében ne különböztessük meg a kis- és nagybetűket (tehát pl. `hello.py` és `TEST.PY` egyaránt `py` kiterjesztésűek).
+
+**Példa:**
+
+<pre>
+<b>Input:</b> ["feladat.py", "Bolygo.java", "HELLOFRIENDS.MP4", "TEST.PY", "biro.gib.maxpont.py", "russian-driving-fails.mp4"]
+<b>Return:</b> {'mp4': 2, 'py': 3, 'java': 1}        
+</pre>
