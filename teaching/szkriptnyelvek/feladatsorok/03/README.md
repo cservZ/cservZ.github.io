@@ -37,7 +37,7 @@ Krisztián szeretne statisztikát készíteni a Letöltések mappájában talál
 
 Írj egy `statisztika` nevű függgvényt, amely egy listát kap paraméterül! Ez a lista tartalmazza a mappában szereplő fájlok neveit kiterjesztéssel együtt (a kiterjesztés mindig a **legutolsó** pont karakter után szerepel). A függvény számolja meg, hogy a különböző kiterjesztésekből mennyi fordul elő a mappában, és az eredményt adja vissza egy dictionary-ben a példában látható formában! 
 
-A feladatot úgy oldjuk meg, hogy a fájlok nevében ne különböztessük meg a kis- és nagybetűket (tehát pl. `hello.py` és `TEST.PY` egyaránt `py` kiterjesztésűek).
+A feladatot úgy oldjuk meg, hogy a kiterjesztések vizsgálata során ne különböztessük meg a kis- és nagybetűket (tehát pl. `hello.py` és `TEST.PY` egyaránt `py` kiterjesztésűek).
 
 **Példa:**
 
