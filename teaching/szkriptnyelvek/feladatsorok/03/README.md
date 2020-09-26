@@ -73,7 +73,22 @@ Béla egy online játékkal játszik. A játékban talált egy bugot, amit kihas
 </pre>
 
 
-### 6. feladat: Gyorsétterem
+### 6. feladat: Gyenge jelszavak
+
+Peti az egyik internetes fórumon azt olvasta, hogy az 5 karakternél rövidebb jelszavak könnyedén feltörhetőek. Összegyűjtötte hát azokat a jelszavakat, amiket használ, és ki szeretné válogatni azokat a jelszavakat, amelyek "gyengék", hogy minél előbb lecserélje azokat.
+
+Írj egy `gyenge_jelszavak` függvényt, amely a jelszókat tartalmazó listát kapja paraméterül! A függvény válogassa ki a jelszavak közül az 5 karakternél rövidebbeket, és adja vissza azokat egy listában!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> ["cica", "kiscica", "nagy_macska_82", "123", "HosszuJelszoGoBrrr", "kekw", "sajt2"]
+<b>Return:</b> ['cica', '123', 'kekw']
+</pre>
+
+
+
+### 7. feladat: Gyorsétterem
 
 A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, amely alapján leadhatják a rendelésüket. Az étteremben két kassza üzemel: egyiknél a páros, másiknál pedig a páratlan sorszámmal rendelkező vendégeket szolgálják ki.
 
@@ -87,7 +102,7 @@ A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, 
 </pre>
 
 
-### 7. feladat: Fájlok csoportosítása
+### 8. feladat: Fájlok csoportosítása
 
 Krisztián szeretne statisztikát készíteni a Dokumentumok mappájában található fájlokról, ezért egy Python szkriptet ír. A szkript feladata, hogy megszámolja, hogy az adott mappában belül a különböző kiterjesztésű fájlokból mennyi található.
 
