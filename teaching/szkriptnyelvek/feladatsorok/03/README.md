@@ -21,7 +21,7 @@ Ha a paraméterül kapott szöveg az üres string, akkor a visszatérési érté
 
 ### 2. feladat: Kiárusítás
 
-Balázs a zsebpénzéből egy új mikrofont szeretne venni. Szerencséjére a kedvenc webshopja épp kiárusítást tart, így minden szórakoztató elektronikai termék 30%-os kedvezménnyel vásárolható meg.
+Balázs a zsebpénzéből egy új mikrofont szeretne venni. Szerencséjére a kedvenc webshopja épp [kiárusítás](https://www.youtube.com/watch?v=qA4Ws1KOl4U)t tart, így minden szórakoztató elektronikai termék 30%-os kedvezménnyel vásárolható meg.
 
 Írj egy `akcios_ar` nevű függvényt, amely egy listát kap paraméterül: a mikrofonok eredeti árát (egész értékek). A függvény csökkentse az árakat a 30%-os kedvezménynek megfelelően, és adja vissza az így kapott listát! Az árak itt továbbra is egész számok legyenek (ne tizedestörtek)!
 
