@@ -100,7 +100,7 @@ Peti az egyik internetes fórumon azt olvasta, hogy az 5 karakternél rövidebb 
 **Példa:**
 
 <pre>
-<b>Input:</b> [ [7, 1, 3], [4, 0, 2]], [ [2, 5, 5], [8, 6, 0] ]
+<b>Input:</b> [ [7, 1, 3], [4, 0, 2] ], [ [2, 5, 5], [8, 6, 0] ]
 <b>Return:</b> [ [9, 6, 8], [12, 6, 2] ]
 </pre>
 
