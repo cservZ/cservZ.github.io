@@ -61,9 +61,9 @@ Béla egy online játékkal játszik. A játékban talált egy bugot, amit kihas
 </pre>
 
 
-### 5. feladat: Különböző szavak száma
+### 5. feladat: Egyedi szavak száma
 
-Írj egy `kulonbozo_szavak` függvényt, amely egy szöveget kap paraméterül, és visszaadja, hogy ebben a szövegben hány **különböző** szó található!
+Írj egy `egyedi_szavak` függvényt, amely egy szöveget kap paraméterül, és visszaadja, hogy ebben a szövegben hány **különböző** szó található!
 
 **Példa:**
 
