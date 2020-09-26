@@ -56,12 +56,24 @@ Béla egy online játékkal játszik. A játékban talált egy bugot, amit kihas
 **Példa:**
 
 <pre>
-<b>Input:</b> ["EpicBela20", "python4life", "EpicBela20", "EpicBela20", "kalkEasy", "varj_ez_nem_is_csgo"]
-<b>Return:</b> ['python4life', 'kalkEasy', 'varj_ez_nem_is_csgo']
+<b>Input:</b> ["EpicBela20", "python4life", "EpicBela20", "EpicBela20", "kalkEasy", "varj_ez_nem_is_csgo", "sajt42"]
+<b>Return:</b> ['python4life', 'kalkEasy', 'varj_ez_nem_is_csgo', 'sajt42']
 </pre>
 
 
-### 5. feladat: Gyorsétterem
+### 5. feladat: Különböző szavak száma
+
+Írj egy `kulonbozo_szavak` függvényt, amely egy szöveget kap paraméterül, és visszaadja, hogy ebben a szövegben hány **különböző** szó található!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> a progalap meg konnyu de a java meg csak azutan jon
+<b>Return:</b> 9
+</pre>
+
+
+### 6. feladat: Gyorsétterem
 
 A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, amely alapján leadhatják a rendelésüket. Az étteremben két kassza üzemel: egyiknél a páros, másiknál pedig a páratlan sorszámmal rendelkező vendégeket szolgálják ki.
 
@@ -75,7 +87,7 @@ A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, 
 </pre>
 
 
-### 6. feladat: Fájlok csoportosítása
+### 7. feladat: Fájlok csoportosítása
 
 Krisztián szeretne statisztikát készíteni a Dokumentumok mappájában található fájlokról, ezért egy Python szkriptet ír. A szkript feladata, hogy megszámolja, hogy az adott mappában belül a különböző kiterjesztésű fájlokból mennyi található.
 
