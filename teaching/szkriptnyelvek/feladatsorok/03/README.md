@@ -47,7 +47,21 @@ Tünde szeret olvasni, így a polcán is számos könyv van. Egyik nap Tünde re
 </pre>
 
 
-### 4. feladat: Gyorsétterem
+### 4. feladat: Votekick
+
+Béla egy online játékkal játszik. A játékban talált egy bugot, amit kihasználva többször is be tud lépni a játékba ugyanazzal a felhasználónévvel. A játékostársai ezt nem tartják tisztességesnek, ezért úgy döntenek, hogy Bélát kirúgják a játékból.
+
+Írj egy `belat_kirug` függvényt, amely egy listát kap paraméterül! A lista az online játékosok neveit tartalmazza (szöveges adatok). A függvény távolítsa el ebből a listából az `EpicBela20` játékosnév összes előfordulását, majd térjen vissza az így kapott listával!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> ["EpicBela20", "python4life", "EpicBela20", "EpicBela20", "kalkEasy", "varj_ez_nem_is_csgo"]
+<b>Return:</b> ['python4life', 'kalkEasy', 'varj_ez_nem_is_csgo']
+</pre>
+
+
+### 5. feladat: Gyorsétterem
 
 A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, amely alapján leadhatják a rendelésüket. Az étteremben két kassza üzemel: egyiknél a páros, másiknál pedig a páratlan sorszámmal rendelkező vendégeket szolgálják ki.
 
@@ -61,7 +75,7 @@ A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, 
 </pre>
 
 
-### 5. feladat: Fájlok csoportosítása
+### 6. feladat: Fájlok csoportosítása
 
 Krisztián szeretne statisztikát készíteni a Dokumentumok mappájában található fájlokról, ezért egy Python szkriptet ír. A szkript feladata, hogy megszámolja, hogy az adott mappában belül a különböző kiterjesztésű fájlokból mennyi található.
 
