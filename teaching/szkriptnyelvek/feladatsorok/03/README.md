@@ -153,5 +153,5 @@ Egyik este a népszerű skribbl.io játékkal játszunk. A játék minden köré
   { 'Kruzor57': 100, 'Szepi': 500, 'shronk': 0, 'Dante': 300, 'Karoly': 100 }
 ]
 <b>Return:</b>
-{ 'Szepi': 1700, 'Karoly': 870, 'shronk': 1500, 'Kruzor57': 1600, 'Dante': 1300 }
+{ 'Szepi': 1700, 'Karoly': 870, 'shronk': 1200, 'Kruzor57': 1600, 'Dante': 1300 }
 </pre>
