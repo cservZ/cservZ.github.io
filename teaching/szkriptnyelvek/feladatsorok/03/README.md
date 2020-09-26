@@ -19,7 +19,21 @@ Ha a paraméterül kapott szöveg az üres string, akkor a visszatérési érté
 </pre>
 
 
-### 2. feladat: Könyvespolc
+### 2. feladat: Kiárusítás
+
+Balázs a zsebpénzéből egy új mikrofont szeretne venni. Szerencséjére a kedvenc webshopja épp kiárusítást tart, így minden szórakoztató elektronikai termék 30%-os kedvezménnyel vásárolható meg.
+
+Írj egy `akcios_ar` nevű függvényt, amely egy listát kap paraméterül: a mikrofonok eredeti árát (egész értékek). A függvény csökkentse az árakat a 30%-os kedvezménynek megfelelően, és adja vissza az így kapott listát! Az árak itt továbbra is egész számok legyenek (ne tizedestörtek)!
+
+**Példa:** 
+
+<pre>
+<b>Input:</b> [5000, 12000, 10000, 29000, 47000]
+<b>Return:</b> [3500, 8400, 7000, 20300, 32900]
+</pre>
+
+
+### 3. feladat: Könyvespolc
 
 Tünde szeret olvasni, így a polcán is számos könyv van. Egyik nap Tünde rendet rak a lakásában, és a könyveit is rendezni szeretné.
 
@@ -33,7 +47,7 @@ Tünde szeret olvasni, így a polcán is számos könyv van. Egyik nap Tünde re
 </pre>
 
 
-### 3. feladat: Gyorsétterem
+### 4. feladat: Gyorsétterem
 
 A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, amely alapján leadhatják a rendelésüket. Az étteremben két kassza üzemel: egyiknél a páros, másiknál pedig a páratlan sorszámmal rendelkező vendégeket szolgálják ki.
 
@@ -47,7 +61,7 @@ A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, 
 </pre>
 
 
-### 4. feladat: Fájlok csoportosítása
+### 5. feladat: Fájlok csoportosítása
 
 Krisztián szeretne statisztikát készíteni a Dokumentumok mappájában található fájlokról, ezért egy Python szkriptet ír. A szkript feladata, hogy megszámolja, hogy az adott mappában belül a különböző kiterjesztésű fájlokból mennyi található.
 
