@@ -139,7 +139,7 @@ A feladatot úgy oldjuk meg, hogy a kiterjesztés vizsgálata során ne különb
 
 Egyik este a népszerű skribbl.io játékkal játszunk. A játék minden körében egy játékos lerajzol egy előre megadott dolgot, míg a többi játékos próbálja azt kitalálni. Az egyes körök során a játékosok pontokat gyűjtenek.
 
-Írj egy `osszegez` nevű függvényt, amely egy dictionary-kből álló listát kap paraméterül. A dictionary-k az egyes körök végeredményét tartalmazzák: a kulcsok a játékosok nevei, az értékek pedig az adott körben elért pontszám. A függvény adja össze az egyes játékosok pontjait minden körben, és az így kapott statisztikát adja vissza egy dictionary-ben a példában látható formátumban!
+Írj egy `vegeredmeny` nevű függvényt, amely egy dictionary-kből álló listát kap paraméterül. A dictionary-k az egyes körök végeredményét tartalmazzák: a kulcsok a játékosok nevei, az értékek pedig az adott körben elért pontszám. A függvény adja össze az egyes játékosok pontjait minden körben, és az így kapott statisztikát adja vissza egy dictionary-ben a példában látható formátumban!
 
 **Példa:**
 
