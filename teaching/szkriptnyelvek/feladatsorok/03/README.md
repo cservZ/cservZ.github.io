@@ -87,8 +87,25 @@ Peti az egyik internetes fórumon azt olvasta, hogy az 5 karakternél rövidebb 
 </pre>
 
 
+### 7. feladat: Mátrix összeadás
 
-### 7. feladat: Gyorsétterem
+Írj egy `matrix_osszead` függvényt, amely két mátrixot vár paraméterül, és visszatér azok összegével!
+
+* A feladat megoldása során ne használj semmilyen beépített modult!
+* Fontos, hogy az összeadásnál mindkét mátrix dimenziószáma megegyezzen (pl. mindkét mátrix n x m-es). Eltérő dimenziószámú mátrixok esetén a függvény térjen vissza az üres listával!
+* Ha a dimenziók stimmelnek, akkor a két mátrix összegét úgy kapjuk, hogy az azonos indexen lévő elemeket összegezzük:
+
+![Mátrix összeadás](./matrix.png)
+
+**Példa:**
+
+<pre>
+<b>Input:</b> [ [7, 1, 3], [4, 0, 2] ], [ [2, 5, 5], [8, 6, 0] ]
+<b>Return:</b> [ [9, 6, 8], [12, 6, 2] ]
+</pre>
+
+
+### 8. feladat: Gyorsétterem
 
 A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, amely alapján leadhatják a rendelésüket. Az étteremben két kassza üzemel: egyiknél a páros, másiknál pedig a páratlan sorszámmal rendelkező vendégeket szolgálják ki.
 
@@ -102,7 +119,7 @@ A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, 
 </pre>
 
 
-### 8. feladat: Fájlok csoportosítása
+### 9. feladat: Fájlok csoportosítása
 
 Krisztián szeretne statisztikát készíteni a Dokumentumok mappájában található fájlokról, ezért egy Python szkriptet ír. A szkript feladata, hogy megszámolja, hogy az adott mappában belül a különböző kiterjesztésű fájlokból mennyi található.
 
