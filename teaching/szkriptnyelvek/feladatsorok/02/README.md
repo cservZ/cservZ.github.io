@@ -26,6 +26,8 @@ A feladatokhoz tartozó mintamegoldás elérhető [ide kattintva](./megoldasok.p
 
 Írj egy `paros_osszeg` nevű függvényt, amely egy egész számot vár paraméterül! A függvény adja össze a páros számokat 1-től a paraméterben kapott értékig (a paramétert is beleértve, amennyiben az páros)! A visszatérési érték az így kapott összeg.
 
+**Példa:**
+
 <pre>
 <b>Input:</b> 200
 <b>Return:</b> 10100                                                                          
