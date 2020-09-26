@@ -133,3 +133,25 @@ A feladatot úgy oldjuk meg, hogy a kiterjesztés vizsgálata során ne különb
 <b>Input:</b> ["feladat.py", "Bolygo.java", "HELLOFRIENDS.MP4", "TEST.PY", "biro.gib.maxpont.py", "russian-driving-fails.mp4"]
 <b>Return:</b> { 'mp4': 2, 'py': 3, 'java': 1 }        
 </pre>
+
+
+### 10. feladat: Összpontszám
+
+Egyik este a népszerű skribbl.io játékkal játszunk. A játék minden körében egy játékos lerajzol egy előre megadott dolgot, míg a többi játékos próbálja azt kitalálni. Az egyes körök során a játékosok pontokat gyűjtenek.
+
+Írj egy `osszegez` nevű függvényt, amely egy dictionary-kből álló listát kap paraméterül. A dictionary-k az egyes körök végeredményét tartalmazzák: a kulcsok a játékosok nevei, az értékek pedig az adott körben elért pontszám. A függvény adja össze az egyes játékosok pontjait minden körben, és az így kapott statisztikát adja vissza egy dictionary-ben a példában látható formátumban!
+
+**Példa:**
+
+<pre>
+<b>Input:</b>
+[
+  { 'shronk': 400, 'Dante': 200, 'Kruzor57': 800, 'Szepi': 500, 'Karoly': 70 },
+  { 'Dante': 0, 'Szepi': 0, 'Karoly': 200, 'shronk': 0, 'Kruzor57': 100 },
+  { 'Szepi': 600, 'Kruzor57': 400, 'Karoly': 500, 'shronk': 200, 'Dante': 300 },
+  { 'Dante': 500, 'Szepi': 100, 'Karoly': 0, 'shronk': 600, 'Kruzor57': 200 },
+  { 'Kruzor57': 100, 'Szepi': 500, 'shronk': 0, 'Dante': 300, 'Karoly': 100 }
+]
+<b>Return:</b>
+{ 'Szepi': 1700, 'Karoly': 870, 'shronk': 1500, 'Kruzor57': 1600, 'Dante': 1300 }
+</pre>
