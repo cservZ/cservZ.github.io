@@ -21,7 +21,7 @@ Ha a paraméterül kapott szöveg az üres string, akkor a visszatérési érté
 
 ### 2. feladat: Kiárusítás
 
-Balázs a zsebpénzéből egy új mikrofont szeretne venni. Szerencséjére a kedvenc webshopja épp [kiárusítás](https://www.youtube.com/watch?v=qA4Ws1KOl4U)t tart, így minden szórakoztató elektronikai termék 30%-os kedvezménnyel vásárolható meg.
+Balázs a zsebpénzéből egy új mikrofont szeretne venni. Szerencséjére a kedvenc webshopja épp [kiárusítást](https://www.youtube.com/watch?v=qA4Ws1KOl4U) tart, így minden szórakoztató elektronikai termék 30%-os kedvezménnyel vásárolható meg.
 
 Írj egy `akcios_ar` nevű függvényt, amely egy listát kap paraméterül: a mikrofonok eredeti árát (egész értékek). A függvény csökkentse az árakat a 30%-os kedvezménynek megfelelően, és adja vissza az így kapott listát! Az árak itt továbbra is egész számok legyenek (ne tizedestörtek)!
 
@@ -42,7 +42,7 @@ Tünde szeret olvasni, így a polcán is számos könyv van. Egyik nap Tünde re
 **Példa:**
 
 <pre>
-<b>Input:</b> ["Vajak I", "Allatfarm", "Harry Potter es a bolcsek kove", "A hobbit", "Szamitogep Architekturak"]
+<b>Input:</b> ['Vajak I', 'Allatfarm', 'Harry Potter es a bolcsek kove', 'A hobbit', 'Szamitogep Architekturak']
 <b>Return:</b> ['Vajak I', 'Szamitogep Architekturak', 'Harry Potter es a bolcsek kove', 'Allatfarm', 'A hobbit']
 </pre>
 
@@ -56,7 +56,7 @@ Béla egy online játékkal játszik. A játékban talált egy bugot, amit kihas
 **Példa:**
 
 <pre>
-<b>Input:</b> ["EpicBela20", "python4life", "EpicBela20", "EpicBela20", "kalkEasy", "varj_ez_nem_is_csgo", "sajt42"]
+<b>Input:</b> ['EpicBela20', 'python4life', 'EpicBela20', 'EpicBela20', 'kalkEasy', 'varj_ez_nem_is_csgo', 'sajt42']
 <b>Return:</b> ['python4life', 'kalkEasy', 'varj_ez_nem_is_csgo', 'sajt42']
 </pre>
 
@@ -82,7 +82,7 @@ Peti az egyik internetes fórumon azt olvasta, hogy az 5 karakternél rövidebb 
 **Példa:**
 
 <pre>
-<b>Input:</b> ["cica", "kiscica", "nagy_macska_82", "123", "HosszuJelszoGoBrrr", "kekw", "sajt2"]
+<b>Input:</b> ['cica', 'kiscica', 'nagy_macska_82', '123', 'HosszuJelszoGoBrrr', 'kekw', 'sajt2']
 <b>Return:</b> ['cica', '123', 'kekw']
 </pre>
 
@@ -102,6 +102,9 @@ Peti az egyik internetes fórumon azt olvasta, hogy az 5 karakternél rövidebb 
 <pre>
 <b>Input:</b> [ [7, 1, 3], [4, 0, 2] ], [ [2, 5, 5], [8, 6, 0] ]
 <b>Return:</b> [ [9, 6, 8], [12, 6, 2] ]
+
+<b>Input:</b> [ [5, 1], [3, 2], [8, 6] ], [ [4, 8], [2, 7] ]
+<b>Return:</b> []
 </pre>
 
 
@@ -130,7 +133,7 @@ A feladatot úgy oldjuk meg, hogy a kiterjesztés vizsgálata során ne különb
 **Példa:**
 
 <pre>
-<b>Input:</b> ["feladat.py", "Bolygo.java", "HELLOFRIENDS.MP4", "TEST.PY", "biro.gib.maxpont.py", "russian-driving-fails.mp4"]
+<b>Input:</b> ['feladat.py', 'Bolygo.java', 'HELLOFRIENDS.MP4', 'TEST.PY', 'biro.gib.maxpont.py', 'russian-driving-fails.mp4']
 <b>Return:</b> { 'mp4': 2, 'py': 3, 'java': 1 }        
 </pre>
 
