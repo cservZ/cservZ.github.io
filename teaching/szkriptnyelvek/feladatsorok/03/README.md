@@ -13,6 +13,8 @@
 
 Ha a paraméterül kapott szöveg az üres string, akkor a visszatérési érték a `Hiba` szöveg legyen!
 
+**Példa:**
+
 <pre>
 <b>Input:</b> A Bekescsabarol Szegedre tarto vonat varhatoan fel orat kesik. Az okozott kellemetlensegert szives elnezesuket kerjuk.
 <b>Return:</b> kellemetlensegert           
