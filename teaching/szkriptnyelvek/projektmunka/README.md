@@ -9,4 +9,9 @@ A plusz pontok a minimum pontszámba természetesen nem számítanak bele, a min
 
 * A projekt beadása és értékelése a **CooSpace** rendszerén keresztül történik.
 * A beadási határidő: **2020.XX.YY. 23:55**.
-* 
+* A beadás előtt a hallgató írásban tájékoztatja a gyakorlatvezetőt a projekt témájával és megvalósításával kapcsolatban. A gyakorlatvezető ezt jóváhagyhatja vagy elutasíthatja.
+
+
+## Projekt ötletek
+
+A projekt témája tetszőleges
