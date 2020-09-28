@@ -1,3 +1,7 @@
+<style>
+	h1:first-of-type { display: none; }
+</style>
+
 # Szkriptnyelvek gyakorlat - Szorgalmi projektmunka
 
 A félév során a Szkriptnyelvek gyakorlaton **legfeljebb 10 plusz pont** szerzésére van lehetőség. A plusz pontok megszerzésének fő módja egy szorgalmi jeleggel elkészíthető **projektmunka** a tanult nyelvek (Python, JavaScript) valamelyikét használva.
@@ -12,6 +16,13 @@ A plusz pontok a minimum pontszámba természetesen nem számítanak bele, a min
 * A beadás előtt a hallgató írásban tájékoztatja a gyakorlatvezetőt a projekt témájával és megvalósításával kapcsolatban. A gyakorlatvezető ezt jóváhagyhatja vagy elutasíthatja.
 
 
-## Projekt ötletek
+## Lehetséges projekt ötletek
 
-A projekt témája tetszőleges
+A projektmunka témája tetszőleges, viszont elsősorban a tanult két nyelv (Python, JavaScript) valamelyikét kell használni.
+
+A lehetséges kategóriák a projekt elkészítésére vonatkozóan:
+
+* konzolos alkalmazás (pl. automatizálási feladatot végző szkript, konzolos játék)
+* asztali alkalmazás
+* webes alkalmazás
+* web scraping szkript. 
