@@ -6,6 +6,8 @@
 
 ## Python adatszerkezetek: Lista, dictionary
 
+A feladatokhoz tartozó mintamegoldás letölthető [ide kattintva](./megoldasok.py)
+
 
 ### 1. feladat: Leghosszabb szó
 
