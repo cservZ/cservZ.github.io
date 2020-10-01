@@ -15,6 +15,7 @@ A plusz pontok a minimum pontszámba természetesen nem számítanak bele, a min
 * A beadási határidő: **2020.XX.YY. 23:55**.
 * A beadás előtt a hallgató írásban tájékoztatja a gyakorlatvezetőt a projekt témájával és megvalósításával kapcsolatban. A gyakorlatvezető ezt jóváhagyhatja, illetve szükség esetén módosíthatja.
 * Fontos, hogy a hallgató tisztában legyen a projekt működésével. A felhasznált külső forrásokat (pl. Stackoverflow) pontosan meg kell jelölni a projektben (felsorolással).
+* A projekt beadásakor a hallgató felsorolja az esetleges függőségeket, amelyek a projekt beüzemeléséhez szükségesek (pl. felhasznált Python modulok).
 * Az elkészült projektmunkát a hallgatónak meg kell védenie. A **projektvédés** során a gyakorlatvezető kérdéseket tesz fel a hallgatónak a projekttel kapcsolatban, amelyekkel ellenőrzi, hogy a hallgató tisztában van-e a kód működésével.
 
 ## Lehetséges projekt ötletek
