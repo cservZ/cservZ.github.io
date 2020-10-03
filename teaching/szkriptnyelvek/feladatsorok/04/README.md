@@ -7,32 +7,44 @@
 ## Python - Objektumorientáltság, kivételkezelés, fájlkezelés
 
 
-### 1. Receptkönyv
+### 1. Borospince
 
-A feladat egy egyszerű receptkönyv alkalmazás elkészítése Python nyelven. Hozd létre az alábbi osztályokat, és írd meg azok törzsét a feladatleírás alapján! A feladatok megoldását egyetlen Python szkriptbe készítsd el!
-
-
-#### A `Hozzavalo` osztály
-
-Hozz létre egy `Hozzavalo` osztályt, amely a következő 2 adattaggal rendelkezik: `_nev` és `_mennyiseg`!
-
-* A konstruktor 2 paramétert kap (ezek rendre: `nev`, `mennyiseg`), amelyekkel inicializálja a megfelelő adattagokat. A `mennyiseg` paraméter értékét ne legyen kötelező megadni, alapértéke legyen 1!
-* Készíts hagyományos getter és setter metódusokat a `_nev` adattaghoz `get_nev`, illetve `set_nev` néven!
-* Írj get és set property-t a `_mennyiseg` adattaghoz, `mennyiseg` néven! A setterben kezeld le, hogy csak pozitív egész szám lehessen az adattag értéke! Ettől eltérő paraméter esetén a setter ne csináljon semmit!
-* Definiáld felül az objektum szöveggé alakításáért felelő metódust úgy, hogy az a következő szöveggel térjen vissza: `{_mennyiseg} db {_nev}` (értelmeszerűen a megfelelő adatok értéke kerüljön behelyettesítésre)!
-* Definiáld felül az osztályban az `==` operátor működését! Ha az adott objektumot egy másik `Hozzavalo` objektummal szeretnénk összehasonlítani, akkor az operátor adja vissza, hogy a két objektum neve és mennyisége megegyezik-e! Nem `Hozzavalo` típusú paraméter esetén az operátor logikai hamis értékkel térjen vissza!
+A borospincénkben szekrények vannak, amelyek polcain borokat tárolunk. Készítsd el `Bor` és `Szekreny` osztályokat a feladatleírás alapján! A feladatok megoldását egyetlen Python szkriptbe készítsd el!
 
 
-#### A `Recept` osztály
+#### A `Bor` osztály
 
-Írj egy `Recept` nevű osztályt, amely két adattaggal rendelkezik: `_etelnev` (az étel neve, amelyet a receptet követve elkészíthetünk) és `hozzavalok`! A `hozzavalok` adattag egy lista lesz, amely a recepthez szükséges hozzávalókat fogja tárolni.
+Hozz létre egy `Bor` nevű osztályt, amely a következő 3 adattaggal rendelkezik: `_fajta`, `_evjarat` és `_alkoholtartalom`!
 
-* Készítsd el a konstruktort, amely az étel nevét várja paraméterül, és ezzel inicializálja az `_etelnev` adattagot! A konstruktorban inicializáljuk a `hozzavalok` adattagot egy üres listával!
-* Készíts get és set property-t az `_etelnev` adattaghoz, `etelnev` néven! A setterben kezeld le, hogy csak szöveges típusú adatot lehessen értékül adni az adattagnak! Nem megfelelő adattípus esetén a setter ne módosítsa az adattag értékét!
-* Készíts egy `get_hozzavalo` metódust, amely paraméterül egy egész számot vár! A metódus térjen vissza a `hozzavalok` lista adott indexén lévő elemével! Az egyszerűség kedvéért csak a nemnegatív indexeket kezeljük, tehát amennyiben a paraméterben kapott szám negatív vagy nagyobb, mint a lista mérete, dobj egy `Exception` típusú kivételt, amit a `Nem letezo index!` szöveggel inicializálj!
-* Definiáld felül az osztályban a `+` operátort úgy, hogy ha az egy `Hozzavalo` objektumot kap paraméterül, akkor a metódus szúrja be a paraméterben érkező hozzávalót a `hozzavalok` lista végére!
-* Bővítsd ki az előző operator overload függvényt úgy, hogy az egy másik `Recept`típusú paramétert is tudjon fogadni! A függvény térjen vissza egy új `Recept` objektummal! Az új objektum `_etelnev` adattagjának értéke `Bonyolult etel` legyen! A `hozzavalok` lista legyen az eredi és a paraméterben kapott objektum `hozzavalok` listájának összefűzése!
-* Írj egy `ossz_hozzavaloszam` metódust, amely visszaadja, hogy összesen hány hozzávaló szükséges a recept elkészítéséhez! Az összes hozzávaló számát úgy kapjuk, ha összeadjuk, hogy az egyes hozzávalókból külön-külön mennyi kell. 
-* Írj egy `legtobb_kell` metódust, amely visszaadja annak a hozzávalónak a nevét, amelyből a legtöbbet kell beletenni a receptbe (`_mennyiseg` adattag)! Ha a `hozzavalok` lista üres, akkor dobj egy `Exception` típusú kivételt, amit a `Nincsenek hozzavalok!` szöveggel incializálj!
-* Készíts egy `kell_bele` metódust, amely egy hozzávaló nevét (szöveg) kapja paraméterül, és eldönti, hogy szükséges-e a recepthez az adott hozzávaló (azaz szerepel-e a `hozzavalok` listában az adott nevű hozzávaló, legalább 1 `_mennyiseg` értékkel)! 
-* Definiáld felül az objektum szöveggé alakításáért felelő metódust! Amennnyiben a `hozzavalok` lista üres, akkor a metódus térjen vissza a `Nincs megjelenitheto hozzavalo!` szöveggel! Ellenkező esetben a metódus írja ki a recepthez szükséges hozzávalók nevét és mennyiségét, pontosvesszővel elválasztva (tipp: a név és mennyiség lekéréséhez elég meghívni az adott hozzávaló szöveggé alakító metódusát)!
+* A konstruktor paraméterül kapja a `fajta`, `evjarat` és `alkoholtartalom` paramétereket (ebben a sorrendben), és ezekkel inicializálja a megfelelő adattagokat. Az `alkoholtartalom` értékét ne legyen kötelező megadni, alapértéke legyen `12.5`!
+* Készíts hagyományos getter és setter metódusokat a `_fajta` adattaghoz, `get_fajta` és `set_fajta` néven!
+* Írj get és set property-t az `_alkoholtartalom` adattaghoz, `alkoholtartalom` néven. A setterben kezeld le, hogy csak nemnegatív valós szám lehessen az adattag értéke! Nem megfelelő paraméter esetén a setter ne módosítsa az adattag értékét!
+* Definiáld felül az osztályban az objektum szöveggé alakításáért felelő metódust úgy, hogy az a következő szöveggel térjen vissza: `{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}.` (értelemszerűen a megfelelő adattog értéke kerüljön mindenhol behelyettesítésre)!
+* Definiáld felül az osztályban az `==` operátor működését! Ha az adott objektumot egy másik `Bor` objektummal szeretnénk összehasonlítani, akkor az operátor adja vissza, hogy a két bor fajtája, évjárata és alkoholtartalma rendre megegyezik-e! Nem `Bor` típusú paraméter esetén az operátor logikai hamis értékkel térjen vissza!
+
+
+#### A `Szekreny` osztály
+
+Írj egy `Szekreny` osztályt, amelynek egyetlen adattagja egy lista, `borok` néven! Ebben a listában tároljuk a szekrény polcain található borokat.
+
+* Készítsd el az osztály konstruktorát, amely nem vár paramétert, és a `borok` adattagot egy üres listával inicializálja!
+* Írj egy `get_bor` metódust, amely paraméterül egy egész számot kap! A metódus térjen vissza a `borok` lista adott indexén lévő elemével! Az egyszerűség kedvéért csak a pozitív indexeket kezeljük, így ha a paraméterben kapott szám negatív vagy nagyobb, mint a lista utolsó elemének az indexe, dobj egy `Exception` típusú kivételt, amit a `Nem letezo index!` szöveggel inicializálj!
+* Definiáld felül a `+` operátort az osztályban úgy, hogy ha az egy `Bor` objektumot kap paraméterül, akkor szúrja be azt a `borok` lista végére!
+* Bővítsd ki az előző operator overload metódust úgy, hogy az egy másik `Szekreny` típusú paramétert is tudjon fogadni! A függvény térjen vissza egy új `Szekreny` objektummal, amelynek a `borok` listája az eredeti és a paraméterben érkező objektum `borok` listájának az összefűzése legyen!
+* Készíts egy paraméter nélküli metódust, `statisztika` néven! A metódus számolja össze, hogy az egyes borfajtákból mennyi található a szekrényen, és adja vissza az eredményt egy dictionary-ben!
+	* Ha a szekrényen nincs egyetlen bor sem, akkor a visszatérési érték egy üres dictionary.
+	* Ha a szekrényen van bor, számítsuk ki az egyes borfajták darabszámát! A borfajták nevében nem különböztetjük meg a kis- és nagybetűket, tehát például az `aszu` és `Aszu` fajtanevek megegyeznek.
+
+Példa a metódus működésére:
+
+<pre>
+<b>A szekrény tartalma:</b>
+Bor("tokaji aszu", 2017, 13.5),
+Bor("egri bikaver", 2013, 12),
+Bor("tOkAjI aSzU", 2015, 13.8)
+
+<b>A statisztika függvény visszatérési értéke:</b>
+{ 'tokaji aszu': 2, 'egri bikaver': 1 }
+</pre>
+
+* ...
