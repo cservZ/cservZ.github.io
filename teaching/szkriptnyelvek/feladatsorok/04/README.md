@@ -28,4 +28,8 @@ Hozz létre egy `Hozzavalo` osztályt, amely a következő 2 adattaggal rendelke
 Írj egy `Recept` nevű osztályt, amely két adattaggal rendelkezik: `_etelnev` (az étel neve, amelyet a receptet követve elkészíthetünk) és `hozzavalok`! A `hozzavalok` adattag egy lista lesz, amely a recepthez szükséges hozzávalókat fogja tárolni.
 
 * Készítsd el a konstruktort, amely az étel nevét várja paraméterül, és ezzel inicializálja az `_etelnev` adattagot! A konstruktorban inicializáljuk a `hozzavalok` adattagot egy üres listával!
+* Készíts get és set property-t az `_etelnev` adattaghoz, `etelnev` néven! A setterben kezeld le, hogy csak szöveges típusú adatot lehessen értékül adni az adattagnak! Nem megfelelő adattípus esetén a setter ne módosítsa az adattag értékét!
+* Készíts egy `get_hozzavalo` metódust, amely paraméterül egy egész számot vár! A metódus térjen vissza a `hozzavalok` lista adott indexén lévő elemével! Az egyszerűség kedvéért csak a nemnegatív indexeket kezeljük, tehát amennyiben a paraméterben kapott szám negatív vagy nagyobb, mint a lista mérete, dobj egy `Exception` típusú kivételt, amit a `Nem letezo index!` szöveggel inicializálj!
+* Definiáld felül az osztályban a `+` operátort úgy, hogy ha az egy `Hozzavalo` objektumot kap paraméterül, akkor a metódus szúrja be a paraméterben érkező hozzávalót a `hozzavalok` lista végére!
+* Bővítsd ki az előző operator overload függvényt úgy, hogy az egy másik `Recept`típusú paramétert is tudjon fogadni! A függvény térjen vissza egy új `Recept` objektummal! Az új objektum `_etelnev` adattagjának értéke `Bonyolult etel` legyen! A `hozzavalok` lista legyen az eredi és a paraméterben kapott objektum `hozzavalok` listájának összefűzése!
 * ...
