@@ -60,11 +60,12 @@ Bor("tOkAjI aSzU", 2015, 13.8)
 
 Bor("tokaji aszu", 2017, 13.5),
 Bor("egri bikaver", 2013, 12),
-Bor("tOkAjI aSzU", 2015, 13.8)
+Bor("tOkAjI aSzU", 2015, 13.8),
+Bor("chardonnay", 2019, 13.0)
 
 <b>A statisztika függvény visszatérési értéke:</b>
 
-Borok: tokaji aszu;egri bikaver
+Borok: tokaji aszu;egri bikaver;chardonnay
 </pre>
 
 
