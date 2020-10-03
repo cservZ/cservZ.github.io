@@ -66,3 +66,28 @@ Bor("tOkAjI aSzU", 2015, 13.8)
 
 Borok: tokaji aszu;egri bikaver
 </pre>
+
+
+### 2. Legjobb eredmény
+
+Egy zárthelyi dolgozat eredményeit egy `zh.csv` nevű állományban tároljuk. A fájl több sorból áll, és minden sorban pontosvesszővel elválasztott adatok szerepelnek. Az egyes sorokban szereplő, pontosvesszővel adatok rendre: hallgató neve, szakja és az elért pontszám.
+
+Írj Python szkriptet, amely beolvassa a `zh.csv` adatait, majd a legtöbb pontszámot elért hallgató nevét kiírja egy `mvp.txt` nevű fájlba! A munkád során ügyelj a biztonságos fájlkezelésre!
+
+**Példa a szkript működésére:**
+
+A bemeneti fájl tartalma:
+
+```
+Trab Antal;programtervezo informatikus;56
+Haar Monika;gazdasaginformatikus;85
+Zsiros B. Odon;uzemmernok informatikus;93
+Koaxk Abel;mernokinformatikus;72
+Riz Otto;programtervezo informatikus;64
+```
+
+A kimeneti fájl tartalma:
+
+```
+Zsiros B. Odon
+```
