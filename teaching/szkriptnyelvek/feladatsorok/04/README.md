@@ -39,11 +39,13 @@ Példa a metódus működésére:
 
 <pre>
 <b>A szekrény tartalma:</b>
+
 Bor("tokaji aszu", 2017, 13.5),
 Bor("egri bikaver", 2013, 12),
 Bor("tOkAjI aSzU", 2015, 13.8)
 
 <b>A statisztika függvény visszatérési értéke:</b>
+
 { 'tokaji aszu': 2, 'egri bikaver': 1 }
 </pre>
 
