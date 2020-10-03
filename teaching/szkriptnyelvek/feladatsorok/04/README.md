@@ -31,6 +31,7 @@ Hozz létre egy `Bor` nevű osztályt, amely a következő 3 adattaggal rendelke
 * Írj egy `get_bor` metódust, amely paraméterül egy egész számot kap! A metódus térjen vissza a `borok` lista adott indexén lévő elemével! Az egyszerűség kedvéért csak a pozitív indexeket kezeljük, így ha a paraméterben kapott szám negatív vagy nagyobb, mint a lista utolsó elemének az indexe, dobj egy `Exception` típusú kivételt, amit a `Nem letezo index!` szöveggel inicializálj!
 * Definiáld felül a `+` operátort az osztályban úgy, hogy ha az egy `Bor` objektumot kap paraméterül, akkor szúrja be azt a `borok` lista végére!
 * Bővítsd ki az előző operator overload metódust úgy, hogy az egy másik `Szekreny` típusú paramétert is tudjon fogadni! A függvény térjen vissza egy új `Szekreny` objektummal, amelynek a `borok` listája az eredeti és a paraméterben érkező objektum `borok` listájának az összefűzése legyen!
+* Írj egy `ossz_alkoholtartalom` metódust, amely adja össze a szekrényen lévő borok alkoholtartalmát, és térjen vissza az összeggel!
 * Készíts egy paraméter nélküli metódust, `statisztika` néven! A metódus számolja össze, hogy az egyes borfajtákból mennyi található a szekrényen, és adja vissza az eredményt egy dictionary-ben!
 	* Ha a szekrényen nincs egyetlen bor sem, akkor a visszatérési érték egy üres dictionary.
 	* Ha a szekrényen van bor, számítsuk ki az egyes borfajták darabszámát! A borfajták nevében nem különböztetjük meg a kis- és nagybetűket, tehát például az `aszu` és `Aszu` fajtanevek megegyeznek.
@@ -49,4 +50,19 @@ Bor("tOkAjI aSzU", 2015, 13.8)
 { 'tokaji aszu': 2, 'egri bikaver': 1 }
 </pre>
 
-* ...
+* Készíts egy `megisszak` metódust, amely egyetlen `Bor` objektumot vár paraméterül! A metódus törölja az adott bort a `borok` listából, amennyiben az szerepel a listában! Ha a metódus nem `Bor` típusú paramétert kap, dobj egy `TypeError` típusú kivételt, amit a `Nem bor!` szöveggel inicializálj!
+* Definiáld felül az objektum szöveggé alakításáért felelő metódust az osztályban! Amennyiben a `borok` lista nem üres, a metódus térjen vissza a `Borok: {borok_neve}` szöveggel, ahol `borok_neve` a `borok` listában szereplő különböző borok fajtáinak neve, pontosvesszővel elválasztva! Ha a `borok` lista üres, akkor a metódus visszatérési értéke az `A szekreny ures.` szöveg legyen!
+
+Példa a metódus működésére:
+
+<pre>
+<b>A szekrény tartalma:</b>
+
+Bor("tokaji aszu", 2017, 13.5),
+Bor("egri bikaver", 2013, 12),
+Bor("tOkAjI aSzU", 2015, 13.8)
+
+<b>A statisztika függvény visszatérési értéke:</b>
+
+Borok: tokaji aszu;egri bikaver
+</pre>
