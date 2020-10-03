@@ -36,7 +36,7 @@ Hozz létre egy `Bor` nevű osztályt, amely a következő 3 adattaggal rendelke
 	* Ha a szekrényen nincs egyetlen bor sem, akkor a visszatérési érték egy üres dictionary.
 	* Ha a szekrényen van bor, számítsuk ki az egyes borfajták darabszámát! A borfajták nevében nem különböztetjük meg a kis- és nagybetűket, tehát például az `aszu` és `Aszu` fajtanevek megegyeznek.
 
-Példa a metódus működésére:
+**Példa a metódus működésére:**
 
 <pre>
 <b>A szekrény tartalma:</b>
@@ -53,7 +53,7 @@ Bor("tOkAjI aSzU", 2015, 13.8)
 * Készíts egy `megisszak` metódust, amely egyetlen `Bor` objektumot vár paraméterül! A metódus törölja az adott bort a `borok` listából, amennyiben az szerepel a listában! Ha a metódus nem `Bor` típusú paramétert kap, dobj egy `TypeError` típusú kivételt, amit a `Nem bor!` szöveggel inicializálj!
 * Definiáld felül az objektum szöveggé alakításáért felelő metódust az osztályban! Amennyiben a `borok` lista nem üres, a metódus térjen vissza a `Borok: {borok_neve}` szöveggel, ahol `borok_neve` a `borok` listában szereplő különböző borok fajtáinak neve, pontosvesszővel elválasztva! Ha a `borok` lista üres, akkor a metódus visszatérési értéke az `A szekreny ures.` szöveg legyen!
 
-Példa a metódus működésére:
+**Példa a metódus működésére:**
 
 <pre>
 <b>A szekrény tartalma:</b>
