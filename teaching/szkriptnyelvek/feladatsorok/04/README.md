@@ -29,8 +29,8 @@ Hozz létre egy `Bor` nevű osztályt, amely a következő 3 adattaggal rendelke
 
 * Készítsd el az osztály konstruktorát, amely nem vár paramétert, és a `borok` adattagot egy üres listával inicializálja!
 * Írj egy `get_bor` metódust, amely paraméterül egy egész számot kap! A metódus térjen vissza a `borok` lista adott indexén lévő elemével! Az egyszerűség kedvéért csak a pozitív indexeket kezeljük, így ha a paraméterben kapott szám negatív vagy nagyobb, mint a lista utolsó elemének az indexe, dobj egy `Exception` típusú kivételt, amit a `Nem letezo index!` szöveggel inicializálj!
-* Definiáld felül a `+` operátort az osztályban úgy, hogy ha az egy `Bor` objektumot kap paraméterül, akkor szúrja be azt a `borok` lista végére!
-* Bővítsd ki az előző operator overload metódust úgy, hogy az egy másik `Szekreny` típusú paramétert is tudjon fogadni! A függvény térjen vissza egy új `Szekreny` objektummal, amelynek a `borok` listája az eredeti és a paraméterben érkező objektum `borok` listájának az összefűzése legyen!
+* Definiáld felül a `+=` operátort (`__iadd__` metódus) az osztályban úgy, hogy ha az egy `Bor` objektumot kap paraméterül, akkor szúrja be azt a `borok` lista végére!
+* Definiáld felül az osztályban a `+` operátort úgy, hogy az egy másik `Szekreny` típusú paramétert fogadjon! A függvény térjen vissza egy új `Szekreny` objektummal, amelynek a `borok` listája az eredeti és a paraméterben érkező objektum `borok` listájának az összefűzése legyen!
 * Írj egy `ossz_alkoholtartalom` metódust, amely adja össze a szekrényen lévő borok alkoholtartalmát, és térjen vissza az összeggel!
 * Készíts egy paraméter nélküli metódust, `statisztika` néven! A metódus számolja össze, hogy az egyes borfajtákból mennyi található a szekrényen, és adja vissza az eredményt egy dictionary-ben!
 	* Ha a szekrényen nincs egyetlen bor sem, akkor a visszatérési érték egy üres dictionary.
