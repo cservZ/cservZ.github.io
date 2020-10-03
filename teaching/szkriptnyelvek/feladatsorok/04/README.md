@@ -19,7 +19,7 @@ Hozz létre egy `Bor` nevű osztályt, amely a következő 3 adattaggal rendelke
 * A konstruktor paraméterül kapja a `fajta`, `evjarat` és `alkoholtartalom` paramétereket (ebben a sorrendben), és ezekkel inicializálja a megfelelő adattagokat. Az `alkoholtartalom` értékét ne legyen kötelező megadni, alapértéke legyen `12.5`!
 * Készíts hagyományos getter és setter metódusokat a `_fajta` adattaghoz, `get_fajta` és `set_fajta` néven!
 * Írj get és set property-t az `_alkoholtartalom` adattaghoz, `alkoholtartalom` néven. A setterben kezeld le, hogy csak nemnegatív valós szám lehessen az adattag értéke! Nem megfelelő paraméter esetén a setter ne módosítsa az adattag értékét!
-* Definiáld felül az osztályban az objektum szöveggé alakításáért felelő metódust úgy, hogy az a következő szöveggel térjen vissza: `{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}.` (értelemszerűen a megfelelő adattog értéke kerüljön mindenhol behelyettesítésre)!
+* Definiáld felül az osztályban az objektum szöveggé alakításáért felelő metódust úgy, hogy az a következő szöveggel térjen vissza: `{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}` (értelemszerűen a megfelelő adattog értéke kerüljön mindenhol behelyettesítésre)!
 * Definiáld felül az osztályban az `==` operátor működését! Ha az adott objektumot egy másik `Bor` objektummal szeretnénk összehasonlítani, akkor az operátor adja vissza, hogy a két bor fajtája, évjárata és alkoholtartalma rendre megegyezik-e! Nem `Bor` típusú paraméter esetén az operátor logikai hamis értékkel térjen vissza!
 
 
@@ -43,7 +43,7 @@ Hozz létre egy `Bor` nevű osztályt, amely a következő 3 adattaggal rendelke
 
 Bor("tokaji aszu", 2017, 13.5),
 Bor("egri bikaver", 2013, 12),
-Bor("tOkAjI aSzU", 2015, 13.8)
+Bor("TOKAJI ASZU", 2015, 13.8)
 
 <b>A statisztika függvény visszatérési értéke:</b>
 
@@ -51,7 +51,7 @@ Bor("tOkAjI aSzU", 2015, 13.8)
 </pre>
 
 * Készíts egy `megisszak` metódust, amely egyetlen `Bor` objektumot vár paraméterül! A metódus törölja az adott bort a `borok` listából, amennyiben az szerepel a listában! Ha a metódus nem `Bor` típusú paramétert kap, dobj egy `TypeError` típusú kivételt, amit a `Nem bor!` szöveggel inicializálj!
-* Definiáld felül az objektum szöveggé alakításáért felelő metódust az osztályban! Amennyiben a `borok` lista nem üres, a metódus térjen vissza a `Borok: {borok_neve}` szöveggel, ahol `borok_neve` a `borok` listában szereplő különböző borok fajtáinak neve, pontosvesszővel elválasztva! Ha a `borok` lista üres, akkor a metódus visszatérési értéke az `A szekreny ures.` szöveg legyen!
+* Definiáld felül az objektum szöveggé alakításáért felelő metódust az osztályban! Amennyiben a `borok` lista üres, a metódus térjen vissza az `A szekreny ures.` szöveggel! Ellenkező esetben a metódus térjen vissza egy olyan szöveggel, amely vesszővel elválasztva tartalmazza az egyes borfajtákat és az azokból meglévő mennyiséget, `{darab} {fajta}` formában! (**Tipp:** Használd fel a `statisztika` függvény visszatérési értékét!)
 
 **Példa a metódus működésére:**
 
@@ -60,12 +60,12 @@ Bor("tOkAjI aSzU", 2015, 13.8)
 
 Bor("tokaji aszu", 2017, 13.5),
 Bor("egri bikaver", 2013, 12),
-Bor("tOkAjI aSzU", 2015, 13.8),
+Bor("TOKAJI ASZU", 2015, 13.8),
 Bor("chardonnay", 2019, 13.0)
 
-<b>A statisztika függvény visszatérési értéke:</b>
+<b>Az __str__ függvény visszatérési értéke:</b>
 
-Borok: tokaji aszu;egri bikaver;chardonnay
+2 tokaji aszu, 1 egri bikaver, 1 chardonnay
 </pre>
 
 
