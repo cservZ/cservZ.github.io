@@ -16,7 +16,7 @@ A borospincénkben szekrények vannak, amelyek polcain borokat tárolunk. Kész�
 
 Hozz létre egy `Bor` nevű osztályt, amely a következő 3 adattaggal rendelkezik: `_fajta`, `_evjarat` és `_alkoholtartalom`!
 
-* A konstruktor paraméterül kapja a `fajta`, `evjarat` és `alkoholtartalom` paramétereket (ebben a sorrendben), és ezekkel inicializálja a megfelelő adattagokat. Az `alkoholtartalom` értékét ne legyen kötelező megadni, alapértéke legyen `12.5`!
+* A konstruktor paraméterül kapja a `fajta`, `evjarat` és `alkoholtartalom` értékeket (ebben a sorrendben), és ezekkel inicializálja a megfelelő adattagokat. Az `alkoholtartalom` értékét ne legyen kötelező megadni, alapértéke legyen `12.5`!
 * Készíts hagyományos getter és setter metódusokat a `_fajta` adattaghoz, `get_fajta` és `set_fajta` néven!
 * Írj get és set property-t az `_alkoholtartalom` adattaghoz, `alkoholtartalom` néven. A setterben kezeld le, hogy csak nemnegatív valós szám lehessen az adattag értéke! Nem megfelelő paraméter esetén a setter ne módosítsa az adattag értékét!
 * Definiáld felül az osztályban az objektum szöveggé alakításáért felelő metódust úgy, hogy az a következő szöveggel térjen vissza: `{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}` (értelemszerűen a megfelelő adattag értéke kerüljön mindenhol behelyettesítésre)!
@@ -51,7 +51,7 @@ Bor("TOKAJI ASZU", 2015, 13.8)
 </pre>
 
 * Készíts egy `megisszak` metódust, amely egyetlen `Bor` objektumot vár paraméterül! A metódus törölje az adott bort a `borok` listából, amennyiben az szerepel a listában! Ha a metódus nem `Bor` típusú paramétert kap, dobj egy `TypeError` típusú kivételt, amit a `Nem bor!` szöveggel inicializálj!
-* Definiáld felül az objektum szöveggé alakításáért felelő metódust az osztályban! Amennyiben a `borok` lista üres, a metódus térjen vissza az `A szekreny ures.` szöveggel! Ellenkező esetben a metódus térjen vissza egy olyan szöveggel, amely vesszővel elválasztva tartalmazza az egyes borfajtákat és az azokból meglévő mennyiséget, `{darab} {fajta}` formában! (**Tipp:** Használd fel a `statisztika` függvény visszatérési értékét!)
+* Definiáld felül az objektum szöveggé alakításáért felelő metódust az osztályban! Amennyiben a `borok` lista üres, a metódus térjen vissza az `A szekreny ures.` szöveggel! Ellenkező esetben a metódus térjen vissza egy olyan szöveggel, amely vesszővel elválasztva tartalmazza az egyes borfajtákat és az azokból meglévő mennyiséget, `{darab} {fajta}` formátumban! (**Tipp:** Használd fel a `statisztika` függvény visszatérési értékét!)
 
 **Példa a metódus működésére:**
 
