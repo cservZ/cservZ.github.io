@@ -6,7 +6,7 @@
 
 ## Python - Objektumorientáltság, kivételkezelés, fájlkezelés
 
-A feladatokhoz tartozó mintamegoldás letölthető [ide kattintva](./megoldas.zip)
+A feladatokhoz tartozó mintamegoldás letölthető [ide kattintva](./megoldasok.zip)
 
 
 
