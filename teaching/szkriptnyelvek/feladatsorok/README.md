@@ -16,3 +16,8 @@ Az egyes feladatokhoz referenciamegoldást is teszek közzé a feladat kiírása
 * [Függvények, stringek](./02) ([megoldás](./02/megoldasok.py))
 * [Fontosabb adatszerkezetek: lista és dictionary](./03) ([megoldás](./03/megoldasok.py))
 * [Objektumorientáltság, kivételkezelés, fájlkezelés](./04) ([megoldás](./04/megoldasok.zip))
+
+
+## JavaScript gyakorló feladatok
+
+* [HTML, CSS, JavaScript alapok](./05)
