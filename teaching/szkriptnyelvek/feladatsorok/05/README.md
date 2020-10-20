@@ -1,3 +1,7 @@
+<style>
+    h1:first-of-type { display: none; }
+</style>
+
 # Szkriptnyelvek - 5. gyakorló feladatsor
 
 ## HTML, CSS, JavaScript alapok
