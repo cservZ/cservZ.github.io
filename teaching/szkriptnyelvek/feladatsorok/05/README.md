@@ -1,5 +1,6 @@
 <style>
     h1:first-of-type { display: none; }
+    img { display: block; margin: auto; width: 600px; }
 </style>
 
 # Szkriptnyelvek - 5. gyakorló feladatsor
@@ -7,37 +8,41 @@
 ## HTML, CSS, JavaScript alapok
 
 
-A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológépet, amely segítségével a 4 alapműveletet (összeadás, kivonás, szorzás és osztás) végezhetjük el. A számológép alatt egy táblázat látható, amely a számítási előzményeinket tartalmazza.
+A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológépet, amely segítségével a 4 alapműveletet (összeadás, kivonás, szorzás és osztás) végezhetjük el. A számológép alatt egy táblázat található, amely a számítási előzményeinket tartalmazza.
+
+**Példa az elkészítendő weboldalra:**
+
+![Példa](./sample.png)
 
 
 ### Az oldal kialakítása
 
-* A weboldal tetején jelenjen meg a `JavaScript alapok` feliratú címsor, vízszintesen középre igazítva!
-* A weboldalon szereplő minden szöveges tartalom Arial betűtípusú legyen!
+* A weboldal tetején jelenjen meg a `8. gyakorlat` feliratú címsor, vízszintesen középre igazítva!
+* A címsor alatt jeleníts meg egy `HTML, CSS és JavaScript alapok` feliratú bekezdést, vízszintesen középre igazítva!
+* Állítsd át a weboldalon szereplő összes szöveg betűtípusát Arial-ra!
 * Állítsd át a weboldal háttérszínét az alapértelmezettről egy számodra szimpatikus színre!
-* Módosítsd az oldal tetején lévő címsor szövegét JavaScriptben a `Számológép` feliratra!
+* JavaScript segítségével módosítsd az oldal tetején lévő címsor szövegét a `Számológép` feliratra!
+* JavaScript segítségével tedd félkövér betűstílusúvá a címsor alatt megjelenő bekezdést!
 
 
 ### Számológép
 
-* Hozz létre egy `div` objektumot, ami a számológépet fogja tartalmazni! Az objektumot igazítsd vízszintesen középre, illetve ízlés szerint adj neki margót, valamint térközt!
-* A létrehozott `div` objektumon belül hozd létre a következő elemeket:
+* Hozz létre egy `div` objektumot, amely a számológépet fogja tartalmazni! Az objektumot igazítsd vízszintesen középre, illetve ízlés szerint adj neki margót, valamint térközt!
+* A `div` objektumon belül hozd létre a következő elemeket, rácsos elrendezést (grid layout) használva:
     * egy beviteli mező az egyik számnak
     * egy beviteli mező a műveleti jelnek
     * egy beviteli mező a másik számnak
     * egy gomb, amire kattintva elvégezzük a számítást!
-* A gombra kattintva számítsuk ki a beírt kifejezés eredményét JavaScriptben!
-    * Ellenőrizd, hogy mindhárom beviteli mező ki legyen töltve! Amennyiben valamelyik beviteli mezőnek nem adjuk meg az értékét, írass ki hibaüzenetet!
-    * Ha az űrlapmezők megfelelően lettek kitöltve, végezd el a beírt számítást! Kezeld le a következő speciális eseteket:
+* A gombra kattintva számítsd ki az űrlapmezőkbe beírt számolás eredményét JavaScriptben!
+    * Ellenőrizd, hogy mindhárom beviteli mező ki legyen töltve! Amennyiben valamelyik beviteli mezőnek nem adtuk meg az értékét, írass ki hibaüzenetet!
+    * Ha az űrlapmezők megfelelően lettek kitöltve, akkor végezd el a beírt számítást! Kezeld le a következő speciális eseteket:
         * nullával történő osztás
         * a négy alapművelettől eltérő műveleti jel megadása!
-    * A kiszámolt eredményt jelenítsük meg a számológép alatt egy `div`-en belül!
-
+    * A kiszámolt eredményt jelenítsd meg a számológép alatt egy `div`-en belül!
 
 
 ### Számítási előzmények
 
-* Hozz létre egy táblázatot a számológép alatt, amely a számítási eredményeket fogja tartalmazni! A táblázat legyen vízszintesen középre igazítva!
-* A táblázat első sora két fejléccellát tartalmaz: `Számítás` és `Eredmény`. Ezek alatt fogjuk megjeleníteni az egyes számítások adatait.
-* Miután kiszámítjuk egy számítás eredményét, fűzzünk hozzá egy új sort a táblázathoz! A sor két táblázatcellát tartalmaz: a számítást (a két szám és az operátor), illetve az eredményt.
-* A táblázat alatt legyen egy `Előzmények törlése` feliratú gomb! A gombra kattintva töröljük a táblázatból az összes számítási előzményt!
+* Hozz létre egy vízszintesen középre igazított táblázatot a számológép alatt, amely a számítási előzményeket fogja tartalmazni! A táblázat csak akkor legyen látható, ha már elvégeztünk legalább egy számítást!
+* Miután a számológéppel elvégzünk egy számítást, fűzzünk hozzá egy új sort a táblázathoz! A sor két táblázatcellát tartalmazzon: a számítást (a két szám és az operátor), illetve az eredményt!
+* A táblázat alatt legyen egy `Előzmények törlése` feliratú gomb, ami szintén csak akkor jelenjen meg, ha már elvégeztünk legalább egy számítást! A gombra kattintva töröljük a táblázatból az összes sort, majd tüntessük el a táblázatot a weboldalról!
