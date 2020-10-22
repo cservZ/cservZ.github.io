@@ -1,6 +1,6 @@
 <style>
     h1:first-of-type { display: none; }
-    img { display: block; margin: auto; width: 600px; }
+    img { display: block; margin: auto; width: 500px; }
 </style>
 
 # Szkriptnyelvek - 5. gyakorló feladatsor
@@ -12,7 +12,7 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
 
 **Példa az elkészítendő weboldalra:**
 
-![Példa](./sample.png)
+<a href="./sample.png"><img src="sample.png" alt="Példa"></a>
 
 
 ### Az oldal kialakítása
