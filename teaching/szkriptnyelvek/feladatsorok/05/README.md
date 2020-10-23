@@ -17,11 +17,11 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
 
 ### Az oldal kialakítása
 
-* A weboldal tetején jelenjen meg a `8. gyakorlat` feliratú címsor, vízszintesen középre igazítva!
+* A weboldal tetején jelenjen meg egy `8. gyakorlat` feliratú, `h1`-es címsor, vízszintesen középre igazítva!
 * A címsor alatt jeleníts meg egy `HTML, CSS és JavaScript alapok` feliratú bekezdést, vízszintesen középre igazítva!
+* Alakítsd a weboldal tetején lévő címsort csupa nagybetűssé!
 * Állítsd át a weboldalon szereplő összes szöveg betűtípusát Arial-ra!
 * Állítsd át a weboldal háttérszínét az alapértelmezettről egy számodra szimpatikus színre!
-* Alakítsd a weboldal tetején lévő címsort csupa nagybetűssé!
 * JavaScript segítségével módosítsd az oldal tetején lévő címsor szövegét a `Számológép` feliratra!
 * JavaScript segítségével tedd félkövér betűstílusúvá a címsor alatt megjelenő bekezdést!
 
@@ -35,7 +35,7 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
     * egy beviteli mező a másik számnak
     * egy gomb, amire kattintva elvégezzük a számítást!
 * A gombra kattintva számítsd ki az űrlapmezőkbe beírt számolás eredményét JavaScriptben!
-    * Ellenőrizd, hogy mindhárom beviteli mező ki legyen töltve! Amennyiben valamelyik beviteli mezőnek nem adtuk meg az értékét, írass ki hibaüzenetet!
+    * Ellenőrizd, hogy mindhárom beviteli mező ki legyen töltve! Amennyiben valamelyik beviteli mezőnek nem adtuk meg az értékét, írass ki hibaüzenetet! (**Tipp:** A nem kitöltött űrlapmezők alapértéke az üres string.)
     * Ha az űrlapmezők megfelelően lettek kitöltve, akkor végezd el a beírt számítást! Kezeld le a következő speciális eseteket:
         * nullával történő osztás
         * a négy alapművelettől eltérő műveleti jel megadása!
