@@ -21,6 +21,7 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
 * A címsor alatt jeleníts meg egy `HTML, CSS és JavaScript alapok` feliratú bekezdést, vízszintesen középre igazítva!
 * Állítsd át a weboldalon szereplő összes szöveg betűtípusát Arial-ra!
 * Állítsd át a weboldal háttérszínét az alapértelmezettről egy számodra szimpatikus színre!
+* Alakítsd a weboldal tetején lévő címsort csupa nagybetűssé!
 * JavaScript segítségével módosítsd az oldal tetején lévő címsor szövegét a `Számológép` feliratra!
 * JavaScript segítségével tedd félkövér betűstílusúvá a címsor alatt megjelenő bekezdést!
 
