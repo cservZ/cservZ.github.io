@@ -21,3 +21,4 @@ Az egyes feladatokhoz referenciamegoldást is teszek közzé a feladat kiírása
 ## JavaScript gyakorló feladatok
 
 * [HTML, CSS, JavaScript alapok](./05)
+* [JavaScript vezérlés, függvények, stringek](./06)
