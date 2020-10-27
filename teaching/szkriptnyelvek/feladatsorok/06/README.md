@@ -11,7 +11,7 @@ A feladatok megoldása előtt telepítsük a [Node.js](https://nodejs.org/en/) f
 
 ### 1. feladat: Imposztor
 
-Dani a népszerű Among Us játékkal játszik. A játék egyes köreiben annak a százalékos valószínűsége, hogy Dani imposztor lesz, a következő képlettel kapható meg: `100 * (imposztorok száma / játékosok száma)`.
+Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékkal játszik. A játék egyes köreiben annak a százalékos valószínűsége, hogy Dani imposztor lesz, a következő képlettel kapható meg: `100 * (imposztorok száma / játékosok száma)`.
 
 Írj egy `imposztor` nevű függvényt, amely rendre az imposztorok számát és a játékosok számát kapja paraméterül (mindkét érték garantáltan szám típusú)!
 
@@ -35,7 +35,7 @@ Dani a népszerű Among Us játékkal játszik. A játék egyes köreiben annak 
 
 ### 2. feladat: Számjegyek átlaga
 
-Írj egy `szamjegyAtlag` nevű függvényt, amely garantáltan egy egész számot vár paraméterül, és visszaadja ennek a számjegyeinek az átlagát! Ha a függvényt nem szám típusú paraméterrel hívjuk meg, akkor a visszatérési érték legyen `-1`!
+Írj egy `szamjegyAtlag` nevű függvényt, amely egy egész számot vár paraméterül, és visszaadja annak a számjegyeinek az átlagát! Ha a függvényt nem szám típusú paraméterrel hívjuk meg, akkor a visszatérési érték legyen `-1`!
 
 **Példa:**
 
@@ -72,3 +72,39 @@ A függvény visszatérési értéke legyen a `Hiba` szöveg, amennyiben...
 </pre>
 
 
+### 4. feladat: E-mail cím generátor
+
+A Flying Duck Travels légitársaság levelező szolgáltatásával saját e-mail fiókot hozhatunk létre. A regisztráció során meg kell adnunk a teljes nevünket és a születési évet, majd ezekből az adatokból a rendszer generál egy javasolt felhasználónevet a következőképpen:
+
+* vesszük a teljes névben szereplő összes névnek az első 3 betűjét, csupa kisbetűvel
+* ezután vesszük a születési év utolsó számjegyét
+* végül az így kapott azonosítóhoz hozzáfűzzük a `@duck.com` szöveget.
+
+Írj egy `emailtGeneral` nevű függvényt, amely két paramétert kap: a teljes nevet, valamint a születési évet, és visszaadja a felhasználó fenti szabályok alapján kigenerált e-mail címét! Hibakezeléssel nem kell foglalkoznod, feltesszük, hogy a beérkező paraméterek helyesek.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 'Citad Ella', 2002
+<b>Return:</b> 'citell2@duck.com'
+
+<b>Input:</b> 'Richard Paul Astley', 1966
+<b>Return:</b> 'ricpauast6@duck.com'
+</pre>
+
+
+### 5. feladat: Cenzúra
+
+Tamás az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen magára haragította az egyik admint. Emiatt azt a büntetést kapta, hogy most már az üzenetei cenzúrázva jelennek meg.
+
+Írj egy `cenzura` függvényt, amely Tamás egy üzenetét várja paraméterül, és ezt átalakítja úgy, hogy az összes magánhangzót lecseréli a `*` (csillag) karakterre! A magánhangzók vizsgálata során a kis- és nagybetűket ne különböztessük meg! A paraméterben érkező szöveg garantáltan nem tartalmaz ékezetes betűket.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 'He, miert igy jelennek meg az uzeneteim?'
+<b>Return:</b> 'H*, m**rt *gy j*l*nn*k m*g *z *z*n*t**m?'
+
+<b>Input:</b> 'Elhagyom ezt a csoportot, mert serto az elmult tobb mint 10 eves Discordos tapasztalatom es multammal szemben.'
+<b>Return:</b> '*lh*gy*m *zt * cs*p*rt*t, m*rt s*rt* *z *lm*lt t*bb m*nt 10 *v*s D*sc*rd*s t*p*szt*l*t*m *s m*lt*mm*l sz*mb*n.'
+</pre>
