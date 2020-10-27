@@ -10,7 +10,7 @@
 
 A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológépet, amely segítségével a 4 alapműveletet (összeadás, kivonás, szorzás és osztás) végezhetjük el. A számológép alatt egy táblázat található, amely a számítási előzményeinket tartalmazza.
 
-A feladatokhoz tartozó mintamegoldás letölthető [ide kattintva](./index.html)
+A feladatokhoz tartozó mintamegoldás letölthető [ide kattintva](./megoldas.html)
 
 **Példa az elkészítendő weboldalra:**
 
