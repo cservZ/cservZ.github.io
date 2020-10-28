@@ -97,3 +97,46 @@ Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékk
 <b>Input:</b> 'kecske'
 <b>Return:</b> -1
 </pre>
+
+
+### 6. feladat: Karakterek többszörözése
+
+Írj egy `karakterTobbszoroz` nevű függvényt, amely két paramétert vár: egy szöveget és egy egész számot! A függvény visszatérési értéke egy szöveg, amit úgy kapunk, hogy az első paraméterben érkező szöveg minden karakterét vesszük annyiszor, mint amennyi a második paraméterben kapott szám.
+
+A függvény visszatérési értéke legyen a `Hiba` szöveg, amennyiben...
+
+* ...valamelyik paraméter típusú nem megfelelő
+* ...az első paraméterben érkező szöveg az üres string
+* ...a második paraméterben érkező szám 1-nél kisebb!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 'Sanyi', 4
+<b>Return:</b> 'SSSSaaaannnnyyyyiiii'
+
+<b>Input:</b> 'Bela', -1
+<b>Return:</b> 'Hiba'
+</pre>
+
+
+### 7. feladat: E-mail cím generátor
+
+A Flying Duck Travels légitársaság levelező szolgáltatásával saját e-mail fiókot hozhatunk létre. A fiók létrehozásakor megadjuk a teljes nevünket és a születési évet, majd ezekből a rendszer generál egy javasolt e-mail címet a következőképpen:
+
+* vesszük a teljes névben szereplő összes névnek az első 3 betűjét, csupa kisbetűvel
+* ezután vesszük a születési év utolsó számjegyét
+* végül az így kapott azonosítóhoz hozzáfűzzük a `@duck.com` szöveget.
+
+Írj egy `emailCimetGeneral` nevű függvényt, amely két paramétert vár: a teljes nevet és a születési évet, és visszatér a fenti szabályok alapján legenerált e-mail címmel! A születési évet ne legyen kötelező megadni, alapértéke legyen 1970! Hibakezeléssel nem kell foglalkoznod, feltesszük, hogy a paraméterek helyesek.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 'Richard Paul Astley', 1966
+<b>Return:</b> 'ricpauast6@duck.com'
+
+<b>Input:</b> 'Citad Ella'
+<b>Return:</b> 'citell0@duck.com'
+</pre>
+
