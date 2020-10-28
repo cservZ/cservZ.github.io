@@ -140,3 +140,36 @@ A Flying Duck Travels légitársaság levelező szolgáltatásával saját e-mai
 <b>Return:</b> 'citell0@duck.com'
 </pre>
 
+
+### 8. feladat: Cenzúra
+
+Tamás az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen magára haragította az egyik admint. Emiatt azt a büntetést kapta, hogy most már az üzenetei cenzúrázva jelennek meg.
+
+Írj egy `cenzura` függvényt, amely Tamás egy üzenetét kapja paraméterül, és ezt átalakítja úgy, hogy az összes magánhangzót lecseréli a `*` (csillag) karakterre! A magánhangzók vizsgálata során a kis- és nagybetűket nem különböztetjük meg. A paraméterben érkező szöveg garantáltan nem tartalmaz ékezetes betűket.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 'He, miert igy jelennek meg az uzeneteim?'
+<b>Return:</b> 'H*, m**rt *gy j*l*nn*k m*g *z *z*n*t**m?'
+
+<b>Input:</b> 'Elhagyom ezt a csoportot, mert serto az elmult tobb mint 10 eves Discordos tapasztalatom es multammal szemben.'
+<b>Return:</b> '*lh*gy*m *zt * cs*p*rt*t, m*rt s*rt* *z *lm*lt t*bb m*nt 10 *v*s D*sc*rd*s t*p*szt*l*t*m *s m*lt*mm*l sz*mb*n.'
+</pre>
+
+
+### 9. feladat: Discord emote-ok
+
+Discordon lehetőségünk van különböző emote-okkal reagálni üzenetekre. Az emote-ok között megtalálhatóak például az angol ábécé betűi A-tól Z-ig. Márk ezeknek az emote-oknak a használatával szeretne kirakni egy szót, viszont fontos tudni, hogy a Discord minden emote-ot csak egyszer enged felhasználni.
+
+Írj egy `kirakhato` nevű függvényt, amely egy szót kap paraméterül, és visszaadja, hogy az kirakható-e a Discord betű emote-jaiból úgy, hogy minden emote-ot csak egyszer használhatunk fel!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 'pikachu'
+<b>Return:</b> true
+
+<b>Input:</b> 'macska'
+<b>Return:</b> false
+</pre>
