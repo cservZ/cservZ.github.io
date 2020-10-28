@@ -170,6 +170,29 @@ Discordon lehetőségünk van különböző emote-okkal reagálni üzenetekre. A
 <b>Input:</b> 'pikachu'
 <b>Return:</b> true
 
-<b>Input:</b> 'macska'
+<b>Input:</b> 'pokemon'
 <b>Return:</b> false
 </pre>
+
+
+### 10. feladat: Valaki éppen gépel
+
+Jani egy chatalkalmazást fejleszt JavaScriptben. Az alkalmazásban amikor egy vagy több felhasználó éppen gépel, akkor erről kiírunk egy üzenetet.
+
+Írj egy `gepeles` nevű függvényt, amely egy szöveget kap paraméterül. Ez a szöveg pontosvesszőkkel elválasztva tartalmazza azoknak a felhasználóknak a nevét, akik éppen gépelnek. Figyelj arra, hogy néhány név elé vagy után néhány fölösleges whitespace karakter került!
+
+* Ha pontosan 1 ember gépel, akkor térjünk vissza a `{username} eppen gepel` szöveggel, ahol `{username}` a gépelő felhasználó neve!
+* Ha pontosan 2 ember gépel, akkor térjünk vissza a `{username1} es {username2} eppen gepel` szöveggel, ahol `{username1}` az első, míg `{username2}` a második felhasználó neve a pontosvesszőkkel elválasztott adatok közül!
+* Ha 2-nél több ember gépel, akkor térjünk vissza a `{username1}, {username2} es {N} tovabbi felhasznalo eppen gepel` szöveggel, ahol `{username1}` és `{username2}` ugyanaz, mint az előző vázlatpontban, `{N}` pedig a többi gépelő felhasználónak a száma!
+* Minden egyéb esetben a függvény visszatérési értéke az üres string legyen!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 'EpicSanyi20'
+<b>Return:</b> 'EpicSanyi20 eppen gepel'
+
+<b>Input:</b> 'EpicSanyi20;    catman6  ;Sziklas;         Korte98'
+<b>Return:</b> 'EpicSanyi20, catman6 es 2 tovabbi felhasznalo eppen gepel'
+</pre>
+
