@@ -46,7 +46,22 @@ A [TeveClub](https://teveclub.hu/) oldalon virtuálisan tudunk tevéket nevelni.
 </pre>
 
 
-### 3. feladat: Imposztor
+### 3. feladat: Callback
+
+Használjuk fel az előző feladatban megírt `kobosszeg` függvényt, miután meggyőződtünk arról, hogy helyes paraméterekkel fogjuk meghívni!
+
+Írj egy `kobosszegetMeghiv` függvényt, amely 3 paramétert vár: két számot és egy callback függvényt (ez most a `kobosszeg` lesz)! Amennyiben minden paraméter megfelelő típusú, hívjuk meg a paraméterben kapott callback függvényt úgy, hogy az első paramétere az a két szám közül a kisebbik, míg a második paramétere a két szám közül a nagyobbik legyen! Ha valamelyik paraméter típusa nem megfelelő, írassunk ki hibaüzenetet!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 100, 10, kobosszeg
+<b>Return:</b> 25500475
+</pre>
+
+
+
+### 4. feladat: Imposztor
 
 Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékkal játszik. A játék egyes köreiben annak a százalékos valószínűsége, hogy Dani imposztor lesz, a következő képlettel kapható meg: `100 * (imposztorok száma / játékosok száma)`.
 
@@ -66,3 +81,19 @@ Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékk
 </pre>
 
 
+### 5. feladat: Számjegyek átlaga
+
+Írj egy `szamjegyAtlag` nevű függvényt, amely egy egész számot vár paraméterül, és visszaadja a számban található számjegyek átlagát! Ha a függvény nem szám típusú paramétert kap, akkor a visszatérési érték legyen `-1`!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 741258
+<b>Return:</b> 4.5
+
+<b>Input:</b> -97968
+<b>Return:</b> 7.8
+
+<b>Input:</b> 'kecske'
+<b>Return:</b> -1
+</pre>
