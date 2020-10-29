@@ -185,6 +185,7 @@ Jani egy chatalkalmazást fejleszt JavaScriptben. Az alkalmazásban, amikor egy 
 * Ha pontosan 1 ember gépel, akkor térjünk vissza a `{username} eppen gepel` szöveggel, ahol `{username}` a gépelő felhasználó neve!
 * Ha pontosan 2 ember gépel, akkor térjünk vissza a `{username1} es {username2} eppen gepel` szöveggel, ahol `{username1}` az első, míg `{username2}` a második felhasználó neve a pontosvesszőkkel elválasztott adatok közül!
 * Ha 2-nél több ember gépel, akkor térjünk vissza a `{username1}, {username2} es {N} tovabbi felhasznalo eppen gepel` szöveggel, ahol `{username1}` és `{username2}` ugyanaz, mint az előző vázlatpontban, `{N}` pedig a többi gépelő felhasználónak a száma!
+
 **Példa:**
 
 <pre>
