@@ -11,20 +11,20 @@ A feladatok megoldása előtt telepítsük fel a [Node.js](https://nodejs.org/en
 
 ### 1. feladat: Teve
 
-A [TeveClub](https://teveclub.hu/) oldalon virtuálisan tudunk tevéket nevelni. Egy új teve igénylésekor meg kell adnunk a tevénk nevét és hívójelét (ez kb. egy jelszónak feleltethető meg).
+A [TeveClub](https://teveclub.hu/) oldalon virtuálisan nevelhetünk tevéket. Egy új teve igénylésekor meg kell adnunk a teve nevét és hívójelét (ez kb. egy jelszónak feleltethető meg).
 
-Írj egy `tevetIgenyel` függvényt, amely két paramétert vár: a teve nevét és hívójelét! A függvényben ellenőrizzük, hogy a megadott hívójel megfelelő erősségű-e! Ezt a következőképpen tegyük meg:
+Írj egy `tevetIgenyel` függvényt, amely két paramétert vár: a teve nevét és hívójelét (szöveges adatok)! A függvényben ellenőrizzük, hogy a megadott hívójel megfelelő erősségű-e! Ezt a következőképpen tegyük meg:
 
-* Ha a hívójel 6 karakternél rövidebb, akkor írjuk ki a `Tul rovid hivojel` szöveget a konzolra!
-* Ha a hossz megfelelő, de a hívójel megegyezik a teve nevével, akkor jelenítsük meg a `Tul nyilvanvalo hivojel` szöveget!
-* Ha a hossz megfelelő és a hívójel különbözik a teve nevétől, viszont a  hívójel tartalmazza a `teve` vagy `camel` szövegek valamelyikét, akkor írassuk ki a `Tiltott szoveg a hivojelben` szöveget!
+* Ha a hívójel 6 karakternél rövidebb, akkor írassuk ki a `Tul rovid hivojel` hibaüzenetet a konzolra!
+* Ha a hossz megfelelő, de a hívójel megegyezik a teve nevével, akkor jelenítsük meg a `Tul nyilvanvalo hivojel` hibaüzenetet!
+* Ha eddig nem volt hiba, viszont a hívójel tartalmazza a `teve` szöveget bármilyen formában (kis- és nagybetűket nem megkülönböztetve), akkor írassuk ki a `Tiltott szoveg a hivojelben` hibaüzenetet!
 * Minden egyéb esetben a `Sikeres teve igenyles` szöveget jelenítsük meg a képernyőn!
 
 **Példa:**
 
 <pre>
-<b>Input:</b> 'MyEpicTeve', 'epic'
-<b>Output:</b> 'Tul rovid hivojel'
+<b>Input:</b> 'MyEpicCamel', 'epicTeve20'
+<b>Output:</b> 'Tiltott szoveg a hivojelben'
 
 <b>Input:</b> 'Leenhurbertindrund', 'sivatag4life'
 <b>Output:</b> 'Sikeres teve igenyles'
@@ -67,8 +67,8 @@ Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékk
 
 Írj egy `imposztor` nevű függvényt, amely rendre az imposztorok számát és a játékosok számát kapja paraméterül (mindkét érték garantáltan szám típusú)!
 
-* Egy játékban 1-3 imposztor lehet, valamint a játékosok száma 2 és 10 között kell, hogy legyen. Ha a paraméterben kapott értékek nem felelnek meg ezeknek a megszorításoknak, akkor a függvény térjen vissza a `Hiba` szöveggel!
-* Megfelelő paraméter értékek esetén a függvény visszatérési értéke a `Dani {N}% valoszinuseggel imposztor` szöveg legyen, ahol `{N}` a fenti képlet alapján kiszámolt százalékérték, egész számra kerekítve (a hagyományos matematikai kerekítést használjuk)!
+* Egy játékban 1-3 imposztor lehet, valamint a játékosok száma 2 és 10 között kell, hogy legyen. Ha a paraméterben kapott értékek valamelyike nem felel meg ezeknek a megszorításoknak, akkor a függvény térjen vissza a `Hiba` szöveggel!
+* Megfelelő paraméter értékek esetén a függvény visszatérési értéke a `Dani {N}% valoszinuseggel lesz imposztor` szöveg legyen, ahol `{N}` a fenti képlet alapján kiszámolt százalékérték, egész számra kerekítve (a hagyományos matematikai kerekítés szabályait használva)!
 
 **Példa:**
 
@@ -77,7 +77,7 @@ Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékk
 <b>Return:</b> 'Hiba'
 
 <b>Input:</b> 2, 7
-<b>Return:</b> 'Dani 29% valoszinuseggel imposztor'
+<b>Return:</b> 'Dani 29% valoszinuseggel lesz imposztor'
 </pre>
 
 
@@ -143,7 +143,7 @@ A Flying Duck Travels légitársaság levelező szolgáltatásával saját e-mai
 
 ### 8. feladat: Cenzúra
 
-Tamás az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen magára haragította az egyik admint. Emiatt azt a büntetést kapta, hogy most már az üzenetei cenzúrázva jelennek meg.
+Tamás az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen magára haragította az egyik admint. Emiatt azt a büntetést kapta, hogy mostantól az üzenetei cenzúrázva jelennek meg.
 
 Írj egy `cenzura` függvényt, amely Tamás egy üzenetét kapja paraméterül, és ezt átalakítja úgy, hogy az összes magánhangzót lecseréli a `*` (csillag) karakterre! A magánhangzók vizsgálata során a kis- és nagybetűket nem különböztetjük meg. A paraméterben érkező szöveg garantáltan nem tartalmaz ékezetes betűket.
 
@@ -177,22 +177,22 @@ Discordon lehetőségünk van különböző emote-okkal reagálni üzenetekre. A
 
 ### 10. feladat: Valaki éppen gépel
 
-Jani egy chatalkalmazást fejleszt JavaScriptben. Az alkalmazásban, amikor egy vagy több felhasználó éppen gépel, akkor erről kiírunk egy üzenetet.
+Jani egy chatalkalmazást fejleszt JavaScriptben. A chatben, amikor egy vagy több felhasználó éppen gépel, akkor erről kiírunk egy üzenetet.
 
 Írj egy `gepeles` nevű függvényt, amely egy szöveget kap paraméterül. Ez a szöveg pontosvesszőkkel elválasztva tartalmazza azoknak a felhasználóknak a nevét, akik éppen gépelnek. Figyelj arra, hogy néhány név elé és/vagy után néhány fölösleges whitespace karakter került!
 
 * Amennyiben a paraméter típusa nem megfelelő vagy a paraméterben az üres string érkezik, akkor a függvény térjen vissza a `Hiba` szöveggel!
-* Ha pontosan 1 ember gépel, akkor térjünk vissza a `{username} eppen gepel` szöveggel, ahol `{username}` a gépelő felhasználó neve!
-* Ha pontosan 2 ember gépel, akkor térjünk vissza a `{username1} es {username2} eppen gepel` szöveggel, ahol `{username1}` az első, míg `{username2}` a második felhasználó neve a pontosvesszőkkel elválasztott adatok közül!
-* Ha 2-nél több ember gépel, akkor térjünk vissza a `{username1}, {username2} es {N} tovabbi felhasznalo eppen gepel` szöveggel, ahol `{username1}` és `{username2}` ugyanaz, mint az előző vázlatpontban, `{N}` pedig a többi gépelő felhasználónak a száma!
+* Ha pontosan 1 ember gépel, akkor térjünk vissza a `{username} eppen gepel...` szöveggel, ahol `{username}` a gépelő felhasználó neve!
+* Ha pontosan 2 ember gépel, akkor térjünk vissza a `{username1} es {username2} eppen gepel....` szöveggel, ahol `{username1}` az első, míg `{username2}` a második felhasználó neve a pontosvesszőkkel elválasztott adatok közül!
+* Ha 2-nél több ember gépel, akkor térjünk vissza a `{username1}, {username2} es {N} tovabbi felhasznalo eppen gepel...` szöveggel, ahol `{username1}` és `{username2}` ugyanaz, mint az előző vázlatpontban, `{N}` pedig a többi gépelő felhasználónak a száma!
 
 **Példa:**
 
 <pre>
 <b>Input:</b> 'catman6'
-<b>Return:</b> 'catman6 eppen gepel'
+<b>Return:</b> 'catman6 eppen gepel...'
 
-<b>Input:</b> 'szte2k;lactose     ;    Sziklas ;         ErikaAkiEppenHegyrolCsuszikLeVagyNemtom'
-<b>Return:</b> 'szte2k, lactose es 2 tovabbi felhasznalo eppen gepel'
+<b>Input:</b> 'szte2k;SuTi     ;    Sziklas  ;          lactose;ErikaAkiEppenHegyrolCsuszikLeSileceken'
+<b>Return:</b> 'szte2k, SuTi es 2 tovabbi felhasznalo eppen gepel...'
 </pre>
 
