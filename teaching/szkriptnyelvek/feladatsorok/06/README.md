@@ -175,7 +175,7 @@ Discordon lehetőségünk van különböző emote-okkal reagálni üzenetekre. A
 </pre>
 
 
-### 10. feladat: Valaki éppen gépel
+### 10. feladat: Valaki éppen gépel...
 
 Jani egy chatalkalmazást fejleszt JavaScriptben. A chatben, amikor egy vagy több felhasználó éppen gépel, akkor erről kiírunk egy üzenetet.
 
@@ -189,10 +189,10 @@ Jani egy chatalkalmazást fejleszt JavaScriptben. A chatben, amikor egy vagy tö
 **Példa:**
 
 <pre>
-<b>Input:</b> 'catman6'
-<b>Return:</b> 'catman6 eppen gepel...'
+<b>Input:</b> 'SuTi'
+<b>Return:</b> 'SuTi eppen gepel...'
 
-<b>Input:</b> 'szte2k;SuTi     ;    Sziklas  ;          lactose;ErikaAkiEppenHegyrolCsuszikLeSileceken'
-<b>Return:</b> 'szte2k, SuTi es 2 tovabbi felhasznalo eppen gepel...'
+<b>Input:</b> 'szte4k;catman6     ;    Sziklas  ;          Aerosol;lactose'
+<b>Return:</b> 'szte4k, catman6 es 3 tovabbi felhasznalo eppen gepel...'
 </pre>
 
