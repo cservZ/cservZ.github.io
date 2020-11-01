@@ -105,7 +105,7 @@ Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékk
 
 A függvény visszatérési értéke legyen a `Hiba` szöveg, amennyiben...
 
-* ...valamelyik paraméter típusú nem megfelelő
+* ...valamelyik paraméter típusa nem megfelelő
 * ...az első paraméterben érkező szöveg az üres string
 * ...a második paraméterben érkező szám 1-nél kisebb!
 
