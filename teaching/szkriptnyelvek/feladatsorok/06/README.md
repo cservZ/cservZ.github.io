@@ -8,7 +8,7 @@
 
 A feladatok megoldása előtt telepítsük fel a [Node.js](https://nodejs.org/en/) futtatókörnyezetet, aminek segítségével parancssorból is tudjuk majd futtatni a JavaScript kódunkat!
 
-A feladatokhoz tartozó mintamegoldás letölthető [ide kattintva](./index.js)
+A feladatokhoz tartozó mintamegoldás elérhető [ide kattintva](./index.js)
 
 
 ### 1. feladat: Teve
