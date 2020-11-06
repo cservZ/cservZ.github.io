@@ -40,3 +40,23 @@ Ha valamelyik paraméter nem megfelelő típusú, akkor a függvény egy üres t
 <b>Return:</b> []
 </pre>
 
+
+### 3. feladat: Kahoot
+
+A kedvenc tárgyunkból a [Kahoot](https://kahoot.it/) kvízjátékkal játszunk éppen. A játék során minden kérdés után eltároljuk, hogy melyik játékos rendelkezik éppen a legtöbb ponttal.
+
+Írj egy `leghosszabbNyeroszeria` nevű függvényt, amely egy tömböt kap paraméterként! A tömb rendre tartalmazza az egyes kérdések után az éppen legtöbb ponttal rendelkező játékos nevét. A függvény térjen vissza annak a játékosnak a nevével, aki a leghosszabb nyerőszériával rendelkezik (azaz ő nyerte meg a legtöbb közvetlen egymás utáni kört)!
+
+Ha két játkosnak ugyanannyi a leghosszabb nyerőszériájuk, akkor közülük a tömbben korábban szereplő játékos nevét válasszuk!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> ['NyanCat', 'sajt42', 'Laßlo', 'Laßlo', 'Laßlo', 'NyanCat', 'NyanCat', 'sajt42', 'NyanCat', 'sajt42']
+<b>Return:</b> 'Laßlo'
+
+<b>Input:</b> ['meki', 'meki', '¯\_(ツ)_/¯', 'n00bsl4y3r', 'n00bsl4y3r']
+<b>Return:</b> 'meki'
+</pre>
+
+
