@@ -22,3 +22,21 @@ Jónás, a csokigyáros el akarja készíteni a vállalkozásának a weboldalát
 <b>Input:</b> 'Citad Ella;Techno Kolos', 'Git Aron;Teask Anna'
 <b>Return:</b> []
 </pre>
+
+
+### 2. feladat: Tömbelemek hatványozása
+
+Írj egy `hatvanyoz` nevű függvényt, amely két paramétert vár: egy számtömböt és egy egész számot! A függvény emelje a tömbben található összes számot a második paraméterben kapott szám által meghatározott hatványára, majd adja vissza a hatványozás után kapott tömböt!
+
+Ha valamelyik paraméter nem megfelelő típusú, akkor a függvény egy üres tömbbel térjen vissza!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> [7, 4, 1, 2, 5], 2
+<b>Return:</b> [49, 16, 1, 4, 25]
+
+<b>Input:</b> 'sajt', 5
+<b>Return:</b> []
+</pre>
+
