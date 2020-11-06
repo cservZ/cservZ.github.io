@@ -22,3 +22,4 @@ Az egyes feladatokhoz referenciamegoldást is teszek közzé a feladat kiírása
 
 * [HTML, CSS, JavaScript alapok](./05) ([megoldás](./05/megoldas.html))
 * [JavaScript vezérlés, függvények, stringek](./06) ([megoldás](./06/index.js))
+* [Fontosabb adatszerkezetek: tömb és object](./07)
