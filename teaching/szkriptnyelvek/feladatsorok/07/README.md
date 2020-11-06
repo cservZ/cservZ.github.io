@@ -60,3 +60,33 @@ Ha két játkosnak ugyanannyi a leghosszabb nyerőszériájuk, akkor közülük 
 </pre>
 
 
+### 4. feladat: Csak pozitívan
+
+Írj egy `pozitivSzamok` nevű függvényt, amely egy mindenféle típusú értékeket vegyesen tartalmazó tömböt kap paraméterül! A függvény válogassa ki a paraméterben érkező tömbből a pozitív, szám típusú adatokat, és adja vissza őket egy tömbben!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> [false, '42', 36, -50, 'sajt', 0, 3.14, true, NaN, undefined, 5000]
+<b>Return:</b> [36, 3.14, 5000]
+</pre>
+
+
+### 5. feladat: Fájlok csoportosítása
+
+Máté a számítógépén egy mappában tárolja a Szkriptnyelvek kurzushoz kapcsolódó fájljait. Egyik nap úgy döntött, hogy szeretné ennek a mappának a tartalmát rendszerezni.
+
+Írj egy `fajlokatCsoportosit` függvényt, amely egy tömböt vár paraméterül! A tömb tartalmazza a mappában található fájlok nevét, kiterjesztéssel együtt! A függvény visszatérési értéke egy kétdimenziós tömb, amelynek...
+
+* ...első eleme a `py` kiterjesztésű fájlok neveit tartalmazó tömb
+* ...második eleme a `js` kiterjesztésű fájlok neveit tartalmazó tömb
+* ...harmadik eleme az összes egyéb kiterjesztéssel rendelkező fájl nevét tároló tömb.
+
+A kiterjesztés alatt a legutolsó `.` (pont) karakter után szereplő szöveget értjük a fájl nevében. A kiterjesztés vizsgálatakor nem különböztetjük meg a kis- és nagybetűket.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> ['gyak1.py', 'GYAKORLO.JS', 'feladat.pdf', 'elso.zh.py', 'riport.txt']
+<b>Return:</b> [['gyak1.py', 'elso.zh.py'], ['GYAKORLO.JS'], ['feladat.pdf', 'riport.txt']]
+</pre>
