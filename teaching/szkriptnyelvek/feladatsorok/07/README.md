@@ -145,5 +145,54 @@ Ha a függvény nem tömb típusú paramétert kap, vagy a paraméterben kapott 
 </pre>
 
 
-### 9. feladat: Bevásárlólista
+### 9. feladat: Szavazatok
 
+Az egyik mémoldalon egy szavazást hirdetnek: megkérdezik az oldal követőit, hogy melyik a kedvenc mémük. A kérdésre kapott válaszokat lejegyzik, majd ebből készítenek statisztikákat.
+
+Írj egy `szavazatok` nevű függvényt, amely egy tömböt kap paraméterül! A tömb  a szavazásban megkérdezettek kedvenc mémjeit tárolja. A függvény visszatérési értéke egy object, amelyben eltároljuk, hogy melyik mémre hány szavazat érkezett összesen. A property-k a mémek nevei, a hozzájuk tartozó értékek pedig a rájuk érkezett szavazatok száma.
+
+A mémek nevében a kis- és nagybetűket nem különböztetjük meg (tehát pl. `Hide The Pain Harold` és `hide the pain harold` ugyanaz a mém).
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 
+[
+    'Ugandan Knuckles', 'Unsettled Tom', 'Hide The Pain Harold',
+    'unsettled Tom', 'Change My Mind', 'hide the pain harold',
+    'distracted boyfriend meme', 'HIDE THE PAIN HAROLD', 'Mocking Spongebob',
+    'mocking spongebob', 'change my mind', 'unsettled tom',
+    'hide the pain Harold', 'MoCkInG SpOnGeBoB', 'Hide The Pain Harold'
+]
+<b>Return:</b> { 'ugandan knuckles': 1, 'unsettled tom': 3, 'hide the pain harold': 5, 'change my mind': 2, 'distracted boyfriend meme': 1, 'mocking spongebob': 3 }
+</pre>
+
+
+### 10. feladat: Nyertes
+
+Az előző feladatot ki szeretnénk egészíteni úgy, hogy a szavazatok összeszámlálása után adjuk vissza a szavazás nyertesét, azaz a legtöbb szavazattal rendelkező mémet.
+
+Írj egy `nyertesMem` nevű függvényt, amely egy tömbben megkapja a szavazat során megkérdezett emberek kedvenc mémjeinek a nevét! Az előző feladatban megírt függvény felhasználásával tároljuk el egy objectben a mémekre érkezett szavazatok számát, majd adjuk vissza a legtöbb szavazattal rendelkező mémnek a nevét!
+
+Amennyiben két vagy több mém ugyanannyi szavazatot kapott, akkor közülük az objectben hamarabb előfordulóval térjünk vissza!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> 
+[
+    'Ugandan Knuckles', 'Unsettled Tom', 'Hide The Pain Harold',
+    'unsettled Tom', 'Change My Mind', 'hide the pain harold',
+    'distracted boyfriend meme', 'HIDE THE PAIN HAROLD', 'Mocking Spongebob',
+    'mocking spongebob', 'change my mind', 'unsettled tom',
+    'hide the pain Harold', 'MoCkInG SpOnGeBoB', 'Hide The Pain Harold'
+]
+<b>Return:</b> 'hide the pain harold'
+
+<b>Input:</b>
+[
+    'Its Wednesday my dudes', 'Rotating duck wearing flippers', 'unsettled tom',
+    'Unsettled Tom', 'Its Wednesday My Dudes', 'surprised Pikachu'
+]
+<b>Return:</b> 'its wednesday my dudes'
+</pre>
