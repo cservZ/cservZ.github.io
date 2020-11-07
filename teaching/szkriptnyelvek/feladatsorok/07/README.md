@@ -118,3 +118,32 @@ A kiterjesztés alatt a fájl nevében a legutolsó `.` (pont) karakter után sz
 <b>Return:</b> [[], ['index.js', 'functions.strings.js', 'test01.js'], ['INDEX.HTML']]
 </pre>
 
+
+### 8. feladat: Statisztika
+
+Egy zárthelyi dolgozat után statisztikát készítünk az eredményekből. Ehhez ki szeretnénk számítani a ZH pontszámok átlagát, mediánját és terjedelmét.
+
+Írj egy `statisztika` nevű függvényt, amely egy ZH-n elért pontszámokat tartalmazó tömböt vár paraméterül! A függvény visszatérési értéke egy object, amely a következőképpen épül fel:
+
+* az `atlag` nevű property-jéhez a pontszámok átlaga tartozik (pontok összege / pontok darabszáma)
+* a `median` nevű property-jéhez a pontszámok mediánja tartozik (a sorbarendezett pontszámok középső eleme; ha páros darab elemünk van, akkor a két középen lévő elem átlaga)
+* a `terjedelem` nevű property-jéhez az pontszámok terjedelme tartozik (legnagyobb és legkisebb pontszám különbsége).
+
+Ha a függvény nem tömb típusú paramétert kap, vagy a paraméterben kapott tömb 3-nál kevesebb elemet tartalmaz, akkor a visszatérési érték egy üres object legyen!
+
+**Példa:**
+
+<pre>
+<b>Input:</b> [29, 48, 0, 36, 20]
+<b>Return:</b> { atlag: 26.6, median: 29, terjedelem: 48 }
+
+<b>Input:</b> [42, 35, 23, 50, 46, 25, 50, 47, 18, 38]
+<b>Return:</b> { atlag: 37.4, median: 40, terjedelem: 32 }
+
+<b>Input:</b> [38, 45]
+<b>Return:</b> {}
+</pre>
+
+
+### 9. feladat: Bevásárlólista
+
