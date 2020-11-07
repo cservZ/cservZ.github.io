@@ -87,3 +87,34 @@ Amennyiben két játékosnak ugyanannyi a leghosszabb nyerőszériája, akkor k�
 <b>Input:</b> 'Never gonna give you up, never gonna let you down, never gonna run around and desert you'
 <b>Return:</b> 11
 </pre>
+
+
+### 6. feladat: Ötöslottó
+
+Erzsi néni minden héten játszik az ötöslottón. A játék során 90 számból húznak ki 5 darab számot véletlenszerűen, és ezek közül kell a játékosoknak minél többet eltalálniuk. Erzsi néni ezen a héten a véletlenre bízza az öt szám bejelölését a lottószelvényen.
+
+Írj egy paraméter nélküli `otoslotto` nevű függvényt, amely generál 5 darab véletlenszámot 1 és 90 között, és visszaadja ezeket egy tömbben! Ügyelj arra, hogy a számok között ne legyen ismétlődés (minden számot csak egyszer jelölhetünk meg)!
+
+
+### 7. feladat: Fájlok csoportosítása
+
+Máté a számítógépén egy mappában tárolja a Szkriptnyelvek kurzushoz kapcsolódó fájljait. Egyik nap úgy döntött, hogy szeretné ennek a mappának a fájljait rendszerezni.
+
+Írj egy `fajlokatCsoportosit` nevű függvényt, amely egy tömböt vár paraméterül! A tömb tartalmazza a mappában található fájlok neveit, kiterjesztéssel együtt! A függvény visszatérési értéke egy kétdimenziós tömb, amelynek...
+
+* ...első eleme a `py` kiterjesztésű fájlok neveit tartalmazó tömb
+* ...második eleme a `js` kiterjesztésű fájlok neveit tartalmazó tömb
+* ...harmadik eleme a összes egyéb kiterjesztéssel rendelkező fájl nevét tároló tömb.
+
+A kiterjesztés alatt a fájl nevében a legutolsó `.` (pont) karakter után szereplő szöveget értjük. A kiterjesztés vizsgálatakor nem különböztetjük meg a kis- és nagybetűket.
+
+**Példa:**
+
+<pre>
+<b>Input:</b> ['gyak1.py', 'GYAKORLO.JS', 'feladat.pdf', 'elso.zh.py', 'riport.txt']
+<b>Return:</b> [['gyak1.py', 'elso.zh.py'], ['GYAKORLO.JS'], ['feladat.pdf', 'riport.txt']]
+
+<b>Input:</b> ['index.js', 'functions.strings.js', 'INDEX.HTML', 'test01.js']
+<b>Return:</b> [[], ['index.js', 'functions.strings.js', 'test01.js'], ['INDEX.HTML']]
+</pre>
+
