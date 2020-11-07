@@ -147,7 +147,7 @@ Ha a függvény nem tömb típusú paramétert kap, vagy a paraméterben kapott 
 
 ### 9. feladat: Szavazatok
 
-Az egyik mémoldalon egy szavazást hirdetnek: megkérdezik az oldal követőit, hogy melyik a kedvenc mémük. A kérdésre kapott válaszokat lejegyzik, majd ebből készítenek statisztikákat.
+Az egyik mémoldalon egy szavazást hirdetnek: megkérdezik az oldal követőit, hogy melyik a kedvenc mémük. A kérdésre kapott válaszokat lejegyzik, majd ebből készítenek statisztikát.
 
 Írj egy `szavazas` nevű függvényt, amely egy tömböt kap paraméterül! A tömb a szavazásban megkérdezettek kedvenc mémjeit tárolja. A függvény visszatérési értéke egy object, amelyben eltároljuk, hogy melyik mémre hány szavazat érkezett összesen. A property-k a mémek nevei, a hozzájuk tartozó értékek pedig a rájuk érkezett szavazatok száma.
 
