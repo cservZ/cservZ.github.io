@@ -98,7 +98,7 @@ Erzsi néni minden héten játszik az ötöslottón. A játék során 90 számb�
 
 ### 7. feladat: Fájlok csoportosítása
 
-Máté a számítógépén egy mappában tárolja a Szkriptnyelvek kurzushoz kapcsolódó fájljait. Egyik nap úgy döntött, hogy szeretné ennek a mappának a fájljait rendszerezni.
+Máté a számítógépén egy mappában tárolja a Szkriptnyelvek kurzushoz kapcsolódó fájljait. Egyik nap úgy dönt, hogy szeretné ennek a mappának a tartalmát rendszerezni.
 
 Írj egy `fajlokatCsoportosit` nevű függvényt, amely egy tömböt vár paraméterül! A tömb tartalmazza a mappában található fájlok neveit, kiterjesztéssel együtt! A függvény visszatérési értéke egy kétdimenziós tömb, amelynek...
 
