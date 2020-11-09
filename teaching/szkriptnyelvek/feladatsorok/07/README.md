@@ -69,7 +69,7 @@ Amennyiben két játékosnak ugyanannyi a leghosszabb nyerőszériája, akkor k�
 **Példa:**
 
 <pre>
-<b>Input:</b> ['NyanCat', 'sajt42', 'Laßlo', 'Laßlo', 'Laßlo', 'NyanCat', 'NyanCat', 'sajt42']
+<b>Input:</b> ['NyanCat', 'sajt42', 'Laßlo', 'Laßlo', 'Laßlo', 'NyanCat', 'NyanCat', 'sajt42', 'NyanCat']
 <b>Return:</b> 'Laßlo'
 
 <b>Input:</b> ['meki', 'meki', 'NullPointerGoesBrr', 'n00bslay3r', 'n00bslay3r']
