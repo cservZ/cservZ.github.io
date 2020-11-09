@@ -43,7 +43,7 @@ Ha valamelyik paraméter típusa nem megfelelő, akkor a függvény egy üres t�
 
 ### 3. feladat: Csak pozitívan
 
-Írj egy `pozitivSzamok` nevű függvényt, amely egy tetszőleges típusú értékeket vegyesen tároló tömböt kap paraméterül! A függvény válogassa ki a paraméterben kapott tömbből a pozitív, szám típusú adatokat, és adja vissza őket egy tömbben!
+Írj egy `pozitivSzamok` nevű függvényt, amely egy tetszőleges típusú értékeket vegyesen tároló tömböt kap paraméterül! A függvény válogassa ki a paraméterben kapott tömbből a pozitív, szám típusú adatokat, és adja vissza őket egy új tömbben!
 
 Ha a függvényt nem tömb típusú paraméterrel hívjuk meg, akkor a visszatérési érték legyen `undefined`!
 
