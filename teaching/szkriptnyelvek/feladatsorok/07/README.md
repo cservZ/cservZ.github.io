@@ -6,6 +6,8 @@
 
 ## A JavaScript fontosabb adatszerkezetei
 
+A feladatokhoz tartozó mintamegoldás elérhető [ide kattintva](./index.js)
+
 
 ### 1. feladat: Full stack
 
