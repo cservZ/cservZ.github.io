@@ -48,4 +48,7 @@ Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az �
 
 * Definiáld felül az ősosztály `info` metódusát, ami a következő szöveggel térjen vissza: `{nev} ({kaloriaszam} kaloria), ar: {ar} forint, feltetek: {feltet_sorozat}`, ahol `feltet_sorozat` a feltétek neveit vesszőkkel elválasztva tartalmazó szöveg!
     * Például ha a `feltetek` tömb tartalma: `['sonka', 'kukorica', 'sajt']`, akkor a feltételeket tartalmazó szöveg: `sonka, kukorica, sajt`.
+    * Amennyiben a feltéteket tároló tömb üres, akkor a feltétek felsorolását vegyük ki a visszatérési értékből (az új szöveg: `{nev} ({kaloriaszam} kaloria), ar: {ar} forint`).
 
+
+### A `Vasarlo` osztály
