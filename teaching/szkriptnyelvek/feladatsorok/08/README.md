@@ -9,7 +9,7 @@
 
 ### Pizzázó
 
-Károly barátunk egy pizzázót üzemeltet, aminek el szeretné készíteni a weboldalát. Ehhez először modellezni szeretné a pizzázóval kapcsolatos fontosabb fogalmakat. Készítsd el az `Etel`, `Pizza` és `Vasarlo` osztályokat JavaScript nyelven, a feladatleírások alapján!
+Károly egy pizzázót üzemeltet, aminek el szeretné készíteni a weboldalát. Ehhez először modellezni szeretné a pizzázóval kapcsolatos fontosabb fogalmakat. Készítsd el az `Etel`, `Pizza` és `Vasarlo` osztályokat JavaScript nyelven, a feladatleírások alapján!
 
 
 #### Az `Etel` osztály
@@ -18,10 +18,34 @@ Hozz létre egy `Etel` nevű osztályt, amelynek legyen 3 adattagja: `nev`, `_ka
 
 * A konstruktor az étel nevét és az ételben található kalóriák számát várja paraméterül (ebben a sorrendben), majd ezekkel inicializálja a `nev` és `_kaloriaszam` adattagokat! A `_fogyaszthato` adattag értékét minden esetben `true`-ra állítsa be a konstruktor!
 
-* Készíts get és set property-ket a `_kaloriaszam` adattaghoz `kaloriaszam` néven, amelyekkel lekérdezhetjük és beállíthatjuk az adattag értékét! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén a setter állítsa be 0-ra a kalóriaszám értékét!
+* Készíts get és set property-ket a `_kaloriaszam` adattaghoz, `kaloriaszam` néven, amelyekkel lekérdezhetjük és beállíthatjuk az adattag értékét! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén a setter állítsa be 0-ra a kalóriaszám értékét!
 
 * Készíts get és set property-ket a `_fogyaszthato` adattaghoz is, `fogyaszthato` néven! A setter az új érték beállítása előtt ellenőrizze, hogy boolean típusú paramétert kap-e! Ettől eltérő típus esetén az adattag értékét állítsa be `false`-ra!
 
 * Alakítsd át a konstruktort úgy, hogy a kalóriaszám az osztály példányosításakor se lehessen negatív, valamint a fogyaszthatóság típusa is ellenőrizve legyen! Tipp: használd az imént megírt property-ket!
 
 * Írj egy paraméter nélküli `info` metódust, amely a következő formátumú szöveggel térjen vissza: `{nev} ({kaloriaszam} kaloria)`!
+
+
+#### A `Pizza` osztály
+
+Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az örökölt adattagokon kívül a pizza rendelkezzen egy `_ar` és egy `feltetek` adattaggal! A `feltetek` adattag egy tömb, ami a pizzán található feltétek neveit fogja tárolni.
+
+* Írd meg az osztály konstruktorát, amelynek paraméterei rendre a pizza neve, a pizzában található kalóriák száma és a pizza ára!
+    * Hívd meg az ősosztály konstruktorát a megfelelő paraméterek átadásával! Ha a piza nevének a végén nem szerepel a `pizza` szöveg, fűzzük hozzá azt a névhez! Például a `hawaii` szövegből `hawaii pizza` lesz.
+    * A harmadik paraméter alapján inicializáld az `_ar` adattagot! Az ár paramétert ne legyen kötelező megadni a konstruktorban, alapértéke legyen 1500!
+    * A `feltetek` adattagot minden esetben egy üres tömbbel inicializálja a konstruktor!
+
+* Készíts get és set property-ket az `_ar` adattaghoz, `ar` néven! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén az ár értéke legyen 1000!
+
+* Írj egy paraméter nélküli `megromlik` metódust, amely állítsa a `_fogyaszthato` adattag értékét hamisra, és írja ki a konzolra, hogy `A pizza megromlott.`!
+
+* Írj egy `feltetetHozzaad` nevű metódust, amely egy object-et kap paraméterül! Az object a következőképpen épül fel: a `nev` property-jéhez tartozik a feltét neve, míg a `kaloria` property-jéhez a feltétben található kalóriák száma tartozik (pl. `{ nev: 'sajt', kaloria: 90 }`).
+    * Ha a paraméter nem object típusú, vagy a kettő közül bármelyik property-je hiányzik, írassuk ki a `Hiba: nem egy feltet!` hibaüzenetet a konzolra!
+    * Ha a paraméter megfelelő típusú, és a property-k is megvannak, ellenőrizzük, hogy a feltét neve szöveges típusú, a kalória pedig szám típusú adat legyen! Hibás típus esetén írassuk ki a `Hiba: nem megfelelo tipus!` hibaüzenetet a konzolra!
+    * Ha a feltét megfelelő, de ilyen nevű feltétünk már szerepel a `feltetek` tömbben, írassuk ki a `Hiba: mar van ilyen feltet!` hibaüzenetet a konzolra!
+    * Ha eddig nem volt hiba, akkor szúrjuk be a paraméterben kapott feltét nevét a `feltetek` tömbbe! Növeljük meg a `_kaloriaszam`  adattag értékét a feltétben található kalóriák számával, valamint az ár értékét is növeljük meg 100-zal!
+
+* Definiáld felül az ősosztály `info` metódusát, ami a következő szöveggel térjen vissza: `{nev} ({kaloriaszam} kaloria), ar: {ar} forint, feltetek: {feltet_sorozat}`, ahol `feltet_sorozat` a feltétek neveit vesszőkkel elválasztva tartalmazó szöveg!
+    * Például ha a `feltetek` tömb tartalma: `['sonka', 'kukorica', 'sajt']`, akkor a feltételeket tartalmazó szöveg: `sonka, kukorica, sajt`.
+
