@@ -51,7 +51,7 @@ Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az �
     * Amennyiben a feltéteket tároló tömb üres, akkor a feltétek felsorolását vegyük ki a visszatérési értékből (az új szöveg: `{nev} ({kaloriaszam} kaloria), ar: {ar} forint`).
 
 
-### A `Vasarlo` osztály
+#### A `Vasarlo` osztály
 
 Írj egy `Vasarlo` osztályt, amelynek legyen 3 adattagja: `nev`, `penz` és egy `rendelesek` nevű tömb!
 
