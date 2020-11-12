@@ -52,3 +52,16 @@ Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az �
 
 
 ### A `Vasarlo` osztály
+
+Írj egy `Vasarlo` osztályt, amelynek legyen 3 adattagja: `nev`, `penz` és egy `rendelesek` nevű tömb!
+
+* Írd meg az osztály konstruktorát, amely rendre a vásárló nevét és pénzének mennyiségét kapja paraméterül, majd ezekkel inicializálja a `nev` és `penz` adattagokat! A `rendelesek` adattagot inicializáld egy üres tömbbel!
+
+* Írj egy `pizzatRendel` metódust, amely egy `Pizza` típusú objektumot vár paraméterül!
+    * Nem megfelelő típusú paraméter esetén írasd ki a konzolra a `Hiba: nem pizza!` hibaüzenetet!
+    * Ha a típus megfelelő, akkor nézzük meg, hogy a vásárlónak van-e legalább annyi pénze, mint amennyi a paraméterben kapott pizza ára! Ha nincs, írasd ki a `Hiba: nincs eleg penz!` hibaüzenetet a konzolra!
+    * Ha van elég pénze a vásárlónak, akkor csökkentsd a `penz` adattag értékét a pizza árával, szúrd be a paraméterben kapott pizza nevét a `rendelesek` tömbbe, és írasd ki a `Sikeres rendeles!` szöveget a konzolra!
+
+* Írj egy paraméter nélküli `pizzakatListaz` metódust! A metódus visszatérési értéke egy szöveg, amely vesszőkkel elválasztva, `{n} darab {pizzanev}` formában felsorolva tartalmazza azt, hogy az egyes pizzafajtákból mennyit rendelt a vásárló (`rendelesek` tömb)!
+    * Például ha a `rendelesek` tömb: `['hawaii pizza', 'dupla sajtos pizza', 'hawaii pizza']`, akkor a visszatérési érték: `2 darab hawaii pizza, 1 darab dupla sajtos pizza`.
+
