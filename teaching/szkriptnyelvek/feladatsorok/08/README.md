@@ -61,7 +61,7 @@ Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az �
     * Nem megfelelő típusú paraméter esetén írasd ki a konzolra a `Hiba: nem pizza!` hibaüzenetet!
     * Ha a típus megfelelő, akkor nézzük meg, hogy a vásárlónak van-e legalább annyi pénze, mint amennyi a paraméterben kapott pizza ára! Ha nincs, írasd ki a `Hiba: nincs eleg penz!` hibaüzenetet a konzolra!
     * Természetesen olyan pizzát ne tudjunk rendelni, ami már megromlott. Amennyiben a paraméterben kapott pizza nem fogyasztható, írassuk ki a `Hiba: nem eheto pizza!` hibaüzenetet a konzolra!
-    * Ha eddig nem volt hiba, akkor a pizza megrendelhető. Csökkentsd a `penz` adattag értékét a pizza árával, szúrd be a paraméterben kapott pizza nevét a `rendelesek` tömbbe, és írasd ki a `Sikeres rendeles!` szöveget a konzolra!
+    * Ha eddig nem volt hiba, akkor a pizza megrendelhető. Csökkentsd a `penz` adattag értékét a pizza árával, szúrd be a paraméterben kapott pizza **nevét** a `rendelesek` tömbbe, és írasd ki a `Sikeres rendeles!` szöveget a konzolra!
 
 * Írj egy paraméter nélküli `pizzakatListaz` metódust! A metódus visszatérési értéke egy szöveg, amely vesszőkkel elválasztva, `{n} darab {pizzanev}` formában felsorolva tartalmazza azt, hogy az egyes pizzafajtákból mennyit rendelt a vásárló (`rendelesek` tömb)!
     * Például ha a `rendelesek` tömb: `['hawaii pizza', 'dupla sajtos pizza', 'hawaii pizza']`, akkor a visszatérési érték: `2 darab hawaii pizza, 1 darab dupla sajtos pizza`.
