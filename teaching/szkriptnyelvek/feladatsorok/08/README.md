@@ -14,17 +14,17 @@ Károly egy pizzázót üzemeltet, aminek el szeretné készíteni a weboldalát
 
 #### Az `Etel` osztály
 
-Hozz létre egy `Etel` nevű osztályt, amelynek legyen 3 adattagja: `nev`, `_kaloriaszam` és egy logikai adattag `_fogyaszthato` néven!
+Hozz létre egy `Etel` nevű osztályt, amelynek legyen 3 adattagja: `nev`, `_kaloriaSzam` és egy logikai adattag `_fogyaszthato` néven!
 
-* A konstruktor az étel nevét és az ételben található kalóriák számát várja paraméterül (ebben a sorrendben), majd ezekkel inicializálja a `nev` és `_kaloriaszam` adattagokat! A `_fogyaszthato` adattag értékét minden esetben `true`-ra állítsa be a konstruktor!
+* A konstruktor az étel nevét és az ételben található kalóriák számát várja paraméterül (ebben a sorrendben), majd ezekkel inicializálja a `nev` és `_kaloriaSzam` adattagokat! A `_fogyaszthato` adattag értékét minden esetben `true`-ra állítsa be a konstruktor!
 
-* Készíts get és set property-ket a `_kaloriaszam` adattaghoz, `kaloriaszam` néven, amelyekkel lekérdezhetjük és beállíthatjuk az adattag értékét! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén a setter állítsa be 0-ra a kalóriaszám értékét!
+* Készíts get és set property-ket a `_kaloriaSzam` adattaghoz, `kaloriaSzam` néven, amelyekkel lekérdezhetjük és beállíthatjuk az adattag értékét! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén a setter állítsa be 0-ra a kalóriaszám értékét!
 
 * Készíts get és set property-ket a `_fogyaszthato` adattaghoz is, `fogyaszthato` néven! A setter az új érték beállítása előtt ellenőrizze, hogy boolean típusú paramétert kap-e! Ettől eltérő típus esetén az adattag értékét állítsa be `false`-ra!
 
 * Alakítsd át a konstruktort úgy, hogy a kalóriaszám az osztály példányosításakor se lehessen negatív, valamint a fogyaszthatóság típusa is ellenőrizve legyen! Tipp: használd az imént megírt property-ket!
 
-* Írj egy paraméter nélküli `info` metódust, amely a következő formátumú szöveggel térjen vissza: `{nev} ({kaloriaszam} kaloria)`!
+* Írj egy paraméter nélküli `info` metódust, amely a következő formátumú szöveggel térjen vissza: `{nev} ({kaloriaSzam} kaloria)`!
 
 
 #### A `Pizza` osztály
@@ -44,11 +44,11 @@ Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az �
     * Ha a paraméter nem object típusú, vagy a kettő közül bármelyik property-je hiányzik, írassuk ki a `Hiba: nem egy feltet!` hibaüzenetet a konzolra!
     * Ha a paraméter megfelelő típusú, és a property-k is megvannak, ellenőrizzük, hogy a feltét neve szöveges típusú, a kalória pedig szám típusú adat legyen! Hibás típus esetén írassuk ki a `Hiba: nem megfelelo tipus!` hibaüzenetet a konzolra!
     * Ha a feltét megfelelő, de ilyen nevű feltétünk már szerepel a `feltetek` tömbben, írassuk ki a `Hiba: mar van ilyen feltet!` hibaüzenetet a konzolra!
-    * Ha eddig nem volt hiba, akkor szúrjuk be a paraméterben kapott feltét nevét a `feltetek` tömbbe! Növeljük meg a `_kaloriaszam`  adattag értékét a feltétben található kalóriák számával, valamint az ár értékét is növeljük meg 100-zal!
+    * Ha eddig nem volt hiba, akkor szúrjuk be a paraméterben kapott feltét nevét a `feltetek` tömbbe! Növeljük meg a `_kaloriaSzam`  adattag értékét a feltétben található kalóriák számával, valamint az ár értékét is növeljük meg 100-zal!
 
-* Definiáld felül az ősosztály `info` metódusát, ami a következő szöveggel térjen vissza: `{nev} ({kaloriaszam} kaloria), ar: {ar} forint, feltetek: {feltet_sorozat}`, ahol `feltet_sorozat` a feltétek neveit vesszőkkel elválasztva tartalmazó szöveg!
+* Definiáld felül az ősosztály `info` metódusát, ami a következő szöveggel térjen vissza: `{nev} ({kaloriaSzam} kaloria), ar: {ar} forint, feltetek: {feltet_sorozat}`, ahol `feltet_sorozat` a feltétek neveit vesszőkkel elválasztva tartalmazó szöveg!
     * Például ha a `feltetek` tömb tartalma: `['sonka', 'kukorica', 'sajt']`, akkor a feltételeket tartalmazó szöveg: `sonka, kukorica, sajt`.
-    * Amennyiben a feltéteket tároló tömb üres, akkor a feltétek felsorolását vegyük ki a visszatérési értékből (az új szöveg: `{nev} ({kaloriaszam} kaloria), ar: {ar} forint`).
+    * Amennyiben a feltéteket tároló tömb üres, akkor a feltétek felsorolását vegyük ki a visszatérési értékből (az új szöveg: `{nev} ({kaloriaSzam} kaloria), ar: {ar} forint`).
 
 
 #### A `Vasarlo` osztály
