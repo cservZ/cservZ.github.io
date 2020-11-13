@@ -18,7 +18,7 @@ Hozz létre egy `Etel` nevű osztályt, amelynek legyen 3 adattagja: `nev`, `_ka
 
 * A konstruktor az étel nevét és az ételben található kalóriák számát várja paraméterül (ebben a sorrendben), majd ezekkel inicializálja a `nev` és `_kaloriaSzam` adattagokat! A `_fogyaszthato` adattag értékét minden esetben `true`-ra állítsa be a konstruktor!
 
-* Készíts get és set property-ket a `_kaloriaSzam` adattaghoz, `kaloriaSzam` néven, amelyekkel lekérdezhetjük és beállíthatjuk az adattag értékét! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén a setter állítsa be 0-ra a kalóriaszám értékét!
+* Készíts get és set property-ket a `_kaloriaSzam` adattaghoz, `kaloriaSzam` néven, amelyekkel lekérdezhetjük és beállíthatjuk az adattag értékét! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén a kalóriaszám legyen a paraméter abszolútértéke!
 
 * Készíts get és set property-ket a `_fogyaszthato` adattaghoz is, `fogyaszthato` néven! A setter az új érték beállítása előtt ellenőrizze, hogy boolean típusú paramétert kap-e! Ettől eltérő típus esetén az adattag értékét állítsa be `false`-ra!
 
