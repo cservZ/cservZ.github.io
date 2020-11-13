@@ -44,7 +44,7 @@ Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az �
     * Ha a paraméter nem object típusú, vagy a kettő közül bármelyik property-je hiányzik, írassuk ki a `Hiba: nem egy feltet!` hibaüzenetet a konzolra!
     * Ha a paraméter megfelelő típusú, és a property-k is megvannak, ellenőrizzük, hogy a feltét neve szöveges típusú, a kalória pedig szám típusú adat legyen! Hibás típus esetén írassuk ki a `Hiba: nem megfelelo tipus!` hibaüzenetet a konzolra!
     * Ha a feltét megfelelő, de ilyen nevű feltétünk már szerepel a `feltetek` tömbben, írassuk ki a `Hiba: mar van ilyen feltet!` hibaüzenetet a konzolra!
-    * Ha eddig nem volt hiba, akkor szúrjuk be a paraméterben kapott feltét nevét a `feltetek` tömbbe! Növeljük meg a `_kaloriaSzam`  adattag értékét a feltétben található kalóriák számával, valamint az ár értékét is növeljük meg 100-zal! Végül írassuk ki a `Feltet felvetel sikeres!` szöveget a konzolra!
+    * Ha eddig nem volt hiba, akkor szúrjuk be a paraméterben kapott feltét **nevét** a `feltetek` tömbbe! Növeljük meg a `_kaloriaSzam`  adattag értékét a feltétben található kalóriák számával, valamint az ár értékét is növeljük meg 100-zal! Végül írassuk ki a `Feltet felvetel sikeres!` szöveget a konzolra!
 
 * Definiáld felül az ősosztály `info` metódusát, ami a következő szöveggel térjen vissza: `{nev} ({kaloriaSzam} kaloria), ar: {ar} forint, feltetek: {feltet_sorozat}`, ahol `feltet_sorozat` a feltétek neveit vesszőkkel elválasztva tartalmazó szöveg!
     * Például ha a `feltetek` tömb tartalma: `['sonka', 'kukorica', 'sajt']`, akkor a feltételeket tartalmazó szöveg: `sonka, kukorica, sajt`.
