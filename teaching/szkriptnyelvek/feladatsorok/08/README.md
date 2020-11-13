@@ -22,7 +22,7 @@ Hozz létre egy `Etel` nevű osztályt, amelynek legyen 3 adattagja: `nev`, `_ka
 
 * Készíts get és set property-ket a `_fogyaszthato` adattaghoz is, `fogyaszthato` néven! A setter az új érték beállítása előtt ellenőrizze, hogy boolean típusú paramétert kap-e! Ettől eltérő típus esetén az adattag értékét állítsa be `false`-ra!
 
-* Alakítsd át a konstruktort úgy, hogy a kalóriaszám az osztály példányosításakor se lehessen negatív, valamint a fogyaszthatóság típusa is ellenőrizve legyen! Tipp: használd az imént megírt property-ket!
+* Alakítsd át a konstruktort úgy, hogy a kalóriaszám az osztály példányosításakor se lehessen negatív! Tipp: használd az imént megírt property-t!
 
 * Írj egy paraméter nélküli `info` metódust, amely a következő formátumú szöveggel térjen vissza: `{nev} ({kaloriaSzam} kaloria)`!
 
