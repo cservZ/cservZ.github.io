@@ -31,9 +31,9 @@ Hozz létre egy `Etel` nevű osztályt, amelynek legyen 3 adattagja: `nev`, `_ka
 
 Készíts egy `Pizza` osztályt, amely az `Etel` osztályból öröklődik! Az örökölt adattagokon kívül a pizza rendelkezzen egy `_ar` és egy `feltetek` adattaggal! A `feltetek` adattag egy tömb, ami a pizzán található feltétek neveit fogja tárolni.
 
-* Írd meg az osztály konstruktorát, amelynek paraméterei rendre a pizza neve, a pizzában található kalóriák száma és a pizza ára!
+* Írd meg az osztály konstruktorát, amelynek paraméterei rendre a pizza neve, a pizzában található kalóriák száma és a pizza ára! Az árat ne legyen kötelező megadni a konstruktorban, alapértéke legyen 1500!
     * Hívd meg az ősosztály konstruktorát a megfelelő paraméterek átadásával! Ha a piza nevének a végén nem szerepel a `pizza` szöveg, fűzzük hozzá azt a névhez! Például a `hawaii` szövegből `hawaii pizza` lesz.
-    * A harmadik paraméter alapján inicializáld az `_ar` adattagot! Az ár paramétert ne legyen kötelező megadni a konstruktorban, alapértéke legyen 1500!
+    * A harmadik paraméter alapján inicializáld az `_ar` adattagot!
     * A `feltetek` adattagot minden esetben egy üres tömbbel inicializálja a konstruktor!
 
 * Készíts get és set property-ket az `_ar` adattaghoz, `ar` néven! A setterben ellenőrizd, hogy az adattag ne vehessen fel negatív értéket! Negatív paraméter esetén az ár értéke legyen 1000!
