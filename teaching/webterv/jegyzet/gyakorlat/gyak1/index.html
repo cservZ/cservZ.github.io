@@ -1,0 +1,1362 @@
+
+
+
+<!doctype html>
+<html lang="hu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>1. gyakorlat - Webtervezés jegyzet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-gyakorlat" class="md-skip">
+          Kihagyás
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Webtervezés jegyzet" class="md-header-nav__button md-logo" aria-label="Webtervezés jegyzet">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Webtervezés jegyzet
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              1. gyakorlat
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Keresés" placeholder="Keresés" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Kezdőlap
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../kovetelmenyek/" class="md-tabs__link md-tabs__link--active">
+          Gyakorlat
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Webtervezés jegyzet" class="md-nav__button md-logo" aria-label="Webtervezés jegyzet">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    Webtervezés jegyzet
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Kezdőlap" class="md-nav__link">
+      Kezdőlap
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Gyakorlat
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Gyakorlat" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Gyakorlat
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kovetelmenyek/" title="Követelmények" class="md-nav__link">
+      Követelmények
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        1. gyakorlat
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="1. gyakorlat" class="md-nav__link md-nav__link--active">
+      1. gyakorlat
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-gyakorlat-anyaga" class="md-nav__link">
+    A gyakorlat anyaga
+  </a>
+  
+    <nav class="md-nav" aria-label="A gyakorlat anyaga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attekintes" class="md-nav__link">
+    Áttekintés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-alapok-1-resz" class="md-nav__link">
+    HTML alapok (1. rész)
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML alapok (1. rész)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bevezetes" class="md-nav__link">
+    Bevezetés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#szabvanyok" class="md-nav__link">
+    Szabványok
+  </a>
+  
+    <nav class="md-nav" aria-label="Szabványok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#szabvanyossag-ellenorzese" class="md-nav__link">
+    Szabványosság ellenőrzése
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alapfogalmak" class="md-nav__link">
+    Alapfogalmak
+  </a>
+  
+    <nav class="md-nav" aria-label="Alapfogalmak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tagek" class="md-nav__link">
+    Tagek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributumok" class="md-nav__link">
+    Attribútumok
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-html-dokumentum-felepitese" class="md-nav__link">
+    A HTML dokumentum felépítése
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kommentek" class="md-nav__link">
+    Kommentek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-head-fontosabb-tagjei" class="md-nav__link">
+    A head fontosabb tagjei
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-body-fontosabb-tagjei" class="md-nav__link">
+    A body fontosabb tagjei
+  </a>
+  
+    <nav class="md-nav" aria-label="A body fontosabb tagjei">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bekezdesek-cimsorok" class="md-nav__link">
+    Bekezdések, címsorok
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#karakterentitasok" class="md-nav__link">
+    Karakterentitások
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kepek" class="md-nav__link">
+    Képek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#az-id-es-class-attributumok" class="md-nav__link">
+    Az id és class attribútumok
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hivatkozasok-linkek" class="md-nav__link">
+    Hivatkozások (Linkek)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#szakaszok" class="md-nav__link">
+    Szakaszok
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gyakorlo-feladat" class="md-nav__link">
+    Gyakorló feladat
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak2/" title="2. gyakorlat" class="md-nav__link">
+      2. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak3/" title="3. gyakorlat" class="md-nav__link">
+      3. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak4/" title="4. gyakorlat" class="md-nav__link">
+      4. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak5/" title="5. gyakorlat" class="md-nav__link">
+      5. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak6/" title="6. gyakorlat" class="md-nav__link">
+      6. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak7/" title="7. gyakorlat" class="md-nav__link">
+      7. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak8/" title="8. gyakorlat" class="md-nav__link">
+      8. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak9/" title="9. gyakorlat" class="md-nav__link">
+      9. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak10/" title="10. gyakorlat" class="md-nav__link">
+      10. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak11/" title="11. gyakorlat" class="md-nav__link">
+      11. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gyak12/" title="12. gyakorlat" class="md-nav__link">
+      12. gyakorlat
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-gyakorlat-anyaga" class="md-nav__link">
+    A gyakorlat anyaga
+  </a>
+  
+    <nav class="md-nav" aria-label="A gyakorlat anyaga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attekintes" class="md-nav__link">
+    Áttekintés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-alapok-1-resz" class="md-nav__link">
+    HTML alapok (1. rész)
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML alapok (1. rész)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bevezetes" class="md-nav__link">
+    Bevezetés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#szabvanyok" class="md-nav__link">
+    Szabványok
+  </a>
+  
+    <nav class="md-nav" aria-label="Szabványok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#szabvanyossag-ellenorzese" class="md-nav__link">
+    Szabványosság ellenőrzése
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alapfogalmak" class="md-nav__link">
+    Alapfogalmak
+  </a>
+  
+    <nav class="md-nav" aria-label="Alapfogalmak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tagek" class="md-nav__link">
+    Tagek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributumok" class="md-nav__link">
+    Attribútumok
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-html-dokumentum-felepitese" class="md-nav__link">
+    A HTML dokumentum felépítése
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kommentek" class="md-nav__link">
+    Kommentek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-head-fontosabb-tagjei" class="md-nav__link">
+    A head fontosabb tagjei
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-body-fontosabb-tagjei" class="md-nav__link">
+    A body fontosabb tagjei
+  </a>
+  
+    <nav class="md-nav" aria-label="A body fontosabb tagjei">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bekezdesek-cimsorok" class="md-nav__link">
+    Bekezdések, címsorok
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#karakterentitasok" class="md-nav__link">
+    Karakterentitások
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kepek" class="md-nav__link">
+    Képek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#az-id-es-class-attributumok" class="md-nav__link">
+    Az id és class attribútumok
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hivatkozasok-linkek" class="md-nav__link">
+    Hivatkozások (Linkek)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#szakaszok" class="md-nav__link">
+    Szakaszok
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gyakorlo-feladat" class="md-nav__link">
+    Gyakorló feladat
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="1-gyakorlat">1. gyakorlat<a class="headerlink" href="#1-gyakorlat" title="Permanent link">&para;</a></h1>
+<h2 id="a-gyakorlat-anyaga">A gyakorlat anyaga<a class="headerlink" href="#a-gyakorlat-anyaga" title="Permanent link">&para;</a></h2>
+<p>A <a href="../kovetelmenyek">követelmények</a> ismertetése.</p>
+<p>Ezen a gyakorlaton röviden áttekintjük a kurzuson tárgyalt három nyelv (HTML, CSS és PHP) általános szerepét a webfejlesztésben. Ezt követően megismerkedünk a HTML nyelv néhány alapvető elemével.</p>
+<h3 id="attekintes">Áttekintés<a class="headerlink" href="#attekintes" title="Permanent link">&para;</a></h3>
+<p>A félév során a HTML, CSS és PHP nyelvekkel fogunk megismerkedni. Az alábbi táblázatban röviden összefoglaljuk ezeknek a nyelveknek az általános szerepét a webfejlesztésben.</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">HTML</th>
+<th align="center">CSS</th>
+<th align="center">PHP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Micsoda?</strong></td>
+<td align="center">jelölőnyelv</td>
+<td align="center">stílusleíró nyelv</td>
+<td align="center">szerveroldali szkriptnyelv</td>
+</tr>
+<tr>
+<td align="center"><strong>Szerepe</strong></td>
+<td align="center">weboldalak tartalmának kialakítása, a tartalom strukturálása</td>
+<td align="center">weboldalak tartalmának formázása</td>
+<td align="center">tartalom dinamikus generálása, űrlapfeldolgozás, adatbázis-kezelés, menetkövetés, fájlkezelés, OOP, ...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="html-alapok-1-resz">HTML alapok (1. rész)<a class="headerlink" href="#html-alapok-1-resz" title="Permanent link">&para;</a></h3>
+<h4 id="bevezetes">Bevezetés<a class="headerlink" href="#bevezetes" title="Permanent link">&para;</a></h4>
+<p>A <strong>HTML</strong> (HyperText Markup Language) egy leíró nyelv, aminek segítségével megmondhatjuk, hogy mi az, amit egy weboldalon látni szeretnénk (pl. szövegek, képek, hivatkozások, táblázatok, multimédia elemek).</p>
+<p>A weboldal tartalmát lehetőségünk van strukturálni is HTML-ben, különböző szakaszok, tartalmi egységek kialakításával (pl. fejléc, menüsor, fő tartalom, lábléc).</p>
+<p>A HTML kód írása roppant egyszerű:</p>
+<ul>
+<li>A kódot tetszőleges szerkesztőprogramba írjuk (pl. Gedit, Notepad++, WebStorm stb.)</li>
+<li>Az állományt <code>.html</code> kiterjesztéssel mentjük el</li>
+<li>Végül a fájlt megnyitjuk egy szimpatikus böngészővel, és már láthatjuk is az eredményt.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Megjegyzés</p>
+<p>A HTML kódot más-más böngészők (illetve böngészőverziók) eltérő módon jeleníthetik meg.</p>
+</div>
+<h4 id="szabvanyok">Szabványok<a class="headerlink" href="#szabvanyok" title="Permanent link">&para;</a></h4>
+<p>A weboldalak készítésére vonatkozóan a <strong>W3C</strong> (World Wide Web Consortium) ad ki előírásokat, szabványokat.</p>
+<p>Fontosabb HTML szabványok:</p>
+<ul>
+<li>
+<p><strong>HTML 4.01</strong> (1999)</p>
+</li>
+<li>
+<p><strong>XHTML 1.0 Strict</strong> (2000)</p>
+<ul>
+<li>a korábbi HTML 4 szabvány "újraírása" XML alapokon</li>
+<li>szigorú szabályok jellemzik</li>
+<li>HTML dokumentumok egységessé tétele, egyszerűbb feldolgozás programmal</li>
+</ul>
+</li>
+<li>
+<p><strong>HTML5</strong> (2014)</p>
+<ul>
+<li>kevésbé szigorú az XHTML 1.0 Strict-hez képest</li>
+<li>programmal valamelyest nehezebb feldolgozni</li>
+<li>számos újdonságot tartalmaz elődjeihez képest (pl. szemantikus elemek, multimédia, grafikus elemek, új űrlapmező típusok).</li>
+</ul>
+</li>
+</ul>
+<p>A gyakorlaton a <strong>HTML5</strong> és <strong>CSS3</strong> szabványokkal fogunk foglalkozni. A webfejlesztés során érdemes törekednünk a választott szabvány előírásainak betartására!</p>
+<h5 id="szabvanyossag-ellenorzese">Szabványosság ellenőrzése<a class="headerlink" href="#szabvanyossag-ellenorzese" title="Permanent link">&para;</a></h5>
+<p>A weboldalunk szabványosságát legegyszerűbben böngésző plug-inek vagy az alábbi online validator szoftverek segítségével ellenőrizhetjük:</p>
+<ul>
+<li><a href="https://validator.w3.org/">HTML validator</a></li>
+<li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a>.</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Tipp</p>
+<p>A beadandó projekt szabványosságát a fenti eszközökkel egyszerűen ellenőrizhetitek.</p>
+</div>
+<p>Az érvényesíteni kívánt fájl feltöltése után, amennyiben nem szabványos az általunk írt kód, a validator különböző megjegyzéseket bocsát a rendelkezésünkre:</p>
+<ul>
+<li>A piros hátterű <code>Error</code>-ok komolyabb validálási hibákat jelentenek, amiket mindenképpen javítanunk kell. A hibaüzenetből egy kis angol tudással egyszerűen rájöhetünk a problémára (ha esetleg nem jöttök rá, nyugodtan kérdezzétek a gyakorlatvezetőtöket). </li>
+<li>A sárga hátterű <code>Warning</code>-ok kevésbé súlyos figyelmeztetések, amelyek általában megfontolandóak. Ezeknek a maradéktalan kijavítása viszont nem elvárt ezen a kurzuson.</li>
+</ul>
+<p><span class="example">Példa:</span> Egy validator által jelzett validálási hiba és figyelmeztetés</p>
+<p><img alt="Validator hibák és figyelmeztetések" src="../img/gyak01/validator.png" /></p>
+<h4 id="alapfogalmak">Alapfogalmak<a class="headerlink" href="#alapfogalmak" title="Permanent link">&para;</a></h4>
+<h5 id="tagek">Tagek<a class="headerlink" href="#tagek" title="Permanent link">&para;</a></h5>
+<p>A HTML fájlok alapvető elemei a <strong>tagek</strong>. Ezek <code>&lt;</code> és <code>&gt;</code> közé írt, speciális jelentéssel bíró HTML objektumok. A HTML nyelv egy előre definiált tagkészlettel rendelkezik.</p>
+<p>A legtöbb HTML tag <strong>páros tag</strong>, ami azt jelenti, hogy egy nyitótagből és egy zárótagből áll. A zárótaget úgy képezzük a nyitótagből, hogy a tag neve elé, azaz közvetlenül a <code>&lt;</code> után egy perjelet teszünk.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ide jön valami szöveg<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Vannak viszont <strong>páratlan tagek</strong> (másnéven <strong>üres tagek</strong>) is, amelyek csak nyitótagből állnak. Ilyen például a sortörés beszúrására alkalmas <code>&lt;br&gt;</code> tag.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Első sor <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Második sor
+</code></pre></div>
+</td></tr></table>
+
+<p>A páratlan tagek végére opcionálisan egy perjelet is tehetünk (tehát például <code>&lt;br&gt;</code> helyett azt is írhatjuk, hogy <code>&lt;br/&gt;</code>). Ebben a jegyzetben minden páratlan tag esetén kitesszük ezt a perjelet, noha ez HTML5-ben elhagyható.</p>
+<p>A HTML tageket egymásba ágyazhatjuk. Ekkor fontos, hogy az egymásba ágyazott tageket belülről kifelé haladva kell lezárnunk.</p>
+<p><span class="example">Példa:</span> Tagek egymásba ágyazása - először lezárjuk a legbelső <code>&lt;a&gt;</code> taget, majd az őt beágyazó <code>&lt;p&gt;</code> taget, végül pedig a legkülső <code>&lt;div&gt;</code> taget</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.pointless.com/&quot;</span><span class="p">&gt;</span>Ide jön valami szöveg...<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<h5 id="attributumok">Attribútumok<a class="headerlink" href="#attributumok" title="Permanent link">&para;</a></h5>
+<p>A tagekhez tartozhatnak bizonyos speciális tulajdonságok, úgynevezett <strong>attribútumok</strong>, amelyekhez speciális értékeket rendelhetünk.</p>
+<p>A tagekhez tartozó attribútum-érték párokat a nyitótag neve után írjuk, szóközzel elválasztva.</p>
+<p><span class="example">Példa:</span> Egy páros <code>&lt;a&gt;</code> tag, amely a <code>href</code> és <code>target</code> attribútumokkal rendelkezik</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><span class="example">Példa:</span> Egy páratlan <code>&lt;img&gt;</code> tag, amely az <code>src</code>, <code>alt</code> és <code>width</code> attribútumokkal rendelkezik</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;cat.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Macska&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">/&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<h4 id="a-html-dokumentum-felepitese">A HTML dokumentum felépítése<a class="headerlink" href="#a-html-dokumentum-felepitese" title="Permanent link">&para;</a></h4>
+<p>Minden HTML dokumentumunk megírása az alábbi kóddal kezdődik:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Weboldal címe...<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<div class="admonition hint">
+<p class="admonition-title">Tipp</p>
+<p>A fenti (vagy ahhoz hasonló) alap HTML kódot néhány szerkesztőprogrammal le is generáltathatjuk:
+<ul>
+    <li>A WebStorm automatikusan generálja a kódot HTML fájlok esetén</li>
+    <li>Sublime Text Editorban legépeljük, hogy <code>html</code>, majd közvetlen utána nyomunk egy <kbd>Tab</kbd>-ot</li>
+    <li>Visual Studio Code-ban leírunk egy felkiáltójelet (<code>!</code>), majd közvetlen utána nyomunk egy <kbd>Tab</kbd>-ot</li>
+</ul></p>
+</div>
+<p>Nézzük meg, hogy mi mit is jelent a kódban!</p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code>: megmondjuk, hogy a HTML5 szabvány szerint írtuk a kódot</li>
+<li><code>&lt;html&gt;...&lt;/html&gt;</code>: ez írja le magát a weboldalt<ul>
+<li>a <code>lang</code> attribútummal megadhatjuk a weboldal tartalmának nyelvét</li>
+</ul>
+</li>
+<li><code>&lt;head&gt;...&lt;/head&gt;</code>: <strong>fejrész</strong> - az oldalon nem megjelenő tartalom (metainformációk), fájlcsatolások, CSS- és szkriptbeágyazások helye<ul>
+<li><code>&lt;title&gt;...&lt;/title&gt;</code>: a böngészőfülön megjelenő cím</li>
+<li><code>&lt;meta charset="UTF-8"/&gt;</code>: UTF-8 karakterkódolás beállítása</li>
+</ul>
+</li>
+<li><code>&lt;body&gt;...&lt;/body&gt;</code>: <strong>törzsrész</strong> - a megjelenő tartalom, strukturális elemek és szkriptek helye</li>
+</ul>
+<h4 id="kommentek">Kommentek<a class="headerlink" href="#kommentek" title="Permanent link">&para;</a></h4>
+<p>A HTML fájlokba lehetőségünk van kommenteket (megjegyzéseket) írni az alábbi szintaxissal:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">&lt;!-- Ez egy komment a HTML kódban --&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>A kommentek szövege a weboldalon természetesen nem jelenik meg, viszont a HTML forráskódban (amit a <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> billentyűkombinációval egyszerűen megtekinthetünk) láthatóak lesznek az általunk írt kommentek. </p>
+<h4 id="a-head-fontosabb-tagjei">A head fontosabb tagjei<a class="headerlink" href="#a-head-fontosabb-tagjei" title="Permanent link">&para;</a></h4>
+<p>Az alábbiakban felsoroljuk a HTML dokumentum fejrészében (<code>&lt;head&gt;</code> és <code>&lt;/head&gt;</code>) között használatos fontosabb tageket.</p>
+<ul>
+<li><code>&lt;title&gt;...&lt;/title&gt;</code>: a böngészőfülön megjelenő cím (ezt mindig adjuk meg!)</li>
+<li><code>&lt;meta charset="UTF-8"/&gt;</code>: UTF-8 karakterkódolás beállítása (ezt mindig adjuk meg!)</li>
+<li><code>&lt;meta name="author" content="Gipsz Jakab"/&gt;</code>: a weboldal szerzője</li>
+<li><code>&lt;meta name="description" content="Jakab blogoldala"/&gt;</code>: a weboldal leírása</li>
+<li><code>&lt;meta name="keywords" content="webtervezés,webterv,HTML,CSS,PHP"/&gt;</code>: kulcsszavak megadása (célja a találati esélyeink javítása)</li>
+<li><code>&lt;link rel="stylesheet" href="valami.css"/&gt;</code>: külső CSS fájl beágyazása</li>
+<li><code>&lt;style&gt;...&lt;/style&gt;</code>: CSS formázás beszúrása</li>
+<li><code>&lt;script&gt;...&lt;/script&gt;</code>: szkript (pl. JavaScript) beszúrása</li>
+</ul>
+<h4 id="a-body-fontosabb-tagjei">A body fontosabb tagjei<a class="headerlink" href="#a-body-fontosabb-tagjei" title="Permanent link">&para;</a></h4>
+<p>Az alábbiakban megismerkedünk a HTML dokumentum törzsrészében (<code>&lt;body&gt;</code> és <code>&lt;/body&gt;</code> között) használható néhány fontosabb taggel.</p>
+<h5 id="bekezdesek-cimsorok">Bekezdések, címsorok<a class="headerlink" href="#bekezdesek-cimsorok" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>&lt;p&gt;...&lt;/p&gt;</code>: bekezdés</li>
+<li><code>&lt;h1&gt;...&lt;/h1&gt;</code>: 1. szintű címsor (legfontosabb)</li>
+<li><code>&lt;h2&gt;...&lt;/h2&gt;</code>: 2. szintű címsor</li>
+<li><code>&lt;h3&gt;...&lt;/h3&gt;</code>: 3. szintű címsor</li>
+<li><code>&lt;h4&gt;...&lt;/h4&gt;</code>: 4. szintű címsor</li>
+<li><code>&lt;h5&gt;...&lt;/h5&gt;</code>: 5. szintű címsor</li>
+<li><code>&lt;h6&gt;...&lt;/h6&gt;</code>: 6. szintű címsor (legkevésbé fontos)</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Bekezdések, címsorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>1. szintű címsor<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>2. szintű címsor<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>3. szintű címsor<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>4. szintű címsor<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>5. szintű címsor<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>6. szintű címsor<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ez egy bekezdés...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>A fenti HTML kódot tartalmazó fájlt böngészőben megnyitva a következőt kapjuk:</p>
+<p><img alt="A kód kimenete" src="../img/gyak01/headings-paragraphs-output.png" /></p>
+<h5 id="karakterentitasok">Karakterentitások<a class="headerlink" href="#karakterentitasok" title="Permanent link">&para;</a></h5>
+<p>Mivel a HTML-ben vannak speciális célt szolgáló  karakterek (pl. a <code>&lt;</code> és a <code>&gt;</code> karakterek), ezért ezeket valahogy máshogy kell írnunk, ha meg szeretnénk őket jeleníteni a weboldalunkon. Az ilyen karakterek tárolására használjuk a <strong>karakterentitások</strong>at.</p>
+<p>Néhány gyakran használt karakterentitás (teljes lista <a href="https://dev.w3.org/html5/html-author/charref">itt</a>):</p>
+<table>
+<thead>
+<tr>
+<th align="center">Karakterentitás</th>
+<th align="center">Megjelenítés</th>
+<th align="center">Elnevezés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>nbsp;</code></td>
+<td align="center"></td>
+<td align="center">szóköz</td>
+</tr>
+<tr>
+<td align="center"><code>&amp;lt;</code></td>
+<td align="center">&lt;</td>
+<td align="center">kisebb mint</td>
+</tr>
+<tr>
+<td align="center"><code>&amp;gt;</code></td>
+<td align="center">&gt;</td>
+<td align="center">nagyobb mint</td>
+</tr>
+<tr>
+<td align="center"><code>&amp;amp;</code></td>
+<td align="center">&amp;</td>
+<td align="center">és-jel</td>
+</tr>
+<tr>
+<td align="center"><code>apos;</code></td>
+<td align="center">'</td>
+<td align="center">aposztróf</td>
+</tr>
+<tr>
+<td align="center"><code>&amp;quot;</code></td>
+<td align="center">"</td>
+<td align="center">idézőjel</td>
+</tr>
+<tr>
+<td align="center"><code>&amp;copy;</code></td>
+<td align="center">©</td>
+<td align="center">copyright</td>
+</tr>
+</tbody>
+</table>
+<p><span class="example">Példa:</span> Ha egy bekezdésbe azt szeretnénk írni, hogy <code>5 &lt; 10 &gt; 8</code>, akkor azt a következőképpen tehetjük meg karakterentitások használatával</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>5 <span class="ni">&amp;lt;</span> 10 <span class="ni">&amp;gt;</span> 8<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<h5 id="kepek">Képek<a class="headerlink" href="#kepek" title="Permanent link">&para;</a></h5>
+<p>Ha a weboldalunkra egy képet szeretnénk beszúrni, akkor ezt az <code>&lt;img/&gt;</code> nevű páratlan taggel tudjuk megtenni. A tag fontosabb attribútumai:</p>
+<ul>
+<li><code>src</code>: a kép elérési útvonala (kötelező megadni)</li>
+<li><code>alt</code>: helyettesítő szöveg, ha a kép nem jelenik meg (kötelező megadni)</li>
+<li><code>title</code>: a kép címe, ami akkor jelenik meg, ha a kurzor a kép fölött áll</li>
+<li><code>width</code>: a kép szélessége (pixelben)</li>
+<li><code>height</code>: a kép magassága (pixelben).</li>
+</ul>
+<p>Ha a <code>width</code> és <code>height</code> attribútumok közül csak az egyiket adjuk meg, akkor a másik a kép eredeti méretarányaiból számolódik. Tehát például ha egy 400x300-as (400 pixel széles, 300 pixel magas) kép szélességét 800 pixelre állítjuk (megduplázzuk), akkor a magassága automatikusan 600 pixel lesz.</p>
+<p><span class="example">Példa:</span> A HTML fájllal egy mappában van egy <code>img</code> mappa, amiben található a <code>cat.jpg</code> kép. Szúrjuk be a képet a weboldalunkra úgy, hogy a szélessége 400 pixel legyen!</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Kép beszúrása<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;img/cat.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Macska&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Ez egy macska&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><img alt="A kód kimenete" src="../img/gyak01/img-example.png" /></p>
+<h5 id="az-id-es-class-attributumok">Az id és class attribútumok<a class="headerlink" href="#az-id-es-class-attributumok" title="Permanent link">&para;</a></h5>
+<p>Minden HTML objektumnak adható egyedi azonosító, illetve minden HTML objektum csoportosítható osztályokba. Ezek CSS-ben lesznek majd hasznosak, amikor egy-egy objektumra vagy objektumok csoportjára szeretnénk hivatkozni.</p>
+<p>Az <strong>egyedi azonosító</strong> (<code>id</code>) értéke a dokumentumon belül egyedi kell, hogy legyen. Emellett az attribútum értéke nem tartalmazhat szóközt.</p>
+<p>Az <strong>osztály</strong> (<code>class</code>) értéke nem kell, hogy egyedi legyen (sőt általában nem az). Értékéül szóközzel elválasztva megadható több osztály neve is, amihez az adott elem tartozik.</p>
+<p><span class="example">Példa:</span> <code>id</code> és <code>class</code> attribútumok használata</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>id, class<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- Egy &quot;asd&quot; egyedi azonosítóval rendelkező bekezdés, ami a &quot;foo&quot; osztályhoz tartozik --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;asd&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;foo&quot;</span><span class="p">&gt;</span>Ide jön valami szöveg...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- Egy kép, ami a &quot;foo&quot; és &quot;bar&quot; osztályokhoz tartozik --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;foo bar&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;my-image.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Valami kép...&quot;</span><span class="p">/&gt;</span> 
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<h5 id="hivatkozasok-linkek">Hivatkozások (Linkek)<a class="headerlink" href="#hivatkozasok-linkek" title="Permanent link">&para;</a></h5>
+<p>Hivatkozásokat (avagy linkeket) az <code>&lt;a&gt;...&lt;/a&gt;</code> páros tag segítségével szúrhatunk be a weboldalunkra. A tag fontosabb attribútumai:</p>
+<ul>
+<li><code>href</code>: cél, ahova a hivatkozásra kattintva jutunk<ul>
+<li>lehet egy másik weboldal - pl. <code>&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code></li>
+<li>lehet egy másik fájl - pl. <code>&lt;a href="bevasarlolista.txt"&gt;Bevásárlólista&lt;/a&gt;</code></li>
+<li>lehet lapon belüli hivatkozás - pl. <code>&lt;a href="#top"&gt;Vissza a tetejére&lt;/a&gt;</code> (ez az <code>id="top"</code> attribútummal rendelkező elemre mutat)</li>
+</ul>
+</li>
+<li><code>target</code>: hol legyen megnyitva a hivatkozott cél<ul>
+<li><code>_self</code>: ugyanott, ahol rákattintottunk (alapértelmezett)</li>
+<li><code>_blank</code>: új lapon vagy ablakban</li>
+</ul>
+</li>
+<li><code>title</code>: hivatkozás címe, ami akkor jelenik meg, ha a kurzor a hivatkozás fölött áll.</li>
+</ul>
+<p><span class="example">Példa:</span> Hivatkozások beszúrása</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hivatkozások<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;top-of-page&quot;</span><span class="p">&gt;</span>Hivatkozások (linkek)<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- Egy hivatkozás, ami egy másik weboldalt nyit meg egy új lapon --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://youtu.be/dQw4w9WgXcQ&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Valami klassz dolog<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- Egy hivatkozás, ami egy képet nyit meg ugyanott, ahol a linkre kattintottunk --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;img/cat.jpg&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Megtekintés nagyobb méretben&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;img/cat.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Macska&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- Egy hivatkozás, ami az id=&quot;top-of-page&quot; attribútummal rendelkező elemre mutat --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#top-of-page&quot;</span><span class="p">&gt;</span>Vissza a lap tetejére<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<h5 id="szakaszok">Szakaszok<a class="headerlink" href="#szakaszok" title="Permanent link">&para;</a></h5>
+<p>HTML-ben lehetőségünk van a weboldal tartalmának strukturálására is. Ezt szakaszok, tartalmi egységek kialakításával tehetjük meg.</p>
+<p>A <code>&lt;div&gt;...&lt;/div&gt;</code> általános célú <strong>blokkszintű (block)</strong> szakasz. A blokkszintű elemek mindig új sorban kezdődnek, és kihasználják a rendelkezésre álló szélességet.</p>
+<p>A <code>&lt;span&gt;...&lt;/span&gt;</code> átalános célú <strong>sorszintű (inline)</strong> szakasz. A sorszintű elemek nem kezdődnek új sorban, illetve szélességük csak akkora, mint amekkora helyre szükségük van.</p>
+<p><span class="example">Példa:</span> A <code>&lt;span&gt;</code> és <code>&lt;div&gt;</code> tagek használata</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Szakaszok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    A <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span tag<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> és a <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>div tag<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> szakaszok kialakítására alkalmas.
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><img alt="A kód kimenete" src="../img/gyak01/div-vs-span.png" /></p>
+<h2 id="gyakorlo-feladat">Gyakorló feladat<a class="headerlink" href="#gyakorlo-feladat" title="Permanent link">&para;</a></h2>
+<p>Készíts egy egyszerű weboldalt, amin bemutatod saját magadat (vagy a kedvenc filmedet, a hobbidat stb.)! Az oldal tartalmazza az alábbi elemeket:</p>
+<ul>
+<li>címsorok</li>
+<li>bekezdések</li>
+<li>képek</li>
+<li>hivatkozások</li>
+<li>tartalmi egységek (szakaszok)!</li>
+</ul>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Utolsó frissítés: 2020-11-15 21:39:38
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../kovetelmenyek/" title="Követelmények" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Előző
+                </span>
+                Követelmények
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../gyak2/" title="2. gyakorlat" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Következő
+                </span>
+                2. gyakorlat
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Szegedi Tudományegyetem, Informatikai Intézet, Szoftverfejlesztés Tanszék
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "search.config.lang": "hu", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

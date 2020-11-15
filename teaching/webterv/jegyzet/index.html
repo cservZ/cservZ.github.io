@@ -1,0 +1,845 @@
+
+
+
+<!doctype html>
+<html lang="hu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Webtervezés jegyzet</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#webtervezes-jegyzet" class="md-skip">
+          Kihagyás
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="Webtervezés jegyzet" class="md-header-nav__button md-logo" aria-label="Webtervezés jegyzet">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Webtervezés jegyzet
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Kezdőlap
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Keresés" placeholder="Keresés" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="." class="md-tabs__link md-tabs__link--active">
+        Kezdőlap
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="gyakorlat/kovetelmenyek/" class="md-tabs__link">
+          Gyakorlat
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Webtervezés jegyzet" class="md-nav__button md-logo" aria-label="Webtervezés jegyzet">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    Webtervezés jegyzet
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Kezdőlap
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="." title="Kezdőlap" class="md-nav__link md-nav__link--active">
+      Kezdőlap
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#szukseges-alkalmazasok" class="md-nav__link">
+    Szükséges alkalmazások
+  </a>
+  
+    <nav class="md-nav" aria-label="Szükséges alkalmazások">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javasolt-szerkesztoprogramok" class="md-nav__link">
+    Javasolt szerkesztőprogramok
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-tantargy-tematikaja" class="md-nav__link">
+    A tantárgy tematikája
+  </a>
+  
+    <nav class="md-nav" aria-label="A tantárgy tematikája">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-es-css" class="md-nav__link">
+    HTML és CSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#szerveroldali-webprogramozas-php" class="md-nav__link">
+    Szerveroldali webprogramozás, PHP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajanlott-irodalom" class="md-nav__link">
+    Ajánlott irodalom
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajánlott irodalom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-es-css_1" class="md-nav__link">
+    HTML és CSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#az-elkeszult-jegyzetrol-hibak" class="md-nav__link">
+    Az elkészült jegyzetről, hibák
+  </a>
+  
+    <nav class="md-nav" aria-label="Az elkészült jegyzetről, hibák">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hibak" class="md-nav__link">
+    Hibák
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keszitok" class="md-nav__link">
+    Készítők
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jogi-nyilatkozat" class="md-nav__link">
+    Jogi nyilatkozat
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Gyakorlat
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Gyakorlat" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Gyakorlat
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/kovetelmenyek/" title="Követelmények" class="md-nav__link">
+      Követelmények
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak1/" title="1. gyakorlat" class="md-nav__link">
+      1. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak2/" title="2. gyakorlat" class="md-nav__link">
+      2. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak3/" title="3. gyakorlat" class="md-nav__link">
+      3. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak4/" title="4. gyakorlat" class="md-nav__link">
+      4. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak5/" title="5. gyakorlat" class="md-nav__link">
+      5. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak6/" title="6. gyakorlat" class="md-nav__link">
+      6. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak7/" title="7. gyakorlat" class="md-nav__link">
+      7. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak8/" title="8. gyakorlat" class="md-nav__link">
+      8. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak9/" title="9. gyakorlat" class="md-nav__link">
+      9. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak10/" title="10. gyakorlat" class="md-nav__link">
+      10. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak11/" title="11. gyakorlat" class="md-nav__link">
+      11. gyakorlat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gyakorlat/gyak12/" title="12. gyakorlat" class="md-nav__link">
+      12. gyakorlat
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Tartalomjegyzék
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#szukseges-alkalmazasok" class="md-nav__link">
+    Szükséges alkalmazások
+  </a>
+  
+    <nav class="md-nav" aria-label="Szükséges alkalmazások">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javasolt-szerkesztoprogramok" class="md-nav__link">
+    Javasolt szerkesztőprogramok
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-tantargy-tematikaja" class="md-nav__link">
+    A tantárgy tematikája
+  </a>
+  
+    <nav class="md-nav" aria-label="A tantárgy tematikája">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-es-css" class="md-nav__link">
+    HTML és CSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#szerveroldali-webprogramozas-php" class="md-nav__link">
+    Szerveroldali webprogramozás, PHP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajanlott-irodalom" class="md-nav__link">
+    Ajánlott irodalom
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajánlott irodalom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-es-css_1" class="md-nav__link">
+    HTML és CSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#az-elkeszult-jegyzetrol-hibak" class="md-nav__link">
+    Az elkészült jegyzetről, hibák
+  </a>
+  
+    <nav class="md-nav" aria-label="Az elkészült jegyzetről, hibák">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hibak" class="md-nav__link">
+    Hibák
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keszitok" class="md-nav__link">
+    Készítők
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jogi-nyilatkozat" class="md-nav__link">
+    Jogi nyilatkozat
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="webtervezes-jegyzet">Webtervezés jegyzet<a class="headerlink" href="#webtervezes-jegyzet" title="Permanent link">&para;</a></h1>
+<h2 id="szukseges-alkalmazasok">Szükséges alkalmazások<a class="headerlink" href="#szukseges-alkalmazasok" title="Permanent link">&para;</a></h2>
+<p>A kurzus folyamán három nyelvet tanulunk: HTML-t, CSS-t és PHP-t. A HTML és CSS kód írásához egy tetszőleges szerkesztőprogramra, valamint egy webböngészőre van szükségünk.</p>
+<p>A PHP programok futtatásához a XAMPP nevű szoftvercsomagot használjuk. Ez biztosít számunkra egy PHP értelmezőt, valamint egy Apache webszervert. A telepítéséről és használatáról részletesen a <a href="gyakorlat/gyak6/">6. gyakorlati jegyzet</a>ben olvashatunk.</p>
+<h3 id="javasolt-szerkesztoprogramok">Javasolt szerkesztőprogramok<a class="headerlink" href="#javasolt-szerkesztoprogramok" title="Permanent link">&para;</a></h3>
+<ul>
+<li>JetBrains termékek: <strong>WebStorm</strong> (HTML és CSS), <strong>PhpStorm</strong> (PHP)</li>
+<li>Sublime Text Editor</li>
+<li>Notepad++</li>
+<li>Visual Studio Code</li>
+</ul>
+<h2 id="a-tantargy-tematikaja">A tantárgy tematikája<a class="headerlink" href="#a-tantargy-tematikaja" title="Permanent link">&para;</a></h2>
+<h3 id="html-es-css">HTML és CSS<a class="headerlink" href="#html-es-css" title="Permanent link">&para;</a></h3>
+<ul>
+<li>HTML és CSS szintaxis</li>
+<li>Általános formázások. A dobozmodell és részeinek formázása. Megjelenítési jellemzők. Stílusok kölcsönhatása. Helyzetmegadás</li>
+<li>Weboldalak strukturálása. Beágyazott keretek (lebegőkeretek)</li>
+<li>Szövegek jellemzői, strukturális egységei és azok formázása. Hivatkozások elhelyezése és formázása</li>
+<li>Felsorolások. Menük elhelyezése és formázása</li>
+<li>Táblázatok készítése</li>
+<li>Űrlapok készítése. Űrlapelemek, elemfeliratok, működési jellemzők</li>
+<li>Multimédiás elemek beágyazása</li>
+<li>A HTML és CSS további lehetőségei</li>
+</ul>
+<h3 id="szerveroldali-webprogramozas-php">Szerveroldali webprogramozás, PHP<a class="headerlink" href="#szerveroldali-webprogramozas-php" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A kiszolgáló- és ügyféloldali web programozás jellemzése, kapcsolata, alkalmazási területei</li>
+<li>A PHP nyelvi elemei</li>
+<li>Űrlapok kezelése</li>
+<li>Fájlok használata</li>
+<li>Állapotok tárolása. Menetkövetés</li>
+<li>Objektumorientáltság</li>
+<li>A PHP további lehetőségei</li>
+</ul>
+<h2 id="ajanlott-irodalom">Ajánlott irodalom<a class="headerlink" href="#ajanlott-irodalom" title="Permanent link">&para;</a></h2>
+<h3 id="html-es-css_1">HTML és CSS<a class="headerlink" href="#html-es-css_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jelen gyakorlati jegyzet</li>
+<li>Vancsics Béla által gondozott <a href="http://www.inf.u-szeged.hu/~vancsics/webterv/">gyakorlati jegyzet</a></li>
+<li>Abonyi-Tóth Andor, ELTE IK: A weblapkészítés technikája (HTML5, CSS3) és ergonómiája, <a href="http://tamop412.elte.hu/tananyagok/weblapkeszites/index.html">elte.hu</a>, <a href="https://regi.tankonyvtar.hu/hu/tartalom/tamop412A/2011-0052_27_weblapkeszites_technikaja_ergonomiaja/index.scorml">tankonyvtar.hu</a></li>
+<li>HTML5 weboldalak készítése - <a href="https://webfejlesztes.gtportal.eu/index.php?f0=HTML5">webfejlesztes.gtportal.eu</a></li>
+<li>HTML és CSS - <a href="http://www.standardsmode.hu/">Standardsmode.hu</a></li>
+<li>Web-fejlesztés</li>
+<li>Holló Csaba: <a href="http://tananyagfejlesztes.mik.uni-pannon.hu/images/stories/vegleges_tananyagok/masodikreszlet/hollo_uzleti_web.pdf">Üzleti webtechnológiák</a>, Typotex Kiadó, 2011.</li>
+<li>Virginia DeBolt: HTML és CSS. Webszerkesztés stílusosan. Kiskapu Kft, 2005.</li>
+<li>(angol) HTML5 - MDN web docs (Mozilla)</li>
+<li>(angol) HTML5 Tutorial - <a href="https://www.w3schools.com/html/default.asp">w3schools.com</a></li>
+<li>(angol) Estelle Weyl: <a href="http://www.standardista.com/html5-v-xhtml5/">HTML5 v. XHTML5</a></li>
+</ul>
+<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jelen gyakorlati jegyzet</li>
+<li>Vancsics Béla által gondozott <a href="http://www.inf.u-szeged.hu/~vancsics/webterv/">gyakorlati jegyzet</a></li>
+<li>Nagy Gusztáv: <a href="https://nagygusztav.hu/web-programozas">Web programozás</a> , <a href="https://nagygusztav.hu/webes-szabvanyok">Webes szabványok</a></li>
+<li><a href="https://hu.wikibooks.org/wiki/PHP">PHP WIKI könyv</a></li>
+<li><a href="http://www.szabilinux.hu/php/index.html">PHP kézikönyv (régebbi)</a></li>
+<li>Gál Tibor: Web programozás, Mûegyetemi kiadó, 2006.</li>
+<li>Matt Zandstra: Tanuljuk meg a PHP5 használatát 24 óra alatt, Kiskapu Kiadó, 2005.</li>
+<li>Blake Schwendiman: PHP4 Fejlesztõk kézikönyve (1. + 2. kötet), Panem Kft., Budapest, 2001.</li>
+<li>Peter Moulding: PHP haladóknak, Fekete Könyv sorozat, Perfact-Pro Kft., 2002.</li>
+<li>Schlossnagle, George: PHP fejlesztés felsőfokon, Kiskapu Kft., 2004.</li>
+<li>Ben Laurie, Peter Laurie: Apache, Kossuth Kiadó, 2001.</li>
+<li>László József: Dinamikus weboldalak, CGI programozás Windows és Linux rendszerekben, ComputerBooks, Budapest, 2002.</li>
+<li>(angol) PHP 5 Tutorial - <a href="https://www.w3schools.com/php/">W3Schools</a></li>
+<li>(angol) PHP: Documentation <a href="https://www.php.net/docs.php">php.net</a></li>
+<li>(angol) PHP: The Right Way <a href="https://phptherightway.com/">phptherightway.com</a></li>
+<li>(angol) Learn PHP Online - <a href="https://www.codeschool.com/learn/php">Code School</a></li>
+</ul>
+<h2 id="az-elkeszult-jegyzetrol-hibak">Az elkészült jegyzetről, hibák<a class="headerlink" href="#az-elkeszult-jegyzetrol-hibak" title="Permanent link">&para;</a></h2>
+<h3 id="hibak">Hibák<a class="headerlink" href="#hibak" title="Permanent link">&para;</a></h3>
+<p>A jegyzet folyamatosan készül, így előfordulhatnak benne apróbb hibák, hiányosságok, elírások. Ha valaki esetleg ilyet találna, kérem írjon a <code>Cservenak.Bence[kukac]stud.u-szeged.hu</code> címre, hogy mihamarabb javíthassuk. <strong>A tárgyi tévedések jelentéséért cserébe pluszpontok szerzésére van lehetőség, gyakorlatvezetőtől függetlenül.</strong></p>
+<h3 id="keszitok">Készítők<a class="headerlink" href="#keszitok" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cservenák Bence</li>
+<li>Savanya Sándor József</li>
+</ul>
+<h2 id="jogi-nyilatkozat">Jogi nyilatkozat<a class="headerlink" href="#jogi-nyilatkozat" title="Permanent link">&para;</a></h2>
+<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Nevezd meg! - Ne add el! - Így add tovább! 4.0 Nemzetközi</a></p>
+<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Gyors összefoglaló</a> a liszenszről, és a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">teljes változat</a>.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Utolsó frissítés: 2020-11-15 21:39:38
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="gyakorlat/kovetelmenyek/" title="Követelmények" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Következő
+                </span>
+                Követelmények
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Szegedi Tudományegyetem, Informatikai Intézet, Szoftverfejlesztés Tanszék
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "search.config.lang": "hu", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
