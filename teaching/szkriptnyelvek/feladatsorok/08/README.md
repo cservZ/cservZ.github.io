@@ -6,6 +6,8 @@
 
 ## Objektumorientáltság JavaScriptben
 
+A feladatokhoz tartozó mintamegoldás elérhető [ide kattintva](./index.js)
+
 
 ### Pizzázó
 
