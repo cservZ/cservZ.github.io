@@ -76,7 +76,7 @@ class Pizza extends Etel {      // öröklődés az extends kulcsszóval valós�
         console.log("A pizza megromlott.");
     }
 
-    feltetetHozzad(feltet) {
+    feltetetHozzaad(feltet) {
         if (typeof feltet !== "object" || feltet.nev === undefined || feltet.kaloria === undefined) {   // nem object vagy hiányos property-kkel rendelkező object
             console.log("Hiba: nem egy feltet!");
         } else if (typeof feltet.nev !== "string" || typeof feltet.kaloria !== "number") {              // nem megfelelő típusú property értékkel rendelkező object
