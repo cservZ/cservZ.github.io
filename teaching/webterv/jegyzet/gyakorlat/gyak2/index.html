@@ -997,7 +997,7 @@
 </td></tr></table>
 
 <h4 id="listak">Listák<a class="headerlink" href="#listak" title="Permanent link">&para;</a></h4>
-<p>A HTML listák lehetőséget biztosítanak arra, hogy egymáshoz kapcsolódó információkat sorolhassunk fel. Két fontos listatípus, amit gyakran szoktunk használni:</p>
+<p>A HTML listák lehetőséget biztosítanak arra, hogy az egymáshoz kapcsolódó információkat egy csoportba gyűjtve sorolhassunk fel. Két fontos listatípus, amit gyakran szoktunk használni:</p>
 <ul>
 <li><code>&lt;ul&gt;...&lt;/ul&gt;</code>: <strong>rendezetlen (számozatlan) lista</strong><ul>
 <li>akkor használjuk, ha a listaelemek között nincs megállapítható sorrend</li>
@@ -1137,15 +1137,15 @@
 
 <p>Lehetőségünk van arra is, hogy sor- és oszlopösszevonásokat végezzünk egy táblázatban:</p>
 <ul>
-<li>a cellákank adott <code>rowspan</code> attribútummal megadhatjuk az összevonni kívánt sorok számát</li>
-<li>a <code>colspan</code> attribútumal pedig az összevonni kívánt oszlopok számát adhatjuk meg.</li>
+<li>a celláknak adott <code>rowspan</code> attribútummal megadhatjuk az összevonni kívánt sorok számát</li>
+<li>a <code>colspan</code> attribútumal pedig az összevonni kívánt oszlopok számát adjuk meg.</li>
 </ul>
 <p>Azt is meg tudjuk mondani, hogy egy táblázatcella mely fejléccellá(k)hoz tartozik. Ezt a következőképpen tehetjük meg:</p>
 <ul>
 <li>a fejléccelláknak adunk egy-egy <code>id</code> attribútumot (egyedi azonosítót)</li>
 <li>a cellák <code>headers</code> attribútumaként megadjuk azon fejléccellá(k)nak az <code>id</code>-értékét, ami(k)hez az adott cella tartozik.</li>
 </ul>
-<p><span class="example">Példa:</span> Az előző táblázat kiegészítve sor- és oszlopösszevonással, valamint fejléccella-társítással</p>
+<p><span class="example">Példa:</span> Az előző táblázat kiegészítése sor- és oszlopösszevonással, valamint fejléccella-társítással</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1309,7 +1309,7 @@
   <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f0f0f0</span><span class="p">;</span>        <span class="c">/* háttérszín */</span>
 <span class="p">}</span>
 
-<span class="c">/* egy kicsit összetettebb szelektor */</span>
+<span class="c">/* egy összetettebb szelektor */</span>
 
 <span class="p">#</span><span class="nn">main-content</span> <span class="p">.</span><span class="nc">centered</span> <span class="p">{</span>
   <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>               <span class="c">/* vízszintesen középre igazítás */</span>     
@@ -1436,7 +1436,7 @@
 <div class="admonition info">
 <p class="admonition-title">A decimális és hexadecimális RGB-kódokról részletesebben</p>
 <p>Az <strong>additív színkeverés</strong> a vörös (<strong>R</strong>ed), zöld (<strong>G</strong>reen) és kék (<strong>B</strong>lue) alapszínekkel dolgozik, és ezekből kever ki különböző színeket. Az RGB-kód (a decimális és hexadecimális RGB-kód is) azt kódolja, hogy az egyes alapszínekből rendre mekkora mennyiséget használtunk fel egy adott szín kikeveréséhez.</p>
-<p>A <strong>decimális RGB-kód</strong>nál mindhárom szín mennyisége 0 és 255 közötti lehet. Például az <code>rgb(0, 0, 255)</code> az jelenti, hogy a vörös (Red) szín mennyisége 0, a zöld (Green) szín mennyisége szintén 0, a kék (Blue) szín mennyisége pedig a maximális 255 (tehát ez a színkód éppen a kék színt kódolja). Az egyes színek mennyiségét itt megadhatjuk százalékosan is, ekkor értelemszerűen 0% és 100% közötti értékeket írunk mindenhova. Például százalékos megadásnál a kék szín kódja a következő lesz: <code>rgb(0%, 0%, 100%)</code>.</p>
+<p>A <strong>decimális RGB-kód</strong>nál mindhárom szín mennyisége 0 és 255 közötti lehet. Például az <code>rgb(0, 0, 255)</code> az jelenti, hogy a vörös (Red) szín mennyisége 0, a zöld (Green) szín mennyisége szintén 0, a kék (Blue) szín mennyisége pedig a maximális 255 (tehát ez a színkód éppen a kék színt kódolja). Az egyes színek mennyiségét itt megadhatjuk százalékosan is, ekkor értelemszerűen 0% és 100% közötti értékeket írunk mindenhova. Például százalékos megadás esetén a kék szín kódja a következő lesz: <code>rgb(0%, 0%, 100%)</code>.</p>
 <p>A <strong>hexadecimális RGB-kód</strong> is pontosan ugyanígy működik, csak talán első ránézésre ez nem annyira világos. A hexadecimális RGB-kódban <code>#</code> (kettős kereszt) után 6 darab, tizenhatos számrendszerbeli számjegyet adunk meg (tehát minden számjegy 0 és F (= 15) közötti). Az első két számjegy a vörös (Red), a második kettő a zöld (Green), az utolsó kettő pedig a kék (Blue) szín mennyiségét kódolja. Például a <code>#0000FF</code> a kék színt kódolja, hiszen a vörös és zöld mennyisége 0, a kék mennyisége pedig a maximális (FF).</p>
 <ul>
 <li>Ha az adott (vörös, zöld vagy kék) színhez tartozó 2 számjegy megegyezik, akkor ezt rövidítve is írhatjuk. Például <code>#0066FF</code> helyett azt is írhatjuk, hogy <code>#06F</code>.</li>
@@ -1837,7 +1837,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2020-12-23 12:16:11
+      Utolsó frissítés: 2020-12-23 13:51:32
     
   </small>
 </div>
