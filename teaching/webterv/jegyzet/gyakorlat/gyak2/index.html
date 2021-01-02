@@ -807,7 +807,7 @@
 <li><code>&lt;br/&gt;</code>: sortörés (páratlan tag)</li>
 <li><code>&lt;hr/&gt;</code>: elválasztó vonal (páratlan tag)</li>
 <li><code>&lt;pre&gt;...&lt;/pre&gt;</code>: előre formázott szöveg<ul>
-<li>alakhű megjelenést biztosít: az ilyen taggel megadott szövegek megőrzik a whitespace karaktereket (pl. szóköz, tabulátor, sortörés)</li>
+<li>alakhű megjelenést biztosít: az ilyen taggel megadott szövegek megőrzik a whitespace karaktereket (szóközök, tabulátorok, sortörések)</li>
 <li>akkor használjuk, ha a szöveg jellegéből szemantikusan következik a tartalom szóközökkel, térközökkel való formázása (pl. ASCII-ábrák, kódrészletek, képversek)</li>
 </ul>
 </li>
@@ -952,7 +952,7 @@
 
 <p><img alt="A kód kimenete" src="../img/gyak02/szovegelemek-3.png" /></p>
 <h4 id="iframe-ek">Iframe-ek<a class="headerlink" href="#iframe-ek" title="Permanent link">&para;</a></h4>
-<p>Az <code>&lt;iframe&gt;...&lt;/iframe&gt;</code> taggel beszúrhatunk a weboldalunkra egy lebegőkeretet (inline frame, röviden iframe). Ezekben a lebegőkeretekben lehetőségünk van megnyitni egy másik weboldalt.</p>
+<p>Az <code>&lt;iframe&gt;...&lt;/iframe&gt;</code> taggel beszúrhatunk a weboldalunkra egy úgynevezett lebegőkeretet (inline frame, röviden iframe). Ezekben a lebegőkeretekben lehetőségünk van megnyitni egy másik weboldalt.</p>
 <p>Az <code>&lt;iframe&gt;</code> tag fontosabb attribútumai:</p>
 <ul>
 <li><code>src</code>: a megnyitni kívánt weboldal URL-je</li>
@@ -983,7 +983,7 @@
 </td></tr></table>
 
 <h4 id="listak">Listák<a class="headerlink" href="#listak" title="Permanent link">&para;</a></h4>
-<p>A HTML listák lehetőséget biztosítanak arra, hogy az egymáshoz kapcsolódó információkat egy csoportba gyűjtve sorolhassunk fel. Két fontos listatípus, amit gyakran szoktunk használni:</p>
+<p>A HTML listák lehetőséget biztosítanak arra, hogy az egymáshoz kapcsolódó információkat egy csoportba gyűjtve sorolhassunk fel. Két fontos listatípus:</p>
 <ul>
 <li><code>&lt;ul&gt;...&lt;/ul&gt;</code>: <strong>rendezetlen (számozatlan) lista</strong><ul>
 <li>akkor használjuk, ha a listaelemek között nincs megállapítható sorrend</li>
@@ -991,10 +991,7 @@
 </ul>
 </li>
 <li><code>&lt;ol&gt;...&lt;/ol&gt;</code>: <strong>rendezett (számozott) lista</strong><ul>
-<li>akkor használjuk, ha számít a listaelemek sorrendje<ul>
-<li>pl. egy étel elkészítésének lépései, a helyezettek felsorolása egy versenyen stb.</li>
-</ul>
-</li>
+<li>akkor használjuk, ha számít a listaelemek sorrendje</li>
 <li>a listaelemeket a <code>&lt;li&gt;...&lt;/li&gt;</code> taggel adhatjuk meg</li>
 <li>fontosabb attribútumok:<ul>
 <li><code>reversed</code>: fordított számozás</li>
@@ -1038,28 +1035,8 @@
 </td></tr></table>
 
 <p><img alt="A kód kimenete" src="../img/gyak02/listak-1.png" /></p>
-<p><span class="example">Példa:</span> Fordított sorszámozású rendezett lista, római számokkal</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Az 5 legnagyobb területű ország:<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">ol</span> <span class="na">reversed</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;I&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Brazília<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Egyesült Államok<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Kína<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Kanada<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Oroszország<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
-
-<p>A fentiekből készíthetünk akár <strong>többszintű listát</strong> is. Ennek a lényege, hogy egy listaelembe egy másik listát ágyazunk be.</p>
+<p>A fenti listatípusokból készíthetünk akár <strong>többszintű listát</strong> is. Ennek a lényege, hogy egy listaelembe egy másik listát ágyazunk be.</p>
+<p><span class="example">Példa:</span> Többszintű lista</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1086,7 +1063,7 @@
 
 <p><img alt="A kód kimenete" src="../img/gyak02/listak-3.png" /></p>
 <h4 id="tablazatok">Táblázatok<a class="headerlink" href="#tablazatok" title="Permanent link">&para;</a></h4>
-<p>A <code>&lt;table&gt;...&lt;/table&gt;</code> taggel egy táblázatot szúrhatunk be a weboldalunkra. A táblázat egy sorát a <code>&lt;tr&gt;...&lt;/tr&gt;</code> tag segítségével adhatjuk meg. Az egyes sorokon belül létrehozhatunk fejléccellákat (<code>&lt;th&gt;...&lt;/th&gt;</code>), valamint adatcellákat (<code>&lt;td&gt;...&lt;/td&gt;</code>).</p>
+<p>A <code>&lt;table&gt;...&lt;/table&gt;</code> taggel egy táblázatot szúrhatunk be a weboldalunkra. A táblázat egy sorát a <code>&lt;tr&gt;...&lt;/tr&gt;</code> tag segítségével adhatjuk meg. Az egyes sorokon belül létrehozhatunk fejléccellákat (<code>&lt;th&gt;...&lt;/th&gt;</code>), illetve adatcellákat (<code>&lt;td&gt;...&lt;/td&gt;</code>).</p>
 <p>Ha szeretnénk a táblázatnak címet adni, akkor ezt a <code>&lt;caption&gt;...&lt;/caption&gt;</code> taggel tehetjük meg. Ezt a taget mindig közvetlenül a <code>&lt;table&gt;</code> után kell írnunk.</p>
 <p><span class="example">Példa:</span> Egy egyszerű táblázat</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1219,10 +1196,10 @@
 32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>Kínálatunk<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">colgroup</span><span class="p">&gt;</span>
-    <span class="c">&lt;!-- az első oszlop világoskék háttérszínű lesz --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">col</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color: lightblue;&quot;</span><span class="p">/&gt;</span>
-    <span class="c">&lt;!-- a következő 2 oszlop világosszürke háttérszínt kap --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">col</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color: lightgray;&quot;</span> <span class="na">span</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">/&gt;</span>
+    <span class="c">&lt;!-- az első oszlop világospiros háttérszínű lesz --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">col</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color: salmon;&quot;</span><span class="p">/&gt;</span>
+    <span class="c">&lt;!-- a következő 2 oszlop világoszöld háttérszínt kap --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">col</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color: lightgreen;&quot;</span> <span class="na">span</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">/&gt;</span>
   <span class="p">&lt;/</span><span class="nt">colgroup</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
@@ -1678,11 +1655,10 @@
 </ul>
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
-<p>A háttér tulajdonságai összevonva is megadhatók a <code>background</code> CSS tulajdonsággal. Bővebben <a href="https://www.w3schools.com/cssref/css3_pr_background.asp">itt</a>.</p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Tipp</p>
-<p>A <code>linear-gradient()</code> és <code>radial-gradient()</code> segítségével színátmenetes háttereket is használhatunk. Bővebben <a href="https://www.w3schools.com/cssref/func_linear-gradient.asp">itt</a> és <a href="https://www.w3schools.com/cssref/func_radial-gradient.asp">itt</a>.</p>
+<ul>
+<li>A háttér tulajdonságai összevonva is megadhatók a <code>background</code> CSS tulajdonsággal. Bővebben <a href="https://www.w3schools.com/cssref/css3_pr_background.asp">itt</a>.</li>
+<li>A <code>linear-gradient()</code> és <code>radial-gradient()</code> függvények segítségével színátmenetes háttereket is használhatunk. Bővebb leírás <a href="https://www.w3schools.com/cssref/func_linear-gradient.asp">itt</a> és <a href="https://www.w3schools.com/cssref/func_radial-gradient.asp">itt</a>.</li>
+</ul>
 </div>
 <p><span class="example">Példa:</span> Teljes képernyős háttérkép</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1815,7 +1791,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2020-12-26 15:19:24
+      Utolsó frissítés: 2021-01-02 19:54:47
     
   </small>
 </div>

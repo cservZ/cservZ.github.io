@@ -939,7 +939,7 @@
       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
       <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
          <span class="nt">body</span> <span class="nt">p</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="kc">lightblue</span><span class="p">;</span> <span class="p">}</span>   <span class="c">/* világoskék háttér */</span>
-         <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>                  <span class="c">/* piros betűszín */</span>
+         <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">p</span> <span class="p">{</span> <span class="k">border</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">darkred</span><span class="p">;</span> <span class="p">}</span>   <span class="c">/* sötétvörös szegély */</span>
       <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -980,7 +980,7 @@
       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
       <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
          <span class="nt">p</span> <span class="o">~</span> <span class="nt">p</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="kc">lightblue</span><span class="p">;</span> <span class="p">}</span>   <span class="c">/* világoskék háttér */</span>
-         <span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>                   <span class="c">/* piros betűszín */</span>
+         <span class="nt">p</span> <span class="o">+</span> <span class="nt">p</span> <span class="p">{</span> <span class="k">border</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">darkred</span><span class="p">;</span> <span class="p">}</span>    <span class="c">/* sötétvörös szegély */</span>
       <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -1055,7 +1055,8 @@
 46
 47
 48
-49</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+49
+50</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1076,10 +1077,11 @@
             <span class="c">/* Minden olyan &lt;td&gt;, aki a &lt;td&gt; típusú testvérei közül az utolsó */</span>
             <span class="k">color</span><span class="p">:</span> <span class="kc">darkred</span><span class="p">;</span>
          <span class="p">}</span>
+
+         <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span> <span class="p">{</span> <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
       <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Kínálatunk<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
          <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Pizza neve<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -1332,9 +1334,7 @@
 40
 41
 42
-43
-44
-45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Táblázatok formázása<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1359,13 +1359,11 @@
             <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
          <span class="p">}</span>
 
-         <span class="nt">tr</span><span class="p">:</span><span class="nd">nth-of-type</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">{</span>   <span class="c">/* minden páros sorszámú sornak adunk háttérszínt */</span>
-            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#F2F2F2</span><span class="p">;</span>
-         <span class="p">}</span>
+         <span class="c">/* minden páros sornak adunk háttérszínt */</span>
+         <span class="nt">tr</span><span class="p">:</span><span class="nd">nth-of-type</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="mh">#F2F2F2</span><span class="p">;</span> <span class="p">}</span>
 
-         <span class="nt">tr</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="c">/* ha a kurzor egy sor fölött áll, megváltoztatjuk a sor színét */</span>
-            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E5E5E5</span><span class="p">;</span>
-         <span class="p">}</span>
+         <span class="c">/* ha a kurzor egy sor fölött áll, megváltoztatjuk a sor háttérszínét */</span>
+         <span class="nt">tr</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E5E5E5</span><span class="p">;</span> <span class="p">}</span>
       <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -1512,7 +1510,6 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-oroklodes.png" /></p>
 <h3 id="a-css-rangsor">A CSS rangsor<a class="headerlink" href="#a-css-rangsor" title="Permanent link">&para;</a></h3>
 <p>Felmerülhet a kérdés, hogy ha egy objektumra több, egymásnak ellentmondó CSS formázást adunk ki (pl. egy bekezdés színét kékre, majd később pirosra szeretnénk állítani), akkor ezek közül vajon melyik lesz érvényes.</p>
 <p>Pontosan erre ad választ a CSS <strong>rangsor</strong>, amely különböző prioritás értékeket rendel az egyes formázásokhoz, és ezek alapján dönti el, hogy végül mely formázás fog érvényesülni. A prioritások a következőképpen alakulnak (legerősebbtől a leggyengébbig):</p>
@@ -1632,7 +1629,6 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-position.png" /></p>
 <p>A fenti példa magyarázata:</p>
 <ul>
 <li>Az <code>absolute</code> módon pozicionált, "Első" feliratú elem az őt beágyazó nem <code>static</code> (hanem jelen esetben <code>relative</code>) helyzetű elem (ez most a <code>class="container"</code> attribútumú <code>&lt;div&gt;</code>) jobb felső sarkához igazodik.</li>
@@ -1694,7 +1690,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2020-12-27 09:26:40
+      Utolsó frissítés: 2021-01-02 19:54:47
     
   </small>
 </div>
