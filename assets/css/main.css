@@ -55,6 +55,10 @@ h3.heading {
 	color: red;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
 .btn {
 	width: 100%;
 	text-align: left;
@@ -128,6 +132,11 @@ h3.heading {
 	text-transform: uppercase;
 	margin-bottom: .6rem;
 	cursor: pointer;
+}
+
+.profile .misspell-stats {
+	text-shadow: .1rem .1rem .5rem #000;
+	padding-bottom: .8rem;
 }
 
 .profile .personal-info {

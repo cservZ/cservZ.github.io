@@ -1,171 +1,172 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<title>Cservenák Bence</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="./assets/img/icon.png">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="./assets/css/main.css">
-	<link rel="stylesheet" href="./assets/css/fixed.css">
+    <title>Cservenák Bence</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/img/icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/fixed.css">
 </head>
 <body data-target="#navbarResponsive">
     <!-- Start of Home Section -->
 
-	<div id="home">
-		<!-- Start of Navigation -->
+    <div id="home">
+        <!-- Start of Navigation -->
 
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-			<a href="#" class="navbar-brand js-scroll">
-				<h1>Cservenák Bence</h1>
-			</a>
-			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a href="#" class="navbar-brand js-scroll">
+                <h1>Cservenák Bence</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a href="#home" class="nav-link js-scroll">Főoldal</a>
-					</li>
-					<li class="nav-item">
-						<a href="#teaching" class="nav-link js-scroll">Oktatás</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link js-scroll">Főoldal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#teaching" class="nav-link js-scroll">Oktatás</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- End of Navigation -->
 
-		<!-- Start of Landing Area -->
+        <!-- Start of Landing Area -->
 
-		<div class="landing">
-			<div class="home-wrap">
-				<div class="home-inner"></div>
-			</div>
-		</div>
+        <div class="landing">
+            <div class="home-wrap">
+                <div class="home-inner"></div>
+            </div>
+        </div>
 
-		<div class="profile text-center">
-			<div class="name" title="Eddig csak 57 alkalommal írták el :)">Cservenák Bence</div>
+        <div class="profile text-center">
+            <div class="name"><span onmouseover="showStats()" onmouseleave="hideStats()">Cservenák</span> Bence</div>
+            <div class="misspell-stats hidden">(eddig összesen 63 alkalommal írták el)</div>
             <div class="personal-info studies">Programtervező informatikus BSc, 3. évfolyam</div>
             <div class="personal-info email">
                 <i class="fa fa-envelope fa-x"></i>
                 Cservenak.Bence@stud.u-szeged.hu
             </div>
-		</div>
+        </div>
 
         <!-- End of Landing Area -->
-	</div>
+    </div>
 
     <!-- End of Home Section -->
 
-	<!-- Teaching Section -->
+    <!-- Teaching Section -->
 
-	<div id="teaching">
-		<div class="jumbotron">
-			<div class="col-12 text-center">
-				<h3 class="heading">Oktatás</h3>
-				<div class="heading-underline"></div>
-    		</div>
+    <div id="teaching">
+        <div class="jumbotron">
+            <div class="col-12 text-center">
+                <h3 class="heading">Oktatás</h3>
+                <div class="heading-underline"></div>
+            </div>
 
             <div class="col-10" style="margin: auto">
                 <p>Kattints a kedvenc tárgyadra, és máris láthatod a hozzá tartozó anyagot!</p>
             </div>
 
-    		<div class="col-10 courses">
-    			<div id="accordion">
+            <div class="col-10 courses">
+                <div id="accordion">
                     <!-- Start of Operating Systems Course Section -->
 
-    				<div class="card">
-    					<div class="card-header" id="course-01">
-    						<h5 class="mb-0">
-    							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expand="true" aria-controls="collapseOne">
-    								Operációs rendszerek gyakorlat
-    							</button>
-    						</h5>
-    					</div>
+                    <div class="card">
+                        <div class="card-header" id="course-01">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">
+                                    Operációs rendszerek gyakorlat
+                                </button>
+                            </h5>
+                        </div>
 
-    					<div id="collapseOne" class="collapse" aria-labelledby="course-01" data-parent="#accordion">
-    						<div class="card-body">
-    							<p>A követelmények, valamint a gyakorlati anyag elérhető <a href="http://www.inf.u-szeged.hu/~leko/os2019202.html" target="_blank">Lékó Gábor honlapján</a>.</p>
-    							<p>Órai szkriptek:</p>
-    							<ul>
-    								<li>BASH: <a href="./teaching/os/B1.sh" target="_blank">B1</a>, <a href="./teaching/os/B2.sh" target="_blank">B2</a>, <a href="./teaching/os/B3.sh" target="_blank">B3</a></li>
-    								<li>AWK: A1, A2, A3</li>
-    							</ul>
-    							<p><a href="https://www.youtube.com/playlist?list=PLIS5LOjVe6zA9ih2xVXUJ8RORzz6k6fiY" target="_blank">2019/2020 távoktatás playlist</a></p>
-    						</div>
-    					</div>
-    				</div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="course-01" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>A követelmények, valamint a gyakorlati anyag elérhető <a href="http://www.inf.u-szeged.hu/~leko/os2019202.html" target="_blank">Lékó Gábor honlapján</a>.</p>
+                                <p>Órai szkriptek:</p>
+                                <ul>
+                                    <li>BASH: <a href="./teaching/os/B1.sh" target="_blank">B1</a>, <a href="./teaching/os/B2.sh" target="_blank">B2</a>, <a href="./teaching/os/B3.sh" target="_blank">B3</a></li>
+                                    <li>AWK: A1, A2, A3</li>
+                                </ul>
+                                <p><a href="https://www.youtube.com/playlist?list=PLIS5LOjVe6zA9ih2xVXUJ8RORzz6k6fiY" target="_blank">2019/2020 távoktatás playlist</a></p>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- End of Operating Systems Course Section -->
 
                     <!-- Start of Scripting Languages Course Section -->
 
-    				<div class="card">
-    					<div class="card-header" id="course-02">
-    						<h5 class="mb-0">
-    							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expand="true" aria-controls="collapseTwo">
-    								Szkriptnyelvek gyakorlat
-    							</button>
-    						</h5>
-    					</div>
+                    <div class="card">
+                        <div class="card-header" id="course-02">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-controls="collapseTwo">
+                                    Szkriptnyelvek gyakorlat
+                                </button>
+                            </h5>
+                        </div>
 
-    					<div id="collapseTwo" class="collapse" aria-labelledby="course-02" data-parent="#accordion">
-    						<div class="card-body">
-    							<h5>Követelmények (röviden)</h5>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="course-02" data-parent="#accordion">
+                            <div class="card-body">
+                                <h5>Követelmények (röviden)</h5>
 
-    							<p class="red">A részletes követelmények és tematika elérhető a gyakorlat CooSpace színterén.</p>
+                                <p class="red">A részletes követelmények és tematika elérhető a gyakorlat CooSpace színterén.</p>
 
-    							<ul>
-    								<li>A <b>gyakorlat látogatása kötelező</b>, kettőnél több hiányzás esetén a kurzus nem teljesített</li>
-    								<li>Tematika: Python és JavaScript nyelvek alapjai</li>
-    								<li>
-    									Számonkérések:
-    									<ul>
-    										<li>
-    											<b>Python ZH (50 pont)</b>
-    											<ul>
-    												<li>október 19. hét, a saját gyakorlat helyén és időpontjában</li>
-    												<li>teljesítendő <span class="bold red">legalább 25 pont(!)</span></li>
-    											</ul>
-    										</li>
-    										<li>
-    											<b>JavaScript ZH (50 pont)</b>
-    											<ul>
-    												<li>november 30. hét, saját gyakorlat helyén és időpontjában</li>
-    												<li>teljesítendő <span class="bold red">legalább 25 pont(!)</span></li>
-    											</ul>
-    										</li>
-    									</ul>
-									</li>
-									<li>
-										Kötelezően elkészítendő <b>heti feladatok</b> a <a href="https://biro2.inf.u-szeged.hu/">BÍRÓ2</a>-ben
-										<ul>
-											<li>Minden feladatra el kell érni <b>legalább 1 pontot</b></li>
-											<li>2 alkalommal lehet nem teljeseíteni a minimum követelményt</li>
-											<li>A BÍRÓ-s feladatok nem pótolhatók</li>
-										</ul>
-									</li>
-    								<li>A félév során <b>legfeljebb 10 plusz pont</b> szerezhető (elégséges érdemjegy elérése után...)</li>
-    								<li>Javító ZH a szorgalmi időszak utolsó hetén az elégséges érdemjegyért</li>
-    								<li>
-    									Ponthatárok:
-    									<ul style="list-style-type: none">
-    										<li>89 - 100 pont: Jeles (5)</li>
-    										<li>76 - &nbsp;&nbsp;88 pont: Jó (4)</li>
-    										<li>63 - &nbsp;&nbsp;75 pont: Közepes (3)</li>
-    										<li>50 - &nbsp;&nbsp;62 pont: Elégséges (2)</li>
-    										<li> &nbsp;&nbsp;0 - &nbsp;&nbsp;49 pont: Elégtelen (1)</li>
-    									</ul>
-    								</li>
-    							</ul>
+                                <ul>
+                                    <li>A <b>gyakorlat látogatása kötelező</b>, kettőnél több hiányzás esetén a kurzus nem teljesített</li>
+                                    <li>Tematika: Python és JavaScript nyelvek alapjai</li>
+                                    <li>
+                                        Számonkérések:
+                                        <ul>
+                                            <li>
+                                                <b>Python ZH (50 pont)</b>
+                                                <ul>
+                                                    <li>október 19. hét, a saját gyakorlat helyén és időpontjában</li>
+                                                    <li>teljesítendő <span class="bold red">legalább 25 pont(!)</span></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <b>JavaScript ZH (50 pont)</b>
+                                                <ul>
+                                                    <li>november 30. hét, saját gyakorlat helyén és időpontjában</li>
+                                                    <li>teljesítendő <span class="bold red">legalább 25 pont(!)</span></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Kötelezően elkészítendő <b>heti feladatok</b> a <a href="https://biro2.inf.u-szeged.hu/">BÍRÓ2</a>-ben
+                                        <ul>
+                                            <li>Minden feladatra el kell érni <b>legalább 1 pontot</b></li>
+                                            <li>2 alkalommal lehet nem teljeseíteni a minimum követelményt</li>
+                                            <li>A BÍRÓ-s feladatok nem pótolhatók</li>
+                                        </ul>
+                                    </li>
+                                    <li>A félév során <b>legfeljebb 10 plusz pont</b> szerezhető (elégséges érdemjegy elérése után...)</li>
+                                    <li>Javító ZH a szorgalmi időszak utolsó hetén az elégséges érdemjegyért</li>
+                                    <li>
+                                        Ponthatárok:
+                                        <ul style="list-style-type: none">
+                                            <li>89 - 100 pont: Jeles (5)</li>
+                                            <li>76 - &nbsp;&nbsp;88 pont: Jó (4)</li>
+                                            <li>63 - &nbsp;&nbsp;75 pont: Közepes (3)</li>
+                                            <li>50 - &nbsp;&nbsp;62 pont: Elégséges (2)</li>
+                                            <li> &nbsp;&nbsp;0 - &nbsp;&nbsp;49 pont: Elégtelen (1)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
 
-    							<hr>
-    							<h5>Gyakorlati anyag</h5>
+                                <hr>
+                                <h5>Gyakorlati anyag</h5>
 
-    							<p>A gyakorlati anyag elérhető <a href="https://okt.sed.hu/szkriptnyelvek/" target="_blank">ezen a linken</a>.</p>
+                                <p>A gyakorlati anyag elérhető <a href="https://okt.sed.hu/szkriptnyelvek/" target="_blank">ezen a linken</a>.</p>
                                 <p><a href="https://www.youtube.com/channel/UCYzRAs55YzQTEvQDJg6yDaQ" target="_blank">Keleti Márton YouTube csatornája (heti videós anyagok)</a></p>
 
 
@@ -182,148 +183,76 @@
                                     <li><a href="./teaching/szkriptnyelvek/feladatsorok/07">7. feladatsor</a> (A JavaScript fontosabb adatszerkezetei)</li>
                                     <li><a href="./teaching/szkriptnyelvek/feladatsorok/08">8. feladatsor</a> (JavaScript - Objektumorientáltság)</li>
                                 </ul>
-    						</div>
-    					</div>
-    				</div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- End of Scripting Languages Course Section -->
 
                     <!-- Start of Web Planning Course Section -->
 
-    				<div class="card">
-    					<div class="card-header" id="course-03">
-    						<h5 class="mb-0">
-    							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expand="true" aria-controls="collapseThree">
-    								Webtervezés gyakorlat
-    							</button>
-    						</h5>
-    					</div>
+                    <div class="card">
+                        <div class="card-header" id="course-03">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-controls="collapseThree">
+                                    Webtervezés gyakorlat
+                                </button>
+                            </h5>
+                        </div>
 
-    					<div id="collapseThree" class="collapse" aria-labelledby="course-03" data-parent="#accordion">
-    						<div class="card-body">
-    							<h5>Követelmények (röviden)</h5>
+                        <div id="collapseThree" class="collapse" aria-labelledby="course-03" data-parent="#accordion">
+                            <div class="card-body">
+                                <h5>Követelmények (röviden)</h5>
 
                                 <p class="red">A részletes követelmények és tematika elérhető a gyakorlat CooSpace színterén.</p>
-
-                                <ul>
-                                    <li>A gyakorlatok látogatása nem kötelező, viszont a gyakorlaton elhangzottakkal tisztában kell lenni</li>
-                                    <li>Tematika: HTML, CSS és PHP nyelvek alapjai</li>
-                                    <li>
-                                        Részteljesítések, pontszerzési lehetőségek:
-                                        <ul>
-                                            <li>
-                                                <b>Két mérföldkőből álló projektmunka (90 pont)</b>
-                                                <ul>
-                                                    <li><b>1. mérföldkő:</b> a feladat egy tetszőleges témájú webes projekt elkészítése HTML és CSS használatával <b>április 5. 23:55 óra</b> határidőre (45 pont)</li>
-                                                    <li><b>2. mérföldkő:</b> a feladat az 1. mérföldkő során elkészült weboldal kiegészítése PHP-val <b>április 26. 23:55 óra</b> határidőre (45 pont)</li>
-                                                    <li><span class="red">A két mérföldkőre összesen <b>legalább 45 pontot</b> kell elérni hallgatóként a kurzus teljesítéséhez!</span></li>
-                                                    <li>A projektet 2 fős (kivételes esetben 1 fős) csapatokban kell elkészíteni</li>
-                                                    <li>Mindkét mérföldkő esetén egyszeres javítási lehetőség biztosított (teljes pontszámért)</li>
-                                                    <li>A projekt témája tetszőleges, a pontozás a lentebb megtalálható követelmények alapján történik</li>
-                                                    <li>Követelmények kihirdetése, projektmunka beadása és értékelése a CooSpace rendszerén keresztül történik</li>
-                                                    <li>A félév végén a <b>projektet kötelező jelleggel meg is kell védeni</b></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <b>CooSpace-es tesztek (10 pont)</b>
-                                                <ul>
-                                                    <li>A félévben összesen <b>9 darab</b> otthon kitölthető <b>teszt</b> lesz publikálva CooSpace-en</li>
-                                                    <li>A kitöltési határidő minden héten: csütörtök 00:05 - vasárnap 23:55</li>
-                                                    <li>2 kitöltési lehetőség, az utolsó kitöltés eredménye számít</li>
-                                                    <li>Összpontszám megállapítása: <i>FelfeléKerekít(tesztek össz. százaléka / 90)</i></li>
-                                                    <li>A elmulasztott tesztek pótlására nincs lehetőség</li>
-                                                </ul>
-                                            </li>
-                                            <li>Órai aktivitásra, szorgalmi feladatok megoldására <b>legfeljebb 10 plusz pont</b> kapható</li>
-                                            <li>
-                                                Ponthatárok:
-                                                <ul>
-                                                    <li>90 - 110 pont: Jeles (5)</li>
-                                                    <li>80 - &nbsp;&nbsp;89 pont: Jó (4)</li>
-                                                    <li>65 - &nbsp;&nbsp;79 pont: Közepes (3)</li>
-                                                    <li>50 - &nbsp;&nbsp;64 pont: Elégséges (2)</li>
-                                                    <li>&nbsp;&nbsp;0 - &nbsp;&nbsp;49 pont: Elégtelen (1)</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <p>Meg persze majd ide is felkerül valami vázlatos leírás...</p>
 
                                 <hr>
                                 <h5>Projektmunka követelmények</h5>
+                                <p>In progress...</p>
 
-                                <ul>
-                                    <li>
-                                        1. mérföldkő:
-                                        <ul>
-                                            <li><a href="./teaching/webterv/projekt_M1_2fo.html" target="_blank">2 fős projekt</a></li>
-                                            <li><a href="./teaching/webterv/projekt_M1_1fo.html" target="_blank">1 fős projekt (csak kivételes esetben)</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        2. mérföldkő:
-                                        <ul>
-                                            <li><a href="./teaching/webterv/projekt_M2_2fo.html" target="_blank">2 fős projekt</a></li>
-                                            <li><a href="./teaching/webterv/projekt_M2_1fo.html" target="_blank">1 fős projekt (csak kivételes esetben)</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
-                                <p>Egy kis segítség: <a href="./teaching/webterv/gyakori_hibak.pdf" target="_blank">Gyakori hibák és javításuk az 1. mérföldkőben</a></p>
+                                <p>Egy kis segítség tavalyról: <a href="./teaching/webterv/gyakori_hibak.pdf" target="_blank">Gyakori hibák és javításuk az 1. mérföldkőben</a></p>
 
                                 <hr>
                                 <h5>Gyakorlati anyag</h5>
-
-                                <ul>
-                                    <li>1. gyakorlat: Követelmények, HTML alapok I. (<a href="./teaching/webterv/gyak01.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>2. gyakorlat: HTML alapok II., a CSS alapjai (<a href="./teaching/webterv/gyak02.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>3. gyakorlat: HTML5 szemantikus tagek, CSS kijelölők, pozícionálás, formázás (<a href="./teaching/webterv/gyak03.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>4. gyakorlat: A HTML5 űrlapok (<a href="./teaching/webterv/gyak04.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>5. gyakorlat: A HTML és CSS további lehetőségei (<a href="./teaching/webterv/gyak05.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>6. gyakorlat: Szerveroldali webprogramozás, PHP (<a href="./teaching/webterv/gyak06.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>7. gyakorlat: A PHP nyelvi alapjai (<a href="./teaching/webterv/gyak07.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>8. gyakorlat: Űrlapfeldolgozás PHP-ban (<a href="./teaching/webterv/gyak08.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>9. gyakorlat: PHP - Fájlkezelés, menetkövetés (<a href="./teaching/webterv/gyak09.pdf" target="_blank">jegyzet</a>)</li>
-                                    <li>10. gyakorlat: PHP - Sütik, fájlkezelés, objektumorientáltság (<a href="./teaching/webterv/gyak10.pdf" target="_blank">jegyzet</a>)</li>
-                                </ul>
-    						</div>
-    					</div>
-    				</div>
+                                <p><a href="./teaching/webterv/jegyzet">Online gyakorlati jegyzet</a></p>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- End of Web Planning Course Section -->
-    			</div>
-    		</div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<!-- Start of Footer -->
+    <!-- Start of Footer -->
 
-	<div id="footer">
-		<footer>
-			<div class="row justify-content-center">
-				<p>&copy; <span id="current-year"></span>, Cservenák Bence</p>
-			</div>
-		</footer>
-	</div>
+    <div id="footer">
+        <footer>
+            <div class="row justify-content-center">
+                <p>&copy; <span id="current-year"></span>, Cservenák Bence</p>
+            </div>
+        </footer>
+    </div>
 
     <!-- End of Footer -->
 
-	<!-- Scripts -->
+    <!-- Scripts -->
 
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-	<script src="./scripts/jquery.easing.min.js"></script>
-	<script src="./scripts/main.js"></script>
-
-	<script>
-		const currentYearSpan = document.getElementById("current-year");
-		const currentYearText = document.createTextNode(new Date().getFullYear());
-		currentYearSpan.appendChild(currentYearText);
-	</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="./scripts/jquery.easing.min.js"></script>
+    <script src="./scripts/main.js"></script>
 
     <script>
-        $(document).tooltip();
+        const showStats = () => document.getElementsByClassName("misspell-stats")[0].classList.remove("hidden");
+        const hideStats = () => document.getElementsByClassName("misspell-stats")[0].classList.add("hidden");
+
+        const currentYearSpan = document.getElementById("current-year");
+        const currentYearText = document.createTextNode(new Date().getFullYear());
+        currentYearSpan.appendChild(currentYearText);
     </script>
 </body>
 </html>
