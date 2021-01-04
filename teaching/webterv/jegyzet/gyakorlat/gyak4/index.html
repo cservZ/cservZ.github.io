@@ -341,8 +341,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#motivacio-az-urlapok-szerepe" class="md-nav__link">
-    Motiváció: az űrlapok szerepe
+  <a href="#az-urlapok-szerepe" class="md-nav__link">
+    Az űrlapok szerepe
   </a>
   
 </li>
@@ -397,8 +397,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lenyilo-lista" class="md-nav__link">
-    Lenyíló lista
+  <a href="#valasztolista" class="md-nav__link">
+    Választólista
   </a>
   
 </li>
@@ -583,8 +583,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#motivacio-az-urlapok-szerepe" class="md-nav__link">
-    Motiváció: az űrlapok szerepe
+  <a href="#az-urlapok-szerepe" class="md-nav__link">
+    Az űrlapok szerepe
   </a>
   
 </li>
@@ -639,8 +639,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lenyilo-lista" class="md-nav__link">
-    Lenyíló lista
+  <a href="#valasztolista" class="md-nav__link">
+    Választólista
   </a>
   
 </li>
@@ -701,39 +701,42 @@
                 
                 <h1 id="4-gyakorlat">4. gyakorlat<a class="headerlink" href="#4-gyakorlat" title="Permanent link">&para;</a></h1>
 <h2 id="a-gyakorlat-anyaga">A gyakorlat anyaga<a class="headerlink" href="#a-gyakorlat-anyaga" title="Permanent link">&para;</a></h2>
-<p>HTML5 űrlapok létrehozása, formázása, fontosabb űrlapelemek.</p>
-<h3 id="motivacio-az-urlapok-szerepe">Motiváció: az űrlapok szerepe<a class="headerlink" href="#motivacio-az-urlapok-szerepe" title="Permanent link">&para;</a></h3>
-<p>Az eddigiek során főként a weboldalak megjelenésén volt a hangsúly: HTML-ben különféle elemeket helyeztünk el a weboldalon, majd CSS formázásokkal láttuk el őket.</p>
-<p>A <strong>HTML űrlapok</strong> lehetőséget biztosítanak arra, hogy a weboldalunk felhasználói bemenetet is tudjon fogadni, amit később feldolgozunk. Az űrlapok a modern weboldalak szerves részei, szinte nap mint nap találkozunk velük webes kalandozásaink során: például ha be akarunk lépni a kedvenc közösségi oldalunkra, akkor az alábbihoz hasonló bejelentkezési űrlapon adjuk meg a megfelelő felhasználónév-jelszó párost, amivel regisztráltunk.</p>
-<p><img alt="Bejelentkezési űrlap" src="../img/gyak04/simple-login-form.png" /></p>
-<p>Ebben a leckében megtanulunk a HTML űrlapokat készíteni. Később, a PHP témakörében még visszatérünk az űrlapokra, és megnézzük, hogy hogyan lehet a felhasználó által megadott űrlapadatokat szerveroldalon feldolgozni.</p>
+<p>HTML5 űrlapok létrehozása és formázása, néhány fontosabb űrlapelem megismerése.</p>
+<h3 id="az-urlapok-szerepe">Az űrlapok szerepe<a class="headerlink" href="#az-urlapok-szerepe" title="Permanent link">&para;</a></h3>
+<p>Az eddigiek során főként a weboldalak megjelenésén volt a hangsúly: különféle elemeket helyeztünk el a weboldalon HTML-ben, majd CSS-ben formázásokkal láttuk el őket.</p>
+<p>A <strong>HTML űrlapok</strong> lehetőséget biztosítanak arra, hogy a weboldalaink felhasználói bemenetet is tudjanak fogadni, amit később fel tudunk dolgozni. Az űrlapok a modern weboldalak szerves részei, nap mint nap találkozunk velük webes kalandozásaink során: például ha be szeretnénk lépni a kedvenc közösségi oldalunkra, akkor egy - az alábbihoz hasonló - bejelentkezési űrlapon adjuk meg a belépéshez szükséges adatainkat.</p>
+<p><img alt="Egy bejelentkezési űrlap" src="../img/gyak04/simple-login-form.png" /></p>
+<p>Ennek a leckének a célja, hogy megtanuljunk HTML űrlapokat készíteni. Természetesen a gyakorlatban fel is szoktuk dolgozni a felhasználó által megadott űrlapadatokat, viszont az űrlapok feldolgozásával majd csak a PHP témakörében fogunk foglalkozni.</p>
 <h3 id="urlapok-letrehozasa">Űrlapok létrehozása<a class="headerlink" href="#urlapok-letrehozasa" title="Permanent link">&para;</a></h3>
-<p>HTML-ben a <code>&lt;form&gt;...&lt;/form&gt;</code> tagpárral hozhatunk létre űrlapokat. Természetesen az űrlapok (mint minden megjelenítendő elem a weboldalon) a HTML dokumentum törzsrészébe (<code>body</code>) kerülnek.</p>
+<p>HTML-ben a <code>&lt;form&gt;...&lt;/form&gt;</code> tagpárral hozhatunk létre űrlapokat. Természetesen az űrlapok - mint minden megjelenítendő elem a weboldalon - a HTML dokumentum törzsrészébe (<code>body</code>) kerülnek.</p>
 <p>A <code>&lt;form&gt;</code> tagnek adható fontosabb attribútumok:</p>
 <ul>
 <li><code>action</code>: az űrlap elküldésekor végrehajtandó feladat (jellemzően egy PHP szkript)</li>
 <li><code>method</code>: az űrlapadatok továbbításának módja<ul>
-<li>lehetséges értékek: <code>GET</code> (az űrlapadatok az URL-ben kerülnek továbbításra, alapértelmezett), <code>POST</code> (az űrlapadatok a háttérben továbbítódnak)</li>
+<li>lehetséges értékei: <code>GET</code> (az űrlapadatok az URL-ben kerülnek továbbításra, alapértelmezett), <code>POST</code> (az űrlapadatok a háttérben továbbítódnak)</li>
 </ul>
 </li>
-<li><code>enctype</code>: űrlapadatok kódolása</li>
-<li><code>autocomplete</code>: automatikus kitöltési javaslatok engedélyezése vagy tiltása<ul>
-<li>lehetséges értékek: <code>on</code> (kitöltési javaslatok engedélyezés), <code>off</code> (kitöltési javaslatok letiltása)</li>
+<li><code>enctype</code>: az űrlapadatok kódolása<ul>
+<li>lehetséges értékei: <code>application/x-www-form-urlencoded</code> (alapértelmezett), <code>multipart/form-data</code> (fájlfeltöltést tartalmazó űrlapoknál ezt kell használnunk), <code>text/plain</code></li>
+</ul>
+</li>
+<li><code>autocomplete</code>: automatikus kitöltési javaslatok engedélyezése vagy letiltása<ul>
+<li>lehetséges értékei: <code>on</code> (kitöltési javaslatok engedélyezése), <code>off</code> (kitöltési javaslatok letiltása)</li>
 </ul>
 </li>
 <li><code>novalidate</code>: letiltja az űrlap elküldésekor végrehajtandó ellenőrzéseket.</li>
 </ul>
-<p>Kiemelten fontos megjegyezni, hogy mivel a <code>method="GET"</code> attribútummal rendelkező űrlapok adatai az URL-ben lesznek továbbítva, ezért ez a módszer <strong>NEM</strong> alkalmas bizalmas adatok (pl. jelszavak) biztonságos továbbítására (örülne-e valaki annak, ha a jelszavát bárki láthatná az URL sávban)! <span class="red"><strong>Ha egy űrlapon bizalmas adatokat (pl. jelszavakat) szeretnénk továbbítani, akkor mindenképpen a <code>method="POST"</code> attribútumot használjuk!</strong></span></p>
+<p>Kiemelten fontos megjegyezni, hogy mivel a <code>method="GET"</code> attribútummal rendelkező űrlapok adatai az URL-ben lesznek továbbítva, ezért ez a módszer <strong>NEM</strong> alkalmas bizalmas adatok (pl. jelszavak) biztonságos továbbítására (vélhetően senki nem örülne annak, ha a jelszavát bárki láthatná az URL sávban)! <span class="red"><strong>Ha egy űrlapon bizalmas adatokat (pl. jelszavakat) szeretnénk továbbítani, akkor mindenképpen a <code>method="POST"</code> attribútumot használjuk!</strong></span></p>
 <h3 id="fontosabb-urlapelemek">Fontosabb űrlapelemek<a class="headerlink" href="#fontosabb-urlapelemek" title="Permanent link">&para;</a></h3>
-<p>Ebben a fejezetben megismerkedünk néhány olyan fontosabb vezérlőelemmel, amelyeket gyakran szoktunk HTML űrlapokon használni.</p>
+<p>Ebben a fejezetben megismerkedünk néhány fontosabb vezérlőelemmel, amelyeket gyakran szoktunk HTML űrlapokon használni.</p>
 <h4 id="egysoros-beviteli-mezo">Egysoros beviteli mező<a class="headerlink" href="#egysoros-beviteli-mezo" title="Permanent link">&para;</a></h4>
-<p>A HTML űrlapokon leggyakrabban az <code>&lt;input/&gt;</code> páratlan taget szoktuk használni. Ez rengeteg különféle űrlapelem (pl. szöveges beviteli mező, jelölőnégyzet, választógomb, elküldés gomb) létrehozására alkalmas.</p>
+<p>A HTML űrlapokon leggyakrabban az <code>&lt;input/&gt;</code> páratlan taget használjuk. Ez számos különféle űrlapelem (pl. szöveges beviteli mező, választógomb, jelölőnégyzet, elküldés gomb) létrehozására alkalmas.</p>
 <h5 id="globalis-attributumok">Globális attribútumok<a class="headerlink" href="#globalis-attributumok" title="Permanent link">&para;</a></h5>
-<p>Még mielőtt áttekintenénk a fontosabb beviteli mező típusokat, először nézzük meg, hogy milyen attribútumokat adhatunk az <code>&lt;input&gt;</code> tagnek:</p>
+<p>Még mielőtt áttekintenénk a különféle beviteli mező típusokat, először ismerkedjünk meg az <code>&lt;input&gt;</code> tagnek adható fontosabb attribútumokkal:</p>
 <ul>
-<li><code>name</code>: mezőnév, ami alapján le tudjuk majd kérni a beviteli mezőbe írt értéket</li>
-<li><code>size</code>: a beviteli mező szélessége (karakterekben)<ul>
-<li>tehát nem a beírható karakterek számát korlátozza, hanem csak a megjelenő űrlapmező szélességét</li>
+<li><code>name</code>: mezőnév, ami alapján le tudjuk kérni a beviteli mezőbe írt értéket</li>
+<li><code>size</code>: a beviteli mező szélessége (karakterben)<ul>
+<li>tehát nem a beírható karakterek számát korlátozza, hanem csak a megjelenő űrlapmező szélességét (vesd össze: <code>maxlength</code>)</li>
 </ul>
 </li>
 <li><code>maxlength</code>: a beírható karakterek maximális száma</li>
@@ -742,14 +745,16 @@
 <li><code>autocomplete</code>: ugyanúgy működik, mint a <code>&lt;form&gt;</code>-nál (<code>on</code>/<code>off</code> értékek)</li>
 <li><code>required</code>: a mezőt kötelező kitölteni</li>
 <li><code>readonly</code>: a mező csak olvasható, nem módosítható</li>
-<li><code>disabled</code>: mező letiltása (halvány, nem lehet bele értéket írni).</li>
+<li><code>disabled</code>: a mező letiltása (halványan jelenik meg, nem lehet bele írni)</li>
+<li><code>type</code>: az űrlapmező típusa.</li>
 </ul>
 <h5 id="fontosabb-beviteli-mezo-tipusok">Fontosabb beviteli mező típusok<a class="headerlink" href="#fontosabb-beviteli-mezo-tipusok" title="Permanent link">&para;</a></h5>
-<p>Az <code>&lt;input&gt;</code> tag <code>type</code> attribútumával megadhatjuk a beviteli mező típusát. Néhány, számunkra fontosabb mezőtípus:</p>
+<p>Az <code>&lt;input&gt;</code> tag <code>type</code> attribútumával megadhatjuk a beviteli mező típusát. Néhány, számunkra érdekesebb mezőtípus, amik közül válogathatunk:</p>
 <ul>
 <li><code>&lt;input type="text"/&gt;</code>: rövid szöveg</li>
 <li><code>&lt;input type="password"/&gt;</code>: jelszó<ul>
 <li>a beírt karakterek helyett pontok vagy csillagok jelennek meg</li>
+<li>a jelszavak szerverre való továbbításánál nincs titkosítás(!)</li>
 </ul>
 </li>
 <li><code>&lt;input type="number"/&gt;</code>: szám</li>
@@ -764,8 +769,8 @@
 <li><code>&lt;input type="url"/&gt;</code>: URL (ellenőrzi a formátumát)</li>
 <li><code>&lt;input type="color"/&gt;</code>: szín</li>
 <li><code>&lt;input type="date"/&gt;</code>: dátum<ul>
-<li>a <code>min</code> és <code>max</code> attribútumokkal megadhatjuk a legkisebb és legnagyobb kiválasztható értéket</li>
-<li>a dátum megadása <code>ÉÉÉÉ-HH-NN</code> formátumban történik</li>
+<li>a <code>min</code> és <code>max</code> attribútummal megadhatjuk a legkisebb és legnagyobb kiválasztható értéket</li>
+<li>a dátumok megadása <code>ÉÉÉÉ-HH-NN</code> formátumban történik</li>
 </ul>
 </li>
 <li><code>&lt;input type="time"/&gt;</code>: időpont</li>
@@ -784,7 +789,7 @@
 </ul>
 </li>
 <li><code>&lt;input type="button"/&gt;</code>: egyszerű nyomógomb</li>
-<li><code>&lt;input type="submit"/&gt;</code>: elküldés gomb</li>
+<li><code>&lt;input type="submit"/&gt;</code>: elküldés gomb (ha rákattintunk, elküldi az űrlapadatokat)</li>
 <li><code>&lt;input type="reset"/&gt;</code>: visszaállítja az űrlapmezők eredeti értékeit</li>
 <li><code>&lt;input type="hidden"/&gt;</code>: rejtett mező (technikai célokra).</li>
 </ul>
@@ -822,8 +827,8 @@
 </td></tr></table>
 
 <h4 id="tobb-soros-beviteli-mezo">Több soros beviteli mező<a class="headerlink" href="#tobb-soros-beviteli-mezo" title="Permanent link">&para;</a></h4>
-<p>A <code>&lt;textarea&gt;...&lt;/textarea&gt;</code> tag segítségével több soros szöveg bevitelére alkalmas űrlapmezőt hozhatunk létre. Az ilyen beviteli mezőket gyakran használjuk például felhasználó visszajelzések, kommentek bekérésére.</p>
-<p>Erre a tagnek is használhatók a korábban tárgyalt <code>name</code>, <code>placeholder</code>, <code>maxlength</code>, <code>required</code>, <code>readonly</code> és <code>disabled</code> attribútumok. Ezek mellett a <code>rows</code> attribútummal megadhatjuk a látható sorok számát, a <code>cols</code> attribútummal pedig a látható oszlopok számát.</p>
+<p>A <code>&lt;textarea&gt;...&lt;/textarea&gt;</code> tag segítségével több soros szöveg bevitelére alkalmas űrlapmezőt hozhatunk létre. Az ilyen beviteli mezőket gyakran használjuk például felhasználói visszajelzések, kommentek bekérésére.</p>
+<p>Ennél a tagnél is használhatók a korábban tárgyalt <code>name</code>, <code>placeholder</code>, <code>maxlength</code>, <code>required</code>, <code>readonly</code> és <code>disabled</code> attribútumok. Ezek mellett a <code>rows</code> attribútummal megadhatjuk a megjelenő sorok számát, a <code>cols</code> attribútummal pedig az oszlopok számát.</p>
 <p><span class="example">Példa:</span> Felhasználói visszajelzés bekérése</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -856,16 +861,16 @@
 </td></tr></table>
 
 <p><img alt="A kód kimenete" src="../img/gyak04/textarea-example.png" /></p>
-<h4 id="lenyilo-lista">Lenyíló lista<a class="headerlink" href="#lenyilo-lista" title="Permanent link">&para;</a></h4>
-<p>A <code>&lt;select&gt;...&lt;/select&gt;</code> tagpárral egy lenyíló listát hozhatunk létre egy űrlapon belül, amelynek segítségével különböző opciók közül választhat a felhasználó. A korábban tárgyalt <code>name</code>, <code>required</code> és <code>disabled</code> attribútumokat erre az űrlapelemre is alkalmazhatjuk.</p>
-<p>A lenyíló listához tartozó opciókat az <code>&lt;option&gt;...&lt;/option&gt;</code> taggel adhatjuk meg. A tag fontosabb attribútumai:</p>
+<h4 id="valasztolista">Választólista<a class="headerlink" href="#valasztolista" title="Permanent link">&para;</a></h4>
+<p>A <code>&lt;select&gt;...&lt;/select&gt;</code> tagpárral egy lenyitható választólistát hozhatunk létre egy űrlapon belül, amelynek segítségével különböző opciók közül választhat a felhasználó. A korábban tárgyalt <code>name</code>, <code>required</code> és <code>disabled</code> attribútumokat erre az űrlapelemre is alkalmazhatjuk.</p>
+<p>A választólistához tartozó opciókat az <code>&lt;option&gt;...&lt;/option&gt;</code> taggel adhatjuk meg. A tag fontosabb attribútumai:</p>
 <ul>
 <li><code>value</code>: az űrlap feldolgozásakor a szervernek elküldött érték</li>
 <li><code>selected</code>: az opció alapból ki van választva a lap betöltésekor</li>
 <li><code>disabled</code>: az opciót nem lehet kiválasztani.</li>
 </ul>
-<p>Alapértelmezett módon egy lenyíló listában mindig csak egy opciót tud kiválasztani a felhasználó. Ha engedélyezni szeretnénk több opció kiválasztását, akkor ezt a <code>&lt;select&gt;</code> tagnek adott <code>multiple</code> attribútummal tehetjük meg.</p>
-<p><span class="example">Példa:</span> Egy egyszerű lenyíló lista</p>
+<p>Alapértelmezett módon egy választólistában mindig csak egy opciót tud kiválasztani a felhasználó. Ha engedélyezni szeretnénk több opció kiválasztását, akkor ezt a <code>&lt;select&gt;</code> tagnek adott <code>multiple</code> attribútummal tehetjük meg.</p>
+<p><span class="example">Példa:</span> Egy egyszerű választólista</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -964,7 +969,7 @@
 </td></tr></table>
 
 <h4 id="mezocsoportositas">Mezőcsoportosítás<a class="headerlink" href="#mezocsoportositas" title="Permanent link">&para;</a></h4>
-<p>Az űrlapok elkészítésekor érdemes lehet az űrlapelemeket strukturálni, az azonos témához tartozó űrlapmezők csoportosítani. Az ilyen mezőcsoportosítások kialakítását a <code>&lt;fieldset&gt;...&lt;/fieldset&gt;</code> tagpárral adhatjuk meg.</p>
+<p>Az űrlapok elkészítésekor érdemes lehet az űrlapelemeket strukturálni, az azonos témához tartozó űrlapmezőket csoportosítani. Az ilyen mezőcsoportosítások kialakítását a <code>&lt;fieldset&gt;...&lt;/fieldset&gt;</code> tagpárral végezhetjük.</p>
 <p>A <code>&lt;legend&gt;...&lt;/legend&gt;</code> taggel megadhatjuk egy mezőcsoportosítás feliratát.</p>
 <p><span class="example">Példa:</span> Mezőcsoportosítás használata</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1015,13 +1020,13 @@
 <h3 id="urlapok-formazasa">Űrlapok formázása<a class="headerlink" href="#urlapok-formazasa" title="Permanent link">&para;</a></h3>
 <p>Mint minden HTML elemet, az űrlapelemeket is lehetőségünk van CSS formázásokkal ellátni. A böngészők sok tulajdonságnak adnak alapértéket, ezért alaposnak kell lennünk, ha egy űrlapot szeretnénk testre szabni. Az űrlapok formázására használhatjuk a korábbi leckékben megismert valamennyi CSS tulajdonságot.</p>
 <p>A formázandó űrlapelemek kijelölésekor gyakran előkerül a múlt órán tanult attribútum alapján történő kijelölés. Például ha ki szeretnénk jelölni az összes <code>&lt;input type="text"/&gt;</code> űrlapelemet, akkor ezt az <code>input[type="text"]</code> CSS szelektorral tudjuk megtenni.</p>
-<p>Az űrlapok esetén egy-egy űrlapelem csoport kijelölésére használhatunk különféle pseudo-class-okat is:</p>
+<p>Az űrlapok esetén egy-egy űrlapelem-csoport kijelölésére használhatunk különféle pseudo-class-okat is:</p>
 <ul>
 <li><code>:required</code>: kijelöli a <code>required</code> attribútummal rendelkező elemeket</li>
 <li><code>:optional</code>: kijelöli a <code>required</code> attribútummal nem rendelkező elemeket</li>
 <li><code>:focus</code>: kijelöli a fókuszban lévő elemet</li>
 <li><code>:checked</code>: kijelöli a bejelölt radio, checkbox és option elemeket</li>
-<li><code>:disabled</code>: kijelöli a <code>disabled</code> attribútummal rendelkező (letiltot) elemeket</li>
+<li><code>:disabled</code>: kijelöli a <code>disabled</code> attribútummal rendelkező (letiltott) elemeket</li>
 <li><code>:enabled</code>: kijelöli a <code>disabled</code> attribútummal nem rendelkező (engedélyezett) elemeket.</li>
 </ul>
 <h3 id="egy-teljes-pelda">Egy teljes példa<a class="headerlink" href="#egy-teljes-pelda" title="Permanent link">&para;</a></h3>
@@ -1126,10 +1131,10 @@
 
         <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;education&quot;</span><span class="p">&gt;</span>Legmagasabb iskolai végzettség:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;education&quot;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;elementary&quot;</span> <span class="na">selected</span><span class="p">&gt;</span>8 általános<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;elementary&quot;</span><span class="p">&gt;</span>8 általános<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
           <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;highschool&quot;</span><span class="p">&gt;</span>Érettségi<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
           <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;university&quot;</span><span class="p">&gt;</span>Felsőfokú végzettség<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;other&quot;</span><span class="p">&gt;</span>Egyéb<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;other&quot;</span> <span class="na">selected</span><span class="p">&gt;</span>Egyéb<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
 
         Nem:
@@ -1168,7 +1173,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-03 12:08:11
+      Utolsó frissítés: 2021-01-04 16:53:16
     
   </small>
 </div>
