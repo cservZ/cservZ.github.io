@@ -864,7 +864,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
-<p>A HTML kódot különböző böngészők (illetve böngészőverziók) eltérő módon jeleníthetik meg.</p>
+<p>Ugyanazt a HTML kódot különböző böngészők (illetve böngészőverziók) eltérő módon jeleníthetik meg.</p>
 </div>
 <h4 id="szabvanyok">Szabványok<a class="headerlink" href="#szabvanyok" title="Permanent link">&para;</a></h4>
 <p>A weboldalak készítésére vonatkozóan a <strong>W3C</strong> (World Wide Web Consortium) nevű szervezet ad ki előírásokat, szabványokat.</p>
@@ -897,9 +897,9 @@
 <li><a href="https://validator.w3.org/">HTML validator</a></li>
 <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a>.</li>
 </ul>
-<p>Az ellenőrizni kívánt fájl feltöltése után, amennyiben az általunk írt kód nem szabványos, a validátor különböző megjegyzéseket bocsát rendelkezésünkre:</p>
+<p>Válasszuk a "Validate by File Upload" opciót, majd töltsük fel az ellenőrizni kívánt HTML fájlt! Amennyiben az általunk írt kód nem szabványos, a validátor különböző megjegyzéseket bocsát rendelkezésünkre:</p>
 <ul>
-<li>A piros hátterű <code>Error</code>-ok súlyosabb validálási hibákat jelentenek, amiket mindenképpen javítanunk kell. A hibaüzenetből egy kis angoltudással egyszerűen rájöhetünk a problémára (ha esetleg nem jöttök rá, nyugodtan keressétek a gyakorlatvezetőtöket).</li>
+<li>A piros hátterű <code>Error</code>-ok súlyosabb validálási hibákat jelentenek, amiket mindenképpen javítanunk kell. A hibaüzenetből egy kis angoltudással egyszerűen rájöhetünk a probléma okára (ha esetleg nem jöttök rá, nyugodtan keressétek a gyakorlatvezetőtöket).</li>
 <li>A sárga hátterű <code>Warning</code>-ok kevésbé súlyos figyelmeztetések, amelyek általában megfontolandóak. Ezeknek a maradéktalan kijavítása viszont nem elvárt ezen a kurzuson.</li>
 </ul>
 <p><span class="example">Példa:</span> Egy validátor által jelzett validálási hiba és figyelmeztetés</p>
@@ -916,20 +916,20 @@
 </code></pre></div>
 </td></tr></table>
 
-<p>Vannak viszont <strong>páratlan tagek</strong> (másnéven <strong>üres tagek</strong>) is, amelyek csak nyitótagből állnak. Ilyen például a sortörés beszúrására alkalmas <code>&lt;br&gt;</code> tag.</p>
+<p>Vannak viszont <strong>páratlan tagek</strong> (más néven <strong>üres tagek</strong>) is, amelyek csak nyitótagből állnak. Ilyen például a sortörés beszúrására alkalmas <code>&lt;br&gt;</code> tag.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Első sor <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Második sor
 </code></pre></div>
 </td></tr></table>
 
 <p>A páratlan tagek végére opcionálisan perjelet is tehetünk (tehát például <code>&lt;br&gt;</code> helyett azt is írhatjuk, hogy <code>&lt;br/&gt;</code>). Ebben a jegyzetben minden páratlan tag esetén kitesszük ezt a perjelet, noha ez a HTML5 szabványban szabadon elhagyható.</p>
-<p>A HTML tageket lehetőségünk van egymásba ágyazni. Ekkor fontos, hogy az egymásba ágyazott tageket belülről kifelé haladva kell lezárnunk.</p>
+<p>A HTML tageket lehetőségünk van egymásba ágyazni. Ekkor fontos, hogy az egymásba ágyazott tageket <span class="red">belülről kifelé haladva</span> kell lezárnunk.</p>
 <p><span class="example">Példa:</span> Tagek egymásba ágyazása: először lezárjuk a legbelső <code>&lt;span&gt;</code> taget, majd az őt beágyazó <code>&lt;p&gt;</code> taget, végül pedig a legkülső <code>&lt;div&gt;</code> taget</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ide jön valami <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>szöveg...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 
 <h5 id="attributumok">Attribútumok<a class="headerlink" href="#attributumok" title="Permanent link">&para;</a></h5>
-<p>A tagekhez tartozhatnak bizonyos speciális tulajdonságok, úgynevezett <strong>attribútumok</strong>, amelyekhez speciális értékeket rendelhetünk. Az egyes tagekhez tartozó attribútum-érték párokat a nyitótag neve után írjuk, szóközzel elválasztva.</p>
+<p>A tagekhez tartozhatnak bizonyos speciális tulajdonságok, úgynevezett <strong>attribútumok</strong> is, amelyekhez speciális értékeket rendelhetünk. Az egyes tagekhez tartozó attribútum-érték párokat a nyitótag neve után írjuk, szóközzel elválasztva.</p>
 <p><span class="example">Példa:</span> Egy páros <code>&lt;a&gt;</code> tag, amely a <code>href</code> és <code>target</code> attribútumokkal rendelkezik</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -980,7 +980,7 @@
 <li>a <code>lang</code> attribútummal megadhatjuk a weboldalon szereplő tartalom nyelvét (pl. <code>hu</code> = magyar, <code>en</code> = angol, <code>de</code> = német stb.)</li>
 </ul>
 </li>
-<li><code>&lt;head&gt;...&lt;/head&gt;</code>: fejrész - az oldalon nem megjelenő tartalom (metainformációk), fájlcsatolások, CSS- és szkriptbeágyazások helye<ul>
+<li><code>&lt;head&gt;...&lt;/head&gt;</code>: fejrész - az oldalon nem megjelenő metainformációk, fájlcsatolások, CSS- és szkriptbeágyazások helye<ul>
 <li><code>&lt;title&gt;...&lt;/title&gt;</code>: a böngészőfülön megjelenő cím</li>
 <li><code>&lt;meta charset="UTF-8"/&gt;</code>: UTF-8 karakterkódolás beállítása</li>
 </ul>
@@ -1105,7 +1105,7 @@
 </tr>
 </tbody>
 </table>
-<p><span class="example">Példa:</span> Ha egy bekezdésbe azt szeretnénk írni, hogy <code>5 &lt; 10 &gt; 8</code>, akkor azt a következőképpen tehetjük meg karakterentitások használatával</p>
+<p><span class="example">Példa:</span> Ha egy bekezdésbe azt szeretnénk írni, hogy <code>5 &lt; 10 &gt; 8</code>, akkor ezt a következőképpen tehetjük meg karakterentitások használatával</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>5 <span class="ni">&amp;lt;</span> 10 <span class="ni">&amp;gt;</span> 8<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1120,7 +1120,7 @@
 <li><code>height</code>: a kép magassága (pixelben).</li>
 </ul>
 <p>Ha a <code>width</code> és <code>height</code> attribútumok közül csak az egyiket adjuk meg, akkor a másik a kép eredeti méretarányaiból számolódik. Tehát például ha egy 400x300-as (400 pixel széles, 300 pixel magas) kép szélességét 800 pixelre állítjuk (megduplázzuk), akkor a magassága automatikusan 600 pixel lesz.</p>
-<p><span class="example">Példa:</span> A HTML fájllal egy mappában van egy <code>img</code> mappa, amiben található a <code>cat.jpg</code> kép. Szúrjuk be a képet a weboldalunkra úgy, hogy a szélessége 400 pixel legyen!</p>
+<p><span class="example">Példa:</span> A HTML fájllal egy mappában van egy <code>img</code> mappa, amiben található egy <code>cat.jpg</code> kép. Szúrjuk be a képet a weboldalunkra úgy, hogy a szélessége 400 pixel legyen!</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1276,7 +1276,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-02 19:54:47
+      Utolsó frissítés: 2021-01-12 17:02:48
     
   </small>
 </div>

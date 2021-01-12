@@ -807,7 +807,7 @@
 <li><code>&lt;br/&gt;</code>: sortörés (páratlan tag)</li>
 <li><code>&lt;hr/&gt;</code>: elválasztó vonal (páratlan tag)</li>
 <li><code>&lt;pre&gt;...&lt;/pre&gt;</code>: előre formázott szöveg<ul>
-<li>alakhű megjelenést biztosít: az ilyen taggel megadott szövegek megőrzik a whitespace karaktereket (szóközök, tabulátorok, sortörések)</li>
+<li>alakhű megjelenést biztosít: az ilyen taggel megadott szövegek megőrzik a whitespace karaktereket (szóközöket, tabulátorokat, sortöréseket)</li>
 <li>akkor használjuk, ha a szöveg jellegéből szemantikusan következik a tartalom szóközökkel, térközökkel való formázása (pl. ASCII-ábrák, kódrészletek, képversek)</li>
 </ul>
 </li>
@@ -997,7 +997,7 @@
 <li><code>reversed</code>: fordított számozás</li>
 <li><code>start</code>: számozás kezdősorszáma</li>
 <li><code>type</code>: felsorolásjel típusa<ul>
-<li>lehetséges értékei: <code>1</code>: arab szám, <code>i</code>: "kisbetűs" római szám, <code>I</code>: nagybetűs római szám, <code>a</code>: kisbetű, <code>A</code>: nagybetű</li>
+<li>lehetséges értékei: <code>1</code>: arab szám, <code>i</code>: "kisbetűs" római szám, <code>I</code>: "nagybetűs" római szám, <code>a</code>: kisbetű, <code>A</code>: nagybetű</li>
 </ul>
 </li>
 </ul>
@@ -1101,7 +1101,7 @@
 <p>Lehetőségünk van arra is, hogy sor- és oszlopösszevonásokat végezzünk egy táblázatban:</p>
 <ul>
 <li>a celláknak adott <code>rowspan</code> attribútummal megadhatjuk az összevonni kívánt sorok számát</li>
-<li>a <code>colspan</code> attribútumal pedig az összevonni kívánt oszlopok számát adjuk meg.</li>
+<li>a <code>colspan</code> attribútummal pedig az összevonni kívánt oszlopok számát adjuk meg.</li>
 </ul>
 <p>Azt is meg tudjuk mondani, hogy egy táblázatcella mely fejléccellá(k)hoz tartozik. Ezt a következőképpen tehetjük meg:</p>
 <ul>
@@ -1245,9 +1245,9 @@
 </code></pre></div>
 </td></tr></table>
 
-<p>A <strong>szelektor</strong> (más néven <strong>kijelölő</strong>) segítségével megmondjuk, hogy a weboldal mely elemét (vagy elemeit) szeretnénk formázni. Ezután kapcsos zárójelek között, pontosvesszővel elválasztva megadjuk az elvégzendő formázásokat <code>tulajdonság: érték</code> formában. A <code>tulajdonság</code> az adott elem formázandó tulajdonsága (pl. háttérszín, betűtípus, térköz), az <code>érték</code> pedig az adott tulajdonsághoz tartozó, beállítani kívánt érték.</p>
+<p>A <strong>szelektor</strong> (más néven <strong>kijelölő</strong>) segítségével megmondjuk, hogy a weboldal mely elemét (vagy elemeit) szeretnénk formázni. Ezután kapcsos zárójelek között, pontosvesszővel elválasztva megadjuk az elvégzendő formázásokat <code>tulajdonság: érték</code> formában. A <code>tulajdonság</code> az adott elem formázandó tulajdonsága (pl. háttérszín, betűtípus, térköz stb.), az <code>érték</code> pedig az adott tulajdonsághoz tartozó, beállítani kívánt érték.</p>
 <p>A CSS kódba írhatunk <strong>kommentek</strong>et (megjegyzéseket) is az alábbi szintaxissal:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">/* ez egy komment a CSS kódban */</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">/* Ez egy komment a CSS kódban */</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -1358,7 +1358,7 @@
 <h4 id="alapveto-szelektorok">Alapvető szelektorok<a class="headerlink" href="#alapveto-szelektorok" title="Permanent link">&para;</a></h4>
 <p>Ebben a részben megismerkedünk a négy legalapvetőbb CSS szelektortípussal, amikkel HTML objektumokat jelölhetünk ki. A következő leckében ezek felhasználásával összetettebb szelektorokat is készítünk majd.</p>
 <ul>
-<li><strong>Elem szelektor</strong>: tagnév alapján jelöli ki az összes ugyanolyan nevű HTML elemet</li>
+<li><strong>Elem szelektor</strong>: tagnév alapján jelöli ki az összes ugyanolyan típusú HTML elemet</li>
 <li><strong>Class szelektor</strong>: azokat az elemeket jelöli ki, amelyek az adott <code>class</code> értékkel rendelkeznek; az ilyen szelektort ponttal (<code>.</code>) kezdjük</li>
 <li><strong>Id szelektor</strong>: az adott <code>id</code> értékkel rendelkező elemet jelöli ki; az ilyen szelektort kettős kereszttel (<code>#</code>) kezdjük</li>
 <li><strong>Univerzális szelektor</strong>: a <code>*</code> szelektorral az összes HTML objektumot kijelölhetjük</li>
@@ -1507,7 +1507,7 @@
 </div>
 <h5 id="terkozok-megadasa">Térközök megadása<a class="headerlink" href="#terkozok-megadasa" title="Permanent link">&para;</a></h5>
 <p>A <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code> és <code>padding-left</code> CSS tulajdonságokkal beállíthatjuk egy elem felső, jobb oldali, alsó és bal oldali térközének a mértékét.</p>
-<p>Ezek a tulajdonságok összevonva is megadhatók a <code>padding</code> tulajdonsággal, amelynek értékeként megadjuk sorban a felső, jobb, alsó és végül a bal térköz méretét. Ha ezek közül valamelyik paramétert elhagyjuk, akkor az a szemközti oldaltól fogja örökölni az értéket.</p>
+<p>Ezek a jellemzők összevonva is megadhatók a <code>padding</code> tulajdonsággal, amelynek értékeként megadjuk sorban a felső, jobb, alsó és végül a bal térköz mértékét. Ha ezek közül valamelyik paramétert elhagyjuk, akkor az a szemközti oldaltól fogja örökölni az értéket.</p>
 <p><span class="example">Példa:</span> Térköz megadása a <code>padding</code> tulajdonsággal</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1535,9 +1535,9 @@
 <p>Nagyon hasonlóan, mint ahogy azt a térközöknél láttuk, a margók is megadhatók...</p>
 <ul>
 <li>...külön-külön, a <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code> és <code>margin-left</code> tulajdonságokkal</li>
-<li>...összevonva, a <code>margin</code> tulajdonsággal (felső-jobb-alsó-bal sorrendben itt is - ha valamelyik margó méretét nem adjuk meg, akkor a szemköztitől örökli azt).</li>
+<li>...összevonva, a <code>margin</code> tulajdonsággal (felső-jobb-alsó-bal sorrendben itt is - ha valamelyik margó méretét nem adjuk meg, akkor a szemközti oldaltól örökli azt).</li>
 </ul>
-<p>A <code>margin-left</code> és <code>margin-right</code> tulajdonságoknál az <code>auto</code> értéket használhatjuk az elem vízszintes igazítására:</p>
+<p>A <code>margin-left</code> és <code>margin-right</code> tulajdonságoknál az <code>auto</code> értéket felhasználhatjuk az elem vízszintes igazítására:</p>
 <ul>
 <li><code>margin-left: auto</code>: vízszintesen jobbra igazítja az elemet</li>
 <li><code>margin-right: auto</code>: vízszintesen balra igazítja az elemet</li>
@@ -1791,7 +1791,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-03 12:08:11
+      Utolsó frissítés: 2021-01-12 17:02:48
     
   </small>
 </div>
