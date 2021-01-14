@@ -838,17 +838,17 @@
 <li><code>&lt;section&gt;...&lt;/section&gt;</code>: logikai egység</li>
 <li><code>&lt;article&gt;...&lt;/article&gt;</code>: önálló tartalom.</li>
 </ul>
-<p>A fenti tagek kivétel nélkül blokkszintű (block) elemek (a <code>&lt;div&gt;</code>-hez hasonlóan).</p>
+<p>A fenti tagek kivétel nélkül blokkszintű (block) elemek, a <code>&lt;div&gt;</code>-hez hasonlóan.</p>
 <p>Ezek a tagek - az általános célú <code>&lt;div&gt;</code> és <code>&lt;span&gt;</code> tagekkel ellentétben - szemantikai jelentéssel bírnak, tehát egyértelműen meghatározzák a tartalmuk jelentését (pl. egy <code>&lt;header&gt;</code>-ről tudjuk, hogy egy fejlécet jelöl).</p>
-<p>A HTML5-ben bevezetett szemantikus tageket felhasználva precízebben leírhatjuk egy weboldal szerkezetét. Felhasználásukkal például készíthetünk az alábbihoz hasonló elrendezésű weboldalt.</p>
+<p>A HTML5-ben bevezetett szemantikus tageket felhasználva precízebben leírhatjuk egy weboldal szerkezetét. Készíthetünk például ezekkel a tagekkel az alábbihoz hasonló elrendezésű weboldalt.</p>
 <p><img alt="HTML5 szemantikus tagek" src="../img/gyak03/html5-szemantikus-tagek.gif" /></p>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
 <p>Ahhoz, hogy az ábrán látotthoz hasonló elrendezést kapjunk, a tanult tagek használata önmagában nem elegendő (pl. az <code>&lt;aside&gt;</code> nem fog automatikusan oldalra kerülni). Az elemek helyzetének megadására a CSS-beli pozicionálást használhatjuk.</p>
 </div>
 <h3 id="a-html-dom">A HTML DOM<a class="headerlink" href="#a-html-dom" title="Permanent link">&para;</a></h3>
-<p>Valószínűleg mindenkinek feltűnt, hogy a HTML dokumentumok lényegében HTML objektumok (tagek) egymásba ágyazásából állnak. Ezek az objektumok egy hierarchikus fastruktúrát alkotnak a dokumentumban.</p>
-<p>Amikor egy weboldal betöltődik, akkor a böngésző elkészíti a HTML objektumokból az úgynevezett dokumentum-objektum modellt - ezt a továbbiakban röviden csak DOM-nak fogjuk nevezni. A <strong>DOM fa</strong> (DOM tree) segítségével könnyen átláthatjuk a HTML elemek hierarchikus viszonyait.</p>
+<p>Valószínűleg mindenkinek feltűnt, hogy a HTML dokumentumok lényegében HTML objektumok (tagek) egymásba ágyazásából állnak. Ezek az objektumok egy hierarchikus fastruktúrát alkotnak.</p>
+<p>Amikor egy weboldal betöltődik, akkor a böngésző elkészíti a HTML objektumokból az úgynevezett dokumentum-objektum modellt - ezt a továbbiakban röviden csak DOM-nak fogjuk nevezni. A <strong>DOM fa</strong> (DOM tree) segítségével könnyen szemléltethetjük a HTML elemek hierarchikus viszonyait.</p>
 <p><span class="example">Példa:</span> Egy egyszerű HTML kód és a hozzá tartozó DOM fa</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -890,7 +890,7 @@
 <p>A következő fejezetben látni fogjuk, hogy CSS-ben használunk olyan szelektorokat is, amelyek egymáshoz való viszonyuk alapján jelölnek ki HTML objektumokat.</p>
 <p>Emellett a webes világban gyakran előfordul, hogy a DOM fát manipulálni szeretnénk - pl. szeretnénk egy objektumot módosítani vagy törölni, esetleg egy új objektumot akarunk a fába beszúrni. Erre biztosítanak lehetőséget a JavaScript DOM-műveletei. Ezen a kurzuson nem tárgyaljuk a JavaScriptet, viszont a <em>Szkriptnyelvek</em> és <em>Multimédia</em> kurzusokon részletesen tanulhatunk a különböző DOM-manipulációs lehetőségekről.</p>
 <h3 id="tovabbi-css-szelektorok">További CSS szelektorok<a class="headerlink" href="#tovabbi-css-szelektorok" title="Permanent link">&para;</a></h3>
-<p>A múlt órán megismerkedtünk a legalapvetőbb CSS szelektorokkal (elem szelektor, class szelektor, id szelektor, univerzális szelektor). Ebben a részben néhány további szelektortípusról fogunk tanulni.</p>
+<p>Az előző gyakorlaton megismerkedtünk a legalapvetőbb CSS szelektorokkal (elem szelektor, class szelektor, id szelektor, univerzális szelektor). Ebben a részben néhány további kijelölőtípusról fogunk tanulni.</p>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
 <p>A gyakorlaton csak a gyakrabban használt szelektorokat tárgyaljuk. Ezek mellett vannak még egyéb kijelölők is, amelyeknek a részletes listáját megtalálhatjuk <a href="https://www.w3schools.com/cssref/css_selectors.asp">itt</a>.</p>
@@ -910,11 +910,11 @@
 <p>CSS-ben használunk olyan szelektorokat is, amelyek egymáshoz való viszonyaik, kapcsolataik alapján jelölnek ki elemeket:</p>
 <ul>
 <li><code>E1 E2</code>: minden olyan <code>E2</code> elemet kijelöl, amely egy <code>E1</code>-ben található</li>
-<li><code>E1 &gt; E2</code> minden olyan <code>E2</code>-t kijelöl, amelynek <span class="red">közvetlen</span> szülője <code>E1</code></li>
+<li><code>E1 &gt; E2</code> minden olyan <code>E2</code>-t kijelöl, amelynek szülője <code>E1</code> (szülő-gyermek kapcsolat alatt továbbra is <span class="red">közvetlen</span> tartalmazást értünk)</li>
 <li><code>E1 ~ E2</code>: minden olyan <code>E2</code>-t kijelöl, amely <code>E1</code>-nek testvére és <code>E1</code> után következik a kódban</li>
 <li><code>E1 + E2</code>: minden olyan <code>E2</code>-t kijelöl, amely <code>E1</code>-nek testvére és <span class="red">közvetlenül</span> <code>E1</code> után következik a kódban.</li>
 </ul>
-<p><span class="example">Példa:</span> A <code>body p</code> szelektor kijelöli az összes olyan bekezdést, ami a <code>&lt;body&gt;</code>-ban található. A <code>body &gt; p</code> azokat a bekezdéseket jelöli ki, amelyeknek közvetlen szülője a <code>&lt;body&gt;</code></p>
+<p><span class="example">Példa:</span> A <code>body p</code> szelektor kijelöli az összes olyan bekezdést, amely a <code>&lt;body&gt;</code>-ban található. A <code>body &gt; p</code> azokat a bekezdéseket jelöli ki, amelyek közvetlenül a <code>&lt;body&gt;</code>-ba vannak beágyazva</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -954,7 +954,7 @@
 </td></tr></table>
 
 <p><img alt="A kód kimenete" src="../img/gyak03/css-szelektorok-1.png" /></p>
-<p><span class="example">Példa:</span> A <code>p ~ p</code> szelektor kijelöl minden olyan bekezdést, amely egy másik bekezdés testvére és valahol a másik bekezdés után található a kódban. A <code>p + p</code> szelektornál még azt is megköveteljük, hogy közvetlenül (rögtön) a másik bekezdés után szerepeljen az elem</p>
+<p><span class="example">Példa:</span> A <code>p ~ p</code> szelektor kijelöl minden olyan bekezdést, amely egy másik bekezdés testvére és valahol a másik bekezdés után található a kódban. A <code>p + p</code> szelektornál még azt is megköveteljük, hogy közvetlenül (azaz rögtön) a másik bekezdés után szerepeljen az elem</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1006,7 +1006,7 @@
 <li><code>E1:nth-of-type(n)</code>: minden olyan <code>E1</code>-et kijelöl, aki az azonos (<code>E1</code>) típusú testvérei közül az <code>n</code>-edik</li>
 <li><code>E1:last-of-type</code>: minden olyan <code>E1</code>-et kijelöl, aki az azonos (<code>E1</code>) típusú testvérei közül az utolsó</li>
 </ul>
-<p><span class="example">Példa:</span> Néhány pseudo-class használata egy táblázatra</p>
+<p><span class="example">Példa:</span> Egy táblázat formázása pseudo-class-ok használatával</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1063,7 +1063,7 @@
       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
       <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
          <span class="nt">tr</span><span class="p">:</span><span class="nd">first-of-type</span> <span class="p">{</span>
-            <span class="c">/* Minden olyan &lt;tr&gt;, aki a &lt;tr&gt; típusú testvérei közül a legelső */</span>
+            <span class="c">/* Minden olyan &lt;tr&gt;, aki a &lt;tr&gt; típusú testvérei közül a legelső (azaz a táblázat első sora) */</span>
             <span class="k">background-color</span><span class="p">:</span> <span class="mh">#CC6633</span><span class="p">;</span>
             <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
          <span class="p">}</span>
@@ -1208,7 +1208,7 @@
 </code></pre></div>
 </td></tr></table>
 
-<p>A fenti pseudo-class-ok közül a <code>:hover</code> és az <code>:active</code> nem csak hivatkozásokra, hanem bármilyen HTML objektumra is használhatók.</p>
+<p>A fenti pseudo-class-ok közül a <code>:hover</code> és az <code>:active</code> nem csak hivatkozásokra, hanem bármilyen HTML objektumra használhatók.</p>
 <h3 id="egyeb-css-formazasok">Egyéb CSS formázások<a class="headerlink" href="#egyeb-css-formazasok" title="Permanent link">&para;</a></h3>
 <h4 id="a-text-decoration-tulajdonsag">A text-decoration tulajdonság<a class="headerlink" href="#a-text-decoration-tulajdonsag" title="Permanent link">&para;</a></h4>
 <p>Észrevehettük, hogy a hivatkozásokat (linkeket) a böngészők általában kék betűszínnel, aláhúzva jelenítik meg. Ezt persze bármikor ízlésünkre szabhatjuk: a színt átállíthatjuk, illetve a link dekorációját (az aláhúzást) is szabályozhatjuk a <code>text-decoration</code> CSS tulajdonsággal.</p>
@@ -1258,7 +1258,7 @@
 </td></tr></table>
 
 <h4 id="listak-formazasa">Listák formázása<a class="headerlink" href="#listak-formazasa" title="Permanent link">&para;</a></h4>
-<p>A múlt órán megismerkedtünk a HTML-ben található rendezetlen és rendezett listákkal. Az alábbi táblázatban összefoglaljuk a listákkal kapcsolatos fontosabb formázásokat.</p>
+<p>A múlt órán megismerkedtünk a rendezetlen és rendezett listákkal. Az alábbi táblázatban összefoglaljuk a listákkal kapcsolatos fontosabb formázásokat.</p>
 <table>
 <thead>
 <tr>
@@ -1290,7 +1290,7 @@
 <p>A táblázatnak és a celláknak a már jól ismert <code>border</code> tulajdonsággal adhatunk szegélyt. Alapértelmezett módon a táblázat szegélyei és a cellák szegélyei el vannak választva egymástól, ezért úgy tűnhet, mintha a táblázatban mindenhol dupla szegélyek lennének. A <code>border-collapse: collapse</code> utasítással ezek a szegélyek összevonhatók.</p>
 <p>A táblázatnak a szokásos módon megadhatjuk a szélességét és magasságát (<code>width</code> és <code>height</code> tulajdonságok), valamint a vízszintes margók értékének <code>auto</code>-ra állításával vízszintesen középre igazíthatjuk a táblázatot az oldalon belül.</p>
 <p>Ha egy táblázat rendelkezik címmel (amit a <code>&lt;caption&gt;</code> taggel adtunk meg), akkor ez a cím alapértelmezett módon a táblázat fölött jelenik meg. A <code>caption-side: bottom</code> utasítással viszont áthelyezhető a táblázat alá.</p>
-<p>A <code>vertical-align: middle</code> utasítással egy táblázatcella tartalmát függőlegesen középre igazíthatjuk. A tartalom vízszintes igazítására a korábban látott <code>text-align</code> tulajdonságot használjuk.</p>
+<p>A <code>vertical-align: middle</code> utasítással egy táblázatcella tartalmát függőlegesen középre igazíthatjuk. A tartalom vízszintes igazítására a korábban tanult <code>text-align</code> tulajdonságot használjuk.</p>
 <p><span class="example">Példa:</span> Egy táblázat formázása</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1382,7 +1382,7 @@
 
 <p><img alt="A kód kimenete" src="../img/gyak03/tablazatok.png" /></p>
 <h4 id="a-box-sizing-tulajdonsag">A box-sizing tulajdonság<a class="headerlink" href="#a-box-sizing-tulajdonsag" title="Permanent link">&para;</a></h4>
-<p>A fenti kódpéldában a táblázat szélességét százalékban adtuk meg. Ha egy másik elemen belül elhelyezkedő objektum méretét százalékban adjuk meg, akkor előfordulhat, hogy a következő jelenséggel találjuk szemben magunkat:</p>
+<p>Ha egy másik elemen belül elhelyezkedő objektum méretét százalékban adjuk meg, akkor előfordulhat, hogy a következő jelenséggel találjuk szembe magunkat:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1457,7 +1457,7 @@
 <p><img alt="A kód kimenete" src="../img/gyak03/box-sizing-2.png" /></p>
 <h3 id="a-css-oroklodes">A CSS öröklődés<a class="headerlink" href="#a-css-oroklodes" title="Permanent link">&para;</a></h3>
 <p>CSS-ben létezik <strong>öröklődés</strong>, ami azt jelenti, hogy egy objektum bizonyos CSS tulajdonságait örökölhetik az objektum gyerekei. Ennek köszönhetően bizonyos tulajdonságokat elegendő csak egyszer definiálnunk a szülő objektumra, és ekkor a gyerekek is automatikusan megöröklik ezeket.</p>
-<p>Fontos megjegyezni viszont, hogy nem minden CSS tulajdonság örökölődik. Az alábbi táblázatban összefoglaljuk a fontosabb öröklődő, illetve nem öröklődő CSS tulajdonságokat.</p>
+<p>Fontos megjegyezni viszont, hogy nem minden CSS tulajdonság örökölődik! Az alábbi táblázatban összefoglaljuk a fontosabb öröklődő, illetve nem öröklődő tulajdonságokat.</p>
 <table>
 <thead>
 <tr>
@@ -1473,7 +1473,7 @@
 </tbody>
 </table>
 <p>Amennyiben egy nem öröklődő CSS tulajdonságot mégis örököltetni szeretnénk, akkor ezt az <code>inherit</code> speciális értékkel tehetjük meg.</p>
-<p><span class="example">Példa:</span> A <code>font-family</code> és <code>color</code> tulajdonságok automatikusan öröklődnek, viszont a <code>border</code> alapból nem. Az <code>inherit</code> kulcsszóval viszont a <code>border</code> is örököltethető</p>
+<p><span class="example">Példa:</span> A <code>font-family</code> és <code>color</code> tulajdonságok automatikusan öröklődnek, viszont a <code>border</code> már nem. Ha a szegélyt is örököltetni szeretnénk, használjuk az <code>inherit</code> kulcsszót</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1511,7 +1511,7 @@
 </td></tr></table>
 
 <h3 id="a-css-rangsor">A CSS rangsor<a class="headerlink" href="#a-css-rangsor" title="Permanent link">&para;</a></h3>
-<p>Felmerülhet a kérdés, hogy ha egy objektumra több, egymásnak ellentmondó CSS formázást adunk ki (pl. egy bekezdés színét kékre, majd később pirosra szeretnénk állítani), akkor ezek közül vajon melyik lesz érvényes.</p>
+<p>Felmerülhet a kérdés, hogy ha egy objektumra több, egymásnak ellentmondó CSS formázást adunk ki (pl. egy bekezdés színét kékre, majd később pirosra szeretnénk állítani), akkor ezek közül vajon melyik stílus lesz érvényes.</p>
 <p>Pontosan erre ad választ a CSS <strong>rangsor</strong>, amely különböző prioritás értékeket rendel az egyes formázásokhoz, és ezek alapján dönti el, hogy végül mely formázás fog érvényesülni. A prioritások a következőképpen alakulnak (legerősebbtől a leggyengébbig):</p>
 <ol>
 <li><code>!important</code> kulcsszóval megadott formázások</li>
@@ -1544,10 +1544,10 @@
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>CSS öröklődés<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
       <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-         <span class="p">.</span><span class="nc">blue</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span> <span class="p">}</span>
          <span class="p">#</span><span class="nn">first</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>
          <span class="p">#</span><span class="nn">second</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span> <span class="p">}</span>
          <span class="p">#</span><span class="nn">third</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">orange</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+         <span class="p">.</span><span class="nc">blue</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span> <span class="p">}</span>
       <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -1566,9 +1566,9 @@
 <p>Az <strong>összetett szelektorok</strong> - tehát azok a szelektorok, amelyek több részszelektorból épülnek fel - esetén a részszelektorok prioritásai összeadódnak. Az így kapott összeg lesz a szelektor prioritása.</p>
 <div class="admonition example">
 <p class="admonition-title">Példa</p>
-<p>Legyenek adottak a következő szelektor-prioritás párok: elem szelektor - 1, class szelektor - 10, id szelektor - 100. Ekkor a <code>#main .container p</code> összetett szelektor prioritása: 100+10+1 = 111.</p>
+<p>Legyen az elem szelektor prioritása 1, a class szelektor prioritása 10, az id szelektoré pedig 100. Ekkor a <code>#main .container p</code> összetett szelektor prioritása: 100+10+1 = 111.</p>
 </div>
-<p>Ha az eddigiek alapján nem dőlt el a rangsor, akkor a kódban később szereplő formázás lesz az érvényes.</p>
+<p>Ha az eddigi szabályok alapján nem dőlt el a rangsor, akkor a kódban később szereplő formázás lesz az érvényes.</p>
 <h3 id="helyzetmegadas">Helyzetmegadás<a class="headerlink" href="#helyzetmegadas" title="Permanent link">&para;</a></h3>
 <p>A webfejlesztés során gyakran előfordul, hogy egy weboldal elrendezésének kialakításakor meg akarjuk változtatni bizonyos objektumok alapértelmezett pozícióját. Erre szolgál a pozicionálás és helyzetmegadás.</p>
 <h4 id="a-position-tulajdonsag">A position tulajdonság<a class="headerlink" href="#a-position-tulajdonsag" title="Permanent link">&para;</a></h4>
@@ -1690,7 +1690,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-02 19:54:47
+      Utolsó frissítés: 2021-01-14 16:34:20
     
   </small>
 </div>

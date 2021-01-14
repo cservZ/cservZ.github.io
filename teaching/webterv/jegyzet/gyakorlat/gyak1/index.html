@@ -824,7 +824,7 @@
                 <h1 id="1-gyakorlat">1. gyakorlat<a class="headerlink" href="#1-gyakorlat" title="Permanent link">&para;</a></h1>
 <h2 id="a-gyakorlat-anyaga">A gyakorlat anyaga<a class="headerlink" href="#a-gyakorlat-anyaga" title="Permanent link">&para;</a></h2>
 <p>A <a href="../kovetelmenyek">követelmények</a> ismertetése.</p>
-<p>A kurzuson tárgyalt három nyelv (HTML, CSS és PHP) általános szerepének áttekintése, a HTML nyelv szintaxisának és néhány alapvető elemének megismerése.</p>
+<p>A kurzuson tárgyalt három nyelv általános szerepének áttekintése, a HTML szintaxisának és néhány alapvető elemének megismerése.</p>
 <h3 id="attekintes">Áttekintés<a class="headerlink" href="#attekintes" title="Permanent link">&para;</a></h3>
 <p>A félév során a HTML, CSS és PHP nyelvekkel fogunk megismerkedni. Az alábbi táblázatban röviden összefoglaljuk ezeknek a nyelveknek az általános szerepét a webfejlesztésben.</p>
 <table>
@@ -853,7 +853,7 @@
 </table>
 <h3 id="html-alapok-i">HTML alapok I.<a class="headerlink" href="#html-alapok-i" title="Permanent link">&para;</a></h3>
 <h4 id="bevezetes">Bevezetés<a class="headerlink" href="#bevezetes" title="Permanent link">&para;</a></h4>
-<p>A <strong>HTML</strong> (HyperText Markup Language) egy leíró nyelv, amelynek segítségével megmondhatjuk, hogy mi az, amit egy weboldalon látni szeretnénk (pl. szövegek, képek, hivatkozások, táblázatok, multimédia stb.).</p>
+<p>A <strong>HTML</strong> (HyperText Markup Language) egy jelölőnyelv, amelynek segítségével megmondhatjuk, hogy mi az, amit egy weboldalon látni szeretnénk (pl. szövegek, képek, hivatkozások, táblázatok, multimédia stb.).</p>
 <p>A HTML lehetőséget biztosít a weboldalak tartalmának strukturálására is. Ezt különböző szakaszok, tartalmi egységek (pl. fejléc, menüsor, fő tartalom, lábléc stb.) kialakításával tehetjük meg.</p>
 <h4 id="html-kod-irasa">HTML kód írása<a class="headerlink" href="#html-kod-irasa" title="Permanent link">&para;</a></h4>
 <p>A HTML kód írása roppant egyszerű:</p>
@@ -894,19 +894,19 @@
 <h5 id="szabvanyossag-ellenorzese">Szabványosság ellenőrzése<a class="headerlink" href="#szabvanyossag-ellenorzese" title="Permanent link">&para;</a></h5>
 <p>Egy HTML vagy CSS fájl szabványosságát legegyszerűbben böngésző plug-inekkel vagy az alábbi online validátor szoftverek segítségével ellenőrizhetjük:</p>
 <ul>
-<li><a href="https://validator.w3.org/">HTML validator</a></li>
-<li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a>.</li>
+<li><a href="https://validator.w3.org/">HTML validátor</a></li>
+<li><a href="https://jigsaw.w3.org/css-validator/">CSS validátor</a>.</li>
 </ul>
-<p>Válasszuk a "Validate by File Upload" opciót, majd töltsük fel az ellenőrizni kívánt HTML fájlt! Amennyiben az általunk írt kód nem szabványos, a validátor különböző megjegyzéseket bocsát rendelkezésünkre:</p>
+<p>A HTML validátor weboldalán válasszuk a "Validate by File Upload" opciót, majd töltsük fel az ellenőrizni kívánt HTML fájlt! Amennyiben az általunk írt kód nem szabványos, a validátor különböző megjegyzéseket bocsát rendelkezésünkre:</p>
 <ul>
 <li>A piros hátterű <code>Error</code>-ok súlyosabb validálási hibákat jelentenek, amiket mindenképpen javítanunk kell. A hibaüzenetből egy kis angoltudással egyszerűen rájöhetünk a probléma okára (ha esetleg nem jöttök rá, nyugodtan keressétek a gyakorlatvezetőtöket).</li>
 <li>A sárga hátterű <code>Warning</code>-ok kevésbé súlyos figyelmeztetések, amelyek általában megfontolandóak. Ezeknek a maradéktalan kijavítása viszont nem elvárt ezen a kurzuson.</li>
 </ul>
-<p><span class="example">Példa:</span> Egy validátor által jelzett validálási hiba és figyelmeztetés</p>
+<p><span class="example">Példa:</span> A validátor által jelzett validálási hiba és figyelmeztetés</p>
 <p><img alt="Validátor hibák és figyelmeztetések" src="../img/gyak01/validator.png" /></p>
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
-<p>A beadandó projekt szabványosságát is egyszerűen ellenőrizhetitek a validátor segítségével.</p>
+<p>A beadandó projekt szabványossága is egyszerűen ellenőrizhető a validátor segítségével.</p>
 </div>
 <h4 id="html-alapfogalmak">HTML alapfogalmak<a class="headerlink" href="#html-alapfogalmak" title="Permanent link">&para;</a></h4>
 <h5 id="tagek">Tagek<a class="headerlink" href="#tagek" title="Permanent link">&para;</a></h5>
@@ -922,14 +922,14 @@
 </td></tr></table>
 
 <p>A páratlan tagek végére opcionálisan perjelet is tehetünk (tehát például <code>&lt;br&gt;</code> helyett azt is írhatjuk, hogy <code>&lt;br/&gt;</code>). Ebben a jegyzetben minden páratlan tag esetén kitesszük ezt a perjelet, noha ez a HTML5 szabványban szabadon elhagyható.</p>
-<p>A HTML tageket lehetőségünk van egymásba ágyazni. Ekkor fontos, hogy az egymásba ágyazott tageket <span class="red">belülről kifelé haladva</span> kell lezárnunk.</p>
+<p>A HTML tageket egymásba is ágyazhatjuk. Ekkor fontos, hogy az egymásba ágyazott tageket <span class="red">belülről kifelé haladva</span> kell lezárnunk!</p>
 <p><span class="example">Példa:</span> Tagek egymásba ágyazása: először lezárjuk a legbelső <code>&lt;span&gt;</code> taget, majd az őt beágyazó <code>&lt;p&gt;</code> taget, végül pedig a legkülső <code>&lt;div&gt;</code> taget</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ide jön valami <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>szöveg...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 
 <h5 id="attributumok">Attribútumok<a class="headerlink" href="#attributumok" title="Permanent link">&para;</a></h5>
-<p>A tagekhez tartozhatnak bizonyos speciális tulajdonságok, úgynevezett <strong>attribútumok</strong> is, amelyekhez speciális értékeket rendelhetünk. Az egyes tagekhez tartozó attribútum-érték párokat a nyitótag neve után írjuk, szóközzel elválasztva.</p>
+<p>A tagekhez tartozhatnak bizonyos speciális tulajdonságok, úgynevezett <strong>attribútumok</strong> is, amelyekhez speciális értékeket rendelhetünk. Ezeket az attribútum-érték párokat mindig a nyitótag neve után írjuk, szóközzel elválasztva.</p>
 <p><span class="example">Példa:</span> Egy páros <code>&lt;a&gt;</code> tag, amely a <code>href</code> és <code>target</code> attribútumokkal rendelkezik</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -941,7 +941,7 @@
 </td></tr></table>
 
 <h4 id="a-html-dokumentum-felepitese">A HTML dokumentum felépítése<a class="headerlink" href="#a-html-dokumentum-felepitese" title="Permanent link">&para;</a></h4>
-<p>Minden HTML dokumentumunk megírása az alábbi kóddal fog kezdődni:</p>
+<p>Minden HTML dokumentumunk elkészítése az alábbi kód megírásával fog kezdődni:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -966,9 +966,9 @@
 
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
-<p>A fenti (vagy ahhoz hasonló) alap HTML kódot néhány szerkesztőprogrammal le is generáltathatjuk:
+<p>A fenti (vagy ahhoz hasonló) kiinduló HTML kódot néhány szerkesztőprogrammal le is generáltathatjuk:
 <ul>
-    <li>A WebStorm automatikusan generálja a kódot HTML fájlok esetén</li>
+    <li>A WebStorm automatikusan generálja a kiinduló kódot HTML fájlok esetén</li>
     <li>Sublime Text-ben legépeljük, hogy <code>html</code>, majd közvetlen utána nyomunk egy <kbd>Tab</kbd>-ot</li>
     <li>Visual Studio Code-ban leírunk egy felkiáltójelet (<code>!</code>), majd közvetlen utána nyomunk egy <kbd>Tab</kbd>-ot.</li>
 </ul></p>
@@ -977,7 +977,7 @@
 <ul>
 <li><code>&lt;!DOCTYPE html&gt;</code>: közöljük a böngészővel, hogy a HTML5 szabvány szerint írtuk a kódot</li>
 <li><code>&lt;html&gt;...&lt;/html&gt;</code>: ez írja le magát a weboldalt<ul>
-<li>a <code>lang</code> attribútummal megadhatjuk a weboldalon szereplő tartalom nyelvét (pl. <code>hu</code> = magyar, <code>en</code> = angol, <code>de</code> = német stb.)</li>
+<li>a <code>lang</code> attribútummal megadhatjuk a weboldal talmának nyelvét (pl. <code>hu</code> = magyar, <code>en</code> = angol, <code>de</code> = német stb.)</li>
 </ul>
 </li>
 <li><code>&lt;head&gt;...&lt;/head&gt;</code>: fejrész - az oldalon nem megjelenő metainformációk, fájlcsatolások, CSS- és szkriptbeágyazások helye<ul>
@@ -993,19 +993,19 @@
 </code></pre></div>
 </td></tr></table>
 
-<p>A kommentek szövege a weboldalon természetesen nem jelenik meg, viszont a weboldal HTML forráskódjában (amit böngészőben a <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> billentyűkombinációval egyszerűen megtekinthetünk) ezek a kommentek láthatóak lesznek.</p>
+<p>A kommentek szövege a weboldalon természetesen nem jelenik meg, viszont az oldal HTML forráskódjában (amit a legtöbb böngészőben a <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> billentyűkombinációval egyszerűen megtekinthetünk) ezek a kommentek láthatóak lesznek.</p>
 <h4 id="a-head-fontosabb-tagjei">A head fontosabb tagjei<a class="headerlink" href="#a-head-fontosabb-tagjei" title="Permanent link">&para;</a></h4>
-<p>Az alábbiakban felsoroljuk a HTML dokumentum fejrészében (<code>&lt;head&gt;</code> és <code>&lt;/head&gt;</code> között) használatos fontosabb tageket.</p>
+<p>Az alábbiakban áttekintjük a HTML dokumentum fejrészében (<code>&lt;head&gt;</code> és <code>&lt;/head&gt;</code> között) használatos fontosabb tageket.</p>
 <ul>
 <li><code>&lt;title&gt;...&lt;/title&gt;</code>: a böngészőfülön megjelenő cím (ezt mindig adjuk meg!)</li>
 <li><code>&lt;meta charset="UTF-8"/&gt;</code>: UTF-8 karakterkódolás beállítása (ezt mindig adjuk meg!)</li>
 <li><code>&lt;meta name="author" content="Gipsz Jakab"/&gt;</code>: a weboldal szerzője</li>
 <li><code>&lt;meta name="description" content="Jakab blogoldala"/&gt;</code>: a weboldal leírása</li>
-<li><code>&lt;meta name="keywords" content="webtervezés,webterv,HTML,CSS,PHP"/&gt;</code>: kulcsszavak megadása (célja a találati esélyeink javítása)</li>
+<li><code>&lt;meta name="keywords" content="webtervezés,webterv,HTML,CSS,PHP"/&gt;</code>: keresési kulcsszavak megadása</li>
 <li><code>&lt;link rel="stylesheet" href="valami.css"/&gt;</code>: külső CSS fájl beágyazása</li>
 <li><code>&lt;link rel="icon" href="valami.png"/&gt;</code>: böngészőfülön megjelenő ikon</li>
 <li><code>&lt;style&gt;...&lt;/style&gt;</code>: CSS formázás beszúrása</li>
-<li><code>&lt;script&gt;...&lt;/script&gt;</code>: szkript (pl. JavaScript) beszúrása</li>
+<li><code>&lt;script&gt;...&lt;/script&gt;</code>: JavaScript beszúrása</li>
 </ul>
 <h4 id="a-body-fontosabb-tagjei">A body fontosabb tagjei<a class="headerlink" href="#a-body-fontosabb-tagjei" title="Permanent link">&para;</a></h4>
 <p>Az alábbiakban megismerkedünk néhány, a HTML dokumentum törzsrészében (<code>&lt;body&gt;</code> és <code>&lt;/body&gt;</code> között) használatos taggel.</p>
@@ -1111,7 +1111,7 @@
 </td></tr></table>
 
 <h5 id="kepek">Képek<a class="headerlink" href="#kepek" title="Permanent link">&para;</a></h5>
-<p>Ha a weboldalunkra egy képet szeretnénk beszúrni, akkor ezt az <code>&lt;img/&gt;</code> nevű páratlan taggel tudjuk megtenni. A tag fontosabb attribútumai:</p>
+<p>Ha egy weboldalra egy képet szeretnénk beszúrni, akkor ezt az <code>&lt;img/&gt;</code> páratlan taggel tudjuk megtenni. A tag fontosabb attribútumai:</p>
 <ul>
 <li><code>src</code>: a kép elérési útvonala</li>
 <li><code>alt</code>: helyettesítő szöveg, ha a kép betöltése sikertelen</li>
@@ -1146,8 +1146,8 @@
 <p><img alt="A kód kimenete" src="../img/gyak01/img-example.png" /></p>
 <h5 id="az-id-es-class-attributumok">Az id és class attribútumok<a class="headerlink" href="#az-id-es-class-attributumok" title="Permanent link">&para;</a></h5>
 <p>Minden HTML objektumnak adható egyedi azonosító, illetve minden HTML objektum csoportosítható osztályokba. Ezek alapvetően majd CSS-ben lesznek hasznosak, amikor egy-egy objektumra vagy objektumok csoportjára szeretnénk hivatkozni.</p>
-<p>Az <strong>egyedi azonosító</strong> (<code>id</code> attribútum) egy adott HTML elem azonosítására szolgál. Értéke a dokumentumon belül szabályosan egyedi kell, hogy legyen, emellett az attribútum értéke nem tartalmazhat szóközt.</p>
-<p>Az <strong>osztály</strong> (<code>class</code> attribútum) jellemzően több HTML elem csoportosítására használatos. A <code>class</code> attribútum értéke nem kell, hogy egyedi legyen (sőt általában nem az). Értékéül szóközzel elválasztva megadható több osztály neve is, amihez az adott elem tartozik.</p>
+<p>Az <strong>egyedi azonosító</strong> (<code>id</code> attribútum) egy adott HTML elem azonosítására szolgál. Értéke a dokumentumon belül szabályosan egyedi kell, hogy legyen, továbbá ez az érték nem tartalmazhat szóközt.</p>
+<p>Az <strong>osztály</strong> (<code>class</code> attribútum) jellemzően több HTML elem csoportosítására használatos. A <code>class</code> attribútum értéke nem kell, hogy egyedi legyen, sőt általában nem is az. Értékéül szóközzel elválasztva megadható több olyan osztály neve is, amelyekhez az adott elem tartozik.</p>
 <p><span class="example">Példa:</span> <code>id</code> és <code>class</code> attribútumok használata</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1242,9 +1242,9 @@
 
 <h5 id="szakaszok">Szakaszok<a class="headerlink" href="#szakaszok" title="Permanent link">&para;</a></h5>
 <p>HTML-ben lehetőségünk van a weboldal tartalmának strukturálására is. Ezt szakaszok, tartalmi egységek kialakításával tehetjük meg.</p>
-<p>A <code>&lt;div&gt;...&lt;/div&gt;</code> általános célú <strong>blokkszintű (block)</strong> szakasz. A blokkszintű elemek mindig új sorban kezdődnek, és kihasználják a rendelkezésre álló szélességet.</p>
+<p>A <code>&lt;div&gt;...&lt;/div&gt;</code> általános célú <strong>blokkszintű (block)</strong> szakasz. A blokkszintű elemek mindig új sorban kezdődnek, és kihasználják a teljes rendelkezésre álló szélességet.</p>
 <p>A <code>&lt;span&gt;...&lt;/span&gt;</code> átalános célú <strong>sorszintű (inline)</strong> szakasz. A sorszintű elemek nem kezdődnek új sorban, illetve szélességük csak akkora, mint amekkora helyre szükségük van.</p>
-<p><span class="example">Példa:</span> A <code>&lt;span&gt;</code> és <code>&lt;div&gt;</code> tagek használata (a kód kimenetében a szemléletesség kedvéért világoskék háttérrel jelöltük a két tag által létrehozott szakaszokat)</p>
+<p><span class="example">Példa:</span> A <code>&lt;span&gt;</code> és <code>&lt;div&gt;</code> tagek használata - A kód kimenetében a szemléletesség kedvéért világoskék háttérrel jelöltük a két tag által létrehozott szakaszokat</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1276,7 +1276,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-12 17:02:48
+      Utolsó frissítés: 2021-01-14 17:27:52
     
   </small>
 </div>
