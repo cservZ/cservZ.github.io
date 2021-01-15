@@ -858,7 +858,7 @@
 <h4 id="html-kod-irasa">HTML kód írása<a class="headerlink" href="#html-kod-irasa" title="Permanent link">&para;</a></h4>
 <p>A HTML kód írása roppant egyszerű:</p>
 <ul>
-<li>a kódot tetszőleges szerkesztőprogramba írjuk (pl. Gedit, Notepad++, Sublime Text, Webstorm, Visual Studio Code stb.)</li>
+<li>a kódot egy tetszőleges szerkesztőprogramba írjuk (pl. Gedit, Notepad++, Sublime Text, WebStorm, Visual Studio Code stb.)</li>
 <li>az állományt <code>.html</code> kiterjesztéssel mentjük el</li>
 <li>végül a fájlt megnyitjuk egy szimpatikus böngészővel, és már láthatjuk is az eredményt.</li>
 </ul>
@@ -906,7 +906,7 @@
 <p><img alt="Validátor hibák és figyelmeztetések" src="../img/gyak01/validator.png" /></p>
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
-<p>A beadandó projekt szabványossága is egyszerűen ellenőrizhető a validátor segítségével.</p>
+<p>A beadandó projekt szabványossága egyszerűen ellenőrizhető a validátor segítségével.</p>
 </div>
 <h4 id="html-alapfogalmak">HTML alapfogalmak<a class="headerlink" href="#html-alapfogalmak" title="Permanent link">&para;</a></h4>
 <h5 id="tagek">Tagek<a class="headerlink" href="#tagek" title="Permanent link">&para;</a></h5>
@@ -1008,7 +1008,7 @@
 <li><code>&lt;script&gt;...&lt;/script&gt;</code>: JavaScript beszúrása</li>
 </ul>
 <h4 id="a-body-fontosabb-tagjei">A body fontosabb tagjei<a class="headerlink" href="#a-body-fontosabb-tagjei" title="Permanent link">&para;</a></h4>
-<p>Az alábbiakban megismerkedünk néhány, a HTML dokumentum törzsrészében (<code>&lt;body&gt;</code> és <code>&lt;/body&gt;</code> között) használatos taggel.</p>
+<p>Ebben a részben megismerkedünk néhány, a HTML dokumentum törzsrészében (<code>&lt;body&gt;</code> és <code>&lt;/body&gt;</code> között) használatos taggel.</p>
 <h5 id="bekezdesek-cimsorok">Bekezdések, címsorok<a class="headerlink" href="#bekezdesek-cimsorok" title="Permanent link">&para;</a></h5>
 <ul>
 <li><code>&lt;p&gt;...&lt;/p&gt;</code>: bekezdés</li>
@@ -1147,7 +1147,7 @@
 <h5 id="az-id-es-class-attributumok">Az id és class attribútumok<a class="headerlink" href="#az-id-es-class-attributumok" title="Permanent link">&para;</a></h5>
 <p>Minden HTML objektumnak adható egyedi azonosító, illetve minden HTML objektum csoportosítható osztályokba. Ezek alapvetően majd CSS-ben lesznek hasznosak, amikor egy-egy objektumra vagy objektumok csoportjára szeretnénk hivatkozni.</p>
 <p>Az <strong>egyedi azonosító</strong> (<code>id</code> attribútum) egy adott HTML elem azonosítására szolgál. Értéke a dokumentumon belül szabályosan egyedi kell, hogy legyen, továbbá ez az érték nem tartalmazhat szóközt.</p>
-<p>Az <strong>osztály</strong> (<code>class</code> attribútum) jellemzően több HTML elem csoportosítására használatos. A <code>class</code> attribútum értéke nem kell, hogy egyedi legyen, sőt általában nem is az. Értékéül szóközzel elválasztva megadható több olyan osztály neve is, amelyekhez az adott elem tartozik.</p>
+<p>Az <strong>osztály</strong> (<code>class</code> attribútum) jellemzően több HTML elem csoportosítására használatos. A <code>class</code> attribútum értéke nem kell, hogy egyedi legyen, sőt általában nem az. Értékéül szóközzel elválasztva megadható több olyan osztály neve is, amelyekhez az adott elem tartozik.</p>
 <p><span class="example">Példa:</span> <code>id</code> és <code>class</code> attribútumok használata</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1242,9 +1242,9 @@
 
 <h5 id="szakaszok">Szakaszok<a class="headerlink" href="#szakaszok" title="Permanent link">&para;</a></h5>
 <p>HTML-ben lehetőségünk van a weboldal tartalmának strukturálására is. Ezt szakaszok, tartalmi egységek kialakításával tehetjük meg.</p>
-<p>A <code>&lt;div&gt;...&lt;/div&gt;</code> általános célú <strong>blokkszintű (block)</strong> szakasz. A blokkszintű elemek mindig új sorban kezdődnek, és kihasználják a teljes rendelkezésre álló szélességet.</p>
-<p>A <code>&lt;span&gt;...&lt;/span&gt;</code> átalános célú <strong>sorszintű (inline)</strong> szakasz. A sorszintű elemek nem kezdődnek új sorban, illetve szélességük csak akkora, mint amekkora helyre szükségük van.</p>
-<p><span class="example">Példa:</span> A <code>&lt;span&gt;</code> és <code>&lt;div&gt;</code> tagek használata - A kód kimenetében a szemléletesség kedvéért világoskék háttérrel jelöltük a két tag által létrehozott szakaszokat</p>
+<p>A <code>&lt;div&gt;...&lt;/div&gt;</code> egy általános célú <strong>blokkszintű (block)</strong> szakasz. A blokkszintű elemek mindig új sorban kezdődnek, és kihasználják a teljes rendelkezésre álló szélességet.</p>
+<p>A <code>&lt;span&gt;...&lt;/span&gt;</code> egy átalános célú <strong>sorszintű (inline)</strong> szakasz. A sorszintű elemek nem kezdődnek új sorban, illetve szélességük csak akkora, mint amekkora helyre szükségük van.</p>
+<p><span class="example">Példa:</span> A <code>&lt;span&gt;</code> és <code>&lt;div&gt;</code> tagek használata - A kód kimenetében a szemléletesség kedvéért világoskék háttérrel jelöltük a két tag által meghatározott szakaszokat</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1276,7 +1276,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-14 17:27:52
+      Utolsó frissítés: 2021-01-15 14:22:19
     
   </small>
 </div>

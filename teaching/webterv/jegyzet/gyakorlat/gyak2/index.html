@@ -1035,7 +1035,7 @@
 </td></tr></table>
 
 <p><img alt="A kód kimenete" src="../img/gyak02/listak-1.png" /></p>
-<p>A fenti listatípusokból készíthetünk akár <strong>többszintű listát</strong> is. Ennek a lényege, hogy egy listaelembe egy másik listát ágyazunk be.</p>
+<p>A fenti listatípusokból készíthetünk <strong>többszintű listát</strong> is. Ennek a lényege, hogy egy listaelembe egy másik listát ágyazunk be.</p>
 <p><span class="example">Példa:</span> Többszintű lista</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1063,8 +1063,8 @@
 
 <p><img alt="A kód kimenete" src="../img/gyak02/listak-3.png" /></p>
 <h4 id="tablazatok">Táblázatok<a class="headerlink" href="#tablazatok" title="Permanent link">&para;</a></h4>
-<p>A <code>&lt;table&gt;...&lt;/table&gt;</code> taggel egy táblázatot szúrhatunk be a weboldalunkra. A táblázat egy sorát a <code>&lt;tr&gt;...&lt;/tr&gt;</code> tag segítségével adhatjuk meg. Az egyes sorokon belül létrehozhatunk fejléccellákat (<code>&lt;th&gt;...&lt;/th&gt;</code>), illetve adatcellákat (<code>&lt;td&gt;...&lt;/td&gt;</code>).</p>
-<p>Ha szeretnénk a táblázatnak címet adni, akkor ezt a <code>&lt;caption&gt;...&lt;/caption&gt;</code> taggel tehetjük meg. Ezt a taget mindig közvetlenül a <code>&lt;table&gt;</code> után kell írnunk.</p>
+<p>A <code>&lt;table&gt;...&lt;/table&gt;</code> taggel egy táblázatot szúrhatunk be a weboldalunkra. A táblázat egy sorát a <code>&lt;tr&gt;...&lt;/tr&gt;</code> tag segítségével adhatjuk meg. Az egyes sorokon belül létrehozhatunk fejléccellákat (<code>&lt;th&gt;...&lt;/th&gt;</code> tag), illetve adatcellákat (<code>&lt;td&gt;...&lt;/td&gt;</code> tag).</p>
+<p>Ha szeretnénk egy táblázatnak címet adni, akkor ezt a <code>&lt;caption&gt;...&lt;/caption&gt;</code> taggel tehetjük meg, amit mindig közvetlenül a <code>&lt;table&gt;</code> után kell írnunk.</p>
 <p><span class="example">Példa:</span> Egy egyszerű táblázat</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1098,11 +1098,7 @@
 </code></pre></div>
 </td></tr></table>
 
-<p>Lehetőségünk van arra is, hogy sor- és oszlopösszevonásokat végezzünk egy táblázatban:</p>
-<ul>
-<li>a celláknak adott <code>rowspan</code> attribútummal megadhatjuk az összevonni kívánt sorok számát</li>
-<li>a <code>colspan</code> attribútummal pedig az összevonni kívánt oszlopok számát adjuk meg.</li>
-</ul>
+<p>Lehetőségünk van arra is, hogy egy táblázatban sor- és oszlopösszevonásokat végezzünk: a celláknak adott <code>rowspan</code> attribútummal megadhatjuk az összevonni kívánt sorok számát, a <code>colspan</code> attribútummal pedig az összevonni kívánt oszlopok számát.</p>
 <p>Azt is meg tudjuk mondani, hogy egy táblázatcella mely fejléccellá(k)hoz tartozik. Ezt a következőképpen tehetjük meg:</p>
 <ul>
 <li>a fejléccelláknak adunk egy-egy <code>id</code> attribútumot (egyedi azonosítót)</li>
@@ -1153,13 +1149,13 @@
 </code></pre></div>
 </td></tr></table>
 
-<p>A HTML táblázatok sorait lehetőségünk van 3 fő egységre bontani:</p>
+<p>A HTML táblázatok sorait 3 fő egységre bonthatjuk:</p>
 <ul>
 <li><code>&lt;thead&gt;...&lt;/thead&gt;</code>: fejlécsorok csoportja</li>
 <li><code>&lt;tbody&gt;...&lt;/tbody&gt;</code>: adatsorok csoportja, a táblázat törzse</li>
 <li><code>&lt;tfoot&gt;...&lt;/tfoot&gt;</code>: láblécsorok csoportja.</li>
 </ul>
-<p>A fenti tagek használata opcionális, nem kötelező. Használatuk esetén, ha papírra nyomtatjuk ki a weboldal tartalmát, akkor a hosszabb, több lapon átívelő táblázatok esetén a <code>&lt;thead&gt;</code> és a <code>&lt;tfoot&gt;</code> minden nyomtatott oldalon megjelenik.</p>
+<p>A fenti tagek használata opcionális, nem kötelező. Használatuk esetén, ha papírra nyomtatjuk ki a weboldal tartalmát, akkor a hosszabb, több lapon átívelő táblázatoknál a <code>&lt;thead&gt;</code> és a <code>&lt;tfoot&gt;</code> minden nyomtatott oldalon megjelenik.</p>
 <p>Ha szeretnénk a táblázat oszlopait csoportosítani (pl. formázás céljából), akkor ezt a <code>&lt;colgroup&gt;...&lt;/colgroup&gt;</code> taggel tehetjük meg. Ezt közvetlenül a <code>&lt;caption&gt;</code> után (ha van caption) és a <code>&lt;thead&gt;</code> elé (ha van thead) írjuk. Az oszlopcsoportosításon belül a <code>&lt;col/&gt;</code> páratlan tag jelöl egy oszlopot. Ha egyszerre több, mondjuk <code>N</code> darab oszlopot szeretnénk kijelölni a csoportosításban, akkor ezt a <code>&lt;col span="N"/&gt;</code> segítségével tudjuk megtenni.</p>
 <p><span class="example">Példa:</span> Az előző táblázat kiegészítése a sorok és oszlopok csoportosításával</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1230,7 +1226,7 @@
 
 <p><img alt="A kód kimenete" src="../img/gyak02/tablazatok.png" /></p>
 <h3 id="css-alapok">CSS alapok<a class="headerlink" href="#css-alapok" title="Permanent link">&para;</a></h3>
-<p>Az eddigiek során tárgyalt HTML nyelvet a weboldal tartalmának kialakítására és strukturálására használtuk. Ha a tartalmat formázni is szeretnénk, akkor ezt <strong>CSS</strong> (Cascading Style Sheets) segítségével tudjuk megtenni.</p>
+<p>Az eddigiek során tárgyalt HTML nyelvet a weboldal tartalmának kialakítására és strukturálására használtuk. Ha a tartalmat formázni is szeretnénk, akkor a <strong>CSS</strong>-re (Cascading Style Sheets) lesz szükségünk.</p>
 <h4 id="szintaxis">Szintaxis<a class="headerlink" href="#szintaxis" title="Permanent link">&para;</a></h4>
 <p>A CSS utasítások szintaxisa a következőképpen néz ki:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1275,14 +1271,14 @@
 <span class="c">/* egy összetettebb szelektor */</span>
 
 <span class="p">#</span><span class="nn">main-content</span> <span class="p">.</span><span class="nc">centered</span> <span class="p">{</span>
-  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>               <span class="c">/* vízszintesen középre igazítás */</span>     
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>               <span class="c">/* szöveg vízszintesen középre igazítása */</span>     
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 
 <h4 id="css-beagyazasa">CSS beágyazása<a class="headerlink" href="#css-beagyazasa" title="Permanent link">&para;</a></h4>
 <p>Egy HTML kódba többféleképpen is beágyazhatunk CSS formázásokat.</p>
-<p><strong>Inline CSS</strong> esetén a tagek <code>style</code> attribútumának értékeként adjuk meg a CSS utasításokat. Ekkor a formázás mindig csak az adott objektumra lesz érvényes.</p>
+<p><strong>Inline CSS</strong> esetén a tagek <code>style</code> attribútumának értékeként adjuk meg a CSS formázást. Ekkor a formázás mindig csak az adott objektumra lesz érvényes.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: blue;&quot;</span><span class="p">&gt;</span>I&#39;m blue da ba dee da ba die...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
@@ -1487,7 +1483,7 @@
 
 <p><img alt="A kód kimenete" src="../img/gyak02/css-szovegek.png" /></p>
 <h4 id="a-dobozmodell">A dobozmodell<a class="headerlink" href="#a-dobozmodell" title="Permanent link">&para;</a></h4>
-<p>Minden HTML objektum felfogható egy téglalap alakú dobozként. CSS-ben gyakran használjuk a <strong>dobozmodell</strong> fogalmat, amikor elemek elrendezéséről és dizájnolásáról beszélünk. Nézzük meg az alábbi ábrán, hogy mik is ennek a dobozmodellnek a részei!</p>
+<p>Minden HTML objektum felfogható egy téglalap alakú dobozként. CSS-ben gyakran használjuk a <strong>dobozmodell</strong> fogalmat, amikor elemek elrendezéséről és dizájnolásáról beszélünk. Nézzük meg az alábbi ábrán, hogy mik is ennek a "doboznak" a részei!</p>
 <p><img alt="CSS dobozmodell" src="../img/gyak02/css-dobozmodell.png" /></p>
 <ul>
 <li>A <code>content</code> jelenti a doboz tartalmát, ami általában az elem szöveges tartalma vagy egy kép.</li>
@@ -1591,7 +1587,7 @@
 </td></tr></table>
 
 <h5 id="szegelyek-megadasa">Szegélyek megadása<a class="headerlink" href="#szegelyek-megadasa" title="Permanent link">&para;</a></h5>
-<p>A HTML elem körüli szegélyek beállítására a <code>border</code> CSS tulajdonság szolgál. Ennek értékeként 3 paramétert adunk meg: rendre a szegély vastagságát, stílusát és színét. Ezeket egyébként külön-külön is megadhatjuk a <code>border-width</code>, <code>border-style</code> és <code>border-color</code> tulajdonságokkal.</p>
+<p>A HTML elem körüli szegélyek megadására a <code>border</code> CSS tulajdonság szolgál. Ennek értékeként 3 paramétert adunk meg: rendre a szegély vastagságát, stílusát és színét. Ezeket egyébként külön-külön is megadhatjuk a <code>border-width</code>, <code>border-style</code> és <code>border-color</code> tulajdonságokkal.</p>
 <p>A szegély vastagsága (<code>border-width</code>) lehet a <code>thin</code> (vékony), <code>medium</code> (közepes) és <code>thick</code> (vastag) kulcsszavak valamelyike, de ha ennél pontosabbak szeretnénk lenni, akkor akár pixelben is megadhatjuk a szegélyvastagságot.</p>
 <p>A szegély stílusának (<code>border-style</code>) értéke lehet <code>solid</code> (folytonos), <code>dashed</code> (szaggatott), <code>dotted</code> (pontozott), <code>double</code> (dupla), <code>groove</code> (faragott), <code>ridge</code> (kidomborodó), <code>outset</code> (kiemelkedő), <code>inset</code> (süllyesztett), <code>none</code> (nincs szegély) vagy <code>hidden</code> (rejtett).</p>
 <p>Ha nem szeretnénk minden irányból szegélyt adni egy objektumnak, akkor a <code>border-top</code>, <code>border-right</code>, <code>border-bottom</code> és <code>border-left</code> tulajdonságokkal külön-külön is megadhatjuk a felső, jobb, alsó és bal szegélyek értékét.</p>
@@ -1617,14 +1613,14 @@
 </td></tr></table>
 
 <h4 id="a-hatter-formazasa">A háttér formázása<a class="headerlink" href="#a-hatter-formazasa" title="Permanent link">&para;</a></h4>
-<p>Ebben a részben megismerkedünk néhány fontosabb, a háttér formázásával kapcsolatos CSS tulajdonsággal.</p>
+<p>Ebben a részben megismerünk néhány fontosabb CSS tulajdonságot, amelyet a háttér formázására használhatunk.</p>
 <ul>
 <li><code>background-color</code>: háttérszín<ul>
 <li>értékeként megadható egy szín vagy a <code>transparent</code> (átlátszó) kulcsszó</li>
 </ul>
 </li>
 <li><code>background-image</code>: háttérkép<ul>
-<li>a háttérként beállítani kívánt kép elérési útvonalát az <code>url('elérési_útvonal')</code> segítségével adjuk meg</li>
+<li>a beállítani kívánt háttérkép elérési útvonalát az <code>url('elérési_útvonal')</code> segítségével adjuk meg</li>
 </ul>
 </li>
 <li><code>background-repeat</code>: háttérkép ismétlődése<ul>
@@ -1636,7 +1632,7 @@
 <li>a vízszintes pozíció értékei: <code>left</code> (bal), <code>right</code> (jobb), <code>center</code> (középre)</li>
 <li>a függőleges pozíció értékei: <code>top</code> (fent), <code>bottom</code> (lent), <code>center</code> (középre)</li>
 <li>a fenti kulcsszavak helyett megadhatók százalékos értékek is a pozíciók helyén</li>
-<li>nem kötelező mindkét értéket megadni (ha elhagyjuk a második paramétert, akkor függőlegesen középre lesz pozícionálva az elem)</li>
+<li>nem kötelező mindkét értéket megadni (ha elhagyjuk a második paramétert, akkor függőlegesen középre lesz pozicionálva az elem)</li>
 </ul>
 </li>
 </ul>
@@ -1791,7 +1787,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-14 16:34:20
+      Utolsó frissítés: 2021-01-15 14:22:19
     
   </small>
 </div>
