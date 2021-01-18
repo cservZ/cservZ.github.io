@@ -819,7 +819,7 @@
 <p><img alt="A kód kimenete" src="../img/gyak05/canvas-example.png" /></p>
 <h3 id="a-css-tovabbi-lehetosegei">A CSS további lehetőségei<a class="headerlink" href="#a-css-tovabbi-lehetosegei" title="Permanent link">&para;</a></h3>
 <h4 id="a-z-index-tulajdonsag">A z-index tulajdonság<a class="headerlink" href="#a-z-index-tulajdonsag" title="Permanent link">&para;</a></h4>
-<p>A HTML elemek pozicionálásakor előfordulhat, hogy bizonyos elemek takarják egymást. Alapértelmezett módon az egymást takaró elemek közül mindig a kódban később szereplő HTML objektum kerül előtérbe.</p>
+<p>A HTML elemek pozicionálásakor előfordulhat, hogy bizonyos elemek takarják egymást. Alapértelmezett módon az egymást takaró HTML objektumok közül mindig a kódban később szereplő elem kerül előtérbe.</p>
 <p>Az elemek mélységi sorrendjét a <code>z-index</code> CSS tulajdonsággal szabályozhatjuk. Ennek értéke tetszőleges egész szám lehet (akár negatív szám is). Ekkor az egymást takaró elemek közül az kerül előtérbe, amelynek nagyobb a z-index értéke. Az azonos z-index értékkel rendelkező elemek esetén a kódban később szereplő elem fogja takarni a másikat.</p>
 <p><span class="example">Példa:</span> A <code>z-index</code> tulajdonság használata</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1123,10 +1123,10 @@
 <h4 id="attunesek">Áttűnések<a class="headerlink" href="#attunesek" title="Permanent link">&para;</a></h4>
 <p>A 3. gyakorlaton említettük, hogy a HTML objektumoknak különböző állapotai lehetnek (pl. ha az objektum fölé visszük az egeret, vagy ha az objektumra kattintunk). Az áttűnések segítségével az egyes állapotok közötti átmeneteket befolyásolhatjuk. </p>
 <p>CSS-ben áttűnéseket a <code>transition</code> tulajdonsággal készíthetünk. Értékéül két jellemzőt kell megadnunk: a CSS tulajdonságot, ami az áttűnés során megváltozik, valamint az áttűnéshez szükséges időt (másodpercben). A <code>transition</code> tulajdonság értékéül több átmenet is megadható, vesszővel elválasztva.</p>
-<p>A <code>transition-timing-function</code> tulajdonsággal az átmenet lefolyásának típusát is beállíthatjuk:</p>
+<p>A <code>transition-timing-function</code> tulajdonsággal az átmenet időbeli lefolyásának jellemzőjét is beállíthatjuk:</p>
 <ul>
-<li><code>linear</code>: egyenletes állapotváltás</li>
-<li><code>ease</code>: fokozatosan lassuló állapotváltás</li>
+<li><code>ease</code>: kezdetben lassú, majd gyors, végül pedig ismét lassú állapotváltás</li>
+<li><code>linear</code>: egyenletes sebességű állapotváltás</li>
 <li><code>ease-in</code>: gyorsuló állapotváltás</li>
 <li><code>ease-out</code>: lassuló állapotváltás</li>
 <li><code>ease-in-out</code>: gyorsuló, majd lassuló állapotváltás.</li>
@@ -1216,7 +1216,11 @@
 <li>értékéül megadható egy szám vagy az <code>infinite</code> (végtelen) kulcsszó</li>
 </ul>
 </li>
-<li><code>animation-timing-function</code>: az animáció iránya<ul>
+<li><code>animation-timing-function</code>: az animáció időbeli lefolyásának jellemzői<ul>
+<li>a <code>transition-timing-function</code>-nál felsorolt értékek itt is használhatók</li>
+</ul>
+</li>
+<li><code>animation-direction</code>: az animáció iránya<ul>
 <li><code>normal</code>: az animáció előrefelé lesz lejátszva (alapértelmezett)</li>
 <li><code>reverse</code>: az animáció visszafelé lesz lejátszva</li>
 <li><code>alternate</code>: az animáció először előrefelé, majd visszafelé lesz lejátszva</li>
@@ -1224,7 +1228,7 @@
 </li>
 <li>a fenti tulajdonságok összevonva is megadhatók: <code>animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction]</code>.</li>
 </ul>
-<p><span class="example">Példa:</span> Folyamatosan váltakozó háttérszín, és beúszás effektus megvalósítása animációkkal (A kód működése kipróbálható <a href="https://www.w3schools.com/code/tryit.asp?filename=GMR1SXRR0HCG">itt</a>)</p>
+<p><span class="example">Példa:</span> Folyamatosan váltakozó háttérszín, és beúszás effektus megvalósítása animációkkal (A kód működése kipróbálható <a href="https://www.w3schools.com/code/tryit.asp?filename=GMS96HOHA41S">itt</a>)</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1292,7 +1296,7 @@
         <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span> <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
         <span class="k">background-color</span><span class="p">:</span> <span class="kc">purple</span><span class="p">;</span> <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
         <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span> <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-        <span class="k">animation</span><span class="p">:</span> <span class="n">beuszas</span> <span class="mf">2.5</span><span class="kt">s</span> <span class="kc">forwards</span><span class="p">;</span>       <span class="c">/* összevont megadás */</span>
+        <span class="k">animation</span><span class="p">:</span> <span class="n">beuszas</span> <span class="mf">2.5</span><span class="kt">s</span> <span class="kc">linear</span> <span class="mi">0</span><span class="kt">s</span> <span class="mi">1</span> <span class="kc">normal</span><span class="p">;</span> <span class="c">/* összevont megadás */</span>
       <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -1449,7 +1453,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-18 13:15:37
+      Utolsó frissítés: 2021-01-18 20:24:34
     
   </small>
 </div>
