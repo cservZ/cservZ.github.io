@@ -747,7 +747,7 @@
 <p><span class="example">Példa:</span> Egy HTTP kérés és egy HTTP válasz felépítése</p>
 <p><img alt="HTTP üzenetek" src="../img/gyak06/http-messages-example.png" /></p>
 <p>A különböző <strong>HTTP metódusok</strong> közül leggyakrabban a GET-et és POST-ot használjuk a HTTP kérésekben. A GET kérésekkel egy erőforrást tudunk elkérni a szervertől, míg a POST kérésekkel adatot továbbíthatunk a kiszolgáló felé (pl. egy kitöltött űrlap adatait). A POST kérések esetén a szervernek továbbított adatok a HTTP üzenet törzsébe kerülnek. Ezeken kívül léteznek még további HTTP metódusok is, ezeknek a listája és leírása megtalálható <a href="https://www.tutorialspoint.com/http/http_methods.htm">itt</a>.</p>
-<p>Ami lényeges még számunkra, az a HTTP válaszban szereplő <strong>státuszkód</strong>. Néhány fontosabb HTTP státuszkód (teljes lista <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">itt</a>):</p>
+<p>Ami lényeges még számunkra, az a HTTP válaszban szereplő <strong>státuszkód</strong>. Néhány fontosabb HTTP státuszkód és jelentésük (teljes lista <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">itt</a>):</p>
 <ul>
 <li><code>200 OK</code>: sikeres kérés, az információk el lettek küldve a válaszban</li>
 <li><code>301 Moved Permanently</code>: a kért erőforrás át lett mozgatva máshova a szerveren</li>
@@ -761,8 +761,8 @@
 <p>A webes kommunikáció során a <strong>HTTPS</strong> protokoll is használható. Ekkor a kliens és a szerver között biztonságos, titkosított kapcsolat jön létre.</p>
 </div>
 <h3 id="kliens-es-szerveroldali-webprogramozas">Kliens- és szerveroldali webprogramozás<a class="headerlink" href="#kliens-es-szerveroldali-webprogramozas" title="Permanent link">&para;</a></h3>
-<p>A korábbi leckékben kliensoldalon tevékenykedtünk: weboldalakat hoztunk létre HTML-ben, majd CSS-ben formáztuk őket. Eddig tehát főként a megjelenésen volt a hangsúly, a weboldalaink nem rendelkeztek semmiféle mögöttes üzleti logikával.</p>
-<p>A webfejlesztés során azonban gyakran felmerül az igény arra, hogy egy weboldal működésébe programozásbeli logikát vigyünk. Például ha van egy bejelentkezési űrlapunk, akkor működést is szeretnénk hozzá társítani: le szeretnénk ellenőrizni, hogy a belépési adatok helyesek-e és ettől függően vagy bejelentkeztetjük a felhasználót, vagy pedig valamilyen hibaüzenetet írunk ki a bejelentkezés sikertelenségéről. Az ehhez hasonló működésbeli logika megvalósítására szolgál a <strong>webprogramozás</strong>.</p>
+<p>A korábbi leckékben kliensoldalon tevékenykedtünk: weboldalakat hoztunk létre és formáztunk, majd az elkészült weblapot a böngészőben nyitottuk meg. Eddig tehát főként a megjelenésen volt a hangsúly, a weboldalaink nem rendelkeztek semmilyen mögöttes üzleti logikával.</p>
+<p>A webfejlesztés során azonban gyakran felmerül az igény arra, hogy egy weboldal működésébe programozásbeli logikát vigyünk. Például ha van egy bejelentkezési űrlapunk, akkor működést is szeretnénk hozzá társítani: le szeretnénk ellenőrizni, hogy a belépési adatok helyesek-e, és ettől függően vagy bejelentkeztetjük a felhasználót, vagy pedig valamilyen hibaüzenetet írunk ki a bejelentkezés sikertelenségéről. Az ehhez hasonló működésbeli logika megvalósítására szolgál a <strong>webprogramozás</strong>.</p>
 <p>Attól függően, hogy az általunk írt webes programok a kliensen vagy a szerveren futnak, beszélhetünk <strong>kliensoldali (front-end)</strong>, illetve <strong>szerveroldali (back-end) webprogramozás</strong>ról. Ezeknek a rövid összehasonlítását tartalmazza az alábbi táblázat.</p>
 <table>
 <thead>
@@ -804,7 +804,7 @@
 <p>A kliensoldali programok esetén mindig tartsuk észben, hogy az általunk írt kód bárki számára látható lesz a weboldal forráskódjában! Ez nem túl szerencsés, ha bizalmas adatokkal (pl. jelszavakkal, bankszámlaszámokkal, online vizsgateszt megoldásaival) dolgozunk. <span class="red"><strong>Ha bizalmas adatokkal dolgozunk, használjunk szerveroldali nyelvet!</strong></span></p>
 <h3 id="php-bevezetes">PHP - Bevezetés<a class="headerlink" href="#php-bevezetes" title="Permanent link">&para;</a></h3>
 <p>A félév hátralévő részében a <strong>PHP</strong> (PHP: Hypertext Preprocessor) nyelvvel fogunk foglalkozni, ami a <strong>szerveroldali programozási nyelv</strong>ek közé tartozik. A PHP kódot egy <strong>PHP értelmező</strong> (más néven: PHP interpreter) értelmezi szerveroldalon. Felhasználói oldalon már csak a kód kimenetét, eredményét láthatjuk.</p>
-<p>A PHP egy régóta jelen lévő programozási nyelv, amit számos különféle célra használhatunk. Néhány főbb alkalmazási terület, a teljesség igénye nélkül:</p>
+<p>A PHP egy régóta jelen lévő programozási nyelv, amit számos különféle célra használhatunk. Néhány főbb alkalmazási területe, a teljesség igénye nélkül:</p>
 <ul>
 <li>dinamikus HTML tartalmak generálása</li>
 <li>HTML űrlapok feldolgozása</li>
@@ -840,13 +840,13 @@
 <li>Navigáljunk el a következő weboldalra: <a href="https://www.apachefriends.org/hu/">https://www.apachefriends.org/hu/</a>!</li>
 <li>Válasszuk ki az operációs rendszerünknek megfelelő letöltési linket!</li>
 <li>A letöltés után telepítsük a szoftvert a telepítési utasítások követésével!</li>
-<li>A telepítést követően nyissuk meg a programot! Ekkor valami ehhez hasonlót kell látnunk:</li>
+<li>A telepítést követően indítsuk el a programot! Ekkor valami ehhez hasonlót kell látnunk:</li>
 </ol>
 <p><img alt="A XAMPP alkalmazás" src="../img/gyak06/xampp.png" /></p>
 <h5 id="php-kod-irasa-es-futtatasa">PHP kód írása és futtatása<a class="headerlink" href="#php-kod-irasa-es-futtatasa" title="Permanent link">&para;</a></h5>
 <p>A PHP kódjainkat tetszőleges szerkesztőprogramba írhatjuk. A forráskódot <code>.php</code> kiterjesztéssel mentjük el a <code>[XAMPP telepítési helye]/xampp/htdocs</code> mappán belül. Ez a mappa a webszerver gyökérkönyvtára: minden, ami ebben található, elérhető lesz a webszerveren keresztül.</p>
-<p>A XAMPP-on belül az <code>Apache</code> felirat melletti <code>Start</code> gombra kattintva indítsuk el a szervert! Miután a szerver elindult (az <code>Apache</code> felirat világoszöld háttérrel jelenik meg), a böngészőben elérhetjük a htdocs mappában található fájlokat a <code>localhost/[fájl elérési útvonala a htdocs mappán belül]</code> URL-címen. A localhost egyébként itt a helyi gépünket jelenti, amelyet a 127.0.0.1 IP-címmel is elérhetünk.</p>
-<p>A leírt folyamat egy ábrán szemléltetve (a képre kattintva nagyobb méretben is megtekinthető):</p>
+<p>A XAMPP-on belül az <code>Apache</code> felirathoz tartozó <code>Start</code> gombra kattintva indítsuk el a szervert! Miután a szerver elindult (az <code>Apache</code> felirat világoszöld háttérrel jelenik meg), a böngészőben elérhetjük a htdocs mappában található fájlokat a <code>localhost/[fájl elérési útvonala a htdocs mappán belül]</code> URL-címen. A localhost egyébként itt a helyi gépünket jelenti, amelyet a 127.0.0.1 IP-címmel is elérhetünk.</p>
+<p>A leírt folyamat egy ábrán szemléltetve (a képre kattintva a kép nagyobb méretben is megtekinthető):</p>
 <p><a href="../img/gyak06/xampp-usage-example.png"><img alt="XAMPP használata" src="../img/gyak06/xampp-usage-example.png" /></a></p>
 <h5 id="egy-gyakori-technikai-problema-megoldasa">Egy gyakori technikai probléma megoldása<a class="headerlink" href="#egy-gyakori-technikai-problema-megoldasa" title="Permanent link">&para;</a></h5>
 <p>A XAMPP telepítése után előfordulhat, hogy a webszervert nem sikerül elindítani. Ennek általában az az oka, hogy valamely másik program (pl. Skype) már használja a kommunikációhoz szükséges portokat. Ebben az esetben át kell konfigurálni a portszámokat.</p>
@@ -857,7 +857,7 @@
 <li>Kattintsunk a második menüpontra, majd a megnyíló konfigurációs fájlban (<code>httpd-ssl.conf</code>) keressünk rá erre: <code>Listen 443</code>! A portszámot itt is írjuk át, például <code>444</code>-re (szükség esetén próbálkozzunk tovább a <code>445</code>, <code>446</code> stb. értékekkel)!</li>
 </ol>
 <p>Az első konfigurációs fájlban a HTTP, a másodikban pedig a HTTPS protokoll által használt portszámokat állítottuk be. </p>
-<p>Ha átállítjuk a szerver által figyelt alapértelmezett portokat, akkor az URL-ben fel kell tüntetnünk az új portot a PHP fájlok megnyitásakor. Például ha a 81-es portra állítottuk át a HTTP által használt portot, akkor a megadandó URL-cím a <code>localhost:81/[fájl elérési útvonala a htdocs mappán belül]</code> lesz.</p>
+<p>Ha átállítjuk a szerver által figyelt alapértelmezett portokat, akkor az URL-ben fel kell tüntetnünk az új portot a szerveren lévő fájlok elérésekor. Például ha a 81-es portra állítottuk át a HTTP által használt portot, akkor a megadandó URL-cím a <code>localhost:81/[fájl elérési útvonala a htdocs mappán belül]</code> lesz.</p>
 <h4 id="az-elso-php-programunk-hello-world">Az első PHP programunk: "Hello World!"<a class="headerlink" href="#az-elso-php-programunk-hello-world" title="Permanent link">&para;</a></h4>
 <p>Ebben a részben elkészítjük a legelső PHP programunkat: egy olyan egyszerű programot, amely kiírja a képernyőre a "Hello World!" szöveget.</p>
 <p>Első lépésben hozzunk létre a kedvenc szerkesztőprogramunkban egy <code>hello.php</code> nevű fájlt, majd mentsük el azt a <code>xampp/htdocs</code> mappába! A .php kiterjesztésű fájlokba nem csak PHP kódot, hanem például HTML kódot is írhatunk, ugyanis a PHP értelmező alapból egy egyszerű szövegnek tekinti a fájl tartalmát. Ezekben a fájlokban PHP utasításokat <code>&lt;?php</code> és <code>?&gt;</code> között adhatunk meg (ilyen PHP blokkból akár több is szerepelhet egy PHP fájlon belül).</p>
@@ -895,7 +895,7 @@
 <p>Azt láthatjuk, hogy a kiadott PHP utasítások (jelen esetben az <code>echo</code>) nem jelennek meg a forráskódban, csupán azok kimenete. Ez különösen hasznos akkor, amikor az üzleti logikát el szeretnénk rejteni a felhasználók elől.</p>
 <h4 id="kulso-fajlok-beagyazasa">Külső fájlok beágyazása<a class="headerlink" href="#kulso-fajlok-beagyazasa" title="Permanent link">&para;</a></h4>
 <p>A PHP lehetőséget biztosít külső fájlok tartalmának beágyazására. Ez különösen hasznos lehet, amikor egy weboldal több lapján is ugyanazt a PHP vagy HTML kódot szeretnénk használni.</p>
-<p>A külső fájlok beágyazására az <code>include</code> és <code>require</code> utasításokat használjuk. Ezeknek a működése nagyon hasonló, csupán abban különböznek, hogy ha nem található a beágyazni kívánt fájl, akkor:</p>
+<p>A külső fájlok beágyazására az <code>include</code> és <code>require</code> utasításokat használjuk. Ezeknek a működése nagyon hasonló, csupán abban különböznek, hogy ha a beágyazni kívánt fájl nem található, akkor:</p>
 <ul>
 <li><code>require</code> használata esetén végzetes hibát kapunk, és a program futása megáll</li>
 <li><code>include</code> használata esetén figyelmeztetést kapunk, és a program fut tovább.</li>
@@ -928,7 +928,7 @@
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">/&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="cp">&lt;?php include_once&quot;header.html&quot;; ?&gt;</span>
+    <span class="cp">&lt;?php include_once &quot;header.html&quot;; ?&gt;</span>
 
     Ide jön valami tartalom...
 
@@ -948,7 +948,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-19 17:33:04
+      Utolsó frissítés: 2021-01-20 09:51:29
     
   </small>
 </div>

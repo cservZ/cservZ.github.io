@@ -841,7 +841,7 @@
 <p>A fenti tagek kivétel nélkül blokkszintű (block) elemek, a <code>&lt;div&gt;</code>-hez hasonlóan.</p>
 <p>Ezek a tagek - az általános célú <code>&lt;div&gt;</code> és <code>&lt;span&gt;</code> tagekkel ellentétben - szemantikai jelentéssel bírnak, tehát egyértelműen meghatározzák a tartalmuk jelentését (pl. egy <code>&lt;header&gt;</code>-ről tudjuk, hogy egy fejlécet jelöl).</p>
 <p>A HTML5-ben bevezetett szemantikus tageket felhasználva precízebben leírhatjuk egy weboldal szerkezetét. Készíthetünk például ezekkel a tagekkel az alábbihoz hasonló elrendezésű weboldalt.</p>
-<p><img alt="HTML5 szemantikus tagek" src="../img/gyak03/html5-szemantikus-tagek.gif" /></p>
+<p><img alt="HTML5 szemantikus tagek" src="../img/gyak03/html5-semantic-tags.gif" /></p>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
 <p>Ahhoz, hogy az ábrán látotthoz hasonló elrendezést kapjunk, a tanult tagek használata önmagában nem elegendő (pl. az <code>&lt;aside&gt;</code> nem fog automatikusan oldalra kerülni). Az elemek helyzetének megadására a CSS-beli pozicionálást használhatjuk.</p>
@@ -953,7 +953,7 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-szelektorok-1.png" /></p>
+<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-1.png" /></p>
 <p><span class="example">Példa:</span> A <code>p ~ p</code> szelektor kijelöl minden olyan bekezdést, amely egy másik bekezdés testvére és valahol a másik bekezdés után található a kódban. A <code>p + p</code> szelektornál még azt is megköveteljük, hogy közvetlenül (azaz rögtön) a másik bekezdés után szerepeljen az elem</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -995,7 +995,7 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-szelektorok-2.png" /></p>
+<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-2.png" /></p>
 <p>A kapcsolat alapján történő kijelölésre használhatunk még úgynevezett <strong>pseudo-class</strong>-okat is, a <code>szelektor:pseudoclass</code> szintaxissal. Ez a szintaxis a <code>szelektor</code> által kijelölt elemek közül kiválaszt minden olyant, amelyre <code>pseudoclass</code> teljesül.</p>
 <p>Nézzünk néhány példát pseudo-class-okra, a teljesség igénye nélkül!</p>
 <ul>
@@ -1109,7 +1109,7 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-szelektorok-3.png" /></p>
+<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-3.png" /></p>
 <h4 id="kijeloles-attributum-alapjan">Kijelölés attribútum alapján<a class="headerlink" href="#kijeloles-attributum-alapjan" title="Permanent link">&para;</a></h4>
 <p>A HTML elemeket attribútumaik alapján is ki tudjuk jelölni CSS-ben. A két legalapvetőbb szelektortípus erre a célra:</p>
 <ul>
@@ -1155,7 +1155,7 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-szelektorok-4.png" /></p>
+<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-4.png" /></p>
 <h4 id="kijeloles-allapot-alapjan">Kijelölés állapot alapján<a class="headerlink" href="#kijeloles-allapot-alapjan" title="Permanent link">&para;</a></h4>
 <p>A CSS arra is biztosít lehetőséget, hogy állapotuk alapján jelöljünk ki HTML elemeket. Az ilyen kijelöléseket pseudo-class-ok segítségével fogjuk megvalósítani.</p>
 <p>Az állapot alapján történő kijelölésre talán a legszemléletesebb példa a hivatkozások (linkek) állapotai. Egy hivatkozásnak összesen 4 állapota lehet, amelyekre a következőképpen hivatkozhatunk CSS-ben:</p>
@@ -1380,7 +1380,7 @@
 </code></pre></div>
 </td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/tablazatok.png" /></p>
+<p><img alt="A kód kimenete" src="../img/gyak03/css-tables.png" /></p>
 <h4 id="a-box-sizing-tulajdonsag">A box-sizing tulajdonság<a class="headerlink" href="#a-box-sizing-tulajdonsag" title="Permanent link">&para;</a></h4>
 <p>Ha egy másik objektumon belül elhelyezkedő elem méretét százalékban adjuk meg, akkor előfordulhat, hogy a következő jelenséggel találjuk szembe magunkat:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1580,7 +1580,7 @@
 <li><code>fixed</code>: az elem gördítéskor is rögzített helyen marad.</li>
 </ul>
 <p>Az elemek függőleges pozicionálására a <code>top</code> és <code>bottom</code>, míg vízszintes pozicionálásra a <code>left</code> és <code>right</code> CSS tulajdonságokat használhatjuk. A <code>static</code> módon pozicionált elemek esetén ezeknek az utasításoknak nincs hatása!</p>
-<p><span class="example">Példa:</span> A <code>position</code> tulajdonság használata</p>
+<p><span class="example">Példa:</span> A <code>position</code> tulajdonság használata (a kód működése kipróbálható <a href="https://www.w3schools.com/code/tryit.asp?filename=GMUARYUVT5EK">itt</a>)</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1690,7 +1690,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-15 17:48:52
+      Utolsó frissítés: 2021-01-20 09:51:29
     
   </small>
 </div>
