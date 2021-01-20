@@ -118,7 +118,7 @@ h3.heading {
 	width: 100%;
 	max-width: 100%;
 	position: absolute;
-	top: 40%;
+	top: 43.5%;
 	z-index: 1;
 	margin: auto;
 	color: #fff;
@@ -145,8 +145,15 @@ h3.heading {
 	padding-bottom: .8rem;
 }
 
-.profile .email {
-	font-family: monospace;
+#about {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+svg.svg-inline--fa {
+	color: #1EBBA3;
+	margin-top: .8rem;
+	margin-bottom: .8rem;
 }
 
 /* === TEACHING SECTION === */
