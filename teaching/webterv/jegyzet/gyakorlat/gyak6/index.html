@@ -901,6 +901,10 @@
 <li><code>include</code> használata esetén figyelmeztetést kapunk, és a program fut tovább.</li>
 </ul>
 <p>A többszörös (esetleg végtelen) beágyazások elkerülésére használhatók az <code>include_once</code> és <code>require_once</code> utasítások. Ezek viselkedése az <code>include</code> és a <code>require</code> működéséhez hasonló, azzal a fontos különbséggel, hogy ha már korábban beágyazták a fájlt, akkor nem ágyazzák be azt még egyszer.</p>
+<div class="admonition note">
+<p class="admonition-title">Megjegyzés</p>
+<p>A külső fájlok beágyazására szolgáló utasításokat zárójelekkel is használhatjuk (<code>include()</code>, <code>require()</code>, <code>include_once()</code>, <code>require_once()</code>).</p>
+</div>
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
 <p>Ha sok beágyazandó fájllal van dolgunk, érdemes lehet őket egy külön könyvtárba szervezni, majd hozzáadni a könyvtárat az include path-hoz a következő utasítással: <code>set_include_path("könyvtár elérési útvonala");</code>.</p>
@@ -948,7 +952,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-20 09:51:29
+      Utolsó frissítés: 2021-01-22 16:26:08
     
   </small>
 </div>

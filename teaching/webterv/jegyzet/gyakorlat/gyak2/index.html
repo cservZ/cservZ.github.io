@@ -1394,8 +1394,8 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">A decimális és hexadecimális RGB-kódokról részletesebben</p>
-<p>Az <strong>additív színkeverés</strong> a vörös (<strong>R</strong>ed), zöld (<strong>G</strong>reen) és kék (<strong>B</strong>lue) alapszínekkel dolgozik, és ezekből kever ki különböző színeket. Az RGB-kód (a decimális és hexadecimális RGB-kód is) azt kódolja, hogy az egyes alapszínekből rendre mekkora mennyiséget használtunk fel egy adott szín kikeveréséhez.</p>
-<p>A <strong>decimális RGB-kód</strong>nál mindhárom szín mennyisége 0 és 255 közötti lehet. Például az <code>rgb(0, 0, 255)</code> az jelenti, hogy a vörös (Red) szín mennyisége 0, a zöld (Green) szín mennyisége szintén 0, a kék (Blue) szín mennyisége pedig a maximális 255 (tehát ez a színkód éppen a kék színt kódolja). Az egyes színek mennyiségét itt megadhatjuk százalékosan is, ekkor értelemszerűen 0% és 100% közötti értékeket írunk mindenhova. Például százalékos megadás esetén a kék szín kódja a következő lesz: <code>rgb(0%, 0%, 100%)</code>.</p>
+<p>Az <strong>additív színkeverés</strong> a vörös (<strong>R</strong>ed), zöld (<strong>G</strong>reen) és kék (<strong>B</strong>lue) alapszínekkel dolgozik, és ezekből kever ki különböző színeket. Az RGB-kód (a decimális és hexadecimális RGB-kód is) azt kódolja, hogy a három alapszínből rendre mekkora mennyiséget használtunk fel egy adott szín kikeveréséhez.</p>
+<p>A <strong>decimális RGB-kód</strong>nál mindhárom alapszín mennyisége 0 és 255 közötti lehet. Például az <code>rgb(0, 0, 255)</code> azt jelenti, hogy a vörös (Red) szín mennyisége 0, a zöld (Green) szín mennyisége szintén 0, a kék (Blue) szín mennyisége pedig a maximális 255 - tehát ez a színkód éppen a kék színt kódolja. Az alapszínek mennyiségét megadhatjuk százalékosan is, ekkor értelemszerűen 0% és 100% közötti értékeket írunk mindenhova. Például százalékos megadás esetén a kék szín kódja a következő lesz: <code>rgb(0%, 0%, 100%)</code>.</p>
 <p>A <strong>hexadecimális RGB-kód</strong> is pontosan ugyanígy működik, csak talán első ránézésre ez nem annyira világos. A hexadecimális RGB-kódban <code>#</code> (kettős kereszt) után 6 darab, tizenhatos számrendszerbeli számjegyet adunk meg (tehát minden számjegy 0 és F (= 15) közötti). Az első két számjegy a vörös (Red), a második kettő a zöld (Green), az utolsó kettő pedig a kék (Blue) szín mennyiségét kódolja. Például a <code>#0000FF</code> a kék színt kódolja, hiszen a vörös és zöld mennyisége 0, a kék mennyisége pedig a maximális (FF).</p>
 <ul>
 <li>Ha az adott (vörös, zöld vagy kék) színhez tartozó 2 számjegy megegyezik, akkor ezt rövidítve is írhatjuk. Például <code>#0066FF</code> helyett azt is írhatjuk, hogy <code>#06F</code>.</li>
@@ -1483,7 +1483,7 @@
 
 <p><img alt="A kód kimenete" src="../img/gyak02/css-texts.png" /></p>
 <h4 id="a-dobozmodell">A dobozmodell<a class="headerlink" href="#a-dobozmodell" title="Permanent link">&para;</a></h4>
-<p>Minden HTML objektum felfogható egy téglalap alakú dobozként. CSS-ben gyakran használjuk a <strong>dobozmodell</strong> fogalmat, amikor elemek elrendezéséről és dizájnolásáról beszélünk. Nézzük meg az alábbi ábrán, hogy mik is ennek a "doboznak" a részei!</p>
+<p>Minden HTML objektum felfogható egy téglalap alakú dobozként. CSS-ben gyakran használjuk a <strong>dobozmodell</strong> fogalmat, amikor elemek elrendezéséről és dizájnolásáról beszélünk. Az alábbi ábrán láthatjuk ennek a dobozmodellnek a részeit.</p>
 <p><img alt="CSS dobozmodell" src="../img/gyak02/css-box-model.png" /></p>
 <ul>
 <li>A <code>content</code> jelenti a doboz tartalmát, ami általában az elem szöveges tartalma vagy egy kép.</li>
@@ -1495,7 +1495,7 @@
 <p>Miután megismertük a CSS dobozmodellt, beszélhetünk a HTML elemek méretéről (szélességéről és magasságáról).</p>
 <p>Egy elem szélességét a <code>width</code>, magasságát pedig a <code>height</code> CSS tulajdonsággal adhatjuk meg. Ezek értékeként megadható a fentebb tárgyalt abszolút és relatív hosszúságmértékek valamelyike, vagy az <code>auto</code> speciális érték (ekkor a böngésző határozza meg a méretet).</p>
 <p>Ehhez hasonlóan a <code>min-width</code>, <code>max-width</code>, <code>min-height</code> és <code>max-height</code> tulajdonságokkal rendre megadhatjuk egy elem minimális és maximális szélességét, valamint minimális és maximális magasságát.</p>
-<p>Érdemes megjegyezni, hogy egy HTML elem tényleges méretébe a tartalom, a belső térközök (<code>padding</code>) és a szegélyek (<code>border</code>) is beleszámítanak. Nézzük meg egy egyszerű példán, hogy mit jelent ez!</p>
+<p>Érdemes megjegyezni, hogy egy HTML elem tényleges méretébe a tartalom mérete mellett a belső térközök (<code>padding</code>) és a szegélyek (<code>border</code>) is beleszámítanak. Nézzük meg egy példán keresztül, hogy mit jelent ez!</p>
 <div class="admonition example">
 <p class="admonition-title">Példa</p>
 <p>Legyen adott egy 300 pixel széles HTML elem, amelyet egy minden irányból 10 pixel széles belső térköz (padding) vesz körbe! Ezen kívül rendelkezzen ez az elem egy minden irányból 5 pixel vastag szegéllyel is!</p>
@@ -1589,7 +1589,7 @@
 <h5 id="szegelyek-megadasa">Szegélyek megadása<a class="headerlink" href="#szegelyek-megadasa" title="Permanent link">&para;</a></h5>
 <p>A HTML elem körüli szegélyek megadására a <code>border</code> CSS tulajdonság szolgál. Ennek értékeként 3 paramétert adunk meg: rendre a szegély vastagságát, stílusát és színét. Ezeket egyébként külön-külön is megadhatjuk a <code>border-width</code>, <code>border-style</code> és <code>border-color</code> tulajdonságokkal.</p>
 <p>A szegély vastagsága (<code>border-width</code>) lehet a <code>thin</code> (vékony), <code>medium</code> (közepes) és <code>thick</code> (vastag) kulcsszavak valamelyike, de ha ennél pontosabbak szeretnénk lenni, akkor akár pixelben is megadhatjuk a szegélyvastagságot.</p>
-<p>A szegély stílusának (<code>border-style</code>) értéke lehet <code>solid</code> (folytonos), <code>dashed</code> (szaggatott), <code>dotted</code> (pontozott), <code>double</code> (dupla), <code>groove</code> (faragott), <code>ridge</code> (kidomborodó), <code>outset</code> (kiemelkedő), <code>inset</code> (süllyesztett), <code>none</code> (nincs szegély) vagy <code>hidden</code> (rejtett).</p>
+<p>A szegély stílusa (<code>border-style</code>) lehet <code>solid</code> (folytonos), <code>dashed</code> (szaggatott), <code>dotted</code> (pontozott), <code>double</code> (dupla), <code>groove</code> (faragott), <code>ridge</code> (kidomborodó), <code>outset</code> (kiemelkedő), <code>inset</code> (süllyesztett), <code>none</code> (nincs szegély) vagy <code>hidden</code> (rejtett).</p>
 <p>Ha nem szeretnénk minden irányból szegélyt adni egy objektumnak, akkor a <code>border-top</code>, <code>border-right</code>, <code>border-bottom</code> és <code>border-left</code> tulajdonságokkal külön-külön is megadhatjuk a felső, jobb, alsó és bal szegélyek értékét.</p>
 <p><span class="example">Példa:</span> Szegélyek megadása</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1787,7 +1787,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-20 09:51:29
+      Utolsó frissítés: 2021-01-22 16:26:08
     
   </small>
 </div>
