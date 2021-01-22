@@ -538,8 +538,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ismetleses-vezerles" class="md-nav__link">
-    Ismétléses vezérlés
+  <a href="#ismetleses-vezerles-ciklusok" class="md-nav__link">
+    Ismétléses vezérlés (Ciklusok)
   </a>
   
 </li>
@@ -826,8 +826,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ismetleses-vezerles" class="md-nav__link">
-    Ismétléses vezérlés
+  <a href="#ismetleses-vezerles-ciklusok" class="md-nav__link">
+    Ismétléses vezérlés (Ciklusok)
   </a>
   
 </li>
@@ -1491,13 +1491,239 @@ bool(false)</p>
 <p>A <code>==</code> operátor tagadása a szokásos módon a <code>!=</code> (ez pontosan akkor ad vissza igazat, ha a két operandus eltérő értékű), míg a <code>===</code> operátort a <code>!==</code> segítségével tagadhatjuk (ez pontosan akkor ad vissza igazat, ha a két operandus eltérő értékű vagy típusú).</p>
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
-<p>Az összehasonlításoknál célszerű a <code>===</code> (tripla egyenlő) operátort használni a gyakorlatban.</p>
+<p>Az összehasonlításoknál célszerű mindig a <code>===</code> (tripla egyenlő) operátort használni.</p>
 </div>
 <h4 id="vezerlesi-szerkezetek">Vezérlési szerkezetek<a class="headerlink" href="#vezerlesi-szerkezetek" title="Permanent link">&para;</a></h4>
 <h5 id="szelekcios-vezerles">Szelekciós vezérlés<a class="headerlink" href="#szelekcios-vezerles" title="Permanent link">&para;</a></h5>
-<p>TODO</p>
-<h5 id="ismetleses-vezerles">Ismétléses vezérlés<a class="headerlink" href="#ismetleses-vezerles" title="Permanent link">&para;</a></h5>
-<p>TODO</p>
+<p>A szelekciós vezérlés megvalósítására az <code>if</code>, <code>else</code>, <code>else if</code> és <code>switch</code> utasításokat használjuk. Ezek szintaxisa és működése megegyezik a C-ben tanultakkal. PHP-ban az <code>else if</code> utasítás egybe is írható: <code>elseif</code>.</p>
+<p>A feltételek megadására a korábban tanult feltételes és logikai operátorokat használjuk.</p>
+<p><span class="example">Példa:</span> Egy program, amely az <code>$eletkor</code> változó értékének függvényében ír ki adatot a képernyőre</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$eletkor</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>   <span class="c1">// nyugodtan változtassuk meg ennek az értékét egy másik számra</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$eletkor</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Kiskorú vagy. &lt;br/&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Még &quot;</span> <span class="o">.</span> <span class="p">(</span><span class="mi">18</span> <span class="o">-</span> <span class="nv">$eletkor</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot; év, és nagykorú leszel.&quot;</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$eletkor</span> <span class="o">&gt;=</span> <span class="mi">20</span> <span class="o">&amp;&amp;</span> <span class="nv">$eletkor</span> <span class="o">&lt;=</span> <span class="mi">29</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// logikai operátor használata</span>
+    <span class="k">echo</span> <span class="s2">&quot;Huszonéves vagy.&quot;</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Nagykorú vagy.&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>Kiskorú vagy.
+Még 6 év, és nagykorú leszel.</p>
+</div>
+<p><span class="example">Példa:</span> Egy program, amely kiírja az érdemjegynek megfelelő szöveges értékelést</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$erdemjegy</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// nyugodtan változtassuk meg ennek az értékét egy másik számra</span>
+
+  <span class="k">switch</span> <span class="p">(</span><span class="nv">$erdemjegy</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// az $erdemjegy változó értékét vizsgáljuk</span>
+    <span class="c1">// különböző eseteket vizsgálunk a változó értékének függvényében</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="k">echo</span> <span class="s2">&quot;Elégtelen&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span> <span class="k">echo</span> <span class="s2">&quot;Elégséges&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">3</span><span class="o">:</span> <span class="k">echo</span> <span class="s2">&quot;Közepes&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="o">:</span> <span class="k">echo</span> <span class="s2">&quot;Jó&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">5</span><span class="o">:</span> <span class="k">echo</span> <span class="s2">&quot;Jeles&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+    <span class="c1">// ha a fentiek közül egyik esetre sem illeszkedünk, akkor a default ág fut le</span>
+    <span class="k">default</span><span class="o">:</span> <span class="k">echo</span> <span class="s2">&quot;Érvénytelen érdemjegy!&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>Jeles</p>
+</div>
+<p>Azokat a feltételeket, amelyek csupán egy <code>if</code>-ágból és egy <code>else</code>-ágból állnak, le is rövidíthetjük a C-ből ismerős <strong>ternary operátor</strong> segítségével. Ennek a szintaxisa a szokásos: <code>feltétel ? művelet ha igaz : művelet ha hamis</code>.</p>
+<p><span class="example">Példa:</span> Egy szám paritásának vizsgálata</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$szam</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+
+  <span class="c1">// paritás vizsgálat ternary operátor használata nélkül</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$szam</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Páros. &lt;br/&gt;&quot;</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Páratlan. &lt;br/&gt;&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// ugyanez, ternary operátorral</span>
+  <span class="k">echo</span> <span class="nv">$szam</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">?</span> <span class="s2">&quot;Páros. &lt;br/&gt;&quot;</span> <span class="o">:</span> <span class="s2">&quot;Páratlan. &lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<h5 id="ismetleses-vezerles-ciklusok">Ismétléses vezérlés (Ciklusok)<a class="headerlink" href="#ismetleses-vezerles-ciklusok" title="Permanent link">&para;</a></h5>
+<p>PHP-ban a <code>while</code>, <code>do... while</code>, <code>for</code> és <code>foreach</code> utasításokat használjuk ismétléses vezérlés megvalósítására. Ezek közül az első három ugyanúgy működik, mint C-ben.</p>
+<p><span class="example">Példa:</span> Írassuk ki az egész számokat 1-től 10-ig a <code>while</code>, <code>do... while</code> és <code>for</code> ciklusokkal!</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>              <span class="c1">// while-ciklus</span>
+    <span class="k">echo</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
+    <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>            <span class="c1">// do...while-ciklus</span>
+    <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// for-ciklus</span>
+    <span class="k">echo</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<p>A <code>foreach</code> utasításról külön érdemes beszélni. Ezt tömbök és objektumok listaszerű bejárására használjuk. Ekkor a ciklusváltozó magukon a tömbelemeken iterál végig (tehát itt nem indexváltozónk van, mint a <code>for</code> esetén).</p>
+<p>A <code>foreach</code>-csel végig iterálhatunk egy tömb értékein, vagy magukon a kulcs-érték párokon.</p>
+<p><span class="example">Példa:</span> A <code>foreach</code> szerkezet használata</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+   <span class="nv">$arak</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;szendvics&quot;</span> <span class="o">=&gt;</span> <span class="mi">220</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span> <span class="o">=&gt;</span> <span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;csoki&quot;</span> <span class="o">=&gt;</span> <span class="mi">150</span><span class="p">];</span>
+
+   <span class="c1">// az $ar változó mindig az aktuális tömbelem értékét tárolja</span>
+   <span class="k">foreach</span> <span class="p">(</span><span class="nv">$arak</span> <span class="k">as</span> <span class="nv">$ar</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">echo</span> <span class="nv">$ar</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="c1">// az $etel az aktuális kulcs, az $ar pedig a kulcshoz tartozó érték</span>
+   <span class="k">foreach</span> <span class="p">(</span><span class="nv">$arak</span> <span class="k">as</span> <span class="nv">$etel</span> <span class="o">=&gt;</span> <span class="nv">$ar</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">echo</span> <span class="s2">&quot;</span><span class="si">$etel</span><span class="s2"> ára: </span><span class="si">$ar</span><span class="s2"> forint &lt;br/&gt;&quot;</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>220
+70
+150
+szendvics ára: 220 forint
+tea ára: 70 forint
+csoki ára: 150 forint</p>
+</div>
+<p>Érdemes megjegyezni, hogy a <code>foreach</code> alapértelmezett módon csupán a tömb (vagy objektum) másolatával dolgozik. Ha az eredeti tömbbel (vagy objektummal) szeretnénk dolgozni, referenciát kell átadnunk a <code>foreach</code>-nek.</p>
+<p><span class="example">Példa:</span> Csökkentsük az <code>$arak</code> tömbben minden étel árát 10%-kal!</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$arak</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;szendvics&quot;</span> <span class="o">=&gt;</span> <span class="mi">220</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span> <span class="o">=&gt;</span> <span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;csoki&quot;</span> <span class="o">=&gt;</span> <span class="mi">150</span><span class="p">];</span>
+
+  <span class="c1">// HIBÁS MEGOLDÁS: itt egy másolattal dolgozunk, nem az eredeti tömbbel</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$arak</span> <span class="k">as</span> <span class="nv">$ar</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$ar</span> <span class="o">=</span> <span class="nv">$ar</span> <span class="o">*</span> <span class="mf">0.9</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nb">print_r</span><span class="p">(</span><span class="nv">$arak</span><span class="p">);</span> <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
+
+  <span class="c1">// HELYES MEGOLDÁS: ha referenciát adunk át, akkor az eredeti tömböt módosítjuk</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$arak</span> <span class="k">as</span> <span class="o">&amp;</span><span class="nv">$ar</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$ar</span> <span class="o">=</span> <span class="nv">$ar</span> <span class="o">*</span> <span class="mf">0.9</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nb">print_r</span><span class="p">(</span><span class="nv">$arak</span><span class="p">);</span> <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+</td></tr></table>
+
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>Array ( [szendvics] =&gt; 220 [tea] =&gt; 70 [csoki] =&gt; 150 )
+Array ( [szendvics] =&gt; 198 [tea] =&gt; 63 [csoki] =&gt; 135 )</p>
+</div>
                 
                   
                     
@@ -1506,7 +1732,7 @@ bool(false)</p>
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-22 16:26:08
+      Utolsó frissítés: 2021-01-22 21:03:08
     
   </small>
 </div>
