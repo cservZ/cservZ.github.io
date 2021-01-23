@@ -891,7 +891,7 @@
 
 <h4 id="kiiratas">Kiíratás<a class="headerlink" href="#kiiratas" title="Permanent link">&para;</a></h4>
 <p>A PHP többféle lehetőséget is biztosít adatok kiíratására.</p>
-<p>A két legalapvetőbb utasítás, amellyel kifejezéseket írhatunk ki az alapértelmezett kimenetre, az <code>echo</code> és a <code>print</code>. A kiírandó kifejezésben szerepelhet használhatunk HTML markup-ot is (pl. sortörést a <code>&lt;br/&gt;</code> taggel tehetünk). </p>
+<p>A két legalapvetőbb utasítás, amellyel kifejezéseket írhatunk ki az alapértelmezett kimenetre, az <code>echo</code> és a <code>print</code>. A kiírandó kifejezésben használhatunk HTML markup-ot is (pl. sortörést a <code>&lt;br/&gt;</code> taggel tehetünk). </p>
 <p>Az <code>echo</code> és <code>print</code> többnyire hasonlóan viselkednek, csupán néhány apróbb működésbeli különbség van köztük:</p>
 <ul>
 <li>az <code>echo</code>-nak nincs visszatérési értéke, míg a <code>print</code>-nek van (konstans 1), így a <code>print</code> használható kifejezésekben</li>
@@ -917,7 +917,7 @@
   <span class="k">print</span> <span class="s2">&quot;Hello print! &lt;br/&gt;&quot;</span><span class="p">;</span>
   <span class="k">echo</span> <span class="s2">&quot;Az &quot;</span><span class="p">,</span> <span class="s2">&quot;élet &quot;</span><span class="p">,</span> <span class="s2">&quot;értelme &quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;. &lt;br/&gt;&quot;</span><span class="p">;</span> <span class="c1">// az echo-nak több paramétere is lehet</span>
   <span class="c1">// print &quot;Ez &quot;, &quot;nem &quot;, &quot;működik &lt;br/&gt;&quot;;        // HIBA: a print-nek csak 1 paramétere lehet!</span>
-  <span class="nb">print_r</span><span class="p">([</span><span class="s2">&quot;alma&quot;</span><span class="p">,</span> <span class="s2">&quot;körte&quot;</span><span class="p">,</span> <span class="s2">&quot;szilva&quot;</span><span class="p">,</span> <span class="s2">&quot;barack&quot;</span><span class="p">]);</span> <span class="c1">// tömb kiíratása</span>
+  <span class="nb">print_r</span><span class="p">([</span><span class="s2">&quot;alma&quot;</span><span class="p">,</span> <span class="s2">&quot;banán&quot;</span><span class="p">,</span> <span class="s2">&quot;citrom&quot;</span><span class="p">]);</span>           <span class="c1">// tömb kiíratása</span>
   <span class="k">die</span><span class="p">(</span><span class="s2">&quot;&lt;br/&gt;Valamit elszúrtunk...&quot;</span><span class="p">);</span>              <span class="c1">// kilépés a programból</span>
   <span class="k">echo</span> <span class="s2">&quot;Ez már nem lesz kiírva. &lt;br/&gt;&quot;</span><span class="p">;</span>
 <span class="cp">?&gt;</span><span class="x"></span>
@@ -929,7 +929,7 @@
 <p>Hello echo!
 Hello print!
 Az élet értelme 42.
-Array ( [0] =&gt; alma [1] =&gt; körte [2] =&gt; szilva [3] =&gt; barack )
+Array ( [0] =&gt; alma [1] =&gt; banán [2] =&gt; citrom )
 Valamit elszúrtunk...</p>
 </div>
 <h4 id="valtozok">Változók<a class="headerlink" href="#valtozok" title="Permanent link">&para;</a></h4>
@@ -1043,14 +1043,14 @@ Valamit elszúrtunk...</p>
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="nv">$logikai1</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
-  <span class="nv">$logikai2</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>    <span class="c1">// a TRUE és FALSE kulcsszavak nem érzékenyek a kis- és nagybetűkre</span>
+  <span class="nv">$logikai2</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>  <span class="c1">// a TRUE és FALSE kulcsszavak nem érzékenyek a kis- és nagybetűkre</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
 </td></tr></table>
 
 <h5 id="az-int-tipus">Az <code>int</code> típus<a class="headerlink" href="#az-int-tipus" title="Permanent link">&para;</a></h5>
 <p>Az egész számok típusa. PHP-ban az egész számok mindig előjelesek, tehát C-vel ellentétben itt nincs előjeltelen egész típus.</p>
-<p>A <code>PHP_INT_MIN</code> és <code>PHP_INT_MAX</code> konstansokkal lekérdezhető az int típussal ábrázolható legkisebb és legnagyobb érték. Ezek a határok architektúrafüggők. Ha egy szám az int típus értelmezési tartományán kívül esik, akkor automatikusan lebegőpontosra lesz alakítva.</p>
+<p>A <code>PHP_INT_MIN</code> és <code>PHP_INT_MAX</code> konstansokkal lekérdezhető az int típussal ábrázolható legkisebb és legnagyobb érték. Ezek a határok architektúrafüggők. Ha egy szám az int típus értelmezési tartományán kívül esik, akkor automatikusan lebegőpontosra lesz konvertálva.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1100,18 +1100,12 @@ Valamit elszúrtunk...</p>
 <p>PHP-ban a stringek összefűzésére a <code>.</code> (pont) operátort használjuk.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
-  <span class="nv">$desszert</span> <span class="o">=</span> <span class="s2">&quot;almás&quot;</span> <span class="o">.</span> <span class="s2">&quot;pite&quot;</span><span class="p">;</span>
-  <span class="k">echo</span> <span class="nv">$desszert</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$desszert</span> <span class="o">=</span> <span class="s2">&quot;almás&quot;</span> <span class="o">.</span> <span class="s2">&quot;pite&quot;</span><span class="p">;</span>   <span class="c1">// &quot;almáspite&quot;</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
 </td></tr></table>
 
-<div class="admonition kimenet">
-<p class="admonition-title">A kód kimenete</p>
-<p>almáspite</p>
-</div>
 <p>Természetesen PHP-ban is van lehetőségünk a stringek karaktereinek indexelésére. Erre a más nyelvekből ismerős szögletes zárójel operátort használhatjuk: <code>$szoveg[index]</code>. Hasonlóképpen, mint C-ben, PHP-ban is 0-tól kezdődően indexeljük a stringek karaktereit.</p>
 <p>Egy kis érdekesség, hogy PHP-ban negatív indexeket is megadhatunk. Ekkor a string végétől kezdünk el számolni (tehát az utolsó karakter indexe -1, az utolsó előtti karakteré -2 stb.).</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1139,7 +1133,6 @@ Az utolsó karakter: d</p>
 <li><code>substr($s, $start, $length)</code>: visszaadja az <code>$s</code> string egy részstringjét, annak <code>$start</code> indexétől kezdődően, <code>$length</code> darab karakteren keresztül</li>
 <li><code>strpos($s, $text)</code>: visszaadja a <code>$text</code> részstring első előfordulásának kezdőindexét az <code>$s</code> stringben (<code>FALSE</code>-ot ad vissza, ha nem találja)</li>
 <li><code>str_replace($old, $new, $s)</code>: lecseréli az <code>$s</code> stringben az <code>$old</code> részstring összes előfordulását a <code>$new</code> szövegre</li>
-<li><code>strrev($s)</code>: megfordítja az <code>$s</code> stringet</li>
 <li><code>explode($delim, $s)</code>: feldarabolja az <code>$s</code> stringet <code>$delim</code> karakterek mentén (egy tömbbel tér vissza)</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1152,8 +1145,7 @@ Az utolsó karakter: d</p>
  8
  9
 10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="nv">$szoveg</span> <span class="o">=</span> <span class="s2">&quot;A Citromos Fagyi A Legjobb Fagyi&quot;</span><span class="p">;</span>
 
   <span class="k">echo</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$szoveg</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>                       <span class="c1">// string hossza</span>
@@ -1163,7 +1155,6 @@ Az utolsó karakter: d</p>
   <span class="k">echo</span> <span class="nb">strpos</span><span class="p">(</span><span class="nv">$szoveg</span><span class="p">,</span> <span class="s2">&quot;Citrom&quot;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>             <span class="c1">// részstring keresése</span>
   <span class="k">echo</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s2">&quot;Fagyi&quot;</span><span class="p">,</span> <span class="s2">&quot;Süti&quot;</span><span class="p">,</span> <span class="nv">$szoveg</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span> <span class="c1">// részstring lecserélése (az eredeti stringet nem módosítja)</span>
   <span class="nv">$szavak</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="nv">$szoveg</span><span class="p">);</span>                      <span class="c1">// feldarabolás szóköz karakterek mentén</span>
-  <span class="nb">print_r</span><span class="p">(</span><span class="nv">$szavak</span><span class="p">);</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
 </td></tr></table>
@@ -1175,8 +1166,7 @@ a citromos fagyi a legjobb fagyi
 A CITROMOS FAGYI A LEGJOBB FAGYI
 A Citrom
 2
-A Citromos Süti A Legjobb Süti
-Array ( [0] =&gt; A [1] =&gt; Citromos [2] =&gt; Fagyi [3] =&gt; A [4] =&gt; Legjobb [5] =&gt; Fagyi )</p>
+A Citromos Süti A Legjobb Süti</p>
 </div>
 <h5 id="az-array-tipus">Az <code>array</code> típus<a class="headerlink" href="#az-array-tipus" title="Permanent link">&para;</a></h5>
 <p>Tömb adattípus. Több elem tárolására alkalmas adatszerkezet. C-vel ellentétben a PHP-beli tömbök dinamikus méretűek, és nem feltétlenül csak azonos típusú elemek tárolhatók bennük.</p>
@@ -1211,19 +1201,14 @@ Array ( [0] =&gt; A [1] =&gt; Citromos [2] =&gt; Fagyi [3] =&gt; A [4] =&gt; Leg
 6
 7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="nv">$lottoszamok</span> <span class="o">=</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">25</span><span class="p">];</span>     <span class="c1">// itt a kulcsok a tömbindexek lesznek</span>
-  <span class="nv">$arak</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;szendvics&quot;</span> <span class="o">=&gt;</span> <span class="mi">220</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span> <span class="o">=&gt;</span> <span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;csoki&quot;</span> <span class="o">=&gt;</span> <span class="mi">150</span><span class="p">];</span>  <span class="c1">// asszociatív tömb</span>
+  <span class="nv">$arak</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;szendvics&quot;</span> <span class="o">=&gt;</span> <span class="mi">220</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span> <span class="o">=&gt;</span> <span class="mi">70</span><span class="p">,</span> <span class="s2">&quot;csoki&quot;</span> <span class="o">=&gt;</span> <span class="mi">150</span><span class="p">];</span>
 
-  <span class="k">echo</span> <span class="nv">$lottoszamok</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>   <span class="c1">// a 0-ás kulcshoz tartozó érték kiíratása</span>
-  <span class="k">echo</span> <span class="nv">$arak</span><span class="p">[</span><span class="s2">&quot;tea&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>      <span class="c1">// a &quot;tea&quot; kulcshoz tartozó érték kiíratása</span>
+  <span class="k">echo</span> <span class="nv">$lottoszamok</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>         <span class="c1">// 56</span>
+  <span class="k">echo</span> <span class="nv">$arak</span><span class="p">[</span><span class="s2">&quot;szendvics&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>      <span class="c1">// 220</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
 </td></tr></table>
 
-<div class="admonition kimenet">
-<p class="admonition-title">A kód kimenete</p>
-<p>56
-70</p>
-</div>
 <p>A <code>$tomb[kulcs] = ertek</code> szintaxissal beszúrhatunk egy új kulcs-érték párt a tömb végére.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1240,18 +1225,13 @@ Array ( [0] =&gt; A [1] =&gt; Citromos [2] =&gt; Fagyi [3] =&gt; A [4] =&gt; Leg
   <span class="nv">$lottoszamok</span><span class="p">[]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>         <span class="c1">// itt a kulcs (tömbindex) automatikusan kerül megállapításra</span>
   <span class="nv">$arak</span><span class="p">[</span><span class="s2">&quot;hamburger&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">800</span><span class="p">;</span>   <span class="c1">// felvesszük a &quot;hamburger&quot; =&gt; 800 kulcs-érték párt</span>
 
-  <span class="nb">print_r</span><span class="p">(</span><span class="nv">$lottoszamok</span><span class="p">);</span>
-  <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
-  <span class="nb">print_r</span><span class="p">(</span><span class="nv">$arak</span><span class="p">);</span>
+  <span class="nb">print_r</span><span class="p">(</span><span class="nv">$lottoszamok</span><span class="p">);</span>  <span class="c1">// Array ([0] =&gt; 56 [1] =&gt; 42 [2] =&gt; 12 [3] =&gt; 81 [4] =&gt; 25 [5] =&gt; 5)</span>
+  <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>           
+  <span class="nb">print_r</span><span class="p">(</span><span class="nv">$arak</span><span class="p">);</span>         <span class="c1">// Array ([szendvics] =&gt; 220 [tea] =&gt; 70 [csoki] =&gt; 150 [hamburger] =&gt; 800)</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
 </td></tr></table>
 
-<div class="admonition kimenet">
-<p class="admonition-title">A kód kimenete</p>
-<p>Array ( [0] =&gt; 56 [1] =&gt; 42 [2] =&gt; 12 [3] =&gt; 81 [4] =&gt; 25 [5] =&gt; 5 )
-Array ( [szendvics] =&gt; 220 [tea] =&gt; 70 [csoki] =&gt; 150 [hamburger] =&gt; 800 )</p>
-</div>
 <p>A tömbök kezelérése számos beépített függvény létezik PHP-ban. Néhány fontosabb ezek közül (teljes lista <a href="https://www.php.net/manual/en/ref.array.php">itt</a>):</p>
 <ul>
 <li><code>count($t)</code>: visszaadja a <code>$t</code> tömb hosszát</li>
@@ -1309,15 +1289,11 @@ A kedvenc fagyi ízeink: csokoládé, karamell, málna, szamóca, sztracsatella.
     <span class="p">[</span> <span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;guest&quot;</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;guest01&quot;</span> <span class="p">]</span>
   <span class="p">];</span>
 
-  <span class="k">echo</span> <span class="nv">$felhasznalok</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;felhasznalonev&quot;</span><span class="p">];</span>  <span class="c1">// 0. indexű résztömb &quot;felhasznalonev&quot; kulcsú értéke</span>
+  <span class="nv">$felhasznalonev1</span> <span class="o">=</span> <span class="nv">$felhasznalok</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;felhasznalonev&quot;</span><span class="p">];</span>  <span class="c1">// &quot;admin&quot;</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
 </td></tr></table>
 
-<div class="admonition kimenet">
-<p class="admonition-title">A kód kimenete</p>
-<p>admin</p>
-</div>
 <h5 id="az-object-tipus">Az <code>object</code> típus<a class="headerlink" href="#az-object-tipus" title="Permanent link">&para;</a></h5>
 <p>Osztályból példányosított objektumok adattípusa. Az objektumokkal részletesebben a 10. gyakorlaton fogunk foglalkozni.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1344,7 +1320,7 @@ A kedvenc fagyi ízeink: csokoládé, karamell, málna, szamóca, sztracsatella.
 
 <h5 id="a-null-tipus">A <code>null</code> típus<a class="headerlink" href="#a-null-tipus" title="Permanent link">&para;</a></h5>
 <p>Olyan adattípus, amelynek egyetlen lehetésges értéke a <code>NULL</code> speciális érték. A <code>NULL</code> kulcsszó nem érzékeny a kis- és nagybetűkre.</p>
-<p>A null érték egy olyan változót jelöl, ami nem tárol értéket. Például az inicializálás nélkül létrehozott változók értéke automatikusan <code>NULL</code> lesz. Ezen kívül a <code>NULL</code> értéket expliciten is értékül adhatjuk egy változónak.</p>
+<p>A null egy olyan változót jelöl, ami nem tárol értéket. Például az inicializálás nélkül létrehozott változók értéke automatikusan <code>NULL</code> lesz. Ezen kívül a <code>NULL</code> értéket expliciten is értékül adhatjuk egy változónak.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1476,7 +1452,7 @@ bool(false)</p>
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
-  <span class="nb">var_dump</span><span class="p">(</span><span class="mi">0</span> <span class="o">==</span> <span class="k">FALSE</span><span class="p">);</span> <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
+  <span class="nb">var_dump</span><span class="p">(</span><span class="mi">0</span> <span class="o">==</span> <span class="k">FALSE</span><span class="p">);</span> <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span> 
   <span class="nb">var_dump</span><span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">);</span> <span class="k">echo</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
@@ -1510,7 +1486,7 @@ bool(false)</p>
 10
 11
 12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
-  <span class="nv">$eletkor</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>   <span class="c1">// nyugodtan változtassuk meg ennek az értékét egy másik számra</span>
+  <span class="nv">$eletkor</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>  
 
   <span class="k">if</span> <span class="p">(</span><span class="nv">$eletkor</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">echo</span> <span class="s2">&quot;Kiskorú vagy. &lt;br/&gt;&quot;</span><span class="p">;</span>
@@ -1524,11 +1500,6 @@ bool(false)</p>
 </code></pre></div>
 </td></tr></table>
 
-<div class="admonition kimenet">
-<p class="admonition-title">A kód kimenete</p>
-<p>Kiskorú vagy.
-Még 6 év, és nagykorú leszel.</p>
-</div>
 <p><span class="example">Példa:</span> Egy program, amely kiírja az érdemjegynek megfelelő szöveges értékelést</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1544,7 +1515,7 @@ Még 6 év, és nagykorú leszel.</p>
 12
 13
 14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
-  <span class="nv">$erdemjegy</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// nyugodtan változtassuk meg ennek az értékét egy másik számra</span>
+  <span class="nv">$erdemjegy</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> 
 
   <span class="k">switch</span> <span class="p">(</span><span class="nv">$erdemjegy</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// az $erdemjegy változó értékét vizsgáljuk</span>
     <span class="c1">// különböző eseteket vizsgálunk a változó értékének függvényében</span>
@@ -1560,10 +1531,6 @@ Még 6 év, és nagykorú leszel.</p>
 </code></pre></div>
 </td></tr></table>
 
-<div class="admonition kimenet">
-<p class="admonition-title">A kód kimenete</p>
-<p>Jeles</p>
-</div>
 <p>Azokat a feltételeket, amelyek csupán egy <code>if</code>-ágból és egy <code>else</code>-ágból állnak, le is rövidíthetjük a C-ből ismerős <strong>ternary operátor</strong> segítségével. Ennek a szintaxisa a szokásos: <code>feltétel ? művelet ha igaz : művelet ha hamis</code>.</p>
 <p><span class="example">Példa:</span> Egy szám paritásának vizsgálata</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1732,7 +1699,7 @@ Array ( [szendvics] =&gt; 198 [tea] =&gt; 63 [csoki] =&gt; 135 )</p>
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-22 21:03:08
+      Utolsó frissítés: 2021-01-23 09:39:19
     
   </small>
 </div>
