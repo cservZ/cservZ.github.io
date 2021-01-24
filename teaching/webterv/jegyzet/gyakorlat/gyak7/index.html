@@ -1006,24 +1006,18 @@ Valamit elszúrtunk...</p>
 3
 4
 5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
-  <span class="nb">define</span><span class="p">(</span><span class="s2">&quot;NEV&quot;</span><span class="p">,</span> <span class="s2">&quot;Gipsz Jakab&quot;</span><span class="p">);</span>   <span class="c1">// konstansok definiálása</span>
-  <span class="nb">define</span><span class="p">(</span><span class="s2">&quot;ELETKOR&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">);</span>
-
-  <span class="c1">// ELETKOR = 42;                // HIBA: a konstansok értéke nem módosítható</span>
-  <span class="c1">// echo nev;                    // HIBA: a konstansok neve kis- és nagybetű érzékeny</span>
-
-  <span class="k">echo</span> <span class="nx">NEV</span> <span class="o">.</span> <span class="s2">&quot; egy &quot;</span> <span class="o">.</span> <span class="nx">ELETKOR</span> <span class="o">.</span> <span class="s2">&quot; éves hallgató. &lt;br/&gt;&quot;</span><span class="p">;</span>
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nb">define</span><span class="p">(</span><span class="s2">&quot;ELET_ERTELME&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">);</span>   <span class="c1">// konstans definiálása</span>
+  <span class="c1">// ELET_ERTELME = 10;         // HIBA: a konstansok értéke nem módosítható</span>
+  <span class="c1">// echo elet_ertelme;         // HIBA: a konstansok neve kis- és nagybetű érzékeny</span>
+  <span class="k">echo</span> <span class="s2">&quot;Az élet értelme: &quot;</span> <span class="o">.</span> <span class="nx">ELET_ERTELME</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
 </td></tr></table>
 
 <div class="admonition kimenet">
 <p class="admonition-title">A kód kimenete</p>
-<p>Gipsz Jakab egy 21 éves hallgató.</p>
+<p>Az élet értelme: 42</p>
 </div>
 <p>A PHP biztosít számunkra úgynevezett <strong>mágikus konstansok</strong>at is. Ezek előre definiált, beépített konstansok, amelyek neve dupla alulvonással kezdődik és végződik. Néhány fontosabb mágikus konstans:</p>
 <ul>
@@ -1445,7 +1439,7 @@ bool(false)</p>
 <p>Külön érdemes beszélni még a <code>==</code> (dupla egyenlő) és <code>===</code> (tripla egyenlő) operátorokról. Mindkettőt kifejezések összehasonlítására használjuk, viszont van egy lényegi különbség a két operátor működésében:</p>
 <ul>
 <li>A <code>==</code> operátor pontosan akkor ad vissza igazat, ha a két operandusának értéke megegyezik</li>
-<li>A <code>===</code> operátor pontosan akkor ad vissza igazat, ha a kép operandusának értéke <span class="red">és típusa</span> egyaránt megegyezik.</li>
+<li>A <code>===</code> operátor pontosan akkor ad vissza igazat, ha a két operandusának értéke <span class="red">és típusa</span> egyaránt megegyezik.</li>
 </ul>
 <p>Nézzünk egy példát arra, amikor a két operátor eltérően működik!</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1570,10 +1564,8 @@ bool(false)</p>
 4
 5
 6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-
   <span class="k">while</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>              <span class="c1">// while-ciklus</span>
     <span class="k">echo</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>
     <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
@@ -1588,10 +1580,8 @@ bool(false)</p>
 4
 5
 6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-
   <span class="k">do</span> <span class="p">{</span>
     <span class="k">echo</span> <span class="nv">$i</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>            <span class="c1">// do...while-ciklus</span>
     <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
@@ -1612,8 +1602,7 @@ bool(false)</p>
 </code></pre></div>
 </td></tr></table>
 
-<p>A <code>foreach</code> utasításról külön érdemes beszélni. Ezt tömbök és objektumok listaszerű bejárására használjuk. Ekkor a ciklusváltozó magukon a tömbelemeken iterál végig (tehát itt nem indexváltozónk van, mint a <code>for</code> esetén).</p>
-<p>A <code>foreach</code>-csel végig iterálhatunk egy tömb értékein, vagy magukon a kulcs-érték párokon.</p>
+<p>A <code>foreach</code> utasításról külön érdemes beszélni. Ezt jellemzően tömbök listaszerű bejárására használjuk. Ekkor a ciklusváltozó magukon a kulcs-érték párokon iterál végig (tehát itt nem indexváltozónk van, mint a <code>for</code> esetén).</p>
 <p><span class="example">Példa:</span> A <code>foreach</code> szerkezet használata</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1652,7 +1641,7 @@ szendvics ára: 220 forint
 tea ára: 70 forint
 csoki ára: 150 forint</p>
 </div>
-<p>Érdemes megjegyezni, hogy a <code>foreach</code> alapértelmezett módon csupán a tömb (vagy objektum) másolatával dolgozik. Ha az eredeti tömbbel (vagy objektummal) szeretnénk dolgozni, referenciát kell átadnunk a <code>foreach</code>-nek.</p>
+<p>Érdemes megjegyezni, hogy a <code>foreach</code> alapértelmezett módon a tömb egy másolatával dolgozik. Ha az eredeti tömbbel szeretnénk dolgozni, akkor referenciát kell átadnunk.</p>
 <p><span class="example">Példa:</span> Csökkentsük az <code>$arak</code> tömbben minden étel árát 10%-kal!</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1699,7 +1688,7 @@ Array ( [szendvics] =&gt; 198 [tea] =&gt; 63 [csoki] =&gt; 135 )</p>
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-23 09:39:19
+      Utolsó frissítés: 2021-01-24 18:25:50
     
   </small>
 </div>
