@@ -86,8 +86,9 @@ span.example {
     color: #3DACB9;
 }
 
-/* Red text */
+/* Red and bold text */
 
 span.red {
     color: red;
+    font-weight: bold;
 }

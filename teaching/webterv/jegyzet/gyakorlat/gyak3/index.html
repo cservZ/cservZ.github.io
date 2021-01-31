@@ -581,30 +581,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak11/" title="11. gyakorlat" class="md-nav__link">
-      11. gyakorlat
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak12/" title="12. gyakorlat" class="md-nav__link">
-      12. gyakorlat
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -841,7 +817,7 @@
 <p>A fenti tagek kivétel nélkül blokkszintű (block) elemek, a <code>&lt;div&gt;</code>-hez hasonlóan.</p>
 <p>Ezek a tagek - az általános célú <code>&lt;div&gt;</code> és <code>&lt;span&gt;</code> tagekkel ellentétben - szemantikai jelentéssel bírnak, tehát egyértelműen meghatározzák a tartalmuk jelentését (pl. egy <code>&lt;header&gt;</code>-ről tudjuk, hogy egy fejlécet jelöl).</p>
 <p>A HTML5-ben bevezetett szemantikus tageket felhasználva precízebben leírhatjuk egy weboldal szerkezetét. Készíthetünk például ezekkel a tagekkel az alábbihoz hasonló elrendezésű weboldalt.</p>
-<p><img alt="HTML5 szemantikus tagek" src="../img/gyak03/html5-semantic-tags.gif" /></p>
+<p><a href="../img/gyak03/html5-semantic-tags.gif"><img alt="HTML5 szemantikus tagek" src="../img/gyak03/html5-semantic-tags.gif" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
 <p>Ahhoz, hogy az ábrán látotthoz hasonló elrendezést kapjunk, a tanult tagek használata önmagában nem elegendő (pl. az <code>&lt;aside&gt;</code> nem fog automatikusan oldalra kerülni). Az elemek helyzetének megadására a CSS-beli pozicionálást használhatjuk.</p>
@@ -850,20 +826,7 @@
 <p>Valószínűleg mindenkinek feltűnt, hogy a HTML dokumentumok lényegében HTML objektumok (tagek) egymásba ágyazásából épülnek fel. Ezek az objektumok egy hierarchikus fastruktúrát alkotnak a dokumentumban.</p>
 <p>Amikor egy weboldal betöltődik, akkor a böngésző elkészíti a HTML objektumokból az úgynevezett dokumentum-objektum modellt - ezt a továbbiakban röviden csak DOM-nak fogjuk nevezni. A <strong>DOM fa</strong> (DOM tree) segítségével könnyen szemléltethetjük a HTML elemek hierarchikus viszonyait. Nézzünk egy egyszerű példát DOM fára!</p>
 <p><span class="example">Példa:</span> Egy egyszerű HTML kód és a hozzá tartozó DOM fa</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>DOM példa<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -878,9 +841,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="DOM fa példa" src="../img/gyak03/html-dom.png" /></p>
+<p><a href="../img/gyak03/html-dom.png"><img alt="DOM fa példa" src="../img/gyak03/html-dom.png" /></a></p>
 <h4 id="html-objektumok-viszonyai">HTML objektumok viszonyai<a class="headerlink" href="#html-objektumok-viszonyai" title="Permanent link">&para;</a></h4>
 <p>Ahhoz, hogy a továbbiakban egyszerűen tudjunk beszélni a HTML objektumok viszonyairól, bevezetünk néhány fogalmat.</p>
 <p>Ha az A objektum <span class="red">közvetlenül</span> tartalmazza a B objektumot, akkor azt mondjuk, hogy az A objektum a B objektum <strong>szülő</strong>je, a B objektum pedig A <strong>gyerek</strong>e. Például a fenti kódban és az ahhoz tartozó DOM fában a <code>&lt;body&gt;</code> objektum a <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code> és <code>&lt;p&gt;</code> elemek szülője, vagy másképp mondva: a <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code> és <code>&lt;p&gt;</code> elemek a <code>&lt;body&gt;</code> gyerekei. Az viszont például nem igaz, hogy az <code>&lt;a&gt;</code> objektum a <code>&lt;body&gt;</code> gyereke lenne, hiszen itt a tartalmazás nem közvetlen.</p>
@@ -898,13 +860,10 @@
 <h4 id="szelektorok-csoportositasa">Szelektorok csoportosítása<a class="headerlink" href="#szelektorok-csoportositasa" title="Permanent link">&para;</a></h4>
 <p>Amikor több szelektorra is ugyanazok a formázások vonatkoznak, akkor a szelektorokat vesszővel elválasztva soroljuk fel egymás után.</p>
 <p><span class="example">Példa:</span> Az összes <code>&lt;h1&gt;</code> és <code>&lt;h2&gt;</code> objektum, valamint a <code>class="warning"</code> attribútummal rendelkező elemek piros betűszínűvé tétele</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="p">.</span><span class="nc">warning</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="p">.</span><span class="nc">warning</span> <span class="p">{</span>
    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="kijeloles-kapcsolat-alapjan">Kijelölés kapcsolat alapján<a class="headerlink" href="#kijeloles-kapcsolat-alapjan" title="Permanent link">&para;</a></h4>
 <p>CSS-ben használunk olyan szelektorokat is, amelyek egymáshoz való viszonyaik, kapcsolataik alapján jelölnek ki elemeket:</p>
@@ -915,24 +874,7 @@
 <li><code>E1 + E2</code>: minden olyan <code>E2</code>-t kijelöl, amely <code>E1</code>-nek testvére és <span class="red">közvetlenül</span> <code>E1</code> után következik a kódban.</li>
 </ul>
 <p><span class="example">Példa:</span> A <code>body p</code> szelektor kijelöli az összes olyan bekezdést, amely a <code>&lt;body&gt;</code>-ban található. A <code>body &gt; p</code> azokat a bekezdéseket jelöli ki, amelyek közvetlenül a <code>&lt;body&gt;</code>-ba vannak beágyazva</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -951,29 +893,10 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-1.png" /></p>
+<p><a href="../img/gyak03/css-selectors-1.png"><img alt="A kód kimenete" src="../img/gyak03/css-selectors-1.png" /></a></p>
 <p><span class="example">Példa:</span> A <code>p ~ p</code> szelektor kijelöl minden olyan bekezdést, amely egy másik bekezdés testvére és valahol a másik bekezdés után található a kódban. A <code>p + p</code> szelektornál még azt is megköveteljük, hogy közvetlenül (azaz rögtön) a másik bekezdés után szerepeljen az elem</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -993,9 +916,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-2.png" /></p>
+<p><a href="../img/gyak03/css-selectors-2.png"><img alt="A kód kimenete" src="../img/gyak03/css-selectors-2.png" /></a></p>
 <p>A kapcsolat alapján történő kijelölésre használhatunk még úgynevezett <strong>pseudo-class</strong>-okat is, a <code>szelektor:pseudoclass</code> szintaxissal. Ez a szintaxis a <code>szelektor</code> által kijelölt elemek közül kiválaszt minden olyant, amelyre <code>pseudoclass</code> teljesül.</p>
 <p>Nézzünk néhány példát pseudo-class-okra, a teljesség igénye nélkül!</p>
 <ul>
@@ -1007,56 +929,7 @@
 <li><code>E1:last-of-type</code>: minden olyan <code>E1</code>-et kijelöl, ami az azonos (<code>E1</code>) típusú testvérei közül az utolsó</li>
 </ul>
 <p><span class="example">Példa:</span> Egy táblázat formázása pseudo-class-ok használatával</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1107,9 +980,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-3.png" /></p>
+<p><a href="../img/gyak03/css-selectors-3.png"><img alt="A kód kimenete" src="../img/gyak03/css-selectors-3.png" /></a></p>
 <h4 id="kijeloles-attributum-alapjan">Kijelölés attribútum alapján<a class="headerlink" href="#kijeloles-attributum-alapjan" title="Permanent link">&para;</a></h4>
 <p>A HTML elemeket attribútumaik alapján is ki tudjuk jelölni CSS-ben. A két legalapvetőbb szelektortípus erre a célra:</p>
 <ul>
@@ -1117,24 +989,7 @@
 <li><code>E1[attr="val"]</code>: kijelöli az összes olyan <code>E1</code>-et, amelynek <code>attr</code> attribútumának értéke <code>val</code>.</li>
 </ul>
 <p><span class="example">Példa:</span> Az <code>a[target]</code> szelektor kijelöl minden olyan hivatkozást, amely rendelkezik a <code>target</code> attribútummal. Az <code>a[target="_blank"]</code> azokat a hivatkozásokat jelöli ki, amelyek <code>target</code> attribútumának értéke <code>_blank</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1153,9 +1008,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-selectors-4.png" /></p>
+<p><a href="../img/gyak03/css-selectors-4.png"><img alt="A kód kimenete" src="../img/gyak03/css-selectors-4.png" /></a></p>
 <h4 id="kijeloles-allapot-alapjan">Kijelölés állapot alapján<a class="headerlink" href="#kijeloles-allapot-alapjan" title="Permanent link">&para;</a></h4>
 <p>A CSS arra is biztosít lehetőséget, hogy állapotuk alapján jelöljünk ki HTML elemeket. Az ilyen kijelöléseket pseudo-class-ok segítségével fogjuk megvalósítani.</p>
 <p>Az állapot alapján történő kijelölésre talán a legszemléletesebb példa a hivatkozások (linkek) állapotai. Egy hivatkozásnak összesen 4 állapota lehet, amelyekre a következőképpen hivatkozhatunk CSS-ben:</p>
@@ -1174,22 +1028,7 @@
 </ul>
 </div>
 <p><span class="example">Példa:</span> Hivatkozások formázása állapot alapján</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1206,7 +1045,6 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>A fenti pseudo-class-ok közül a <code>:hover</code> és az <code>:active</code> nem csak hivatkozásokra, hanem minden HTML objektumra használhatók.</p>
 <h3 id="egyeb-css-formazasok">Egyéb CSS formázások<a class="headerlink" href="#egyeb-css-formazasok" title="Permanent link">&para;</a></h3>
@@ -1225,21 +1063,7 @@
 <li>a vonal színét (opcionális).</li>
 </ul>
 <p>A <code>text-decoration</code> tulajdonság egyébként nem csak hivatkozásokra, hanem tetszőleges szövegelemre is alkalmazható.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>A text-decoration tulajdonság<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1255,7 +1079,6 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="listak-formazasa">Listák formázása<a class="headerlink" href="#listak-formazasa" title="Permanent link">&para;</a></h4>
 <p>A múlt órán megismerkedtünk a rendezetlen és rendezett listákkal. Az alábbi táblázatban összefoglaljuk a listákkal kapcsolatos fontosabb CSS formázásokat.</p>
@@ -1292,49 +1115,7 @@
 <p>Ha egy táblázat rendelkezik címmel (amit a <code>&lt;caption&gt;</code> taggel adunk meg), akkor ez a cím alapértelmezett módon a táblázat fölött jelenik meg. A <code>caption-side: bottom</code> utasítással viszont áthelyezhető a táblázat alá.</p>
 <p>A <code>vertical-align: middle</code> utasítással egy táblázatcella tartalmát függőlegesen középre igazíthatjuk. A tartalom vízszintes igazítására a korábban tanult <code>text-align</code> tulajdonságot használjuk.</p>
 <p><span class="example">Példa:</span> Egy táblázat formázása</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Táblázatok formázása<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1378,27 +1159,11 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-tables.png" /></p>
+<p><a href="../img/gyak03/css-tables.png"><img alt="A kód kimenete" src="../img/gyak03/css-tables.png" /></a></p>
 <h4 id="a-box-sizing-tulajdonsag">A box-sizing tulajdonság<a class="headerlink" href="#a-box-sizing-tulajdonsag" title="Permanent link">&para;</a></h4>
 <p>Ha egy másik objektumon belül elhelyezkedő elem méretét százalékban adjuk meg, akkor előfordulhat, hogy a következő jelenséggel találjuk szembe magunkat:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1415,27 +1180,11 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/box-sizing-1.png" /></p>
+<p><a href="../img/gyak03/box-sizing-1.png"><img alt="A kód kimenete" src="../img/gyak03/box-sizing-1.png" /></a></p>
 <p>Látható, hogy a beágyazott objektum szegélye "kilóg" az őt tartalmazó objektumból, ami közel sem mondható szépnek. Ennek a jelenség az oka, hogy az elemek méretébe alapértelmezett módon csak az elem tartalma tartozik bele, a térközök és a szegélyek nem.</p>
 <p>Ha azt szeretnénk, hogy az elem méretébe a tartalom mellett a térközök és a szegélyek is beletartozzanak, használjuk a <code>box-sizing: border-box</code> utasítást! Az előző kód ennek megfelelően átírva:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>További CSS szelektorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1452,9 +1201,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/box-sizing-2.png" /></p>
+<p><a href="../img/gyak03/box-sizing-2.png"><img alt="A kód kimenete" src="../img/gyak03/box-sizing-2.png" /></a></p>
 <h3 id="a-css-oroklodes">A CSS öröklődés<a class="headerlink" href="#a-css-oroklodes" title="Permanent link">&para;</a></h3>
 <p>CSS-ben létezik <strong>öröklődés</strong>, ami azt jelenti, hogy egy objektum bizonyos CSS tulajdonságait örökölhetik az objektum gyerekei. Ennek köszönhetően bizonyos tulajdonságokat elegendő csak egyszer definiálnunk a szülő objektumra, és ekkor a gyerekek is automatikusan megöröklik ezeket.</p>
 <p>Fontos megjegyezni viszont, hogy nem minden CSS tulajdonság örökölődik! Az alábbi táblázat összefoglalja a fontosabb öröklődő, illetve nem öröklődő tulajdonságokat.</p>
@@ -1474,23 +1222,7 @@
 </table>
 <p>Amennyiben egy nem öröklődő CSS tulajdonságot mégis örököltetni szeretnénk, akkor ezt az <code>inherit</code> speciális értékkel tehetjük meg.</p>
 <p><span class="example">Példa:</span> A <code>font-family</code> és <code>color</code> tulajdonságok automatikusan öröklődnek, viszont a <code>border</code> már nem. Ha a szegélyt is örököltetni szeretnénk, használjuk az <code>inherit</code> kulcsszót</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>CSS öröklődés<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1508,7 +1240,6 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h3 id="a-css-rangsor">A CSS rangsor<a class="headerlink" href="#a-css-rangsor" title="Permanent link">&para;</a></h3>
 <p>Felmerülhet a kérdés, hogy ha egy objektumra több, egymásnak ellentmondó CSS formázást adunk ki (pl. egy bekezdés színét kékre, majd később pirosra szeretnénk állítani), akkor ezek közül vajon melyik stílus lesz érvényes.</p>
@@ -1521,24 +1252,7 @@
 <li><code>!important</code> kulcsszóval megadott formázások.</li>
 </ol>
 <p><span class="example">Példa:</span> Az alábbi kódban az első bekezdés piros (hiszen a <code>#first</code> id szelektor erősebb, mint a <code>.blue</code> class szelektor), a második kék (hiszen az inline CSS erősebb, mint az id szelektor), a harmadik pedig narancssárga betűszínű lesz (hiszen az <code>!important</code> kulcsszóval megadott formázás a legerősebb)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>CSS rangsor<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1557,7 +1271,6 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
@@ -1576,34 +1289,12 @@
 <ul>
 <li><code>static</code>: a normál szövegfolyamban lévő hely, a pozicionálásoknak nincs hatása (alapértelmezett)</li>
 <li><code>relative</code>: a normál szövegfolyambeli helyéhez képest elmozdítja az elemet a kért mértékben</li>
-<li><code>absolute</code>: a legközelebbi, <span class="red"><strong>nem <code>static</code></strong></span> helyzetű szülőobjektum belső széléhez (vagy ilyen szülő hiányában a viewport széléhez) képest pozicionál</li>
+<li><code>absolute</code>: a legközelebbi, <span class="red">nem static</span> helyzetű szülőobjektum belső széléhez (vagy ilyen szülő hiányában a viewport széléhez) képest pozicionál</li>
 <li><code>fixed</code>: az elem gördítéskor is rögzített helyen marad.</li>
 </ul>
 <p>Az elemek függőleges pozicionálására a <code>top</code> és <code>bottom</code>, míg vízszintes pozicionálásra a <code>left</code> és <code>right</code> CSS tulajdonságokat használhatjuk. A <code>static</code> módon pozicionált elemek esetén ezeknek az utasításoknak nincs hatása!</p>
 <p><span class="example">Példa:</span> A <code>position</code> tulajdonság használata (a kód működése kipróbálható <a href="https://www.w3schools.com/code/tryit.asp?filename=GMUARYUVT5EK">itt</a>)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Elemek pozicionálása<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1627,7 +1318,6 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>A fenti példa magyarázata:</p>
 <ul>
@@ -1642,24 +1332,7 @@
 <h4 id="usztatas">Úsztatás<a class="headerlink" href="#usztatas" title="Permanent link">&para;</a></h4>
 <p>A <code>float</code> CSS tulajdonsággal lehetőségünk van egy elem úsztatására. Ekkor az úsztatott elemet a tartalom a másik irányból körbefutja (tehát például ha balra úsztatunk egy elemet, akkor jobbról fogja őt körbefutni a tartalom). A tulajdonság lehetséges értékei: <code>left</code> (balra úsztatás), <code>right</code> (jobbra úsztatás), <code>none</code> (nincs úsztatás).</p>
 <p><span class="example">Példa:</span> Egy kép balra úsztatása</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Úsztatás<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1678,9 +1351,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak03/css-float.png" /></p>
+<p><a href="../img/gyak03/css-float.png"><img alt="A kód kimenete" src="../img/gyak03/css-float.png" /></a></p>
 <p>Ha meg szeretnénk akadályozni egy objektum körül egy másik, úsztatott objektum elhelyezését, akkor ezt a <code>clear</code> CSS tulajdonsággal tudjuk megtenni. Lehetséges értékei: <code>left</code> (balról nem lehet úsztatott elem), <code>right</code> (jobbról nem lehet úsztatott elem), <code>both</code> (sem balról, sem jobbról nem lehet úsztatott elem), <code>none</code> (balról és jobbról is lehet úsztatott elem).</p>
                 
                   
@@ -1690,7 +1362,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-20 09:51:29
+      Utolsó frissítés: 2021-01-31 13:44:17
     
   </small>
 </div>

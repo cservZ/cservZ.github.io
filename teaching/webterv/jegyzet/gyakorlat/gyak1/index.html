@@ -581,30 +581,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak11/" title="11. gyakorlat" class="md-nav__link">
-      11. gyakorlat
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak12/" title="12. gyakorlat" class="md-nav__link">
-      12. gyakorlat
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -903,7 +879,7 @@
 <li>A sárga hátterű <code>Warning</code>-ok kevésbé súlyos figyelmeztetések, amelyek általában megfontolandóak. Ezeknek a maradéktalan kijavítása viszont nem elvárt ezen a kurzuson.</li>
 </ul>
 <p><span class="example">Példa:</span> Egy validálási hiba és egy figyelmeztetés</p>
-<p><img alt="Validátor hibák és figyelmeztetések" src="../img/gyak01/validator.png" /></p>
+<p><a href="../img/gyak01/validator.png"><img alt="Validátor hibák és figyelmeztetések" src="../img/gyak01/validator.png" /></a></p>
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
 <p>A beadandó projekt szabványossága egyszerűen ellenőrizhető a validátor segítségével.</p>
@@ -912,46 +888,32 @@
 <h5 id="tagek">Tagek<a class="headerlink" href="#tagek" title="Permanent link">&para;</a></h5>
 <p>A HTML fájlok alapvető építőelemei a <strong>tagek</strong> (ejtsd: "tegek"). Ezek <code>&lt;</code> és <code>&gt;</code> közé írt, speciális jelentéssel bíró HTML objektumok. A HTML nyelv egy előre definiált tagkészlettel rendelkezik.</p>
 <p>A legtöbb HTML tag <strong>páros tag</strong>, ami azt jelenti, hogy egy nyitótagből és egy zárótagből áll. A zárótaget úgy képezzük a nyitótagből, hogy a tag neve elé, azaz közvetlenül a <code>&lt;</code> után egy perjelet teszünk. Ilyen páros tag például a bekezdések beszúrására alkalmas <code>&lt;p&gt;</code> tag.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ide jön valami szöveg...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ide jön valami szöveg...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>Vannak viszont <strong>páratlan tagek</strong> (más néven <strong>üres tagek</strong>) is, amelyek csak nyitótagből állnak. Ilyen például a sortörés beszúrására alkalmas <code>&lt;br&gt;</code> tag.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Első sor <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Második sor
+<div class="highlight"><pre><span></span><code>Első sor <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Második sor
 </code></pre></div>
-</td></tr></table>
 
 <p>A páratlan tagek végére opcionálisan perjelet is tehetünk (tehát például <code>&lt;br&gt;</code> helyett azt is írhatjuk, hogy <code>&lt;br/&gt;</code>). Ebben a jegyzetben minden páratlan tag esetén kitesszük ezt a perjelet, noha ez a HTML5 szabványban szabadon elhagyható.</p>
 <p>A HTML tageket egymásba is ágyazhatjuk. Ekkor fontos, hogy az egymásba ágyazott tageket <span class="red">belülről kifelé haladva</span> kell lezárnunk!</p>
 <p><span class="example">Példa:</span> Tagek egymásba ágyazása: először lezárjuk a legbelső <code>&lt;span&gt;</code> taget, majd az őt beágyazó <code>&lt;p&gt;</code> taget, végül pedig a legkülső <code>&lt;div&gt;</code> taget</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ide jön valami <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>szöveg...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ide jön valami <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>szöveg...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h5 id="attributumok">Attribútumok<a class="headerlink" href="#attributumok" title="Permanent link">&para;</a></h5>
 <p>A tagekhez tartozhatnak bizonyos speciális tulajdonságok, úgynevezett <strong>attribútumok</strong> is, amelyekhez speciális értékeket rendelhetünk. Ezeket az attribútum-érték párokat mindig a nyitótag neve után írjuk, szóközzel elválasztva.</p>
 <p><span class="example">Példa:</span> Egy páros <code>&lt;a&gt;</code> tag, amely a <code>href</code> és <code>target</code> attribútumokkal rendelkezik</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p><span class="example">Példa:</span> Egy páratlan <code>&lt;img&gt;</code> tag, amely az <code>src</code>, <code>alt</code> és <code>width</code> attribútumokkal rendelkezik</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;cat.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Macska&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;cat.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Macska&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">/&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="a-html-dokumentum-felepitese">A HTML dokumentum felépítése<a class="headerlink" href="#a-html-dokumentum-felepitese" title="Permanent link">&para;</a></h4>
 <p>Minden HTML dokumentumunk elkészítése az alábbi kód megírásával fog kezdődni:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Weboldal címe...<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -962,7 +924,6 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <div class="admonition hint">
 <p class="admonition-title">Tipp</p>
@@ -989,9 +950,8 @@
 </ul>
 <h4 id="kommentek">Kommentek<a class="headerlink" href="#kommentek" title="Permanent link">&para;</a></h4>
 <p>A HTML fájlokba lehetőségünk van kommenteket (megjegyzéseket) írni az alábbi szintaxissal:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">&lt;!-- Ez egy komment a HTML kódban --&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="c">&lt;!-- Ez egy komment a HTML kódban --&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>A kommentek szövege a weboldalon természetesen nem jelenik meg, viszont az oldal HTML forráskódjában (amit a legtöbb böngészőben a <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> billentyűkombinációval egyszerűen megtekinthetünk) ezek a kommentek láthatóak lesznek.</p>
 <h4 id="a-head-fontosabb-tagjei">A head fontosabb tagjei<a class="headerlink" href="#a-head-fontosabb-tagjei" title="Permanent link">&para;</a></h4>
@@ -1020,22 +980,7 @@
 <li><code>&lt;h6&gt;...&lt;/h6&gt;</code>: 6. szintű címsor (legkevésbé fontos)</li>
 </ul>
 <p><span class="example">Példa:</span> Címsorokat és egy bekezdést tartalmazó HTML kód</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Bekezdések, címsorok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1052,10 +997,9 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>A fenti kódot tartalmazó HTML fájlt böngészőben megnyitva a következő kimenetet kapjuk:</p>
-<p><img alt="A kód kimenete" src="../img/gyak01/headings-paragraphs-output.png" /></p>
+<p><a href="../img/gyak01/headings-paragraphs-output.png"><img alt="A kód kimenete" src="../img/gyak01/headings-paragraphs-output.png" /></a></p>
 <h5 id="karakterentitasok">Karakterentitások<a class="headerlink" href="#karakterentitasok" title="Permanent link">&para;</a></h5>
 <p>Mivel HTML-ben vannak speciális célokra lefoglalt karakterek (pl. a <code>&lt;</code> és <code>&gt;</code> karakterek), ezért ezeket valahogy máshogy kell írnunk, ha meg szeretnénk őket jeleníteni a weboldalunkon. Az ilyen karakterek megadására szolgálnak a <strong>karakterentitások</strong>.</p>
 <p>Néhány gyakrabban használt karakterentitás (teljes lista <a href="https://dev.w3.org/html5/html-author/charref">itt</a>):</p>
@@ -1106,9 +1050,8 @@
 </tbody>
 </table>
 <p><span class="example">Példa:</span> Ha egy bekezdésbe azt szeretnénk írni, hogy <code>5 &lt; 10 &gt; 8</code>, akkor ezt a következőképpen tehetjük meg karakterentitások használatával</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>5 <span class="ni">&amp;lt;</span> 10 <span class="ni">&amp;gt;</span> 8<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>5 <span class="ni">&amp;lt;</span> 10 <span class="ni">&amp;gt;</span> 8<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h5 id="kepek">Képek<a class="headerlink" href="#kepek" title="Permanent link">&para;</a></h5>
 <p>Ha egy weboldalra egy képet szeretnénk beszúrni, akkor ezt az <code>&lt;img/&gt;</code> páratlan taggel tudjuk megtenni. A tag fontosabb attribútumai:</p>
@@ -1121,16 +1064,7 @@
 </ul>
 <p>Ha a <code>width</code> és <code>height</code> attribútumok közül csak az egyiket adjuk meg, akkor a másik a kép eredeti méretarányaiból számolódik. Tehát például ha egy 400x300-as (400 pixel széles, 300 pixel magas) kép szélességét 800 pixelre állítjuk (megduplázzuk), akkor a magassága automatikusan 600 pixel lesz.</p>
 <p><span class="example">Példa:</span> A HTML fájllal egy mappában van egy <code>img</code> mappa, amiben található egy <code>cat.jpg</code> kép. Szúrjuk be a képet a weboldalunkra úgy, hogy a szélessége 400 pixel legyen!</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Kép beszúrása<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1141,28 +1075,14 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak01/img-example.png" /></p>
+<p><a href="../img/gyak01/img-example.png"><img alt="A kód kimenete" src="../img/gyak01/img-example.png" /></a></p>
 <h5 id="az-id-es-class-attributumok">Az id és class attribútumok<a class="headerlink" href="#az-id-es-class-attributumok" title="Permanent link">&para;</a></h5>
 <p>Minden HTML objektumnak adható egyedi azonosító, illetve minden HTML objektum csoportosítható osztályokba. Ezek alapvetően majd CSS-ben lesznek hasznosak, amikor egy-egy objektumra vagy objektumok csoportjára szeretnénk hivatkozni.</p>
 <p>Az <strong>egyedi azonosító</strong> (<code>id</code> attribútum) egy adott HTML elem azonosítására szolgál. Értéke a dokumentumon belül szabályosan egyedi kell, hogy legyen, továbbá ez az érték nem tartalmazhat szóközt.</p>
 <p>Az <strong>osztály</strong> (<code>class</code> attribútum) jellemzően több HTML elem csoportosítására használatos. A <code>class</code> attribútum értéke nem kell, hogy egyedi legyen, sőt általában nem az. Értékéül szóközzel elválasztva megadható több olyan osztály neve is, amelyekhez az adott elem tartozik.</p>
 <p><span class="example">Példa:</span> <code>id</code> és <code>class</code> attribútumok használata</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>id, class<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1177,7 +1097,6 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h5 id="hivatkozasok-linkek">Hivatkozások (Linkek)<a class="headerlink" href="#hivatkozasok-linkek" title="Permanent link">&para;</a></h5>
 <p>Hivatkozásokat (avagy linkeket) az <code>&lt;a&gt;...&lt;/a&gt;</code> páros tag segítségével szúrhatunk be a weboldalunkra. A tag fontosabb attribútumai:</p>
@@ -1196,27 +1115,7 @@
 <li><code>title</code>: hivatkozás címe, ami akkor jelenik meg, ha a kurzor a hivatkozás fölött áll.</li>
 </ul>
 <p><span class="example">Példa:</span> Hivatkozások beszúrása</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hivatkozások<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1238,23 +1137,13 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h5 id="szakaszok">Szakaszok<a class="headerlink" href="#szakaszok" title="Permanent link">&para;</a></h5>
 <p>HTML-ben lehetőségünk van a weboldal tartalmának strukturálására is. Ezt szakaszok, tartalmi egységek kialakításával tehetjük meg.</p>
 <p>A <code>&lt;div&gt;...&lt;/div&gt;</code> egy általános célú <strong>blokkszintű (block)</strong> szakasz. A blokkszintű elemek mindig új sorban kezdődnek, és kihasználják a teljes rendelkezésre álló szélességet.</p>
 <p>A <code>&lt;span&gt;...&lt;/span&gt;</code> egy átalános célú <strong>sorszintű (inline)</strong> szakasz. A sorszintű elemek nem kezdődnek új sorban, illetve szélességük csak akkora, mint amekkora helyre szükségük van.</p>
 <p><span class="example">Példa:</span> A <code>&lt;span&gt;</code> és <code>&lt;div&gt;</code> tagek használata - A kód kimenetében a szemléletesség kedvéért világoskék háttérrel jelöltük a két tag által meghatározott szakaszokat</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Szakaszok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1265,9 +1154,8 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak01/div-vs-span.png" /></p>
+<p><a href="../img/gyak01/div-vs-span.png"><img alt="A kód kimenete" src="../img/gyak01/div-vs-span.png" /></a></p>
                 
                   
                     
@@ -1276,7 +1164,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-22 16:26:08
+      Utolsó frissítés: 2021-01-31 13:44:17
     
   </small>
 </div>

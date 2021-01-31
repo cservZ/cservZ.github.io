@@ -527,30 +527,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak11/" title="11. gyakorlat" class="md-nav__link">
-      11. gyakorlat
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak12/" title="12. gyakorlat" class="md-nav__link">
-      12. gyakorlat
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -727,68 +703,32 @@
 </ul>
 <p>Hangállományok esetén a <code>type</code> attribútummal megadott MIME-típus az <code>audio/mpeg</code>, <code>audio/ogg</code> vagy <code>audio/wav</code> értékek valamelyike lehet.</p>
 <p><span class="example">Példa:</span> Hangállomány beágyazása egy weboldalra</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>A kedvenc zeném<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>A kedvenc zeném<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;powerwolf.mp3&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/mpeg&quot;</span><span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;greenday.wav&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;audio/wav&quot;</span><span class="p">/&gt;</span>
   Ez a szöveg akkor jelenik meg, ha a böngésző nem támogatja a hangállományok beágyazását.
 <span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/audio-example.png" /></p>
+<p><a href="../img/gyak05/audio-example.png"><img alt="A kód kimenete" src="../img/gyak05/audio-example.png" /></a></p>
 <p>A <code>&lt;video&gt;...&lt;/video&gt;</code> tag <strong>videóállományok</strong> beágyazására szolgál. A <code>controls</code> attribútumot itt is használhatjuk vezérlőgombok megjelenítésére. A <code>width</code> és <code>height</code> attribútumokkal megadható a beágyazott videó szélessége és magassága (pixelben).</p>
 <p>Több alternatív videóállomány megadására a korábban tárgyalt <code>&lt;source/&gt;</code> taget használjuk. A tag <code>type</code> attribútumával megadható MIME-típus a <code>video/mp4</code>, <code>video/ogg</code> vagy <code>video/webm</code> értékek valamelyike lehet.</p>
 <p><span class="example">Példa:</span> Videóállomány beágyazása egy weboldalra</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>A kedvenc videóm<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>A kedvenc videóm<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;360&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;allstar.mp4&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/mp4&quot;</span><span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;rickroll.ogg&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;video/ogg&quot;</span><span class="p">/&gt;</span>
   Ez a szöveg akkor jelenik meg, ha a böngésző nem támogatja a videóállományok beágyazását.
 <span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/video-example.png" /></p>
+<p><a href="../img/gyak05/video-example.png"><img alt="A kód kimenete" src="../img/gyak05/video-example.png" /></a></p>
 <h4 id="canvas">Canvas<a class="headerlink" href="#canvas" title="Permanent link">&para;</a></h4>
 <p>A <code>&lt;canvas&gt;...&lt;/canvas&gt;</code> tagpár egy téglalap alakú vászon beszúrására szolgál, amelyre JavaScript segítségével rajzokat, animációkat és játékokat készíthetünk. A <code>width</code> és <code>height</code> attribútumokkal szabályozhatjuk a vászon szélességét és magasságát.</p>
 <p>Ahhoz, hogy egy vászonra rajzolni tudjunk, szükséges a JavaScript ismerete, ami már túlmutat ennek a kurzusnak a tananyagán (viszont például a Multimédia kurzus tárgyalja a canvas-alapú JavaScriptet).</p>
 <p><span class="example">Példa:</span> Egy egyszerű canvas-es ábra elkészítése</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Canvas példa<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -814,32 +754,14 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/canvas-example.png" /></p>
+<p><a href="../img/gyak05/canvas-example.png"><img alt="A kód kimenete" src="../img/gyak05/canvas-example.png" /></a></p>
 <h3 id="a-css-tovabbi-lehetosegei">A CSS további lehetőségei<a class="headerlink" href="#a-css-tovabbi-lehetosegei" title="Permanent link">&para;</a></h3>
 <h4 id="a-z-index-tulajdonsag">A z-index tulajdonság<a class="headerlink" href="#a-z-index-tulajdonsag" title="Permanent link">&para;</a></h4>
 <p>A HTML elemek pozicionálásakor előfordulhat, hogy bizonyos elemek takarják egymást. Alapértelmezett módon az egymást takaró HTML objektumok közül mindig a kódban később szereplő elem kerül előtérbe.</p>
 <p>Az elemek mélységi sorrendjét a <code>z-index</code> CSS tulajdonsággal szabályozhatjuk. Ennek értéke tetszőleges egész szám lehet (akár negatív szám is). Ekkor az egymást takaró elemek közül az kerül előtérbe, amelynek nagyobb a z-index értéke. Az azonos z-index értékkel rendelkező elemek esetén a kódban később szereplő elem fogja takarni a másikat.</p>
 <p><span class="example">Példa:</span> A <code>z-index</code> tulajdonság használata</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>A z-index tulajdonság<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -858,28 +780,12 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/z-index-example.png" /></p>
+<p><a href="../img/gyak05/z-index-example.png"><img alt="A kód kimenete" src="../img/gyak05/z-index-example.png" /></a></p>
 <h4 id="lekerekitett-sarkok">Lekerekített sarkok<a class="headerlink" href="#lekerekitett-sarkok" title="Permanent link">&para;</a></h4>
 <p>A <code>border-radius</code> CSS tulajdonsággal lekerekített sarkú szegélyt adhatunk egy HTML objektumnak. A tulajdonság értékeként 4 paraméter adható meg: sorban a bal felső, jobb felső, jobb alsó és bal alsó sarkok sugara. Nem megadott paraméter esetén a szemközti saroktól öröklődik a sugár értéke.</p>
 <p><span class="example">Példa:</span> A <code>border-radius</code> tulajdonság használata</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>A border-radius tulajdonság<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -896,29 +802,14 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/border-radius-example.png" /></p>
+<p><a href="../img/gyak05/border-radius-example.png"><img alt="A kód kimenete" src="../img/gyak05/border-radius-example.png" /></a></p>
 <h4 id="arnyekok">Árnyékok<a class="headerlink" href="#arnyekok" title="Permanent link">&para;</a></h4>
 <p>CSS-ben a <code>text-shadow</code> tulajdonsággal adhatunk egy szövegnek árnyékot. A tulajdonság értékeként rendre 4 paraméter adható meg: a vízszintes eltolás, a függőleges eltolás, az árnyék elmosódásának mértéke és az árnyék színe. Az utolsó két paraméter elhagyható.</p>
 <p>A <code>box-shadow</code> tulajdonsággal dobozszerű elemeknek is adható árnyék. Ennek értékeként rendre 5 paramétert adhatunk meg: a vízszintes eltolást, a függőleges eltolást, az elmosódás mértékét, az árnyék kiterjedését és az árnyék színét. Az utolsó három paraméter elhagyható.</p>
 <p>Egy szöveghez vagy egy dobozhoz akár több árnyék is megadható, vesszővel elválasztva.</p>
 <p><span class="example">Példa:</span> Árnyékok használata</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Árnyékok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -934,9 +825,8 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/shadows-example.png" /></p>
+<p><a href="../img/gyak05/shadows-example.png"><img alt="A kód kimenete" src="../img/gyak05/shadows-example.png" /></a></p>
 <h4 id="pseudo-elemek">Pseudo-elemek<a class="headerlink" href="#pseudo-elemek" title="Permanent link">&para;</a></h4>
 <p>Ha egy HTML objektum egy specifikus részét szeretnénk formázni (pl. egy szöveg első betűjét vagy első sorát), akkor használjuk a CSS pseudo-elemeket. Ezeket a szelektor után, dupla kettősponttal adjuk meg: <code>szelektor::pseudoelem</code>.</p>
 <p>A fontosabb pseudo-elemek:</p>
@@ -948,28 +838,7 @@
 <li><code>::first-line</code>: a szöveg első sora.</li>
 </ul>
 <p><span class="example">Példa:</span> Pseudo-elemek használata</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Pseudo-elemek<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -992,9 +861,8 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/pseudo-elements-example.png" /></p>
+<p><a href="../img/gyak05/pseudo-elements-example.png"><img alt="A kód kimenete" src="../img/gyak05/pseudo-elements-example.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
 <p>Ne tévesszük össze a pseudo-elemeket a korábban tanult pseudo-class-okkal! Emlékeztetőül: a pseudo-elemekkel ellentétben a pseudo-class-ok állapotuk alapján jelölnek ki HTML objektumokat. Például a <code>:hover</code> pseudo-class-szal megadott formázások akkor lesznek érvényesek, ha a kurzor az objektum fölött áll.</p>
@@ -1026,31 +894,7 @@
 <li><code>rotateZ(ndeg)</code>: elforgatja az elemet a Z-tengely körül <code>n</code> fokkal (3D transzformáció).</li>
 </ul>
 <p><span class="example">Példa:</span> Egy HTML elem vízszintes és függőleges középre igazítása a weboldalon belül</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Transzformálás<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1076,26 +920,9 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p><span class="example">Példa:</span> Egy HTML elem eltolása és 45 fokkal való elforgatása</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Transzformálás<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1113,9 +940,8 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak05/transform-example.png" /></p>
+<p><a href="../img/gyak05/transform-example.png"><img alt="A kód kimenete" src="../img/gyak05/transform-example.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
 <p>A transzformálás a régebbi böngészőkben nem érhető el.</p>
@@ -1132,28 +958,7 @@
 <li><code>ease-in-out</code>: gyorsuló, majd lassuló állapotváltás.</li>
 </ul>
 <p><span class="example">Példa:</span> Ha a kurzor a példában szereplő <code>&lt;div&gt;</code> fölött áll, akkor megnöveljük az elem méreteit. Az áttűnéseknek köszönhetően ez a méretnövelés nem hirtelen történik, hanem szépen, fokozatosan megy végbe. (A kód működése kipróbálható <a href="https://www.w3schools.com/code/tryit.asp?filename=GMR1H0DMCQCB">itt</a>)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Áttűnések<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1176,7 +981,6 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
@@ -1184,28 +988,19 @@
 </div>
 <h4 id="animaciok">Animációk<a class="headerlink" href="#animaciok" title="Permanent link">&para;</a></h4>
 <p>A CSS lehetőséget biztosít animációk készítésére is. Egy animációt a következő szintaxissal hozhatunk létre:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">@</span><span class="k">keyframes</span> <span class="nt">animacio_neve</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">keyframes</span> <span class="nt">animacio_neve</span> <span class="p">{</span>
   <span class="nt">from</span> <span class="p">{</span> <span class="c">/* stílus, ami az animáció kezdetén áll fenn */</span> <span class="p">}</span>
   <span class="nt">to</span> <span class="p">{</span> <span class="c">/* stílus, ami az animáció befejezése után áll fenn */</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>Ha nem csak az animáció kezdetén és végén fennálló stílust szeretnénk megadni, akkor a <code>from</code> és <code>to</code> helyett megadhatók százalékértékek is. Ezek segítségével részletesebben is személyre szabhatjuk egy animáció lefolyását.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">@</span><span class="k">keyframes</span> <span class="nt">animacio_neve</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">keyframes</span> <span class="nt">animacio_neve</span> <span class="p">{</span>
   <span class="nt">0</span><span class="o">%</span> <span class="p">{</span> <span class="c">/* stílus, ami az animáció kezdetén áll fenn */</span> <span class="p">}</span>
   <span class="nt">50</span><span class="o">%</span> <span class="p">{</span> <span class="c">/* stílus, ami akkor áll fenn, ha az animáció 50%-ban végrehajtódott */</span> <span class="p">}</span>
   <span class="nt">100</span><span class="o">%</span> <span class="p">{</span> <span class="c">/* stílus, ami akkor áll fenn, ha az animáció 100%-ban végrehajtódott */</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>Ahhoz, hogy egy általunk létrehozott animáció működésbe lépjen, hozzá kell azt társítanunk egy elemhez. Az animálni kívánt elemnek megadható CSS tulajdonságok:</p>
 <ul>
@@ -1229,44 +1024,7 @@
 <li>a fenti tulajdonságok összevonva is megadhatók: <code>animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction]</code>.</li>
 </ul>
 <p><span class="example">Példa:</span> Folyamatosan váltakozó háttérszín, és beúszás effektus megvalósítása animációkkal (A kód működése kipróbálható <a href="https://www.w3schools.com/code/tryit.asp?filename=GMS96HOHA41S">itt</a>)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Animációk<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1305,7 +1063,6 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <div class="admonition note">
 <p class="admonition-title">Megjegyzés</p>
@@ -1314,13 +1071,10 @@
 <h4 id="media-query-k">Media query-k<a class="headerlink" href="#media-query-k" title="Permanent link">&para;</a></h4>
 <p>A webfejlesztés során felmerülhet az igény arra, hogy néhány CSS formázást csak bizonyos médiatípusok és paraméterek esetén végezzünk el. Erre egy tipikus példa, amikor különféle eszközökre és felbontásokra szeretnénk optimalizálni a weboldalunk megjelenését.</p>
 <p>A CSS3 media query-k segítségével lehetőségünk van olyan CSS formázásokat megadni, amelyek csak bizonyos feltételek teljesülése esetén lesznek érvényesek. A media query-k szintaxisa:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">@</span><span class="k">media</span> <span class="nt">not</span><span class="o">|</span><span class="nt">only</span> <span class="nt">mediatype</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">mediafeature</span><span class="o">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span> <span class="nt">not</span><span class="o">|</span><span class="nt">only</span> <span class="nt">mediatype</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">mediafeature</span><span class="o">)</span> <span class="p">{</span>
   <span class="c">/* CSS utasítások... */</span>
 <span class="p">}</span>
 </code></pre></div>
-</td></tr></table>
 
 <ul>
 <li>A <code>mediatype</code> azt a médiatípust jelöli, amire elvégezzük a formázást. Lehetséges értékei: <code>screen</code> (számítógépek, tabletek, okostelefonok stb. képernyője), <code>print</code> (nyomtató), <code>speech</code> (felolvasóprogram), <code>all</code> (minden médiatípus).</li>
@@ -1331,31 +1085,7 @@
 <li>A <code>not</code>, <code>only</code> és <code>and</code> kulcsszavak használata opcionális. Ugyanakkor ha a <code>not</code> vagy <code>only</code> kulcsszavakat használjuk, akkor kötelezően meg kell adni a médiatípust is!</li>
 </ul>
 <p><span class="example">Példa:</span> Egy media query, amely a 600 pixelnél nem szélesebb képernyők esetén megszünteti a kép úsztatását, és középre igazítja a képet (A kód működése kipróbálható <a href="https://www.w3schools.com/code/tryit.asp?filename=GMR5O7FFEQTO">itt</a>)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Media query-k<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1381,7 +1111,6 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>A CSS media query-k segítségével <strong>nyomtatási stíluslap</strong>ot is készíthetünk egy weboldalhoz. A <code>@media print</code> utasítással olyan formázásokat adhatunk meg, amelyek csak nyomtatás esetén lesznek érvényesek.</p>
 <p>Néhány fontosabb javaslat, lehetőség nyomtatási stíluslapok használata esetén:</p>
@@ -1391,27 +1120,7 @@
 <li>A <code>@page</code> direktíva segítségével beállíthatjuk a nyomtatási margókat.</li>
 </ul>
 <p><span class="example">Példa:</span> Egy egyszerű nyomtatási stíluslap</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Nyomtatási stíluslap példa<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1433,7 +1142,6 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h3 id="tovabbi-hasznos-ismeretek">További hasznos ismeretek<a class="headerlink" href="#tovabbi-hasznos-ismeretek" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1453,7 +1161,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-18 20:24:34
+      Utolsó frissítés: 2021-01-31 13:44:17
     
   </small>
 </div>

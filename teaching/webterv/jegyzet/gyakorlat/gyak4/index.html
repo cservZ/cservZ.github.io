@@ -520,30 +520,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak11/" title="11. gyakorlat" class="md-nav__link">
-      11. gyakorlat
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak12/" title="12. gyakorlat" class="md-nav__link">
-      12. gyakorlat
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -705,7 +681,7 @@
 <h3 id="az-urlapok-szerepe">Az űrlapok szerepe<a class="headerlink" href="#az-urlapok-szerepe" title="Permanent link">&para;</a></h3>
 <p>Az eddigiek során főként a weboldalak megjelenésén volt a hangsúly: HTML-ben különféle elemeket helyeztünk el a weboldalon, majd CSS-ben formázásokkal láttuk el ezeket.</p>
 <p>A <strong>HTML űrlapok</strong> lehetőséget biztosítanak arra, hogy a weboldalaink felhasználói bemenetet is tudjanak fogadni, amit később fel is tudunk dolgozni. Az űrlapok a modern weboldalak szerves részei, napi szinten találkozhatunk velük webes kalandozásaink során. Például ha be szeretnénk lépni a kedvenc közösségi oldalunkra, akkor egy - az alábbihoz hasonló - bejelentkezési űrlapon adjuk meg a belépéshez szükséges adatainkat.</p>
-<p><img alt="Egy bejelentkezési űrlap" src="../img/gyak04/simple-login-form.png" /></p>
+<p><a href="../img/gyak04/simple-login-form.png"><img alt="Egy bejelentkezési űrlap" src="../img/gyak04/simple-login-form.png" /></a></p>
 <p>Ennek a leckének a célja, hogy megtanuljunk HTML-ben űrlapokat készíteni. Természetesen a gyakorlatban fel is szoktuk dolgozni a felhasználó által az űrlapon megadott adatokat, viszont az űrlapok feldolgozásával majd csak a PHP témakörében fogunk foglalkozni.</p>
 <h3 id="urlapok-letrehozasa">Űrlapok létrehozása<a class="headerlink" href="#urlapok-letrehozasa" title="Permanent link">&para;</a></h3>
 <p>HTML-ben a <code>&lt;form&gt;...&lt;/form&gt;</code> tagpárral hozhatunk létre űrlapokat. Természetesen az űrlapok - mint minden megjelenítendő elem - a HTML dokumentum törzsrészébe (<code>body</code>) kerülnek.</p>
@@ -726,7 +702,7 @@
 </li>
 <li><code>novalidate</code>: letiltja az űrlap elküldésekor végrehajtandó ellenőrzéseket.</li>
 </ul>
-<p>Kiemelten fontos megjegyezni, hogy mivel a <code>method="GET"</code> attribútummal rendelkező űrlapok adatai az URL-ben lesznek továbbítva, ezért ez a módszer <strong>NEM</strong> alkalmas bizalmas adatok (pl. jelszavak) biztonságos továbbítására (vélhetően senki nem örülne annak, ha a jelszavát bárki láthatná az URL sávban)! <span class="red"><strong>Ha egy űrlapon bizalmas adatokat (pl. jelszavakat) szeretnénk továbbítani, akkor mindenképpen a <code>method="POST"</code> attribútumot használjuk!</strong></span></p>
+<p>Kiemelten fontos megjegyezni, hogy mivel a <code>method="GET"</code> attribútummal rendelkező űrlapok adatai az URL-ben lesznek továbbítva, ezért ez a módszer <strong>NEM</strong> alkalmas bizalmas adatok (pl. jelszavak) biztonságos továbbítására (vélhetően senki nem örülne annak, ha a jelszavát bárki láthatná az URL sávban)! <span class="red">Ha egy űrlapon bizalmas adatokat (pl. jelszavakat) szeretnénk továbbítani, akkor mindenképpen a <code>method="POST"</code> attribútumot használjuk!</span></p>
 <h3 id="fontosabb-urlapelemek">Fontosabb űrlapelemek<a class="headerlink" href="#fontosabb-urlapelemek" title="Permanent link">&para;</a></h3>
 <p>Ebben a fejezetben megismerkedünk a HTML űrlapokon elhelyezhető fontosabb vezérlőelemekkel.</p>
 <h4 id="egysoros-beviteli-mezo">Egysoros beviteli mező<a class="headerlink" href="#egysoros-beviteli-mezo" title="Permanent link">&para;</a></h4>
@@ -794,21 +770,7 @@
 <li><code>&lt;input type="hidden"/&gt;</code>: rejtett mező (technikai célokra).</li>
 </ul>
 <p><span class="example">Példa:</span> Egy egyszerű bejelentkezési űrlap (formázás nélkül)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML űrlapok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -824,26 +786,12 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="tobb-soros-beviteli-mezo">Több soros beviteli mező<a class="headerlink" href="#tobb-soros-beviteli-mezo" title="Permanent link">&para;</a></h4>
 <p>A <code>&lt;textarea&gt;...&lt;/textarea&gt;</code> taggel több soros szöveg bevitelére alkalmas űrlapmezőt hozhatunk létre. Az ilyen beviteli mezőket gyakran használjuk például felhasználói visszajelzések, kommentek bekérésére.</p>
 <p>Ennél a tagnél is használhatók a korábban tárgyalt <code>name</code>, <code>placeholder</code>, <code>maxlength</code>, <code>required</code>, <code>readonly</code> és <code>disabled</code> attribútumok. Ezek mellett a <code>rows</code> attribútummal megadhatjuk a megjelenő sorok számát, a <code>cols</code> attribútummal pedig az oszlopok számát.</p>
 <p><span class="example">Példa:</span> Felhasználói visszajelzés bekérése</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML űrlapok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -858,9 +806,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak04/textarea-example.png" /></p>
+<p><a href="../img/gyak04/textarea-example.png"><img alt="A kód kimenete" src="../img/gyak04/textarea-example.png" /></a></p>
 <h4 id="valasztolista">Választólista<a class="headerlink" href="#valasztolista" title="Permanent link">&para;</a></h4>
 <p>A <code>&lt;select&gt;...&lt;/select&gt;</code> tagpárral egy lenyitható választólistát hozhatunk létre egy űrlapon belül, amelynek segítségével különböző opciók közül választhat a felhasználó. A korábban tárgyalt <code>name</code>, <code>required</code> és <code>disabled</code> attribútumokat erre az űrlapelemre is alkalmazhatjuk.</p>
 <p>A választólistához tartozó opciókat az <code>&lt;option&gt;...&lt;/option&gt;</code> taggel adhatjuk meg. A tag fontosabb attribútumai:</p>
@@ -871,25 +818,7 @@
 </ul>
 <p>Alapértelmezett módon egy választólistán belül mindig csak egy opció választható ki. Ha engedélyezni szeretnénk több opció kiválasztását is, akkor ezt a <code>&lt;select&gt;</code> tagnek adott <code>multiple</code> attribútummal tehetjük meg.</p>
 <p><span class="example">Példa:</span> Egy egyszerű választólista</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML űrlapok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -909,9 +838,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak04/select-example.png" /></p>
+<p><a href="../img/gyak04/select-example.png"><img alt="A kód kimenete" src="../img/gyak04/select-example.png" /></a></p>
 <h4 id="elemfelirat">Elemfelirat<a class="headerlink" href="#elemfelirat" title="Permanent link">&para;</a></h4>
 <p>Az egyes űrlapelemekhez készíthetünk elemfeliratot is a <code>&lt;label&gt;...&lt;/label&gt;</code> taggel. Ha a felhasználó egy elemfeliratra kattint, akkor automatikusan az elemfelirathoz tartozó űrlapelem kerül a fókuszba.</p>
 <p>Egy űrlapelemhez kétféleképpen társíthatunk elemfeliratot:</p>
@@ -920,29 +848,7 @@
 <li>az űrlapelemnek adunk egy egyedi azonosítót (<code>id</code>), majd az elemhez tartozó <code>&lt;label&gt;</code> tag <code>for</code> attribútumának értékeként megadjuk ezt az azonosítót</li>
 </ul>
 <p><span class="example">Példa:</span> Elemfeliratok társítása űrlapmezőkhöz</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML űrlapok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -966,33 +872,12 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="mezocsoportositas">Mezőcsoportosítás<a class="headerlink" href="#mezocsoportositas" title="Permanent link">&para;</a></h4>
 <p>Űrlapok készítésekor érdemes lehet az űrlapelemeket strukturálni, az azonos témához tartozó űrlapmezőket csoportosítani. Az ilyen mezőcsoportosítások kialakítását a <code>&lt;fieldset&gt;...&lt;/fieldset&gt;</code> tagpárral végezhetjük.</p>
 <p>A <code>&lt;legend&gt;...&lt;/legend&gt;</code> taggel megadhatjuk egy mezőcsoportosítás feliratát.</p>
 <p><span class="example">Példa:</span> Mezőcsoportosítás használata</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML űrlapok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1014,9 +899,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak04/fieldset-example.png" /></p>
+<p><a href="../img/gyak04/fieldset-example.png"><img alt="A kód kimenete" src="../img/gyak04/fieldset-example.png" /></a></p>
 <h3 id="urlapok-formazasa">Űrlapok formázása<a class="headerlink" href="#urlapok-formazasa" title="Permanent link">&para;</a></h3>
 <p>Mint minden HTML elemet, az űrlapelemeket is lehetőségünk van CSS formázásokkal ellátni. A böngészők sok tulajdonságnak adnak alapértéket, ezért alaposnak kell lennünk, ha egy űrlapot szeretnénk személyre szabni. Az űrlapok formázására használhatjuk a korábbi leckékben megismert valamennyi CSS tulajdonságot.</p>
 <p>A formázandó űrlapelemek kijelölésekor gyakran előkerül a múlt órán tanult attribútum alapján történő kijelölés. Például ha ki szeretnénk jelölni az összes <code>&lt;input type="text"/&gt;</code> típusú űrlapelemet, akkor ezt az <code>input[type="text"]</code> CSS szelektorral tudjuk megtenni.</p>
@@ -1030,72 +914,7 @@
 <li><code>:enabled</code>: kijelöli a <code>disabled</code> attribútummal nem rendelkező (engedélyezett) űrlapelemeket.</li>
 </ul>
 <h3 id="egy-teljes-pelda">Egy teljes példa<a class="headerlink" href="#egy-teljes-pelda" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML űrlapok<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1162,9 +981,8 @@
    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
-<p><img alt="A kód kimenete" src="../img/gyak04/full-example.png" /></p>
+<p><a href="../img/gyak04/full-example.png"><img alt="A kód kimenete" src="../img/gyak04/full-example.png" /></a></p>
                 
                   
                     
@@ -1173,7 +991,7 @@
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-15 17:48:52
+      Utolsó frissítés: 2021-01-31 13:44:17
     
   </small>
 </div>

@@ -462,6 +462,53 @@
     Űrlapfeldolgozás PHP-ban
   </a>
   
+    <nav class="md-nav" aria-label="Űrlapfeldolgozás PHP-ban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-urlapok-ismetles" class="md-nav__link">
+    HTML űrlapok - Ismétlés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urlapadatok-elerese" class="md-nav__link">
+    Űrlapadatok elérése
+  </a>
+  
+    <nav class="md-nav" aria-label="Űrlapadatok elérése">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urlapadatok-ellenorzese" class="md-nav__link">
+    Űrlapadatok ellenőrzése
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tobberteku-urlapmezok-feldolgozasa" class="md-nav__link">
+    Többértékű űrlapmezők feldolgozása
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#egy-teljes-pelda-regisztracio" class="md-nav__link">
+    Egy teljes példa: Regisztráció
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -496,30 +543,6 @@
   <li class="md-nav__item">
     <a href="../gyak10/" title="10. gyakorlat" class="md-nav__link">
       10. gyakorlat
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak11/" title="11. gyakorlat" class="md-nav__link">
-      11. gyakorlat
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../gyak12/" title="12. gyakorlat" class="md-nav__link">
-      12. gyakorlat
     </a>
   </li>
 
@@ -636,6 +659,53 @@
     Űrlapfeldolgozás PHP-ban
   </a>
   
+    <nav class="md-nav" aria-label="Űrlapfeldolgozás PHP-ban">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-urlapok-ismetles" class="md-nav__link">
+    HTML űrlapok - Ismétlés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urlapadatok-elerese" class="md-nav__link">
+    Űrlapadatok elérése
+  </a>
+  
+    <nav class="md-nav" aria-label="Űrlapadatok elérése">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urlapadatok-ellenorzese" class="md-nav__link">
+    Űrlapadatok ellenőrzése
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tobberteku-urlapmezok-feldolgozasa" class="md-nav__link">
+    Többértékű űrlapmezők feldolgozása
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#egy-teljes-pelda-regisztracio" class="md-nav__link">
+    Egy teljes példa: Regisztráció
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -664,35 +734,23 @@
 <h3 id="php-fuggvenyek">PHP - Függvények<a class="headerlink" href="#php-fuggvenyek" title="Permanent link">&para;</a></h3>
 <h4 id="fuggvenydefinicio-fuggvenyhivas">Függvénydefiníció, függvényhívás<a class="headerlink" href="#fuggvenydefinicio-fuggvenyhivas" title="Permanent link">&para;</a></h4>
 <p>Természetesen PHP-ban is van lehetőségünk arra, hogy saját függvényeket definiáljunk, majd később felhasználjuk, meghívjuk ezeket.</p>
-<p>PHP-ban a függvénydefiníció a <code>function</code> kulcsszóval történik. Ezt követően megadjuk a függvény nevét, majd zárójelek között a bemeneti paramétereket (ha vannak). A függvény törzsét kapcsos zárójelek között adhatjuk meg.</p>
-<p>Ha egy függvényt meg szeretnénk hívni, akkor ezt a szokásos szintaxissal tehetjük meg.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<p>PHP-ban a függvénydefiníció a <code>function</code> kulcsszóval történik. Ezt követően megadjuk a függvény nevét, majd zárójelek között a bemenő paramétereket (ha vannak). A függvény törzsét kapcsos zárójelek között adhatjuk meg.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="k">function</span> <span class="nf">fuggveny_neve</span><span class="p">(</span><span class="nv">$param1</span><span class="p">,</span> <span class="nv">$param2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="p">{</span>       <span class="c1">// függvénydefiníció</span>
     <span class="c1">// a függvény törzse...</span>
   <span class="p">}</span>
-
-  <span class="nx">fuggveny_neve</span><span class="p">(</span><span class="s2">&quot;1. paraméter&quot;</span><span class="p">,</span> <span class="s2">&quot;2. paraméter&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span>   <span class="c1">// függvényhívás</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
+
+<p>Ha egy függvényt meg szeretnénk hívni, akkor ezt a szokásos szintaxissal tehetjük meg.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> <span class="nx">fuggveny_neve</span><span class="p">(</span><span class="nv">$param1</span><span class="p">,</span> <span class="nv">$param2</span><span class="p">,</span> <span class="o">...</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
 
 <p>PHP-ban a globális scope-ban létrehozott függvények már a definiálásuk előtt is meghívhatók. Ez a szelekciós vezérlési ágakon (pl. <code>if</code>-en) belül definiált függvényekre nem vonatkozik, ők ugyanis csak akkor jönnek létre, amikor a vezérlés eljut hozzájuk.</p>
 <h4 id="valtozok-hatokore">Változók hatóköre<a class="headerlink" href="#valtozok-hatokore" title="Permanent link">&para;</a></h4>
 <p>PHP-ban a fájlban létrehozott változók a globális scope-ba kerülnek. A függvényeken belül létrehozott változók lokálisak lesznek a függvény törzsében, tehát ezeket nem lehet a függvényen kívülről elérni.</p>
 <p>Fontos megjegyezni, hogy PHP-ban a függvényen kívüli (globális) változók alapértelmezett módon nem láthatóak a függvény törzsében.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="nv">$val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
   <span class="k">function</span> <span class="nf">egy_klassz_fuggveny</span><span class="p">()</span> <span class="p">{</span>
@@ -700,25 +758,9 @@
   <span class="p">}</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <p>Ha egy függvény törzsében el szeretnénk érni a függvényen kívüli változókat, akkor ezt kétféle módon tehetjük meg: a <code>global</code> kulcsszó használatával vagy a <code>$GLOBALS</code> szuperglobális tömb segítségével. (A szuperglobális tömbökről hamarosan részletesebben tanulunk.)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="nv">$val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
   <span class="k">function</span> <span class="nf">globalis_modosit1</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">// 1. módszer: global kulcsszó</span>
@@ -735,20 +777,9 @@
   <span class="nx">globalis_modosit2</span><span class="p">();</span>      <span class="c1">// $val új értéke: 42</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <p>A <code>static</code> kulcsszóval létrehozhatunk <strong>statikus változók</strong>at is. Ezek a létrehozó blokkon belül (jelen esetben a függvényen belül) lokálisak lesznek, viszont a blokkon kívül is megőrzik értéküket, így a blokkba visszatérve a korábbi, megőrzött érték felhasználható.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="k">function</span> <span class="nf">szamol</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">static</span> <span class="nv">$count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// statikus változó (&quot;megőrzi a korábbi értékét&quot;)</span>
     <span class="nv">$count</span><span class="o">++</span><span class="p">;</span>
@@ -760,7 +791,6 @@
   <span class="nx">szamol</span><span class="p">();</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <div class="admonition kimenet">
 <p class="admonition-title">A kód kimenete</p>
@@ -771,14 +801,7 @@ Ezt a függvényt 3 alkalommal hívták meg.</p>
 <h4 id="parameteratadas">Paraméterátadás<a class="headerlink" href="#parameteratadas" title="Permanent link">&para;</a></h4>
 <p>A függvényeknél alapértelmezett módon érték szerinti paraméterátadás történik (kivéve objektumoknál). Ekkor az átadott változónak egy másolatával dolgozunk a függvényen belül.</p>
 <p>Ha az eredeti változóval szeretnénk dolgozni a függvényben, akkor referencia szerinti paraméterátadást használunk. Ezt az <code>&amp;</code> (és-jel) operátorral tehetjük meg.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="k">function</span> <span class="nf">modosit1</span><span class="p">(</span><span class="nv">$val</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$val</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="p">}</span>    <span class="c1">// érték szerinti paraméterátadás</span>
   <span class="k">function</span> <span class="nf">modosit2</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$val</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$val</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="p">}</span>   <span class="c1">// referencia szerinti paraméterátadás</span>
 
@@ -787,19 +810,11 @@ Ezt a függvényt 3 alkalommal hívták meg.</p>
   <span class="nx">modosit2</span><span class="p">(</span><span class="nv">$val</span><span class="p">);</span>     <span class="c1">// $val új értéke 42 lesz</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="visszateresi-ertek">Visszatérési érték<a class="headerlink" href="#visszateresi-ertek" title="Permanent link">&para;</a></h4>
 <p>Természetesen a PHP-beli függvényeknek is lehet visszatérési értékük. A függvény által visszaadott értéket a <code>return</code> kulcsszóval adhatjuk meg.</p>
 <p>Ha a függvény egy referenciával tér vissza, akkor a függvény neve elé egy <code>&amp;</code>-jelet írunk mind a függvénydefiníció, mind a függvényhívás helyén.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span> 
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> 
   <span class="k">function</span> <span class="nf">osszead</span><span class="p">(</span><span class="nv">$szam1</span><span class="p">,</span> <span class="nv">$szam2</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nv">$szam1</span> <span class="o">+</span> <span class="nv">$szam2</span><span class="p">;</span> <span class="p">}</span>
   <span class="k">function</span> <span class="o">&amp;</span><span class="nf">novel</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$szam</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$szam</span><span class="o">++</span><span class="p">;</span> <span class="k">return</span> <span class="nv">$szam</span><span class="p">;</span> <span class="p">}</span>     <span class="c1">// referenciát visszaadó függvény</span>
 
@@ -808,20 +823,12 @@ Ezt a függvényt 3 alkalommal hívták meg.</p>
   <span class="nv">$b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nx">novel</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span> <span class="c1">// $a és $b értéke: 6 ($a értéke a referencia szerinti átadás miatt változik)</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="default-parameterek">Default paraméterek<a class="headerlink" href="#default-parameterek" title="Permanent link">&para;</a></h4>
-<p>Javával ellentétben PHP-ban nem hozható létre a kódban két vagy több azonos nevű függvény (még eltérő paraméterezés esetén sem), különben végzetes hibát kapunk!</p>
+<p>Javával ellentétben PHP-ban nem definiálhatunk a kódban két vagy több azonos nevű függvényt (még eltérő paraméterezés esetén sem), különben végzetes hibát kapunk!</p>
 <p>A gyakorlatban viszont sokszor felmerül az igény arra, hogy egy függvényt akár eltérő paraméterszámmal is meg tudjunk hívni. Szerencsére a PHP erre is biztosít egy megoldást, mégpedig a default függvényparamétereket.</p>
 <p>A default paraméterek lényege, hogy a függvény bizonyos paramétereinek alapértelmezett értéket adunk a függvénydefiníció során. Ha a függvényhíváskor nem adjuk meg az adott paraméter értékét, akkor az az alapértelmezett értéket veszi fel.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="k">function</span> <span class="nf">koszon</span><span class="p">(</span><span class="nv">$nev</span><span class="o">=</span><span class="s2">&quot;Senki&quot;</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">echo</span> <span class="s2">&quot;Szia, </span><span class="si">$nev</span><span class="s2">! &lt;br/&gt;&quot;</span><span class="p">;</span>
   <span class="p">}</span>
@@ -830,7 +837,6 @@ Ezt a függvényt 3 alkalommal hívták meg.</p>
   <span class="nx">koszon</span><span class="p">(</span><span class="s2">&quot;Tamás&quot;</span><span class="p">);</span> 
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <div class="admonition kimenet">
 <p class="admonition-title">A kód kimenete</p>
@@ -839,13 +845,7 @@ Szia, Tamás!</p>
 </div>
 <p>A fenti kódban először paraméter nélkül hívjuk meg a <code>koszon</code> függvényt. Mivel a paraméterváltozónak ekkor nem adunk át értéket, ezért az a <code>"Senki"</code> default értéket veszi fel. A második függvényhívásnál már megadjuk a paraméter értékét (<code>"Tamás"</code>), így ekkor az átadott értéket fogjuk használni a függvényen belül (nem a default értéket).</p>
 <p>Egy fontos szabály, amit meg kell jegyeznünk: ha nem minden függvényparaméternek adunk alapértelmezett értéket, akkor <span class="red">mindig az utolsó néhány paraméternek kell default értéket adnunk</span>. Tehát a default paraméterek mindig a paraméterlista jobb oldalán szerepelnek.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="k">function</span> <span class="nf">osszead</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$c</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span> <span class="o">+</span> <span class="nv">$c</span><span class="p">;</span> <span class="p">}</span>
 
   <span class="nv">$x</span> <span class="o">=</span> <span class="nx">osszead</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>              <span class="c1">// 5 + 0 + 0 = 5</span>
@@ -853,32 +853,21 @@ Szia, Tamás!</p>
   <span class="nv">$z</span> <span class="o">=</span> <span class="nx">osszead</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>        <span class="c1">// 5 + 2 + 3 = 10</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <h4 id="type-hint-ek">Type hint-ek<a class="headerlink" href="#type-hint-ek" title="Permanent link">&para;</a></h4>
 <p>Gyengén típusos nyelvről lévén szó, a PHP-beli függvények paramétereinek és visszatérési értékének típusa nem kötött. Tehát egy függvény alapból bármilyen típusú paramétereket képes fogadni, és a visszatérési érték is tetszőleges típusú lehet.</p>
 <p>A type hint-ek segítségével megmondhatjuk a függvényparaméterek és a visszatérési érték elvárt típusát. Ha a kapott típus nem megfelelő, akkor a PHP megpróbálja azt a type hint-tel megadott típusra konvertálni. Ha a konverzió sikertelen, végzetes hibát kapunk.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
   <span class="c1">// egy függvény, amely két int típusú paramétert vár és egy float értékkel tér vissza</span>
   <span class="k">function</span> <span class="nf">atlag</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$a</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$b</span><span class="p">)</span> <span class="o">:</span> <span class="nx">float</span> <span class="p">{</span> 
     <span class="k">return</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> 
   <span class="p">}</span>
 
   <span class="k">echo</span> <span class="nx">atlag</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>            <span class="c1">// OK, mindkét paraméter int típusú</span>
-  <span class="k">echo</span> <span class="nx">atlag</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>        <span class="c1">// OK, itt mindkét érték int-re lesz konvertálva (3.5 -&gt; 3, TRUE -&gt; 1)</span>
+  <span class="k">echo</span> <span class="nx">atlag</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>        <span class="c1">// OK, mindkét érték int-re konvertálható (3.5 -&gt; 3, TRUE -&gt; 1)</span>
   <span class="k">echo</span> <span class="nx">atlag</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="s2">&quot;kiskutya&quot;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>  <span class="c1">// HIBA! a &quot;kiskutya&quot;-t nem lehet int-re konvertálni!</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <div class="admonition kimenet">
 <p class="admonition-title">A kód kimenete</p>
@@ -888,29 +877,23 @@ FATAL ERROR Uncaught TypeError: Argument 2 passed to atlag() must be of the type
 </div>
 <h4 id="valtozo-hosszusagu-parameterlista">Változó hosszúságú paraméterlista<a class="headerlink" href="#valtozo-hosszusagu-parameterlista" title="Permanent link">&para;</a></h4>
 <p>PHP-ban írhatunk olyan függvényeket is, amelyek tetszőleges számú paraméterrel meghívhatók. Ezt a paraméterváltozó elé írt <code>...</code> operátorral tehetjük meg. Ekkor a függvényhíváskor megadott paraméterek egy tömbként kerülnek átadásra, amit egy <code>foreach</code> szerkezettel egyszerűen bejárhatunk.</p>
-<p>Az alábbi függvény például tetszőleges számú, int típusú paramétert képes fogadni.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
-  <span class="k">function</span> <span class="nf">atlag</span><span class="p">(</span><span class="nx">int</span> <span class="o">...</span><span class="nv">$szamok</span><span class="p">)</span> <span class="o">:</span> <span class="nx">float</span> <span class="p">{</span>
+<p><span class="example">Példa:</span> Egy függvény, amely tetszőleges számú, int típusú paramétert képes fogadni</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="k">function</span> <span class="nf">atlag</span><span class="p">(</span><span class="nx">int</span> <span class="o">...</span><span class="nv">$szamok</span><span class="p">)</span> <span class="o">:</span> <span class="nx">float</span> <span class="p">{</span>    <span class="c1">// változó hosszúságú paraméterlista</span>
     <span class="nv">$osszeg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$szamok</span> <span class="k">as</span> <span class="nv">$szam</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$szamok</span> <span class="k">as</span> <span class="nv">$szam</span><span class="p">)</span> <span class="p">{</span>             <span class="c1">// paraméterek bejárása</span>
       <span class="nv">$osszeg</span> <span class="o">+=</span> <span class="nv">$szam</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="nv">$osszeg</span> <span class="o">/</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$szamok</span><span class="p">);</span>
   <span class="p">}</span>
+
+  <span class="nv">$a</span> <span class="o">=</span> <span class="nx">atlag</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>                       <span class="c1">// 20</span>
+  <span class="nv">$b</span> <span class="o">=</span> <span class="nx">atlag</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>    <span class="c1">// 5.5</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
-</td></tr></table>
 
 <h3 id="szuperglobalis-tombok">Szuperglobális tömbök<a class="headerlink" href="#szuperglobalis-tombok" title="Permanent link">&para;</a></h3>
-<p>PHP-ban használunk úgynevezett szuperglobális tömböket. Ezek olyan speciális beépített változók, amelyek a program minden pontjáról elérhetők, scope-tól függetlenül.</p>
+<p>PHP-ban sokszor használunk úgynevezett szuperglobális tömböket. Ezek olyan speciális beépített változók, amelyek a program minden pontjáról elérhetők, scope-tól függetlenül.</p>
 <p>A PHP-ban használatos szuperglobális tömbök:</p>
 <ul>
 <li><code>$GLOBALS</code>: az adott program globális változóit tárolja</li>
@@ -924,7 +907,225 @@ FATAL ERROR Uncaught TypeError: Argument 2 passed to atlag() must be of the type
 <li><code>$_SERVER</code>: a szerver által elérhetővé tett változókat tartalmazza.</li>
 </ul>
 <h3 id="urlapfeldolgozas-php-ban">Űrlapfeldolgozás PHP-ban<a class="headerlink" href="#urlapfeldolgozas-php-ban" title="Permanent link">&para;</a></h3>
-<p>TODO</p>
+<h4 id="html-urlapok-ismetles">HTML űrlapok - Ismétlés<a class="headerlink" href="#html-urlapok-ismetles" title="Permanent link">&para;</a></h4>
+<p>A <a href="../gyak4/">4. gyakorlaton</a> részletesen tárgyaltuk a HTML űrlapokat és azok fontosabb vezérlőelemeit. Ismétlésképp: űrlapokat a <code>&lt;form&gt;...&lt;/form&gt;</code> tagpárral hozhatunk létre.</p>
+<p>A <code>&lt;form&gt;</code> tag <code>action</code> attribútumának értékeként megadjuk annak a PHP fájlnak a nevét, aminek az utasításait végre szeretnénk hajtani az űrlap elküldésekor. Ez a fájl lehet ugyanaz a fájl, amiben az űrlap szerepel, vagy akár egy másik állomány is.</p>
+<p>A <code>&lt;form&gt;</code> tag <code>method</code> attribútumával megadható az űrlapadatok továbbításának módja. Az attribútum a <code>GET</code> vagy <code>POST</code> értékek valamelyikét veheti fel.</p>
+<ul>
+<li>A <code>method="GET"</code> attribútum használatakor az űrlapadatok az URL-ben lesznek továbbítva. Az egyes űrlapmezők neveit és értékeit <code>mezőnév=érték</code> formátumban, <code>&amp;</code>-jelekkel elválasztva fogja tartalmazni az URL.</li>
+<li>A <code>method="POST"</code> attribútum használata esetén az űrlapadatok a háttérben, a HTTP üzenet törzsében kerülnek továbbításra.</li>
+</ul>
+<p>Ahogy azt a 4. gyakorlaton kimondtuk, a <code>method="GET"</code> attribútum <strong>NEM</strong> alkalmas bizalmas adatok (pl. jelszavak) biztonságos továbbítására (valószínűleg nem örülnénk neki, ha a jelszavunkat bárki láthatná az URL-ben). <span class="red">Ha bizalmas űrlapadatokat (pl. jelszavakat) továbbítunk, akkor mindig a <code>method="POST"</code> attribútumot használjuk!</span></p>
+<p>Fontos, hogy a feldolgozni kívánt űrlapelemek rendelkezzenek egy-egy <code>name</code> attribútummal, ugyanis ez alapján fogjuk tudni lekérni szerveroldalon az űrlapelem értékét!</p>
+<p><span class="example">Példa:</span> A <code>method="GET"</code> használata esetén az űrlapmezőbe írt érték az URL-ben továbbítódik, míg <code>method="POST"</code> esetén a háttérben kerül továbbításra</p>
+<p><a href="../img/gyak08/get-vs-post.png"><img alt="GET vs. POST" src="../img/gyak08/get-vs-post.png" /></a></p>
+<h4 id="urlapadatok-elerese">Űrlapadatok elérése<a class="headerlink" href="#urlapadatok-elerese" title="Permanent link">&para;</a></h4>
+<p>Miután a felhasználó elküldte a kitöltött űrlapot a szervernek, természetesen el is szeretnénk érni az űrlapon megadott adatokat. Ezt PHP-ban a következőképpen tehetjük meg:</p>
+<ul>
+<li>ha az űrlap GET metódussal lett továbbítva, akkor a <code>name="valami"</code> attribútummal rendelkező űrlapelem értékét a <code>$_GET["valami"]</code> hivatkozással kérhetjük le</li>
+<li>ha az űrlapot POST metódussal továbbították, akkor a <code>name="valami"</code> attribútummal rendelkező űrlapelem értéke a <code>$_POST["valami"]</code> segítségével érhető el.</li>
+</ul>
+<h5 id="urlapadatok-ellenorzese">Űrlapadatok ellenőrzése<a class="headerlink" href="#urlapadatok-ellenorzese" title="Permanent link">&para;</a></h5>
+<p>Sajnos az űrlapadatokra vonatkozó kliensoldali ellenőrzések nem megbízhatók. Például ha egy űrlapmező kitöltését kötelezővé tesszük a <code>required</code> attribútummal, akkor a felhasználó ezt az ellenőrzést kicselezheti: a weboldal HTML forráskódjában kitörölheti a <code>required</code> attribútumot. Emiatt fontos, hogy ezeket az ellenőrzéseket szerveroldalon is elvégezzük!</p>
+<p>Két fontos PHP-beli függvény űrlapadatok szerveroldali ellenőrzésére:</p>
+<ul>
+<li><code>isset($val)</code>: igazat ad vissza, ha <code>$val</code> <code>NULL</code>-tól különböző értéket tárol</li>
+<li><code>empty($val)</code>: igazat ad vissza, ha <code>$val</code> üresnek tekinthető.</li>
+</ul>
+<p>Az <code>empty($val)</code> lényegében az <code>!isset($val) || $val == FALSE</code> tömörebb írásmódja. Tehát akkor ad vissza igazat, ha a változó nem tárol (<code>NULL</code>-tól különböző) értéket, vagy az értéke a <code>FALSE</code> logikai értéknek felel meg (a <code>FALSE</code> érték, az üres string, a <code>0</code>, <code>0.0</code>, <code>"0"</code> értékek és az üres tömb mind ilyenek). Ez nem feltétlenül a legjobb megoldás, hiszen ha egy űrlapmezőbe a 0 számot írjuk bele, akkor nem szeretnénk a mezőt üresnek tekinteni.</p>
+<p>Ekkor érdemes lehet egy másik megoldást használni az űrlapmező ürességének ellenőrzésére: először <code>isset()</code>-tel megnézzük, hogy az űrlapmező létezik-e, majd megvizsgáljuk, hogy az űrlapmező tartalma az üres stringtől különböző-e. Ez előtt érdemes a <code>trim()</code> függvénnyel eltávolítani a beírt érték elejéről és a végéről a fölösleges whitespace karakterket.</p>
+<p><span class="example">Példa:</span> Hozzunk létre egy <code>pelda.php</code> nevű fájlt, és másoljuk bele az alábbi kódot! Ha a beviteli mezőt kitöltjük, akkor az űrlap elküldése után kiírjuk a beírt szöveget, egyébként pedig hibaüzenetet jelenítünk meg.</p>
+<div class="highlight"><pre><span></span><code><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;hu&quot;&gt;</span>
+<span class="x">  &lt;head&gt;</span>
+<span class="x">    &lt;title&gt;Űrlapfeldolgozás&lt;/title&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;/&gt;</span>
+<span class="x">  &lt;/head&gt;</span>
+<span class="x">  &lt;body&gt;</span>
+<span class="x">    &lt;form action=&quot;pelda.php&quot; method=&quot;GET&quot;&gt;</span>
+<span class="x">      &lt;input type=&quot;text&quot; name=&quot;szoveg&quot;/&gt;</span>
+<span class="x">      &lt;input type=&quot;submit&quot; name=&quot;elkuld&quot;/&gt; &lt;br/&gt;&lt;br/&gt;</span>
+<span class="x">    &lt;/form&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+      <span class="c1">// itt a $_GET szuperglobálist használjuk, hiszen az űrlap a method=&quot;GET&quot; attribútummal rendelkezik</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;elkuld&quot;</span><span class="p">]))</span> <span class="p">{</span>   <span class="c1">// csak azután dolgozzuk fel az űrlapot, miután az el lett küldve</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;szoveg&quot;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;szoveg&quot;</span><span class="p">])</span> <span class="o">!==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// ha az űrlapmező létezik és kitöltötték...</span>
+          <span class="nv">$beirt_szoveg</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;szoveg&quot;</span><span class="p">];</span>  <span class="c1">// az űrlapmezőbe írt érték eltárolása egy változóban</span>
+          <span class="k">echo</span> <span class="s2">&quot;A beírt szöveg: </span><span class="si">$beirt_szoveg</span><span class="s2"> &lt;br/&gt;&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> 
+          <span class="k">echo</span> <span class="s2">&quot;&lt;strong&gt;Hiba!&lt;/strong&gt; Írj be valamit az űrlapmezőbe! &lt;br/&gt;&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">  &lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+
+<h5 id="tobberteku-urlapmezok-feldolgozasa">Többértékű űrlapmezők feldolgozása<a class="headerlink" href="#tobberteku-urlapmezok-feldolgozasa" title="Permanent link">&para;</a></h5>
+<p>Emlékezzünk vissza a jelölőnégyzetekre! Ők azért voltak különlegesek, mert itt (a választógombokkal ellentétben) egyszerre több válaszlehetőséget is meg lehetett jelölni.</p>
+<p>Ha PHP-ban le szeretnénk kérni a bejelölt jelölőnégyzetek értékét, akkor a HTML kódban az egy csoportba tartozó jelölőnégyzetek <code>name</code> értékeként egy, minden jelölőnégyzet esetén azonos nevű <strong>tömb</strong>öt adunk meg. A megadott <code>name</code> értéket felhasználva, PHP-ban a csoport összes bejelölt jelölőnégyzetének <code>value</code> értéke lekérhető egy tömbbe.</p>
+<p><span class="example">Példa:</span> A bejelölt jelölőnégyzetek értékeinek kiíratása</p>
+<div class="highlight"><pre><span></span><code><span class="x">&lt;form action=&quot;pelda.php&quot; method=&quot;POST&quot;&gt;</span>
+<span class="x">  &lt;input type=&quot;checkbox&quot; name=&quot;gyumolcsok[]&quot; value=&quot;alma&quot;/&gt; Alma</span>
+<span class="x">  &lt;input type=&quot;checkbox&quot; name=&quot;gyumolcsok[]&quot; value=&quot;banán&quot;/&gt; Banán</span>
+<span class="x">  &lt;input type=&quot;checkbox&quot; name=&quot;gyumolcsok[]&quot; value=&quot;citrom&quot;/&gt; Citrom</span>
+<span class="x">  &lt;input type=&quot;submit&quot; name=&quot;elkuld&quot;/&gt; &lt;br/&gt;&lt;br/&gt;</span>
+<span class="x">&lt;/form&gt;</span>
+
+<span class="cp">&lt;?php</span>
+  <span class="c1">// itt a $_POST szuperglobálist használjuk, hiszen az űrlap a method=&quot;POST&quot; attribútummal rendelkezik</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;elkuld&quot;</span><span class="p">]))</span> <span class="p">{</span> 
+    <span class="nv">$kivalasztott</span> <span class="o">=</span> <span class="p">[];</span>     <span class="c1">// ebben a tömbben fogjuk tárolni a bejelölt értékeket</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;gyumolcsok&quot;</span><span class="p">]))</span> <span class="p">{</span> <span class="c1">// ha legalább egy opciót kiválasztottak...</span>
+      <span class="nv">$kivalasztott</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;gyumolcsok&quot;</span><span class="p">];</span>  <span class="c1">// bejelölt jelölőnégyzetek value értékének lementése</span>
+      <span class="k">echo</span> <span class="s2">&quot;A kiválasztott gyümölcsök: &quot;</span> <span class="o">.</span> <span class="nb">implode</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">,</span> <span class="nv">$kivalasztott</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span><span class="p">;</span>  <span class="c1">// tömb elemeinek kiíratása</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+
+<p><a href="../img/gyak08/checkbox-example.png"><img alt="A kód működése" src="../img/gyak08/checkbox-example.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Megjegyzés</p>
+<p>A <code>multiple</code> attribútummal ellátott választólistában (<code>&lt;select&gt;</code>) kiválasztott opciók a fent leírtakkal teljesen analóg módon kérdezhetők le.</p>
+</div>
+<h4 id="egy-teljes-pelda-regisztracio">Egy teljes példa: Regisztráció<a class="headerlink" href="#egy-teljes-pelda-regisztracio" title="Permanent link">&para;</a></h4>
+<p>Hozzunk létre egy <code>signup.php</code> nevű állományt, és másoljuk bele az alábbi kódot!</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;hu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Regisztráció<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;signup.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Felhasználónév: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;felhasznalonev&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Jelszó: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;jelszo&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Jelszó ismét: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;jelszo2&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Életkor: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;eletkor&quot;</span><span class="p">/&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+      Nem:
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nem&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;F&quot;</span><span class="p">/&gt;</span> Férfi<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nem&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;N&quot;</span><span class="p">/&gt;</span> Nő<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nem&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;E&quot;</span><span class="p">/&gt;</span> Egyéb<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+      Hobbik:
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;hobbik[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;programozás&quot;</span><span class="p">/&gt;</span> Programozás<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;hobbik[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;főzés&quot;</span><span class="p">/&gt;</span> Főzés<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;hobbik[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;macskázás&quot;</span><span class="p">/&gt;</span> Macskázás<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;hobbik[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mémnézegetés&quot;</span><span class="p">/&gt;</span> Mémnézegetés<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;hobbik[]&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;alvás&quot;</span><span class="p">/&gt;</span> Alvás<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;regiszt&quot;</span><span class="p">/&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+    <span class="cp">&lt;?php</span>
+<span class="cp">      // ide jön az űrlapot feldolgozó PHP kód...</span>
+<span class="cp">    ?&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Írjuk meg az űrlap feldolgozását végző PHP kódot! Az űrlap feldolgozásakor a következőket ellenőrizzük:</p>
+<ul>
+<li>A felhasználónevet, a két jelszót, az életkort és a nemet kötelező legyen megadni!</li>
+<li>Ne lehessen foglalt felhasználónévvel regisztrálni!</li>
+<li>A jelszó legalább 5 karakter hosszú legyen!</li>
+<li>A két jelszónak meg kell egyeznie!</li>
+<li>Csak 18 éves kortól lehessen regisztrálni!</li>
+<li>Legalább 2 hobbit kötelező legyen kiválasztani!</li>
+</ul>
+<p>Amennyiben minden előírás teljesül, akkor a regisztráció sikeres. Ekkor jegyezzük be az újonnan regisztrált felhasználót a rendszer által ismert felhasználók adatai közé, és írassuk ki a "Sikeres regisztráció!" szöveget! Ellenkező esetben írassuk ki a regisztráció során megtörtént hibákat!</p>
+<p>Az egyszerűség kedvéért a regisztrált felhasználók legyenek előre rögzítettek. Ezeket a felhasználókat az alábbi kétdimenziós tömbben tároljuk! Minden felhasználót egy asszociatív tömb reprezentál, amely tartalmazza a felhasználónevet, a jelszót, a nemet és a hobbikat (a hobbikat egy tömbben tároljuk).</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="nv">$fiokok</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Macska123&quot;</span><span class="p">,</span> <span class="s2">&quot;nem&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;hobbik&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;macskázás&quot;</span><span class="p">,</span> <span class="s2">&quot;programozás&quot;</span><span class="p">]],</span>
+    <span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;guest&quot;</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;guest1&quot;</span><span class="p">,</span> <span class="s2">&quot;nem&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;hobbik&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;alvás&quot;</span><span class="p">,</span> <span class="s2">&quot;mémnézegetés&quot;</span><span class="p">]],</span>
+    <span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;TestUser&quot;</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;test99&quot;</span><span class="p">,</span> <span class="s2">&quot;nem&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;hobbik&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;macskázás&quot;</span><span class="p">,</span> <span class="s2">&quot;főzés&quot;</span><span class="p">]]</span>
+  <span class="p">];</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+
+<details class="success"><summary>Egy lehetséges megoldás (<a href="../feladatok/signup_form.php">Letöltés</a>)</summary><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+  <span class="c1">// a rendszer által ismert felhasználókat tartalmazó 2-dimenziós tömb</span>
+  <span class="nv">$fiokok</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Macska123&quot;</span><span class="p">,</span> <span class="s2">&quot;nem&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;hobbik&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;macskázás&quot;</span><span class="p">,</span> <span class="s2">&quot;programozás&quot;</span><span class="p">]],</span>
+    <span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;guest&quot;</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;guest1&quot;</span><span class="p">,</span> <span class="s2">&quot;nem&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;hobbik&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;alvás&quot;</span><span class="p">,</span> <span class="s2">&quot;mémnézegetés&quot;</span><span class="p">]],</span>
+    <span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;TestUser&quot;</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;test99&quot;</span><span class="p">,</span> <span class="s2">&quot;nem&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;hobbik&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;macskázás&quot;</span><span class="p">,</span> <span class="s2">&quot;főzés&quot;</span><span class="p">]]</span>
+  <span class="p">];</span>
+
+  <span class="c1">// az űrlapfeldolgozás során keletkező hibákat ebbe a tömbbe fogjuk gyűjteni</span>
+  <span class="nv">$hibak</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="c1">// űrlapfeldolgozás</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;regiszt&quot;</span><span class="p">]))</span> <span class="p">{</span>   <span class="c1">// ha az űrlapot elküldték...</span>
+    <span class="c1">// a kötelezően kitöltendő mezők ellenőrzése</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span><span class="p">])</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;A felhasználónév megadása kötelező!&quot;</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;jelszo&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;jelszo&quot;</span><span class="p">])</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span> <span class="o">||</span> <span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;jelszo2&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;jelszo2&quot;</span><span class="p">])</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;A jelszó és az ellenőrző jelszó megadása kötelező!&quot;</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;eletkor&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;eletkor&quot;</span><span class="p">])</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;Az életkor megadása kötelező!&quot;</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;nem&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;nem&quot;</span><span class="p">])</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;A nem megadása kötelező!&quot;</span><span class="p">;</span>
+
+    <span class="c1">// legalább 2 hobbit kötelező kiválasztani</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;hobbik&quot;</span><span class="p">])</span> <span class="o">||</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;hobbik&quot;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;Legalább 2 hobbit kötelező kiválasztani!&quot;</span><span class="p">;</span>
+
+    <span class="c1">// űrlapadatok lementése változókba</span>
+    <span class="nv">$felhasznalonev</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span><span class="p">];</span>
+    <span class="nv">$jelszo</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;jelszo&quot;</span><span class="p">];</span>
+    <span class="nv">$jelszo2</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;jelszo2&quot;</span><span class="p">];</span>
+    <span class="nv">$eletkor</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;eletkor&quot;</span><span class="p">];</span>
+    <span class="nv">$nem</span> <span class="o">=</span> <span class="k">NULL</span><span class="p">;</span>
+    <span class="nv">$hobbik</span> <span class="o">=</span> <span class="k">NULL</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;nem&quot;</span><span class="p">]))</span>           <span class="c1">// csak akkor kérjük le a nemet, ha megadták</span>
+      <span class="nv">$nem</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;nem&quot;</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;hobbik&quot;</span><span class="p">]))</span>        <span class="c1">// csak akkor kérjük le a hobbikat, ha megadták</span>
+      <span class="nv">$hobbik</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;hobbik&quot;</span><span class="p">];</span>       <span class="c1">// (ez egy tömb lesz)</span>
+
+    <span class="c1">// foglalt felhasználónév ellenőrzése</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$fiokok</span> <span class="k">as</span> <span class="nv">$fiok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$fiok</span><span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span><span class="p">]</span> <span class="o">===</span> <span class="nv">$felhasznalonev</span><span class="p">)</span>  <span class="c1">// ha egy regisztrált felhasználó neve megegyezik az űrlapon megadott névvel...</span>
+        <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;A felhasználónév már foglalt!&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// túl rövid jelszó</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">strlen</span><span class="p">(</span><span class="nv">$jelszo</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;A jelszónak legalább 5 karakter hosszúnak kell lennie!&quot;</span><span class="p">;</span>
+
+    <span class="c1">// a két jelszó nem egyezik</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$jelszo</span> <span class="o">!==</span> <span class="nv">$jelszo2</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;A jelszó és az ellenőrző jelszó nem egyezik!&quot;</span><span class="p">;</span>
+
+    <span class="c1">// 18 év alatti életkor</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$eletkor</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span>
+      <span class="nv">$hibak</span><span class="p">[]</span> <span class="o">=</span> <span class="s2">&quot;Csak 18 éves kortól lehet regisztrálni!&quot;</span><span class="p">;</span>
+
+    <span class="c1">// regisztráció sikerességének ellenőrzése</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$hibak</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// ha nem történt hiba a regisztráció során, hozzáadjuk az újonnan regisztrált felhasználót a $fiokok tömbhöz</span>
+      <span class="nv">$fiokok</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;felhasznalonev&quot;</span> <span class="o">=&gt;</span> <span class="nv">$felhasznalonev</span><span class="p">,</span> <span class="s2">&quot;jelszo&quot;</span> <span class="o">=&gt;</span> <span class="nv">$jelszo</span><span class="p">,</span> <span class="s2">&quot;eletkor&quot;</span> <span class="o">=&gt;</span> <span class="nv">$eletkor</span><span class="p">,</span> <span class="s2">&quot;nem&quot;</span> <span class="o">=&gt;</span> <span class="nv">$nem</span><span class="p">,</span> <span class="s2">&quot;hobbik&quot;</span> <span class="o">=&gt;</span> <span class="nv">$hobbik</span><span class="p">];</span>
+      <span class="k">echo</span> <span class="s2">&quot;Sikeres regisztráció! &lt;br/&gt;&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>                      <span class="c1">// ha voltak hibák, kiírjuk őket egy-egy bekezdésben</span>
+      <span class="k">foreach</span> <span class="p">(</span><span class="nv">$hibak</span> <span class="k">as</span> <span class="nv">$hiba</span><span class="p">)</span>
+        <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;&quot;</span> <span class="o">.</span> <span class="nv">$hiba</span> <span class="o">.</span> <span class="s2">&quot;&lt;/p&gt;&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+
+</details>
+<div class="admonition note">
+<p class="admonition-title">Megjegyzés</p>
+<p>A fenti példában csak az űrlapfeldolgozáson van a hangsúly. Mivel a regisztráció után az adatokat csak ideiglenesen tároljuk el a memóriában, ezért egyelőre még olyat nem tudunk csinálni, hogy egy, az űrlapon regisztrált felhasználó nevével már ne lehessen többé regisztrálni. A következő gyakorlaton megnézzük, hogy hogyan lehet elmenteni egy regisztrált felhasználó adatait, és ténylegesen működőképessé tesszük a regisztrációt.</p>
+</div>
                 
                   
                     
@@ -933,7 +1134,7 @@ FATAL ERROR Uncaught TypeError: Argument 2 passed to atlag() must be of the type
 <div class="md-source-date">
   <small>
     
-      Utolsó frissítés: 2021-01-28 16:49:32
+      Utolsó frissítés: 2021-01-31 13:44:17
     
   </small>
 </div>
