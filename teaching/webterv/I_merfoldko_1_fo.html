@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <title>Webtervezés 2020 - I. mérföldkő</title>
+    <style>
+      body {
+        font-family: "Segoe UI",Arial,sans-serif;
+        background-color: #fcfcfc;
+        font-size:16px;
+        padding-bottom:50px;
+      }
+      table,td,th {
+        border-collapse: collapse;
+      }
+      th,td {
+        border: 1px solid #000000;
+        padding:5px;
+      }
+      table {
+        margin:10px;
+      }
+      td:first-child {
+        /*font-weight:bold;*/
+        vertical-align: top;
+      }
+      .stfill {
+        font-weight:bold;
+        color:#DD4132;
+      }
+      .sum {
+        border-top:2px solid #000000;
+      }
+      .sum td {
+        font-weight:bold;
+      }
+      .task {
+        /*font-weight:bold;*/
+      }
+      .subtask {
+        padding-left:25px;
+      }
+      .note {
+        font-size:12px;
+        display:block;
+      }
+      tr.sum>td:nth-child(2),
+      td:nth-child(3),
+      td:nth-child(4) {
+        text-align: center;
+      }
+      tr.header {
+        border-bottom: 2px solid #000000;
+      }
+      .example {
+        font-style: italic;
+        color:grey;
+      }
+      .kotelezo{ 
+		  color:red; 
+		  font-weight: bold; 
+	   }
+    </style>
+  </head>
+  <body>
+    <h1>Web tervezés gyakorlat 2020/2021 II. félév <br />
+       1 fős projekt I. mérföldkő követelmények</h1>
+    <div>
+      <h2>Általános elvárások</h2>
+      <ul>
+        <li>
+          A projekt során nem használható fel olyan ismeretanyag, amely a kurzus tananyagát nem képzi. (pl.: adatbázis, css framework, front-end, back-end keretrendszer, javascript).<br />
+          Ezen szabály megszegése esetén a következő képlet alapján mínuszpont jár: -6p+(hallgatói ismételt beadás napja - oktatói értékelés napja-1)*(-3). <br />
+          Azaz a projekt pontból -6 pont levonásra kerül.
+          Ezen felül, miután a gyakorlatvezető jelzi a hallgatónak, hogy a projektet nem fogadja el (ez az oktatói értékelés napja) minden megkezdett nap (hallgatói ismételt beadás napja - oktatói értékelés napja-1) további -3 pont levonásra kerül,
+          azaz úgy vesszük, hogy a hallgató nem készítette el határidőre a projektet).
+        </li>
+        <li>Az I. mérföldkőben legfeljebb 45 pont érhető el, amiből
+        legalább 22 pontot teljesíteni kell.</li>
+        <li>A mérföldkő elfogadásához 3 db html oldalt kell elkészíteni.
+            A projekt célja a HTML, CSS ismeretek bemutatása, ezért nem tartalmazhat program által generált elemeket.</li>
+        <li>Az elkészített vagy felhasznált fájlokat mappába szervezve kell feltölteni (pl.: css fájlok css mappában; képek img mappában stb.)</li>
+        <li>Az elkészített feladatot egy zip fájlban kell feltölteni CooSpace-re a követelményekben megfogalmazott határidőig.</li>
+        <li>Tetszőleges mappában történő kicsomagolás után a HTML fájlok böngészőben történő megnyitásával a használt útvonalaknak (css,kép) helyesnek kell lenniük.</li>
+        <li>A fenti elvárások a pontozásban "Formai követelmények" néven szerepelnek.</li>
+        <li>Csak működő, látható és értelmes formázások érnek pontot. Például nem ér pontot: fehér háttéren fehér szöveg, CSS animáció ami nem jelenik meg a weboldalon, a rossz útvonalak miatt nem működő/látható tartalom.</li>
+        <li>Az <span class="kotelezo">
+             1, 2.1, 3, 3.1, 3.2, 4.1, 4.2, 4.3, 4.5, 5.1, 5.3 </span>
+             számozású követelmények teljesítése az elégséges érdemjegy megszerzéséhez kötelező, a projekt más részeivel ki nem váltható!</li>
+        <li>Az 5.4, 5.5 és 5.6-ős követelményeknél fel kell 
+        sorolni a megvalósított elemeket. </li>
+        <li> Az összes követelménynél a megvalósított elemeket 
+        linkké kell alakítani, melyek arra az oldalra navigálnak, 
+        ahol láthatóak.</li>
+        <li>Ezen dokumentumot így HTML formátumban 
+        kitöltve mellékelni kell a beadott zip fájlban.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Hallgató adatai</h2>
+      <ul>
+        <li>Név: <span class="stfill">[Hallgató tölti ki...]</span></li>
+        <li>Neptun-kód: <span class="stfill">[Hallgató tölti ki...]</span></li>
+        <li>Szak, évfolyam: <span class="stfill">[Hallgató tölti ki...]</span></li>
+        <li>E-mail cím: <span class="stfill">[Hallgató tölti ki...]</span></li>
+        <li>Használt szabvány: <span class="stfill">[Hallgató tölti ki...]</span> (XHTML 1.0 Strict vagy HTML5)</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Pontozás</h2>
+      <p>
+        Ezt a részt az oktató tölti ki.
+      </p>
+      <table>
+        <tr class="header">
+          <th>
+            
+          </th>
+          <th>
+            Részfeladat
+          </th>
+          <th>
+            Szerezhető pontszám
+          </th>
+          <th>
+            Szerzett pontszám
+          </th>
+          <th>
+            Megjegyzés
+          </th>
+        </tr>
+        <tr class="kotelezo">
+          <td>1</td>
+          <td>
+            Formai követelmények
+          </td>
+          <td>1</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>2</td>
+          <td class="task" colspan="4">
+            Szabványos HTML oldalak
+          </td>
+        </tr>        
+        <tr class="kotelezo">
+          <td>2.1</td>
+          <td class="subtask">
+				Legalább egy oldalnak szabványosnak kell lennie.
+          </td>
+          <td>2</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>2.2</td>
+          <td class="subtask">
+				További szabványos oldalak, 
+				oldalanként 2 pont
+          </td>
+          <td>6</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>3</td>
+          <td class="task" colspan="4">
+            Menü megvalósítás
+          </td>          
+        </tr>
+        <tr class="kotelezo">
+          <td>3.1</td>
+          <td class="subtask">
+            <a>Linkek használata</a>
+          </td>
+          <td>1</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>3.2</td>
+          <td class="subtask">
+            <a>Lista használata</a>
+          </td>
+          <td>1</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>3.3</td>
+          <td class="subtask">
+            <a>CSS formázás</a>
+            <span class="note">- Az aktuális menüpont eltérő.</span>
+            <span class="note">- Az egér rávitelével a kinézet módosul.</span>
+          </td>
+          <td>4</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>4</td>
+          <td class="task" colspan="4">
+            A weboldal struktúrája
+          </td>
+        </tr>
+        <tr class="kotelezo">
+          <td>4.1</td>
+          <td class="subtask">
+            <a>Div illetve HTML5 elemekkel van kialakítva</a>
+            <span class="note">Fejléc, lábléc, törzs, oldalsáv, menü.</span>
+            <span class="note">HTML5 esetén HTML5 elemek.</span>
+          </td>
+          <td>3</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>4.2</td>
+          <td class="subtask">
+            <a>Táblázat elemek szabályos használata</a>
+            <span class="note">Fejlécekhez való társítással (headers).</span>
+          </td>
+          <td>4</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>4.3</td>
+          <td class="subtask">
+            <a>Űrlap kialakítása, űrlapelemek használata</a>
+            <span class="note">Elküldés és alapállapot gombok. </span>
+            <span class="note">Legalább 3 féle beviteli mező, 
+            label elemekkel.</span>
+          </td>
+          <td>4</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>4.4</td>
+          <td class="subtask">
+            <a>További űrlapelemek használata</a>
+            <span class="note">
+			Beviteli mezők label elemekkel,
+            rejtett mező, mezőcsoportosítás,</span>
+            <span class="note">
+			darabonként 1p.</span>
+          </td>
+          <td>13</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>4.5</td>
+          <td class="subtask">
+            <a>Kép elem használata</a>
+          </td>
+          <td>1</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>5</td>
+          <td class="task" colspan="4">
+            CSS
+          </td>
+        </tr>
+        <tr class="kotelezo">
+          <td>5.1</td>
+          <td class="subtask">
+            <a>Elemkijelölő, azonosítókijelölő, 
+            <br>osztálykijelölő használata</a>
+          </td>
+          <td>3</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>5.2</td>
+          <td class="subtask">
+            <a>Összetett kijelölők használata</a>
+          </td>
+          <td>1</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>5.3</td>
+          <td class="subtask">
+            <a>Nyomtatási stíluslap</a>
+            <span class="note">
+			Elegendő elkészíteni a HTML oldalak 
+            egyikéhez <br>
+            az órán tanultaknak megfelelően.</span>
+          </td>
+          <td>2</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>5.4</td>
+          <td class="subtask">
+            További strukturális elemek céljuknak
+            megfelelően használva
+            <span class="note">- körvonal: 2 pont</span>
+            <span class="note">- kliensoldali térkép: 2 pont</span>
+            <span class="note">- hang- vagy videóállomány: 1-2 pont</span>
+            <span class="note">- iframe: 1 pont</span>            			
+            <span class="note">- article: 1 pont</span>            			
+            <span class="note">- section: 1 pont</span>            			
+            <span class="note">- figure: 1 pont</span>            			     			
+            <span class="note">- címsor: 1 pont</span>            			
+            <span class="note">- p, wbr, pre, cite, blockquote,
+              q tagok: mindegyik 1-1 pont</span>            			
+            <span class="note">- kiemelések: em, strong, b, 
+              mark, u, i: mindegyik 1-1 pont</span>            			
+            <span class="note">- stb. (a hallgató tölti ki)</span>            			
+          </td>
+          <td>18</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>5.5</td>
+          <td class="subtask">
+            A weboldal struktúra elemeinek testreszabása
+            <span class="note">Formázás, pozícionálás, méretezés, úsztatás</span>
+            <span class="note">Példák:</span>
+            <span class="note">- túlcsordulás szabályozása: 1 pont</span>
+            <span class="note">- háttérszín vagy háttérkép: 1 pont</span>
+            <span class="note">- háttér rögzítése: 1 pont</span>
+            <span class="note">- szegélykép beállítása: 1 pont</span>
+            <span class="note">- kijelölés kapcsolat alapján: 1 pont</span>
+            <span class="note">- kijelölés tulajdonság alapján: 1 pont</span>
+            <span class="note">- táblázatos megjelenítés táblázat nélkül: 1 pont</span>
+            <span class="note">- szövegek formázása és igazítása: 
+             letter-spacing, line-height, white-space, text-align: 
+             mindegyik 1-1 pont</span>
+            <span class="note">- betűméret, dőlt betűk,
+            betűvastagság: 1 pont</span>
+            <span class="note">- text-decoration, text-shadow: 1 pont</span>
+            <span class="note">- fix fejléc: 1 pont</span>
+            <span class="note">- többoszlopos elrendezés: 2 pont</span>            			
+            <span class="note">- lebegő doboz: 2 pont</span>            			
+            <span class="note">- z-index használata: 1 pont</span>            			
+            <span class="note">- méretezés: 2 pont</span>            			
+            <span class="note">- stb. (a hallgató tölti ki)</span>            			
+          </td>
+          <td>15</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>5.6</td>
+          <td class="subtask">
+            Dizájn
+            <span class="note">A korábbi részfeladatok teljesítéséhez használt szabályokon felül.</span>
+            <span class="note">Szabadon használható:</span>
+            <span class="note">- pozícionálás: absolute, fixed, relative,  static típusonként 2 pont</span>
+            <span class="note">- úsztatás: 2 pont</span>
+            <span class="note">- pseudo elemek: 2 pont</span>
+            <span class="note">- lekerekített sarkok: 2 pont</span>
+            <span class="note">- árnyékok: 2 pont</span>
+            <span class="note">- áttűnés: 2 pont</span>
+            <span class="note">- transzformálás: eltolás, forgatás, skálázás, nyírás típusonként 2 pont</span>
+            <span class="note">- animáció: 4 pont</span>
+            <span class="note">- media query: 2 pont</span>
+            <span class="note">- stb. (a hallgató tölti ki)</span>
+          </td>
+          <td>14</td><td></td><td></td>
+        </tr>
+        <tr class="sum">
+          <td colspan="2">Összpontszám:</td>
+          <td>45</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h2>Megjegyzés</h2>
+      <p>A hallgató opcionális megjegyzése a beadott feladathoz.</p>
+      <p class="stfill">
+         [Hallgató tölti ki...]
+      </p>
+    </div>
+    <p> Közzétéve: 2021. 03. 01. </p>
+  </body>
+</html>
