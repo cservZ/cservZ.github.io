@@ -60,6 +60,10 @@
 		  color:red; 
 		  font-weight: bold; 
 	   }
+
+     table tr td:nth-child(4), table tr td:nth-child(5),table tr th:nth-child(4), table tr th:nth-child(5){
+        visibility: hidden;
+     }
     </style>
   </head>
   <body>
@@ -179,10 +183,11 @@
         <li> Az összes követelménynél 
         felsorolt elemeket linkké kell alakítani, melyek arra az oldalra 
         navigálnak, ahol láthatóak.</li>
-        <li>Ezen dokumentumot kitöltve mellékelni kell a beadott zip fájlban.</li>
+        <li>A munkanapló végleges verzióját kérjük csatolni a projekt mellé. Akik a munkanaplót Google táblázat formájában vezették kérjük exportált verzióban csatolják!</li>
+
       </ul>
     </div>
-    <div>
+    <div style="display: none;">
       <h3>1. hallgató adatai</h3>
       <ul>
         <li>Név: <span class="stfill">[Hallgató tölti ki...]</span></li>
@@ -192,7 +197,7 @@
         <li>Használt szabvány: <span class="stfill">[Hallgató tölti ki...]</span> (XHTML 1.0 Strict vagy HTML5)</li>
       </ul>
     </div>
-	<div>
+	<div style="display: none;">
       <h3>2. hallgató adatai</h3>
       <ul>
         <li>Név: <span class="stfill">[Hallgató tölti ki...]</span></li>
@@ -205,6 +210,7 @@
     <div>
       <h3>Pontozás</h3>
       <table>
+
         <tr class="header">
           <th>            
           </th>
@@ -240,7 +246,7 @@
         </tr>
         <tr class="kotelezo">
           <td>3</td>
-          <td class="task" colspan="4">
+          <td class="task" colspan="2">
             Menü megvalósítás
           </td>          
         </tr>
@@ -269,7 +275,7 @@
         </tr>
         <tr class="kotelezo">
           <td>4</td>
-          <td class="task" colspan="4">
+          <td class="task" colspan="2">
             A weboldal struktúrája
           </td>
         </tr>
@@ -321,7 +327,7 @@
         </tr>
         <tr class="kotelezo">
           <td>5</td>
-          <td class="task" colspan="4">
+          <td class="task" colspan="2">
             CSS
           </td>
         </tr>
@@ -424,18 +430,18 @@
         <tr class="sum">
           <td colspan="2">Összpontszám:</td>
           <td>85</td>
-          <td></td>
-          <td></td>
+          <!--<td></td>
+          <td></td>-->
         </tr>
       </table>
     </div>
-    <div>
+    <div style="display: none;">
       <h3>Megjegyzés</h3>
       <p>A hallgató opcionális megjegyzése a beadott feladathoz.</p>
       <p class="stfill">
          [Hallgató tölti ki...]
       </p>
     </div>
-    <p> Közzétéve: 2020. 03. 01.</p>
+    <p> Közzétéve: 2020. 03. 03.</p>
   </body>
 </html>
