@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <title>Webtervezés 2020 - II. mérföldkő</title>
+    <style>
+      body {
+        font-family: "Segoe UI",Arial,sans-serif;
+        background-color: #fcfcfc;
+        font-size:16px;
+        padding-bottom:50px;
+      }
+      table,td,th {
+        border-collapse: collapse;
+      }
+      th,td {
+        border: 1px solid #000000;
+        padding:5px;
+      }
+      table {
+        margin:10px;
+      }
+      td:first-child {
+        /*font-weight:bold;*/
+        vertical-align: top;
+      }
+      .stfill {
+        font-weight:bold;
+        color:#DD4132;
+      }
+      .sum {
+        border-top:2px solid #000000;
+      }
+      .sum td {
+        font-weight:bold;
+      }
+      .task {
+        /*font-weight:bold;*/
+      }
+      .subtask {
+        padding-left:25px;
+      }
+      .note {
+        font-size:12px;
+        display:block;
+      }
+      tr.sum>td:nth-child(2),
+      td:nth-child(3),
+      td:nth-child(4) {
+        text-align: center;
+      }
+      tr.header {
+        border-bottom: 2px solid #000000;
+      }
+      .example {
+        font-style: italic;
+        color:grey;
+      }
+      .kotelezo{ 
+		  color:red; 
+		  font-weight: bold; 
+	   }
+    </style>
+  </head>
+  <body>
+    <h1>Web tervezés gyakorlat 2020/2021 II. félév <br />
+       1 fős projekt II. mérföldkő követelmények</h1>
+    <div>
+      <h2>Általános elvárások</h2>
+      <ul>
+        <li>A II. mérföldkőben legfeljebb 45 pont érhető el, amiből legalább 22 pontot teljesíteni kell.</li>
+        <li>Az elfogadáshoz egy XAMPP környezetben futó webalkalmazást (PHP) kell elkészíteni, melynek tükröznie kell az I. mérföldkőben megadott témát.</li>
+        <li>A kurzus tananyagát nem képező ismeretanyagok (pl. PHP keretrendszerek, adatbázisok, JavaScript) használatára nincs lehetőség.<br />
+          Ezen szabály megszegése esetén a következő képlet alapján mínuszpont jár: -6p+(hallgatói ismételt beadás napja - oktatói értékelés napja-1)*(-3). <br />
+          Azaz a projekt pontból -6 pont levonásra kerül.
+          Ezen felül, miután a gyakorlatvezető jelzi a hallgatónak, hogy a projektet nem fogadja el (ez az oktatói értékelés napja) minden megkezdett nap (hallgatói ismételt beadás napja - oktatói értékelés napja-1) további -3 pont levonásra kerül,
+          azaz úgy vesszük, hogy a hallgató nem készítette el határidőre a projektet).</li>
+        <li>Az elkészített vagy felhasznált fájlokat mappába szervezve kell feltölteni (pl.: css fájlok css mappában; képek img mappában stb.)</li>
+        <li>Az elkészített feladatot egy zip fájlban kell feltölteni CooSpace-re a követelményekben megfogalmazott határidőig.</li>
+        <li>A zip fájlnak tartalmaznia kell egy mappát, melyben a projekt fájljait kell elhelyezni.</li>
+        <li>Tetszőleges mappába való kicsomagolás után a projekt mappáját a XAMPP htdocs mappájába másolva, mindenféle konfiguráció nélkül a weboldalnak működnie kell a <em>localhost/[valami]</em> url-t megnyitva böngészőben, ahol a [valami] egy tetszőleges nevű mappa. (A portszámtól eltekintve.)</li>
+        <li>A fenti elvárások a pontozásban "Formai követelmények" néven szerepelnek.</li>
+        <li>Az <span class="kotelezo">
+            1, 2, 3, 3.2, 4, 4.1, 4.2, 4.3, 4.4, 5, 5.1, 5.2 </span>
+            sorszámú követelmények teljesítése az elégséges megszerzéséhez kötelező, a projekt más részével ki nem váltható!</li>
+        <li>Ezen dokumentumot így HTML formátumban kitöltve mellékelni kell a beadott zip fájlban.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Hallgató adatai</h2>
+      <ul>
+        <li>Név: <span class="stfill">[Hallgató tölti ki...]</span></li>
+        <li>Neptun-kód: <span class="stfill">[Hallgató tölti ki...]</span></li>
+        <li>Szak, évfolyam: <span class="stfill">[Hallgató tölti ki...]</span></li>
+        <li>E-mail cím: <span class="stfill">[Hallgató tölti ki...]</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Pontozás</h2>
+      <p>
+        Ezt a részt az oktató tölti ki.
+      </p>
+      <table>
+        <tr class="header">
+          <th>
+
+          </th>
+          <th>
+            Részfeladat
+          </th>
+          <th>
+            Szerezhető pontszám
+          </th>
+          <th>
+            Szerzett pontszám
+          </th>
+          <th>
+            Megjegyzés
+          </th>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            1
+          </td>
+          <td>
+            Formai követelmények
+          </td>
+          <td>1</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            2
+          </td>
+          <td class="task">
+            Szabványos dinamikusan generált HTML
+            <div class="note">Hibás oldalanként 1 pont levonás. 
+                              Minimum 0 pont.</div>
+          </td>
+          <td>3</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            3
+          </td>
+          <td class="task" colspan="4">
+            Menü
+          </td>
+        </tr>
+        <tr>
+          <td>
+            3.1
+          </td>
+          <td class="subtask">
+            <i>Az éppen megnyitott menüpont ki van emelve</i>
+          </td>
+          <td><i>2</i></td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            3.2
+          </td>
+          <td class="subtask">
+            Hiba nélkül működő navigáció
+          </td>
+          <td>2</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            4
+          </td>
+          <td class="task" colspan="4">
+            Felhasználó kezelés
+          </td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            4.1
+          </td>
+          <td class="subtask">
+            Menetkövetés
+            <div class="note">Szabályos session használat.</div>
+          </td>
+          <td>2</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            4.2
+          </td>
+          <td class="subtask">
+            Bejelentkezés
+            <div class="note">- hibás adatok esetén hibaüzenet</div>
+            <div class="note">- helyes adatok esetén működő bejelentkezés</div>
+          </td>
+          <td>4</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            4.3
+          </td>
+          <td class="subtask">
+            Belépett felhasználó ellenőrzése
+            <div class="note">Amennyiben egy nem belépett felhasználó olyan oldalt <br> nyit meg, amit csak belépett felhasználó tud elérni, <br> irányítson át a bejelentkezéshez.</div>
+          </td>
+          <td>2</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            4.4
+          </td>
+          <td class="subtask">
+            Kijelentkezés
+          </td>
+          <td>2</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            5
+          </td>
+          <td class="task" colspan="4">
+            Regisztráció
+          </td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            5.1
+          </td>
+          <td class="subtask">
+            Működő regisztráció
+          </td>
+          <td>2</td><td></td><td></td>
+        </tr>
+        <tr class="kotelezo">
+          <td>
+            5.2
+          </td>
+          <td class="subtask">
+            Űrlap ellenőrzés PHP oldalon
+            <div class="note">- nem kitöltött űrlap ellenőrzés</div>
+            <div class="note">- foglalt-e a felhasználónév</div>
+            <div class="note">- jelszó ismétlő mező ellenőrzés</div>
+            <div class="note">- helyes-e a megadott e-mail-cím formátuma</div>
+          </td>
+          <td>4</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>
+            6
+          </td>
+          <td class="task" colspan="4">
+            PHP
+          </td>
+        </tr>
+        <tr>
+          <td>
+            6.1
+          </td>
+          <td class="subtask">
+            Fájlkezelés
+            <div class="note">- fájl beolvasása: 3p</div>
+            <div class="note">- fájlba írás: 3p</div>
+            <div class="note">- serialize(), unserialize() használata: 4p</div>
+          </td>
+          <td>10</td><td></td><td></td>
+        </tr>
+        <tr>
+        	<td>
+        		6.2
+        	</td>
+        	<td class="subtask">
+        		Kép feltöltés
+        	</td>
+        	<td>5</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>
+            6.3
+          </td>
+          <td class="subtask">
+           <i>Technikai elemek</i>
+            <div class="note">- ciklus használat (max 2x): 3-3p</div>
+            <div class="note">- GET paraméter alapján adat megjelenítés: 4p</div>
+            <div class="note">- űrlapos adatkezelés megvalósítás (max 2x): 4-4p</div>
+            <div class="note">- összetett számítás: 4p</div>
+            <div class="note">- összetett adatok tárolása session-ben: 8p</div>
+            <div class="note">- dátum kezelés: 3p</div>
+            <div class="note">- string műveletek: 4p</div>
+            <div class="note">- belépéshez kötött funkció: 4p</div>
+            <div class="note">- kivételkezelés: 4p</div>
+            <div class="note">- menetkövetés letiltott sütikkel is: 10p</div>
+            <div class="note">- stb. (hallgató tölti ki)</div>
+          </td>
+          <td><i>20</i></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>
+            7
+          </td>
+          <td class="task">
+            <i>Megvalósítás minősége és átláthatósága</i>
+            <div class="note">Az alábbiakból lehet összeszedni:</div>
+            <div class="note">- objektum orientáltság használata: 8p</div>
+            <div class="note">- függvények használata: 4p</div>
+            <div class="note">- kód ismétlések elkerülése: 4p</div>
+            <div class="note">- logikusan, fájlokba szervezett kód: 2p</div>
+            <div class="note">- CSS betöltése külön fájlból: 2p</div>
+          </td>
+          <td><i>16</i></td><td></td><td></td>
+        </tr>
+        <tr class="sum">
+          <td colspan="2">Összpontszám:</td>
+          <td>45</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h2>Megjegyzés</h2>
+      <p>A hallgató opcionális megjegyzése a beadott feladathoz.</p>
+      <p>
+         <span class="stfill">[Hallgató tölti ki...]</span>
+      </p>
+    </div>
+    <p> Közzétéve: 2021. 02. 20. </p>
+  </body>
+</html>
