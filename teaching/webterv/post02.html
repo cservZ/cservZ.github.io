@@ -8,8 +8,18 @@
 			font-family: monospace;
 		}
 
+		.dark-theme {
+			background-color: #36393f;
+			color: white;
+		}
+
 		a {
-			color: darkred;
+			color: red;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
 		}
 
 		.bold {
@@ -62,5 +72,21 @@
 	<p>Ha valami még később eszembe jut, akkor frissítem ezt a posztot. Jó munkát a mérföldkőhöz! :Smile:</p>
 
 	<p>Üdv., <br>Bence</p>
+
+	<button id="theme-toggle-btn" onclick="changeTheme()">Sötét téma</button>
+	<script>
+		function changeTheme() {
+			const documentBody = document.body;
+			documentBody.classList.toggle("dark-theme");
+
+			const buttonText = document.body.classList.contains("dark-theme") ? "Világos téma" : "Sötét téma";
+			changeButtonText(buttonText);
+		}
+
+		function changeButtonText(text) {
+			const toggleButton = document.getElementById("theme-toggle-btn");
+			toggleButton.innerText = text;
+		}
+	</script>
 </body>
 </html>
