@@ -5,13 +5,16 @@ html, body {
     height: 100%;
 	margin: 0;
     padding: 0;
-	overflow-x: hidden;
 }
 
 body {
 	background-color: #000428;
 	background-image: linear-gradient(90deg, #000428, #004e92);
 	min-height: 100vh;
+}
+
+body > div {
+	overflow-x: hidden;
 }
 
 .main-wrapper {
@@ -35,12 +38,12 @@ h3.heading {
 .heading-underline {
 	width: 6rem;
 	height: .2rem;
-	background-color: #1EBBA3;
+	background-color: #1ebba3;
 	margin: 0 auto 1rem;
 }
 
 .text-primary {
-	color: #1EBBA3 !important;
+	color: #1ebba3 !important;
 }
 
 .text-gray {
@@ -115,6 +118,10 @@ h3.heading {
 
 #sidebar nav a {
     margin-bottom: 5px;
+}
+
+#sidebar nav a.active {
+	color: #1ebba3 !important;
 }
 
 #sidebar.active {

@@ -16,7 +16,8 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar-responsive" data-offset="50">
+    <div>
     <!-- Sidebar -->
 
     <aside id="sidebar">
@@ -41,7 +42,7 @@
         <nav id="navbar-responsive">
             <ul class="nav flex-column mb-0">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link text-light active">Főoldal</a>
+                    <a href="#home" class="nav-link text-light">Főoldal</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link text-light">Rólam</a>
@@ -270,22 +271,23 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <!-- Overlay -->
+
+            <div id="overlay" class="position-fixed" onclick="closeSidebar()"></div>
+
+            <!-- Footer -->
+
+            <div id="page-footer">
+                <footer>
+                    <div class="row justify-content-center">
+                        <p>&copy; 2020-<span id="current-year"></span>, Cservenák Bence</p>
+                    </div>
+                </footer>
             </div>
-        </section>
-
-        <!-- Overlay -->
-
-        <div id="overlay" class="position-fixed" onclick="closeSidebar()"></div>
-
-        <!-- Footer -->
-
-        <div id="page-footer">
-            <footer>
-                <div class="row justify-content-center">
-                    <p>&copy; 2020-<span id="current-year"></span>, Cservenák Bence</p>
-                </div>
-            </footer>
-        </div>
+        </main>
+    </div>
     </div>
 
     <!-- Scripts -->
