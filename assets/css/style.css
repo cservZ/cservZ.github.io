@@ -350,3 +350,9 @@ h3.heading {
 		font-size: 18px;
 	}
 }
+
+@media (max-height: 614px) {
+	#sidebar img {
+		display: none !important;
+	}
+}

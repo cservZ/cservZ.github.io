@@ -3,6 +3,7 @@
 function openSidebar() {
     $('#sidebar, #content').addClass('active');
     $('#overlay').fadeIn(300);
+    $('body').css('overflow-y', 'hidden');
 }
 
 // A function that closes the drawer menu
@@ -10,6 +11,7 @@ function openSidebar() {
 function closeSidebar() {
     $('#sidebar, #content').removeClass('active');
     $('#overlay').fadeOut(300);
+    $('body').css('overflow-y', 'visible');
 }
 
 // Smooth scrolling when clicking on a navigation link
