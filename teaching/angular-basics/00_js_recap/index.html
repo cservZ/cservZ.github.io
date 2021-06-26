@@ -434,6 +434,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#objektumorientaltsag" class="md-nav__link">
+    Objektumorientáltság
+  </a>
+  
+    <nav class="md-nav" aria-label="Objektumorientáltság">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osztalyok-objektumok" class="md-nav__link">
+    Osztályok, objektumok
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lathatosagok-getterek-setterek" class="md-nav__link">
+    Láthatóságok, getterek, setterek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oroklodes" class="md-nav__link">
+    Öröklődés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipusellenorzes" class="md-nav__link">
+    Típusellenőrzés
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -626,6 +667,47 @@
           <li class="md-nav__item">
   <a href="#egyeb-adatszerkezetek" class="md-nav__link">
     Egyéb adatszerkezetek
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objektumorientaltsag" class="md-nav__link">
+    Objektumorientáltság
+  </a>
+  
+    <nav class="md-nav" aria-label="Objektumorientáltság">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osztalyok-objektumok" class="md-nav__link">
+    Osztályok, objektumok
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lathatosagok-getterek-setterek" class="md-nav__link">
+    Láthatóságok, getterek, setterek
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oroklodes" class="md-nav__link">
+    Öröklődés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipusellenorzes" class="md-nav__link">
+    Típusellenőrzés
   </a>
   
 </li>
@@ -1320,7 +1402,7 @@ Az utolsó gyümölcs: barack
 <span class="nx">gyumolcsok</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>                       <span class="c1">// törlés a végéről</span>
 <span class="nx">gyumolcsok</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;banán&quot;</span><span class="p">,</span> <span class="s2">&quot;citrom&quot;</span><span class="p">);</span>     <span class="c1">// beszúrás a végére</span>
 <span class="nx">gyumolcsok</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>                     <span class="c1">// törlés az elejéről</span>
-<span class="nx">gyumolcsok</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&quot;görögdinnye&quot;</span><span class="p">);</span>      <span class="c1">// beszúrás az elejére</span>
+<span class="nx">gyumolcsok</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&quot;dinnye&quot;</span><span class="p">);</span>           <span class="c1">// beszúrás az elejére</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gyumolcsok</span><span class="p">);</span>
 
 <span class="nx">gyumolcsok</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>                <span class="c1">// 2. indexen lévő tömbelem törlése</span>
@@ -1336,15 +1418,13 @@ Az utolsó gyümölcs: barack
 </td></tr></table>
 <div class="admonition kimenet">
 <p class="admonition-title">A kód kimenete</p>
-<p>[ 'görögdinnye', 'körte', 'szilva', 'banán', 'citrom' ]
-[ 'görögdinnye', 'körte', 'banán', 'citrom' ]
+<p>[ 'dinnye', 'körte', 'szilva', 'banán', 'citrom' ]
+[ 'dinnye', 'körte', 'banán', 'citrom' ]
 [ 'körte', 'banán' ]
 Van citrom a tömbben!
-A gyümölcseink: görögdinnye, körte, banán, citrom.</p>
+A gyümölcseink: dinnye, körte, banán, citrom.</p>
 </div>
-<div class="admonition hint">
-<p class="admonition-title">Két további hasznos tömbkezelő függvény: <code>map()</code> és <code>filter()</code></p>
-<p>A <code>map()</code> egy callback függvényt vár paraméterként, amelyet a tömb minden elemére végrehajt. A callback függvény végrehajtása utáni eredményeket egy új tömbben kapjuk vissza.</p>
+<details class="hint"><summary>Két további hasznos tömbkezelő függvény: <code>map()</code> és <code>filter()</code></summary><p>A <code>map()</code> egy callback függvényt vár paraméterként, amelyet a tömb minden elemére végrehajt. A callback függvény végrehajtása utáni eredményeket egy új tömbben kapjuk vissza.</p>
 <p><strong>Példa:</strong> Adott egy számokat tartalmazó tömb. Készítsünk egy új tömböt, ami tartalmazza az eredeti tömbben szereplő számok négyzetét.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1383,13 +1463,396 @@ A gyümölcseink: görögdinnye, körte, banán, citrom.</p>
 </code></pre></div>
 </td></tr></table>
 <p><strong>Megjegyzés:</strong> A példákban szereplő feladatokat természetesen megoldhattuk volna hagyományos módon: vezérlési szerkezetekkel és egy (kezdetben üres) tömbbe való beszúrogatással is. Viszont a <code>map()</code> és <code>filter()</code> függvények ismerete jelentősen egyszerűbb kódot eredményez.</p>
-</div>
+</details>
 </li>
 </ul>
 <h3 id="objektumok">Objektumok<a class="headerlink" href="#objektumok" title="Permanent link">&para;</a></h3>
-<p>TODO</p>
+<ul>
+<li>Az object adattípussal <span class="red">property-érték párokat</span> tároló objektumokat hozhatunk létre (a property-k tulajdonképpen az objektum adattagjai)</li>
+<li>
+<p>Létrehozás:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">ures</span> <span class="o">=</span> <span class="p">{};</span>          <span class="c1">// üres objektum</span>
+<span class="kd">let</span> <span class="nx">szemely</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">nev</span><span class="o">:</span> <span class="s2">&quot;Béla&quot;</span><span class="p">,</span> <span class="nx">kor</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span> <span class="nx">foglalkozas</span><span class="o">:</span> <span class="s2">&quot;programozó&quot;</span> <span class="p">};</span>
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>Adott property-hez tartozó érték lekérdezése: <code>.</code> vagy <code>[]</code> operátorokkal</p>
+<ul>
+<li>A különbség a két operátor között: ha egy változót adunk át nekik, akkor a <code>.</code> operátor a változó <strong>nevét</strong>, míg a <code>[]</code> operátor a változó <strong>értékét</strong> tekinti a property nevének</li>
+<li>Ha egy nem létező property-hez tartozó értéket kérünk le, akkor <code>undefined</code>-ot kapunk</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">szemely</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">nev</span><span class="o">:</span> <span class="s2">&quot;Béla&quot;</span><span class="p">,</span> <span class="nx">kor</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span> <span class="nx">foglalkozas</span><span class="o">:</span> <span class="s2">&quot;programozó&quot;</span> <span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">szemely</span><span class="p">.</span><span class="nx">nev</span><span class="p">);</span>    <span class="c1">// a nev property-hez tartozó érték lekérése (1. verzió)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">szemely</span><span class="p">[</span><span class="s2">&quot;nev&quot;</span><span class="p">]);</span> <span class="c1">// a nev property-hez tartozó érték lekérése (2. verzió)</span>
+
+<span class="c1">// a lényegi különbség a két operátor működésében</span>
+<span class="kd">let</span> <span class="nx">valami</span> <span class="o">=</span> <span class="s2">&quot;foglalkozas&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">szemely</span><span class="p">.</span><span class="nx">valami</span><span class="p">);</span>    <span class="c1">// a valami nevű property-hez tartozó érték lekérése (nincs ilyen!)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">szemely</span><span class="p">[</span><span class="nx">valami</span><span class="p">]);</span>   <span class="c1">// a foglalkozas nevű property-hez tartozó érték lekérése</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>Béla
+Béla
+undefined
+programozó</p>
+</div>
+</li>
+<li>
+<p>Fontosabb műveletek objektumokon:</p>
+<ul>
+<li>Property előfordulásának ellenőrzése</li>
+<li>Property-hez tartozó érték módosítása</li>
+<li>Új property-érték pár beszúrása</li>
+<li>Meglévő property-érték pár törlése</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">szemely</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">nev</span><span class="o">:</span> <span class="s2">&quot;Béla&quot;</span><span class="p">,</span> <span class="nx">kor</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span> <span class="nx">foglalkozas</span><span class="o">:</span> <span class="s2">&quot;programozó&quot;</span> <span class="p">};</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="s2">&quot;foglalkozas&quot;</span> <span class="k">in</span> <span class="nx">szemely</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// szerepel-a a foglalkozas property az objektumban</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Ismerjük a foglalkozást.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">szemely</span><span class="p">.</span><span class="nx">nev</span> <span class="o">=</span> <span class="s2">&quot;Sanyi&quot;</span><span class="p">;</span>          <span class="c1">// property-hez tartozó érték módosítása</span>
+<span class="nx">szemely</span><span class="p">.</span><span class="nx">szuletesiEv</span> <span class="o">=</span> <span class="mf">2000</span><span class="p">;</span>     <span class="c1">// új property-érték pár beszúrása</span>
+<span class="k">delete</span> <span class="nx">szemely</span><span class="p">.</span><span class="nx">kor</span><span class="p">;</span>             <span class="c1">// meglévő property-érték pár törlése</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">szemely</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>Ismerjük a foglalkozást.
+{ nev: 'Sanyi', foglalkozas: 'programozó', szuletesiEv: 2000 }</p>
+</div>
+</li>
+<li>
+<p>Objektumok bejárása: az <code>Object.entries(obj)</code> egy "nagy" tömböt ad vissza, amelynek minden eleme egy kisebb tömb, amely az <code>obj</code> objektum egyik property-jének a nevét és az ahhoz tartozó értéket tárolja; ezen a "nagy" tömbön megyünk végig egy <code>for</code>-ciklussal</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">szemely</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">nev</span><span class="o">:</span> <span class="s2">&quot;Béla&quot;</span><span class="p">,</span> <span class="nx">kor</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span> <span class="nx">foglalkozas</span><span class="o">:</span> <span class="s2">&quot;programozó&quot;</span> <span class="p">};</span>
+
+<span class="c1">// Az Object.entries(szemely) tartalma a következő tömb:</span>
+<span class="c1">// [[&#39;nev&#39;, &#39;Béla&#39;], [&#39;kor&#39;, 20], [&#39;foglalkozas&#39;, &#39;programozó&#39;]]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="p">[</span><span class="nx">property</span><span class="p">,</span> <span class="nx">ertek</span><span class="p">]</span> <span class="k">of</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">entries</span><span class="p">(</span><span class="nx">szemely</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// A belső tömbökön megyünk végig, amelyek az egyes property-k nevét és értékét tárolják</span>
+    <span class="c1">// Ezeket szétszedjük: a property változóba kerül a property neve, az ertek változóba pedig az értéke</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">property</span><span class="si">}</span><span class="sb"> értéke: </span><span class="si">${</span><span class="nx">ertek</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>nev értéke: Béla
+kor értéke: 20
+foglalkozas értéke: programozó</p>
+</div>
+</li>
+</ul>
 <h3 id="egyeb-adatszerkezetek">Egyéb adatszerkezetek<a class="headerlink" href="#egyeb-adatszerkezetek" title="Permanent link">&para;</a></h3>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Leképezés (map)</a> és <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">halmaz (set)</a>.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Leképezés (map)</a>: kulcs-érték párok tárolása</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Halmaz (set)</a>: az elemeket ismétlődés nélkül tárolja, és az elemek között nincs sorrendiség</li>
+</ul>
+<h2 id="objektumorientaltsag">Objektumorientáltság<a class="headerlink" href="#objektumorientaltsag" title="Permanent link">&para;</a></h2>
+<h3 id="osztalyok-objektumok">Osztályok, objektumok<a class="headerlink" href="#osztalyok-objektumok" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="red">Osztály:</span> azonos tulajdonsággal és viselkedéssel rendelkező objektumok általános formai leírása (egy "tervrajz", ami alapján konkrét objektumokat készítünk majd)<ul>
+<li>Létrehozás: <code>class</code> kulcsszóval</li>
+<li>Az osztályban <span class="red">adattagok</span> és <span class="red">metódusok</span> hozhatók létre<ul>
+<li>Elérésük: <code>.</code> operátorral</li>
+<li>A <code>this</code> kulcsszóval hivatkozhatunk magára az objektumra - JavaScriptben a <code>this</code>-t mindig ki kell írni, ha egy adattagra vagy egy metódusra hivatkozunk</li>
+<li>JavaScriptben az adattagokat a konstruktorban hozzuk létre (nem az osztály törzsének elején)</li>
+</ul>
+</li>
+<li><span class="red">Konstruktor:</span> az osztály példányosításakor (azaz egy objektum legyártásakor) fut le<ul>
+<li>Létrehozás: <code>constructor()</code> nevű metódus definiálása az osztályon belül</li>
+<li>Általában az adattagok létrehozására és inicializálására használjuk</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="red">Objektumok:</span> az osztályokból való példányosítással hozhatjuk őket létre</p>
+<ul>
+<li>Példányosítás szintaxisa: <code>new OsztalyNeve(/* konstruktor paraméterek... */)</code></li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">Allat</span> <span class="p">{</span>                 <span class="c1">// egy osztály létrehozása</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nev</span><span class="p">,</span> <span class="nx">kor</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// konstruktor</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">nev</span> <span class="o">=</span> <span class="nx">nev</span><span class="p">;</span>       <span class="c1">// adattagok létrehozása és inicializálása</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">kor</span> <span class="o">=</span> <span class="nx">kor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">info</span><span class="p">()</span> <span class="p">{</span>                  <span class="c1">// egy metódus az osztályon belül</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nev</span><span class="si">}</span><span class="sb"> egy </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">kor</span><span class="si">}</span><span class="sb"> éves állat.`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">allat1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Allat</span><span class="p">(</span><span class="s2">&quot;Csőrike&quot;</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>  <span class="c1">// osztály példányosítása (objektumok gyártása)</span>
+<span class="kd">let</span> <span class="nx">allat2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Allat</span><span class="p">(</span><span class="s2">&quot;Szilveszter&quot;</span><span class="p">,</span> <span class="mf">5</span><span class="p">);</span>
+<span class="nx">allat1</span><span class="p">.</span><span class="nx">info</span><span class="p">();</span>                         <span class="c1">// info() metódus meghívása az adott objektumra</span>
+<span class="nx">allat2</span><span class="p">.</span><span class="nx">info</span><span class="p">();</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>Csőrike egy 3 éves állat.
+Szilveszter egy 5 éves állat.</p>
+</div>
+</li>
+</ul>
+<h3 id="lathatosagok-getterek-setterek">Láthatóságok, getterek, setterek<a class="headerlink" href="#lathatosagok-getterek-setterek" title="Permanent link">&para;</a></h3>
+<ul>
+<li>JavaScriptben nincsenek az adattagok láthatását szabályozó módosítószavak, alapból minden adattag és metódus publikus láthatóságú</li>
+<li>Konvenció alapján a nem publikus használatra szánt adattagok neve elé <code>_</code> (alulvonás) karakter írunk (de ettől még kívülről ugyanúgy elérhető!)</li>
+<li>
+<p>Az <span class="red">getterek</span> és <span class="red">setterek</span> megvalósítása property-kkel történik</p>
+<ul>
+<li>Getter létrehozása egy adattag értékének lekérésére: <code>get</code> property-vel</li>
+<li>Setter létrehozása egy adattag értékének beállítására: <code>set</code> property-vel</li>
+<li>Olyan, mintha egy teljesen új adattag jönne létre az objektumon belül</li>
+<li><span class="red">Nagyon fontos, hogy a getter/setter neve és az adattag neve mindig eltérő legyen, különben végtelen rekurzióba futunk!</span></li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">Allat</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nev</span><span class="p">,</span> <span class="nx">kor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">nev</span> <span class="o">=</span> <span class="nx">nev</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_kor</span> <span class="o">=</span> <span class="nx">kor</span><span class="p">;</span>    <span class="c1">// nem publikus használatra szánt adattag</span>
+    <span class="p">}</span>
+
+    <span class="nx">get</span> <span class="nx">kor</span><span class="p">()</span> <span class="p">{</span>             <span class="c1">// getter</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_kor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">set</span> <span class="nx">kor</span><span class="p">(</span><span class="nx">ertek</span><span class="p">)</span> <span class="p">{</span>        <span class="c1">// setter</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">ertek</span> <span class="o">&lt;</span> <span class="mf">1</span><span class="p">)</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;HIBA: Pozitív számot adj meg!&quot;</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">_kor</span> <span class="o">=</span> <span class="nx">ertek</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">info</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nev</span><span class="si">}</span><span class="sb"> egy </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">kor</span><span class="si">}</span><span class="sb"> éves állat.`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">allat1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Allat</span><span class="p">(</span><span class="s2">&quot;Garfield&quot;</span><span class="p">,</span> <span class="mf">6</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">allat2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Allat</span><span class="p">(</span><span class="s2">&quot;Ubul&quot;</span><span class="p">,</span> <span class="mf">5</span><span class="p">);</span>
+
+<span class="nx">allat1</span><span class="p">.</span><span class="nx">kor</span> <span class="o">=</span> <span class="mf">8</span><span class="p">;</span>             <span class="c1">// set property hívása</span>
+<span class="nx">allat2</span><span class="p">.</span><span class="nx">kor</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allat1</span><span class="p">.</span><span class="nx">kor</span><span class="p">);</span>    <span class="c1">// get property hívás</span>
+<span class="nx">allat1</span><span class="p">.</span><span class="nx">info</span><span class="p">();</span>
+<span class="nx">allat2</span><span class="p">.</span><span class="nx">info</span><span class="p">();</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>HIBA: Pozitív számot adj meg!
+8
+Garfield egy 8 éves állat.
+Ubul egy 5 éves állat.</p>
+</div>
+</li>
+</ul>
+<h3 id="oroklodes">Öröklődés<a class="headerlink" href="#oroklodes" title="Permanent link">&para;</a></h3>
+<p>Osztályok közötti kapcsolat, amely egy <span class="red">ősosztály</span> és egy <span class="red">gyermekosztály</span> között valósul meg. A gyermekosztály tulajdonképpen az ősosztálynak egy speciális változata lesz (pl. a <code>Macska</code> osztály az <code>Allat</code> osztály gyermeke, hiszen minden macska egyben állat is).</p>
+<ul>
+<li>A gyermekosztály megörökli az ősosztály összes adattagját és metódusát</li>
+<li>A gyermekosztály az örökölteken kívül újabb adattagokat és metódusokat is tartalmazhat</li>
+<li>A gyermekosztály felüldefiniálhatja egy örökölt metódus működését (<span class="red">overriding</span>)</li>
+</ul>
+<p>Öröklődés JavaScriptben:</p>
+<ul>
+<li>Szintaxisa: <code>class GyermekOsztaly extends OsOsztaly</code></li>
+<li><span class="red">JavaScriptben csak egyszeres öröklődés lehetséges!</span> Ez azt jelenti, hogy egy gyermekosztálynak nem lehet 1-nél több őse</li>
+<li>
+<p>A gyermekosztályban a <code>super</code> kulcsszóval hivatkozhatunk az ősosztályra</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nx">Allat</span> <span class="p">{</span>                       <span class="c1">// ősosztály</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nev</span><span class="p">,</span> <span class="nx">kor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">nev</span> <span class="o">=</span> <span class="nx">nev</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_kor</span> <span class="o">=</span> <span class="nx">kor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">get</span> <span class="nx">kor</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_kor</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="nx">set</span> <span class="nx">kor</span><span class="p">(</span><span class="nx">ertek</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">ertek</span> <span class="o">&lt;</span> <span class="mf">1</span><span class="p">)</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;HIBA: Pozitív számot adj meg!&quot;</span><span class="p">);</span>
+        <span class="k">else</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">_kor</span> <span class="o">=</span> <span class="nx">ertek</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">info</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nev</span><span class="si">}</span><span class="sb"> egy </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">kor</span><span class="si">}</span><span class="sb"> éves állat.`</span><span class="p">);</span> <span class="p">}</span>
+
+    <span class="nx">eszik</span><span class="p">(</span><span class="nx">mit</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nev</span><span class="si">}</span><span class="sb"> éppen eszi ezt: </span><span class="si">${</span><span class="nx">mit</span><span class="si">}</span><span class="sb">.`</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Macska</span> <span class="k">extends</span> <span class="nx">Allat</span> <span class="p">{</span>        <span class="c1">// gyermekosztály</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nev</span><span class="p">,</span> <span class="nx">kor</span><span class="p">,</span> <span class="nx">fajta</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">nev</span><span class="p">,</span> <span class="nx">kor</span><span class="p">);</span>            <span class="c1">// ősosztály konstruktorának meghívása</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">fajta</span> <span class="o">=</span> <span class="nx">fajta</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">dorombol</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;PURR!&quot;</span><span class="p">);</span> <span class="p">}</span>
+
+    <span class="c1">// overriding: ősosztályból örökölt metódus működésének felülírása</span>
+    <span class="nx">info</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nev</span><span class="si">}</span><span class="sb"> egy </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">fajta</span><span class="si">}</span><span class="sb"> macska.`</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">macska</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Macska</span><span class="p">(</span><span class="s2">&quot;Cirmi&quot;</span><span class="p">,</span> <span class="mf">3</span><span class="p">,</span> <span class="s2">&quot;perzsa&quot;</span><span class="p">);</span>
+<span class="nx">macska</span><span class="p">.</span><span class="nx">eszik</span><span class="p">(</span><span class="s2">&quot;tonhal&quot;</span><span class="p">);</span>
+<span class="nx">macska</span><span class="p">.</span><span class="nx">dorombol</span><span class="p">();</span>
+<span class="nx">macska</span><span class="p">.</span><span class="nx">info</span><span class="p">();</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition kimenet">
+<p class="admonition-title">A kód kimenete</p>
+<p>Cirmi éppen eszi ezt: tonhal.
+PURR!
+Cirmi egy perzsa macska.</p>
+</div>
+</li>
+</ul>
+<h3 id="tipusellenorzes">Típusellenőrzés<a class="headerlink" href="#tipusellenorzes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Egyszerűbb típusok (boolean, number, string, object, function) esetén: <code>typeof val === "type"</code> (visszaadja, hogy a <code>val</code> érték <code>type</code> típusú-e)</li>
+<li>Tömbök és osztályból példányosított objektumok esetén: <code>obj instanceof Osztaly</code> (visszaadja, hogy <code>obj</code> az <code>Osztaly</code> példánya-e)<ul>
+<li>A tömbök az <code>Array</code> beépített osztály példányai</li>
+</ul>
+</li>
+</ul>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="mf">42</span> <span class="o">===</span> <span class="s2">&quot;number&quot;</span><span class="p">);</span>        <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="mf">42</span> <span class="o">===</span> <span class="s2">&quot;string&quot;</span><span class="p">);</span>        <span class="c1">// false</span>
+
+<span class="kd">let</span> <span class="nx">tomb</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10</span><span class="p">,</span> <span class="mf">20</span><span class="p">,</span> <span class="mf">30</span><span class="p">,</span> <span class="mf">40</span><span class="p">,</span> <span class="mf">50</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">tomb</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">);</span>         <span class="c1">// true</span>
+
+<span class="kd">class</span> <span class="nx">Kutya</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nev</span><span class="p">,</span> <span class="nx">kor</span><span class="p">,</span> <span class="nx">fajta</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">kutya</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Kutya</span><span class="p">(</span><span class="s2">&quot;Rex&quot;</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="s2">&quot;németjuhász&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">kutya</span> <span class="k">instanceof</span> <span class="nx">Kutya</span><span class="p">);</span>        <span class="c1">// true</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
