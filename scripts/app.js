@@ -73,7 +73,7 @@ $(() => {
             isCloseSidebarDivAdded = true;
         }
 
-        // Fixing the sidebar bug during resizing
+        // Adjusting the sidebar when resizing the screen
 
         if ($('#overlay').is(':visible') && $('#sidebar').hasClass('active')) {
             $('#overlay').fadeOut(300);
