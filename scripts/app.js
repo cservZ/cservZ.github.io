@@ -46,7 +46,7 @@ $(() => {
 
     // On smaller screens the sidebar will be removed by default and when the sidebar is toggled, a "Close Sidebar" icon will be visible
 
-    const toggleBtn = '<button type="button" class="btn btn-dark my-auto shadow-sm px-4 mb-4" id="sidebar-collapse" onclick="openSidebar()"><i class="fa fa-bars mr-2"></i></button>';
+    const toggleBtn = '<button type="button" class="btn my-auto px-4 mb-4" id="sidebar-collapse" onclick="openSidebar()"><i class="fa fa-bars mr-2 text-light"></i></button>';
     const closeSidebarDiv = '<div id="close-sidebar"><button type="button" class="close" aria-label="Close" onclick="closeSidebar()"><span aria-hidden="true">&times;</span></button></div>';
 	let isToggleBtnAdded = true;
     let isCloseSidebarDivAdded = true;
