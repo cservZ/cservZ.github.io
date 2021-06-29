@@ -41,8 +41,13 @@ $(() => {
 
     // When a navigation link is clicked on smaller screens, the sidebar will be closed
 
-    if ($(window).width() <= breakpoint)
+    if ($(window).width() < breakpoint)
         $('.nav-link').on('click', () => closeSidebar());
+
+    // When the user swipes to the left on the sidebar on a smaller screen, the sidebar will be closed
+
+    if ($(window).width() < breakpoint)
+        $('#sidebar').on('swipeleft', () => closeSidebar());
 
     // On smaller screens the sidebar will be removed by default and when the sidebar is toggled, a "Close Sidebar" icon will be visible
 
