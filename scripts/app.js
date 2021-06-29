@@ -46,8 +46,7 @@ $(() => {
 
     // When the user swipes to the left on the sidebar on a smaller screen, the sidebar will be closed
 
-    if ($(window).width() < breakpoint)
-        $('#sidebar').on('swipeleft', () => closeSidebar());
+    $('#sidebar').on('swipeleft', () => { if ($(window).width() < breakpoint) closeSidebar(); });
 
     // On smaller screens the sidebar will be removed by default and when the sidebar is toggled, a "Close Sidebar" icon will be visible
 
