@@ -56,29 +56,6 @@
         </nav>
 
         <!-- End of Sidebar Navigation -->
-
-        <!-- Start of Sidebar Socials -->
-
-        <footer class="social">
-			<div class="d-flex align-items-center">
-				<ul class="social-icons mt-lt-auto ml-auto mr-auto mb-n1 d-flex">
-					<li class="social-icons-github">
-						<a href="https://github.com/cservZ" target="_blank"><i class="fab fa-github"></i></a>
-					</li>
-					<li class="social-icons-facebook">
-						<a href="https://www.facebook.com/cservZ" target="_blank"><i class="fab fa-facebook"></i></a>
-					</li>
-					<li class="social-icons-discord">
-						<a href="https://discordapp.com/users/568121927370014748" target="_blank"><i class="fab fa-discord"></i></a>
-					</li>
-					<li class="social-icons-telegram">
-						<a href="https://telegram.me/cservZ" target="_blank"><i class="fab fa-telegram"></i></a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-
-        <!-- End of Sidebar Socials -->
     </aside>
 
     <!-- End of Sidebar -->
@@ -130,6 +107,24 @@
                                     <li class="list-group-item"><b>Fogadóóra:</b> előzetes egyeztetés alapján</li>
                                     <li class="list-group-item"><b>Fun fact:</b> eddig összesen 76 alkalommal írták el a vezetéknevemet</li>
                                 </ul>
+                                <div class="social">
+                                    <div class="d-flex align-items-center">
+                                        <ul class="social-icons mt-lt-auto ml-auto mr-auto mb-n1 d-flex">
+                                            <li class="social-icons-github">
+                                                <a href="https://github.com/cservZ" target="_blank"><i class="fab fa-github"></i></a>
+                                            </li>
+                                            <li class="social-icons-facebook">
+                                                <a href="https://www.facebook.com/cservZ" target="_blank"><i class="fab fa-facebook"></i></a>
+                                            </li>
+                                            <li class="social-icons-discord">
+                                                <a href="https://discordapp.com/users/568121927370014748" target="_blank"><i class="fab fa-discord"></i></a>
+                                            </li>
+                                            <li class="social-icons-telegram">
+                                                <a href="https://telegram.me/cservZ" target="_blank"><i class="fab fa-telegram"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -147,139 +142,118 @@
                         <div class="heading-underline"></div>
                     </div>
                     <div class="px-3 py-5">
-                        <div id="accordion">
-                            <!-- Operating Systems Course -->
+                        <h4 class="mb-3">Kurzusaim</h4>
+                        <ul class="courses-list">
+                            <li><a href="#script">Szkriptnyelvek gyakorlat (2021. ősz)</a></li>
+                            <li><a href="#os">Operációs rendszerek gyakorlat (2021. tavasz)</a></li>
+                            <li><a href="#web">Webtervezés gyakorlat (2021. tavasz)</a></li>
+                        </ul>
 
-                            <div class="card">
-                                <div id="course-01" class="card-header">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-one" aria-controls="collapse-one">
-                                            Operációs rendszerek gyakorlat
-                                        </button>
-                                    </h5>
-                                </div>
+                        <!-- Start of Scripting Languages Section -->
 
-                                <div id="collapse-one" class="collapse" aria-labelledby="course-01" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <h5>Követelmények, gyakorlati anyag</h5>
-                                        <p>A követelmények és a gyakorlati anyag megtalálható <a href="http://www.inf.u-szeged.hu/~leko/os2020212.html" target="_blank">Lékó Gábor honlapján</a>.</p>
-                                        <p><a href="https://www.youtube.com/playlist?list=PLIS5LOjVe6zA9ih2xVXUJ8RORzz6k6fiY" target="_blank">2019/2020 távoktatás playlist</a></p>
-                                        <hr>
-
-                                        <!--
-                                            <h5>Órai szkriptek</h5>
-                                            <ul class="ml-5">
-                                                <li>BASH: <a href="./teaching/os/szkriptek/B1.sh" target="_blank">B1</a>, <a href="./teaching/os/szkriptek/B2.sh" target="_blank">B2</a>, <a href="./teaching/os/szkriptek/B3.sh" target="_blank">B3</a></li>
-                                                <li>AWK: A1, A2, A3</li>
-                                            </ul>
-                                            <hr>
-                                        -->
-
-                                        <h5>Gyakorló feladatok</h5>
-                                        <ul class="ml-5">
-                                            <li><a href="./teaching/os/feladatsorok/pipeline_feladatok.pdf" target="_blank">Pipeline gyakorló feladatsor</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/playlist.csv">bemeneti fájl</a> (<a href="./teaching/os/feladatsorok/pipeline_megoldas.pdf" target="_blank">Egy lehetséges megoldás</a>)</li>
-                                            <li><a href="./teaching/os/feladatsorok/bash_feladatok.pdf" target="_blank">BASH gyakorló feladatsor</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/bash_inputs.zip">bemeneti fájlok</a> (<a href="./teaching/os/feladatsorok/bash_megoldasok.zip">Egy lehetséges megoldás</a>)</li>
-                                            <li><a href="./teaching/os/feladatsorok/awk_feladatok.pdf" target="_blank">Reguláris kifejezések, AWK gyakorló feladatsor</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/awk_inputs.zip">bemeneti fájlok</a> (<a href="./teaching/os/feladatsorok/awk_megoldasok.zip">Egy lehetséges megoldás</a>)</li>
-                                        </ul>
-                                        <hr>
-
-                                        <h5>Minta ZH feladatsorok</h5>
-                                        <ul class="ml-5">
-                                            <li><a href="./teaching/os/feladatsorok/mintazh1.pdf" target="_blank">1. ZH minta</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/mintazh1_inputs.zip">bemeneti fájlok</a></li>
-                                            <li><a href="./teaching/os/feladatsorok/mintazh2.pdf" target="_blank">2. ZH minta</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/mintazh2_inputs.zip">bemeneti fájlok</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        <div id="script" class="card mb-5">
+                            <div class="card-header text-center">
+                                <h5>Szkriptnyelvek gyakorlat</h5>
                             </div>
+                            <div class="card-body">
+                                <h6>Kurzusinformációk</h6>
+                                <p>In progress...</p>
 
-                            <!-- Scripting Languages Course -->
+                                <h6>Követelmények, gyakorlati anyag</h6>
+                                <p>A követelmények és a gyakorlati anyag megtalálható az <a href="https://okt.sed.hu/szkriptnyelvek/index.html" target="_blank">online gyakorlati jegyzetben</a>.</p>
 
-                            <div class="card">
-                                <div id="course-02" class="card-header">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-two" aria-controls="collapse-two">
-                                            Szkriptnyelvek gyakorlat
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="collapse-two" class="collapse" aria-labelledby="course-02" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <h5>Követelmények, gyakorlati anyag</h5>
-                                        <p>A követelmények és a gyakorlati anyag megtalálható az <a href="https://okt.sed.hu/szkriptnyelvek/index.html" target="_blank">online gyakorlati jegyzetben</a>.</p>
-                                        <hr>
-
-                                        <h5>Gyakorló feladatsorok</h5>
-                                        <p>In Progress...</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Web Development Course -->
-
-                            <div class="card">
-                                <div id="course-03" class="card-header">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-three" aria-controls="collapse-three">
-                                            Webtervezés gyakorlat
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="collapse-three" class="collapse" aria-labelledby="course-03" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <h5>Követelmények, gyakorlati anyag</h5>
-                                        <p>A követelmények és a gyakorlati anyag megtalálható az <a href="https://okt.sed.hu/webtervezes/index.html" target="_blank">online gyakorlati jegyzetben</a>.</p>
-                                        <p><a href="https://www.inf.u-szeged.hu/~vancsics/webterv" target="_blank">Vancsics Béla által gondozott gyakorlati jegyzet</a></p>
-                                        <hr>
-
-                                        <h5>A beadandó projekt követelményei</h5>
-                                        <ul class="ml-5">
-                                            <li>
-                                                1. mérföldkő:
-                                                <ul class="ml-4">
-                                                    <li>
-                                                        <a href="./teaching/webterv/I_merfoldko_1_fo.html" target="_blank">1 fős projekt</a> (csak kivételes esetben!)
-                                                    </li>
-                                                    <li>
-                                                        <a href="./teaching/webterv/I_merfoldko_2_fo.html" target="_blank">2 fős projekt</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                2. mérföldkő:
-                                                <ul class="ml-4">
-                                                    <li>
-                                                        <a href="./teaching/webterv/II_merfoldko_1_fo.html" target="_blank">1 fős projekt</a> (csak kivételes esetben!)
-                                                    </li>
-                                                    <li>
-                                                        <a href="./teaching/webterv/II_merfoldko_2_fo.html" target="_blank">2 fős projekt</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <hr>
-
-                                        <h5>További hasznos dolgok</h5>
-                                        <ul class="ml-5">
-                                            <li>
-                                                <a href="./teaching/webterv/post01.html" target="_blank">1. mérföldkő gyakori kérdések kurzusfórum poszt</a>
-                                            </li>
-                                            <li>
-                                                <a href="./teaching/webterv/post02.html" target="_blank">2. mérföldkő gyakori kérdések kurzusfórum poszt</a>
-                                            </li>
-                                            <li>
-                                            <a href="https://drive.google.com/file/d/1rw4_KUUHh8_tlU_2TPM9bC_Ko3iGKTjN/view" target="_blank">Munkaterv és munkanapló minta</a> 
-                                            </li>
-                                            
-                                            <li>
-                                                <a href="https://validator.w3.org/" target="_blank">Online validátor (A HTML oldalak szabványosságának ellenőrzésére)</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <h6>Gyakorló feladatsorok</h6>
+                                <p>In progress...</p>
                             </div>
                         </div>
+
+                        <!-- End of Scripting Languages Section -->
+
+                        <!-- Start of Operating Systems Section -->
+
+                        <div id="os" class="card mb-5">
+                            <div class="card-header text-center">
+                                <h5>Operációs rendszerek gyakorlat</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6>Kurzusinformációk</h6>
+                                <p>A gyakorlat ebben a félévben <span class="red">online</span> formában lesz megtartva a kurzus Discord szerverén (invite link a CooSpace színtéren).</p>
+                                <p>Gyakorlataim időpontjai: kedd 14:00, kedd 15:00</p>
+
+                                <h6>Követelmények, gyakorlati anyag</h6>
+                                <p>A követelmények és a gyakorlati anyag megtalálható <a href="http://www.inf.u-szeged.hu/~leko/os2020212.html" target="_blank">Lékó Gábor honlapján</a>.</p>
+                                <p><a href="https://www.youtube.com/playlist?list=PLIS5LOjVe6zA9ih2xVXUJ8RORzz6k6fiY" target="_blank">2019/2020 távoktatás playlist</a></p>
+                                
+                                <!-- <h6>Órai szkriptek</h6>
+                                <ul class="ml-5">
+                                    <li>BASH: <a href="./teaching/os/szkriptek/B1.sh" target="_blank">B1</a>, <a href="./teaching/os/szkriptek/B2.sh" target="_blank">B2</a>, <a href="./teaching/os/szkriptek/B3.sh" target="_blank">B3</a></li>
+                                    <li>AWK: A1, A2, A3</li>
+                                </ul> -->
+
+                                <h6>Gyakorló feladatok</h6>
+                                <ul>
+                                    <li><a href="./teaching/os/feladatsorok/pipeline_feladatok.pdf" target="_blank">Pipeline gyakorló feladatsor</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/playlist.csv">bemeneti fájl</a> (<a href="./teaching/os/feladatsorok/pipeline_megoldas.pdf" target="_blank">Egy lehetséges megoldás</a>)</li>
+                                    <li><a href="./teaching/os/feladatsorok/bash_feladatok.pdf" target="_blank">BASH gyakorló feladatsor</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/bash_inputs.zip">bemeneti fájlok</a> (<a href="./teaching/os/feladatsorok/bash_megoldasok.zip">Egy lehetséges megoldás</a>)</li>
+                                    <li><a href="./teaching/os/feladatsorok/awk_feladatok.pdf" target="_blank">Reguláris kifejezések, AWK gyakorló feladatsor</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/awk_inputs.zip">bemeneti fájlok</a> (<a href="./teaching/os/feladatsorok/awk_megoldasok.zip">Egy lehetséges megoldás</a>)</li>
+                                </ul>
+
+                                <h6>Minta ZH feladatsorok</h6>
+                                <ul>
+                                    <li><a href="./teaching/os/feladatsorok/mintazh1.pdf" target="_blank">1. ZH minta</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/mintazh1_inputs.zip">bemeneti fájlok</a></li>
+                                    <li><a href="./teaching/os/feladatsorok/mintazh2.pdf" target="_blank">2. ZH minta</a> és az ahhoz tartozó <a href="./teaching/os/feladatsorok/mintazh2_inputs.zip">bemeneti fájlok</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- End of Operating Systems Section -->
+
+                        <!-- Start of Web Development Section -->
+
+                        <div id="web" class="card mb-5">
+                            <div class="card-header text-center">
+                                <h5>Webtervezés gyakorlat</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6>Kurzusinformációk</h6>
+                                <p>A gyakorlat ebben a félévben <span class="red">online</span> formában lesz megtartva BBB-n (bővebben lásd: CooSpace).</p>
+                                <p>Gyakorlataim időpontjai: kedd 12:00, csütörtök 16:00, csütörtök 17:00, csütörtök 18:00</p>
+
+                                <h6>Követelmények, gyakorlati anyag</h6>
+                                <p>A követelmények és a gyakorlati anyag megtalálható az <a href="https://okt.sed.hu/webtervezes/index.html" target="_blank">online gyakorlati jegyzetben</a>.</p>
+                                <p><a href="https://www.inf.u-szeged.hu/~vancsics/webterv" target="_blank">Vancsics Béla által gondozott gyakorlati jegyzet</a></p>
+
+                                <h6>A beadandó projekt követelményei</h6>
+                                <p>1. mérföldkő:</p>
+                                <ul>
+                                    <li><a href="./teaching/webterv/I_merfoldko_1_fo.html" target="_blank">1 fős projekt</a> <span class="red">(csak kivételes esetben!)</span></li>
+                                    <li><a href="./teaching/webterv/I_merfoldko_2_fo.html" target="_blank">2 fős projekt</a></li>
+                                </ul>
+                                <p>2. mérföldkő:</p>
+                                <ul>
+                                    <li><a href="./teaching/webterv/II_merfoldko_1_fo.html" target="_blank">1 fős projekt</a> <span class="red">(csak kivételes esetben!)</span></li>
+                                    <li><a href="./teaching/webterv/II_merfoldko_2_fo.html" target="_blank">2 fős projekt</a></li>
+                                </ul>
+
+                                <h6>További hasznos dolgok</h6>
+                                <ul>
+                                    <li>
+                                        <a href="./teaching/webterv/post01.html" target="_blank">1. mérföldkő gyakori kérdések kurzusfórum poszt</a>
+                                    </li>
+                                    <li>
+                                        <a href="./teaching/webterv/post02.html" target="_blank">2. mérföldkő gyakori kérdések kurzusfórum poszt</a>
+                                    </li>
+                                    <li>
+                                    <a href="https://drive.google.com/file/d/1rw4_KUUHh8_tlU_2TPM9bC_Ko3iGKTjN/view" target="_blank">Munkaterv és munkanapló minta</a> 
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="https://validator.w3.org/" target="_blank">Online validátor (a HTML oldalak szabványosságának ellenőrzésére)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- End of Web Development Section -->
                     </div>
                 </div>
             </section>

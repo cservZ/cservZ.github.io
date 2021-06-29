@@ -50,19 +50,23 @@ h3.heading {
 	color: #aaa;
 }
 
+.red {
+	color: #f00;
+}
+
 /* === HEADER === */
 
 #page-header {
 	position: fixed;
 	width: 100%;
 	height: 3rem;
-	background-color: #007bff;
+	background-color: rgb(0, 148, 133);
 	z-index: 99;
 	display: none;
 }
 
 #page-header btn {
-	background-color: #007bff;
+	background-color: rgb(0, 148, 133);
 }
 
 /* === SIDEBAR === */
@@ -136,41 +140,6 @@ h3.heading {
 
 #sidebar-collapse {
 	height: 100%;
-}
-
-.social {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	margin: 0;
-	padding-bottom: 10px;
-}
-
-.social-icons {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-}
-
-.social-icons li {
-	margin: 0 10px 4px;
-	padding: 0;
-	overflow: visible;
-}
-
-.social-icons li a {
-	display: block;
-	width: 28px;
-	height: 28px;
-	line-height: 26px;
-	text-align: center;
-	color: #fff;
-}
-
-.social-icons li a:hover {
-	color: #1ebba3;
 }
 
 /* === OVERLAY === */
@@ -251,29 +220,63 @@ h3.heading {
 	margin-top: 5px;
 }
 
+.social {
+	margin-top: 20px;
+}
+
+.social-icons {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.social-icons li {
+	margin: 0 10px 4px;
+	padding: 0;
+	overflow: visible;
+}
+
+.social-icons li a {
+	display: block;
+	width: 32px;
+	height: 32px;
+	line-height: 26px;
+	text-align: center;
+	color: #000;
+}
+
+.social-icons li a:hover {
+	color: #1ebba3;
+}
+
 /* === TEACHING SECTION ===  */
 
-#teaching .btn {
-	width: 100%;
-	text-align: left;
+#teaching ul li {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-#teaching .btn-link {
-	text-decoration: none;
-	color: #000;
-	box-shadow: none;
+.courses-list {
+	font-size: 18px;
+	margin-bottom: 80px;
 }
 
-.card {
+.courses-list li {
+	margin-top: 10px !important;
+}
+
+#teaching .card h6:not(:first-child) {
+	margin-top: 20px;
+}
+
+#teaching .card h6 {
 	margin-bottom: 10px;
 }
 
-.card-header .btn {
-	font-size: 18px;
-}
-
-.card-body * {
-	padding: 3px;
+#teaching .card p {
+	margin-bottom: 5px;
 }
 
 /* === FOOTER === */
