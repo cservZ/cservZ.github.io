@@ -8,8 +8,8 @@ html, body {
 }
 
 body {
-	background-color: #43cea2;
-	background-image: linear-gradient(90deg, #43cea2, #185a9d);
+	background-color: #185a9d;
+	background-image: url('../img/banner.png');
 	min-height: 100vh;
 }
 

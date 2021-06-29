@@ -44,6 +44,11 @@ $(() => {
     if ($(window).width() <= breakpoint)
         $('.nav-link').on('click', () => closeSidebar());
 
+    // When the user swipes to the left on the sidebar, the sidebar will be closed
+
+    if ($('#sidebar').hasClass('active'))
+        $('#sidebar').on('swipeleft', () => closeSidebar());
+
     // On smaller screens the sidebar will be removed by default and when the sidebar is toggled, a "Close Sidebar" icon will be visible
 
     const toggleBtn = '<button type="button" class="btn my-auto px-4 mb-4" id="sidebar-collapse" onclick="openSidebar()"><i class="fa fa-bars mr-2 text-light"></i></button>';
