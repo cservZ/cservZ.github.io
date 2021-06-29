@@ -8,8 +8,8 @@ html, body {
 }
 
 body {
-	background-color: #000428;
-	background-image: linear-gradient(90deg, #000428, #004e92);
+	background-color: #43cea2;
+	background-image: linear-gradient(90deg, #43cea2, #185a9d);
 	min-height: 100vh;
 }
 
@@ -260,23 +260,22 @@ h3.heading {
 
 .courses-list {
 	font-size: 18px;
-	margin-bottom: 80px;
 }
 
 .courses-list li {
 	margin-top: 10px !important;
 }
 
-#teaching .card h6:not(:first-child) {
-	margin-top: 20px;
+#os, #script, #web {
+	padding-top: 2rem;
 }
 
-#teaching .card h6 {
-	margin-bottom: 10px;
+#teaching .card h6:not(:first-child) {
+	padding-top: 20px;
 }
 
 #teaching .card p {
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 }
 
 /* === FOOTER === */
@@ -330,6 +329,10 @@ h3.heading {
 	.main-wrapper.active {
 		margin-left: 17rem;
 		width: calc(100% - 17rem);
+	}
+
+	#os, #script, #web {
+		padding-top: 3rem;
 	}
 }
 
