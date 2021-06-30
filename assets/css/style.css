@@ -11,6 +11,8 @@ body {
 	background-color: #48b1bf;
 	background-image: linear-gradient(90deg, #06beb6, #48b1bf);
 	min-height: 100vh;
+	opacity: 0;
+	transition: opacity 2s;
 }
 
 body > div {

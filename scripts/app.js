@@ -26,9 +26,9 @@ function smoothScroll() {
 }
 
 $(() => {
-    // Display sidebar when the page loads (this fixes swiftly appearing sidebar glitch)
+    // Reveal page content only when the page is loaded
 
-    $('#sidebar').show();
+    $('body').css('opacity', '1');
 
     // Enabling smooth scrolling on page links
 
