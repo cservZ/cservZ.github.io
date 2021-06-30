@@ -27,7 +27,7 @@ function smoothScroll() {
 
 $(() => {
     $('#page-body').show();
-    $('#msg').hide();
+    $('#loading').hide();
 
     // Enabling smooth scrolling on page links
 
