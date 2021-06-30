@@ -12,6 +12,7 @@ function closeSidebar() {
     $('#sidebar, #content').removeClass('active');
     $('#overlay').fadeOut(300);
     $('body').css('overflow-y', 'visible');
+    alert('closeSidebar called...');
 }
 
 // Smooth scrolling when clicking on a navigation link
