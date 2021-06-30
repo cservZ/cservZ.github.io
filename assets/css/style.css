@@ -8,8 +8,8 @@ html, body {
 }
 
 body {
-	background-color: #185a9d;
-	background-image: linear-gradient(90deg, #43cea2, #185a9d);
+	background-color: #48b1bf;
+	background-image: linear-gradient(90deg, #06beb6, #48b1bf);
 	min-height: 100vh;
 }
 
@@ -222,7 +222,7 @@ h3.heading {
 }
 
 .social {
-	margin-top: 20px;
+	margin-top: 35px;
 }
 
 .social-icons {
@@ -241,8 +241,8 @@ h3.heading {
 
 .social-icons li a {
 	display: block;
-	width: 32px;
-	height: 32px;
+	width: 36px;
+	height: 36px;
 	line-height: 26px;
 	text-align: center;
 	color: #000;
