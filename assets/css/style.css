@@ -271,6 +271,11 @@ h3.heading {
 	padding-top: 2rem;
 }
 
+.card-header h5 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 #teaching .card h6:not(:first-child) {
 	padding-top: 20px;
 }

@@ -41,8 +41,7 @@ $(() => {
 
     // When a navigation link is clicked on smaller screens, the sidebar will be closed
 
-    if ($(window).width() < breakpoint)
-        $('.nav-link').on('click', () => closeSidebar());
+    $('.nav-link').on('click', () => { if ($(window).width() < breakpoint) closeSidebar(); });
 
     // When the user swipes to the left on the sidebar on a smaller screen, the sidebar will be closed
 
@@ -57,9 +56,6 @@ $(() => {
 
     $(window).resize(() => {
         const windowWidth = $(window).width();
-
-        if (windowWidth < breakpoint)
-            $('.nav-link').on('click', () => closeSidebar());
 
         if (isToggleBtnAdded && windowWidth > breakpoint) {
             $('#sidebar-collapse').remove();
