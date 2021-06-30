@@ -28,6 +28,7 @@ function smoothScroll() {
 $(() => {
     // Reveal page content only when the page is loaded
 
+    $('#sidebar').show();
     $('body').css('opacity', '1');
 
     // Enabling smooth scrolling on page links
