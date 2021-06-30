@@ -26,9 +26,6 @@ function smoothScroll() {
 }
 
 $(() => {
-    $('#loading').hide();
-    $('#page-body').show();
-
     // Enabling smooth scrolling on page links
 
     smoothScroll();
@@ -36,6 +33,8 @@ $(() => {
     // The width where the page's structure will change
 
     const breakpoint = 768;
+
+    
 
     // Displaying the current year in the footer
 
