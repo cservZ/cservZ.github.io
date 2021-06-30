@@ -12,7 +12,6 @@ function closeSidebar() {
     $('#sidebar, #content').removeClass('active');
     $('#overlay').fadeOut(300);
     $('body').css('overflow-y', 'visible');
-    alert('closeSidebar called...');
 }
 
 // Smooth scrolling when clicking on a navigation link
@@ -79,6 +78,7 @@ $(() => {
         if ($('#overlay').is(':visible') && $('#sidebar').hasClass('active')) {
             $('#overlay').fadeOut(300);
             $('#sidebar').removeClass('active');
+            $('body').css('overflow-y', 'visible');
         }
     });
 });
