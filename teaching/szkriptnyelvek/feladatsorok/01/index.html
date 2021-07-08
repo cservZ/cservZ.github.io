@@ -2,7 +2,7 @@
       <title>Szkriptnyelvek - 1. feladatsor</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="../../../../assets/img/icon.png">        
+      <link rel="icon" href="../../../../assets/img/icon.png">       
       
       
       
@@ -269,6 +269,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p><strong>P&#xE9;lda:</strong></p>
 <pre data-role="codeBlock" data-info class="language-"><code>Az egyik sz&#xF6;veg: kecske
 A m&#xE1;sik sz&#xF6;veg: sajt
+
 A k&#xE9;t sz&#xF6;veg &#xF6;sszef&#x171;zve: kecskesajt
 </code></pre><h3 class="mume-header" id="2-feladat-%C3%A1remel%C3%A9s-3-pont">2. feladat: &#xC1;remel&#xE9;s (3 pont)</h3>
 
@@ -277,6 +278,7 @@ A k&#xE9;t sz&#xF6;veg &#xF6;sszef&#x171;zve: kecskesajt
 <p><strong>P&#xE9;lda:</strong></p>
 <pre data-role="codeBlock" data-info class="language-"><code>Az alkatr&#xE9;sz jelenlegi &#xE1;ra: 17500
 &#xC1;remel&#xE9;s (sz&#xE1;zal&#xE9;kban): 8.7
+
 Az alkatr&#xE9;sz &#xFA;j &#xE1;ra: 19022
 </code></pre><h3 class="mume-header" id="3-feladat-laci-2-pont">3. feladat: Laci (2 pont)</h3>
 
@@ -285,7 +287,7 @@ Az alkatr&#xE9;sz &#xFA;j &#xE1;ra: 19022
 <h3 class="mume-header" id="4-feladat-n%C3%A9gyzetgy%C3%B6k-3-pont">4. feladat: N&#xE9;gyzetgy&#xF6;k (3 pont)</h3>
 
 <p>&#xCD;rj Python szkriptet, amely beolvas a standard bemenetr&#x151;l egy eg&#xE9;sz sz&#xE1;mot, &#xE9;s ki&#xED;rja annak a n&#xE9;gyzetgy&#xF6;k&#xE9;t! Amennyiben a beolvasott sz&#xE1;m negat&#xED;v, akkor a <code>Negat&#xED;v sz&#xE1;mb&#xF3;l nem vonunk n&#xE9;gyzetgy&#xF6;k&#xF6;t!</code> sz&#xF6;veget &#xED;rasd ki!</p>
-<p><strong>Tipp:</strong> <em>n</em> n&#xE9;gyzetgy&#xF6;ke megegyezik <em>n<sup>1/2</sup></em> &#xE9;rt&#xE9;k&#xE9;vel.</p>
+<p><strong>Tipp:</strong> <img src="https://latex.codecogs.com/gif.latex?\sqrt{n}"> &#xE9;rt&#xE9;ke megegyezik <img src="https://latex.codecogs.com/gif.latex?n^{1/2}"> &#xE9;rt&#xE9;k&#xE9;vel.</p>
 <p><strong>P&#xE9;ld&#xE1;k:</strong></p>
 <pre data-role="codeBlock" data-info class="language-"><code>Adj meg egy sz&#xE1;mot: 2
 A be&#xED;rt sz&#xE1;m n&#xE9;gyzetgy&#xF6;ke: 1.4142135623730951
@@ -297,8 +299,24 @@ Negat&#xED;v sz&#xE1;mb&#xF3;l nem vonunk n&#xE9;gyzetgy&#xF6;k&#xF6;t!
 <p><strong>P&#xE9;lda:</strong></p>
 <pre data-role="codeBlock" data-info class="language-"><code>Az intervallum als&#xF3; v&#xE9;gpontja: 42
 Az intervallum fels&#x151; v&#xE9;gpontja: 100
+
 A(z) [42; 100] intervallumba es&#x151; p&#xE1;ros sz&#xE1;mok &#xF6;sszege: 2130
-</code></pre><h3 class="mume-header" id="6-feladat-pr%C3%ADma-nyerem%C3%A9nyj%C3%A1t%C3%A9k-5-pont">6. feladat: Pr&#xED;ma nyerem&#xE9;nyj&#xE1;t&#xE9;k (5 pont)</h3>
+</code></pre><h3 class="mume-header" id="6-feladat-sz%C3%B3beli-vizsga-3-pont">6. feladat: Sz&#xF3;beli vizsga (3 pont)</h3>
+
+<p>A kedvenc t&#xE1;rgyunkb&#xF3;l a sz&#xF3;beli vizsga a k&#xF6;vetkez&#x151;k&#xE9;ppen zajlik: egyszerre bemegy valamennyi hallgat&#xF3; egy terembe, &#xE9;s sorban helyet foglalnak a teremben l&#xE9;v&#x151;, 1-t&#x151;l kezd&#x151;d&#x151;en sorsz&#xE1;mozott sz&#xE9;keken. Az oktat&#xF3; a vizsg&#xE1;n kiv&#xE1;laszt egy adott sorsz&#xE1;m&#xFA; sz&#xE9;ken &#xFC;l&#x151; hallgat&#xF3;t, feltesz neki egy k&#xE9;rd&#xE9;st, majd ezut&#xE1;n az 1-gyel nagyobb sorsz&#xE1;m&#xFA; sz&#xE9;ken &#xFC;l&#x151; hallgat&#xF3;t&#xF3;l k&#xE9;rdez - a legutols&#xF3; sz&#xE9;ken &#xFC;l&#x151; hallgat&#xF3; ut&#xE1;n az els&#x151; sz&#xE9;ken &#xFC;l&#x151; hallgat&#xF3;val folytat&#xF3;dik a sor. Az oktat&#xF3; utols&#xF3; k&#xE9;rd&#xE9;se mindig egy egyszer&#x171;bb &quot;b&#xF3;nusz k&#xE9;rd&#xE9;s&quot;.</p>
+<p>&#xCD;rj Python szkriptet, amely beolvas 3 eg&#xE9;sz sz&#xE1;mot: rendre a vizsg&#xE1;z&#xF3; hallgat&#xF3;k sz&#xE1;m&#xE1;t, az oktat&#xF3; &#xE1;ltal feltett k&#xE9;rd&#xE9;sek sz&#xE1;m&#xE1;t &#xE9;s azon hallgat&#xF3; sz&#xE9;k&#xE9;nek sorsz&#xE1;m&#xE1;t, aki az els&#x151; k&#xE9;rd&#xE9;st kapja! A szkript &#xED;rja ki a konzolra, hogy h&#xE1;nyas sz&#xE9;ken &#xFC;l&#x151; hallgat&#xF3; fogja kapni az utols&#xF3;, &quot;b&#xF3;nusz&quot; k&#xE9;rd&#xE9;st! Hibakezel&#xE9;ssel nem kell foglalkoznod, feltessz&#xFC;k, hogy az input minden esetben helyes.</p>
+<p><strong>P&#xE9;ld&#xE1;k:</strong></p>
+<pre data-role="codeBlock" data-info class="language-"><code>Vizsg&#xE1;z&#xF3;k sz&#xE1;ma: 5
+Feltett k&#xE9;rd&#xE9;sek sz&#xE1;ma: 8
+Az els&#x151; k&#xE9;rd&#xE9;st kap&#xF3; hallgat&#xF3; sz&#xE9;ksz&#xE1;ma: 2
+
+A(z) 4. sz&#xE9;ken &#xFC;l&#x151; hallgat&#xF3; kapja a b&#xF3;nusz k&#xE9;rd&#xE9;st.
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>Vizsg&#xE1;z&#xF3;k sz&#xE1;ma: 10
+Feltett k&#xE9;rd&#xE9;sek sz&#xE1;ma: 22
+Az els&#x151; k&#xE9;rd&#xE9;st kap&#xF3; hallgat&#xF3; sz&#xE9;ksz&#xE1;ma: 5
+
+A(z) 6. sz&#xE9;ken &#xFC;l&#x151; hallgat&#xF3; kapja a b&#xF3;nusz k&#xE9;rd&#xE9;st.
+</code></pre><h3 class="mume-header" id="7-feladat-pr%C3%ADma-nyerem%C3%A9nyj%C3%A1t%C3%A9k-5-pont">7. feladat: Pr&#xED;ma nyerem&#xE9;nyj&#xE1;t&#xE9;k (5 pont)</h3>
 
 <p>J&#xF3;n&#xE1;s, a csokigy&#xE1;ros &#xFA;gy d&#xF6;nt&#xF6;tt, hogy nyerem&#xE9;nyj&#xE1;t&#xE9;kot hirdet: n&#xE9;h&#xE1;ny legy&#xE1;rtott csokol&#xE1;d&#xE9;ba egy aranyszelv&#xE9;nyt helyez, &#xE9;s a szelv&#xE9;nyek szerencs&#xE9;s megtal&#xE1;l&#xF3;i egy k&#xFC;l&#xF6;nleges l&#xE1;togat&#xE1;st tehetnek a csokigy&#xE1;rba. Minden csokihoz tartozik egy gy&#xE1;rt&#xE1;si sorsz&#xE1;m. J&#xF3;n&#xE1;s azokba a csokikba tesz aranyszelv&#xE9;nyt, amelyek gy&#xE1;rt&#xE1;si sorsz&#xE1;ma pr&#xED;msz&#xE1;m.</p>
 <p>&#xCD;rj Python szkriptet, amely beolvassa a konzolr&#xF3;l egy csoki gy&#xE1;rt&#xE1;si sorsz&#xE1;m&#xE1;t (eg&#xE9;sz sz&#xE1;m)! Ha a beolvasott sz&#xE1;m pr&#xED;msz&#xE1;m, akkor &#xED;rasd ki a <code>Gratul&#xE1;lok, nyert&#xE9;l!</code>, ellenkez&#x151; esetben pedig a <code>Sajnos nem nyert!</code> sz&#xF6;veget a konzolra!</p>
@@ -308,7 +326,7 @@ A(z) [42; 100] intervallumba es&#x151; p&#xE1;ros sz&#xE1;mok &#xF6;sszege: 2130
 Gratul&#xE1;lok, nyert&#xE9;l!
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>Add meg a csoki gy&#xE1;rt&#xE1;si sorsz&#xE1;m&#xE1;t: 49
 Sajnos nem nyert!
-</code></pre><h3 class="mume-header" id="7-feladat-gyakorlati-jegy-3-pont">7. feladat: Gyakorlati jegy (3 pont)</h3>
+</code></pre><h3 class="mume-header" id="8-feladat-gyakorlati-jegy-3-pont">8. feladat: Gyakorlati jegy (3 pont)</h3>
 
 <p>A szkriptnyelvek gyakorlat oszt&#xE1;lyoz&#xE1;sa a k&#xF6;vetkez&#x151; ponthat&#xE1;rok alapj&#xE1;n t&#xF6;rt&#xE9;nik:</p>
 <table>
@@ -344,8 +362,8 @@ Sajnos nem nyert!
 <p>&#xCD;rj Python szkriptet, amely beolvassa egy hallgat&#xF3; gyakorlaton el&#xE9;rt pontsz&#xE1;m&#xE1;t (eg&#xE9;sz sz&#xE1;m), &#xE9;s ki&#xED;rja a pontsz&#xE1;mnak megfelel&#x151; &#xE9;rdemjegyet! Amennyiben a pontsz&#xE1;m 0-n&#xE1;l kisebb vagy 100-n&#xE1;l nagyobb, &#xED;rassuk ki az <code>&#xC9;rv&#xE9;nytelen &#xE9;rt&#xE9;k!</code> &#xFC;zenetet a konzolra! (Eltekint&#xFC;nk a gyakorlaton szerezhet&#x151; plusz pontokt&#xF3;l.)</p>
 <p><strong>P&#xE9;lda:</strong></p>
 <pre data-role="codeBlock" data-info class="language-"><code>A pontsz&#xE1;mod: 89
-Az &#xE9;rdemjegyed: Jeles (5)
-</code></pre><h3 class="mume-header" id="8-feladat-szorz%C3%B3t%C3%A1bla-2-pont">8. feladat: Szorz&#xF3;t&#xE1;bla (2 pont)</h3>
+Az &#xE9;rdemjegyed: Jeles (5).
+</code></pre><h3 class="mume-header" id="9-feladat-szorz%C3%B3t%C3%A1bla-3-pont">9. feladat: Szorz&#xF3;t&#xE1;bla (3 pont)</h3>
 
 <p>&#xCD;rj Python szkriptet, amely ki&#xED;rja a konzolra a szorz&#xF3;t&#xE1;bl&#xE1;t 1-t&#x151;l 10-ig, ciklusok haszn&#xE1;lat&#xE1;val!</p>
 <p><strong>P&#xE9;lda:</strong></p>
@@ -359,7 +377,7 @@ Az &#xE9;rdemjegyed: Jeles (5)
 8 16 24 32 40 48 56 64 72 80 
 9 18 27 36 45 54 63 72 81 90 
 10 20 30 40 50 60 70 80 90 100 
-</code></pre><h3 class="mume-header" id="9-feladat-piramis-5-pont">9. feladat: Piramis (5 pont)</h3>
+</code></pre><h3 class="mume-header" id="10-feladat-piramis-5-pont">10. feladat: Piramis (5 pont)</h3>
 
 <p>No&#xE9;mi, a Flying Duck Travels l&#xE9;git&#xE1;rsas&#xE1;g utask&#xED;s&#xE9;r&#x151;je munk&#xE1;j&#xE1;b&#xF3;l kifoly&#xF3;lag sokat utazik a vil&#xE1;gban. Egyik kedvenc l&#xE1;tnival&#xF3;ja az egyiptomi piramisok.</p>
 <p>&#xCD;rj Python szkriptet, amely beolvas egy magass&#xE1;g &#xE9;rt&#xE9;ket (eg&#xE9;sz sz&#xE1;m), majd kirajzol a konzolra egy ilyen magas piramist <code>*</code> (csillag) karakterekb&#x151;l, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban! Hibakezel&#xE9;ssel nem kell foglalkoznod.</p>
@@ -371,7 +389,7 @@ Az &#xE9;rdemjegyed: Jeles (5)
   *****
  *******
 *********
-</code></pre><h3 class="mume-header" id="10-feladat-sz%C3%A1mol%C3%B3g%C3%A9p-5-pont">10. feladat: Sz&#xE1;mol&#xF3;g&#xE9;p (5 pont)</h3>
+</code></pre><h3 class="mume-header" id="11-feladat-sz%C3%A1mol%C3%B3g%C3%A9p-5-pont">11. feladat: Sz&#xE1;mol&#xF3;g&#xE9;p (5 pont)</h3>
 
 <p>Pomel&#xF3; Zolt&#xE1;n egy z&#xF6;lds&#xE9;gesboltot &#xFC;zemeltet. Ahhoz, hogy az &#xE1;rakat k&#xF6;nnyebben tudja sz&#xE1;molni, sz&#xFC;ks&#xE9;ge van egy sz&#xE1;mol&#xF3;g&#xE9;pre. &#xCD;rj Pythonban egy egyszer&#x171; sz&#xE1;mol&#xF3;g&#xE9;pet, amely a n&#xE9;gy alapm&#x171;veletet (&#xF6;sszead&#xE1;s, kivon&#xE1;s, szorz&#xE1;s, oszt&#xE1;s) tudja &#xE9;rtelmezni!</p>
 <ul>
@@ -385,14 +403,14 @@ Az &#xE9;rdemjegyed: Jeles (5)
 <pre data-role="codeBlock" data-info class="language-"><code>Els&#x151; sz&#xE1;m: 3.8
 M&#xE1;sodik sz&#xE1;m: 4.2
 M&#x171;velet: *
-----------------------------
+
 Az eredm&#xE9;ny: 15.96
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>Els&#x151; sz&#xE1;m: 5.0
 M&#xE1;sodik sz&#xE1;m: 0.0
 M&#x171;velet: /
-----------------------------
+
 Ejnye, null&#xE1;val nem osztunk!
-</code></pre><h3 class="mume-header" id="11-%C3%B6szt%C3%B6nd%C3%ADj-4-pont">11. &#xD6;szt&#xF6;nd&#xED;j (4 pont)</h3>
+</code></pre><h3 class="mume-header" id="12-%C3%B6szt%C3%B6nd%C3%ADj-4-pont">12. &#xD6;szt&#xF6;nd&#xED;j (4 pont)</h3>
 
 <p>Egy kisv&#xE1;ros &#xF6;szt&#xF6;nd&#xED;jat hirdet azoknak az egyetemi hallgat&#xF3;knak, akiknek a tanulm&#xE1;nyi &#xE1;tlaguk legal&#xE1;bb n&#xE9;gyes. &#xCD;rj Python szkriptet, amely el&#x151;sz&#xF6;r beolvassa, hogy h&#xE1;ny jegyet kapott az adott egyetemi hallgat&#xF3; a f&#xE9;l&#xE9;vben (eg&#xE9;sz sz&#xE1;m), majd ezt k&#xF6;vet&#x151;en beolvas ennyi darab &#xE9;rdemjegyet (eg&#xE9;sz sz&#xE1;mok)! A szkript sz&#xE1;m&#xED;tsa ki a jegyek &#xE1;tlag&#xE1;t, &#xE9;s d&#xF6;ntse el, hogy a hallgat&#xF3; jogosult-e az &#xF6;szt&#xF6;nd&#xED;jra vagy sem (teh&#xE1;t legal&#xE1;bb 4.0 az &#xE1;tlaga vagy sem)!</p>
 <p><strong>Eml&#xE9;keztet&#x151;:</strong> Az &#xE1;tlagot a jegyek &#xF6;sszeg&#xE9;nek &#xE9;s darabsz&#xE1;m&#xE1;nak h&#xE1;nyadosak&#xE9;nt kapjuk meg.</p>
@@ -404,7 +422,7 @@ A jegyek:
 5
 4
 5
-------------------------------------
+
 A jegyek &#xE1;tlaga: 4.4
 A hallgat&#xF3; &#xF6;szt&#xF6;nd&#xED;jra jogosult!
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>Hallgat&#xF3; jegyeinek sz&#xE1;ma: 3
@@ -412,36 +430,59 @@ A jegyek:
 3
 1
 5
-------------------------------------
+
 A jegyek &#xE1;tlaga: 3.0
 A hallgat&#xF3; nem jogosult &#xF6;szt&#xF6;nd&#xED;jra!
-</code></pre><h3 class="mume-header" id="12-feladat-heti-profit-3-pont">12. feladat: Heti profit (3 pont)</h3>
+</code></pre><h3 class="mume-header" id="13-feladat-heti-profit-3-pont">13. feladat: Heti profit (3 pont)</h3>
 
 <p>A csokigy&#xE1;ros J&#xF3;n&#xE1;s nyerem&#xE9;nyj&#xE1;t&#xE9;ka nagy sikert aratott a v&#xE1;s&#xE1;rl&#xF3;k k&#xF6;r&#xE9;ben. A statisztik&#xE1;k alapj&#xE1;n a csokigy&#xE1;r mindennap k&#xE9;tszer annyi csokit ad el, mint az el&#x151;z&#x151; napon. J&#xF3;n&#xE1;s ki szeretn&#xE9; sz&#xE1;molni, hogy egy h&#xE9;ten v&#xE1;rhat&#xF3;an mennyi csokit fog eladni.</p>
 <p>&#xCD;rj Python szkriptet, amely beolvassa a h&#xE9;tf&#x151;n eladott csokik sz&#xE1;m&#xE1;t (eg&#xE9;sz sz&#xE1;m), majd kisz&#xE1;m&#xED;tja, hogy 7 nap alatt &#xF6;sszesen mennyi csokit fog eladni J&#xF3;n&#xE1;s, ha mindennap k&#xE9;tszer annyi csokit ad el, mint az el&#x151;z&#x151; napon! (Teh&#xE1;t pl. ha h&#xE9;tf&#x151;n 500 csokit ad el, akkor kedden 1000-et, szerd&#xE1;n 2000-et stb., ezeket az &#xE9;rt&#xE9;keket kell &#xF6;sszeadogatni.)</p>
 <p><strong>P&#xE9;ld&#xE1;k:</strong></p>
 <pre data-role="codeBlock" data-info class="language-"><code>A h&#xE9;tf&#x151;n eladott csokik sz&#xE1;ma: 500
-A h&#xE9;ten v&#xE1;rhat&#xF3;an 63500 csokit adunk el
+A h&#xE9;ten v&#xE1;rhat&#xF3;an 63500 csokit adunk el.
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>A h&#xE9;tf&#x151;n eladott csokik sz&#xE1;ma: 2345
-A h&#xE9;ten v&#xE1;rhat&#xF3;an 297815 csokit adunk el
-</code></pre><h3 class="mume-header" id="13-feladat-id%C5%91k%C3%BCl%C3%B6nbs%C3%A9g-5-pont">13. feladat: Id&#x151;k&#xFC;l&#xF6;nbs&#xE9;g (5 pont)</h3>
+A h&#xE9;ten v&#xE1;rhat&#xF3;an 297815 csokit adunk el.
+</code></pre><h3 class="mume-header" id="14-feladat-id%C5%91k%C3%BCl%C3%B6nbs%C3%A9g-5-pont">14. feladat: Id&#x151;k&#xFC;l&#xF6;nbs&#xE9;g (5 pont)</h3>
 
-<p>&#xCD;rj Python szkriptet, amely kisz&#xE1;m&#xED;tja egy nap k&#xE9;t id&#x151;pontja k&#xF6;z&#xF6;tti id&#x151;k&#xFC;l&#xF6;nbs&#xE9;get! Olvasd be a k&#xE9;t id&#x151;pontot (&#xF3;ra &#xE9;s perc) a standard bemenetr&#x151;l, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban, majd &#xED;rasd ki a k&#xF6;zt&#xFC;k l&#xE9;v&#x151; id&#x151; k&#xFC;l&#xF6;nbs&#xE9;get (&#xF3;ra &#xE9;s perc)! El&#x151;fordulhat, hogy az els&#x151; id&#x151;pont a k&#xE9;s&#x151;bbi (l&#xE1;sd: m&#xE1;sodik p&#xE9;lda), egy&#xE9;b hibakezel&#xE9;ssel nem kell foglalkoznod!</p>
+<p>Zhang miniszter az id&#x151; megsz&#xE1;llottja: minden napj&#xE1;nak id&#x151;beoszt&#xE1;s&#xE1;t el&#x151;re megtervezi a lehet&#x151; legnagyobb precizit&#xE1;ssal. Sajnos Zhang nem j&#xF3; fejsz&#xE1;mol&#xE1;sban, &#xED;gy sokszor bajban van, amikor egy megbesz&#xE9;l&#xE9;s&#xE9;nek az id&#x151;tartam&#xE1;t kell kisz&#xE1;molni a megbesz&#xE9;l&#xE9;s kezdet&#xE9;nek &#xE9;s v&#xE9;g&#xE9;nek az id&#x151;pontja alapj&#xE1;n.</p>
+<p>&#xCD;rj Python szkriptet, amely kisz&#xE1;m&#xED;tja egy nap k&#xE9;t id&#x151;pontja k&#xF6;z&#xF6;tti id&#x151;k&#xFC;l&#xF6;nbs&#xE9;get! Olvasd be a k&#xE9;t id&#x151;pontot (&#xF3;ra &#xE9;s perc, mindketten eg&#xE9;sz sz&#xE1;mok) a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban, majd &#xED;rasd ki a k&#xF6;zt&#xFC;k l&#xE9;v&#x151; id&#x151;k&#xFC;l&#xF6;nbs&#xE9;get (&#xF3;ra &#xE9;s perc)! El&#x151;fordulhat, hogy az els&#x151; id&#x151;pont a k&#xE9;s&#x151;bbi (l&#xE1;sd: m&#xE1;sodik p&#xE9;lda)! Egy&#xE9;b hibakezel&#xE9;ssel nem kell foglalkoznod.</p>
 <p>A feladat megold&#xE1;sa sor&#xE1;n ne haszn&#xE1;lj semmilyen be&#xE9;p&#xED;tett vagy k&#xFC;ls&#x151; Python csomagot!</p>
 <p><strong>P&#xE9;ld&#xE1;k:</strong></p>
 <pre data-role="codeBlock" data-info class="language-"><code>Els&#x151; id&#x151;pont (&#xF3;ra): 8
 Els&#x151; id&#x151;pont (perc): 15
 M&#xE1;sodik id&#x151;pont (&#xF3;ra): 16
 M&#xE1;sodik id&#x151;pont (perc): 0
----------------------------------------------
-A k&#xE9;t id&#x151;pont k&#xF6;z&#xF6;tt 7 &#xF3;ra &#xE9;s 45 perc telt el
+
+A k&#xE9;t id&#x151;pont k&#xF6;z&#xF6;tt 7 &#xF3;ra &#xE9;s 45 perc telt el.
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>Els&#x151; id&#x151;pont (&#xF3;ra): 10
 Els&#x151; id&#x151;pont (perc): 30
 M&#xE1;sodik id&#x151;pont (&#xF3;ra): 8
 M&#xE1;sodik id&#x151;pont (perc): 30
----------------------------------------------
-A k&#xE9;t id&#x151;pont k&#xF6;z&#xF6;tt 2 &#xF3;ra &#xE9;s 0 perc telt el
-</code></pre><h3 class="mume-header" id="14-feladat-gondoltam-egy-sz%C3%A1mra-5-pont">14. feladat: Gondoltam egy sz&#xE1;mra (5 pont)</h3>
+
+A k&#xE9;t id&#x151;pont k&#xF6;z&#xF6;tt 2 &#xF3;ra &#xE9;s 0 perc telt el.
+</code></pre><h3 class="mume-header" id="15-feladat-menek%C3%BCl%C3%A9s-5-pont">15. feladat: Menek&#xFC;l&#xE9;s (5 pont)</h3>
+
+<p>J&#xF3;zsi a koronav&#xED;rus-j&#xE1;rv&#xE1;ny miatti kij&#xE1;r&#xE1;si korl&#xE1;toz&#xE1;sok idej&#xE9;n egy h&#xE1;zibuliban vesz r&#xE9;szt. Sajnos ezt a rend&#x151;r&#xF6;k is megtudt&#xE1;k, &#xE9;s rajta&#xFC;t&#xF6;ttek az &#xF6;nfeledten buliz&#xF3;kon. A h&#xE1;zibuli r&#xE9;sztvev&#x151;i az ereszcsatorn&#xE1;n kereszt&#xFC;l pr&#xF3;b&#xE1;lnak elmenek&#xFC;lni a rend &#xE9;ber &#x151;rei el&#x151;l.</p>
+<p>&#xCD;rj Python szkriptet, amely beolvas k&#xE9;t eg&#xE9;sz sz&#xE1;mot: rendre a h&#xE1;zibulin r&#xE9;sztvev&#x151;k sz&#xE1;m&#xE1;t &#xE9;s a rend&#x151;r&#xF6;k sz&#xE1;m&#xE1;t! A rend&#x151;r&#xF6;k &#xFA;gy kapj&#xE1;k el a buliz&#xF3;kat, hogy minden rend&#x151;r 1-gyel t&#xF6;bbet kap el, mint az el&#x151;z&#x151; (teh&#xE1;t az els&#x151; rend&#x151;r 1, a m&#xE1;sodik rend&#x151;r 2, a harmadik rend&#x151;r 3 buliz&#xF3;t kap el &#xE9;s &#xED;gy tov&#xE1;bb).</p>
+<ul>
+<li>Ha senkit nem kaptak el a rend&#x151;r&#xF6;k, akkor &#xED;rasd ki a <code>Minden buliz&#xF3; megmenek&#xFC;lt!</code> sz&#xF6;veget a konzolra!</li>
+<li>Ha mindenkit elkaptak a rend&#x151;r&#xF6;k, akkor az <code>Ajaj, mindenkit elkaptak!</code> sz&#xF6;veget &#xED;rasd ki!</li>
+<li>Minden egy&#xE9;b esetben a k&#xF6;vetkez&#x151; sz&#xF6;veget jelen&#xED;tsd meg a konzolon: <code>{elkapottak sz&#xE1;ma} buliz&#xF3;t elkaptak, {elmenek&#xFC;ltek sz&#xE1;ma} pedig elmenek&#xFC;lt.</code> (a kapcsos z&#xE1;r&#xF3;jelek k&#xF6;z&#xE9; &#xE9;rtelemszer&#x171;en a megfelel&#x151; &#xE9;rt&#xE9;kek legyenek behelyettes&#xED;tve)!</li>
+</ul>
+<p><strong>P&#xE9;ld&#xE1;k:</strong></p>
+<pre data-role="codeBlock" data-info class="language-"><code>A h&#xE1;zibulin r&#xE9;sztvev&#x151;k sz&#xE1;ma: 8
+A rend&#x151;r&#xF6;k sz&#xE1;ma: 3
+
+6 buliz&#xF3;t elkaptak, 2 pedig elmenek&#xFC;lt.
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>A h&#xE1;zibulin r&#xE9;sztvev&#x151;k sz&#xE1;ma: 20
+A rend&#x151;r&#xF6;k sz&#xE1;ma: 6
+
+Ajaj, mindenkit elkaptak!
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>A h&#xE1;zibulin r&#xE9;sztvev&#x151;k sz&#xE1;ma: 10
+A rend&#x151;r&#xF6;k sz&#xE1;ma: 0
+
+Minden buliz&#xF3; megmenek&#xFC;lt!
+</code></pre><h3 class="mume-header" id="16-feladat-gondoltam-egy-sz%C3%A1mra-6-pont">16. feladat: Gondoltam egy sz&#xE1;mra (6 pont)</h3>
 
 <p>K&#xE9;sz&#xED;ts egy egyszer&#x171; sz&#xE1;mkital&#xE1;l&#xF3;s j&#xE1;t&#xE9;kot Python nyelven! A g&#xE9;p &quot;gondol&quot; egy sz&#xE1;mra 1 &#xE9;s 1000 k&#xF6;z&#xF6;tt (az 1 &#xE9;s az 1000 is m&#xE9;g beletartozik a lehets&#xE9;ges sz&#xE1;mok intervallum&#xE1;ba), &#xE9;s a felhaszn&#xE1;l&#xF3; ezt a sz&#xE1;mot pr&#xF3;b&#xE1;lja meg min&#xE9;l kevesebb pr&#xF3;b&#xE1;lkoz&#xE1;ssal kital&#xE1;lni. A felhaszn&#xE1;l&#xF3;nak a j&#xE1;t&#xE9;k elej&#xE9;n 20 &#xE9;lete (pr&#xF3;b&#xE1;lkoz&#xE1;sa) van.</p>
 <ul>
