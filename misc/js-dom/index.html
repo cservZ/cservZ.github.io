@@ -1,0 +1,337 @@
+<!DOCTYPE html><html><head>
+      <title>JavaScript DOM műveletek</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="../markdown-shared.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="a-javascript-dom-manipul%C3%A1ci%C3%B3s-lehet%C5%91s%C3%A9gei">A JavaScript DOM-manipul&#xE1;ci&#xF3;s lehet&#x151;s&#xE9;gei</h1>
+
+<p>Ebben a jegyzetben &#xE1;ttekintj&#xFC;k a HTML DOM-mal kapcsolatos fontosabb tudnival&#xF3;kat, majd egy gyakorlati p&#xE9;ld&#xE1;n kereszt&#xFC;l megismerked&#xFC;nk a JavaScript &#xE1;ltal biztos&#xED;tott fontosabb DOM-manipul&#xE1;ci&#xF3;s lehet&#x151;s&#xE9;gekkel.</p>
+<h2 class="mume-header" id="1-html-dom">1. HTML DOM</h2>
+
+<p>A webfejleszt&#xE9;sben a <span class="red">HTML</span> nyelvet haszn&#xE1;ljuk weboldalak l&#xE9;trehoz&#xE1;s&#xE1;ra. Ennek a nyelvnek a seg&#xED;ts&#xE9;g&#xE9;vel mondhatjuk meg, hogy mi az, amit egy weboldalon l&#xE1;tni szeretn&#xE9;nk (pl. sz&#xF6;vegek, k&#xE9;pek, t&#xE1;bl&#xE1;zatok, &#x171;rlapok, multim&#xE9;dia stb.). Emellett a HTML lehet&#x151;s&#xE9;get biztos&#xED;t a weboldalon megjelen&#x151; tartalom struktur&#xE1;l&#xE1;s&#xE1;ra is, k&#xFC;l&#xF6;nf&#xE9;le szakaszok, tartalmi egys&#xE9;gek kialak&#xED;t&#xE1;s&#xE1;val.</p>
+<p>A HTML dokumentumok &#xFA;gy &#xE9;p&#xFC;lnek fel, hogy HTML objektumokat (&#xFA;gynevezett <span class="red">tagek</span>et) &#xE1;gyazunk egym&#xE1;sba. Ezek az objektumok egy hierarchikus fastrukt&#xFA;r&#xE1;t alkotnak a dokumentumban.</p>
+<p>Amikor egy weboldal bet&#xF6;lt&#x151;dik, akkor a b&#xF6;ng&#xE9;sz&#x151; a weboldalon tal&#xE1;lhat&#xF3; HTML objektumokb&#xF3;l elk&#xE9;sz&#xED;ti az &#xFA;gynevezett <span class="red">dokumentum-objektum modell</span>t, avagy r&#xF6;viden a <span class="red">DOM</span>-ot. A <span class="red">DOM-fa</span> (DOM tree) seg&#xED;ts&#xE9;g&#xE9;vel k&#xF6;nnyen szeml&#xE9;ltethetj&#xFC;k a weboldalon tal&#xE1;lhat&#xF3; HTML elemek hierarchikus viszonyait.</p>
+<p><span class="example">P&#xE9;lda:</span> Egy egyszer&#x171; HTML k&#xF3;d &#xE9;s az ahhoz tartoz&#xF3; DOM-fa</p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hu<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>DOM p&#xE9;lda<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Az oldal c&#xED;me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-image.png<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Valami klassz k&#xE9;p<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://www.youtube.com/watch?v=dQw4w9WgXcQ<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Valami klassz link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</pre><p><img src="./img/html-dom.png" alt="HTML DOM-fa"></p>
+<blockquote>
+<p><strong>Megjegyz&#xE9;s:</strong> A <code>DOCTYPE</code> nem egy HTML tag, ez&#xE9;rt a DOM-f&#xE1;ban sem szerepel.</p>
+</blockquote>
+<h3 class="mume-header" id="11-html-elemek-dom-beli-viszonyai">1.1. HTML elemek DOM-beli viszonyai</h3>
+
+<p>Ha egy HTML dokumentumban az A objektum (nem felt&#xE9;tlen k&#xF6;zvetlen&#xFC;l) tartalmazza a B objektumot, akkor azt mondjuk, hogy az A objektum a B objektum <span class="red">&#x151;s</span>e, a B objektum pedig A-nak <span class="red">lesz&#xE1;rmazott</span>ja. Amennyiben ez a tartalmaz&#xE1;s <span class="orange">k&#xF6;zvetlen</span>, akkor A-t a B <span class="red">sz&#xFC;l&#x151;</span>j&#xE9;nek, B-t pedig az A <span class="red">gyerek</span>&#xE9;nek nevezz&#xFC;k.</p>
+<p>N&#xE9;h&#xE1;ny p&#xE9;lda a fenti k&#xF3;db&#xF3;l &#xE9;s az ahhoz tartoz&#xF3; DOM-f&#xE1;b&#xF3;l:</p>
+<ul>
+<li>A <code>&lt;body&gt;</code> objektum lesz&#xE1;rmazottjai a <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;p&gt;</code> &#xE9;s <code>&lt;a&gt;</code> objektumok, illetve a &quot;Valami klassz link&quot; &#xE9;s &quot;Az oldal c&#xED;me&quot; sz&#xF6;veges csom&#xF3;pontok.</li>
+<li>A <code>&lt;body&gt;</code> objektum gyerekei a <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code> &#xE9;s <code>&lt;p&gt;</code> objektumok. M&#xE1;sk&#xE9;pp mondva: a <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code> &#xE9;s <code>&lt;p&gt;</code> objektumok sz&#xFC;l&#x151;je a <code>&lt;body&gt;</code>.</li>
+<li>A <code>&lt;body&gt;</code> objektumnak az <code>&lt;a&gt;</code> objektum <span class="orange">nem</span> gyereke, csak lesz&#xE1;rmazottja, hiszen itt a tartalmaz&#xE1;s nem k&#xF6;zvetlen (van m&#xE9;g a f&#xE1;ban egy <code>&lt;p&gt;</code> elem is k&#xF6;zt&#xFC;k).</li>
+</ul>
+<p>Ha az A &#xE9;s B objektumok sz&#xFC;l&#x151;je megegyezik, akkor A &#xE9;s B egym&#xE1;s <span class="red">testv&#xE9;r</span>ei. P&#xE9;ld&#xE1;ul a fenti k&#xF3;dban &#xE9;s az ahhoz tartoz&#xF3; DOM-f&#xE1;ban a <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code> &#xE9;s <code>&lt;p&gt;</code> elemek egym&#xE1;s testv&#xE9;rei, hiszen mindh&#xE1;rom elem sz&#xFC;l&#x151;je a <code>&lt;body&gt;</code>.</p>
+<p>A DOM-fa tetej&#xE9;n l&#xE9;v&#x151;, sz&#xFC;l&#x151;vel nem rendelkez&#x151; elemet a fa <span class="red">gy&#xF6;k&#xE9;relem</span>&#xE9;nek nevezz&#xFC;k. A teljes HTML DOM-ban a gy&#xF6;k&#xE9;relem mindig a <code>&lt;html&gt;</code> objektum lesz (ugyanis ebbe &#xE1;gyazunk be minden tov&#xE1;bbi HTML elemet).</p>
+<h3 class="mume-header" id="12-a-dom-gyakorlati-jelent%C5%91s%C3%A9ge">1.2. A DOM gyakorlati jelent&#x151;s&#xE9;ge</h3>
+
+<p>Amikor a weboldalunk tartalm&#xE1;t CSS-ben form&#xE1;zzuk, akkor haszn&#xE1;lhatunk olyan szelektorokat (kijel&#xF6;l&#x151;ket) is, amelyek a DOM-beli viszonyaik alapj&#xE1;n jel&#xF6;lnek ki HTML objektumokat. N&#xE9;h&#xE1;ny p&#xE9;lda <span class="red">DOM-alap&#xFA; CSS szelektorok</span>ra, a teljess&#xE9;g ig&#xE9;nye n&#xE9;lk&#xFC;l:</p>
+<ul>
+<li><code>div p</code>: kijel&#xF6;l minden olyan <code>&lt;p&gt;</code>-t, amely egy <code>&lt;div&gt;</code> lesz&#xE1;rmazottja</li>
+<li><code>div &gt; p</code>: kijel&#xF6;l minden olyan <code>&lt;p&gt;</code>-t, amely egy <code>&lt;div&gt;</code> gyereke</li>
+<li><code>div ~ p</code>: kijel&#xF6;l minden olyan <code>&lt;p&gt;</code>-t, amely egy <code>&lt;div&gt;</code> testv&#xE9;re &#xE9;s ezen <code>&lt;div&gt;</code> ut&#xE1;n szerepel</li>
+<li><code>p:nth-child(n)</code>: kijel&#xF6;l minden olyan <code>&lt;p&gt;</code>-t, amely sz&#xFC;l&#x151;j&#xE9;nek <code>n</code>-edik gyereke</li>
+<li><code>p:nth-of-type(n)</code>: kijel&#xF6;l minden olyan <code>&lt;p&gt;</code>-t, amely <code>&lt;p&gt;</code> t&#xED;pus&#xFA; testv&#xE9;rei k&#xF6;z&#xFC;l az <code>n</code>-edik.</li>
+</ul>
+<p>A webes vil&#xE1;gban gyakran el&#x151;fordul, hogy dinamikusan szeretn&#xE9;nk manipul&#xE1;lni a DOM-f&#xE1;t, <span class="orange">miut&#xE1;n m&#xE1;r a weboldal bet&#xF6;lt&#x151;d&#xF6;tt</span> (pl. szeretn&#xE9;nk egy objektumot m&#xF3;dos&#xED;tani vagy t&#xF6;r&#xF6;lni, esetleg egy &#xFA;j objektumot akarunk a f&#xE1;ba besz&#xFA;rni). Erre biztos&#xED;tanak lehet&#x151;s&#xE9;get a <span class="red">JavaScript DOM-manipul&#xE1;ci&#xF3;s m&#x171;veletei</span>.</p>
+<p>A DOM tulajdonk&#xE9;ppen nem m&#xE1;s, mint egy objektumorient&#xE1;lt reprezent&#xE1;ci&#xF3;ja a weboldalnak. A weboldalon szerepl&#x151; elemek <span class="red">Node</span>-ok (csom&#xF3;pontok) a DOM-f&#xE1;ban, amelyek sz&#xE1;mos <span class="red">property</span>-vel (adattaggal) &#xE9;s <span class="red">met&#xF3;dus</span>sal rendelkeznek. Ezeket JavaScriptb&#x151;l egyszer&#x171;en el tudjuk &#xE9;rni.</p>
+<p>A k&#xF6;vetkez&#x151; fejezetben megismerked&#xFC;nk a JavaScript n&#xE9;h&#xE1;ny fontosabb DOM-manipul&#xE1;ci&#xF3;s lehet&#x151;s&#xE9;g&#xE9;vel. Fogjuk p&#xE1;rszor haszn&#xE1;lni a <code>document</code> objektumot, ami l&#xE9;nyeg&#xE9;ben a b&#xF6;ng&#xE9;sz&#x151; &#xE1;ltal megnyitott HTML dokumentumot reprezent&#xE1;lja &#xE9;s hozz&#xE1;f&#xE9;r&#xE9;st biztos&#xED;t a DOM-f&#xE1;hoz.</p>
+<blockquote>
+<p><strong>Ok&#xE9;, de ennek mi &#xE9;rtelme van? Mi&#xE9;rt nem lehet sim&#xE1;n csak a HTML-t &#xE1;t&#xED;rogatni?</strong></p>
+<p>A hangs&#xFA;ly itt azon van, hogy azut&#xE1;n szeretn&#xE9;nk a weboldal tartalm&#xE1;t dinamikusan m&#xF3;dos&#xED;tani, <span class="orange">miut&#xE1;n az oldal m&#xE1;r bet&#xF6;lt&#x151;d&#xF6;tt</span>. N&#xE9;zz&#xFC;nk n&#xE9;h&#xE1;ny gyakorlati p&#xE9;ld&#xE1;t, amikor DOM-m&#x171;veleteket haszn&#xE1;lunk:</p>
+<ul>
+<li>Lek&#xE9;rdez&#xFC;nk adatokat egy szervert&#x151;l, &#xE9;s meg szeretn&#xE9;nk jelen&#xED;teni azokat a weboldalunkon. Mivel a HTML oldal m&#xE1;r bet&#xF6;lt&#x151;d&#xF6;tt addigra, amire az adatok meg&#xE9;rkeztek, ez&#xE9;rt azokat &#xFA;gy tudjuk megjelen&#xED;teni a weboldalon, hogy ut&#xF3;lag sz&#xFA;rogatjuk be &#x151;ket a DOM-f&#xE1;ba.</li>
+<li>Szeretn&#xE9;nk el&#xE9;rni, hogy egy gombra kattintva a felhaszn&#xE1;l&#xF3; v&#xE1;lthasson vil&#xE1;gos &#xE9;s s&#xF6;t&#xE9;t t&#xE9;ma k&#xF6;z&#xF6;tt. Itt is az a helyzet, hogy a weboldal m&#xE1;r be van t&#xF6;ltve, csup&#xE1;n annak a megjelen&#xED;t&#xE9;s&#xE9;t manipul&#xE1;ljuk dinamikusan, DOM-m&#x171;veletek seg&#xED;ts&#xE9;g&#xE9;vel.</li>
+<li>Egy HTML &#x171;rlap kit&#xF6;lt&#xE9;s&#xE9;t k&#xF6;vet&#x151;en kliensoldalon ellen&#x151;rizz&#xFC;k az &#x171;rlapon megadott adatok helyess&#xE9;g&#xE9;t (pl. helyes e-mail c&#xED;m form&#xE1;tum, a k&#xF6;telez&#x151;en bejel&#xF6;lend&#x151; jel&#xF6;l&#x151;n&#xE9;gyzeteket kipip&#xE1;lt&#xE1;k stb.). Ekkor egy esem&#xE9;nykezel&#x151; seg&#xED;ts&#xE9;g&#xE9;vel figyelj&#xFC;k, hogy mikor nyomja meg a felhaszn&#xE1;l&#xF3; az &quot;Elk&#xFC;ld&#xE9;s&quot; gombot, majd a &quot;klikk&quot; esem&#xE9;ny hat&#xE1;s&#xE1;ra DOM-m&#x171;veletekkel lek&#xE9;rj&#xFC;k a be&#xED;rt &#x171;rlapadatokat &#xE9;s ellen&#x151;rizz&#xFC;k &#x151;ket.</li>
+</ul>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

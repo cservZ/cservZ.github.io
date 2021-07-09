@@ -1,0 +1,26 @@
+ul li {
+    margin-bottom: 5px !important;
+}
+
+blockquote {
+    padding: 10px !important;
+}
+
+code {
+    background-color: transparent !important;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.orange {
+    color: orange;
+    font-weight: bold;
+}
+
+.example {
+    color: #3DACB9;
+    font-weight: bold;
+}
