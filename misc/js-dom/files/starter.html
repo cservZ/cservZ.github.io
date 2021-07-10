@@ -46,15 +46,19 @@
 	</div>
 	<script>
 		/* 
-			Keressük meg JavaScriptben a weboldalon található <h1>-es címsort, és írassuk ki azt a konzolra! 
+			##########################################################################################################
+			Keressük meg JavaScriptben a weboldalon található <h1>-es címsort, és írassuk ki azt a konzolra!
+			##########################################################################################################
 		*/
 
 		// Kód...
 
 		/* 
+			##########################################################################################################
 			Egy függvény, amely egy új feladat hozzáadásakor kerül meghívásra. A függvény kérje le a beviteli
 			mezőbe írt feladat szövegét, és szúrjon be egy új feladatot (a feladat szövegével és egy "Törlés" gombbal)
 			a weboldalon található táblázatba!
+			##########################################################################################################
 		*/
 
 		function addTask() {
@@ -62,9 +66,11 @@
 		}
 
 		/*
+			##########################################################################################################
 			Egy függvény, amely egy feladat törlésekor kerül meghívásra. A függvény paraméterben megkapja a törlendő
 			feladathoz tartozó, megnyomott "Törlés" gombot. Ennek a szülőjének a szülőjét (a feladatot tartalmazó
 			táblázatsort) kell törölni a DOM-fából.
+			##########################################################################################################
 		*/
 
 		function deleteTask(btn) {
@@ -72,8 +78,10 @@
 		}
 
 		/*
+			##########################################################################################################
 			Egy függvény, amely az összes megjelenített feladatot törli. A DOM-fában be kell járni a <tbody> objektum
 			összes gyerekét (ezek az egyes sorok, amelyek a feladatokat tartalmazzák) és ki kell törölni őket.
+			##########################################################################################################
 		*/
 
 		function deleteAllTasks() {

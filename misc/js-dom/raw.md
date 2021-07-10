@@ -429,7 +429,7 @@ function deleteAllTasks() {
 
 ### 2.5. A kész forráskód letöltése
 
-TODO
+A teljes, kikommentezett megoldás letölthető [ide kattintva](./files/dom-solution.zip).
 
 
 ### 2.6. Az alkalmazás "okosabbá" tétele

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Feladatlista</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<header>
+		<h1 id="page-title" class="text-center">Feladataim</h1>
+	</header>
+	<div class="card">
+		<div id="add-task">
+			<h2>Új feladat</h2>
+			<form>
+				<input type="text" id="task-text" class="form-input"/>
+				<button type="button" class="add-btn" onclick="addTask()">Hozzáadás</button>
+			</form>
+		</div>
+		<div id="task-container">
+			<h2>Feladataim</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Feladat szövege</th>
+						<th>Törlés</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Reggeli bevásárlás</td>
+						<td><button type="button" class="delete-btn" onclick="deleteTask(this)">X</button></td>
+					</tr>
+					<tr>
+						<td>Válaszolás e-mailekre</td>
+						<td><button type="button" class="delete-btn" onclick="deleteTask(this)">X</button></td>
+					</tr>
+					<tr>
+						<td>Lakás kitakarítása</td>
+						<td><button type="button" class="delete-btn" onclick="deleteTask(this)">X</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<button type="button" id="delete-all-tasks-btn" class="delete-btn" onclick="deleteAllTasks()">Összes feladat törlése</button>
+		</div>
+	</div>
+	<script>
+		/* 
+            ##########################################################################################################
+			Keressük meg JavaScriptben a weboldalon található <h1>-es címsort, és írassuk ki azt a konzolra!
+            (MEGJEGYZÉS: Az alábbi 5 utasítás egymással egyenértékű eredményt produkál.)
+            ##########################################################################################################
+		*/
+
+		// Címsor megkeresése az id attribútum értéke alapján
+        console.log(document.getElementById("page-title"));
+
+        // Címsor megkeresése tagnév alapján (egy kollekciót kapunk vissza, amit 0-tól kezdődően indexelünk)
+        console.log(document.getElementsByTagName("h1")[0]);
+
+        // Címsor megkeresése a class attribútum értéke alapján (egy kollekciót kapunk vissza, amit 0-tól kezdődően indexelünk)
+        console.log(document.getElementsByClassName("text-center")[0]);
+
+        // Címsor megkeresése a querySelector() metódussal
+        console.log(document.querySelector("header h1.text-center"));
+
+        // Címsor megkeresése a querySelectorAll() metódussal (egy kollekciót kapunk vissza, amit 0-tól kezdődően indexelünk)
+        console.log(document.querySelectorAll("header h1.text-center")[0]);
+
+
+        // A <tbody> objektumot fel fogjuk használni az alábbi 3 függvényben, ezért akár a globális scope-ba is kimenthetjük
+        const tbody = document.getElementsByTagName("tbody")[0];
+
+        /* 
+            ##########################################################################################################
+			Egy függvény, amely egy új feladat hozzáadásakor kerül meghívásra. A függvény kérje le a beviteli
+			mezőbe írt feladat szövegét, és szúrjon be egy új feladatot (a feladat szövegével és egy "Törlés" gombbal)
+			a weboldalon található táblázatba!
+            ##########################################################################################################
+		*/
+
+		function addTask() {
+			// Először is létrehozunk egy új sort a táblázatban az új feladatnak
+            const row = document.createElement("tr");
+
+            // A soron belül lesz két cella - az első cellába az id="task-text" attribútumú űrlapmezőbe írt szöveget írjuk
+            const column1 = document.createElement("td");
+            column1.innerText = document.getElementById("task-text").value;
+
+            // A második cellában egy "Törlés" gombot helyezünk el
+            const column2 = document.createElement("td");
+            const deleteBtn = document.createElement("button");         // gomb létrehozása
+            deleteBtn.innerText = "X";                                  // gomb szöveges tartalmának beállítása
+            deleteBtn.setAttribute("type", "button");                   // gombhoz tartozó attribútum-érték párok beállítása
+            deleteBtn.setAttribute("onclick", "deleteTask(this)");
+            deleteBtn.classList.add("delete-btn");                      // a class="delete-btn" attribútum hozzáadása a gombhoz
+            column2.append(deleteBtn);                                  // gomb beszúrása a DOM-fába a 2. táblázatcella gyerekeként
+
+            // A cellákat a sor gyerekeiként, a sort pedig a <tbody> gyerekeként szúrjuk be a DOM-fába
+            row.append(column1, column2);
+            tbody.append(row);
+
+            // Kiürítjük az űrlapmező tartalmát
+            document.getElementById("task-text").value = "";
+		}
+
+		/*
+            ##########################################################################################################
+			Egy függvény, amely egy feladat törlésekor kerül meghívásra. A függvény paraméterben megkapja a törlendő
+			feladathoz tartozó, megnyomott "Törlés" gombot. Ennek a szülőjének a szülőjét (a feladatot tartalmazó
+			táblázatsort) kell törölni a DOM-fából.
+            ##########################################################################################################
+		*/
+
+		function deleteTask(btn) {
+			// A törlendő táblázatsor a gomb "nagyszülője" lesz a DOM-fában (parentNode = szülőobjektum)
+            const row = btn.parentNode.parentNode;
+
+            // Töröljük a <tbody>-ból az adott táblázatsort
+            tbody.removeChild(row);
+		}
+
+		/*
+			Egy függvény, amely az összes megjelenített feladatot törli. A DOM-fában be kell járni a <tbody> objektum
+			összes gyerekét (ezek az egyes sorok, amelyek a feladatokat tartalmazzák) és ki kell törölni őket.
+		*/
+
+		function deleteAllTasks() {
+			// Amíg vannak a <tbody>-nak gyerekei, addig mindig kitörlünk egy gyereket
+            while (tbody.hasChildNodes()) {
+                tbody.removeChild(tbody.firstChild);        // mindig az első gyereket töröljük, de ennek nincs jelentősége (törölhettük volna az utolsót is)
+            }
+		}
+	</script>
+</body>
+</html>

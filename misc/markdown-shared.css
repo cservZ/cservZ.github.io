@@ -4,6 +4,8 @@ ul li {
 
 blockquote {
     padding: 10px !important;
+    background-color: #fff9b3 !important;
+    border-left: 4px solid #d69f1e !important;
 }
 
 code {
