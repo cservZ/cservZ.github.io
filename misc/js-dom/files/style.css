@@ -20,7 +20,6 @@ header h1 {
 
 table {
 	width: 100%;
-	margin: 10px;
 	border-collapse: collapse;
 	text-align: center;
 }
@@ -77,4 +76,12 @@ button {
 
 .text-center {
 	text-align: center;
+}
+
+#delete-all-tasks-btn {
+	display: block;
+	padding: 15px;
+	margin: 30px auto;
+	width: 50%;
+	font-size: 20px;
 }

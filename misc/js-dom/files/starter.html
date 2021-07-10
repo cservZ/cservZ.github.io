@@ -7,42 +7,78 @@
 </head>
 <body>
 	<header>
-		<h1 class="text-center">Feladataim</h1>
+		<h1 id="page-title" class="text-center">Feladataim</h1>
 	</header>
 	<div class="card">
 		<div id="add-task">
 			<h2>Új feladat</h2>
 			<form>
 				<input type="text" id="task-text" class="form-input"/>
-				<button type="button" class="add-btn">Hozzáadás</button>
+				<button type="button" class="add-btn" onclick="addTask()">Hozzáadás</button>
 			</form>
 		</div>
 		<div id="task-container">
 			<h2>Feladataim</h2>
 			<table>
-				<tbody>
+				<thead>
 					<tr>
 						<th>Feladat szövege</th>
 						<th>Törlés</th>
 					</tr>
+				</thead>
+				<tbody>
 					<tr>
 						<td>Reggeli bevásárlás</td>
-						<td><button type="button" class="delete-btn">X</button></td>
+						<td><button type="button" class="delete-btn" onclick="deleteTask(this)">X</button></td>
 					</tr>
 					<tr>
 						<td>Válaszolás e-mailekre</td>
-						<td><button type="button" class="delete-btn">X</button></td>
+						<td><button type="button" class="delete-btn" onclick="deleteTask(this)">X</button></td>
 					</tr>
 					<tr>
 						<td>Lakás kitakarítása</td>
-						<td><button type="button" class="delete-btn">X</button></td>
+						<td><button type="button" class="delete-btn" onclick="deleteTask(this)">X</button></td>
 					</tr>
 				</tbody>
 			</table>
+			<button type="button" id="delete-all-tasks-btn" class="delete-btn" onclick="deleteAllTasks()">Összes feladat törlése</button>
 		</div>
 	</div>
 	<script>
-		/* Ide jön a JavaScript kód... */
+		/* 
+			Keressük meg JavaScriptben a weboldalon található <h1>-es címsort, és írassuk ki azt a konzolra! 
+		*/
+
+		// Kód...
+
+		/* 
+			Egy függvény, amely egy új feladat hozzáadásakor kerül meghívásra. A függvény kérje le a beviteli
+			mezőbe írt feladat szövegét, és szúrjon be egy új feladatot (a feladat szövegével és egy "Törlés" gombbal)
+			a weboldalon található táblázatba!
+		*/
+
+		function addTask() {
+			// Kód...
+		}
+
+		/*
+			Egy függvény, amely egy feladat törlésekor kerül meghívásra. A függvény paraméterben megkapja a törlendő
+			feladathoz tartozó, megnyomott "Törlés" gombot. Ennek a szülőjének a szülőjét (a feladatot tartalmazó
+			táblázatsort) kell törölni a DOM-fából.
+		*/
+
+		function deleteTask(btn) {
+			// Kód...
+		}
+
+		/*
+			Egy függvény, amely az összes megjelenített feladatot törli. A DOM-fában be kell járni a <tbody> objektum
+			összes gyerekét (ezek az egyes sorok, amelyek a feladatokat tartalmazzák) és ki kell törölni őket.
+		*/
+
+		function deleteAllTasks() {
+			// Kód...
+		}
 	</script>
 </body>
 </html>
