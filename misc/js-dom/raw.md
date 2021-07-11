@@ -64,7 +64,7 @@ A webes világban gyakran előfordul, hogy dinamikusan szeretnénk manipulálni 
 
 A DOM tulajdonképpen nem más, mint egy objektumorientált reprezentációja a weboldalnak. A weboldalon szereplő elemek <span class="red">Node</span>-ok (csomópontok) a DOM-fában, amelyek számos <span class="red">property</span>-vel (adattaggal) és <span class="red">metódus</span>sal rendelkeznek. Ezeket JavaScriptből egyszerűen el tudjuk érni.
 
-A következő fejezetben megismerkedünk a JavaScript néhány fontosabb DOM-manipulációs lehetőségével. Fogjuk párszor használni a **`document`** objektumot, ami lényegében a böngésző által megnyitott HTML dokumentumot reprezentálja és hozzáférést biztosít a DOM-fához.
+A következő fejezetben megismerkedünk a JavaScript néhány fontosabb DOM-manipulációs lehetőségével. Fogjuk párszor használni a <span class="red">`document` objektum</span>ot, ami lényegében a böngésző által megnyitott HTML dokumentumot reprezentálja és hozzáférést biztosít a DOM-fához.
 
 > **Oké, de ennek mi értelme van? Miért nem lehet csak simán a HTML-t átírogatni?**
 >
@@ -79,11 +79,11 @@ A következő fejezetben megismerkedünk a JavaScript néhány fontosabb DOM-man
 
 ## 2. JavaScript DOM-műveletek, egy példán keresztül
 
-A jegyzet hátralévő részében egy végletekig leegyszerűsített <span class="red">feladatlista alkalmazás</span>t fogunk készíteni. A weboldalon megjelennek a napi teendőink, amelyeket lehetőségünk van törölni, ha teljesítettük őket. Emellett új feladatot is bármikor létrehozhatunk.
+A jegyzet hátralévő részében egy végletekig leegyszerűsített <span class="green">feladatlista alkalmazás</span>t fogunk elkészíteni. A weboldalon megjelennek a napi teendőink, amelyeket lehetőségünk van törölni, ha teljesítettük őket. Emellett új feladatot is bármikor létrehozhatunk.
 
-A példaprojekt elkészítéséhez szükséges <span class="red">kiinduló fájlok</span> letölthetők egy ZIP-ben, [ide kattintva](./files/dom-starter-files.zip).
+A példaprojekt elkészítéséhez szükséges <span class="green">kiinduló fájlok</span> letölthetők egy ZIP-ben, [ide kattintva](./files/dom-starter-files.zip).
 
-> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás elég kezdetleges lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Ha valaki ennél egy fokkal realisztikusabb weboldalt szeretne készíteni, akkor a 2.6. fejezetben talál tippeket a példaprojekt "felokosítására".
+> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás eléggé kezdetleges lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Ha valaki ennél egy fokkal realisztikusabb weboldalt szeretne készíteni, akkor a 2.6. fejezetben talál tippeket a példaprojekt "felokosítására".
 
 
 ### 2.1. Objektumok megkeresése a DOM-fában
@@ -117,7 +117,7 @@ console.log(document.querySelectorAll("header h1.text-center")[0]);  // kollekci
 
 Miközben a felhasználó böngészi a weboldalunkat, történhetnek különféle <span class="red">események</span> - pl. a felhasználó rákattint egy oldalelemre, egy elem fölé viszi a kurzort, egy HTML elem betöltődik vagy megváltozik. Ezekhez az eseményekhez társíthatunk <span class="red">eseménykezelő függvények</span>et, amelyek akkor hívódnak meg, ha az adott esemény bekövetkezik.
 
-Az eseménykezelés egyik módja, hogy az <span class="orange">elemeknek adott attribútumokkal</span> szabályozzuk az események működését. A kérdéses HTML elemet ellátjuk az alábbi, eseménykezeléssel kapcsolatos attribútumok valamelyikével, és az attribútum értékeként megadjuk az eseménykezelést végző függvényt.
+Az eseménykezelés egyik módja, hogy az elemeknek adott, <span class="red">eseménykezeléssel kapcsolatos attribútumok</span>kal szabályozzuk az események működését. A kérdéses HTML elemet ellátjuk az alábbi attribútumok valamelyikével, és az attribútum értékeként megadjuk az eseménykezelést végző függvényt.
 
 * `onclick`: a felhasználó rákattint az elemre
 * `onload`: az elem betöltődik
@@ -126,7 +126,7 @@ Az eseménykezelés egyik módja, hogy az <span class="orange">elemeknek adott a
 * `onmouseout`: a felhasználó elviszi az elemről a kurzort
 * `onchange`: az elem megváltozik
 
-> **Megjegyzés:** Ezeken kívül vannak még további attribútumok is, amiket használhatunk. A teljes listát megtalálhatjuk [ezen a linken](https://www.w3schools.com/tags/ref_eventattributes.asp).
+> **Megjegyzés:** Ezeken kívül vannak még további eseménykezeléssel kapcsolatos attribútumok is, amiket használhatunk. A teljes listát megtalálhatjuk [ezen a linken](https://www.w3schools.com/tags/ref_eventattributes.asp).
 
 <span class="example">Példa:</span> A példaprojektben található "Hozzáadás" gombra kattintva az `addTask()` függvény hívódik meg
 
@@ -134,11 +134,11 @@ Az eseménykezelés egyik módja, hogy az <span class="orange">elemeknek adott a
 <button type="button" class="add-btn" onclick="addTask()">Hozzáadás</button>
 ```
 
-A példaprojektben kizárólag az attribútumokkal történő eseménykezelést nézzük meg. Egy másik módszer az eseménykezelésre, ha egy DOM-beli elem <span class="orange">`addEventListener()` metódus</span>át használjuk, ezzel rendeljük hozzá az elemhez az eseménykezelő függvényt (ekkor az elemnek nem kell semmilyen attribútumot adni). Egy HTML elemhez több eseménykezelő is hozzárendelhető (akár ugyanarra az eseménytípusra is) ily módon.
+A példaprojektben kizárólag az attribútumokkal történő eseménykezelést nézzük meg. Egy másik módszer az eseménykezelésre, ha egy DOM-beli elem <span class="red">`addEventListener()` metódus</span>át használjuk, ezzel rendeljük hozzá az elemhez az eseménykezelő függvényt (ekkor az elemnek nem kell semmilyen attribútumot adni). Egy HTML elemhez több eseménykezelő is hozzárendelhető (akár ugyanarra az eseménytípusra is).
 
 Az `addEventListener()` metódus paraméterei sorban:
 
-* az esemény neve - ezt `on` előtag nélkül adjuk meg (pl. `click`, `load`, `unload` stb.)
+* az esemény neve, amit `on` előtag nélkül adunk meg (pl. `click`, `load`, `unload` stb.)
 * eseménykezelő függvény, amely az esemény bekövetkezésekor hívódik meg
 * elhagyható, logikai típusú paraméter, amely az eseménykezelő lefutásának időpontját szabályozza (bővebben lásd: "Capturing és bubbling" doboz).
 
@@ -148,9 +148,9 @@ Az `addEventListener()` metódus paraméterei sorban:
 <body>
   <button type="button" id="my-btn">Kattints rám!</button>
   <script>
-    const button = document.getElementById("my-btn");
+    const button = document.getElementById("my-btn"); // gomb megkeresése
 
-    button.addEventListener("click", function() { 
+    button.addEventListener("click", function() {  // kattintás esemény kezelése
       alert("Hurrá, működik az eseménykezelő!");
     });
   </script>
@@ -192,18 +192,20 @@ Az `addEventListener()` metódus paraméterei sorban:
 
 ### 2.3. Elemek beszúrása és módosítása
 
-Egy <span class="orange">új elem DOM-fába való beszúrása</span> esetén a következő lépéseket kell követnünk:
+Ha egy új elemet szeretnénk a DOM-fába beszúrni, akkor a következő lépéseket kell követnünk:
 
-1. A `document.createElement(tagname)` metódussal létrehozzuk a beszúrandó HTML elemet
+1. A **`document.createElement(tagname)`** metódussal létrehozzuk a beszúrandó HTML elemet
 1. Beállítjuk az újonnan létrehozott elem tartalmát, attribútumait és stílusát
-1. Beszúrjuk az elemet a DOM-fába a szülő objektum `append()` vagy `appendChild()` metódusával.
+1. Beszúrjuk az elemet a DOM-fába a szülő objektum **`append()`** vagy **`appendChild()`** metódusával.
 
 Az `append()` és `appendChild()` metódusok mindketten arra szolgálnak, hogy egy DOM-beli objektumhoz gyerekobjektumokat fűzzünk hozzá. Két fontos különbség a két metódus között:
 
 * Az `append()` több gyereket is hozzáfűzhet egy objektumhoz, míg az `appendChild()` csak egyet.
 * Az `append()` Node-okat és stringeket egyaránt hozzáfűzhet egy objektumhoz gyerekként, míg az `appendChild()` kizárólag Node-okkal működik.
 
-<span class="example">Példa:</span> Tegyük működőképessé az "új feladat hozzáadása" funkciót a példaprojektben!
+<span class="example">Feladat:</span> Tegyük működőképessé az "új feladat hozzáadása" funkciót a példaprojektben!
+
+<span class="example">A megoldás menete:</span>
 
 A feladat hozzáadását végző űrlap HTML kódja a következő:
 
@@ -214,9 +216,7 @@ A feladat hozzáadását végző űrlap HTML kódja a következő:
 </form>
 ```
 
-Látható, hogy a "Hozzáadás" gombhoz hozzárendeltük az `onclick` attribútummal az `addTask()` nevű eseménykezelő függvényt. Ez fog meghívódni, amikor a felhasználó a gombra kattint, így ennek a függvénynek a törzsét kell megírnunk.
-
-Azt szeretnénk, hogy a függvény kérdezze le a beírt feladat szövegét és szúrja be azt (és egy "Törlés" gombot) a weboldalon található táblázatba. Valahogy így:
+Látható, hogy a "Hozzáadás" gombhoz hozzárendeltük az `onclick` attribútummal az <span class="green">`addTask()` eseménykezelő függvény</span>t. Ez a függvény fog meghívódni, amikor a felhasználó a gombra kattint, így <span class="orange">ennek a törzsét kell megírnunk</span>. Azt szeretnénk, hogy a függvény kérdezze le a beírt feladat szövegét és szúrja be azt (és egy "Törlés" gombot) a weboldalon található táblázatba. Valahogy így:
 
 ```html
 <table>
@@ -231,69 +231,74 @@ Azt szeretnénk, hogy a függvény kérdezze le a beírt feladat szövegét és 
 </table>
 ```
 
-A feladat megoldásához a következő lépéseken kell végigmennünk:
+<div class="bordered-box border-green">
+A feladat megoldásához tehát a következő lépéseken kell végigmennünk: <br>
 
 1. Keressük meg a `<tbody>` objektumot, hiszen ennek a gyerekeként fogjuk az új teendőt beszúrni!
 1. Hozzunk létre a beszúrni kívánt feladatnak egy új sort a táblázatban (`<tr>`)! A sorban helyezzünk el két táblázatcellát (`<td>`)!
 1. Az első táblázatcellába írjuk bele a feladat szövegét, vagyis az űrlapon található beviteli mezőbe írt értéket!
 1. A második táblázatcellába helyezzünk el egy "Törlés" gombot, a fenti kódban található mintának megfelelően!
-1. Szúrjuk be a két `<td>` objektumot a `<tr>` gyerekeiként a DOM-fába! A `<tr>` objektum pedig legyen a `<tbody>` objektum gyereke!
+1. Szúrjuk be a két `<td>` objektumot a `<tr>` gyerekeiként a DOM-fába! A `<tr>` objektum pedig legyen a `<tbody>` objektum gyereke a weboldalon!
+</div>
+
+<span class="example">A megoldás elkészítése:</span>
 
 Keressük meg a `<tbody>` objektumot!
 
 ```js
-function addTask() {
-  const tbody = document.getElementsByTagName("tbody")[0];
-}
+const tbody = document.getElementsByTagName("tbody")[0];
 ```
 
 Hozzunk létre egy táblázatsort és két táblázatcellát! A cellákat a sor gyerekeként, a sort pedig a `<tbody>` gyerekeként szúrjuk be a DOM-fába!
 
 ```js
-function addTask() {
-  const tbody = document.getElementsByTagName("tbody")[0];
+const tbody = document.getElementsByTagName("tbody")[0];
 
-  const row = document.createElement("tr");
-  const column1 = document.createElement("td");
-  // Itt majd kialakítjuk az első cella tartalmát...
-  const column2 = document.createElement("td");
-  // Itt majd kialakítjuk a második cella tartalmát...
+const row = document.createElement("tr");
+const column1 = document.createElement("td");
+// Itt majd kialakítjuk az első cella tartalmát...
+const column2 = document.createElement("td");
+// Itt majd kialakítjuk a második cella tartalmát...
 
-  row.append(column1, column2);
-  tbody.append(row);
-}
+row.append(column1, column2);
+tbody.append(row);
 ```
 
 Írjuk bele az első táblázatcellába az `id="task-text"` attribútummal rendelkező beviteli mezőbe írt szöveget!
 
-* Egy beviteli mezőbe írt értéket a mező `value` property-jével kérhetünk le.
-* Egy HTML objektum <span class="orange">szöveges tartalmának beállítása</span> az `innerText` vagy `innerHTML` property-vel lehetséges.. A különbség a két property között, hogy az `innerHTML` értékeként megadott szöveg HTML-ként lesz értelmezve (ezért itt használhatók a szokásos HTML tagek), míg az `innerText` értéke minden esetben egyszerű szövegként jelenik meg (nem lesz HTML-ként értelmezve).
+* Egy beviteli mezőbe írt értéket a mező **`value`** property-jével kérhetünk le.
+* Egy HTML <span class="red">objektum szöveges tartalmának beállítása</span> az **`innerText`** vagy **`innerHTML`** property-vel lehetséges.. A különbség a két property között, hogy az `innerHTML` értékeként megadott szöveg HTML-ként lesz értelmezve (ezért itt használhatók a szokásos HTML tagek), míg az `innerText` értéke minden esetben egyszerű szövegként jelenik meg (nem lesz HTML-ként értelmezve).
 
 ```js
-function addTask() {
-  const tbody = document.getElementsByTagName("tbody")[0];
-
-  const row = document.createElement("tr");
-  const column1 = document.createElement("td");
-  column1.innerText = document.getElementById("task-text").value;
-  const column2 = document.createElement("td");
-  // Itt majd kialakítjuk a második cella tartalmát...
-
-  row.append(column1, column2);
-  tbody.append(row);
-}
+// ...
+const column1 = document.createElement("td");
+column1.innerText = document.getElementById("task-text").value;
+// ...
 ```
 
 Már csak a második táblázatcella tartalmát kell kialakítanunk. Ebbe egy törlés gombot fogunk elhelyezni, tehát a `document.createElement()` metódussal létrehozunk egy új `<button>` objektumot, amit a második táblázatcella gyerekeként szúrunk be a DOM-fába. A gomb szöveges tartalma legyen `X`!
 
-Ahhoz, hogy a létrehozott gomb megfelelően működjön, hozzáadunk néhány attribútum-érték párt. Egy HTML elem egy <span class="orange">attribútumának beállítása</span> a `setAttribute()` metódussal történik. Ennek első paramétereként megadjuk az attribútum nevét, második paraméterként pedig az attribútum értékét.
+Ahhoz, hogy a létrehozott gomb megfelelően működjön, hozzáadunk néhány attribútum-érték párt. Egy HTML <span class="red">objektum attribútumainak beállítása</span> a **`setAttribute()`** metódussal történik. Ennek első paramétereként megadjuk az attribútum nevét, második paraméterként pedig az attribútum értékét.
 
 * A `setAttribute()` segítségével adjunk a gombnak egy `type="button"` attribútum-érték párt!
 * A `setAttribute()` segítségével adjunk a gombnak egy `onclick="deleteTask(this)"` attribútum-érték párt, amivel hozzárendeljük a gombhoz a `deleteTask()` eseménykezelő függvényt!
 
-Végezetül, rendeljük hozzá a gombhoz a `class="delete-btn"` attribútumot, hogy ugyanúgy legyen formázva az elem, mint a többi "Törlés" gomb! Ehhez használjuk az elem `classList` property-jét, amivel lekérhetjük az összes olyan class nevét, amivel az elem rendelkezik. A `classList`-nek az `add()` metódusával hozzáadjuk a gombhoz a `delete-btn` class értéket. 
+Rendeljük hozzá a gombhoz a `class="delete-btn"` attribútumot, hogy ugyanúgy legyen formázva, mint a többi "Törlés" gomb! Ehhez használjuk az elem **`classList`** property-jét, amivel lekérhetjük az összes olyan `class` nevét, amivel az elem rendelkezik. A `classList`-nek az **`add()`** metódusával hozzáadjuk a gombhoz a `delete-btn` `class`-értéket. 
 
-Tehát az `addTask()` függvény <span class="green">végleges verziója</span> a következőképpen néz ki:
+
+```js
+// ...
+const column2 = document.createElement("td");
+const deleteBtn = document.createElement("button");   // gomb létrehozása
+deleteBtn.innerText = "X";                            // gomb szöveges tartalmának beállítása
+deleteBtn.setAttribute("type", "button");             // gomb attribútumainak beállítása
+deleteBtn.setAttribute("onclick", "deleteTask(this)");
+deleteBtn.classList.add("delete-btn");  // class="delete-btn" attribútum hozzáadása a gombhoz
+column2.append(deleteBtn);              // gomb beszúrása a DOM-fába a 2. táblázatcella gyerekeként
+// ...
+```
+
+Tehát az `addTask()` függvény <span class="green">végleges verzió</span>ja a következőképpen néz ki:
 
 ```js
 function addTask() {
@@ -304,12 +309,12 @@ function addTask() {
   column1.innerText = document.getElementById("task-text").value;
 
   const column2 = document.createElement("td");
-  const deleteBtn = document.createElement("button");   // "törlés" gomb létrehozása
-  deleteBtn.innerText = "X";                            // gomb szöveges tartalmának beállítása
-  deleteBtn.setAttribute("type", "button");             // gomb attribútumainak beállítása
+  const deleteBtn = document.createElement("button");   
+  deleteBtn.innerText = "X";                           
+  deleteBtn.setAttribute("type", "button");           
   deleteBtn.setAttribute("onclick", "deleteTask(this)");
-  deleteBtn.classList.add("delete-btn");    // a class="delete-btn" attribútum hozzáadása a gombhoz
-  column2.append(deleteBtn);                // gomb beszúrása a DOM-fába a 2. táblázatcella gyerekeként
+  deleteBtn.classList.add("delete-btn");
+  column2.append(deleteBtn);
 
   row.append(column1, column2);
   tbody.append(row);
@@ -319,11 +324,11 @@ function addTask() {
 
 > **Megjegyzés 1:** A `classList` egyéb metódusai a class-hozzáadásra szolgáló `add()`-on kívül:
 >
-> * `remove()`: meglévő class eltávolítása az elemről
+> * `remove(c)`: a `c` class eltávolítása az elemről
 > * `contains(c)`: szerepel-e a `c` class az elemen
 > * `toggle(c)`: ha a `c` class még nem szerepel az elemen, akkor hozzáadja azt az elemhez; ha pedig már szerepel, akkor eltávolítja azt az elemről.
 >
-> **Megjegyzés 2:** Ha egy elem <span class="orange">stílusát szeretnénk módosítani</span>, akkor ezt az elemek `style` property-jével tehetjük meg. Ez lényegében a `style` attribútum értékének módosításával állítja be a HTML elem stílusát (ezt inline CSS-nek is nevezzük).
+> **Megjegyzés 2:** Egy <span class="red">objektum stílusának módosítása</span> az elem **`style`** property-jével lehetséges. Ez lényegében a `style` attribútum értékének módosításával állítja be a HTML elem stílusát (ezt inline CSS-nek is nevezzük).
 >
 > ```html
 > <body>
@@ -340,56 +345,59 @@ function addTask() {
 
 ### 2.4. Objektumok törlése
 
-Végezetül elkészítjük az "egy adott feladat törlése", illetve "összes feladat törlése" funkciót.
-
 
 #### 2.4.1. Egy adott gyerekobjektum törlése
 
-A weboldalon található táblázat soraiban megjelenő feladatokhoz tartozik egy-egy törlés gomb, aminek a HTML kódja a következőképpen néz ki:
+Ahhoz, hogy egy objektumot kitöröljünk a DOM-fából, szükségünk van a törlendő objektumra és annak szülőjére. A törléshez a szülő **`removeChild()`** metódusának paramétereként adjuk meg a törlendő elemet.
+
+<span class="example">Feladat:</span> Tegyük működőképessé a táblázat soraiban megjelenő "Feladat törlése" gombokat!
+
+<span class="example">A megoldás menete:</span>
+
+Minden ilyen, feladat törlésére szolgáló gomb forráskódja a következő:
 
 ```html
 <button type="button" class="delete-btn" onclick="deleteTask(this)">X</button>
 ```
 
-Ha a gombra kattintunk, akkor a `deleteTask()` eseménykezelő függvényít hívjuk meg, amely paraméterben megkapja az aktuális objektumot (`this`), azaz a gombot, amire rákattintottunk.
+A gombra kattintva tehát a <span class="green">`deleteTask()` eseménykezelő függvény</span> hívódik meg, így <span class="orange">ennek a törzsét kell megírnunk</span>. Azt szeretnénk, hogy a gombra kattintva töröljük ki azt a feladatot, amihez a gomb tartozik. A függvény paraméterként megkapja az aktuális objektumot (`this`), azaz a gombot, amire kattintottunk.
 
-Írjuk meg a `deleteTask()` függvény törzsét, amely az adott feladat DOM-fából való kitörlését végzi!
+A törlendő sorhoz tartozó gomb tehát a függvény paramétere. Ahhoz, hogy ebből megkapjuk a törlendő sort, végig kell gondolnunk a gomb és az őt tartalmazó táblázatsor viszonyt. A "Feladat törlése" gombok szülője egy `<td>` (cella), amelyek szülője lesz a törlendő `<tr>` (sor). Tehát két szülővel kell "feljebb lépnünk" a DOM-ban.
 
-Lényegében a feladatot tartalmazó táblázatsort kell kitörölnünk. Szükségünk lesz a törlendő sor szülőjére, ami ismételten a `<tbody>` objektum lesz.
+Kelleni fog még a törlendő sor szülője is, ami a `<tbody>` objektum lesz.
 
-```js
-function deleteTask(btn) {
-  const tbody = document.getElementsByTagName("tbody")[0];
-}
-```
+![Egy táblázatsor törlése](./img/tr-delete.png)
 
-A függvény paramétereként megkapjuk a törlendő sorhoz tartozó gombot. Ahhoz, hogy ebből megkapjuk a törlendő sort, végig kell gondolnunk a gomb és az őt tartalmazó táblázatsor viszonyát. A "Törlés" gombok szülője egy `<td>` (cella), amelynek szülője lesz a törlendő `<tr>` (sor). Tehát két szülővel kell "feljebb lépnünk" a DOM-ban.
+<div class="bordered-box border-green">
+A feladat megoldásához tehát a következő lépéseken kell végigmennünk: <br>
 
-Egy DOM-beli elem szülőjét lekérdezhetjük a `parentNode` property-vel. Ezt most kétszer fogjuk egymás után alkalmazni, hiszen kettővel lépünk feljebb a DOM-fában.
+1. Keressük meg a `<tbody>` objektumot, hiszen ennek a gyerekét (egy táblázatsort) fogjuk törölni!
+1. Keressük meg a megnyomott gomb "nagyszülőjét" (azaz a szülőjének a szülőjét), hiszen ez lesz a törlendő sor!
+1. A `<tbody>` objektum `removeChild()` metódusával töröljük a megtalált sort a `<tbody>` gyerekei közül!
+</div>
 
-```js
-function deleteTask(btn) {
-  const tbody = document.getElementsByTagName("tbody")[0];
-  const row = btn.parentNode.parentNode;
-}
-```
+<span class="example">A megoldás elkészítése:</span>
 
-Végül, ha megvan a törlendő elem (a táblázatsor), akkor csupán meg kell hívnunk a szülőjének (a tbody-nak) a `removeChild()` metódusát, amelynek paramétereként átadjuk a törlendő objektumot.
+A DOM-beli elemek **`parentNode`** property-jével lekérdezhetjük az adott elem szülőjét. Ahhoz, hogy megkapjuk a megnyomott gomb "nagyszülőjét" (a törlendő sort), kétszer egymás után alkalmazzuk a property-t.
 
-Tehát a `deleteTask()` függvény <span class="green">végleges verziója</span> a következőképpen néz ki:
+A `deleteTask()` függvény <span class="green">végleges verzió</span>ja a következőképpen néz ki:
 
 ```js
 function deleteTask(btn) {
-  const tbody = document.getElementsByTagName("tbody")[0];
-  const row = btn.parentNode.parentNode;
-  tbody.removeChild(row);
+  const tbody = document.getElementsByTagName("tbody")[0];  // <tbody> megkeresése
+  const row = btn.parentNode.parentNode;  // a törlendő sor a megnyomott gomb "nagyszülője" lesz
+  tbody.removeChild(row);                 // a sor kitörlése a <tbody> gyerekei közül
 }
 ```
 
 
 #### 2.4.2. Összes gyerekobjektum törlése
 
-A weboldalon szerepel egy "Összes feladat törlése" feliratú gomb, amelynek a HTML forráskódja a következő:
+<span class="example">Feladat:</span> Tegyük működőképessé a weboldalon található "Összes feladat törlése" gobmot!
+
+<span class="example">A megoldás menete:</span>
+
+A kérdéses gomb HTML forráskódja a következő:
 
 ```html
 <button type="button" id="delete-all-tasks-btn" class="delete-btn" onclick="deleteAllTasks()">
@@ -397,28 +405,31 @@ A weboldalon szerepel egy "Összes feladat törlése" feliratú gomb, amelynek a
 </button>
 ```
 
-Tehát most a `deleteAllTasks()` függvény törzsét kell megírnunk, amely kitörli az összes feladatot a weboldalon található táblázatból. Nem meglepő módon ismét kelleni fog nekünk a `<tbody>`, hiszen ennek a gyerekeit (a feladatokat tartalmazó táblázatsorokat) szeretnénk eltávolítani.
-
-```js
-function deleteAllTasks() {
-  const tbody = document.getElementsByTagName("tbody")[0];
-}
-```
+A gombra kattintva tehát a <span class="green">`deleteAllTasks()` eseménykezelő függvény</span> hívódik meg, így <span class="orange">ennek a törzsét kell megírnunk</span>. Azt szeretnénk, hogy a függvény törölje ki az összes feladatot a DOM-fából. A feladatok továbbra is a `<tbody>` gyerekeiként, táblázatsorok formájában vannak jelen a DOM-ban.
 
 JavaScriptben nincs olyan explicit DOM-metódusunk, amely egy objektum összes gyerekét kitörölné, ezért egy kicsit másképp oldjuk meg a dolgokat:
 
-* A szülő objektumnak (aminek a gyerek objektumait törölni akarjuk) a `hasChildNodes()` metódusával lekérdezzük, hogy vannak-e gyerekei.
+* A szülő objektumnak (aminek a gyerek objektumait törölni akarjuk) a **`hasChildNodes()`** metódusával lekérdezzük, hogy vannak-e gyerekei.
 * Amíg vannak a szülőnek gyerekei, addig a `removeChild()` metódussal mindig kitörölünk egy gyereket.
 
-Teljesen mindegy, hogy mikor melyik gyereket töröljük ki, hiszen végül minden gyereket kitörlünk. A példánkban én mindig a `<tbody>` legelső gyerekét törlöm, amit a szülő `firstChild` property-jével tudunk elérni.
+<div class="bordered-box border-green">
+A feladat megoldásához tehát a következő lépéseken kell végigmennünk: <br>
 
-Tehát a `deleteAllTasks()` függvény <span class="green">végleges verziója</span> a következőképpen néz ki:
+1. Keressük meg a `<tbody>` objektumot, hiszen ennek az összes gyerekét fogjuk kitörölni!
+1. Amíg van a `<tbody>`-nak gyereke, addig mindig töröljünk ki egy tetszőleges gyereket!
+</div>
+
+<span class="example">A megoldás elkészítése:</span>
+
+Teljesen mindegy, hogy mikor melyik gyereket töröljük ki, hiszen végül minden gyereket kitörlünk. A példánkban én mindig a `<tbody>` legelső gyerekét törlöm, amit a szülő **`firstChild`** property-jével tudunk elérni.
+
+Tehát a `deleteAllTasks()` függvény <span class="green">végleges verzió</span>ja a következőképpen néz ki:
 
 ```js
 function deleteAllTasks() {
-  const tbody = document.getElementsByTagName("tbody")[0];
+  const tbody = document.getElementsByTagName("tbody")[0];  // <tbody> megkeresése
 
-  while (tbody.hasChildNodes()) {
+  while (tbody.hasChildNodes()) {         // <tbody> összes gyerekének törlése
     tbody.removeChild(tbody.firstChild);
   }
 }
