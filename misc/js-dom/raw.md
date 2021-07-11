@@ -57,33 +57,33 @@ Amikor a weboldalunk tartalmát CSS-ben formázzuk, akkor használhatunk olyan s
 * `div p`: kijelöl minden olyan `<p>`-t, amely egy `<div>` leszármazottja
 * `div > p`: kijelöl minden olyan `<p>`-t, amely egy `<div>` gyereke
 * `div ~ p`: kijelöl minden olyan `<p>`-t, amely egy `<div>` testvére és ezen `<div>` után szerepel
-* `p:nth-child(n)`: kijelöl minden olyan `<p>`-t, amely szülőjének `n`-edik gyereke
-* `p:nth-of-type(n)`: kijelöl minden olyan `<p>`-t, amely `<p>` típusú testvérei közül az `n`-edik.
+* `p:nth-child(n)`: kijelöl minden olyan `<p>`-t, amely a szülőjének `n`-edik gyereke
+* `p:nth-of-type(n)`: kijelöl minden olyan `<p>`-t, amely a `<p>` típusú testvérei közül az `n`-edik.
 
 A webes világban gyakran előfordul, hogy dinamikusan szeretnénk manipulálni a DOM-fát, <span class="orange">miután már a weboldal betöltődött</span> (pl. szeretnénk egy objektumot módosítani vagy törölni, esetleg egy új objektumot akarunk a fába beszúrni). Erre biztosítanak lehetőséget a <span class="red">JavaScript DOM-manipulációs műveletei</span>.
 
 A DOM tulajdonképpen nem más, mint egy objektumorientált reprezentációja a weboldalnak. A weboldalon szereplő elemek <span class="red">Node</span>-ok (csomópontok) a DOM-fában, amelyek számos <span class="red">property</span>-vel (adattaggal) és <span class="red">metódus</span>sal rendelkeznek. Ezeket JavaScriptből egyszerűen el tudjuk érni.
 
-A következő fejezetben megismerkedünk a JavaScript néhány fontosabb DOM-manipulációs lehetőségével. Fogjuk párszor használni a `document` objektumot, ami lényegében a böngésző által megnyitott HTML dokumentumot reprezentálja és hozzáférést biztosít a DOM-fához.
+A következő fejezetben megismerkedünk a JavaScript néhány fontosabb DOM-manipulációs lehetőségével. Fogjuk párszor használni a **`document`** objektumot, ami lényegében a böngésző által megnyitott HTML dokumentumot reprezentálja és hozzáférést biztosít a DOM-fához.
 
-> **Oké, de ennek mi értelme van? Miért nem lehet simán csak a HTML-t átírogatni?**
+> **Oké, de ennek mi értelme van? Miért nem lehet csak simán a HTML-t átírogatni?**
 >
 > A hangsúly itt azon van, hogy azután szeretnénk a weboldal tartalmát dinamikusan módosítani, <span class="orange">miután az oldal már betöltődött</span>. Nézzünk néhány gyakorlati példát, amikor DOM-műveleteket használunk:
 >
 > * Lekérdezünk adatokat egy szervertől, és meg szeretnénk jeleníteni azokat a weboldalunkon. Mivel a HTML oldal már betöltődött addigra, amire az adatok megérkeztek, ezért azokat úgy tudjuk megjeleníteni a weboldalon, hogy utólag szúrogatjuk be őket a DOM-fába.
-> * Szeretnénk elérni, hogy egy gombra kattintva a felhasználó válthasson világos és sötét téma között. Itt is az a helyzet, hogy a weboldal már be van töltve, csupán annak a megjelenítését manipuláljuk dinamikusan, DOM-műveletek segítségével.
-> * Egy HTML űrlap kitöltését követően kliensoldalon ellenőrizzük az űrlapon megadott adatok helyességét (pl. helyes e-mail cím formátum, a kötelezően bejelölendő jelölőnégyzeteket kipipálták stb.). Ekkor egy eseménykezelő segítségével figyeljük, hogy mikor nyomja meg a felhasználó az "Elküldés" gombot, majd a "klikk" esemény hatására DOM-műveletekkel lekérjük a beírt űrlapadatokat és ellenőrizzük őket.
+> * Egy űrlap kitöltését követően kliensoldalon ellenőrizzük a beírt adatok helyességét (pl. helyes e-mail cím formátum, helyes születési dátum stb.). Ekkor egy eseménykezelővel figyeljük, hogy mikor nyomja meg a felhasználó az "Elküldés" gombot, majd a "klikk" esemény hatására DOM-műveletekkel lekérjük a beírt adatokat és ellenőrizzük őket. (Nyilván nem tudjuk előre, hogy mit fog beírni a user, ezért kellenek a DOM-műveletek.)
+> * Szeretnénk elérni, hogy egy gombra kattintva a felhasználó válthasson világos és sötét téma között. Megint az a helyzet, hogy a weboldal már be van töltve, csupán annak a megjelenítését manipuláljuk dinamikusan, DOM-műveletek segítségével, amikor a felhasználó a gombra kattint.
 >
-> Könnyen belátható, hogy a HTML önmagában nem elég robusztus ahhoz, hogy "utólag" módosítsuk a weboldalaink szerkezetét. Ezért kell nekünk a DOM és a DOM-műveletek.
+> Könnyen belátható, hogy a HTML önmagában nem elég robusztus ahhoz, hogy "utólag" manipuláljuk a weboldalaink szerkezetét. Ezért kell nekünk a DOM és a DOM-műveletek.
 
 
 ## 2. JavaScript DOM-műveletek, egy példán keresztül
 
-A jegyzet hátralévő részében egy végletekig leegyszerűsített feladatlista alkalmazást fogunk készíteni. A weboldalon megjelennek a napi teendőink, amelyeket lehetőségünk van törölni, ha teljesítettük őket. Emellett új feladatot is bármikor létrehozhatunk.
+A jegyzet hátralévő részében egy végletekig leegyszerűsített <span class="red">feladatlista alkalmazás</span>t fogunk készíteni. A weboldalon megjelennek a napi teendőink, amelyeket lehetőségünk van törölni, ha teljesítettük őket. Emellett új feladatot is bármikor létrehozhatunk.
 
 A példaprojekt elkészítéséhez szükséges <span class="red">kiinduló fájlok</span> letölthetők egy ZIP-ben, [ide kattintva](./files/dom-starter-files.zip).
 
-> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás elég "buta" lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Ha valaki ennél egy fokkal realisztikusabb weboldalt szeretne készíteni, akkor a 2.6. fejezetben talál tippeket a példaprojekt "felokosítására".
+> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás elég kezdetleges lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Ha valaki ennél egy fokkal realisztikusabb weboldalt szeretne készíteni, akkor a 2.6. fejezetben talál tippeket a példaprojekt "felokosítására".
 
 
 ### 2.1. Objektumok megkeresése a DOM-fában
@@ -96,22 +96,20 @@ Egy egyszerű feladattal fogunk indítani: keressük meg JavaScriptben az alább
 
 HTML objektumok DOM-fában történő megkeresésére többféle lehetőségünk is van:
 
-* `document.getElementById(id)`: visszaadja az adott `id` értékkel rendelkező elemet (egyetlen elemet ad vissza, hiszen az `id` attribútum értéke szabályosan egyedi a HTML dokumentumon belül)
-* `document.getElementsByTagName(tag)`: visszaadja az adott tagnévvel rendelkező elemeket (minden esetben egy kollekciót ad vissza, amit 0-tól kezdődően indexelünk)
-* `document.getElementsByClassName(class)`: visszaadja az adott `class` értékkel rendelkező elemeket (minden esetben egy kollekciót ad vissza, amit 0-tól kezdődően indexelünk)
-* `document.querySelector(s)`: visszaadja az `s` CSS szelektor által kijelölt <span class="orange">legelső</span> elemet
-* `document.querySelectorAll(s)`: visszaadja az `s` CSS szelektor által kijelölt <span class="orange">összes</span> elemet (minden esetben egy kollekciót ad vissza, amit 0-tól kezdődően indexelünk).
+* **`document.getElementById(id)`**: visszaadja az adott `id` értékkel rendelkező elemet (egyetlen elemet ad vissza, hiszen az `id` attribútum értéke szabályosan egyedi a HTML dokumentumon belül)
+* **`document.getElementsByTagName(tag)`**: visszaadja az adott tagnévvel rendelkező elemeket (minden esetben egy kollekciót ad vissza, amit 0-tól kezdődően indexelünk)
+* **`document.getElementsByClassName(class)`**: visszaadja az adott `class` értékkel rendelkező elemeket (minden esetben egy kollekciót ad vissza, amit 0-tól kezdődően indexelünk)
+* **`document.querySelector(s)`**: visszaadja az `s` CSS szelektor által kijelölt <span class="orange">legelső</span> elemet
+* **`document.querySelectorAll(s)`**: visszaadja az `s` CSS szelektor által kijelölt <span class="orange">összes</span> elemet (minden esetben egy kollekciót ad vissza, amit 0-tól kezdődően indexelünk).
 
-<span class="example">Példa:</span> A fentiek közül bármelyik szelektorral megkereshetjük a kérdéses címsort. Az alábbi utasítások mindegyikének hatására a címsor fog kiíródni a konzolra.
+<span class="example">Példa:</span> A felsoroltak közül bármelyik szelektorral megkereshetjük a fenti címsort. Az alábbi utasítások mindegyikének hatására a kérdéses címsor fog kiíródni a konzolra.
 
-```html
-<script>
-  console.log(document.getElementById("page-title"));
-  console.log(document.getElementsByTagName("h1")[0]);                 // kollekciót ad vissza, indexeljük!
-  console.log(document.getElementsByClassName("text-center")[0]);      // kollekciót ad vissza, indexeljük!
-  console.log(document.querySelector("header h1.text-center"));
-  console.log(document.querySelectorAll("header h1.text-center")[0]);  // kollekciót ad vissza, indexeljük!
-</script>
+```js
+console.log(document.getElementById("page-title"));
+console.log(document.getElementsByTagName("h1")[0]);                 // kollekciót ad vissza, indexeljük!
+console.log(document.getElementsByClassName("text-center")[0]);      // kollekciót ad vissza, indexeljük!
+console.log(document.querySelector("header h1.text-center"));
+console.log(document.querySelectorAll("header h1.text-center")[0]);  // kollekciót ad vissza, indexeljük!
 ```
 
 
@@ -119,7 +117,7 @@ HTML objektumok DOM-fában történő megkeresésére többféle lehetőségünk
 
 Miközben a felhasználó böngészi a weboldalunkat, történhetnek különféle <span class="red">események</span> - pl. a felhasználó rákattint egy oldalelemre, egy elem fölé viszi a kurzort, egy HTML elem betöltődik vagy megváltozik. Ezekhez az eseményekhez társíthatunk <span class="red">eseménykezelő függvények</span>et, amelyek akkor hívódnak meg, ha az adott esemény bekövetkezik.
 
-Az eseménykezelés egyik módja, hogy az elemeknek adott attribútumokkal szabályozzuk az események működését. A kérdéses HTML elemet ellátjuk az alábbi, eseménykezeléssel kapcsolatos attribútumok valamelyikével, és az attribútum értékeként megadjuk az eseménykezelést végző függvényt.
+Az eseménykezelés egyik módja, hogy az <span class="orange">elemeknek adott attribútumokkal</span> szabályozzuk az események működését. A kérdéses HTML elemet ellátjuk az alábbi, eseménykezeléssel kapcsolatos attribútumok valamelyikével, és az attribútum értékeként megadjuk az eseménykezelést végző függvényt.
 
 * `onclick`: a felhasználó rákattint az elemre
 * `onload`: az elem betöltődik
@@ -128,7 +126,7 @@ Az eseménykezelés egyik módja, hogy az elemeknek adott attribútumokkal szab�
 * `onmouseout`: a felhasználó elviszi az elemről a kurzort
 * `onchange`: az elem megváltozik
 
-> **Megjegyzés:** Ezeken kívül vannak még további attribútumok is, amiket használhatunk. A teljes listát megtalálhatjuk [ezen a linken](https://www.w3schools.com/jsref/dom_obj_event.asp).
+> **Megjegyzés:** Ezeken kívül vannak még további attribútumok is, amiket használhatunk. A teljes listát megtalálhatjuk [ezen a linken](https://www.w3schools.com/tags/ref_eventattributes.asp).
 
 <span class="example">Példa:</span> A példaprojektben található "Hozzáadás" gombra kattintva az `addTask()` függvény hívódik meg
 
@@ -136,13 +134,13 @@ Az eseménykezelés egyik módja, hogy az elemeknek adott attribútumokkal szab�
 <button type="button" class="add-btn" onclick="addTask()">Hozzáadás</button>
 ```
 
-A példaprojektben kizárólag az attribútumokkal történő eseménykezelést nézzük meg. Egy másik módszer az eseménykezelésre, ha egy DOM-beli elem `addEventListener()` metódusát használjuk, ezzel rendeljük hozzá az elemhez az eseménykezelő függvényt (ekkor az elemnek nem kell semmilyen attribútumot adni). Egy HTML elemhez több eseménykezelő is hozzárendelhető ily módon.
+A példaprojektben kizárólag az attribútumokkal történő eseménykezelést nézzük meg. Egy másik módszer az eseménykezelésre, ha egy DOM-beli elem <span class="orange">`addEventListener()` metódus</span>át használjuk, ezzel rendeljük hozzá az elemhez az eseménykezelő függvényt (ekkor az elemnek nem kell semmilyen attribútumot adni). Egy HTML elemhez több eseménykezelő is hozzárendelhető (akár ugyanarra az eseménytípusra is) ily módon.
 
 Az `addEventListener()` metódus paraméterei sorban:
 
 * az esemény neve - ezt `on` előtag nélkül adjuk meg (pl. `click`, `load`, `unload` stb.)
 * eseménykezelő függvény, amely az esemény bekövetkezésekor hívódik meg
-* elhagyható, logikai típusú paraméter, amely az eseménykezelő lefutásának időpontját szabályozza (bővebben lásd: "Capturing és bubbling").
+* elhagyható, logikai típusú paraméter, amely az eseménykezelő lefutásának időpontját szabályozza (bővebben lásd: "Capturing és bubbling" doboz).
 
 <span class="example">Példa:</span> Eseménykezelő hozzárendelése egy gombhoz az `addEventListener()` metódussal
 
@@ -161,7 +159,7 @@ Az `addEventListener()` metódus paraméterei sorban:
 
 > **Caputring és bubbling**
 >
-> Tegyük fel, hogy van egy HTML elemünk, ami egy másik HTML elembe van beágyazva! Mind a beágyazó elem, mind a beágyazott elemhez hozzárendelünk egy-egy eseménykezelőt ugyanarra az eseménytípusra - mondjuk a kattintásra. Ha a belső elemre kattintunk, akkor mindkét elem eseménykezelője meghívódik. Az `addEventHandler()` metódus harmadik paraméterével szabályozhatjuk, hogy milyen sorrendben legyenek ezek meghívva.
+> Tegyük fel, hogy van egy HTML elemünk, ami egy másik HTML elembe van beágyazva! Mind a beágyazó elemhez, mind a beágyazott elemhez hozzárendelünk egy-egy eseménykezelőt ugyanarra az eseménytípusra - mondjuk a kattintásra. Ha a belső elemre kattintunk, akkor mindkét elem eseménykezelője meghívódik. Az `addEventHandler()` metódus harmadik paraméterével szabályozhatjuk, hogy milyen sorrendben legyenek ezek meghívva.
 >
 > Ha `true`-ra állítjuk a harmadik paramétert, akkor <span class="red">capturing</span> történik. Ekkor az eseményt először a legkülső elem kezeli le, majd ezután mindig az eggyel "beljebb" található elem eseménykezelő függvénye hívódik meg.
 >
