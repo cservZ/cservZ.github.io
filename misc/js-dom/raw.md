@@ -83,7 +83,7 @@ A jegyzet hátralévő részében egy végletekig leegyszerűsített <span class
 
 A példaprojekt elkészítéséhez szükséges <span class="green">kiinduló fájlok</span> letölthetők egy ZIP-ben, [ide kattintva](./files/dom-starter-files.zip).
 
-> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás eléggé kezdetleges lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Ha valaki ennél egy fokkal realisztikusabb weboldalt szeretne készíteni, akkor a 2.6. fejezetben talál tippeket a példaprojekt "felokosítására".
+> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás eléggé kezdetleges lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Természetesen ha valaki szeretné, akkor kedve szerint "felokosíthatja" a projektet (például [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) használatával az adatok tárolására).
 
 
 ### 2.1. Objektumok megkeresése a DOM-fában
@@ -443,8 +443,3 @@ function deleteAllTasks() {
 ### 2.5. A kész forráskód letöltése
 
 A teljes, kikommentezett megoldás letölthető [ide kattintva](./files/dom-solution.zip).
-
-
-### 2.6. Az alkalmazás "okosabbá" tétele
-
-TODO
