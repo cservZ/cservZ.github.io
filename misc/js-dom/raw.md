@@ -74,7 +74,7 @@ A következő fejezetben megismerkedünk a JavaScript néhány fontosabb DOM-man
 > * Egy űrlap kitöltését követően kliensoldalon ellenőrizzük a beírt adatok helyességét (pl. helyes e-mail cím formátum, helyes születési dátum stb.). Ekkor egy eseménykezelővel figyeljük, hogy mikor nyomja meg a felhasználó az "Elküldés" gombot, majd a "klikk" esemény hatására DOM-műveletekkel lekérjük a beírt adatokat és ellenőrizzük őket. (Nyilván nem tudjuk előre, hogy mit fog beírni a user, ezért kellenek a DOM-műveletek.)
 > * Szeretnénk elérni, hogy egy gombra kattintva a felhasználó válthasson világos és sötét téma között. Megint az a helyzet, hogy a weboldal már be van töltve, csupán annak a megjelenítését manipuláljuk dinamikusan, DOM-műveletek segítségével, amikor a felhasználó a gombra kattint.
 >
-> Könnyen belátható, hogy a HTML önmagában nem elég robusztus ahhoz, hogy "utólag" manipuláljuk a weboldalaink szerkezetét. Ezért van szükségünk a DOM-ra és a DOM-műveletekre.
+> Könnyen belátható, hogy a HTML önmagában nem elég robusztus ahhoz, hogy "utólag" manipuláljuk a weboldalaink szerkezetét. Ezért van szükségünk a DOM-ra és a JavaScript DOM-műveleteire.
 
 
 ## 2. JavaScript DOM-műveletek, egy példán keresztül
@@ -134,7 +134,7 @@ Az eseménykezelés egyik módja, hogy az elemeknek adott, <span class="red">ese
 <button type="button" class="add-btn" onclick="addTask()">Hozzáadás</button>
 ```
 
-A példaprojektben kizárólag az attribútumokkal történő eseménykezelést nézzük meg. Egy másik módszer az eseménykezelésre, ha egy DOM-beli elem <span class="red">`addEventListener()` metódus</span>át használjuk, ezzel rendeljük hozzá az elemhez az eseménykezelő függvényt (ekkor az elemnek nem kell semmilyen attribútumot adni). Egy HTML elemhez több eseménykezelő is hozzárendelhető (akár ugyanarra az eseménytípusra is).
+A példaprojektben kizárólag az attribútumokkal történő eseménykezelésre találunk példát. Egy másik módszer az eseménykezelésre, ha egy DOM-beli elem <span class="red">`addEventListener()` metódus</span>át használjuk, ezzel rendeljük hozzá az elemhez az eseménykezelő függvényt (ekkor az elemnek nem kell semmilyen attribútumot adni). Egy HTML elemhez több eseménykezelő is hozzárendelhető (akár ugyanarra az eseménytípusra is).
 
 Az `addEventListener()` metódus paraméterei sorban:
 
@@ -191,7 +191,7 @@ Az `addEventListener()` metódus paraméterei sorban:
 > </body>
 > ```
 >
-> A kód kimenete a konzolon: `Capturing: P`, `Capturing: STRONG`, `Bubbling: STRONG`, `Bubbling: P`.
+> A kimenet a konzolon: `Capturing: P`, `Capturing: STRONG`, `Bubbling: STRONG`, `Bubbling: P`.
 
 
 ### 2.3. Elemek beszúrása és módosítása
@@ -271,7 +271,7 @@ tbody.append(row);
 Írjuk bele az első táblázatcellába az `id="task-text"` attribútummal rendelkező beviteli mezőbe írt szöveget!
 
 * Egy beviteli mezőbe írt értéket a mező **`value`** property-jével kérhetünk le.
-* Egy HTML <span class="red">objektum szöveges tartalmának beállítása</span> az <span class="red">`innerText`</span> vagy <span class="red">`innerHTML`</span> property-vel lehetséges.. A különbség a két property között, hogy az `innerHTML` értékeként megadott szöveg HTML-ként lesz értelmezve (ezért itt használhatók a szokásos HTML tagek), míg az `innerText` értéke minden esetben egyszerű szövegként jelenik meg (nem lesz HTML-ként értelmezve).
+* Egy HTML <span class="red">objektum szöveges tartalmának beállítása</span> az <span class="red">`innerText`</span> vagy <span class="red">`innerHTML`</span> property-vel lehetséges. A különbség a két property között, hogy az `innerHTML` értékeként megadott szöveg HTML-ként lesz értelmezve (ezért itt használhatók a szokásos HTML tagek), míg az `innerText` értéke minden esetben egyszerű szövegként jelenik meg (nem lesz HTML-ként értelmezve).
 
 ```js
 // ...
@@ -352,7 +352,7 @@ function addTask() {
 
 #### 2.4.1. Egy adott gyerekobjektum törlése
 
-Ahhoz, hogy egy objektumot kitöröljünk a DOM-fából, szükségünk van a törlendő objektumra és annak szülőjére. A törléshez a szülő <span class="red">`removeChild()`</span> metódusának paramétereként adjuk meg a törlendő elemet.
+Ahhoz, hogy egy objektumot kitöröljünk a DOM-fából, szükségünk van a törlendő objektumra és annak szülőjére. A törléshez a szülő <span class="red">`removeChild()`</span> metódusának paramétereként adjuk meg a törlendő objektumot.
 
 <span class="example">Feladat:</span> Tegyük működőképessé a táblázat soraiban megjelenő "Feladat törlése" gombokat!
 
@@ -366,7 +366,7 @@ Minden ilyen, feladat törlésére szolgáló gomb forráskódja a következő:
 
 A gombra kattintva tehát a <span class="green">`deleteTask()` eseménykezelő függvény</span> hívódik meg, így <span class="orange">ennek a törzsét kell megírnunk</span>. Azt szeretnénk, hogy a gombra kattintva töröljük ki a táblázatból azt a sort, amihez a gomb tartozik. A függvény paraméterben megkapja az aktuális objektumot (`this`), azaz a gombot, amire kattintottunk.
 
-A törlendő sorhoz tartozó gomb tehát a függvény paramétere. Ahhoz, hogy ebből megkapjuk a törlendő sort, végig kell gondolnunk a gomb és az őt tartalmazó táblázatsor viszonyát. A törlés gombok szülője egy `<td>` (cella), amelynek szülője lesz a törlendő `<tr>` (sor). Tehát <span class="orange">két szülővel kell "feljebb lépnünk" a DOM-ban</span> a gombhoz képest. Kelleni fog még a törlendő sor szülője is, ami a `<tbody>` objektum lesz.
+A törlendő sorhoz tartozó gomb tehát a függvény paramétereként adott. Ahhoz, hogy ebből megkapjuk a törlendő sort, végig kell gondolnunk a gomb és az őt tartalmazó táblázatsor viszonyát. A törlés gombok szülője egy `<td>` (cella), amelynek szülője lesz a törlendő `<tr>` (sor). Tehát <span class="orange">két szülővel kell "feljebb lépnünk" a DOM-ban</span> a gombhoz képest. Kelleni fog még a törlendő sor szülője is, ami a `<tbody>` objektum lesz.
 
 Mindez egy ábrán szemléltetve:
 
@@ -419,13 +419,13 @@ JavaScriptben nincs olyan explicit DOM-metódusunk, amely egy objektum összes g
 <div class="bordered-box border-green">
 <span class="green">A feladat megoldásának lépései:</span> <br>
 
-1. Keressük meg a `<tbody>` objektumot, hiszen ennek az összes gyerekét fogjuk kitörölni!
+1. Keressük meg a `<tbody>` objektumot, hiszen ennek az összes gyerekét (a feladatokat tartalmazó táblázatsorokat) fogjuk kitörölni!
 1. Amíg van a `<tbody>`-nak gyereke, addig mindig töröljünk ki egy tetszőleges gyereket!
 </div>
 
 <span class="example">A megoldás elkészítése:</span>
 
-Teljesen mindegy, hogy mikor melyik gyereket töröljük ki, hiszen végül minden gyereket kitörlünk. A példánkban én mindig a `<tbody>` legelső gyerekét törlöm, amit a szülő **`firstChild`** property-jével érhetünk el.
+Teljesen mindegy, hogy mikor melyik gyereket töröljük ki, hiszen végül minden gyereket ki fogunk törölni. A példánkban én mindig a `<tbody>` legelső gyerekét törlöm, amit a szülő **`firstChild`** property-jével érhetünk el.
 
 Tehát a `deleteAllTasks()` függvény <span class="green">végleges verzió</span>ja a következőképpen néz ki:
 
