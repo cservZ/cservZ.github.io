@@ -443,3 +443,8 @@ function deleteAllTasks() {
 ### 2.5. A kész forráskód letöltése
 
 A teljes, kikommentezett megoldás letölthető [ide kattintva](./files/dom-solution.zip).
+
+
+## 3. Egy rövid megjegyzés
+
+Összetettebb webes projektekben általában nem a jegyzetben tárgyalt, hagyományos DOM-műveleteket szoktuk használni. Vannak ugyanis mindenféle <span class="red">library-k</span> és <span class="red">keretrendszerek (framework-ök)</span>, amelyek használatával jelentősen leegyszerűsödik a DOM-manipuláció megvalósítása a fejlesztők számára. Viszont mivel ezek a library-k és framework-ök önmagukban megérnének egy-egy külön jegyzetet, ezért ezekbe most nem megyünk bele.
