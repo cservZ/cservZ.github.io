@@ -508,13 +508,15 @@ column2<span class="token punctuation">.</span><span class="token method functio
   <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;task-text&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">value</span> <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>  <span class="token comment">// &#x171;rlapmez&#x151; tartalm&#xE1;nak ki&#xFC;r&#xED;t&#xE9;se</span>
 <span class="token punctuation">}</span>
 </pre><blockquote>
-<p><strong>Megjegyz&#xE9;s 1:</strong> A <code>classList</code> egy&#xE9;b met&#xF3;dusai a class-hozz&#xE1;ad&#xE1;sra szolg&#xE1;l&#xF3; <code>add()</code>-on k&#xED;v&#xFC;l:</p>
+<p><strong>1. megjegyz&#xE9;s:</strong> A <code>classList</code> egy&#xE9;b met&#xF3;dusai a class-hozz&#xE1;ad&#xE1;sra szolg&#xE1;l&#xF3; <code>add()</code>-on k&#xED;v&#xFC;l:</p>
 <ul>
 <li><code>remove(c)</code>: a <code>c</code> class elt&#xE1;vol&#xED;t&#xE1;sa az elemr&#x151;l</li>
 <li><code>contains(c)</code>: szerepel-e a <code>c</code> class az elemen</li>
 <li><code>toggle(c)</code>: ha a <code>c</code> class m&#xE9;g nem szerepel az elemen, akkor hozz&#xE1;adja azt az elemhez; ha pedig m&#xE1;r szerepel, akkor elt&#xE1;vol&#xED;tja azt az elemr&#x151;l.</li>
 </ul>
-<p><strong>Megjegyz&#xE9;s 2:</strong> Egy <span class="red">objektum st&#xED;lus&#xE1;nak m&#xF3;dos&#xED;t&#xE1;sa</span> az elem <span class="red"><code>style</code></span> property-j&#xE9;vel lehets&#xE9;ges. Ez l&#xE9;nyeg&#xE9;ben a <code>style</code> attrib&#xFA;tum &#xE9;rt&#xE9;k&#xE9;nek m&#xF3;dos&#xED;t&#xE1;s&#xE1;val &#xE1;ll&#xED;tja be a HTML elem st&#xED;lus&#xE1;t (ezt inline CSS-nek is nevezz&#xFC;k).</p>
+</blockquote>
+<blockquote>
+<p><strong>2. megjegyz&#xE9;s:</strong> A p&#xE9;ldaprojektben erre nem tal&#xE1;lunk p&#xE9;ld&#xE1;t, de az <span class="red">objektum st&#xED;lus&#xE1;nak m&#xF3;dos&#xED;t&#xE1;sa</span> az elem <span class="red"><code>style</code></span> property-j&#xE9;vel lehets&#xE9;ges. Ez l&#xE9;nyeg&#xE9;ben a <code>style</code> attrib&#xFA;tum &#xE9;rt&#xE9;k&#xE9;nek m&#xF3;dos&#xED;t&#xE1;s&#xE1;val &#xE1;ll&#xED;tja be a HTML elem st&#xED;lus&#xE1;t (ezt inline CSS-nek is nevezz&#xFC;k).</p>
 <pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-paragraph<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>I&apos;m blue da ba dee da ba die...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">

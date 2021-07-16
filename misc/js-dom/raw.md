@@ -326,13 +326,13 @@ function addTask() {
 }
 ```
 
-> **Megjegyzés 1:** A `classList` egyéb metódusai a class-hozzáadásra szolgáló `add()`-on kívül:
+> **1. megjegyzés:** A `classList` egyéb metódusai a class-hozzáadásra szolgáló `add()`-on kívül:
 >
 > * `remove(c)`: a `c` class eltávolítása az elemről
 > * `contains(c)`: szerepel-e a `c` class az elemen
 > * `toggle(c)`: ha a `c` class még nem szerepel az elemen, akkor hozzáadja azt az elemhez; ha pedig már szerepel, akkor eltávolítja azt az elemről.
->
-> **Megjegyzés 2:** Egy <span class="red">objektum stílusának módosítása</span> az elem <span class="red">`style`</span> property-jével lehetséges. Ez lényegében a `style` attribútum értékének módosításával állítja be a HTML elem stílusát (ezt inline CSS-nek is nevezzük).
+
+> **2. megjegyzés:** A példaprojektben erre nem találunk példát, de az <span class="red">objektum stílusának módosítása</span> az elem <span class="red">`style`</span> property-jével lehetséges. Ez lényegében a `style` attribútum értékének módosításával állítja be a HTML elem stílusát (ezt inline CSS-nek is nevezzük).
 >
 > ```html
 > <body>
