@@ -287,7 +287,7 @@ Ahhoz, hogy a létrehozott gomb megfelelően működjön, hozzáadunk néhány a
 * A `setAttribute()` segítségével adjunk a gombnak egy `type="button"` attribútum-érték párt!
 * A `setAttribute()` segítségével adjunk a gombnak egy `onclick="deleteTask(this)"` attribútum-érték párt, amivel hozzárendeljük a gombhoz a `deleteTask()` eseménykezelő függvényt!
 
-Rendeljük hozzá a gombhoz a `class="delete-btn"` attribútumot, hogy ugyanúgy legyen formázva, mint a többi törlés gomb! Ehhez használjuk az elem <span class="red">`classList`</span> property-jét, amivel lekérhetjük az összes olyan `class` nevét, amivel az elem rendelkezik. A `classList`-nek az **`add()`** metódusával hozzáadjuk a gombhoz a `delete-btn` `class`-értéket. 
+Rendeljük hozzá a gombhoz a `class="delete-btn"` attribútumot, hogy ugyanúgy legyen formázva, mint a többi törlés gomb! Ehhez használjuk az elem <span class="red">`classList`</span> property-jét, amivel lekérhetjük az összes olyan class nevét, amivel az elem rendelkezik. A `classList`-nek az **`add()`** metódusával hozzáadjuk a gombhoz a `delete-btn` class-értéket. 
 
 
 ```js
@@ -366,7 +366,7 @@ Minden ilyen, feladat törlésére szolgáló gomb forráskódja a következő:
 
 A gombra kattintva tehát a <span class="green">`deleteTask()` eseménykezelő függvény</span> hívódik meg, így <span class="orange">ennek a törzsét kell megírnunk</span>. Azt szeretnénk, hogy a gombra kattintva töröljük ki a táblázatból azt a sort, amihez a gomb tartozik. A függvény paraméterben megkapja az aktuális objektumot (`this`), azaz a gombot, amire kattintottunk.
 
-A törlendő sorhoz tartozó gomb tehát a függvény paramétereként adott. Ahhoz, hogy ebből megkapjuk a törlendő sort, végig kell gondolnunk a gomb és az őt tartalmazó táblázatsor viszonyát. A törlés gombok szülője egy `<td>` (cella), amelynek szülője lesz a törlendő `<tr>` (sor). Tehát <span class="orange">két szülővel kell "feljebb lépnünk" a DOM-ban</span> a gombhoz képest. Kelleni fog még a törlendő sor szülője is, ami a `<tbody>` objektum lesz.
+A törlendő sorhoz tartozó gomb tehát a függvény paramétereként adott. Ahhoz, hogy ebből megkapjuk a törlendő sort, végig kell gondolnunk a gomb és az őt tartalmazó táblázatsor viszonyát. A törlés gombok szülője egy `<td>` (cella), amelynek szülője lesz a törlendő `<tr>` (sor). Tehát <span class="orange">két szülővel kell "feljebb lépnünk" a DOM-ban</span> a megnyomott gombhoz képest. Kelleni fog még a törlendő sor szülője is, ami a `<tbody>` objektum lesz.
 
 Mindez egy ábrán szemléltetve:
 
