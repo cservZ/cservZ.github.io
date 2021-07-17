@@ -207,6 +207,26 @@ Az `append()` és `appendChild()` metódusok mindketten arra szolgálnak, hogy e
 * Az `append()` egyszerre több gyereket is hozzáfűzhet egy objektumhoz, míg az `appendChild()` csak egyet.
 * Az `append()` Node-okat és stringeket egyaránt hozzáfűzhet egy objektumhoz gyerekként, míg az `appendChild()` kizárólag Node-okkal működik.
 
+> **Megjegyzés:** Az `append()` és `appendChild()` metódusok mindig a szülő elem <span class="orange">legutolsó</span> gyerekeként szúrják be az új objektumot a DOM-fába. Ha a szülő egy tetszőleges indexű gyerekeként szeretnénk beszúrni az elemet a fába, akkor használjuk a szülő **`insertBefore()`** metódusát.
+>
+> A metódus két paramétert vár: rendre a beszúrandó objektumot, és a szülő elem azon gyerekét, ami <span class="orange">elé</span> be fogjuk szúrni az új elemet. A szülő elemnek felhasználhatjuk a `children` property-jét, ami visszaadja az elem összes gyerekét egy indexelhető kollekcióban.
+>
+> Nézzünk egy példát! Szúrjunk be az alábbi weboldalra egy "Második bekezdés" feliratú `<p>` objektumot, a "Harmadik bekezdés" feliratú `<p>` elem elé!
+>
+> ```html
+> <div id="parent">
+>   <p>Első bekezdés</p>
+>   <p>Harmadik bekezdés</p>
+> </div>
+> <script>
+>   const parent = document.getElementById("parent");       // a szülő objektum
+>   const newParagraph = document.createElement("p");       // az új elem létrehozása
+>   newParagraph.innerText = "Második bekezdés";
+>   // az új elem beszúrása a szülő objektum második (1. indexű) gyereke elé
+>   parent.insertBefore(newParagraph, parent.children[1]);
+> </script>
+> ```
+
 <span class="example">Feladat:</span> Tegyük működőképessé az "új feladat hozzáadása" funkciót a példaprojektben!
 
 <span class="example">A megoldás menete:</span>
