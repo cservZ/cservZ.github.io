@@ -29,11 +29,19 @@ li {
     margin-bottom: 0 !important;
 }
 
+.border-red {
+    border-color: red;
+}
+
 .border-green {
     border-color: green;
 }
 
-.red, .orange, .green, .example {
+.border-blue {
+    border-color: blue;
+}
+
+.red, .orange, .green, .blue, .example {
     font-weight: bold !important;
 }
 
@@ -47,6 +55,10 @@ li {
 
 .green, .green code {
     color: green !important;
+}
+
+.blue {
+    color: blue !important;
 }
 
 .example {

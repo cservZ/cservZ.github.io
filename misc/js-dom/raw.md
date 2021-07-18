@@ -157,41 +157,44 @@ Az `addEventListener()` metódus paraméterei sorban:
 </body>
 ```
 
-> **Caputring és bubbling**
->
-> Tegyük fel, hogy van egy HTML elemünk, ami egy másik HTML elembe van beágyazva! Mind a beágyazó elemhez, mind a beágyazott elemhez hozzárendelünk egy-egy eseménykezelőt ugyanarra az eseménytípusra - mondjuk a kattintásra. Ha a belső elemre kattintunk, akkor mindkét elem eseménykezelője meghívódik. Az `addEventListener()` metódus harmadik paraméterével szabályozhatjuk, hogy milyen sorrendben legyenek ezek meghívva.
->
-> Ha `true`-ra állítjuk a harmadik paramétert, akkor <span class="red">capturing</span> történik. Ekkor az eseményt először a legkülső elem kezeli le, majd ezután mindig az eggyel "beljebb" található elem eseménykezelő függvénye hívódik meg.
->
-> Ha `false`-ra állítjuk a harmadik paramétert, akkor <span class="red">bubbling</span> történik. Ekkor az eseményt először a legbelső elem kezeli le, majd ezután mindig az eggyel "kijjebb" található elem eseménykezelő függvénye hívódik meg. Ha nem adjuk meg expliciten a 3. paraméter értékét, akkor alapértelmezett módon mindig bubbling történik.
->
-> Nézzünk egy példát! Figyeljük meg a konzolon, hogy az "eseménykezelők" feliratra kattintva, capturing esetén "kívülről befelé", míg bubbling esetén "belülről kifelé" sorrendben hívódnak meg az elemek eseménykezelői!
->
-> ```html
-> <body>
->   <p id="my-paragraph">
->     Ez egy példa <strong id="my-strong">eseménykezelők</strong> használatára.
->   </p>
->   <script>
->     // Két függvény, amely kiírja annak a HTML elemnek a nevét, amelyen az esemény bekövetkezett
->     // A capture()-t majd capturing, a bubble()-t pedig majd bubbling módban fogjuk használni
->     function capture() { console.log("Capturing: " + this.tagName); }   
->     function bubble() { console.log("Bubbling: " + this.tagName); }
->
->     // A <p> és <strong> elemek megkeresése a DOM-fában
->     const p = document.getElementById("my-paragraph");      // külső elem
->     const strong = document.getElementById("my-strong");    // belső elem
->  
->     // Kattintás eseményre vonatkozó eseménykezelők hozzárendelése a két elemhez
->     p.addEventListener("click", capture, true);             // capturing
->     strong.addEventListener("click", capture, true);        // capturing
->     p.addEventListener("click", bubble, false);             // bubbling
->     strong.addEventListener("click", bubble, false);        // bubbling
->   </script>
-> </body>
-> ```
->
-> A kimenet a konzolon: `Capturing: P`, `Capturing: STRONG`, `Bubbling: STRONG`, `Bubbling: P`.
+<div class="bordered-box border-blue">
+
+<span class="blue">Caputring és bubbling</span>
+
+Tegyük fel, hogy van egy HTML elemünk, ami egy másik HTML elembe van beágyazva! Mind a beágyazó elemhez, mind a beágyazott elemhez hozzárendelünk egy-egy eseménykezelőt ugyanarra az eseménytípusra - mondjuk a kattintásra. Ha a belső elemre kattintunk, akkor mindkét elem eseménykezelője meghívódik. Az `addEventListener()` metódus harmadik paraméterével szabályozhatjuk, hogy milyen sorrendben legyenek ezek meghívva.
+
+Ha `true`-ra állítjuk a harmadik paramétert, akkor <span class="red">capturing</span> történik. Ekkor az eseményt először a legkülső elem kezeli le, majd ezután mindig az eggyel "beljebb" található elem eseménykezelő függvénye hívódik meg.
+
+Ha `false`-ra állítjuk a harmadik paramétert, akkor <span class="red">bubbling</span> történik. Ekkor az eseményt először a legbelső elem kezeli le, majd ezután mindig az eggyel "kijjebb" található elem eseménykezelő függvénye hívódik meg. Ha nem adjuk meg expliciten a 3. paraméter értékét, akkor alapértelmezett módon mindig bubbling történik.
+
+Nézzünk egy példát! Figyeljük meg a konzolon, hogy az "eseménykezelők" feliratra kattintva, <span class="orange">capturing esetén "kívülről befelé"</span>, míg <span class="orange">bubbling esetén "belülről kifelé"</span> sorrendben hívódnak meg az elemek eseménykezelői!
+
+```html
+<body>
+  <p id="my-paragraph">
+    Ez egy példa <strong id="my-strong">eseménykezelők</strong> használatára.
+  </p>
+  <script>
+    // Két függvény, amely kiírja annak a HTML elemnek a nevét, amelyen az esemény bekövetkezett
+    // A capture()-t majd capturing, a bubble()-t pedig majd bubbling módban fogjuk használni
+    function capture() { console.log("Capturing: " + this.tagName); }   
+    function bubble() { console.log("Bubbling: " + this.tagName); }
+
+    // A <p> és <strong> elemek megkeresése a DOM-fában
+    const p = document.getElementById("my-paragraph");      // külső elem
+    const strong = document.getElementById("my-strong");    // belső elem
+ 
+    // Kattintás eseményre vonatkozó eseménykezelők hozzárendelése a két elemhez
+    p.addEventListener("click", capture, true);             // capturing
+    strong.addEventListener("click", capture, true);        // capturing
+    p.addEventListener("click", bubble, false);             // bubbling
+    strong.addEventListener("click", bubble, false);        // bubbling
+  </script>
+</body>
+```
+
+A kimenet a konzolon: `Capturing: P`, `Capturing: STRONG`, `Bubbling: STRONG`, `Bubbling: P`.
+</div>
 
 
 ### 2.3. Elemek beszúrása és módosítása
@@ -256,7 +259,7 @@ Látható, hogy a "Hozzáadás" gombhoz hozzárendeltük az `onclick` attribútu
 ```
 
 <div class="bordered-box border-green">
-<span class="green">A feladat megoldásának lépései:</span> <br>
+<span class="green">A feladat megoldásának lépései</span> <br>
 
 1. Keressük meg a `<tbody>` objektumot, hiszen ennek a gyerekeként fogjuk az új feladatot beszúrni!
 1. Hozzunk létre a beszúrni kívánt feladatnak egy új sort a táblázatban (`<tr>`)! A sorban helyezzünk el két táblázatcellát (`<td>`)!
@@ -393,7 +396,7 @@ Mindez egy ábrán szemléltetve:
 ![Egy táblázatsor törlése](./img/tr-delete.png)
 
 <div class="bordered-box border-green">
-<span class="green">A feladat megoldásának lépései:</span> <br>
+<span class="green">A feladat megoldásának lépései</span> <br>
 
 1. Keressük meg a `<tbody>` objektumot, hiszen ennek az egyik gyerekét (egy táblázatsort) fogjuk kitörölni!
 1. Keressük meg a megnyomott gomb "nagyszülőjét" (azaz a szülőjének a szülőjét), hiszen ez lesz a törlendő sor!
@@ -437,7 +440,7 @@ JavaScriptben nincs olyan explicit DOM-metódusunk, amely egy objektum összes g
 * Amíg vannak a szülőnek gyerekei, addig a `removeChild()` metódussal mindig kitörölünk egy gyereket.
 
 <div class="bordered-box border-green">
-<span class="green">A feladat megoldásának lépései:</span> <br>
+<span class="green">A feladat megoldásának lépései</span> <br>
 
 1. Keressük meg a `<tbody>` objektumot, hiszen ennek az összes gyerekét (a feladatokat tartalmazó táblázatsorokat) fogjuk kitörölni!
 1. Amíg van a `<tbody>`-nak gyereke, addig mindig töröljünk ki egy tetszőleges gyereket!

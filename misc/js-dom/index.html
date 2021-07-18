@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="../../assets/img/icon.png">
-      <link rel="stylesheet" href="../markdown-shared.css">
+      <link rel="stylesheet" href="../../assets/css/markdown-shared.css">
       
       
       
@@ -378,12 +378,12 @@ pre[data-line] .line-highlight[data-end]:after {
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-</pre><blockquote>
-<p><strong>Caputring &#xE9;s bubbling</strong></p>
+</pre><div class="bordered-box border-blue">
+<p><span class="blue">Caputring &#xE9;s bubbling</span></p>
 <p>Tegy&#xFC;k fel, hogy van egy HTML elem&#xFC;nk, ami egy m&#xE1;sik HTML elembe van be&#xE1;gyazva! Mind a be&#xE1;gyaz&#xF3; elemhez, mind a be&#xE1;gyazott elemhez hozz&#xE1;rendel&#xFC;nk egy-egy esem&#xE9;nykezel&#x151;t ugyanarra az esem&#xE9;nyt&#xED;pusra - mondjuk a kattint&#xE1;sra. Ha a bels&#x151; elemre kattintunk, akkor mindk&#xE9;t elem esem&#xE9;nykezel&#x151;je megh&#xED;v&#xF3;dik. Az <code>addEventListener()</code> met&#xF3;dus harmadik param&#xE9;ter&#xE9;vel szab&#xE1;lyozhatjuk, hogy milyen sorrendben legyenek ezek megh&#xED;vva.</p>
 <p>Ha <code>true</code>-ra &#xE1;ll&#xED;tjuk a harmadik param&#xE9;tert, akkor <span class="red">capturing</span> t&#xF6;rt&#xE9;nik. Ekkor az esem&#xE9;nyt el&#x151;sz&#xF6;r a legk&#xFC;ls&#x151; elem kezeli le, majd ezut&#xE1;n mindig az eggyel &quot;beljebb&quot; tal&#xE1;lhat&#xF3; elem esem&#xE9;nykezel&#x151; f&#xFC;ggv&#xE9;nye h&#xED;v&#xF3;dik meg.</p>
 <p>Ha <code>false</code>-ra &#xE1;ll&#xED;tjuk a harmadik param&#xE9;tert, akkor <span class="red">bubbling</span> t&#xF6;rt&#xE9;nik. Ekkor az esem&#xE9;nyt el&#x151;sz&#xF6;r a legbels&#x151; elem kezeli le, majd ezut&#xE1;n mindig az eggyel &quot;kijjebb&quot; tal&#xE1;lhat&#xF3; elem esem&#xE9;nykezel&#x151; f&#xFC;ggv&#xE9;nye h&#xED;v&#xF3;dik meg. Ha nem adjuk meg expliciten a 3. param&#xE9;ter &#xE9;rt&#xE9;k&#xE9;t, akkor alap&#xE9;rtelmezett m&#xF3;don mindig bubbling t&#xF6;rt&#xE9;nik.</p>
-<p>N&#xE9;zz&#xFC;nk egy p&#xE9;ld&#xE1;t! Figyelj&#xFC;k meg a konzolon, hogy az &quot;esem&#xE9;nykezel&#x151;k&quot; feliratra kattintva, capturing eset&#xE9;n &quot;k&#xED;v&#xFC;lr&#x151;l befel&#xE9;&quot;, m&#xED;g bubbling eset&#xE9;n &quot;bel&#xFC;lr&#x151;l kifel&#xE9;&quot; sorrendben h&#xED;v&#xF3;dnak meg az elemek esem&#xE9;nykezel&#x151;i!</p>
+<p>N&#xE9;zz&#xFC;nk egy p&#xE9;ld&#xE1;t! Figyelj&#xFC;k meg a konzolon, hogy az &quot;esem&#xE9;nykezel&#x151;k&quot; feliratra kattintva, <span class="orange">capturing eset&#xE9;n &quot;k&#xED;v&#xFC;lr&#x151;l befel&#xE9;&quot;</span>, m&#xED;g <span class="orange">bubbling eset&#xE9;n &quot;bel&#xFC;lr&#x151;l kifel&#xE9;&quot;</span> sorrendben h&#xED;v&#xF3;dnak meg az elemek esem&#xE9;nykezel&#x151;i!</p>
 <pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-paragraph<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
     Ez egy p&#xE9;lda <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>my-strong<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>esem&#xE9;nykezel&#x151;k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> haszn&#xE1;lat&#xE1;ra.
@@ -406,7 +406,7 @@ pre[data-line] .line-highlight[data-end]:after {
   </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 </pre><p>A kimenet a konzolon: <code>Capturing: P</code>, <code>Capturing: STRONG</code>, <code>Bubbling: STRONG</code>, <code>Bubbling: P</code>.</p>
-</blockquote>
+</div>
 <h3 class="mume-header" id="23-elemek-besz%C3%BAr%C3%A1sa-%C3%A9s-m%C3%B3dos%C3%ADt%C3%A1sa">2.3. Elemek besz&#xFA;r&#xE1;sa &#xE9;s m&#xF3;dos&#xED;t&#xE1;sa</h3>
 
 <p>Ha egy &#xFA;j elemet szeretn&#xE9;nk a DOM-f&#xE1;ba besz&#xFA;rni, akkor a k&#xF6;vetkez&#x151; l&#xE9;p&#xE9;seket kell k&#xF6;vetn&#xFC;nk:</p>
@@ -455,7 +455,7 @@ pre[data-line] .line-highlight[data-end]:after {
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
 </pre><div class="bordered-box border-green">
-<span class="green">A feladat megold&#xE1;s&#xE1;nak l&#xE9;p&#xE9;sei:</span> <br>
+<span class="green">A feladat megold&#xE1;s&#xE1;nak l&#xE9;p&#xE9;sei</span> <br>
 <ol>
 <li>Keress&#xFC;k meg a <code>&lt;tbody&gt;</code> objektumot, hiszen ennek a gyerekek&#xE9;nt fogjuk az &#xFA;j feladatot besz&#xFA;rni!</li>
 <li>Hozzunk l&#xE9;tre a besz&#xFA;rni k&#xED;v&#xE1;nt feladatnak egy &#xFA;j sort a t&#xE1;bl&#xE1;zatban (<code>&lt;tr&gt;</code>)! A sorban helyezz&#xFC;nk el k&#xE9;t t&#xE1;bl&#xE1;zatcell&#xE1;t (<code>&lt;td&gt;</code>)!</li>
@@ -556,7 +556,7 @@ column2<span class="token punctuation">.</span><span class="token method functio
 <p>Mindez egy &#xE1;br&#xE1;n szeml&#xE9;ltetve:</p>
 <p><img src="./img/tr-delete.png" alt="Egy t&#xE1;bl&#xE1;zatsor t&#xF6;rl&#xE9;se"></p>
 <div class="bordered-box border-green">
-<span class="green">A feladat megold&#xE1;s&#xE1;nak l&#xE9;p&#xE9;sei:</span> <br>
+<span class="green">A feladat megold&#xE1;s&#xE1;nak l&#xE9;p&#xE9;sei</span> <br>
 <ol>
 <li>Keress&#xFC;k meg a <code>&lt;tbody&gt;</code> objektumot, hiszen ennek az egyik gyerek&#xE9;t (egy t&#xE1;bl&#xE1;zatsort) fogjuk kit&#xF6;r&#xF6;lni!</li>
 <li>Keress&#xFC;k meg a megnyomott gomb &quot;nagysz&#xFC;l&#x151;j&#xE9;t&quot; (azaz a sz&#xFC;l&#x151;j&#xE9;nek a sz&#xFC;l&#x151;j&#xE9;t), hiszen ez lesz a t&#xF6;rlend&#x151; sor!</li>
@@ -586,7 +586,7 @@ column2<span class="token punctuation">.</span><span class="token method functio
 <li>Am&#xED;g vannak a sz&#xFC;l&#x151;nek gyerekei, addig a <code>removeChild()</code> met&#xF3;dussal mindig kit&#xF6;r&#xF6;l&#xFC;nk egy gyereket.</li>
 </ul>
 <div class="bordered-box border-green">
-<span class="green">A feladat megold&#xE1;s&#xE1;nak l&#xE9;p&#xE9;sei:</span> <br>
+<span class="green">A feladat megold&#xE1;s&#xE1;nak l&#xE9;p&#xE9;sei</span> <br>
 <ol>
 <li>Keress&#xFC;k meg a <code>&lt;tbody&gt;</code> objektumot, hiszen ennek az &#xF6;sszes gyerek&#xE9;t (a feladatokat tartalmaz&#xF3; t&#xE1;bl&#xE1;zatsorokat) fogjuk kit&#xF6;r&#xF6;lni!</li>
 <li>Am&#xED;g van a <code>&lt;tbody&gt;</code>-nak gyereke, addig mindig t&#xF6;r&#xF6;lj&#xFC;nk ki egy tetsz&#x151;leges gyereket!</li>
