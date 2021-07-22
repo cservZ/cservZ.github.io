@@ -17,6 +17,10 @@ li {
     margin-bottom: 5px !important;
 }
 
+.inline {
+    display: inline;
+}
+
 .bordered-box {
     border: 3px solid black;
     border-radius: 10px;
