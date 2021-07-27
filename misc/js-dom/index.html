@@ -323,7 +323,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>A jegyzet h&#xE1;tral&#xE9;v&#x151; r&#xE9;sz&#xE9;ben egy v&#xE9;gletekig leegyszer&#x171;s&#xED;tett <span class="green">feladatlista alkalmaz&#xE1;s</span>t fogunk elk&#xE9;sz&#xED;teni. A weboldalon megjelennek a napi feladataink, amelyeket lehet&#x151;s&#xE9;g&#xFC;nk van t&#xF6;r&#xF6;lni, ha teljes&#xED;tett&#xFC;k &#x151;ket. Emellett &#xFA;j feladatot is b&#xE1;rmikor l&#xE9;trehozhatunk.</p>
 <p>A p&#xE9;ldaprojekt elk&#xE9;sz&#xED;t&#xE9;s&#xE9;hez sz&#xFC;ks&#xE9;ges <span class="green">kiindul&#xF3; f&#xE1;jlok</span> let&#xF6;lthet&#x151;k egy ZIP-ben, <a href="./files/dom-starter-files.zip">ide kattintva</a>.</p>
 <blockquote>
-<p><strong>Megjegyz&#xE9;s:</strong> Mivel csak a DOM-m&#x171;veletek bemutat&#xE1;sa a c&#xE9;l, ez&#xE9;rt az alkalmaz&#xE1;s el&#xE9;gg&#xE9; kezdetleges lesz: a feladatokat nem mentj&#xFC;k el sehova, &#xED;gy az oldal friss&#xED;t&#xE9;sekor a dinamikusan hozz&#xE1;adott adatok elvesznek. Emellett lesznek be&#xE9;getett adataink is. Term&#xE9;szetesen ha valaki szeretn&#xE9;, akkor kedve szerint &quot;felokos&#xED;thatja&quot; a projektet (p&#xE9;ld&#xE1;ul <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">LocalStorage</a> haszn&#xE1;lat&#xE1;val az adatok t&#xE1;rol&#xE1;s&#xE1;ra).</p>
+<p><strong>Megjegyz&#xE9;s:</strong> Mivel csak a DOM-m&#x171;veletek bemutat&#xE1;sa a c&#xE9;l, ez&#xE9;rt az alkalmaz&#xE1;s el&#xE9;gg&#xE9; kezdetleges lesz: a feladatokat nem mentj&#xFC;k el sehova, &#xED;gy az oldal friss&#xED;t&#xE9;sekor a dinamikusan hozz&#xE1;adott adatok elvesznek. Emellett lesznek be&#xE9;getett adataink is. Ha valaki enn&#xE9;l egy fokkal realisztikusabb weboldalt szeretne k&#xE9;sz&#xED;teni, akkor a 2.6. fejezetben tal&#xE1;l tippeket a p&#xE9;ldaprojekt &quot;felokos&#xED;t&#xE1;s&#xE1;ra&quot;.</p>
 </blockquote>
 <h3 class="mume-header" id="21-objektumok-megkeres%C3%A9se-a-dom-f%C3%A1ban">2.1. Objektumok megkeres&#xE9;se a DOM-f&#xE1;ban</h3>
 
@@ -605,6 +605,17 @@ column2<span class="token punctuation">.</span><span class="token method functio
 </pre><h3 class="mume-header" id="25-a-k%C3%A9sz-forr%C3%A1sk%C3%B3d-let%C3%B6lt%C3%A9se">2.5. A k&#xE9;sz forr&#xE1;sk&#xF3;d let&#xF6;lt&#xE9;se</h3>
 
 <p>A teljes, kikommentezett megold&#xE1;s let&#xF6;lthet&#x151; <a href="./files/dom-solution.zip">ide kattintva</a>.</p>
+<h3 class="mume-header" id="26-a-p%C3%A9ldaprojekt-okosabb%C3%A1-t%C3%A9tele">2.6. A p&#xE9;ldaprojekt &quot;okosabb&#xE1; t&#xE9;tele&quot;</h3>
+
+<ul>
+<li>&#xCD;rjuk &#xE1;t az alkalmaz&#xE1;st &#xFA;gy, hogy a feladatokat <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">LocalStorage</a>-ban t&#xE1;roljuk el &#xE9;s innen is t&#xF6;ltj&#xFC;k be &#x151;ket! A feladatok sz&#xF6;vegeit egy t&#xF6;mbben t&#xE1;roljuk, &#xE9;s ezt a t&#xF6;mb&#xF6;t JSON-stringg&#xE9; alak&#xED;tva t&#xE1;roljuk el a LocalStorage-ban (mert a LocalStorage t&#xF6;mb&#xF6;ket nem tud t&#xE1;rolni, csak stringeket)! Seg&#xED;ts&#xE9;g: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify</a> &#xE9;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse</a> met&#xF3;dusok.</li>
+<li>Ha nincs elmentett feladatunk, akkor rejts&#xFC;k el a &quot;Feladataim&quot; szakaszt a weboldalr&#xF3;l (<code>display: none</code>)!</li>
+<li>Egy &#xFA;j feladat hozz&#xE1;ad&#xE1;sa el&#x151;tt ellen&#x151;rizz&#xFC;k le, hogy kit&#xF6;lt&#xF6;tt&#xE9;k-e a weboldalon tal&#xE1;lhat&#xF3; &#x171;rlapmez&#x151;t adattal! Amennyiben nem, &#xED;rassunk ki hiba&#xFC;zenetet!</li>
+<li>Ellen&#x151;rizz&#xFC;k, hogy ne lehessen t&#xF6;bb azonos sz&#xF6;veg&#x171; feladatot felvenni!</li>
+</ul>
+<blockquote>
+<p><strong>Megjegyz&#xE9;s:</strong> A &quot;felokos&#xED;tott&quot; p&#xE9;ldaprojekt let&#xF6;lthet&#x151; <a href="./files/dom-solution-revamped.zip">ide kattintva</a>.</p>
+</blockquote>
 <h2 class="mume-header" id="3-egy-r%C3%B6vid-megjegyz%C3%A9s">3. Egy r&#xF6;vid megjegyz&#xE9;s</h2>
 
 <p>&#xD6;sszetettebb webes projektekben &#xE1;ltal&#xE1;ban nem a jegyzetben t&#xE1;rgyalt, hagyom&#xE1;nyos DOM-m&#x171;veleteket szoktuk haszn&#xE1;lni. Vannak ugyanis mindenf&#xE9;le <span class="red">library-k</span> &#xE9;s <span class="red">keretrendszerek (framework-&#xF6;k)</span>, amelyek haszn&#xE1;lat&#xE1;val jelent&#x151;sen leegyszer&#x171;s&#xF6;dik a DOM-manipul&#xE1;ci&#xF3; megval&#xF3;s&#xED;t&#xE1;sa a fejleszt&#x151;k sz&#xE1;m&#xE1;ra. Viszont mivel ezek a library-k &#xE9;s framework-&#xF6;k &#xF6;nmagukban meg&#xE9;rn&#xE9;nek egy-egy k&#xFC;l&#xF6;n jegyzetet, ez&#xE9;rt ezekbe most nem megy&#xFC;nk bele.</p>

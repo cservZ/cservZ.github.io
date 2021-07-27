@@ -83,7 +83,7 @@ A jegyzet hátralévő részében egy végletekig leegyszerűsített <span class
 
 A példaprojekt elkészítéséhez szükséges <span class="green">kiinduló fájlok</span> letölthetők egy ZIP-ben, [ide kattintva](./files/dom-starter-files.zip).
 
-> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás eléggé kezdetleges lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Természetesen ha valaki szeretné, akkor kedve szerint "felokosíthatja" a projektet (például [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) használatával az adatok tárolására).
+> **Megjegyzés:** Mivel csak a DOM-műveletek bemutatása a cél, ezért az alkalmazás eléggé kezdetleges lesz: a feladatokat nem mentjük el sehova, így az oldal frissítésekor a dinamikusan hozzáadott adatok elvesznek. Emellett lesznek beégetett adataink is. Ha valaki ennél egy fokkal realisztikusabb weboldalt szeretne készíteni, akkor a 2.6. fejezetben talál tippeket a példaprojekt "felokosítására".
 
 
 ### 2.1. Objektumok megkeresése a DOM-fában
@@ -466,6 +466,16 @@ function deleteAllTasks() {
 ### 2.5. A kész forráskód letöltése
 
 A teljes, kikommentezett megoldás letölthető [ide kattintva](./files/dom-solution.zip).
+
+
+### 2.6. A példaprojekt "okosabbá tétele"
+
+* Írjuk át az alkalmazást úgy, hogy a feladatokat [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)-ban tároljuk el és innen is töltjük be őket! A feladatok szövegeit egy tömbben tároljuk, és ezt a tömböt JSON-stringgé alakítva tároljuk el a LocalStorage-ban (mert a LocalStorage tömböket nem tud tárolni, csak stringeket)! Segítség: [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) és [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) metódusok.
+* Ha nincs elmentett feladatunk, akkor rejtsük el a "Feladataim" szakaszt a weboldalról (`display: none`)!
+* Egy új feladat hozzáadása előtt ellenőrizzük le, hogy kitöltötték-e a weboldalon található űrlapmezőt adattal! Amennyiben nem, írassunk ki hibaüzenetet!
+* Ellenőrizzük, hogy ne lehessen több azonos szövegű feladatot felvenni!
+
+> **Megjegyzés:** A "felokosított" példaprojekt letölthető [ide kattintva](./files/dom-solution-revamped.zip).
 
 
 ## 3. Egy rövid megjegyzés

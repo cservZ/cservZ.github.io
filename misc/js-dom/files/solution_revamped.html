@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Feladatlista</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<header>
+		<h1 id="page-title" class="text-center">Feladataim</h1>
+	</header>
+	<div class="card">
+		<div id="add-task">
+			<h2>Új feladat</h2>
+			<form>
+				<input type="text" id="task-text" class="form-input"/>
+				<button type="button" class="add-btn" onclick="addTask(document.getElementById('task-text').value, true)">Hozzáadás</button>
+			</form>
+		</div>
+		<div id="task-container" style="display: none">
+			<h2>Feladataim</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Feladat szövege</th>
+						<th>Törlés</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<button type="button" id="delete-all-tasks-btn" class="delete-btn" onclick="deleteAllTasks()">Összes feladat törlése</button>
+		</div>
+	</div>
+	<script>
+        const tbody = document.getElementsByTagName("tbody")[0];
+
+        // Kiolvassuk a LocalStorage-ból az elmentett feladatokat és eltároljuk őket egy userTasks nevű tömbben
+        // Amennyiben nem mentettünk el a LocalStorage-ba feladatot, akkor egy üres tömbbel fogunk dolgozni
+
+        let userTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        // Egy függvény, amely elrejti a "Feladataim" szakaszt
+
+        function hideTaskContainer() {
+            document.getElementById("task-container").style.display = "none";
+        }
+
+        // Egy függvény, amely megjeleníti a "Feladataim" szakaszt
+
+        function showTaskContainer() {
+            document.getElementById("task-container").style.display = "block";
+        }
+
+        // Egy függvény, amely megjeleníti a LocalStorage-ból betöltött feladatokat
+
+        function displayTasks() {
+            for (let task of userTasks) {
+                addTask(task, false);
+            }
+        }
+
+        // Egy függvény, amely megjeleníti a paraméterül kapott szöveggel rendelkező feladatot a weboldalon
+        // Amennyiben a save logikai paraméter értéke igaz (új feladatot veszünk fel), akkor el is mentjük azt a LocalStorage-ba
+
+		function addTask(text, save) {
+            // Új feladat felvételekor ellenőrizzük, hogy kitöltötték-e a weboldalon található űrlapmezőt adattal,
+            // valamint azt is vizsgáljuk, hogy ne legyen több azonos szövegű feladat elmentve
+
+            if (save) {
+                if (text.trim().length === 0) {
+                    alert("Add meg a feladat szövegét!");
+                    return;
+                }
+
+                if (userTasks.includes(text)) {
+                    alert("Már van ilyen feladatod!");
+                    return;
+                }
+            }
+
+            // Feladat beszúrása a weboldalon található táblázatba
+
+            const row = document.createElement("tr");
+
+            const column1 = document.createElement("td");
+            column1.innerText = text;
+
+            const column2 = document.createElement("td");
+            const deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "X";
+            deleteBtn.setAttribute("type", "button");
+            deleteBtn.setAttribute("onclick", "deleteTask(this)");
+            deleteBtn.classList.add("delete-btn");
+            column2.append(deleteBtn);
+
+            row.append(column1, column2);
+            tbody.append(row);
+
+            // Új feladat felvételekor módosítjuk a feladatokat tároló tömb tartalmát, majd ezt követően
+            // a frissített tömböt beleírjuk a LocalStorage-be egy JSON-stringként
+
+            if (save) {
+                userTasks.push(text);
+                localStorage.setItem("tasks", JSON.stringify(userTasks));
+            }
+
+            // Ekkor legalább 1 feladatunk már biztosan van, így megjeleníthetjük a "Feladataim" szakaszt
+            showTaskContainer();
+
+            document.getElementById("task-text").value = "";
+		}
+
+        // Egy függvény, amely kitörli a paraméterben megkapott "Törlés" gombhoz tartozó feladatot
+
+		function deleteTask(btn) {
+            const row = btn.parentNode.parentNode;
+            tbody.removeChild(row);
+
+            // Csak azokat a feladatokat tartjuk meg, amelyek szövege nem egyezik meg a törölt feladat
+            // szövegével (persze a LocalStorage-ban tárolt értéket is ennek megfelelően módosítjuk)
+
+            const taskText = row.children[0].innerText;         // a törlendő feladat szövege
+            userTasks = userTasks.filter(t => t !== taskText);
+            localStorage.setItem("tasks", JSON.stringify(userTasks));
+
+            // Ha a törlés után nem marad egy feladatunk se, elrejtjük a "Feladataim" szakaszt
+
+            if (userTasks.length === 0)
+                hideTaskContainer();
+		}
+
+        // Egy függvény, amely az összes elmentett feladatot törli
+
+		function deleteAllTasks() {
+            while (tbody.hasChildNodes()) {
+                tbody.removeChild(tbody.firstChild);
+            }
+
+            // Kiürítjuk a feladatokat tároló tömböt, valamint a LocalStorage-ból is töröljük a mentett feladatokat
+
+            userTasks = [];
+            localStorage.removeItem("tasks");
+
+            // Mivel egy feladatunk se marad, ezért a "Feladataim" szakaszt elrejtjük
+            hideTaskContainer();
+		}
+
+        // Az elmentett feladatok megjelenítésére szolgáló függvény meghívása
+        displayTasks();
+	</script>
+</body>
+</html>
