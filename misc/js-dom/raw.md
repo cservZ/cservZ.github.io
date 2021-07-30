@@ -181,8 +181,8 @@ Nézzünk egy példát! Figyeljük meg a konzolon, hogy az "eseménykezelők" fe
     function bubble() { console.log("Bubbling: " + this.tagName); }
 
     // A <p> és <strong> elemek megkeresése a DOM-fában
-    const p = document.getElementById("my-paragraph");      // külső elem
-    const strong = document.getElementById("my-strong");    // belső elem
+    const p = document.getElementById("my-paragraph");      // külső (beágyazó) elem
+    const strong = document.getElementById("my-strong");    // belső (beágyazott) elem
  
     // Kattintás eseményre vonatkozó eseménykezelők hozzárendelése a két elemhez
     p.addEventListener("click", capture, true);             // capturing
@@ -225,7 +225,7 @@ Az `append()` és `appendChild()` metódusok mindketten arra szolgálnak, hogy e
 >   const parent = document.getElementById("parent");       // a szülő objektum
 >   const newParagraph = document.createElement("p");       // az új elem létrehozása
 >   newParagraph.innerText = "Második bekezdés";
->   // az új elem beszúrása a szülő objektum második (1. indexű) gyereke elé
+>   // Az új elem beszúrása a szülő objektum második (1. indexű) gyereke elé
 >   parent.insertBefore(newParagraph, parent.children[1]);
 > </script>
 > ```
@@ -375,7 +375,7 @@ function addTask() {
 
 #### 2.4.1. Egy adott gyerekobjektum törlése
 
-Ahhoz, hogy egy objektumot kitöröljünk a DOM-fából, szükségünk van a törlendő objektumra és annak szülőjére. A törléshez a szülő <span class="red">`removeChild()`</span> metódusának paramétereként adjuk meg a törlendő objektumot.
+Ahhoz, hogy egy objektumot kitöröljünk a DOM-fából, szükségünk lesz a törlendő objektumra és annak szülőjére. A törléshez a szülő <span class="red">`removeChild()`</span> metódusának paramétereként adjuk meg a törlendő objektumot.
 
 <span class="example">Feladat:</span> Tegyük működőképessé a táblázat soraiban megjelenő "Feladat törlése" gombokat!
 
@@ -470,7 +470,7 @@ A teljes, kikommentezett megoldás letölthető [ide kattintva](./files/dom-solu
 
 ### 2.6. A példaprojekt "okosabbá tétele"
 
-* Írjuk át az alkalmazást úgy, hogy a feladatokat [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)-ban tároljuk el és innen is töltjük be őket! A feladatok szövegeit egy tömbben tároljuk, és ezt a tömböt JSON-stringgé alakítva tároljuk el a LocalStorage-ban (mert a LocalStorage tömböket nem tud tárolni, csak stringeket)! Segítség: [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) és [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) metódusok.
+* Írjuk át az alkalmazást úgy, hogy a feladatokat [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)-ban tároljuk el és innen is töltjük be őket! A feladatok szövegeit egy tömbben tároljuk, és ezt a tömböt JSON-stringgé alakítva tároljuk el a LocalStorage-ban (mert a LocalStorage tömböket nem tud tárolni, csak stringeket)! Segítség: [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) és [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) metódusok.
 * Ha nincs elmentett feladatunk, akkor rejtsük el a "Feladataim" szakaszt a weboldalról (`display: none`)!
 * Egy új feladat hozzáadása előtt ellenőrizzük le, hogy kitöltötték-e a weboldalon található űrlapmezőt adattal! Amennyiben nem, írassunk ki hibaüzenetet!
 * Ellenőrizzük, hogy ne lehessen több azonos szövegű feladatot felvenni!
