@@ -159,7 +159,7 @@ Az `addEventListener()` metódus paraméterei sorban:
 
 <div class="bordered-box border-blue">
 
-<span class="blue">Caputring és bubbling</span>
+<span class="blue">Capturing és bubbling</span>
 
 Tegyük fel, hogy van egy HTML elemünk, ami egy másik HTML elembe van beágyazva! Mind a beágyazó elemhez, mind a beágyazott elemhez hozzárendelünk egy-egy eseménykezelőt ugyanarra az eseménytípusra - mondjuk a kattintásra. Ha a belső elemre kattintunk, akkor mindkét elem eseménykezelője meghívódik. Az `addEventListener()` metódus harmadik paraméterével szabályozhatjuk, hogy milyen sorrendben legyenek ezek meghívva.
 
@@ -203,16 +203,16 @@ Ha egy új elemet szeretnénk a DOM-fába beszúrni, akkor a következő lépés
 
 1. A <span class="red">`document.createElement(tagname)`</span> metódussal létrehozzuk a beszúrandó HTML elemet.
 1. Beállítjuk az újonnan létrehozott elem tartalmát, attribútumait és stílusát (opcionális lépés).
-1. Beszúrjuk az elemet a DOM-fába a szülő objektum <span class="red">`append()`</span> vagy <span class="red">`appendChild()`</span> metódusával.
+1. Beszúrjuk az elemet a DOM-fába a szülőobjektum <span class="red">`append()`</span> vagy <span class="red">`appendChild()`</span> metódusával.
 
 Az `append()` és `appendChild()` metódusok mindketten arra szolgálnak, hogy egy DOM-beli objektumhoz gyerekobjektumot fűzzünk hozzá. Két fontos különbség a két metódus között:
 
 * Az `append()` egyszerre több gyereket is hozzáfűzhet egy objektumhoz, míg az `appendChild()` csak egyet.
 * Az `append()` Node-okat és stringeket egyaránt hozzáfűzhet egy objektumhoz gyerekként, míg az `appendChild()` kizárólag Node-okkal működik.
 
-> **Megjegyzés:** Az `append()` és `appendChild()` metódusok mindig a szülő elem <span class="orange">legutolsó</span> gyerekeként szúrják be az új objektumot a DOM-fába. Ha a szülő egy tetszőleges indexű gyerekeként szeretnénk beszúrni az elemet a fába, akkor használjuk a szülő **`insertBefore()`** metódusát.
+> **Megjegyzés:** Az `append()` és `appendChild()` metódusok mindig a szülőelem <span class="orange">legutolsó</span> gyerekeként szúrják be az új objektumot a DOM-fába. Ha a szülő egy <span class="orange">tetszőleges indexű</span> gyerekeként szeretnénk beszúrni az elemet a fába, akkor használjuk a szülő <span class="red">`insertBefore()`</span> metódusát.
 >
-> A metódus két paramétert vár: rendre a beszúrandó objektumot, és a szülő elem azon gyerekét, ami <span class="orange">elé</span> be fogjuk szúrni az új elemet. A szülő elemnek felhasználhatjuk a `children` property-jét, ami visszaadja az elem összes gyerekét egy indexelhető kollekcióban.
+> A metódus két paramétert vár: rendre a beszúrandó objektumot, és a szülőelem azon gyerekét, ami <span class="orange">elé</span> be fogjuk szúrni az új elemet. A szülőelemnek felhasználhatjuk a `children` property-jét, ami visszaadja az elem összes gyerekét egy indexelhető kollekcióban.
 >
 > Nézzünk egy példát! Szúrjunk be az alábbi weboldalra egy "Második bekezdés" feliratú `<p>` objektumot, a "Harmadik bekezdés" feliratú `<p>` elem elé!
 >
@@ -222,10 +222,10 @@ Az `append()` és `appendChild()` metódusok mindketten arra szolgálnak, hogy e
 >   <p>Harmadik bekezdés</p>
 > </div>
 > <script>
->   const parent = document.getElementById("parent");       // a szülő objektum
+>   const parent = document.getElementById("parent");       // a szülőobjektum
 >   const newParagraph = document.createElement("p");       // az új elem létrehozása
 >   newParagraph.innerText = "Második bekezdés";
->   // Az új elem beszúrása a szülő objektum második (1. indexű) gyereke elé
+>   // Az új elem beszúrása a szülőobjektum második (1. indexű) gyereke elé
 >   parent.insertBefore(newParagraph, parent.children[1]);
 > </script>
 > ```
@@ -293,7 +293,7 @@ tbody.append(row);
 
 Írjuk bele az első táblázatcellába az `id="task-text"` attribútummal rendelkező beviteli mezőbe írt szöveget!
 
-* Egy beviteli mezőbe írt értéket a mező **`value`** property-jével kérhetünk le.
+* Egy <span class="red">beviteli mezőbe írt érték lekérdezése</span> a mező <span class="red">`value`</span> property-jével történik.
 * Egy HTML <span class="red">objektum szöveges tartalmának beállítása</span> az <span class="red">`innerText`</span> vagy <span class="red">`innerHTML`</span> property-vel lehetséges. A különbség a két property között, hogy az `innerHTML` értékeként megadott szöveg HTML-ként lesz értelmezve (ezért itt használhatók a szokásos HTML tagek), míg az `innerText` értéke minden esetben egyszerű szövegként jelenik meg (nem lesz HTML-ként értelmezve).
 
 ```js
@@ -310,7 +310,7 @@ Ahhoz, hogy a létrehozott gomb megfelelően működjön, hozzáadunk néhány a
 * A `setAttribute()` segítségével adjunk a gombnak egy `type="button"` attribútum-érték párt!
 * A `setAttribute()` segítségével adjunk a gombnak egy `onclick="deleteTask(this)"` attribútum-érték párt, amivel hozzárendeljük a gombhoz a `deleteTask()` eseménykezelő függvényt!
 
-Rendeljük hozzá a gombhoz a `class="delete-btn"` attribútumot, hogy ugyanúgy legyen formázva, mint a többi törlés gomb! Ehhez használjuk az elem <span class="red">`classList`</span> property-jét, amivel lekérhetjük az összes olyan class nevét, amivel az elem rendelkezik. A `classList`-nek az **`add()`** metódusával hozzáadjuk a gombhoz a `delete-btn` class-értéket. 
+Rendeljük hozzá a gombhoz a `class="delete-btn"` attribútumot, hogy ugyanúgy legyen formázva, mint a többi törlés gomb! Ehhez használjuk az elem <span class="red">`classList`</span> property-jét, amivel lekérhetjük az összes olyan class nevét, amivel az elem rendelkezik. A `classList`-nek az `add()` metódusával hozzáadjuk a gombhoz a `delete-btn` class-értéket. 
 
 
 ```js
@@ -420,7 +420,7 @@ function deleteTask(btn) {
 
 #### 2.4.2. Összes gyerekobjektum törlése
 
-<span class="example">Feladat:</span> Tegyük működőképessé a weboldalon található "Összes feladat törlése" gobmot!
+<span class="example">Feladat:</span> Tegyük működőképessé a weboldalon található "Összes feladat törlése" gombot!
 
 <span class="example">A megoldás menete:</span>
 
@@ -436,7 +436,7 @@ A gombra kattintva tehát a <span class="green">`deleteAllTasks()` eseménykezel
 
 JavaScriptben nincs olyan explicit DOM-metódusunk, amely egy objektum összes gyerekét kitörölné, ezért egy kicsit másképp oldjuk meg a dolgokat:
 
-* A szülő objektumnak (aminek a gyerek objektumait törölni akarjuk) a **`hasChildNodes()`** metódusával lekérdezzük, hogy vannak-e gyerekei.
+* A szülőobjektumnak (aminek a gyerekobjektumait törölni akarjuk) a `hasChildNodes()` metódusával lekérdezzük, hogy vannak-e gyerekei.
 * Amíg vannak a szülőnek gyerekei, addig a `removeChild()` metódussal mindig kitörölünk egy gyereket.
 
 <div class="bordered-box border-green">
@@ -448,7 +448,7 @@ JavaScriptben nincs olyan explicit DOM-metódusunk, amely egy objektum összes g
 
 <span class="example">A megoldás elkészítése:</span>
 
-Teljesen mindegy, hogy mikor melyik gyereket töröljük ki, hiszen végül minden gyereket ki fogunk törölni. A példánkban én mindig a `<tbody>` legelső gyerekét törlöm, amit a szülő **`firstChild`** property-jével érhetünk el.
+Teljesen mindegy, hogy mikor melyik gyereket töröljük ki, hiszen végül minden gyereket ki fogunk törölni. A példánkban én mindig a `<tbody>` legelső gyerekét törlöm, amit a szülő `firstChild` property-jével érhetünk el.
 
 Tehát a `deleteAllTasks()` függvény <span class="green">végleges verzió</span>ja a következőképpen néz ki:
 
@@ -470,7 +470,7 @@ A teljes, kikommentezett megoldás letölthető [ide kattintva](./files/dom-solu
 
 ### 2.6. A példaprojekt "okosabbá tétele"
 
-* Írjuk át az alkalmazást úgy, hogy a feladatokat [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)-ban tároljuk el és innen is töltjük be őket! A feladatok szövegeit egy tömbben tároljuk, és ezt a tömböt JSON-stringgé alakítva tároljuk el a LocalStorage-ban (mert a LocalStorage tömböket nem tud tárolni, csak stringeket)! Segítség: [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) és [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) metódusok.
+* Írjuk át az alkalmazást úgy, hogy a feladatokat [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)-ban tároljuk el és innen is töltsük be őket! A feladatok szövegeit egy tömbben tároljuk, és ezt a tömböt JSON-stringgé alakítva tároljuk el a LocalStorage-ban (mert a LocalStorage tömböket nem tud tárolni, csak stringeket)! Segítség: [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) és [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) metódusok.
 * Ha nincs elmentett feladatunk, akkor rejtsük el a "Feladataim" szakaszt a weboldalról (`display: none`)!
 * Egy új feladat hozzáadása előtt ellenőrizzük le, hogy kitöltötték-e a weboldalon található űrlapmezőt adattal! Amennyiben nem, írassunk ki hibaüzenetet!
 * Ellenőrizzük, hogy ne lehessen több azonos szövegű feladatot felvenni!
