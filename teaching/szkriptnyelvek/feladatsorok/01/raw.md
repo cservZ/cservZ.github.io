@@ -66,7 +66,7 @@ Negativ szambol nem vonunk negyzetgyokot!
 
 ### 5. feladat: Páros számok összege (3 pont)
 
-Írj Python szkriptet, amely beolvas a standard bemenetről két egész számot, rendre egy zárt intervallum alsó és felső végpontját! A program írja ki a konzolra az intervallumban található páros számok összegét! A beolvasott alsó és felső végpontok még részei az intervallumnak. Hibakezeléssel nem kell foglalkoznod.
+Írj Python szkriptet, amely beolvas a standard bemenetről két egész számot: rendre egy zárt intervallum alsó és felső végpontját! A program írja ki a konzolra az intervallumban található páros számok összegét! A beolvasott alsó és felső végpontok még részei az intervallumnak. Hibakezeléssel nem kell foglalkoznod.
 
 <span class="example">Példa:</span>
 
@@ -105,7 +105,7 @@ A(z) 6. szeken ulo hallgato kapja a bonusz kerdest.
 
 ### 7. feladat: Príma nyereményjáték (5 pont)
 
-Jónás, a csokigyáros úgy döntött, hogy nyereményjátékot hirdet: néhány legyártott csokoládéba egy aranyszelvényt helyez, és a szelvények szerencsés megtalálói egy különleges látogatást tehetnek a csokigyárba. Minden csokihoz tartozik egy gyártási sorszám. Jónás azokba a csokikba tesz aranyszelvényt, amelyek gyártási sorszáma prímszám.
+Jónás, a csokigyáros úgy döntött, hogy nyereményjátékot hirdet: néhány legyártott csokoládéba egy aranyszelvényt helyez, és a szelvények szerencsés megtalálói egy különleges látogatást tehetnek a csokigyárban. Minden csokihoz tartozik egy gyártási sorszám, és Jónás azokba a csokikba tesz aranyszelvényt, amelyek gyártási sorszáma prímszám.
 
 Írj Python szkriptet, amely beolvassa a konzolról egy csoki gyártási sorszámát (egész szám)! Ha a beolvasott szám prímszám, akkor írasd ki a `Gratulalok, nyertel!`, ellenkező esetben pedig a `Sajnos nem nyert!` szöveget a konzolra!
 
@@ -128,7 +128,7 @@ Sajnos nem nyert!
 
 ### 8. feladat: Gyakorlati jegy (3 pont)
 
-A szkriptnyelvek gyakorlat osztályozása a következő ponthatárok alapján történik:
+A Szkriptnyelvek gyakorlat osztályozása a következő ponthatárok alapján történik:
 
 |  Ponthatárok  |   Érdemjegy   |
 |:-------------:|:-------------:|
@@ -309,9 +309,9 @@ A ket idopont kozott 2 ora es 0 perc telt el.
 
 ### 15. feladat: Menekülés (5 pont)
 
-Józsi a koronavírus-járvány miatti kijárási korlátozások idején egy házibuliban vesz részt. Sajnos ezt a rendőrök is megtudták, és rajtaütöttek az önfeledten bulizókon. A házibuli résztvevői az ereszcsatornán keresztül próbálnak elmenekülni a rend éber őrei elől.
+Józsi a koronavírus-járvány miatti kijárási korlátozások idején egy házibuliban vesz részt. Sajnos ezt a rendőrök is megtudták, és rajtaütöttek az önfeledten bulizókon, ezért a házibuli résztvevői pánikolva próbálnak elmenekülni a rend éber őrei elől.
 
-Írj Python szkriptet, amely beolvas két egész számot: rendre a házibuliban résztvevők számát és a rendőrök számát! A rendőrök úgy kapják el a bulizókat, hogy minden rendőr 1-gyel többet kap el, mint az előző - tehát az első rendőr 1, a második rendőr 2, a harmadik rendőr 3 bulizót kap el és így tovább.
+Írj Python szkriptet, amely beolvas két egész számot: rendre a házibuliban résztvevők számát és a rendőrök számát! A rendőrök úgy kapják el a bulizókat, hogy az első rendőr elkap 1 bulizót, majd minden további rendőr 1-gyel többet kap el, mint az előző  (tehát az első rendőr 1, a második rendőr 2, a harmadik rendőr 3 bulizót kap el és így tovább).
 
 * Ha senkit nem kaptak el a rendőrök, akkor írasd ki a `Minden bulizo megmenekult!` szöveget a konzolra!
 * Ha mindenkit elkaptak a rendőrök, akkor az `Ajaj, mindenkit elkaptak!` szöveget írasd ki!
