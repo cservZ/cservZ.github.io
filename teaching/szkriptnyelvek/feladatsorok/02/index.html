@@ -1,0 +1,429 @@
+<!DOCTYPE html><html><head>
+      <title>Szkriptnyelvek - 2. feladatsor</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="../../../../assets/img/icon.png">
+      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="szkriptnyelvek-2-gyakorl%C3%B3-feladatsor">Szkriptnyelvek - 2. gyakorl&#xF3; feladatsor</h1>
+
+<h2 class="mume-header" id="python-f%C3%BCggv%C3%A9nyek-stringek">Python f&#xFC;ggv&#xE9;nyek, stringek</h2>
+
+<h3 class="mume-header" id="1-feladat-abszol%C3%BAt%C3%A9rt%C3%A9k-maximum-2-pont">1. feladat: Abszol&#xFA;t&#xE9;rt&#xE9;k-maximum (2 pont)</h3>
+
+<p>&#xCD;rj egy <code>abs_max</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t eg&#xE9;sz sz&#xE1;mot v&#xE1;r param&#xE9;ter&#xFC;l, &#xE9;s visszat&#xE9;r ezek abszol&#xFA;t&#xE9;rt&#xE9;k-maximum&#xE1;val! Teh&#xE1;t vessz&#xFC;k mindk&#xE9;t sz&#xE1;m abszol&#xFA;t&#xE9;rt&#xE9;k&#xE9;t, &#xE9;s ezek k&#xF6;z&#xFC;l visszaadjuk a nagyobbat.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 12, -15
+<b>Return:</b> 15
+</pre>
+<h3 class="mume-header" id="2-feladat-fibonacci-3-pont">2. feladat: Fibonacci (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>fibo</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy <code>n</code> nemnegat&#xED;v eg&#xE9;sz sz&#xE1;mot kap param&#xE9;ter&#xFC;l, &#xE9;s visszat&#xE9;r a Fibonacci-sorozat <code>n</code>-edik tagj&#xE1;val! Nagyobb <code>n</code>-&#xE9;rt&#xE9;kek eset&#xE9;n iterat&#xED;v vagy rekurz&#xED;v megold&#xE1;st &#xE9;rdemes haszn&#xE1;lni?</p>
+<div class="bordered-box border-green">
+    <span class="green">Eml&#xE9;keztet&#x151;:</span> A Fibonacci-sorozat 0. eleme 0, 1. eleme 1, a t&#xF6;bbi elemet pedig mindig az el&#x151;z&#x151; k&#xE9;t elem &#xF6;sszegek&#xE9;nt kapjuk meg. A Fibonacci-sorozat els&#x151; n&#xE9;h&#xE1;ny eleme (a nulladik elemt&#x151;l kezdve): 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 stb.
+</div>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 10
+<b>Return:</b> 55
+
+<b>Input:</b> 42
+<b>Return:</b> 267914296
+</pre>
+<h3 class="mume-header" id="3-feladat-kuba-2-pont">3. feladat: Kuba (2 pont)</h3>
+
+<p>Kuba egy Discord szerveren moder&#xE1;tor. A szabadidej&#xE9;t sokszor azzal t&#xF6;lti, hogy a szerver bizonyos tagjainak a felhaszn&#xE1;l&#xF3;nev&#xE9;t &#xE1;t&#xED;rja a k&#xF6;vetkez&#x151;k&#xE9;ppen:</p>
+<ul>
+<li>a felhaszn&#xE1;l&#xF3;n&#xE9;v v&#xE9;g&#xE9;re egy <code>.</code> (pont) karaktert tesz, amennyiben az eredetileg nem v&#xE9;gz&#x151;d&#xF6;tt pontra</li>
+<li>ellenkez&#x151; esetben, pont karakterre v&#xE9;gz&#x151;d&#x151; felhaszn&#xE1;l&#xF3;nevek eset&#xE9;n elt&#xE1;vol&#xED;tja a n&#xE9;v v&#xE9;g&#xE9;r&#x151;l a pontot.</li>
+</ul>
+<p>&#xCD;rj egy <code>kuba</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy felhaszn&#xE1;l&#xF3;nevet (string) kap param&#xE9;ter&#xFC;l, elv&#xE9;gzi a fenti szab&#xE1;lyok alapj&#xE1;n a n&#xE9;v &#xE1;talak&#xED;t&#xE1;s&#xE1;t, majd visszat&#xE9;r az &#xED;gy kapott eredm&#xE9;nnyel!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Korte12&apos;
+<b>Return:</b> &apos;Korte12.&apos;
+
+<b>Input:</b> &apos;Tamas.&apos;
+<b>Return:</b> &apos;Tamas&apos;
+</pre>
+<h3 class="mume-header" id="4-feladat-discord-emote-ok-3-pont">4. feladat: Discord emote-ok (3 pont)</h3>
+
+<p>Discordon lehet&#x151;s&#xE9;g&#xFC;nk van k&#xFC;l&#xF6;nf&#xE9;le emote-okkal reag&#xE1;lni &#xFC;zenetekre. Az emote-ok k&#xF6;z&#xF6;tt megtal&#xE1;lhat&#xF3;k p&#xE9;ld&#xE1;ul az angol &#xE1;b&#xE9;c&#xE9; bet&#x171;i A-t&#xF3;l Z-ig. M&#xE1;rk ezeknek az emote-oknak a haszn&#xE1;lat&#xE1;val szeretne kirakni egy sz&#xF3;t, viszont fontos tudni, hogy a Discord minden emote-ot csak egyszer enged felhaszn&#xE1;lni!</p>
+<p>&#xCD;rj egy <code>kirakhato</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egyetlen sz&#xF3;t (string) kap param&#xE9;ter&#xFC;l, &#xE9;s visszaadja, hogy az kirakhat&#xF3;-e &#xFA;gy, hogy minden bet&#x171;t csak egyszer haszn&#xE1;lhatunk fel! A kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztess&#xFC;k meg!</p>
+<div class="bordered-box border-green">
+    <span class="green">Tipp:</span> &#xC9;rdemes el&#x151;sz&#xF6;r csupa kisbet&#x171;ss&#xE9; (vagy csupa nagybet&#x171;ss&#xE9;) alak&#xED;tani a sz&#xF3;t, &#xED;gy p&#xE9;ld&#xE1;ul a m&#xE1;sodik p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; <code>Alma</code> sz&#xF3;ban ism&#xE9;tl&#x151;d&#x151; bet&#x171;k&#xE9;nt kezelj&#xFC;k az <code>a</code> bet&#x171;t.
+</div>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Szilva&apos;
+<b>Return:</b> True
+
+<b>Input:</b> &apos;Alma&apos;
+<b>Return:</b> False
+
+<b>Input:</b> &apos;Gorogdinnye&apos;
+<b>Return:</b> False
+</pre>
+<h3 class="mume-header" id="5-feladat-armstrong-sz%C3%A1m-4-pont">5. feladat: Armstrong-sz&#xE1;m (4 pont)</h3>
+
+<p>A matematik&#xE1;ban egy <code>n</code>-jegy&#x171; sz&#xE1;mot <a href="https://hu.wikipedia.org/wiki/Armstrong-sz%C3%A1m">Armstrong-sz&#xE1;m</a>nak nevez&#xFC;nk, ha minden sz&#xE1;mjegy&#xE9;t az <code>n</code>-edik hatv&#xE1;nyra emelve &#xE9;s &#xF6;sszeadva az eredeti sz&#xE1;mot kapjuk. P&#xE9;ld&#xE1;ul a 153 egy Armstrong-sz&#xE1;m, hiszen <img src="https://latex.codecogs.com/gif.latex?153 = 1^3 + 5^3 + 3^3" class="inline">.</p>
+<p>&#xCD;rj egy <code>armstrong_szam</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely garant&#xE1;ltan egy nemnegat&#xED;v eg&#xE9;sz sz&#xE1;mot kap param&#xE9;ter&#xFC;l, &#xE9;s visszaadja, hogy a param&#xE9;terben kapott sz&#xE1;m Armstrong-sz&#xE1;m vagy sem!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 153
+<b>Return:</b> True
+
+<b>Input:</b> 1999
+<b>Return:</b> False
+
+<b>Input:</b> 8208
+<b>Return:</b> True
+</pre>
+<h3 class="mume-header" id="6-feladat-jelsz%C3%B3-er%C5%91ss%C3%A9g-m%C3%A9r%C5%91-5-pont">6. feladat: Jelsz&#xF3;-er&#x151;ss&#xE9;g m&#xE9;r&#x151; (5 pont)</h3>
+
+<p>Elliot egy kiberbiztons&#xE1;gi c&#xE9;gn&#xE9;l dolgozik. Egyik nap a felettese egy jelsz&#xF3;-er&#x151;ss&#xE9;g m&#xE9;r&#x151; szkript &#xED;r&#xE1;s&#xE1;val b&#xED;zta meg. K&#xE9;sz&#xED;ts egy <code>jelszo_erosseg</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy jelsz&#xF3;t (string) kap param&#xE9;ter&#xFC;l, &#xE9;s visszaadja, hogy a jelsz&#xF3; mennyire er&#x151;s! Szab&#xE1;lyok a jelsz&#xF3;-er&#x151;ss&#xE9;g meghat&#xE1;roz&#xE1;s&#xE1;ra:</p>
+<ul>
+<li>Alapb&#xF3;l minden jelsz&#xF3; 1 er&#x151;s</li>
+<li>Legal&#xE1;bb 5 karakter hossz&#xFA; jelsz&#xF3;: +1 er&#x151;ss&#xE9;g</li>
+<li>Legal&#xE1;bb 8 karakter hossz&#xFA; jelsz&#xF3;: +2 er&#x151;ss&#xE9;g</li>
+<li>A jelsz&#xF3;ban szerepl&#x151; minden alulvon&#xE1;s, k&#xF6;t&#x151;jel vagy pont karakter 2-vel n&#xF6;veli a jelsz&#xF3; er&#x151;ss&#xE9;g&#xE9;t</li>
+<li>Ha a jelsz&#xF3; tartalmazza a <code>jelszo</code> vagy az <code>123</code> r&#xE9;szsz&#xF6;veget, akkor automatikusan 0 er&#x151;s</li>
+<li>Ha a jelsz&#xF3; 0 karakter hossz&#xFA;, akkor szint&#xE9;n automatikusan 0 er&#x151;s.</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;hazi_macska_4_life&apos;
+<b>Return:</b> 10
+
+<b>Input:</b> &apos;ez1feltorhetetlenjelszo&apos;
+<b>Return:</b> 0
+</pre>
+<h3 class="mume-header" id="7-feladat-mag%C3%A1nhangz%C3%B3-elt%C3%A1vol%C3%ADt%C3%A1s-3-pont">7. feladat: Mag&#xE1;nhangz&#xF3; elt&#xE1;vol&#xED;t&#xE1;s (3 pont)</h3>
+
+<p>Csabi a szabadidej&#xE9;ben sokat posztol Twitteren, viszont a posztok hossz&#xFA;s&#xE1;g&#xE1;ra vonatkoz&#xF3; 280-as karakterlimitbe gyakran nem f&#xE9;r bele. Egyik nap kital&#xE1;lta, hogy ha a posztjaib&#xF3;l elhagyja a mag&#xE1;nhangz&#xF3;kat, akkor m&#xE1;r kev&#xE9;sb&#xE9; gy&#x171;lik meg a baja a karakterlimittel.</p>
+<p>&#xCD;rj egy <code>maganhangzot_torol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget v&#xE1;r param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny t&#xE1;vol&#xED;tsa el a sz&#xF6;vegben tal&#xE1;lhat&#xF3; &#xF6;sszes mag&#xE1;nhangz&#xF3;t, majd t&#xE9;rjen vissza a mag&#xE1;nhangz&#xF3;k n&#xE9;lk&#xFC;li sz&#xF6;veggel! A param&#xE9;ter&#xFC;l kapott sz&#xF6;vegben &#xE9;kezetes bet&#x171;k garant&#xE1;ltan nem szerepelnek.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Sziasztok! Auchanos zsemlet cserelnek kedd esti Prog2 gyakra. Valaki???&apos;
+<b>Return:</b> &apos;Szsztk! chns zsmlt csrlnk kdd st Prg2 gykr. Vlk???&apos;
+</pre>
+<h3 class="mume-header" id="8-feladat-sz%C3%B6veg-titkos%C3%ADt%C3%A1sa-3-pont">8. feladat: Sz&#xF6;veg titkos&#xED;t&#xE1;sa (3 pont)</h3>
+
+<p>Robi &#xE9;s Misi j&#xF3; bar&#xE1;tok, s&#x151;t t&#xF6;rt&#xE9;netesen ugyanann&#xE1;l a c&#xE9;gn&#xE9;l munkat&#xE1;rsak. Kital&#xE1;lt&#xE1;k, hogy az&#xE9;rt, hogy a f&#x151;n&#xF6;k&#xFC;k ne &#xE9;rthesse meg az egym&#xE1;snak &#xED;rt &#xFC;zeneteiket, egy egyszer&#x171; titkos&#xED;t&#xE1;st haszn&#xE1;lnak. A k&#xFC;ld&#x151; k&#xF3;dolja az &#xFC;zenetet az elk&#xFC;ld&#xE9;s el&#x151;tt, a fogad&#xF3; pedig visszafejti azt.</p>
+<p>&#xCD;rj egy <code>kodol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely 3 param&#xE9;tert kap: rendre a titkos&#xED;tand&#xF3; &#xFC;zenetet, egy <code>n</code> pozit&#xED;v eg&#xE9;sz sz&#xE1;mot, valamint egy <code>c</code> karaktert. A f&#xFC;ggv&#xE9;ny alak&#xED;tsa &#xE1;t az &#xFC;zenetet &#xFA;gy, hogy az &#xFC;zenet minden bet&#x171;je ut&#xE1;n <code>n</code> darab <code>c</code> karaktert tegyen! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke a k&#xF3;dolt &#xFC;zenet.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Pizza delben?&apos;, 3, &apos;x&apos;
+<b>Return:</b> &apos;Pxxxixxxzxxxzxxxaxxx xxxdxxxexxxlxxxbxxxexxxnxxx?xxx&apos;
+</pre>
+<h3 class="mume-header" id="9-feladat-titkos%C3%ADtott-sz%C3%B6veg-visszafejt%C3%A9se-2-pont">9. feladat: Titkos&#xED;tott sz&#xF6;veg visszafejt&#xE9;se (2 pont)</h3>
+
+<p>Term&#xE9;szetesen Robi &#xE9;s Misi kommunik&#xE1;ci&#xF3;j&#xE1;hoz fontos, hogy a k&#xE9;t koll&#xE9;ga vissza tudja fejteni egym&#xE1;s k&#xF3;dolt &#xFC;zeneteit.</p>
+<p>&#xCD;rj egy <code>dekodol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely 2 param&#xE9;tert kap: rendre a k&#xF3;dolt sz&#xF6;veget &#xE9;s egy <code>n</code> pozit&#xED;v eg&#xE9;sz sz&#xE1;mot! A sz&#xF6;veget &#xFA;gy tudjuk dek&#xF3;dolni, hogy a sz&#xF6;veg els&#x151; karakter&#xE9;t&#x151;l indulunk, mindig kihagyunk <code>n</code> darab karaktert, &#xE9;s a nem kihagyott karaktereket &#xF6;sszeolvassuk. A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke a dek&#xF3;dolt sz&#xF6;veg.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Pxxxixxxzxxxzxxxaxxx xxxdxxxexxxlxxxbxxxexxxnxxx?xxx&apos;, 3
+<b>Return:</b> &apos;Pizza delben?&apos;
+</pre>
+<h3 class="mume-header" id="10-feladat-elmozdul%C3%A1s-5-pont">10. feladat: Elmozdul&#xE1;s (5 pont)</h3>
+
+<p>&#xCD;rj egy <code>elmozdulas</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy &#xFA;tvonalat elk&#xF3;dol&#xF3; sz&#xF6;veget kap param&#xE9;ter&#xFC;l! A sz&#xF6;vegben el&#x151;fordul&#xF3; bet&#x171;k &#xE9;s jelent&#xE9;s&#xFC;k: <code>F</code> (1 l&#xE9;p&#xE9;st megy&#xFC;nk felfel&#xE9;), <code>L</code> (1 l&#xE9;p&#xE9;st megy&#xFC;nk lefel&#xE9;),  <code>J</code> (1 l&#xE9;p&#xE9;st megy&#xFC;nk jobbra), <code>B</code> (1 l&#xE9;p&#xE9;st megy&#xFC;nk balra).</p>
+<p>A f&#xFC;ggv&#xE9;ny adja vissza a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban azt, hogy a kiindul&#xF3; poz&#xED;ci&#xF3;nkhoz k&#xE9;pest, az &#xFA;tvonal k&#xF6;vet&#xE9;s&#xE9;vel mennyit ment&#xFC;nk a v&#xED;zszintes, illetve f&#xFC;gg&#x151;leges ir&#xE1;nyba! Ha az &#xFA;tvonal k&#xF6;vet&#xE9;s&#xE9;vel a kezd&#x151;poz&#xED;ci&#xF3;ba &#xE9;r&#xFC;nk vissza, akkor a f&#xFC;ggv&#xE9;ny a <code>Nem mentunk sehova</code> sz&#xF6;veggel t&#xE9;rjen vissza!</p>
+<p>P&#xE9;ld&#xE1;ul, ha az &#xFA;tvonalunk a <code>JBBFB</code>, akkor 1 l&#xE9;p&#xE9;st ment&#xFC;nk jobbra, majd 2-t balra, 1-et fel &#xE9;s v&#xE9;g&#xFC;l 1-et balra. &#xCD;gy az eredeti poz&#xED;ci&#xF3;nkhoz k&#xE9;pest 2 l&#xE9;p&#xE9;ssel ker&#xFC;lt&#xFC;nk balra &#xE9;s 1 l&#xE9;p&#xE9;ssel ker&#xFC;lt&#xFC;nk feljebb.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;JJFBFFFFFFBBBL&apos;
+<b>Return:</b> &apos;2 lepes balra, 6 lepes fel&apos;
+
+<b>Input:</b> &apos;FBLLLJLLJ&apos;
+<b>Return:</b> &apos;1 lepes jobbra, 4 lepes le&apos;
+
+<b>Input:</b> &apos;FFF&apos;
+<b>Return:</b> &apos;3 lepes fel&apos;
+
+<b>Input:</b> &apos;FFLLBBJJ&apos;
+<b>Return:</b> &apos;Nem mentunk sehova&apos;
+</pre>
+<h3 class="mume-header" id="11-feladat-palindrom-5-pont">11. feladat: Palindrom (5 pont)</h3>
+
+<p>A <a href="https://hu.wikipedia.org/wiki/Palindrom">palindrom</a> egy olyan sz&#xF3; vagy sz&#xF3;kapcsolat, amely visszafel&#xE9; olvasva is ugyanaz. P&#xE9;ld&#xE1;ul az &quot;indul a g&#xF6;r&#xF6;g aludni&quot; egy h&#xED;res p&#xE9;ld&#xE1;ja a palindromoknak.</p>
+<p>&#xCD;rj egy <code>palindrom</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l &#xE9;s visszaadja, hogy a param&#xE9;terben kapott sz&#xF6;veg palindrom-e vagy sem!</p>
+<ul>
+<li>El&#x151;sz&#xF6;r alak&#xED;tsd csupa kisbet&#x171;ss&#xE9; a param&#xE9;terben kapott sz&#xF6;veget!</li>
+<li>Ezt k&#xF6;vet&#x151;en t&#xE1;vol&#xED;tsd el a sz&#xF6;vegb&#x151;l az &#xF6;sszes sz&#xF3;k&#xF6;zt &#xE9;s &#xED;r&#xE1;sjelet!</li>
+<li>V&#xE9;g&#xFC;l vizsg&#xE1;ld meg, hogy az &#xED;gy kapott sz&#xF6;veg megegyezik-e a megford&#xED;tottj&#xE1;val!</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Indul a gorog aludni.&apos;
+<b>Return:</b> True
+
+<b>Input:</b> &apos;kecske&apos;
+<b>Return:</b> False
+</pre>
+<h3 class="mume-header" id="12-feladat-palindromsz%C3%A1m-3-pont">12. feladat: Palindromsz&#xE1;m (3 pont)</h3>
+
+<p>Az el&#x151;z&#x151; feladatban szerepl&#x151; defin&#xED;ci&#xF3; alapj&#xE1;n k&#xF6;nnyed&#xE9;n kital&#xE1;lhat&#xF3;, hogy mik a <a href="https://hu.wikipedia.org/wiki/Palindromsz%C3%A1mok">palindromsz&#xE1;mok</a>: olyan sz&#xE1;mok, amelyek sz&#xE1;mjegyeit visszafel&#xE9; olvasva az eredeti sz&#xE1;mot kapjuk.</p>
+<p>&#xCD;rj egy <code>palindromszam</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely garant&#xE1;ltan egy pozit&#xED;v eg&#xE9;sz sz&#xE1;mot kap param&#xE9;ter&#xFC;l, &#xE9;s visszaadja, hogy ez a sz&#xE1;m palindromsz&#xE1;m-e vagy sem!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 123454321
+<b>Return:</b> True
+
+<b>Input:</b> 2020
+<b>Return:</b> False
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
