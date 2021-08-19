@@ -224,7 +224,7 @@ Ejnye, nullaval nem osztunk!
 ```
 
 
-### 12. Ösztöndíj (4 pont)
+### 12. feladat: Ösztöndíj (4 pont)
 
 Egy kisváros ösztöndíjat hirdet azoknak az egyetemi hallgatóknak, akiknek a tanulmányi átlaguk legalább négyes. Írj Python szkriptet, amely először beolvassa, hogy hány jegyet kapott az adott egyetemi hallgató a félévben (egész szám), majd ezt követően beolvas ennyi darab érdemjegyet (egész számok)! A szkript számítsa ki a jegyek átlagát, és döntse el, hogy a hallgató jogosult-e az ösztöndíjra vagy sem (tehát legalább 4.0 az átlaga vagy sem)!
 
