@@ -129,8 +129,8 @@ Csabi a szabadidejében sokat posztol Twitteren, viszont a posztok hosszúságá
 <span class="example">Példa:</span>
 
 <pre class="language-html">
-<b>Input:</b> 'Sziasztok! Auchanos zsemlet cserelnek kedd esti Prog2 gyakra. Valaki???'
-<b>Return:</b> 'Szsztk! chns zsmlt csrlnk kdd st Prg2 gykr. Vlk???'
+<b>Input:</b> 'Iden Java szigeten voltunk nyaralni. Nem is tudtam, hogy elneveztek egy helyet egy programozasi nyelvrol.'
+<b>Return:</b> 'dn Jv szgtn vltnk nyrln. Nm s tdtm, hgy lnvztk gy hlyt gy prgrmzs nylvrl.'
 </pre>
 
 
@@ -222,4 +222,54 @@ Az előző feladatban szereplő definíció alapján könnyedén kitalálható, 
 
 <b>Input:</b> 2020
 <b>Return:</b> False
+</pre>
+
+
+### 13. feladat: Idegesség detektor (5 pont)
+
+Zsófi az egyik egyetemi projektjében CooSpace kommenteket elemez. A feladat egy egyszerű algoritmus írása, amely a komment szövege alapján eldönti, hogy a kommentet író felhasználó ideges lehetett-e a kommentírás pillanatában.
+
+Írj egy `idegesseg_detektor` nevű függvényt, amely egy komment szövegét várja paraméterül! A függvény számolja meg, hogy összesen hány nagybetű és felkiáltójel (`!`) szerepel a komment szövegében, majd az így kapott eredményt ossza el a komment szövegének hosszával! Ha az így kapott arányszám 0.5-nél nagyobb, akkor a függvény logikai igaz, egyébként pedig logikai hamis értékkel térjen vissza!
+
+Kezeld le azt az esetet, amikor a komment szövege egyetlen karaktert sem tartalmaz! Ekkor a függvény `None` beépített értékkel térjen vissza!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'Hello! 3 darab AUCHANOS ZSEMLET cserelnek SURGOSEN kedd esti PROG2 gyakorlatra.'
+<b>Return:</b> False
+
+<b>Input:</b> 'KEDVES FERENC! Az EN VELEMENYEM pedig az, hogy a FELADAT KESZITOJE KIFOGYOTT az ERTELMES peldamondatokbol!!!!!!'
+<b>Return:</b> True
+
+<b>Input:</b> ''
+<b>Return:</b> None
+</pre>
+
+
+### 14. feladat: Mocking Spongebob (4 pont)
+
+Ki ne emlékezne az alábbi meme template-re és annak jellegzetes szövegformátumára? A feladat egy olyan függvény írása, amely egy megadott szöveget a képen látható formátumra alakít át.
+
+![Mocking Spongebob meme](./meme.png)
+
+Hozz létre egy `mocking_spongebob` nevű függvényt, amely egy szöveget kap paraméterül! A függvény alakítsa át a szöveget úgy, hogy a páros indexeken lévő karakterek kisbetűvel, míg a páratlan indexeken lévő karakterek nagybetűvel jelenjenek meg! A visszatérési érték az átalakított szöveg.
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'A Szkriptnyelvek meg konnyu targynak szamit.'
+<b>Return:</b> 'a sZkRiPtNyElVeK MeG KoNnYu tArGyNaK SzAmIt.'
+</pre>
+
+
+### 15. feladat: Szövegtömörítés (6 pont)
+
+Írj egy `tomorit` nevű függvényt, amely egy szöveget vár paraméterül! A függvény tömörítse a paraméterben kapott szöveget úgy, hogy az egymás után lévő ismétlődő karakterek helyett az ismétlődések számát és az ismétlődő karaktert jelenítse meg (így például az `aaabb` szövegből `3a2b` lesz)! A visszatérési érték a tömörített szöveg.
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'Hahooooo! Van itt valaki???'
+<b>Return:</b> 'Hah5o! Van i2t valaki3?'
 </pre>

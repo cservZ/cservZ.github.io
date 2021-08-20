@@ -350,8 +350,8 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>Csabi a szabadidej&#xE9;ben sokat posztol Twitteren, viszont a posztok hossz&#xFA;s&#xE1;g&#xE1;ra vonatkoz&#xF3; 280-as karakterlimitbe gyakran nem f&#xE9;r bele. Egyik nap kital&#xE1;lta, hogy ha a posztjaib&#xF3;l elhagyja a mag&#xE1;nhangz&#xF3;kat, akkor m&#xE1;r kev&#xE9;sb&#xE9; gy&#x171;lik meg a baja a karakterlimittel.</p>
 <p>&#xCD;rj egy <code>maganhangzot_torol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget v&#xE1;r param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny t&#xE1;vol&#xED;tsa el a sz&#xF6;vegben tal&#xE1;lhat&#xF3; &#xF6;sszes mag&#xE1;nhangz&#xF3;t, majd t&#xE9;rjen vissza a mag&#xE1;nhangz&#xF3;k n&#xE9;lk&#xFC;li sz&#xF6;veggel! A param&#xE9;ter&#xFC;l kapott sz&#xF6;vegben &#xE9;kezetes bet&#x171;k garant&#xE1;ltan nem szerepelnek.</p>
 <p><span class="example">P&#xE9;lda:</span></p>
-<pre class="language-html"><b>Input:</b> &apos;Sziasztok! Auchanos zsemlet cserelnek kedd esti Prog2 gyakra. Valaki???&apos;
-<b>Return:</b> &apos;Szsztk! chns zsmlt csrlnk kdd st Prg2 gykr. Vlk???&apos;
+<pre class="language-html"><b>Input:</b> &apos;Iden Java szigeten voltunk nyaralni. Nem is tudtam, hogy elneveztek egy helyet egy programozasi nyelvrol.&apos;
+<b>Return:</b> &apos;dn Jv szgtn vltnk nyrln. Nm s tdtm, hgy lnvztk gy hlyt gy prgrmzs nylvrl.&apos;
 </pre>
 <h3 class="mume-header" id="8-feladat-sz%C3%B6veg-titkos%C3%ADt%C3%A1sa-3-pont">8. feladat: Sz&#xF6;veg titkos&#xED;t&#xE1;sa (3 pont)</h3>
 
@@ -413,6 +413,37 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <b>Input:</b> 2020
 <b>Return:</b> False
+</pre>
+<h3 class="mume-header" id="13-feladat-idegess%C3%A9g-detektor-5-pont">13. feladat: Idegess&#xE9;g detektor (5 pont)</h3>
+
+<p>Zs&#xF3;fi az egyik egyetemi projektj&#xE9;ben CooSpace kommenteket elemez. A feladat egy egyszer&#x171; algoritmus &#xED;r&#xE1;sa, amely a komment sz&#xF6;vege alapj&#xE1;n eld&#xF6;nti, hogy a kommentet &#xED;r&#xF3; felhaszn&#xE1;l&#xF3; ideges lehetett-e a komment&#xED;r&#xE1;s pillanat&#xE1;ban.</p>
+<p>&#xCD;rj egy <code>idegesseg_detektor</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy komment sz&#xF6;veg&#xE9;t v&#xE1;rja param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny sz&#xE1;molja meg, hogy &#xF6;sszesen h&#xE1;ny nagybet&#x171; &#xE9;s felki&#xE1;lt&#xF3;jel (<code>!</code>) szerepel a komment sz&#xF6;veg&#xE9;ben, majd az &#xED;gy kapott eredm&#xE9;nyt ossza el a komment sz&#xF6;veg&#xE9;nek hossz&#xE1;val! Ha az &#xED;gy kapott ar&#xE1;nysz&#xE1;m 0.5-n&#xE9;l nagyobb, akkor a f&#xFC;ggv&#xE9;ny logikai igaz, egy&#xE9;bk&#xE9;nt pedig logikai hamis &#xE9;rt&#xE9;kkel t&#xE9;rjen vissza!</p>
+<p>Kezeld le azt az esetet, amikor a komment sz&#xF6;vege egyetlen karaktert sem tartalmaz! Ekkor a f&#xFC;ggv&#xE9;ny <code>None</code> be&#xE9;p&#xED;tett &#xE9;rt&#xE9;kkel t&#xE9;rjen vissza!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Hello! 3 darab AUCHANOS ZSEMLET cserelnek SURGOSEN kedd esti PROG2 gyakorlatra.&apos;
+<b>Return:</b> False
+
+<b>Input:</b> &apos;KEDVES FERENC! Az EN VELEMENYEM pedig az, hogy a FELADAT KESZITOJE KIFOGYOTT az ERTELMES peldamondatokbol!!!!!!&apos;
+<b>Return:</b> True
+
+<b>Input:</b> &apos;&apos;
+<b>Return:</b> None
+</pre>
+<h3 class="mume-header" id="14-feladat-mocking-spongebob-4-pont">14. feladat: Mocking Spongebob (4 pont)</h3>
+
+<p>Ki ne eml&#xE9;kezne az al&#xE1;bbi meme template-re &#xE9;s annak jellegzetes sz&#xF6;vegform&#xE1;tum&#xE1;ra? A feladat egy olyan f&#xFC;ggv&#xE9;ny &#xED;r&#xE1;sa, amely egy megadott sz&#xF6;veget a k&#xE9;pen l&#xE1;that&#xF3; form&#xE1;tumra alak&#xED;t &#xE1;t.</p>
+<p><img src="./meme.png" alt="Mocking Spongebob meme"></p>
+<p>Hozz l&#xE9;tre egy <code>mocking_spongebob</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny alak&#xED;tsa &#xE1;t a sz&#xF6;veget &#xFA;gy, hogy a p&#xE1;ros indexeken l&#xE9;v&#x151; karakterek kisbet&#x171;vel, m&#xED;g a p&#xE1;ratlan indexeken l&#xE9;v&#x151; karakterek nagybet&#x171;vel jelenjenek meg! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az &#xE1;talak&#xED;tott sz&#xF6;veg.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;A Szkriptnyelvek meg konnyu targynak szamit.&apos;
+<b>Return:</b> &apos;a sZkRiPtNyElVeK MeG KoNnYu tArGyNaK SzAmIt.&apos;
+</pre>
+<h3 class="mume-header" id="15-feladat-sz%C3%B6vegt%C3%B6m%C3%B6r%C3%ADt%C3%A9s-6-pont">15. feladat: Sz&#xF6;vegt&#xF6;m&#xF6;r&#xED;t&#xE9;s (6 pont)</h3>
+
+<p>&#xCD;rj egy <code>tomorit</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget v&#xE1;r param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny t&#xF6;m&#xF6;r&#xED;tse a param&#xE9;terben kapott sz&#xF6;veget &#xFA;gy, hogy az egym&#xE1;s ut&#xE1;n l&#xE9;v&#x151; ism&#xE9;tl&#x151;d&#x151; karakterek helyett az ism&#xE9;tl&#x151;d&#xE9;sek sz&#xE1;m&#xE1;t &#xE9;s az ism&#xE9;tl&#x151;d&#x151; karaktert jelen&#xED;tse meg (&#xED;gy p&#xE9;ld&#xE1;ul az <code>aaabb</code> sz&#xF6;vegb&#x151;l <code>3a2b</code> lesz)! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a t&#xF6;m&#xF6;r&#xED;tett sz&#xF6;veg.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Hahooooo! Van itt valaki???&apos;
+<b>Return:</b> &apos;Hah5o! Van i2t valaki3?&apos;
 </pre>
       </div>
       
