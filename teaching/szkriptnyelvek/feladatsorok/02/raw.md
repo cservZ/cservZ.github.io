@@ -58,7 +58,7 @@ Kuba egy Discord szerveren moderátor. A szabadidejét sokszor azzal tölti, hog
 
 Discordon lehetőségünk van különféle emote-okkal reagálni üzenetekre. Az emote-ok között megtalálhatók például az angol ábécé betűi A-tól Z-ig. Márk ezeknek az emote-oknak a használatával szeretne kirakni egy szót, viszont fontos tudni, hogy a Discord minden emote-ot csak egyszer enged felhasználni!
 
-Írj egy `kirakhato` nevű függvényt, amely egyetlen szót (string) kap paraméterül, és visszaadja, hogy az kirakható-e úgy, hogy minden betűt csak egyszer használhatunk fel! A kis- és nagybetűket ne különböztessük meg!
+Írj egy `kirakhato` nevű függvényt, amely egyetlen szót (string) kap paraméterül, és visszaadja, hogy az kirakható-e úgy, hogy minden betűt csak egyszer használunk fel! A kis- és nagybetűket ne különböztessük meg!
 
 <div class="bordered-box border-green">
     <span class="green">Tipp:</span> Érdemes először csupa kisbetűssé (vagy csupa nagybetűssé) alakítani a szót, így például a második példában látható <code>Alma</code> szóban ismétlődő betűként kezeljük az <code>a</code> betűt.
@@ -166,7 +166,7 @@ Természetesen Robi és Misi kommunikációjához fontos, hogy a két kolléga v
 
 Írj egy `elmozdulas` nevű függvényt, amely egy útvonalat elkódoló szöveget kap paraméterül! A szövegben előforduló betűk és jelentésük: `F` (1 lépést megyünk felfelé), `L` (1 lépést megyünk lefelé),  `J` (1 lépést megyünk jobbra), `B` (1 lépést megyünk balra).
 
-A függvény adja vissza a példában látható formátumban azt, hogy a kiinduló pozíciónkhoz képest, az útvonal követésével mennyit mentünk a vízszintes, illetve függőleges irányba! Ha az útvonal követésével a kezdőpozícióba érünk vissza, akkor a függvény a `Nem mentunk sehova` szöveggel térjen vissza!
+A függvény adja vissza a példában látható formátumban azt, hogy a kiinduló pozíciónkhoz képest, az útvonal követésével mennyit megyünk a vízszintes, illetve a függőleges irányba! Ha az útvonal követésével a kiinduló pozícióba érünk vissza, akkor a függvény a `Nem mentunk sehova` szöveggel térjen vissza!
 
 Például, ha az útvonalunk a `JBBFB`, akkor 1 lépést mentünk jobbra, majd 2-t balra, 1-et fel és végül 1-et balra. Így az eredeti pozíciónkhoz képest 2 lépéssel kerültünk balra és 1 lépéssel kerültünk feljebb.
 
@@ -191,10 +191,10 @@ Például, ha az útvonalunk a `JBBFB`, akkor 1 lépést mentünk jobbra, majd 2
 
 A [palindrom](https://hu.wikipedia.org/wiki/Palindrom) egy olyan szó vagy szókapcsolat, amely visszafelé olvasva is ugyanaz. Például az "indul a görög aludni" egy híres példája a palindromoknak.
 
-Írj egy `palindrom` nevű függvényt, amely egy szöveget kap paraméterül és visszaadja, hogy a paraméterben kapott szöveg palindrom-e vagy sem!
+Írj egy `palindrom` nevű függvényt, amely egy szöveget kap paraméterül és visszaadja, hogy a paraméterben kapott szöveg palindrom-e vagy sem! A feladat megoldásának lépései:
 
 * Először alakítsd csupa kisbetűssé a paraméterben kapott szöveget!
-* Ezt követően távolítsd el a szövegből az összes szóközt és írásjelet!
+* Ezt követően távolítsd el a szövegből az összes szóközt, pontot, felkiáltójelet, kérdőjelet és vesszőt!
 * Végül vizsgáld meg, hogy az így kapott szöveg megegyezik-e a megfordítottjával!
 
 <span class="example">Példa:</span>
