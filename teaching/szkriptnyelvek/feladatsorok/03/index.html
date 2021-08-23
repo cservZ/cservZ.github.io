@@ -1,0 +1,396 @@
+<!DOCTYPE html><html><head>
+      <title>Szkriptnyelvek - 3. feladatsor</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="../../../../assets/img/icon.png">
+      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="szkriptnyelvek-3-gyakorl%C3%B3-feladatsor">Szkriptnyelvek - 3. gyakorl&#xF3; feladatsor</h1>
+
+<h2 class="mume-header" id="python-adatszerkezetek-lista-dictionary">Python adatszerkezetek: lista, dictionary</h2>
+
+<h3 class="mume-header" id="1-feladat-k%C3%B6nyvespolc-2-pont">1. feladat: K&#xF6;nyvespolc (2 pont)</h3>
+
+<p>T&#xFC;nde szeret olvasni, &#xED;gy a polc&#xE1;n is sz&#xE1;mos k&#xF6;nyv tal&#xE1;lhat&#xF3;. Egyik nap T&#xFC;nde rendet rak a lak&#xE1;s&#xE1;ban, &#xE9;s a k&#xF6;nyveit is rendbe szeretn&#xE9; rakni.</p>
+<p>&#xCD;rj egy <code>konyveket_rendez</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy k&#xF6;nyvc&#xED;mekb&#x151;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny rendezze a k&#xF6;nyvek c&#xED;m&#xE9;t Z-t&#x151;l A-ig (teh&#xE1;t el&#x151;sz&#xF6;r rendezze a listaelemeket &#xE1;b&#xE9;c&#xE9; sorrendbe, majd ford&#xED;tsa meg a rendezett list&#xE1;t)! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az eredm&#xE9;ny&#xFC;l kapott lista.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [&apos;Vajak I&apos;, &apos;Allatfarm&apos;, &apos;Harry Potter es a bolcsek kove&apos;, &apos;A hobbit&apos;, &apos;Szamitogep Architekturak&apos;]
+<b>Return:</b> [&apos;Vajak I&apos;, &apos;Szamitogep Architekturak&apos;, &apos;Harry Potter es a bolcsek kove&apos;, &apos;Allatfarm&apos;, &apos;A hobbit&apos;]
+</pre>
+<h3 class="mume-header" id="2-feladat-ki%C3%A1rus%C3%ADt%C3%A1s-3-pont">2. feladat: Ki&#xE1;rus&#xED;t&#xE1;s (3 pont)</h3>
+
+<p>Bal&#xE1;zs a zsebp&#xE9;nz&#xE9;b&#x151;l egy &#xFA;j mikrofont szeretne venni. Szerencs&#xE9;j&#xE9;re a kedvenc webshopja &#xE9;pp ki&#xE1;rus&#xED;t&#xE1;st tart, &#xED;gy minden sz&#xF3;rakoztat&#xF3; elektronikai term&#xE9;k akci&#xF3;san v&#xE1;s&#xE1;rolhat&#xF3; meg.</p>
+<p>&#xCD;rj egy <code>akcios_ar</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a mikrofonok eredeti &#xE1;r&#xE1;t (eg&#xE9;sz sz&#xE1;mokat tartalmaz&#xF3; lista) &#xE9;s a le&#xE1;raz&#xE1;s m&#xE9;rt&#xE9;k&#xE9;t sz&#xE1;zal&#xE9;kban (val&#xF3;s sz&#xE1;m)! A f&#xFC;ggv&#xE9;ny cs&#xF6;kkentse a list&#xE1;ban tal&#xE1;lhat&#xF3; &#xE1;rakat az adott sz&#xE1;zal&#xE9;kkal, &#xE9;s adja vissza az &#xED;gy kapott list&#xE1;t! Az &#xE1;rak tov&#xE1;bbra is eg&#xE9;sz sz&#xE1;mok legyenek (ne tizedest&#xF6;rtek)! <span class="red">A feladatot &#xFA;gy oldd meg, hogy az eredeti list&#xE1;t ne m&#xF3;dos&#xED;tsd (azaz a param&#xE9;terben kapott lista egy m&#xE1;solat&#xE1;val dolgozz a megold&#xE1;s elk&#xE9;sz&#xED;t&#xE9;se sor&#xE1;n)!</span></p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [5000, 12000, 10000, 29000, 47000], 30.0
+<b>Return:</b> [3500, 8400, 7000, 20300, 32900]
+</pre>
+<h3 class="mume-header" id="3-feladat-b%C3%A9la-2-pont">3. feladat: B&#xE9;la (2 pont)</h3>
+
+<p>B&#xE9;la egy online j&#xE1;t&#xE9;kkal j&#xE1;tszik. A j&#xE1;t&#xE9;kban tal&#xE1;lt egy bugot, amit kihaszn&#xE1;lva t&#xF6;bbsz&#xF6;r is be tud l&#xE9;pni a j&#xE1;t&#xE9;kba ugyanazzal a felhaszn&#xE1;l&#xF3;n&#xE9;vvel. A j&#xE1;t&#xE9;kost&#xE1;rsai ezt nem tartj&#xE1;k tisztess&#xE9;gesnek, ez&#xE9;rt &#xFA;gy d&#xF6;ntenek, hogy B&#xE9;l&#xE1;t kir&#xFA;gj&#xE1;k a j&#xE1;t&#xE9;kb&#xF3;l.</p>
+<p>&#xCD;rj egy <code>belat_kirug</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy list&#xE1;t kap param&#xE9;ter&#xFC;l! A lista a j&#xE1;t&#xE9;kosok neveit tartalmazza (sz&#xF6;veges adatok). A f&#xFC;ggv&#xE9;ny t&#xE1;vol&#xED;tsa el a list&#xE1;b&#xF3;l az <code>EpicBela20</code> j&#xE1;t&#xE9;kosn&#xE9;v &#xF6;sszes el&#x151;fordul&#xE1;s&#xE1;t, majd t&#xE9;rjen vissza az &#xED;gy kapott list&#xE1;val! <span class="red">A feladatot &#xFA;gy oldd meg, hogy az eredeti list&#xE1;t ne m&#xF3;dos&#xED;tsd (azaz a param&#xE9;terben kapott lista egy m&#xE1;solat&#xE1;val dolgozz a megold&#xE1;s elk&#xE9;sz&#xED;t&#xE9;se sor&#xE1;n)!</span></p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [&apos;EpicBela20&apos;, &apos;python4life&apos;, &apos;EpicBela20&apos;, &apos;EpicBela20&apos;, &apos;kalkEasy&apos;, &apos;varj_ez_nem_is_csgo&apos;, &apos;sajt42&apos;]
+<b>Return:</b> [&apos;python4life&apos;, &apos;kalkEasy&apos;, &apos;varj_ez_nem_is_csgo&apos;, &apos;sajt42&apos;]
+</pre>
+<h3 class="mume-header" id="4-feladat-leghosszabb-sz%C3%B3-3-pont">4. feladat: Leghosszabb sz&#xF3; (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>leghosszabb_szo</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l (a sz&#xF6;veg sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott szavakat tartalmaz)! A f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza a sz&#xF6;vegben tal&#xE1;lhat&#xF3; leghosszabb sz&#xF3;val! Amennyiben t&#xF6;bb sz&#xF3; is ugyanolyan hossz&#xFA;, akkor k&#xF6;z&#xFC;l&#xFC;k a sz&#xF6;vegben kor&#xE1;bban el&#x151;fordul&#xF3;t adjuk vissza!</p>
+<p>Ha a param&#xE9;ter&#xFC;l kapott sz&#xF6;veg az &#xFC;res string, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Szia uram! Mondd mar meg, hogy hany ora van!&apos;
+<b>Return:</b> &apos;uram!&apos;
+
+<b>Input:</b> &apos;&apos;
+<b>Return:</b> &apos;HIBA!&apos;
+</pre>
+<h3 class="mume-header" id="5-feladat-gyenge-jelszavak-4-pont">5. feladat: Gyenge jelszavak (4 pont)</h3>
+
+<p>Mivel Elliot felettes&#xE9;t nagyon leny&#x171;g&#xF6;zte az 1 feladatsorral kor&#xE1;bban meg&#xED;rt jelsz&#xF3;-er&#x151;ss&#xE9;g m&#xE9;r&#x151; szkript, ez&#xE9;rt egy &#xFA;j feladattal b&#xED;zza meg alkalmazottj&#xE1;t. Elliotnak ki kell v&#xE1;logatnia a v&#xE1;llalat &#xE1;ltal haszn&#xE1;lt jelszavak k&#xF6;z&#xFC;l azokat, amelyek gyeng&#xE9;nek min&#x151;s&#xFC;lnek.</p>
+<p>&#xCD;rj egy <code>gyenge_jelszavak</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy jelszavakat tartalmaz&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny adja vissza a gyenge jelszavakat egy list&#xE1;ban! Egy jelsz&#xF3;t gyeng&#xE9;nek tekint&#xFC;nk, ha az al&#xE1;bbi felt&#xE9;telek k&#xF6;z&#xFC;l legal&#xE1;bb 1 &#xE9;rv&#xE9;nyes r&#xE1;:</p>
+<ul>
+<li>A jelsz&#xF3; r&#xF6;videbb, mint 5 karakter</li>
+<li>A jelsz&#xF3; nem tartalmaz sz&#xE1;mjegy karaktert</li>
+<li>A jelsz&#xF3; tartalmazza a <code>jelszo</code> vagy <code>123</code> sz&#xF6;vegek valamelyik&#xE9;t b&#xE1;rmilyen form&#xE1;ban (a kis- &#xE9;s nagybet&#x171;ket nem megk&#xFC;l&#xF6;nb&#xF6;ztetve).</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [&apos;Root&apos;, &apos;Kekw2000&apos;, &apos;H0sszuJelszoG0esBrrr&apos;, &apos;Admin123456&apos;, &apos;sub2Pewdiepie&apos;, &apos;asdqwe&apos;, &apos;K1L0&apos;]
+<b>Return:</b> [&apos;Root&apos;, &apos;H0sszuJelszoG0esBrrr&apos;, &apos;Admin123456&apos;, &apos;asdqwe&apos;]
+</pre>
+<h3 class="mume-header" id="6-feladat-egyedi-szavak-5-pont">6. feladat: Egyedi szavak (5 pont)</h3>
+
+<p>&#xCD;rj egy <code>egyedi_szavak</code> f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l (a sz&#xF6;veg sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott szavakat tartalmaz)! A f&#xFC;ggv&#xE9;ny adja vissza, hogy h&#xE1;ny <span class="red">k&#xFC;l&#xF6;nb&#xF6;z&#x151;</span> sz&#xF3; tal&#xE1;lhat&#xF3; a sz&#xF6;vegben!</p>
+<ul>
+<li>A kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg (teh&#xE1;t pl. <code>alma</code> &#xE9;s <code>ALMA</code> ugyanaz a sz&#xF3;)!</li>
+<li>A szavak v&#xE9;g&#xE9;n l&#xE9;v&#x151; pontokt&#xF3;l, felki&#xE1;lt&#xF3;jelekt&#x151;l, k&#xE9;rd&#x151;jelekt&#x151;l &#xE9;s vessz&#x151;kt&#x151;l szabadulj meg (teh&#xE1;t p&#xE9;ld&#xE1;ul <code>Alma?</code> &#xE9;s <code>alma</code> ugyanaz a sz&#xF3;)! Feltehetj&#xFC;k, hogy ezek az &#xED;r&#xE1;sjelek csak szavak v&#xE9;g&#xE9;n fordulnak el&#x151; a sz&#xF6;vegben.</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;A macska, vagy mas neven a hazi macska kisebb termetu husevo emlos, amely a macskafelek csaladjaba tartozik.&apos;
+<b>Return:</b> 14
+</pre>
+<h3 class="mume-header" id="7-feladat-felv%C3%A1ltva-5-pont">7. feladat: Felv&#xE1;ltva (5 pont)</h3>
+
+<p>&#xCD;rj egy <code>felvaltva</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy t&#xF6;bb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; sz&#xF6;veget v&#xE1;r param&#xE9;terben! A f&#xFC;ggv&#xE9;ny alak&#xED;tsa &#xE1;t a sz&#xF6;veget &#xFA;gy, hogy az egym&#xE1;s ut&#xE1;ni szavak felv&#xE1;ltva legyenek csupa nagybet&#x171;sek &#xE9;s csupa kisbet&#x171;sek (l&#xE1;sd: els&#x151; p&#xE9;lda)! A sz&#xF6;veg els&#x151; szava legyen csupa nagybet&#x171;s! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az &#xE1;talak&#xED;tott sz&#xF6;veg.</p>
+<p>Kezeld le azt az esetet, amikor a f&#xFC;ggv&#xE9;ny egy 2-n&#xE9;l kevesebb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; sz&#xF6;veget kap param&#xE9;ter&#xFC;l! Ekkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Tajekoztatjuk utasainkat, hogy a Szeged felol erkezo szemelyvonat varhatoan otven percet kesik.&apos;
+<b>Return:</b> &apos;TAJEKOZTATJUK utasainkat, HOGY a SZEGED felol ERKEZO szemelyvonat VARHATOAN otven PERCET kesik.&apos;
+
+<b>Input:</b> &apos;Sajt&apos;
+<b>Return:</b> &apos;HIBA!&apos;
+</pre>
+<h3 class="mume-header" id="8-feladat-sorozatok-6-pont">8. feladat: Sorozatok (6 pont)</h3>
+
+<p>Ricsi nagyon szereti a sorozatokat... m&#xE1;rmint a matematikai sorozatokat. Kedvencei a sz&#xE1;mtani &#xE9;s m&#xE9;rtani sorozatok. &#xCD;rj egy <code>sorozatok</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xE1;mokb&#xF3;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny d&#xF6;ntse el, hogy a list&#xE1;ban szerepl&#x151; sz&#xE1;mok sz&#xE1;mtani, illetve m&#xE9;rtani sorozatot alkotnak-e!</p>
+<p>Kezeld le azt az esetet, amikor a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;ben &#xE9;rkez&#x151; lista 3-n&#xE1;l kevesebb elemet tartalmaz! Ekkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen!</p>
+<div class="bordered-box border-green">
+    <span class="green">Eml&#xE9;keztet&#x151;:</span>
+    <ul>
+    <li>Egy sorozatot akkor nevez&#xFC;nk sz&#xE1;mtani sorozatnak, ha a szomsz&#xE9;dos elemek k&#xFC;l&#xF6;nbs&#xE9;ge &#xE1;lland&#xF3; (pl. 1, 3, 5, 7, 9 sz&#xE1;mtani sorozat, hiszen a szomsz&#xE9;dos elemek k&#xFC;l&#xF6;nbs&#xE9;ge mindenhol 2).</li>
+    <li>Egy sorozatot akkor nevez&#xFC;nk m&#xE9;rtani sorozatnak, ha a szomsz&#xE9;dos elemek h&#xE1;nyadosa &#xE1;lland&#xF3; (pl. 1, 2, 4, 8, 16 m&#xE9;rtani sorozat, hiszen a szomsz&#xE9;dos elemek h&#xE1;nyadosa mindenhol 2)</li>
+    </ul>
+</div>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [10, 20]
+<b>Return:</b> &apos;HIBA!&apos;
+
+<b>Input:</b> [2, 3, 5, 7, 11, 13]
+<b>Return:</b> &apos;A sorozat se nem szamtani, se nem mertani sorozat.&apos;
+
+<b>Input:</b> [42, 42, 42]
+<b>Return:</b> &apos;A sorozat szamtani es mertani sorozat is egyben.&apos;
+
+<b>Input:</b> [20, 15, 10, 5, 0, -5]
+<b>Return:</b> &apos;A sorozat szamtani sorozat.&apos;
+
+<b>Input:</b> [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
+<b>Return:</b> &apos;A sorozat mertani sorozat.&apos;
+</pre>
+<h3 class="mume-header" id="9-feladat-gyors%C3%A9tterem-4-pont">9. feladat: Gyors&#xE9;tterem (4 pont)</h3>
+
+<p>A kedvenc gyors&#xE9;tterm&#xFC;nkben a v&#xE1;s&#xE1;rl&#xF3;k bel&#xE9;p&#xE9;s ut&#xE1;n sorsz&#xE1;mot h&#xFA;znak, amely alapj&#xE1;n leadhatj&#xE1;k a rendel&#xE9;s&#xFC;ket. Az &#xE9;tteremben k&#xE9;t kassza &#xFC;zemel: egyikn&#xE9;l a p&#xE1;ros, m&#xE1;sikn&#xE1;l pedig a p&#xE1;ratlan sorsz&#xE1;m&#xFA; rendel&#xE9;seket szolg&#xE1;lj&#xE1;k ki.</p>
+<p>&#xCD;rj egy <code>kasszahoz_rendel</code> nev&#x171; f&#xFC;ggv&#xE9;ny, amely egy olyan sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amely pontosvessz&#x151;vel elv&#xE1;lasztott (eg&#xE9;sz) sz&#xE1;mokat tartalmaz! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;se egy 2 dimenzi&#xF3;s lista, amely 2 r&#xE9;szlist&#xE1;b&#xF3;l &#xE1;ll: az els&#x151; r&#xE9;szlist&#xE1;ba a p&#xE1;ros, a m&#xE1;sodik r&#xE9;szlist&#xE1;ba pedig a p&#xE1;ratlan sorsz&#xE1;mok ker&#xFC;lnek <span class="red">n&#xF6;vekv&#x151; sorrendben</span>.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;42;38;45;40;41;39;44;43;46&apos;
+<b>Return:</b> [[38, 40, 42, 44, 46], [39, 41, 43, 45]]
+</pre>
+<h3 class="mume-header" id="10-feladat-m%C3%A1trixok-%C3%B6sszead%C3%A1sa-6-pont">10. feladat: M&#xE1;trixok &#xF6;sszead&#xE1;sa (6 pont)</h3>
+
+<p>&#xCD;rj egy <code>matrix_osszead</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t m&#xE1;trixot (k&#xE9;tdimenzi&#xF3;s list&#xE1;t) v&#xE1;r param&#xE9;ter&#xFC;l, &#xE9;s kisz&#xE1;m&#xED;tja ezen k&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t! A feladat megold&#xE1;sa sor&#xE1;n ne haszn&#xE1;lj semmilyen be&#xE9;p&#xED;tett vagy k&#xFC;ls&#x151; Python csomagot!</p>
+<p>Fontos, hogy az &#xF6;sszead&#xE1;sn&#xE1;l mindk&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma megegyezzen (pl. mindk&#xE9;t m&#xE1;trix <code>n x m</code>-es, azaz <code>n</code> sorb&#xF3;l &#xE9;s <code>m</code> oszlopb&#xF3;l &#xE1;lljon). Ha a k&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma elt&#xE9;r, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza egy &#xFC;res list&#xE1;val! Ha a dimenzi&#xF3;sz&#xE1;mok megegyeznek, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a k&#xE9;t m&#xE1;trix &#xF6;sszege legyen (ami szint&#xE9;n egy m&#xE1;trix)!</p>
+<div class="bordered-box border-green">
+    <span class="green">Seg&#xED;ts&#xE9;g:</span> K&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t &#xFA;gy kapjuk, hogy az azonos indexeken l&#xE9;v&#x151; elemeket sorban &#xF6;sszeadogatjuk. P&#xE9;ld&#xE1;ul:
+    <img src="./matrix_addition.png" alt="M&#xE1;trix &#xF6;sszead&#xE1;s">
+</div>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [[7, 1, 3], [4, 0, 2]], [[2, 5, 5], [8, 6, 0]]
+<b>Return:</b> [[9, 6, 8], [12, 6, 2]]
+
+<b>Input:</b> [[5, 1], [3, 2], [8, 6]], [[4, 8], [2, 7]]
+<b>Return:</b> []
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
