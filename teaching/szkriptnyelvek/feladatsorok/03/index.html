@@ -263,8 +263,7 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h3 class="mume-header" id="1-feladat-k%C3%B6nyvespolc-2-pont">1. feladat: K&#xF6;nyvespolc (2 pont)</h3>
 
-<p>T&#xFC;nde szeret olvasni, &#xED;gy a polc&#xE1;n is sz&#xE1;mos k&#xF6;nyv tal&#xE1;lhat&#xF3;. Egyik nap T&#xFC;nde rendet rak a lak&#xE1;s&#xE1;ban, &#xE9;s a k&#xF6;nyveit is rendbe szeretn&#xE9; rakni.</p>
-<p>&#xCD;rj egy <code>konyveket_rendez</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy k&#xF6;nyvc&#xED;mekb&#x151;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny rendezze a k&#xF6;nyvek c&#xED;m&#xE9;t Z-t&#x151;l A-ig (teh&#xE1;t el&#x151;sz&#xF6;r rendezze a listaelemeket &#xE1;b&#xE9;c&#xE9; sorrendbe, majd ford&#xED;tsa meg a rendezett list&#xE1;t)! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az eredm&#xE9;ny&#xFC;l kapott lista.</p>
+<p>T&#xFC;nde szeret olvasni, &#xED;gy a polc&#xE1;n is sok k&#xF6;nyv van. Egyik nap T&#xFC;nde rendet rak a lak&#xE1;s&#xE1;ban, &#xE9;s a k&#xF6;nyveit is rendezi. &#xCD;rj egy <code>konyveket_rendez</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy k&#xF6;nyvc&#xED;mekb&#x151;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny rendezze a k&#xF6;nyvek c&#xED;m&#xE9;t Z-t&#x151;l A-ig (teh&#xE1;t el&#x151;sz&#xF6;r rendezze a listaelemeket &#xE1;b&#xE9;c&#xE9; sorrendbe, majd ford&#xED;tsa meg a rendezett list&#xE1;t)! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az eredm&#xE9;ny&#xFC;l kapott lista.</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> [&apos;Vajak I&apos;, &apos;Allatfarm&apos;, &apos;Harry Potter es a bolcsek kove&apos;, &apos;A hobbit&apos;, &apos;Szamitogep Architekturak&apos;]
 <b>Return:</b> [&apos;Vajak I&apos;, &apos;Szamitogep Architekturak&apos;, &apos;Harry Potter es a bolcsek kove&apos;, &apos;Allatfarm&apos;, &apos;A hobbit&apos;]
@@ -272,7 +271,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="2-feladat-ki%C3%A1rus%C3%ADt%C3%A1s-3-pont">2. feladat: Ki&#xE1;rus&#xED;t&#xE1;s (3 pont)</h3>
 
 <p>Bal&#xE1;zs a zsebp&#xE9;nz&#xE9;b&#x151;l egy &#xFA;j mikrofont szeretne venni. Szerencs&#xE9;j&#xE9;re a kedvenc webshopja &#xE9;pp ki&#xE1;rus&#xED;t&#xE1;st tart, &#xED;gy minden sz&#xF3;rakoztat&#xF3; elektronikai term&#xE9;k akci&#xF3;san v&#xE1;s&#xE1;rolhat&#xF3; meg.</p>
-<p>&#xCD;rj egy <code>akcios_ar</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a mikrofonok eredeti &#xE1;r&#xE1;t (eg&#xE9;sz sz&#xE1;mokat tartalmaz&#xF3; lista) &#xE9;s a le&#xE1;raz&#xE1;s m&#xE9;rt&#xE9;k&#xE9;t sz&#xE1;zal&#xE9;kban (val&#xF3;s sz&#xE1;m)! A f&#xFC;ggv&#xE9;ny cs&#xF6;kkentse a list&#xE1;ban tal&#xE1;lhat&#xF3; &#xE1;rakat az adott sz&#xE1;zal&#xE9;kkal, &#xE9;s adja vissza az &#xED;gy kapott list&#xE1;t! Az &#xE1;rak tov&#xE1;bbra is eg&#xE9;sz sz&#xE1;mok legyenek (ne tizedest&#xF6;rtek)! <span class="red">A feladatot &#xFA;gy oldd meg, hogy az eredeti list&#xE1;t ne m&#xF3;dos&#xED;tsd (azaz a param&#xE9;terben kapott lista egy m&#xE1;solat&#xE1;val dolgozz a megold&#xE1;s elk&#xE9;sz&#xED;t&#xE9;se sor&#xE1;n)!</span></p>
+<p>&#xCD;rj egy <code>akcios_ar</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: a webshopban tal&#xE1;lhat&#xF3; mikrofonok eredeti &#xE1;r&#xE1;t (eg&#xE9;sz sz&#xE1;mokat t&#xE1;rol&#xF3; lista) &#xE9;s a le&#xE1;raz&#xE1;s m&#xE9;rt&#xE9;k&#xE9;t sz&#xE1;zal&#xE9;kban (val&#xF3;s sz&#xE1;m)! A f&#xFC;ggv&#xE9;ny cs&#xF6;kkentse a list&#xE1;ban l&#xE9;v&#x151; &#xE1;rakat az adott sz&#xE1;zal&#xE9;kkal, &#xE9;s t&#xE9;rjen vissza az &#xED;gy kapott list&#xE1;val! Az &#xE1;rak tov&#xE1;bbra is eg&#xE9;szek legyenek (ne tizedest&#xF6;rtek)!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> [5000, 12000, 10000, 29000, 47000], 30.0
 <b>Return:</b> [3500, 8400, 7000, 20300, 32900]
@@ -280,7 +279,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="3-feladat-b%C3%A9la-2-pont">3. feladat: B&#xE9;la (2 pont)</h3>
 
 <p>B&#xE9;la egy online j&#xE1;t&#xE9;kkal j&#xE1;tszik. A j&#xE1;t&#xE9;kban tal&#xE1;lt egy bugot, amit kihaszn&#xE1;lva t&#xF6;bbsz&#xF6;r is be tud l&#xE9;pni a j&#xE1;t&#xE9;kba ugyanazzal a felhaszn&#xE1;l&#xF3;n&#xE9;vvel. A j&#xE1;t&#xE9;kost&#xE1;rsai ezt nem tartj&#xE1;k tisztess&#xE9;gesnek, ez&#xE9;rt &#xFA;gy d&#xF6;ntenek, hogy B&#xE9;l&#xE1;t kir&#xFA;gj&#xE1;k a j&#xE1;t&#xE9;kb&#xF3;l.</p>
-<p>&#xCD;rj egy <code>belat_kirug</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy list&#xE1;t kap param&#xE9;ter&#xFC;l! A lista a j&#xE1;t&#xE9;kosok neveit tartalmazza (sz&#xF6;veges adatok). A f&#xFC;ggv&#xE9;ny t&#xE1;vol&#xED;tsa el a list&#xE1;b&#xF3;l az <code>EpicBela20</code> j&#xE1;t&#xE9;kosn&#xE9;v &#xF6;sszes el&#x151;fordul&#xE1;s&#xE1;t, majd t&#xE9;rjen vissza az &#xED;gy kapott list&#xE1;val! <span class="red">A feladatot &#xFA;gy oldd meg, hogy az eredeti list&#xE1;t ne m&#xF3;dos&#xED;tsd (azaz a param&#xE9;terben kapott lista egy m&#xE1;solat&#xE1;val dolgozz a megold&#xE1;s elk&#xE9;sz&#xED;t&#xE9;se sor&#xE1;n)!</span></p>
+<p>&#xCD;rj egy <code>belat_kirug</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy list&#xE1;t kap param&#xE9;ter&#xFC;l, ami a j&#xE1;t&#xE9;kosok neveit tartalmazza (stringek). A f&#xFC;ggv&#xE9;ny t&#xE1;vol&#xED;tsa el a list&#xE1;b&#xF3;l az <code>EpicBela20</code> j&#xE1;t&#xE9;kosn&#xE9;v &#xF6;sszes el&#x151;fordul&#xE1;s&#xE1;t, majd t&#xE9;rjen vissza az &#xED;gy kapott list&#xE1;val!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> [&apos;EpicBela20&apos;, &apos;python4life&apos;, &apos;EpicBela20&apos;, &apos;EpicBela20&apos;, &apos;kalkEasy&apos;, &apos;varj_ez_nem_is_csgo&apos;, &apos;sajt42&apos;]
 <b>Return:</b> [&apos;python4life&apos;, &apos;kalkEasy&apos;, &apos;varj_ez_nem_is_csgo&apos;, &apos;sajt42&apos;]
@@ -299,7 +298,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="5-feladat-gyenge-jelszavak-4-pont">5. feladat: Gyenge jelszavak (4 pont)</h3>
 
 <p>Mivel Elliot felettes&#xE9;t nagyon leny&#x171;g&#xF6;zte az 1 feladatsorral kor&#xE1;bban meg&#xED;rt jelsz&#xF3;-er&#x151;ss&#xE9;g m&#xE9;r&#x151; szkript, ez&#xE9;rt egy &#xFA;j feladattal b&#xED;zza meg alkalmazottj&#xE1;t. Elliotnak ki kell v&#xE1;logatnia a v&#xE1;llalat &#xE1;ltal haszn&#xE1;lt jelszavak k&#xF6;z&#xFC;l azokat, amelyek gyeng&#xE9;nek min&#x151;s&#xFC;lnek.</p>
-<p>&#xCD;rj egy <code>gyenge_jelszavak</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy jelszavakat tartalmaz&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny adja vissza a gyenge jelszavakat egy list&#xE1;ban! Egy jelsz&#xF3;t gyeng&#xE9;nek tekint&#xFC;nk, ha az al&#xE1;bbi felt&#xE9;telek k&#xF6;z&#xFC;l legal&#xE1;bb 1 &#xE9;rv&#xE9;nyes r&#xE1;:</p>
+<p>&#xCD;rj egy <code>gyenge_jelszavak</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy jelszavakat tartalmaz&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny adja vissza ezek k&#xF6;z&#xFC;l a gyenge jelszavakat egy list&#xE1;ban! Egy jelsz&#xF3;t gyeng&#xE9;nek tekint&#xFC;nk, ha az al&#xE1;bbi felt&#xE9;telek k&#xF6;z&#xFC;l legal&#xE1;bb 1 &#xE9;rv&#xE9;nyes r&#xE1;:</p>
 <ul>
 <li>A jelsz&#xF3; r&#xF6;videbb, mint 5 karakter</li>
 <li>A jelsz&#xF3; nem tartalmaz sz&#xE1;mjegy karaktert</li>
@@ -307,11 +306,11 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> [&apos;Root&apos;, &apos;Kekw2000&apos;, &apos;H0sszuJelszoG0esBrrr&apos;, &apos;Admin123456&apos;, &apos;sub2Pewdiepie&apos;, &apos;asdqwe&apos;, &apos;K1L0&apos;]
-<b>Return:</b> [&apos;Root&apos;, &apos;H0sszuJelszoG0esBrrr&apos;, &apos;Admin123456&apos;, &apos;asdqwe&apos;]
+<b>Return:</b> [&apos;Root&apos;, &apos;H0sszuJelszoG0esBrrr&apos;, &apos;Admin123456&apos;, &apos;asdqwe&apos;, &apos;K1L0&apos;]
 </pre>
 <h3 class="mume-header" id="6-feladat-egyedi-szavak-5-pont">6. feladat: Egyedi szavak (5 pont)</h3>
 
-<p>&#xCD;rj egy <code>egyedi_szavak</code> f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l (a sz&#xF6;veg sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott szavakat tartalmaz)! A f&#xFC;ggv&#xE9;ny adja vissza, hogy h&#xE1;ny <span class="red">k&#xFC;l&#xF6;nb&#xF6;z&#x151;</span> sz&#xF3; tal&#xE1;lhat&#xF3; a sz&#xF6;vegben!</p>
+<p>&#xCD;rj egy <code>egyedi_szavak</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l (a sz&#xF6;veg sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott szavakat tartalmaz)! A f&#xFC;ggv&#xE9;ny adja vissza, hogy h&#xE1;ny <strong>k&#xFC;l&#xF6;nb&#xF6;z&#x151;</strong> sz&#xF3; tal&#xE1;lhat&#xF3; a sz&#xF6;vegben!</p>
 <ul>
 <li>A kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg (teh&#xE1;t pl. <code>alma</code> &#xE9;s <code>ALMA</code> ugyanaz a sz&#xF3;)!</li>
 <li>A szavak v&#xE9;g&#xE9;n l&#xE9;v&#x151; pontokt&#xF3;l, felki&#xE1;lt&#xF3;jelekt&#x151;l, k&#xE9;rd&#x151;jelekt&#x151;l &#xE9;s vessz&#x151;kt&#x151;l szabadulj meg (teh&#xE1;t p&#xE9;ld&#xE1;ul <code>Alma?</code> &#xE9;s <code>alma</code> ugyanaz a sz&#xF3;)! Feltehetj&#xFC;k, hogy ezek az &#xED;r&#xE1;sjelek csak szavak v&#xE9;g&#xE9;n fordulnak el&#x151; a sz&#xF6;vegben.</li>
@@ -322,7 +321,7 @@ pre[data-line] .line-highlight[data-end]:after {
 </pre>
 <h3 class="mume-header" id="7-feladat-felv%C3%A1ltva-5-pont">7. feladat: Felv&#xE1;ltva (5 pont)</h3>
 
-<p>&#xCD;rj egy <code>felvaltva</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy t&#xF6;bb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; sz&#xF6;veget v&#xE1;r param&#xE9;terben! A f&#xFC;ggv&#xE9;ny alak&#xED;tsa &#xE1;t a sz&#xF6;veget &#xFA;gy, hogy az egym&#xE1;s ut&#xE1;ni szavak felv&#xE1;ltva legyenek csupa nagybet&#x171;sek &#xE9;s csupa kisbet&#x171;sek (l&#xE1;sd: els&#x151; p&#xE9;lda)! A sz&#xF6;veg els&#x151; szava legyen csupa nagybet&#x171;s! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az &#xE1;talak&#xED;tott sz&#xF6;veg.</p>
+<p>&#xCD;rj egy <code>felvaltva</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy t&#xF6;bb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; sz&#xF6;veget v&#xE1;r param&#xE9;terben! A f&#xFC;ggv&#xE9;ny alak&#xED;tsa &#xE1;t a sz&#xF6;veget &#xFA;gy, hogy az egym&#xE1;s ut&#xE1;ni szavak felv&#xE1;ltva legyenek csupa nagybet&#x171;sek, illetve csupa kisbet&#x171;sek (l&#xE1;sd: els&#x151; p&#xE9;lda)! A sz&#xF6;veg els&#x151; szava mindig csupa nagybet&#x171;s. A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az &#xE1;talak&#xED;tott sz&#xF6;veg.</p>
 <p>Kezeld le azt az esetet, amikor a f&#xFC;ggv&#xE9;ny egy 2-n&#xE9;l kevesebb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; sz&#xF6;veget kap param&#xE9;ter&#xFC;l! Ekkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> &apos;Tajekoztatjuk utasainkat, hogy a Szeged felol erkezo szemelyvonat varhatoan otven percet kesik.&apos;
@@ -334,7 +333,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="8-feladat-sorozatok-6-pont">8. feladat: Sorozatok (6 pont)</h3>
 
 <p>Ricsi nagyon szereti a sorozatokat... m&#xE1;rmint a matematikai sorozatokat. Kedvencei a sz&#xE1;mtani &#xE9;s m&#xE9;rtani sorozatok. &#xCD;rj egy <code>sorozatok</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xE1;mokb&#xF3;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny d&#xF6;ntse el, hogy a list&#xE1;ban szerepl&#x151; sz&#xE1;mok sz&#xE1;mtani, illetve m&#xE9;rtani sorozatot alkotnak-e!</p>
-<p>Kezeld le azt az esetet, amikor a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;ben &#xE9;rkez&#x151; lista 3-n&#xE1;l kevesebb elemet tartalmaz! Ekkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen!</p>
+<p>Kezeld le azt az esetet, amikor a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;ben &#xE9;rkez&#x151; lista 3-n&#xE1;l kevesebb elemet tartalmaz! Ekkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen! Egy&#xE9;b hibakezel&#xE9;ssel nem kell foglalkoznod.</p>
 <div class="bordered-box border-green">
     <span class="green">Eml&#xE9;keztet&#x151;:</span>
     <ul>
@@ -352,7 +351,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> [42, 42, 42]
 <b>Return:</b> &apos;A sorozat szamtani es mertani sorozat is egyben.&apos;
 
-<b>Input:</b> [20, 15, 10, 5, 0, -5]
+<b>Input:</b> [9, 5, 1, -3, -7]
 <b>Return:</b> &apos;A sorozat szamtani sorozat.&apos;
 
 <b>Input:</b> [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
@@ -361,17 +360,20 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="9-feladat-gyors%C3%A9tterem-4-pont">9. feladat: Gyors&#xE9;tterem (4 pont)</h3>
 
 <p>A kedvenc gyors&#xE9;tterm&#xFC;nkben a v&#xE1;s&#xE1;rl&#xF3;k bel&#xE9;p&#xE9;s ut&#xE1;n sorsz&#xE1;mot h&#xFA;znak, amely alapj&#xE1;n leadhatj&#xE1;k a rendel&#xE9;s&#xFC;ket. Az &#xE9;tteremben k&#xE9;t kassza &#xFC;zemel: egyikn&#xE9;l a p&#xE1;ros, m&#xE1;sikn&#xE1;l pedig a p&#xE1;ratlan sorsz&#xE1;m&#xFA; rendel&#xE9;seket szolg&#xE1;lj&#xE1;k ki.</p>
-<p>&#xCD;rj egy <code>kasszahoz_rendel</code> nev&#x171; f&#xFC;ggv&#xE9;ny, amely egy olyan sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amely pontosvessz&#x151;vel elv&#xE1;lasztott (eg&#xE9;sz) sz&#xE1;mokat tartalmaz! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;se egy 2 dimenzi&#xF3;s lista, amely 2 r&#xE9;szlist&#xE1;b&#xF3;l &#xE1;ll: az els&#x151; r&#xE9;szlist&#xE1;ba a p&#xE1;ros, a m&#xE1;sodik r&#xE9;szlist&#xE1;ba pedig a p&#xE1;ratlan sorsz&#xE1;mok ker&#xFC;lnek <span class="red">n&#xF6;vekv&#x151; sorrendben</span>.</p>
+<p>&#xCD;rj egy <code>kasszahoz_rendel</code> nev&#x171; f&#xFC;ggv&#xE9;ny, amely egy olyan sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amely pontosvessz&#x151;vel elv&#xE1;lasztott (eg&#xE9;sz) sz&#xE1;mokat tartalmaz! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy 2-dimenzi&#xF3;s lista, amely 2 r&#xE9;szlist&#xE1;b&#xF3;l &#xE1;ll: az els&#x151; r&#xE9;szlist&#xE1;ba a p&#xE1;ros, a m&#xE1;sodik r&#xE9;szlist&#xE1;ba pedig a p&#xE1;ratlan sorsz&#xE1;mok ker&#xFC;lnek <strong>n&#xF6;vekv&#x151; sorrendben</strong>.</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> &apos;42;38;45;40;41;39;44;43;46&apos;
 <b>Return:</b> [[38, 40, 42, 44, 46], [39, 41, 43, 45]]
+
+<b>Input:</b> &apos;12;16;14&apos;
+<b>Return:</b> [[12, 14, 16], []]
 </pre>
 <h3 class="mume-header" id="10-feladat-m%C3%A1trixok-%C3%B6sszead%C3%A1sa-6-pont">10. feladat: M&#xE1;trixok &#xF6;sszead&#xE1;sa (6 pont)</h3>
 
-<p>&#xCD;rj egy <code>matrix_osszead</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t m&#xE1;trixot (k&#xE9;tdimenzi&#xF3;s list&#xE1;t) v&#xE1;r param&#xE9;ter&#xFC;l, &#xE9;s kisz&#xE1;m&#xED;tja ezen k&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t! A feladat megold&#xE1;sa sor&#xE1;n ne haszn&#xE1;lj semmilyen be&#xE9;p&#xED;tett vagy k&#xFC;ls&#x151; Python csomagot!</p>
+<p>&#xCD;rj egy <code>matrix_osszead</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t m&#xE1;trixot (2-dimenzi&#xF3;s list&#xE1;t) v&#xE1;r param&#xE9;ter&#xFC;l, &#xE9;s kisz&#xE1;m&#xED;tja ezen k&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t! A feladat megold&#xE1;sa sor&#xE1;n ne haszn&#xE1;lj semmilyen be&#xE9;p&#xED;tett vagy k&#xFC;ls&#x151; Python csomagot!</p>
 <p>Fontos, hogy az &#xF6;sszead&#xE1;sn&#xE1;l mindk&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma megegyezzen (pl. mindk&#xE9;t m&#xE1;trix <code>n x m</code>-es, azaz <code>n</code> sorb&#xF3;l &#xE9;s <code>m</code> oszlopb&#xF3;l &#xE1;lljon). Ha a k&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma elt&#xE9;r, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza egy &#xFC;res list&#xE1;val! Ha a dimenzi&#xF3;sz&#xE1;mok megegyeznek, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a k&#xE9;t m&#xE1;trix &#xF6;sszege legyen (ami szint&#xE9;n egy m&#xE1;trix)!</p>
 <div class="bordered-box border-green">
-    <span class="green">Seg&#xED;ts&#xE9;g:</span> K&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t &#xFA;gy kapjuk, hogy az azonos indexeken l&#xE9;v&#x151; elemeket sorban &#xF6;sszeadogatjuk. P&#xE9;ld&#xE1;ul:
+    <span class="green">Seg&#xED;ts&#xE9;g:</span> K&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t &#xFA;gy kapjuk, hogy az azonos indexeken l&#xE9;v&#x151; elemeket rendre &#xF6;sszeadogatjuk. P&#xE9;ld&#xE1;ul:
     <img src="./matrix_addition.png" alt="M&#xE1;trix &#xF6;sszead&#xE1;s">
 </div>
 <p><span class="example">P&#xE9;lda:</span></p>
@@ -407,8 +409,8 @@ pre[data-line] .line-highlight[data-end]:after {
 </pre>
 <h3 class="mume-header" id="13-feladat-f%C3%A1jlok-csoportos%C3%ADt%C3%A1sa-5-pont">13. feladat: F&#xE1;jlok csoportos&#xED;t&#xE1;sa (5 pont)</h3>
 
-<p>Kriszti&#xE1;n szeretne statisztik&#xE1;t k&#xE9;sz&#xED;teni a Dokumentumok mapp&#xE1;j&#xE1;ban tal&#xE1;lhat&#xF3; f&#xE1;jlokr&#xF3;l, ez&#xE9;rt egy Python szkriptet &#xED;r. A szkript feladata, hogy megsz&#xE1;molja, hogy az adott mapp&#xE1;n bel&#xFC;l a k&#xFC;l&#xF6;nb&#xF6;z&#x151; kiterjeszt&#xE9;s&#x171; f&#xE1;jlokb&#xF3;l mennyi tal&#xE1;lhat&#xF3;. A program egy r&#xE9;sz&#xE9;t Kriszti&#xE1;n m&#xE1;r meg&#xED;rta, viszont a statisztika k&#xE9;sz&#xED;t&#xE9;sben kellene neki egy kis seg&#xED;ts&#xE9;g.</p>
-<p>&#xCD;rj egy <code>statisztika</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy list&#xE1;t kap param&#xE9;ter&#xFC;l! A lista f&#xE1;jlok neveit tartalmazza, kiterjeszt&#xE9;ssel egy&#xFC;tt. A kiterjeszt&#xE9;s alatt a legutols&#xF3; pont karakter ut&#xE1;n l&#xE9;v&#x151; sz&#xF6;veget &#xE9;rtj&#xFC;k a f&#xE1;jln&#xE9;vben. A f&#xFC;ggv&#xE9;ny sz&#xE1;molja meg, hogy az egyes kiterjeszt&#xE9;sek h&#xE1;nyszor fordulnak el&#x151; a list&#xE1;ban, &#xE9;s az eredm&#xE9;nyt adja vissza egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban!</p>
+<p>Kriszti&#xE1;n szeretne statisztik&#xE1;t k&#xE9;sz&#xED;teni a Dokumentumok mapp&#xE1;j&#xE1;ban tal&#xE1;lhat&#xF3; f&#xE1;jlokr&#xF3;l, ez&#xE9;rt egy Python szkriptet &#xED;r. A szkript feladata, hogy megsz&#xE1;molja, hogy az adott mapp&#xE1;n bel&#xFC;l mennyi tal&#xE1;lhat&#xF3; a k&#xFC;l&#xF6;nb&#xF6;z&#x151; kiterjeszt&#xE9;sekb&#x151;l. A program egy r&#xE9;sz&#xE9;t Kriszti&#xE1;n m&#xE1;r meg&#xED;rta, viszont a statisztika-k&#xE9;sz&#xED;t&#xE9;sben kellene neki egy kis seg&#xED;ts&#xE9;g.</p>
+<p>&#xCD;rj egy <code>statisztika</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy list&#xE1;t kap param&#xE9;ter&#xFC;l! A lista f&#xE1;jlok neveit tartalmazza, kiterjeszt&#xE9;ssel egy&#xFC;tt. A f&#xE1;jln&#xE9;vben a kiterjeszt&#xE9;s alatt a <strong>legutols&#xF3;</strong> pont karakter ut&#xE1;n l&#xE9;v&#x151; sz&#xF6;veget &#xE9;rtj&#xFC;k. A f&#xFC;ggv&#xE9;ny sz&#xE1;molja meg, hogy az egyes kiterjeszt&#xE9;sek h&#xE1;nyszor fordulnak el&#x151; a list&#xE1;ban, &#xE9;s az eredm&#xE9;nyt adja vissza egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban!</p>
 <p>A feladatot &#xFA;gy oldd meg, hogy a kiterjeszt&#xE9;s vizsg&#xE1;lata sor&#xE1;n ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t pl. <code>hello.py</code> &#xE9;s <code>WORLD.PY</code> egyar&#xE1;nt <code>py</code> kiterjeszt&#xE9;s&#x171;ek).</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> [&apos;feladat.py&apos;, &apos;Bolygo.java&apos;, &apos;HELLOFRIENDS.MP4&apos;, &apos;TEST.PY&apos;, &apos;biro.gib.maxpont.py&apos;, &apos;russian-driving-fails.mp4&apos;]
@@ -417,7 +419,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="14-feladat-v%C3%A9geredm%C3%A9ny-5-pont">14. feladat: V&#xE9;geredm&#xE9;ny (5 pont)</h3>
 
 <p>Egy bar&#xE1;ti t&#xE1;rsas&#xE1;g a n&#xE9;pszer&#x171; <a href="https://skribbl.io/">skribbl.io</a> j&#xE1;t&#xE9;kkal j&#xE1;tszik. A j&#xE1;t&#xE9;k minden k&#xF6;r&#xE9;ben egy j&#xE1;t&#xE9;kos lerajzol egy el&#x151;re megadott dolgot, amit a t&#xF6;bbiek megpr&#xF3;b&#xE1;lnak kital&#xE1;lni. Az egyes k&#xF6;r&#xF6;k sor&#xE1;n a j&#xE1;t&#xE9;kosok pontokat gy&#x171;jtenek.</p>
-<p>&#xCD;rj egy <code>vegeredmeny</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy dictionary-kb&#x151;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A dictionary-k az egyes k&#xF6;r&#xF6;k eredm&#xE9;nyeit tartalmazz&#xE1;k: a kulcsok a j&#xE1;t&#xE9;kosok nevei, az &#xE9;rt&#xE9;kek pedig az adott k&#xF6;rben el&#xE9;rt pontsz&#xE1;m. A f&#xFC;ggv&#xE9;ny adja &#xF6;ssze az egyes j&#xE1;t&#xE9;kosok &#xE1;ltal szerzett pontokat, &#xE9;s az &#xED;gy kapott v&#xE9;geredm&#xE9;nyt adja vissza egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban!</p>
+<p>&#xCD;rj egy <code>vegeredmeny</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy dictionary-kb&#x151;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A dictionary-k az egyes k&#xF6;r&#xF6;k eredm&#xE9;nyeit tartalmazz&#xE1;k: a kulcsok a j&#xE1;t&#xE9;kosok nevei, az &#xE9;rt&#xE9;kek pedig az adott k&#xF6;rben a j&#xE1;t&#xE9;kos &#xE1;ltal el&#xE9;rt pontsz&#xE1;m. A f&#xFC;ggv&#xE9;ny &#xF6;sszes&#xED;tse j&#xE1;t&#xE9;kosonk&#xE9;nt a pontokat, &#xE9;s az &#xED;gy kapott &#xF6;sszes&#xED;t&#xE9;st adja vissza egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b>
 [
@@ -431,7 +433,7 @@ pre[data-line] .line-highlight[data-end]:after {
 </pre>
 <h3 class="mume-header" id="15-feladat-sz%C3%B6veges-v%C3%A9geredm%C3%A9ny-3-pont">15. feladat: Sz&#xF6;veges v&#xE9;geredm&#xE9;ny (3 pont)</h3>
 
-<p>A 14. feladatban szerepl&#x151;, v&#xE9;geredm&#xE9;nyeket tartalmaz&#xF3; dictionary tartalm&#xE1;t sz&#xF6;veges form&#xE1;tumban is meg szeretn&#xE9;nk jelen&#xED;teni. &#xCD;rj egy <code>szoveges_vegeredmeny</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy pontsz&#xE1;m-statisztik&#xE1;kat tartalmaz&#xF3; dictionary-t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny j&#xE1;rja be a dictionary kulcs-&#xE9;rt&#xE9;k p&#xE1;rjait, k&#xE9;pezzen bel&#x151;l&#xFC;k <code>{kulcs}: {ertek} pont</code> form&#xE1;tum&#xFA; sz&#xF6;veget, amiket 1 vessz&#x151;vel &#xE9;s 1 sz&#xF3;k&#xF6;zzel elv&#xE1;lasztva f&#x171;zz&#xF6;n &#xF6;ssze (a sz&#xF6;veg v&#xE9;g&#xE9;n ne szerepeljen se vessz&#x151;, se sz&#xF3;k&#xF6;z)! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az &#xED;gy kapott sz&#xF6;veg.</p>
+<p>A 14. feladatban szerepl&#x151;, v&#xE9;geredm&#xE9;nyeket tartalmaz&#xF3; dictionary tartalm&#xE1;t sz&#xF6;veges form&#xE1;tumban is meg szeretn&#xE9;nk jelen&#xED;teni. &#xCD;rj egy <code>szoveges_vegeredmeny</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy pontsz&#xE1;m-statisztik&#xE1;kat tartalmaz&#xF3; dictionary-t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny j&#xE1;rja be a dictionary kulcs-&#xE9;rt&#xE9;k p&#xE1;rjait, k&#xE9;pezzen bel&#x151;l&#xFC;k <code>{kulcs}: {ertek} pont</code> form&#xE1;tum&#xFA; sz&#xF6;vegeket, amiket 1 vessz&#x151;vel &#xE9;s 1 sz&#xF3;k&#xF6;zzel elv&#xE1;lasztva f&#x171;zz&#xF6;n &#xF6;ssze (a sz&#xF6;veg v&#xE9;g&#xE9;n ne szerepeljen se vessz&#x151;, se sz&#xF3;k&#xF6;z)! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az &#xED;gy kapott sz&#xF6;veg.</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> {&apos;shronk&apos;: 1200, &apos;Tamas&apos;: 1300, &apos;adam&apos;: 1600, &apos;Wolf&apos;: 1700, &apos;Karoly&apos;: 870}
 <b>Return:</b> &apos;shronk: 1200 pont, Tamas: 1300 pont, adam: 1600 pont, Wolf: 1700 pont, Karoly: 870 pont&apos;
