@@ -47,7 +47,7 @@ Béla egy online játékkal játszik. A játékban talált egy bugot, amit kihas
 
 ### 4. feladat: Leghosszabb szó (3 pont)
 
-Írj egy `leghosszabb_szo` nevű függvényt, amely egy szöveget kap paraméterül (a szöveg szóközzel elválasztott szavakat tartalmaz)! A függvény térjen vissza a szövegben található leghosszabb szóval! Amennyiben több szó is ugyanolyan hosszú, akkor közülük a szövegben korábban előfordulót adjuk vissza!
+Írj egy `leghosszabb_szo` nevű függvényt, amely egy szöveget kap paraméterül (a szöveg szóközzel elválasztott szavakat tartalmaz)! A függvény térjen vissza a szövegben található leghosszabb szóval! Amennyiben több szó is ugyanolyan hosszú, akkor közülük a szövegben korábban előfordulót add vissza!
 
 Ha a paraméterül kapott szöveg az üres string, akkor a visszatérési érték a `HIBA!` szöveg legyen!
 
@@ -180,4 +180,100 @@ Fontos, hogy az összeadásnál mindkét mátrix dimenziószáma megegyezzen (pl
 
 <b>Input:</b> [[5, 1], [3, 2], [8, 6]], [[4, 8], [2, 7]]
 <b>Return:</b> []
+</pre>
+
+
+### 11. feladat: Szövegelemzés (4 pont)
+
+Írj egy `szoveget_elemez` nevű függvényt, amely egy szöveget vár paraméterben! A függvény számolja meg, hogy a szövegben mennyi betű, számjegy és egyéb karakter szerepel, majd adja ezt vissza egy dictionary-ben, a példában látható formátumban!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'Python4Life!!!'
+<b>Return:</b> {'betu': 10, 'szamjegy': 1, 'egyeb': 3}
+
+<b>Input:</b> '12345'
+<b>Return:</b> {'betu': 0, 'szamjegy': 5, 'egyeb': 0}
+</pre>
+
+
+### 12. feladat: Kurzuskódok (5 pont)
+
+Informatikus szakon többféle kurzust is felvehetünk. Az informatikával kapcsolatos tárgyak kurzuskódja `I` betűvel, a matekos tárgyak kurzuskódja `M` betűvel, míg a szabadon választható tárgyak kurzuskódja `X` betűvel kezdődik.
+
+Írj egy `kurzuskodot_csoportosit` nevű függvényt, amely egy olyan szöveget kap paraméterül, ami pontosvesszővel elválasztott kurzuskódokat tartalmaz! A függvény csoportosítsa a szövegben szereplő kurzuskódokat "infós", "matekos" és "szabvál" kategóriákba, majd adja vissza az így kapott csoportosítást egy dictionary-ben, a példában látható formátumban! Ha a paraméterben kapott érték az üres string, akkor a függvény egy üres dictionary-vel térjen vissza!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'IB370G;MBNXK114E;MBNXK114G;XA0021-GTK-MM1;IB370E'
+<b>Return:</b> {'infos': ['IB370G', 'IB370E'], 'matekos': ['MBNXK114E', 'MBNXK114G'], 'szabval': ['XA0021-GTK-MM1']}
+
+<b>Input:</b> 'ITN714G;IB402g;XN0011-01317;IB202g'
+<b>Return:</b> {'infos': ['ITN714G', 'IB402g', 'IB202g'], 'matekos': [], 'szabval': ['XN0011-01317']}
+
+<b>Input:</b> ''
+<b>Return:</b> {}
+</pre>
+
+
+### 13. feladat: Fájlok csoportosítása (5 pont)
+
+Krisztián szeretne statisztikát készíteni a Dokumentumok mappájában található fájlokról, ezért egy Python szkriptet ír. A szkript feladata, hogy megszámolja, hogy az adott mappán belül a különböző kiterjesztésű fájlokból mennyi található. A program egy részét Krisztián már megírta, viszont a statisztika készítésben kellene neki egy kis segítség.
+
+Írj egy `statisztika` nevű függvényt, amely egy listát kap paraméterül! A lista fájlok neveit tartalmazza, kiterjesztéssel együtt. A kiterjesztés alatt a legutolsó pont karakter után lévő szöveget értjük a fájlnévben. A függvény számolja meg, hogy az egyes kiterjesztések hányszor fordulnak elő a listában, és az eredményt adja vissza egy dictionary-ben, a példában látható formátumban!
+
+A feladatot úgy oldd meg, hogy a kiterjesztés vizsgálata során ne különböztesd meg a kis- és nagybetűket (tehát pl. `hello.py` és `WORLD.PY` egyaránt `py` kiterjesztésűek).
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> ['feladat.py', 'Bolygo.java', 'HELLOFRIENDS.MP4', 'TEST.PY', 'biro.gib.maxpont.py', 'russian-driving-fails.mp4']
+<b>Return:</b> {'py': 3, 'java': 1, 'mp4': 2}
+</pre>
+
+
+### 14. feladat: Végeredmény (5 pont)
+
+Egy baráti társaság a népszerű [skribbl.io](https://skribbl.io/) játékkal játszik. A játék minden körében egy játékos lerajzol egy előre megadott dolgot, amit a többiek megpróbálnak kitalálni. Az egyes körök során a játékosok pontokat gyűjtenek.
+
+Írj egy `vegeredmeny` nevű függvényt, amely egy dictionary-kből álló listát kap paraméterül! A dictionary-k az egyes körök eredményeit tartalmazzák: a kulcsok a játékosok nevei, az értékek pedig az adott körben elért pontszám. A függvény adja össze az egyes játékosok által szerzett pontokat, és az így kapott végeredményt adja vissza egy dictionary-ben, a példában látható formátumban!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b>
+[
+  { 'shronk': 400, 'Tamas': 200, 'adam': 800, 'Wolf': 500, 'Karoly': 70 },
+  { 'Tamas': 0, 'Wolf': 0, 'Karoly': 200, 'shronk': 0, 'adam': 100 },
+  { 'Wolf': 600, 'adam': 400, 'Karoly': 500, 'shronk': 200, 'Tamas': 300 },
+  { 'Tamas': 500, 'Wolf': 100, 'Karoly': 0, 'shronk': 600, 'adam': 200 },
+  { 'adam': 100, 'Wolf': 500, 'shronk': 0, 'Tamas': 300, 'Karoly': 100 }
+]<br>
+<b>Return:</b> {'shronk': 1200, 'Tamas': 1300, 'adam': 1600, 'Wolf': 1700, 'Karoly': 870}
+</pre>
+
+
+### 15. feladat: Szöveges végeredmény (3 pont)
+
+A 14. feladatban szereplő, végeredményeket tartalmazó dictionary tartalmát szöveges formátumban is meg szeretnénk jeleníteni. Írj egy `szoveges_vegeredmeny` nevű függvényt, amely egy pontszám-statisztikákat tartalmazó dictionary-t kap paraméterül! A függvény járja be a dictionary kulcs-érték párjait, képezzen belőlük `{kulcs}: {ertek} pont` formátumú szöveget, amiket 1 vesszővel és 1 szóközzel elválasztva fűzzön össze (a szöveg végén ne szerepeljen se vessző, se szóköz)! A visszatérési érték az így kapott szöveg.
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> {'shronk': 1200, 'Tamas': 1300, 'adam': 1600, 'Wolf': 1700, 'Karoly': 870}
+<b>Return:</b> 'shronk: 1200 pont, Tamas: 1300 pont, adam: 1600 pont, Wolf: 1700 pont, Karoly: 870 pont'
+</pre>
+
+
+### 16. feladat: Győztes (3 pont)
+
+Természetesen a skribbl.io-s játék végén azt is tudni szeretnénk, hogy ki nyert. Írj egy `gyoztes` nevű függvényt, amely egy pontszám-statisztikát tartalmazó dictionary-t kap paraméterül (mint az előző feladatban)! A függvény térjen vissza annak a játékosnak a nevével, akinek a legtöbb pontszáma van! Amennyiben több azonos pontszámú játékos van a dictionary-ben, akkor a korábban előforduló játékos nevét add vissza!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> {'shronk': 1200, 'Tamas': 1300, 'adam': 1600, 'Wolf': 1700, 'Karoly': 870}
+<b>Return:</b> 'Wolf'
 </pre>

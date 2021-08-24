@@ -287,7 +287,7 @@ pre[data-line] .line-highlight[data-end]:after {
 </pre>
 <h3 class="mume-header" id="4-feladat-leghosszabb-sz%C3%B3-3-pont">4. feladat: Leghosszabb sz&#xF3; (3 pont)</h3>
 
-<p>&#xCD;rj egy <code>leghosszabb_szo</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l (a sz&#xF6;veg sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott szavakat tartalmaz)! A f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza a sz&#xF6;vegben tal&#xE1;lhat&#xF3; leghosszabb sz&#xF3;val! Amennyiben t&#xF6;bb sz&#xF3; is ugyanolyan hossz&#xFA;, akkor k&#xF6;z&#xFC;l&#xFC;k a sz&#xF6;vegben kor&#xE1;bban el&#x151;fordul&#xF3;t adjuk vissza!</p>
+<p>&#xCD;rj egy <code>leghosszabb_szo</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l (a sz&#xF6;veg sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott szavakat tartalmaz)! A f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza a sz&#xF6;vegben tal&#xE1;lhat&#xF3; leghosszabb sz&#xF3;val! Amennyiben t&#xF6;bb sz&#xF3; is ugyanolyan hossz&#xFA;, akkor k&#xF6;z&#xFC;l&#xFC;k a sz&#xF6;vegben kor&#xE1;bban el&#x151;fordul&#xF3;t add vissza!</p>
 <p>Ha a param&#xE9;ter&#xFC;l kapott sz&#xF6;veg az &#xFC;res string, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> &apos;Szia uram! Mondd mar meg, hogy hany ora van!&apos;
@@ -380,6 +380,68 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <b>Input:</b> [[5, 1], [3, 2], [8, 6]], [[4, 8], [2, 7]]
 <b>Return:</b> []
+</pre>
+<h3 class="mume-header" id="11-feladat-sz%C3%B6vegelemz%C3%A9s-4-pont">11. feladat: Sz&#xF6;vegelemz&#xE9;s (4 pont)</h3>
+
+<p>&#xCD;rj egy <code>szoveget_elemez</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget v&#xE1;r param&#xE9;terben! A f&#xFC;ggv&#xE9;ny sz&#xE1;molja meg, hogy a sz&#xF6;vegben mennyi bet&#x171;, sz&#xE1;mjegy &#xE9;s egy&#xE9;b karakter szerepel, majd adja ezt vissza egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Python4Life!!!&apos;
+<b>Return:</b> {&apos;betu&apos;: 10, &apos;szamjegy&apos;: 1, &apos;egyeb&apos;: 3}
+
+<b>Input:</b> &apos;12345&apos;
+<b>Return:</b> {&apos;betu&apos;: 0, &apos;szamjegy&apos;: 5, &apos;egyeb&apos;: 0}
+</pre>
+<h3 class="mume-header" id="12-feladat-kurzusk%C3%B3dok-5-pont">12. feladat: Kurzusk&#xF3;dok (5 pont)</h3>
+
+<p>Informatikus szakon t&#xF6;bbf&#xE9;le kurzust is felvehet&#xFC;nk. Az informatik&#xE1;val kapcsolatos t&#xE1;rgyak kurzusk&#xF3;dja <code>I</code> bet&#x171;vel, a matekos t&#xE1;rgyak kurzusk&#xF3;dja <code>M</code> bet&#x171;vel, m&#xED;g a szabadon v&#xE1;laszthat&#xF3; t&#xE1;rgyak kurzusk&#xF3;dja <code>X</code> bet&#x171;vel kezd&#x151;dik.</p>
+<p>&#xCD;rj egy <code>kurzuskodot_csoportosit</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan sz&#xF6;veget kap param&#xE9;ter&#xFC;l, ami pontosvessz&#x151;vel elv&#xE1;lasztott kurzusk&#xF3;dokat tartalmaz! A f&#xFC;ggv&#xE9;ny csoportos&#xED;tsa a sz&#xF6;vegben szerepl&#x151; kurzusk&#xF3;dokat &quot;inf&#xF3;s&quot;, &quot;matekos&quot; &#xE9;s &quot;szabv&#xE1;l&quot; kateg&#xF3;ri&#xE1;kba, majd adja vissza az &#xED;gy kapott csoportos&#xED;t&#xE1;st egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban! Ha a param&#xE9;terben kapott &#xE9;rt&#xE9;k az &#xFC;res string, akkor a f&#xFC;ggv&#xE9;ny egy &#xFC;res dictionary-vel t&#xE9;rjen vissza!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;IB370G;MBNXK114E;MBNXK114G;XA0021-GTK-MM1;IB370E&apos;
+<b>Return:</b> {&apos;infos&apos;: [&apos;IB370G&apos;, &apos;IB370E&apos;], &apos;matekos&apos;: [&apos;MBNXK114E&apos;, &apos;MBNXK114G&apos;], &apos;szabval&apos;: [&apos;XA0021-GTK-MM1&apos;]}
+
+<b>Input:</b> &apos;ITN714G;IB402g;XN0011-01317;IB202g&apos;
+<b>Return:</b> {&apos;infos&apos;: [&apos;ITN714G&apos;, &apos;IB402g&apos;, &apos;IB202g&apos;], &apos;matekos&apos;: [], &apos;szabval&apos;: [&apos;XN0011-01317&apos;]}
+
+<b>Input:</b> &apos;&apos;
+<b>Return:</b> {}
+</pre>
+<h3 class="mume-header" id="13-feladat-f%C3%A1jlok-csoportos%C3%ADt%C3%A1sa-5-pont">13. feladat: F&#xE1;jlok csoportos&#xED;t&#xE1;sa (5 pont)</h3>
+
+<p>Kriszti&#xE1;n szeretne statisztik&#xE1;t k&#xE9;sz&#xED;teni a Dokumentumok mapp&#xE1;j&#xE1;ban tal&#xE1;lhat&#xF3; f&#xE1;jlokr&#xF3;l, ez&#xE9;rt egy Python szkriptet &#xED;r. A szkript feladata, hogy megsz&#xE1;molja, hogy az adott mapp&#xE1;n bel&#xFC;l a k&#xFC;l&#xF6;nb&#xF6;z&#x151; kiterjeszt&#xE9;s&#x171; f&#xE1;jlokb&#xF3;l mennyi tal&#xE1;lhat&#xF3;. A program egy r&#xE9;sz&#xE9;t Kriszti&#xE1;n m&#xE1;r meg&#xED;rta, viszont a statisztika k&#xE9;sz&#xED;t&#xE9;sben kellene neki egy kis seg&#xED;ts&#xE9;g.</p>
+<p>&#xCD;rj egy <code>statisztika</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy list&#xE1;t kap param&#xE9;ter&#xFC;l! A lista f&#xE1;jlok neveit tartalmazza, kiterjeszt&#xE9;ssel egy&#xFC;tt. A kiterjeszt&#xE9;s alatt a legutols&#xF3; pont karakter ut&#xE1;n l&#xE9;v&#x151; sz&#xF6;veget &#xE9;rtj&#xFC;k a f&#xE1;jln&#xE9;vben. A f&#xFC;ggv&#xE9;ny sz&#xE1;molja meg, hogy az egyes kiterjeszt&#xE9;sek h&#xE1;nyszor fordulnak el&#x151; a list&#xE1;ban, &#xE9;s az eredm&#xE9;nyt adja vissza egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban!</p>
+<p>A feladatot &#xFA;gy oldd meg, hogy a kiterjeszt&#xE9;s vizsg&#xE1;lata sor&#xE1;n ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t pl. <code>hello.py</code> &#xE9;s <code>WORLD.PY</code> egyar&#xE1;nt <code>py</code> kiterjeszt&#xE9;s&#x171;ek).</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [&apos;feladat.py&apos;, &apos;Bolygo.java&apos;, &apos;HELLOFRIENDS.MP4&apos;, &apos;TEST.PY&apos;, &apos;biro.gib.maxpont.py&apos;, &apos;russian-driving-fails.mp4&apos;]
+<b>Return:</b> {&apos;py&apos;: 3, &apos;java&apos;: 1, &apos;mp4&apos;: 2}
+</pre>
+<h3 class="mume-header" id="14-feladat-v%C3%A9geredm%C3%A9ny-5-pont">14. feladat: V&#xE9;geredm&#xE9;ny (5 pont)</h3>
+
+<p>Egy bar&#xE1;ti t&#xE1;rsas&#xE1;g a n&#xE9;pszer&#x171; <a href="https://skribbl.io/">skribbl.io</a> j&#xE1;t&#xE9;kkal j&#xE1;tszik. A j&#xE1;t&#xE9;k minden k&#xF6;r&#xE9;ben egy j&#xE1;t&#xE9;kos lerajzol egy el&#x151;re megadott dolgot, amit a t&#xF6;bbiek megpr&#xF3;b&#xE1;lnak kital&#xE1;lni. Az egyes k&#xF6;r&#xF6;k sor&#xE1;n a j&#xE1;t&#xE9;kosok pontokat gy&#x171;jtenek.</p>
+<p>&#xCD;rj egy <code>vegeredmeny</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy dictionary-kb&#x151;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A dictionary-k az egyes k&#xF6;r&#xF6;k eredm&#xE9;nyeit tartalmazz&#xE1;k: a kulcsok a j&#xE1;t&#xE9;kosok nevei, az &#xE9;rt&#xE9;kek pedig az adott k&#xF6;rben el&#xE9;rt pontsz&#xE1;m. A f&#xFC;ggv&#xE9;ny adja &#xF6;ssze az egyes j&#xE1;t&#xE9;kosok &#xE1;ltal szerzett pontokat, &#xE9;s az &#xED;gy kapott v&#xE9;geredm&#xE9;nyt adja vissza egy dictionary-ben, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b>
+[
+  { &apos;shronk&apos;: 400, &apos;Tamas&apos;: 200, &apos;adam&apos;: 800, &apos;Wolf&apos;: 500, &apos;Karoly&apos;: 70 },
+  { &apos;Tamas&apos;: 0, &apos;Wolf&apos;: 0, &apos;Karoly&apos;: 200, &apos;shronk&apos;: 0, &apos;adam&apos;: 100 },
+  { &apos;Wolf&apos;: 600, &apos;adam&apos;: 400, &apos;Karoly&apos;: 500, &apos;shronk&apos;: 200, &apos;Tamas&apos;: 300 },
+  { &apos;Tamas&apos;: 500, &apos;Wolf&apos;: 100, &apos;Karoly&apos;: 0, &apos;shronk&apos;: 600, &apos;adam&apos;: 200 },
+  { &apos;adam&apos;: 100, &apos;Wolf&apos;: 500, &apos;shronk&apos;: 0, &apos;Tamas&apos;: 300, &apos;Karoly&apos;: 100 }
+]<br>
+<b>Return:</b> {&apos;shronk&apos;: 1200, &apos;Tamas&apos;: 1300, &apos;adam&apos;: 1600, &apos;Wolf&apos;: 1700, &apos;Karoly&apos;: 870}
+</pre>
+<h3 class="mume-header" id="15-feladat-sz%C3%B6veges-v%C3%A9geredm%C3%A9ny-3-pont">15. feladat: Sz&#xF6;veges v&#xE9;geredm&#xE9;ny (3 pont)</h3>
+
+<p>A 14. feladatban szerepl&#x151;, v&#xE9;geredm&#xE9;nyeket tartalmaz&#xF3; dictionary tartalm&#xE1;t sz&#xF6;veges form&#xE1;tumban is meg szeretn&#xE9;nk jelen&#xED;teni. &#xCD;rj egy <code>szoveges_vegeredmeny</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy pontsz&#xE1;m-statisztik&#xE1;kat tartalmaz&#xF3; dictionary-t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny j&#xE1;rja be a dictionary kulcs-&#xE9;rt&#xE9;k p&#xE1;rjait, k&#xE9;pezzen bel&#x151;l&#xFC;k <code>{kulcs}: {ertek} pont</code> form&#xE1;tum&#xFA; sz&#xF6;veget, amiket 1 vessz&#x151;vel &#xE9;s 1 sz&#xF3;k&#xF6;zzel elv&#xE1;lasztva f&#x171;zz&#xF6;n &#xF6;ssze (a sz&#xF6;veg v&#xE9;g&#xE9;n ne szerepeljen se vessz&#x151;, se sz&#xF3;k&#xF6;z)! A visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k az &#xED;gy kapott sz&#xF6;veg.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> {&apos;shronk&apos;: 1200, &apos;Tamas&apos;: 1300, &apos;adam&apos;: 1600, &apos;Wolf&apos;: 1700, &apos;Karoly&apos;: 870}
+<b>Return:</b> &apos;shronk: 1200 pont, Tamas: 1300 pont, adam: 1600 pont, Wolf: 1700 pont, Karoly: 870 pont&apos;
+</pre>
+<h3 class="mume-header" id="16-feladat-gy%C5%91ztes-3-pont">16. feladat: Gy&#x151;ztes (3 pont)</h3>
+
+<p>Term&#xE9;szetesen a skribbl.io-s j&#xE1;t&#xE9;k v&#xE9;g&#xE9;n azt is tudni szeretn&#xE9;nk, hogy ki nyert. &#xCD;rj egy <code>gyoztes</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy pontsz&#xE1;m-statisztik&#xE1;t tartalmaz&#xF3; dictionary-t kap param&#xE9;ter&#xFC;l (mint az el&#x151;z&#x151; feladatban)! A f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza annak a j&#xE1;t&#xE9;kosnak a nev&#xE9;vel, akinek a legt&#xF6;bb pontsz&#xE1;ma van! Amennyiben t&#xF6;bb azonos pontsz&#xE1;m&#xFA; j&#xE1;t&#xE9;kos van a dictionary-ben, akkor a kor&#xE1;bban el&#x151;fordul&#xF3; j&#xE1;t&#xE9;kos nev&#xE9;t add vissza!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> {&apos;shronk&apos;: 1200, &apos;Tamas&apos;: 1300, &apos;adam&apos;: 1600, &apos;Wolf&apos;: 1700, &apos;Karoly&apos;: 870}
+<b>Return:</b> &apos;Wolf&apos;
 </pre>
       </div>
       
