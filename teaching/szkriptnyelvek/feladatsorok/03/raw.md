@@ -79,9 +79,9 @@ Mivel Elliot felettesét nagyon lenyűgözte az 1 feladatsorral korábban megír
 
 
 
-### 6. feladat: Egyedi szavak (5 pont)
+### 6. feladat: Egyedi szavak száma (5 pont)
 
-Írj egy `egyedi_szavak` nevű függvényt, amely egy szöveget kap paraméterül (a szöveg szóközzel elválasztott szavakat tartalmaz)! A függvény adja vissza, hogy hány **különböző** szó található a szövegben! 
+Írj egy `egyedi_szavak_szama` nevű függvényt, amely egy szöveget kap paraméterül (a szöveg szóközzel elválasztott szavakat tartalmaz)! A függvény adja vissza, hogy hány **különböző** szó található a szövegben! 
 
 * A kis- és nagybetűket ne különböztesd meg (tehát pl. `alma` és `ALMA` ugyanaz a szó)!
 * A szavak végén lévő pontoktól, felkiáltójelektől, kérdőjelektől és vesszőktől szabadulj meg (tehát például `Alma?` és `alma` ugyanaz a szó)! Feltehetjük, hogy ezek az írásjelek csak szavak végén fordulnak elő a szövegben.
