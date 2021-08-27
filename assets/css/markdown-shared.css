@@ -13,6 +13,10 @@ code {
     background-color: transparent !important;
 }
 
+ul ul li:first-child {
+    margin-top: 5px !important;
+}
+
 li {
     margin-bottom: 5px !important;
 }
@@ -67,4 +71,9 @@ li {
 
 .example {
     color: #3dacb9 !important;
+}
+
+.indented {
+    margin-left: 20px;
+    margin-right: 20px;
 }
