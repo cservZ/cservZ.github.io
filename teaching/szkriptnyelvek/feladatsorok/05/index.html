@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Szkriptnyelvek - 4. feladatsor</title>
+      <title>Szkriptnyelvek - 5. feladatsor</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="../../../../assets/img/icon.png">
@@ -257,124 +257,102 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="szkriptnyelvek-4-gyakorl%C3%B3-feladatsor">Szkriptnyelvek - 4. gyakorl&#xF3; feladatsor</h1>
+      <h1 class="mume-header" id="szkriptnyelvek-5-gyakorl%C3%B3-feladatsor">Szkriptnyelvek - 5. gyakorl&#xF3; feladatsor</h1>
 
-<h2 class="mume-header" id="python-objektumorient%C3%A1lts%C3%A1g-kiv%C3%A9telkezel%C3%A9s">Python - Objektumorient&#xE1;lts&#xE1;g, kiv&#xE9;telkezel&#xE9;s</h2>
+<h2 class="mume-header" id="python-f%C3%A1jlkezel%C3%A9s">Python - F&#xE1;jlkezel&#xE9;s</h2>
 
-<h3 class="mume-header" id="borospince-40-pont">Borospince (40 pont)</h3>
+<h3 class="mume-header" id="lej%C3%A1tsz%C3%A1si-lista-30-pont">Lej&#xE1;tsz&#xE1;si lista (30 pont)</h3>
 
-<p>Egy borospinc&#xE9;ben szekr&#xE9;nyek vannak, amelyek polcain borokat t&#xE1;rolnak. K&#xE9;sz&#xED;tsd el a <code>BorospinceException</code>, <code>Bor</code> &#xE9;s <code>Szekreny</code> oszt&#xE1;lyokat a feladatle&#xED;r&#xE1;s alapj&#xE1;n! A feladatok megold&#xE1;s&#xE1;t egyetlen Python szkriptbe k&#xE9;sz&#xED;tsd el!</p>
-<h4 class="mume-header" id="1-a-borospinceexception-oszt%C3%A1ly-2-pont">1. A <code>BorospinceException</code> oszt&#xE1;ly (2 pont)</h4>
+<p>A <code>playlist.csv</code> &#xE1;llom&#xE1;ny a telefonra let&#xF6;lt&#xF6;tt zen&#xE9;ink adatait tartalmazza. A f&#xE1;jl egyes soraiban szerepl&#x151;, pontosvessz&#x151;vel elv&#xE1;lasztott adatok rendre:</p>
+<ul>
+<li>az el&#x151;ad&#xF3; neve</li>
+<li>a zene c&#xED;me</li>
+<li>a zene m&#x171;faja</li>
+<li>a zene hossza (m&#xE1;sodpercben).</li>
+</ul>
+<h4 class="mume-header" id="1-zen%C3%A9k-adatainak-beolvas%C3%A1sa-6-pont">1. Zen&#xE9;k adatainak beolvas&#xE1;sa (6 pont)</h4>
 
-<p>Hozz l&#xE9;tre egy <code>BorospinceException</code> nev&#x171; kiv&#xE9;teloszt&#xE1;lyt, amely az <code>Exception</code> be&#xE9;p&#xED;tett kiv&#xE9;teloszt&#xE1;lyb&#xF3;l &#xF6;r&#xF6;kl&#x151;dj&#xF6;n! K&#xE9;sz&#xED;ts egy egyparam&#xE9;teres konstruktort az oszt&#xE1;lyon bel&#xFC;l, amely egy hiba&#xFC;zenetet v&#xE1;r param&#xE9;terben! A konstruktorban h&#xED;vd meg az &#x151;soszt&#xE1;ly konstruktor&#xE1;t &#xE9;s add &#xE1;t neki param&#xE9;terben a hiba&#xFC;zenetet!</p>
-<h4 class="mume-header" id="2-a-bor-oszt%C3%A1ly-13-pont">2. A <code>Bor</code> oszt&#xE1;ly (13 pont)</h4>
-
-<p>Hozz l&#xE9;tre egy <code>Bor</code> oszt&#xE1;lyt, amely a <code>_fajta</code>, <code>_evjarat</code> &#xE9;s <code>_alkoholtartalom</code> adattagokkal rendelkezik!</p>
-<ul>
-<li>
-<p>Az oszt&#xE1;ly konstruktora a bor fajt&#xE1;j&#xE1;t, &#xE9;vj&#xE1;rat&#xE1;t &#xE9;s alkoholtartalm&#xE1;t v&#xE1;rja param&#xE9;terben (ebben a sorrendben)!</p>
-<ul>
-<li>Az alkoholtartalom &#xE9;rt&#xE9;k&#xE9;t ne legyen k&#xF6;telez&#x151; megadni, alap&#xE9;rt&#xE9;ke legyen <code>12.5</code>!</li>
-<li>Inicializ&#xE1;ld a <code>_fajta</code>, <code>_evjarat</code> &#xE9;s <code>_alkoholtartalom</code> adattagokat a param&#xE9;terek alapj&#xE1;n! <strong>(3 pont)</strong></li>
-</ul>
-</li>
-<li>
-<p>&#xCD;rj get &#xE9;s set property-t a <code>_fajta</code> adattaghoz, <code>fajta</code> n&#xE9;ven! A getter adja vissza az adattag &#xE9;rt&#xE9;k&#xE9;t, a setter pedig &#xE1;ll&#xED;tsa be azt a param&#xE9;terben kapott &#xE9;rt&#xE9;kre! <strong>(2 pont)</strong></p>
-</li>
-<li>
-<p>&#xCD;rj get &#xE9;s set property-t az <code>_alkoholtartalom</code> adattaghoz is, <code>alkoholtartalom</code> n&#xE9;ven!</p>
-<ul>
-<li>A setterben kezeld le, hogy csak 0 &#xE9;s 100 k&#xF6;z&#xF6;tti val&#xF3;s sz&#xE1;m lehessen az adattag &#xE9;rt&#xE9;ke!</li>
-<li>Nem megfelel&#x151; t&#xED;pus&#xFA; vagy &#xE9;rt&#xE9;k&#x171; param&#xE9;ter eset&#xE9;n dobj egy <code>BorospinceException</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Nem megfelelo alkoholtartalom!</code> sz&#xF6;veggel inicializ&#xE1;lj! <strong>(2 pont)</strong></li>
-</ul>
-</li>
-<li>
-<p>&#xCD;rd &#xE1;t oszt&#xE1;ly konstruktor&#xE1;t &#xFA;gy, hogy az alkoholtartalom &#xE9;rt&#xE9;ke itt is ellen&#x151;rizve legyen! <strong>(1 pont)</strong></p>
-</li>
-<li>
-<p>Defini&#xE1;ld fel&#xFC;l az oszt&#xE1;lyban az objektum sz&#xF6;vegg&#xE9; alak&#xED;t&#xE1;s&#xE1;&#xE9;rt felel&#x151; met&#xF3;dust &#xFA;gy, hogy az a k&#xF6;vetkez&#x151; sz&#xF6;veggel t&#xE9;rjen vissza: <code>{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}%</code> (a kapcsos z&#xE1;r&#xF3;jelek hely&#xE9;re &#xE9;rtelemszer&#x171;en a megfelel&#x151; &#xE9;rt&#xE9;kek legyenek behelyettes&#xED;tve)! <strong>(2 pont)</strong></p>
-</li>
-<li>
-<p>Defini&#xE1;ld fel&#xFC;l az oszt&#xE1;lyban az <code>==</code> oper&#xE1;tor m&#x171;k&#xF6;d&#xE9;s&#xE9;t!</p>
-<ul>
-<li>Ha az adott objektumot egy m&#xE1;sik <code>Bor</code> objektummal szeretn&#xE9;nk &#xF6;sszehasonl&#xED;tani, akkor az oper&#xE1;tor adja vissza, hogy a k&#xE9;t bor fajt&#xE1;ja, &#xE9;vj&#xE1;rata &#xE9;s alkoholtartalma rendre megegyezik-e! A fajt&#xE1;k egyez&#xE9;s&#xE9;nek vizsg&#xE1;latakor a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztess&#xFC;k meg (teh&#xE1;t pl. <code>aszu</code> &#xE9;s <code>Aszu</code> ugyanaz a fajtan&#xE9;v)!</li>
-<li>Amennyiben a f&#xFC;ggv&#xE9;ny nem <code>Bor</code> t&#xED;pus&#xFA; param&#xE9;tert kap, akkor logikai hamis &#xE9;rt&#xE9;kkel t&#xE9;rjen vissza! <strong>(3 pont)</strong></li>
-</ul>
-</li>
-</ul>
-<h4 class="mume-header" id="3-a-szekreny-oszt%C3%A1ly-25-pont">3. A <code>Szekreny</code> oszt&#xE1;ly (25 pont)</h4>
-
-<p>Hozz l&#xE9;tre egy <code>Szekreny</code> oszt&#xE1;lyt, amelynek egyetlen adattagja egy <code>borok</code> nev&#x171; lista! Ebben a list&#xE1;ban t&#xE1;roljuk a szekr&#xE9;ny polcain l&#xE9;v&#x151; borokat.</p>
-<ul>
-<li>
-<p>Az oszt&#xE1;ly konstruktora nem v&#xE1;r param&#xE9;tert, &#xE9;s a <code>borok</code> adattagot egy &#xFC;res list&#xE1;val inicializ&#xE1;lja! <strong>(2 pont)</strong></p>
-</li>
-<li>
-<p>&#xCD;rj egy <code>get_bor</code> met&#xF3;dust, amely param&#xE9;ter&#xFC;l egy <code>n</code> eg&#xE9;sz sz&#xE1;mot kap! A met&#xF3;dus t&#xE9;rjen vissza a <code>borok</code> lista <code>n</code>-edik index&#x171; elem&#xE9;vel!</p>
-<ul>
-<li>Az egyszer&#x171;s&#xE9;g kedv&#xE9;&#xE9;rt csak a nemnegat&#xED;v indexeket kezelj&#xFC;k, &#xED;gy ha a param&#xE9;terben &#xE9;rkez&#x151; <code>n</code>-&#xE9;rt&#xE9;k negat&#xED;v vagy nagyobb, mint a lista utols&#xF3; elem&#xE9;nek indexe, akkor dobj egy <code>BorospinceException</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Nem letezo index!</code> sz&#xF6;veggel inicializ&#xE1;lj! <strong>(3 pont)</strong></li>
-</ul>
-</li>
-<li>
-<p>Defini&#xE1;ld fel&#xFC;l a <code>+=</code> oper&#xE1;tort az oszt&#xE1;lyban &#xFA;gy, hogy ha az egy <code>Bor</code> objektumot kap param&#xE9;ter&#xFC;l, akkor sz&#xFA;rja be azt a <code>borok</code> lista v&#xE9;g&#xE9;re! Egy&#xE9;b t&#xED;pus&#xFA; param&#xE9;ter eset&#xE9;n dobj egy <code>TypeError</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Nem bor!</code> sz&#xF6;veggel inicializ&#xE1;lj! <strong>(3 pont)</strong></p>
-</li>
-<li>
-<p>Defini&#xE1;ld fel&#xFC;l a <code>+</code> oper&#xE1;tort az oszt&#xE1;lyban, amely egy m&#xE1;sik <code>Szekreny</code> objektumot v&#xE1;rjon param&#xE9;terben! Az oper&#xE1;tor t&#xE9;rjen vissza egy &#xFA;j <code>Szekreny</code> objektummal, amelynek a <code>borok</code> list&#xE1;ja az aktu&#xE1;lis &#xE9;s a param&#xE9;terben &#xE9;rkez&#x151; objektum <code>borok</code> list&#xE1;inak &#xF6;sszef&#x171;z&#xE9;se legyen! Nem megfelel&#x151; t&#xED;pus&#xFA; param&#xE9;ter eset&#xE9;n dobj egy <code>TypeError</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Nem szekreny!</code> sz&#xF6;veggel inicializ&#xE1;lj! <strong>(3 pont)</strong></p>
-</li>
-<li>
-<p>&#xCD;rj egy <code>atlag_alkoholtartalom</code> met&#xF3;dust, amely t&#xE9;rjen vissza a szekr&#xE9;nyen l&#xE9;v&#x151; borok (<code>borok</code> adattag) alkoholtartalm&#xE1;nak &#xE1;tlag&#xE1;val! Amennyiben nincs egyetlen bor sem a szekr&#xE9;nyen, akkor dobj egy <code>BorospinceException</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit az <code>Ures a szekreny!</code> sz&#xF6;veggel inicializ&#xE1;lj! <strong>(3 pont)</strong></p>
-</li>
-<li>
-<p>K&#xE9;sz&#xED;ts egy param&#xE9;ter n&#xE9;lk&#xFC;li <code>statisztika</code> met&#xF3;dust! A met&#xF3;dus sz&#xE1;molja &#xF6;ssze, hogy a k&#xFC;l&#xF6;nf&#xE9;le borfajt&#xE1;kb&#xF3;l mennyi tal&#xE1;lhat&#xF3; a szekr&#xE9;nyen, &#xE9;s az eredm&#xE9;nyt adja vissza egy dictionary-ben! <strong>(5 pont)</strong></p>
-<ul>
-<li>Ha a szekr&#xE9;nyen nincs egyetlen bor sem, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k egy &#xFC;res dictionary.</li>
-<li>Ha a szekr&#xE9;nyen van bor, akkor sz&#xE1;moljuk &#xF6;ssze az egyes borfajt&#xE1;k darabsz&#xE1;m&#xE1;t! A borfajt&#xE1;k nev&#xE9;ben ne k&#xFC;l&#xF6;nb&#xF6;ztess&#xFC;k meg a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t pl. <code>aszu</code> &#xE9;s <code>Aszu</code> ugyanaz a fajtan&#xE9;v)!</li>
-</ul>
-</li>
-</ul>
-<div class="bordered-box border-blue indented">
-<span class="blue">P&#xE9;lda a met&#xF3;dus m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span><br><br>
-<pre class="language-html"><b>A szekr&#xE9;ny tartalma:</b>
-Bor(&apos;tokaji aszu&apos;, 2017, 13.5),
-Bor(&apos;egri bikaver&apos;, 2013, 12),
-Bor(&apos;TOKAJI ASZU&apos;, 2015, 13.8)
-
-<b>A statisztika met&#xF3;dus visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke:</b>
-{ &apos;tokaji aszu&apos;: 2, &apos;egri bikaver&apos;: 1 }
+<p>&#xCD;rj egy <code>beolvas</code> f&#xFC;ggv&#xE9;nyt, amely nem v&#xE1;r param&#xE9;tert! A f&#xFC;ggv&#xE9;ny olvassa be a <code>playlist.csv</code> f&#xE1;jl tartalm&#xE1;t! A beolvasott sorok feldarabol&#xE1;sa ut&#xE1;n minden zene adatait egy dictionary-ben t&#xE1;rold el! A dictionary-k az <code>eloado</code>, <code>cim</code>, <code>mufaj</code> &#xE9;s <code>hossz</code> kulcsokkal rendelkezzenek, amelyek k&#xF6;z&#xFC;l a <code>hossz</code> kulcshoz tartoz&#xF3; &#xE9;rt&#xE9;k eg&#xE9;sz sz&#xE1;m, a t&#xF6;bbi kulcshoz tartoz&#xF3; &#xE9;rt&#xE9;k string! Az &#xED;gy kapott dictionary-ket helyezd egy list&#xE1;ba, majd t&#xE9;rj vissza a list&#xE1;val!</p>
+<p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
+<p><span class="example">A f&#xFC;ggv&#xE9;ny elv&#xE1;rt visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke:</span></p>
+<pre class="language-html">[
+    {&apos;eloado&apos;: &apos;Rick Astley&apos;, &apos;cim&apos;: &apos;Never Gonna Give You Up&apos;, &apos;mufaj&apos;: &apos;pop&apos;, &apos;hossz&apos;: 213}, 
+    {&apos;eloado&apos;: &apos;Imagine Dragons&apos;, &apos;cim&apos;: &apos;Thunder&apos;, &apos;mufaj&apos;: &apos;pop&apos;, &apos;hossz&apos;: 204}, 
+    {&apos;eloado&apos;: &apos;Dragonforce&apos;, &apos;cim&apos;: &apos;Through the Fire and Flames&apos;, &apos;mufaj&apos;: &apos;metal&apos;, &apos;hossz&apos;: 445}, 
+    {&apos;eloado&apos;: &apos;Boney M.&apos;, &apos;cim&apos;: &apos;Rasputin&apos;, &apos;mufaj&apos;: &apos;pop&apos;, &apos;hossz&apos;: 284}, 
+    {&apos;eloado&apos;: &apos;Steppenwolf&apos;, &apos;cim&apos;: &apos;Born To Be Wild&apos;, &apos;mufaj&apos;: &apos;rock&apos;, &apos;hossz&apos;: 216}, 
+    {&apos;eloado&apos;: &apos;Powerwolf&apos;, &apos;cim&apos;: &apos;Incense and Iron&apos;, &apos;mufaj&apos;: &apos;metal&apos;, &apos;hossz&apos;: 240}, 
+    {&apos;eloado&apos;: &apos;Smash Mouth&apos;, &apos;cim&apos;: &apos;All Star&apos;, &apos;mufaj&apos;: &apos;rock&apos;, &apos;hossz&apos;: 237}, 
+    {&apos;eloado&apos;: &apos;Nirvana&apos;, &apos;cim&apos;: &apos;Smells Like Teen Spirit&apos;, &apos;mufaj&apos;: &apos;rock&apos;, &apos;hossz&apos;: 279}, 
+    {&apos;eloado&apos;: &apos;Gloryhammer&apos;, &apos;cim&apos;: &apos;The Unicorn Invasion of Dundee&apos;, &apos;mufaj&apos;: &apos;metal&apos;, &apos;hossz&apos;: 265}, 
+    {&apos;eloado&apos;: &apos;Powerwolf&apos;, &apos;cim&apos;: &apos;Venom of Venus&apos;, &apos;mufaj&apos;: &apos;metal&apos;, &apos;hossz&apos;: 208}, 
+    {&apos;eloado&apos;: &apos;Imagine Dragons&apos;, &apos;cim&apos;: &apos;Radioactive&apos;, &apos;mufaj&apos;: &apos;rock&apos;, &apos;hossz&apos;: 188}, 
+    {&apos;eloado&apos;: &apos;Dschinghis Khan&apos;, &apos;cim&apos;: &apos;Moskau&apos;, &apos;mufaj&apos;: &apos;pop&apos;, &apos;hossz&apos;: 275}, 
+    {&apos;eloado&apos;: &apos;Dschinghis Khan&apos;, &apos;cim&apos;: &apos;Dschinghis Khan&apos;, &apos;mufaj&apos;: &apos;pop&apos;, &apos;hossz&apos;: 185}, 
+    {&apos;eloado&apos;: &apos;Bonnie Tyler&apos;, &apos;cim&apos;: &apos;Total Eclipse of the Heart&apos;, &apos;mufaj&apos;: &apos;pop&apos;, &apos;hossz&apos;: 334}, 
+    {&apos;eloado&apos;: &apos;Gopnik McBlyat&apos;, &apos;cim&apos;: &apos;Snakes In Tracksuits&apos;, &apos;mufaj&apos;: &apos;hardbass&apos;, &apos;hossz&apos;: 261}, 
+    {&apos;eloado&apos;: &apos;Foster The People&apos;, &apos;cim&apos;: &apos;Pumped Up Kicks&apos;, &apos;mufaj&apos;: &apos;pop&apos;, &apos;hossz&apos;: 253}, 
+    {&apos;eloado&apos;: &apos;Linkin Park&apos;, &apos;cim&apos;: &apos;In The End&apos;, &apos;mufaj&apos;: &apos;rock&apos;, &apos;hossz&apos;: 219}, 
+    {&apos;eloado&apos;: &apos;Powerwolf&apos;, &apos;cim&apos;: &apos;Dancing With The Dead&apos;, &apos;mufaj&apos;: &apos;metal&apos;, &apos;hossz&apos;: 291}, 
+    {&apos;eloado&apos;: &apos;Green Day&apos;, &apos;cim&apos;: &apos;Boulevard of Broken Dreams&apos;, &apos;mufaj&apos;: &apos;rock&apos;, &apos;hossz&apos;: 288}, 
+    {&apos;eloado&apos;: &apos;Korpiklaani&apos;, &apos;cim&apos;: &apos;Ievan polkka&apos;, &apos;mufaj&apos;: &apos;metal&apos;, &apos;hossz&apos;: 194}
+]
 </pre>
-</div>
-<ul>
-<li>
-<p>&#xCD;rj egy <code>megisszak</code> met&#xF3;dust, amely egy <code>Bor</code> t&#xED;pus&#xFA; objektumot v&#xE1;r param&#xE9;terben! A met&#xF3;dus t&#xF6;r&#xF6;lje az adott bort a <code>borok</code> list&#xE1;b&#xF3;l, amennyiben az szerepel a list&#xE1;ban!</p>
-<ul>
-<li>Ha a bor nem szerepel a list&#xE1;ban, akkor dobj egy <code>BorospinceException</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Bor nem talalhato!</code> sz&#xF6;veggel inicializ&#xE1;lj!</li>
-<li>Ha a met&#xF3;dus nem <code>Bor</code> t&#xED;pus&#xFA; param&#xE9;tert kap, akkor dobj egy <code>TypeError</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Nem bor!</code> sz&#xF6;veggel inicializ&#xE1;lj! <strong>(3 pont)</strong></li>
-</ul>
-</li>
-<li>
-<p>Defini&#xE1;ld fel&#xFC;l az objektum sz&#xF6;vegg&#xE9; alak&#xED;t&#xE1;s&#xE1;&#xE9;rt felel&#x151; met&#xF3;dust az oszt&#xE1;lyban!</p>
-<ul>
-<li>Amennyiben a <code>borok</code> lista &#xFC;res, akkor a met&#xF3;dus t&#xE9;rjen vissza az <code>Ez egy ures szekreny.</code> sz&#xF6;veggel!</li>
-<li>Ellenkez&#x151; esetben a met&#xF3;dus t&#xE9;rjen vissza egy olyan sz&#xF6;veggel, amely 1 vessz&#x151;vel &#xE9;s 1 sz&#xF3;k&#xF6;zzel elv&#xE1;lasztva tartalmazza az egyes borfajt&#xE1;k nev&#xE9;t &#xE9;s az azokb&#xF3;l megl&#xE9;v&#x151; mennyis&#xE9;get, <code>{darab} {fajta}</code> form&#xE1;tumban! A sz&#xF6;veg v&#xE9;g&#xE9;n ne legyen se vessz&#x151;, se sz&#xF3;k&#xF6;z! <strong>(3 pont)</strong></li>
-</ul>
-</li>
-</ul>
-<div class="bordered-box border-green indented">
-<span class="green">Tipp:</span> Haszn&#xE1;ld fel a <code>statisztika</code> met&#xF3;dus visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k&#xE9;t!
+<h4 class="mume-header" id="2-lej%C3%A1tsz%C3%A1si-lista-teljes-hossza-4-pont">2. Lej&#xE1;tsz&#xE1;si lista teljes hossza (4 pont)</h4>
 
-</div>
-<div class="bordered-box border-blue indented">
-<span class="blue">P&#xE9;lda a met&#xF3;dus m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span><br><br>
-<pre class="language-html"><b>A szekr&#xE9;ny tartalma:</b>
-Bor(&apos;tokaji aszu&apos;, 2017, 13.5),
-Bor(&apos;egri bikaver&apos;, 2013, 12),
-Bor(&apos;TOKAJI ASZU&apos;, 2015, 13.8),
-Bor(&apos;chardonnay&apos;, 2019, 13.0)
-
-<b>Az __str__ met&#xF3;dus visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke:</b>
-&apos;2 tokaji aszu, 1 egri bikaver, 1 chardonnay&apos;
+<p>&#xCD;rj egy <code>teljes_hossz</code> f&#xFC;ggv&#xE9;nyt, amely a lej&#xE1;tsz&#xE1;si list&#xE1;t (a <code>beolvas</code> f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k&#xE9;t) v&#xE1;rja param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny &#xF6;sszegezze a lej&#xE1;tsz&#xE1;si list&#xE1;ban tal&#xE1;lhat&#xF3; zen&#xE9;k hossz&#xE1;t! Az &#xF6;sszes&#xED;tett hosszt v&#xE1;ltsd &#xE1;t percekbe &#xE9;s m&#xE1;sodpercekbe, majd az &#xE1;tv&#xE1;lt&#xE1;s eredm&#xE9;ny&#xE9;t &#xED;rasd ki egy <code>02_hossz.txt</code> nev&#x171; sz&#xF6;veges f&#xE1;jlba!</p>
+<p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
+<p><span class="example">A  <code>02_hossz.txt</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
+<pre class="language-html">A lejatszasi lista hossza: 84 perc, 39 masodperc
 </pre>
-</div>
+<h4 class="mume-header" id="3-leghosszabb-rockzene-5-pont">3. Leghosszabb rockzene (5 pont)</h4>
+
+<p>&#xCD;rj egy <code>leghosszabb_rockzene</code> f&#xFC;ggv&#xE9;nyt, amely a lej&#xE1;tsz&#xE1;si list&#xE1;t v&#xE1;rja param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny &#xED;rja ki egy <code>03_leghosszabb_rock.txt</code> nev&#x171; sz&#xF6;veges f&#xE1;jlba a lej&#xE1;tsz&#xE1;si list&#xE1;ban tal&#xE1;lhat&#xF3; leghosszabb, rock m&#x171;faj&#xFA; zene c&#xED;m&#xE9;t! Amennyiben t&#xF6;bb zene is ugyanolyan hossz&#xFA;, akkor k&#xF6;z&#xFC;l&#xFC;k a list&#xE1;ban kor&#xE1;bban el&#x151;fordul&#xF3;t v&#xE1;laszd!</p>
+<p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
+<p><span class="example">A  <code>03_leghosszabb_rock.txt</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
+<pre class="language-html">Boulevard of Broken Dreams
+</pre>
+<h4 class="mume-header" id="4-kedvenc-m%C5%B1faj-5-pont">4. Kedvenc m&#x171;faj (5 pont)</h4>
+
+<p>&#xCD;rj egy <code>leggyakoribb_mufaj</code> f&#xFC;ggv&#xE9;nyt, amely a lej&#xE1;tsz&#xE1;si list&#xE1;t v&#xE1;rja param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny sz&#xE1;molja &#xF6;ssze, hogy m&#x171;fajonk&#xE9;nt h&#xE1;ny zene tal&#xE1;lhat&#xF3; a lej&#xE1;tsz&#xE1;si list&#xE1;ban, majd hat&#xE1;rozza meg, hogy melyik m&#x171;faj fordul el&#x151; a leggyakrabban! Az eredm&#xE9;nyt &#xED;rasd ki egy <code>04_kedvenc_mufaj.txt</code> nev&#x171; sz&#xF6;veges f&#xE1;jlba, <strong>csupa nagybet&#x171;kkel</strong>! Amennyiben t&#xF6;bb m&#x171;faj is ugyanannyiszor fordul el&#x151;, akkor k&#xF6;z&#xFC;l&#xFC;k tetsz&#x151;legesen v&#xE1;lassz egyet!</p>
+<p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
+<p><span class="example">A  <code>04_kedvenc_mufaj.txt</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
+<pre class="language-html">POP
+</pre>
+<h4 class="mume-header" id="5-adott-el%C5%91ad%C3%B3-zen%C3%A9inek-list%C3%A1z%C3%A1sa-10-pont">5. Adott el&#x151;ad&#xF3; zen&#xE9;inek list&#xE1;z&#xE1;sa (10 pont)</h4>
+
+<p>&#xCD;rj egy <code>zeneket_listaz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a lej&#xE1;tsz&#xE1;si list&#xE1;t, &#xE9;s egy el&#x151;ad&#xF3; nev&#xE9;t!</p>
+<ul>
+<li>
+<p>Hozz l&#xE9;tre egy <code>05_ELOADONEV_dalok.txt</code> sz&#xF6;veges f&#xE1;jlt, ahol <code>ELOADONEV</code> hely&#xE9;re a param&#xE9;ter&#xFC;l kapott el&#x151;ad&#xF3; neve ker&#xFC;lj&#xF6;n, csupa kisbet&#x171;kkel! A t&#xF6;bb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; el&#x151;ad&#xF3;nevekben a sz&#xF3;k&#xF6;z karaktereket cser&#xE9;ld le alulvon&#xE1;s karakterekre (&#xED;gy pl. <code>Imagine Dragons</code> el&#x151;ad&#xF3;n&#xE9;v eset&#xE9;n a f&#xE1;jln&#xE9;v <code>05_imagine_dragons_dalok.txt</code> lesz)! <strong>(3 pont)</strong></p>
+</li>
+<li>
+<p>V&#xE1;logasd ki az adott el&#x151;ad&#xF3; zen&#xE9;it a lej&#xE1;tsz&#xE1;si list&#xE1;b&#xF3;l! Az el&#x151;ad&#xF3;n&#xE9;v keres&#xE9;sekor ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t pl. <code>Rick Astley</code> &#xE9;s <code>RICK ASTLEY</code> ugyanaz)! A kiv&#xE1;logatott zen&#xE9;ket &#xED;rasd ki az im&#xE9;nt l&#xE9;trehozott f&#xE1;jl egy-egy sor&#xE1;ba &#xFA;gy, hogy minden sor eset&#xE9;n pontosvessz&#x151;vel elv&#xE1;lasztva felsorolod a zene c&#xED;m&#xE9;t, m&#x171;faj&#xE1;t &#xE9;s hossz&#xE1;t! <strong>(5 pont)</strong></p>
+</li>
+<li>
+<p>Kezeld le azt az esetet, amikor a param&#xE9;terben kapott el&#x151;ad&#xF3; nem szerepel a lej&#xE1;tsz&#xE1;si list&#xE1;ban! Ekkor a <code>Nincs ilyen eloado a lejatszasi listaban!</code> sz&#xF6;veg ker&#xFC;lj&#xF6;n a kimeneti f&#xE1;jlba! <strong>(2 pont)</strong></p>
+</li>
+</ul>
+<p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
+<p><span class="example">P&#xE9;lda a f&#xFC;ggv&#xE9;ny m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> POWERWOLF
+
+<b>A 05_powerwolf_dalok.txt f&#xE1;jl tartalma:</b>
+Incense and Iron;metal;240
+Venom of Venus;metal;208
+Dancing With The Dead;metal;291
+</pre>
+<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> Imagine Dragons
+
+<b>A 05_imagine_dragons_dalok.txt f&#xE1;jl tartalma:</b>
+Thunder;pop;204
+Radioactive;rock;188
+</pre>
+<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> Taylor Swift
+
+<b>A 05_taylor_swift_dalok.txt f&#xE1;jl tartalma:</b>
+Nincs ilyen eloado a lejatszasi listaban!
+</pre>
       </div>
       
       

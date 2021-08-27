@@ -65,11 +65,11 @@ li {
     color: green !important;
 }
 
-.blue {
+.blue, .blue code {
     color: blue !important;
 }
 
-.example {
+.example, .example code {
     color: #3dacb9 !important;
 }
 

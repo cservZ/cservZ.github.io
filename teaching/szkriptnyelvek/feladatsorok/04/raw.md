@@ -8,12 +8,12 @@
 Egy borospincében szekrények vannak, amelyek polcain borokat tárolnak. Készítsd el a `BorospinceException`, `Bor` és `Szekreny` osztályokat a feladatleírás alapján! A feladatok megoldását egyetlen Python szkriptbe készítsd el!
 
 
-#### 1.1. A `BorospinceException` osztály (2 pont)
+#### 1. A `BorospinceException` osztály (2 pont)
 
 Hozz létre egy `BorospinceException` nevű kivételosztályt, amely az `Exception` beépített kivételosztályból öröklődjön! Készíts egy egyparaméteres konstruktort az osztályon belül, amely egy hibaüzenetet vár paraméterben! A konstruktorban hívd meg az ősosztály konstruktorát és add át neki paraméterben a hibaüzenetet!
 
 
-#### 1.2. A `Bor` osztály (13 pont)
+#### 2. A `Bor` osztály (13 pont)
 
 Hozz létre egy `Bor` osztályt, amely a `_fajta`, `_evjarat` és `_alkoholtartalom` adattagokkal rendelkezik!
 
@@ -36,7 +36,7 @@ Hozz létre egy `Bor` osztályt, amely a `_fajta`, `_evjarat` és `_alkoholtarta
     * Amennyiben a függvény nem `Bor` típusú paramétert kap, akkor logikai hamis értékkel térjen vissza! **(3 pont)**
 
 
-#### 1.3. A `Szekreny` osztály (25 pont)
+#### 3. A `Szekreny` osztály (25 pont)
 
 Hozz létre egy `Szekreny` osztályt, amelynek egyetlen adattagja egy `borok` nevű lista! Ebben a listában tároljuk a szekrény polcain lévő borokat.
 
@@ -78,7 +78,7 @@ Bor('TOKAJI ASZU', 2015, 13.8)
     * Ellenkező esetben a metódus térjen vissza egy olyan szöveggel, amely 1 vesszővel és 1 szóközzel elválasztva tartalmazza az egyes borfajták nevét és az azokból meglévő mennyiséget, `{darab} {fajta}` formátumban! A szöveg végén ne legyen se vessző, se szóköz! **(3 pont)**
 
 <div class="bordered-box border-green indented">
-<span class="green">Tipp:</span> Használd fel a <code>statisztika</code> függvény visszatérési értékét!
+<span class="green">Tipp:</span> Használd fel a <code>statisztika</code> metódus visszatérési értékét!
 </pre>
 </div>
 
