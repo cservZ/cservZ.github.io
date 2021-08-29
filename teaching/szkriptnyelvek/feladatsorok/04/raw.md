@@ -18,7 +18,7 @@ Hozz létre egy `BorospinceException` nevű kivételosztályt, amely az `Excepti
 Hozz létre egy `Bor` osztályt, amely a `_fajta`, `_evjarat` és `_alkoholtartalom` adattagokkal rendelkezik!
 
 * Az osztály konstruktora a bor fajtáját, évjáratát és alkoholtartalmát várja paraméterben (ebben a sorrendben)!
-    * Az alkoholtartalom értékét ne legyen kötelező megadni, alapértéke legyen `12.5`!
+    * Az alkoholtartalom paraméter értékét ne legyen kötelező megadni, alapértéke legyen `12.5`!
     * Inicializáld a `_fajta`, `_evjarat` és `_alkoholtartalom` adattagokat a paraméterek alapján! **(3 pont)**
 
 * Írj get és set property-t a `_fajta` adattaghoz, `fajta` néven! A getter adja vissza az adattag értékét, a setter pedig állítsa be azt a paraméterben kapott értékre! **(2 pont)**
@@ -27,12 +27,12 @@ Hozz létre egy `Bor` osztályt, amely a `_fajta`, `_evjarat` és `_alkoholtarta
     * A setterben kezeld le, hogy csak 0 és 100 közötti valós szám lehessen az adattag értéke! 
     * Nem megfelelő típusú vagy értékű paraméter esetén dobj egy `BorospinceException` típusú kivételt, amit a `Nem megfelelo alkoholtartalom!` szöveggel inicializálj! **(2 pont)**
 
-* Írd át osztály konstruktorát úgy, hogy az alkoholtartalom értéke itt is ellenőrizve legyen! **(1 pont)**
+* Írd át az osztály konstruktorát úgy, hogy az alkoholtartalom értéke itt is ellenőrizve legyen! **(1 pont)**
 
 * Definiáld felül az osztályban az objektum szöveggé alakításáért felelő metódust úgy, hogy az a következő szöveggel térjen vissza: `{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}%` (a kapcsos zárójelek helyére értelemszerűen a megfelelő értékek legyenek behelyettesítve)! **(2 pont)**
 
 * Definiáld felül az osztályban az `==` operátor működését! 
-    * Ha az adott objektumot egy másik `Bor` objektummal szeretnénk összehasonlítani, akkor az operátor adja vissza, hogy a két bor fajtája, évjárata és alkoholtartalma rendre megegyezik-e! A fajták egyezésének vizsgálatakor a kis- és nagybetűket ne különböztessük meg (tehát pl. `aszu` és `Aszu` ugyanaz a fajtanév)! 
+    * Ha az adott objektumot egy másik `Bor` objektummal szeretnénk összehasonlítani, akkor az operátor adja vissza, hogy a két bor fajtája, évjárata és alkoholtartalma rendre megegyezik-e! A fajták egyezésének vizsgálatakor a kis- és nagybetűket ne különböztesd meg (tehát pl. `aszu` és `Aszu` ugyanaz a fajtanév)! 
     * Amennyiben a függvény nem `Bor` típusú paramétert kap, akkor logikai hamis értékkel térjen vissza! **(3 pont)**
 
 
@@ -53,7 +53,7 @@ Hozz létre egy `Szekreny` osztályt, amelynek egyetlen adattagja egy `borok` ne
 
 * Készíts egy paraméter nélküli `statisztika` metódust! A metódus számolja össze, hogy a különféle borfajtákból mennyi található a szekrényen, és az eredményt adja vissza egy dictionary-ben! **(5 pont)**
     * Ha a szekrényen nincs egyetlen bor sem, akkor a visszatérési érték egy üres dictionary.
-    * Ha a szekrényen van bor, akkor számoljuk össze az egyes borfajták darabszámát! A borfajták nevében ne különböztessük meg a kis- és nagybetűket (tehát pl. `aszu` és `Aszu` ugyanaz a fajtanév)!
+    * Ha a szekrényen van bor, akkor számold össze az egyes borfajták darabszámát! A borfajták nevében ne különböztesd meg a kis- és nagybetűket (tehát pl. `aszu` és `Aszu` ugyanaz a fajtanév)!
 
 <div class="bordered-box border-blue indented">
 <span class="blue">Példa a metódus működésére:</span><br><br>
@@ -61,11 +61,11 @@ Hozz létre egy `Szekreny` osztályt, amelynek egyetlen adattagja egy `borok` ne
 <pre class="language-html">
 <b>A szekrény tartalma:</b>
 Bor('tokaji aszu', 2017, 13.5),
-Bor('egri bikaver', 2013, 12),
+Bor('egri bikaver', 2013, 12.0),
 Bor('TOKAJI ASZU', 2015, 13.8)
 
 <b>A statisztika metódus visszatérési értéke:</b>
-{ 'tokaji aszu': 2, 'egri bikaver': 1 }
+{'tokaji aszu': 2, 'egri bikaver': 1}
 </pre>
 </div>
 
@@ -88,7 +88,7 @@ Bor('TOKAJI ASZU', 2015, 13.8)
 <pre class="language-html">
 <b>A szekrény tartalma:</b>
 Bor('tokaji aszu', 2017, 13.5),
-Bor('egri bikaver', 2013, 12),
+Bor('egri bikaver', 2013, 12.0),
 Bor('TOKAJI ASZU', 2015, 13.8),
 Bor('chardonnay', 2019, 13.0)
 

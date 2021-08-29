@@ -5,7 +5,7 @@
 
 ### Lejátszási lista (30 pont)
 
-A `playlist.csv` állomány a telefonra letöltött zenéink adatait tartalmazza. A fájl egyes soraiban szereplő, pontosvesszővel elválasztott adatok rendre:
+A `playlist.csv` állomány (<a href="./input.zip" target="_blank">letöltés</a>) a telefonra letöltött zenéink adatait tartalmazza. A fájl egyes soraiban szereplő, pontosvesszővel elválasztott adatok rendre:
 
 * az előadó neve
 * a zene címe

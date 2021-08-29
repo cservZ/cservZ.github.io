@@ -274,7 +274,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>
 <p>Az oszt&#xE1;ly konstruktora a bor fajt&#xE1;j&#xE1;t, &#xE9;vj&#xE1;rat&#xE1;t &#xE9;s alkoholtartalm&#xE1;t v&#xE1;rja param&#xE9;terben (ebben a sorrendben)!</p>
 <ul>
-<li>Az alkoholtartalom &#xE9;rt&#xE9;k&#xE9;t ne legyen k&#xF6;telez&#x151; megadni, alap&#xE9;rt&#xE9;ke legyen <code>12.5</code>!</li>
+<li>Az alkoholtartalom param&#xE9;ter &#xE9;rt&#xE9;k&#xE9;t ne legyen k&#xF6;telez&#x151; megadni, alap&#xE9;rt&#xE9;ke legyen <code>12.5</code>!</li>
 <li>Inicializ&#xE1;ld a <code>_fajta</code>, <code>_evjarat</code> &#xE9;s <code>_alkoholtartalom</code> adattagokat a param&#xE9;terek alapj&#xE1;n! <strong>(3 pont)</strong></li>
 </ul>
 </li>
@@ -289,7 +289,7 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 </li>
 <li>
-<p>&#xCD;rd &#xE1;t oszt&#xE1;ly konstruktor&#xE1;t &#xFA;gy, hogy az alkoholtartalom &#xE9;rt&#xE9;ke itt is ellen&#x151;rizve legyen! <strong>(1 pont)</strong></p>
+<p>&#xCD;rd &#xE1;t az oszt&#xE1;ly konstruktor&#xE1;t &#xFA;gy, hogy az alkoholtartalom &#xE9;rt&#xE9;ke itt is ellen&#x151;rizve legyen! <strong>(1 pont)</strong></p>
 </li>
 <li>
 <p>Defini&#xE1;ld fel&#xFC;l az oszt&#xE1;lyban az objektum sz&#xF6;vegg&#xE9; alak&#xED;t&#xE1;s&#xE1;&#xE9;rt felel&#x151; met&#xF3;dust &#xFA;gy, hogy az a k&#xF6;vetkez&#x151; sz&#xF6;veggel t&#xE9;rjen vissza: <code>{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}%</code> (a kapcsos z&#xE1;r&#xF3;jelek hely&#xE9;re &#xE9;rtelemszer&#x171;en a megfelel&#x151; &#xE9;rt&#xE9;kek legyenek behelyettes&#xED;tve)! <strong>(2 pont)</strong></p>
@@ -297,7 +297,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>
 <p>Defini&#xE1;ld fel&#xFC;l az oszt&#xE1;lyban az <code>==</code> oper&#xE1;tor m&#x171;k&#xF6;d&#xE9;s&#xE9;t!</p>
 <ul>
-<li>Ha az adott objektumot egy m&#xE1;sik <code>Bor</code> objektummal szeretn&#xE9;nk &#xF6;sszehasonl&#xED;tani, akkor az oper&#xE1;tor adja vissza, hogy a k&#xE9;t bor fajt&#xE1;ja, &#xE9;vj&#xE1;rata &#xE9;s alkoholtartalma rendre megegyezik-e! A fajt&#xE1;k egyez&#xE9;s&#xE9;nek vizsg&#xE1;latakor a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztess&#xFC;k meg (teh&#xE1;t pl. <code>aszu</code> &#xE9;s <code>Aszu</code> ugyanaz a fajtan&#xE9;v)!</li>
+<li>Ha az adott objektumot egy m&#xE1;sik <code>Bor</code> objektummal szeretn&#xE9;nk &#xF6;sszehasonl&#xED;tani, akkor az oper&#xE1;tor adja vissza, hogy a k&#xE9;t bor fajt&#xE1;ja, &#xE9;vj&#xE1;rata &#xE9;s alkoholtartalma rendre megegyezik-e! A fajt&#xE1;k egyez&#xE9;s&#xE9;nek vizsg&#xE1;latakor a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg (teh&#xE1;t pl. <code>aszu</code> &#xE9;s <code>Aszu</code> ugyanaz a fajtan&#xE9;v)!</li>
 <li>Amennyiben a f&#xFC;ggv&#xE9;ny nem <code>Bor</code> t&#xED;pus&#xFA; param&#xE9;tert kap, akkor logikai hamis &#xE9;rt&#xE9;kkel t&#xE9;rjen vissza! <strong>(3 pont)</strong></li>
 </ul>
 </li>
@@ -328,7 +328,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>K&#xE9;sz&#xED;ts egy param&#xE9;ter n&#xE9;lk&#xFC;li <code>statisztika</code> met&#xF3;dust! A met&#xF3;dus sz&#xE1;molja &#xF6;ssze, hogy a k&#xFC;l&#xF6;nf&#xE9;le borfajt&#xE1;kb&#xF3;l mennyi tal&#xE1;lhat&#xF3; a szekr&#xE9;nyen, &#xE9;s az eredm&#xE9;nyt adja vissza egy dictionary-ben! <strong>(5 pont)</strong></p>
 <ul>
 <li>Ha a szekr&#xE9;nyen nincs egyetlen bor sem, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k egy &#xFC;res dictionary.</li>
-<li>Ha a szekr&#xE9;nyen van bor, akkor sz&#xE1;moljuk &#xF6;ssze az egyes borfajt&#xE1;k darabsz&#xE1;m&#xE1;t! A borfajt&#xE1;k nev&#xE9;ben ne k&#xFC;l&#xF6;nb&#xF6;ztess&#xFC;k meg a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t pl. <code>aszu</code> &#xE9;s <code>Aszu</code> ugyanaz a fajtan&#xE9;v)!</li>
+<li>Ha a szekr&#xE9;nyen van bor, akkor sz&#xE1;mold &#xF6;ssze az egyes borfajt&#xE1;k darabsz&#xE1;m&#xE1;t! A borfajt&#xE1;k nev&#xE9;ben ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t pl. <code>aszu</code> &#xE9;s <code>Aszu</code> ugyanaz a fajtan&#xE9;v)!</li>
 </ul>
 </li>
 </ul>
@@ -336,11 +336,11 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="blue">P&#xE9;lda a met&#xF3;dus m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span><br><br>
 <pre class="language-html"><b>A szekr&#xE9;ny tartalma:</b>
 Bor(&apos;tokaji aszu&apos;, 2017, 13.5),
-Bor(&apos;egri bikaver&apos;, 2013, 12),
+Bor(&apos;egri bikaver&apos;, 2013, 12.0),
 Bor(&apos;TOKAJI ASZU&apos;, 2015, 13.8)
 
 <b>A statisztika met&#xF3;dus visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke:</b>
-{ &apos;tokaji aszu&apos;: 2, &apos;egri bikaver&apos;: 1 }
+{&apos;tokaji aszu&apos;: 2, &apos;egri bikaver&apos;: 1}
 </pre>
 </div>
 <ul>
@@ -367,7 +367,7 @@ Bor(&apos;TOKAJI ASZU&apos;, 2015, 13.8)
 <span class="blue">P&#xE9;lda a met&#xF3;dus m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span><br><br>
 <pre class="language-html"><b>A szekr&#xE9;ny tartalma:</b>
 Bor(&apos;tokaji aszu&apos;, 2017, 13.5),
-Bor(&apos;egri bikaver&apos;, 2013, 12),
+Bor(&apos;egri bikaver&apos;, 2013, 12.0),
 Bor(&apos;TOKAJI ASZU&apos;, 2015, 13.8),
 Bor(&apos;chardonnay&apos;, 2019, 13.0)
 
