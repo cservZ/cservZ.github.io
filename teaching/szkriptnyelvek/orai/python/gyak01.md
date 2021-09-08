@@ -106,7 +106,7 @@ SyntaxError: invalid syntax
 
 #### 4.2. Dinamikusan típusosság
 
-Vegyük észre, hogy a `val = 42` értékadásnál nem adtuk meg expliciten a `val` változó típusát (C-ben ez a deklaráció így nézne ki: `int val = 42;`)! Ennek az az oka, hogy a Python értelmező automatikusan, dinamikusan "ki tudja találni" a változók típusát a bennük tárolt érték alapján. Ezt úgy is mondjuk, hogy <span class="red">a Python egy dinamikusan típusos nyelv</span>.
+Vegyük észre, hogy a `val = 42` létrehozásánál nem adtuk meg expliciten a `val` változó típusát (C-ben ez a deklaráció így nézne ki: `int val = 42;`)! Ennek az az oka, hogy a Python értelmező automatikusan, dinamikusan "ki tudja találni" a változók típusát a bennük tárolt érték alapján. Ezt úgy is mondjuk, hogy <span class="red">a Python egy dinamikusan típusos nyelv</span>.
 
 A dinamikusan típusosság egyik érdekes következménye, hogy ugyanabban a változóban akár eltérő típusú adatokat is tárolhatunk. A `type()` függvénnyel lekérdezhetjük egy változó típusát.
 
