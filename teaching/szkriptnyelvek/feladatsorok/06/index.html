@@ -261,7 +261,82 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="html-%C3%A9s-css-ism%C3%A9tl%C3%A9s-javascript-dom-m%C5%B1veletek">HTML &#xE9;s CSS ism&#xE9;tl&#xE9;s, JavaScript DOM-m&#x171;veletek</h2>
 
-<p>TODO</p>
+<p>A feladat egy egyszer&#x171; weboldal elk&#xE9;sz&#xED;t&#xE9;se, amely tartalmaz egy sz&#xE1;mol&#xF3;g&#xE9;pet, amely seg&#xED;ts&#xE9;g&#xE9;vel a 4 alapm&#x171;veletet (&#xF6;sszead&#xE1;s, kivon&#xE1;s, szorz&#xE1;s, oszt&#xE1;s) v&#xE9;gezhetj&#xFC;k el. A sz&#xE1;mol&#xF3;g&#xE9;p alatt egy t&#xE1;bl&#xE1;zat tal&#xE1;lhat&#xF3;, amely a sz&#xE1;m&#xED;t&#xE1;si el&#x151;zm&#xE9;nyeinket tartalmazza.</p>
+<p><span class="example">P&#xE9;lda az elk&#xE9;sz&#xED;tend&#x151; weboldalra:</span></p>
+<p><a href="./sample.png"><img src="sample.png" alt="P&#xE9;lda"></a></p>
+<p>A feladatsor megold&#xE1;s&#xE1;hoz sz&#xFC;ks&#xE9;ges kiindul&#xF3; f&#xE1;jlok let&#xF6;lthet&#x151;k <a href="./calculator.zip">ide kattintva</a>.</p>
+<h3 class="mume-header" id="1-az-oldal-kialak%C3%ADt%C3%A1sa-11-pont">1. Az oldal kialak&#xED;t&#xE1;sa (11 pont)</h3>
+
+<ul>
+<li>
+<p>Alak&#xED;tsd &#xE1;t a weboldal karakterk&#xF3;dol&#xE1;s&#xE1;t &#xFA;gy, hogy az &#xE9;kezetes bet&#x171;k is helyesen megjelenjenek! <strong>(1 pont)</strong></p>
+</li>
+<li>
+<p>A weboldalon tal&#xE1;lhat&#xF3; <code>&lt;h1&gt;</code>-es c&#xED;msor al&#xE1; sz&#xFA;rj be HTML-ben egy <code>HTML, CSS &#xE9;s JavaScript alapok</code> felirat&#xFA; bekezd&#xE9;st, amely a <code>class=&quot;center&quot;</code> attrib&#xFA;tummal rendelkezzen! <strong>(1,5 pont)</strong></p>
+</li>
+<li>
+<p>&#xC1;gyazd be a style.css nev&#x171; k&#xFC;ls&#x151; st&#xED;lusf&#xE1;jlt a HTML dokumentumba! A feladatsorban szerepl&#x151; CSS form&#xE1;z&#xE1;sokat ebbe a f&#xE1;jlba &#xED;rd bele! <strong>(1 pont)</strong></p>
+</li>
+<li>
+<p>CSS seg&#xED;ts&#xE9;g&#xE9;vel &#xE1;ll&#xED;tsd &#xE1;t a weboldal h&#xE1;tt&#xE9;rsz&#xED;n&#xE9;t az alap&#xE9;rtelmezettr&#x151;l egy tetsz&#x151;leges sz&#xED;nre! <strong>(1 pont)</strong></p>
+</li>
+</ul>
+<div class="bordered-box border-green indented">
+<span class="green">Tipp:</span> A h&#xE1;tt&#xE9;rsz&#xED;n kiv&#xE1;laszt&#xE1;s&#xE1;hoz haszn&#xE1;lhatjuk p&#xE9;ld&#xE1;ul <a href="https://htmlcolorcodes.com/color-picker/">ezt az online sz&#xED;nv&#xE1;laszt&#xF3; eszk&#xF6;zt</a>.
+</div>
+<ul>
+<li>
+<p>CSS seg&#xED;ts&#xE9;g&#xE9;vel &#xE1;ll&#xED;tsd &#xE1;t a <code>&lt;body&gt;</code>-ban megjelen&#x151; &#xF6;sszes sz&#xF6;veges tartalom bet&#x171;t&#xED;pus&#xE1;t Arial-ra! Ha az Arial nincs telep&#xED;tve a felhaszn&#xE1;l&#xF3; g&#xE9;p&#xE9;n, akkor &#xE1;ll&#xED;ts be egy m&#xE1;sik talp n&#xE9;lk&#xFC;li (&quot;sans-serif&quot;) bet&#x171;t&#xED;pust! <strong>(1,5 pont)</strong></p>
+</li>
+<li>
+<p>CSS seg&#xED;ts&#xE9;g&#xE9;vel alak&#xED;tsd csupa nagybet&#x171;ss&#xE9; az <code>id=&quot;title&quot;</code> attrib&#xFA;tummal rendelkez&#x151; oldalelemet! <strong>(1 pont)</strong></p>
+</li>
+<li>
+<p>CSS seg&#xED;ts&#xE9;g&#xE9;vel igaz&#xED;ts minden <code>class=&quot;center&quot;</code> attrib&#xFA;tummal rendelkez&#x151; (sz&#xF6;veges) elemet v&#xED;zszintesen k&#xF6;z&#xE9;pre! <strong>(1 pont)</strong></p>
+</li>
+<li>
+<p>A <code>setupSite()</code> f&#xFC;ggv&#xE9;nyben JavaScript seg&#xED;ts&#xE9;g&#xE9;vel keresd meg a weboldal tetej&#xE9;n l&#xE9;v&#x151; <code>&lt;h1&gt;</code>-es c&#xED;msort, &#xE9;s m&#xF3;dos&#xED;tsd a sz&#xF6;veges tartalm&#xE1;t a <code>Sz&#xE1;mol&#xF3;g&#xE9;p</code> feliratra! <strong>(1,5 pont)</strong></p>
+</li>
+<li>
+<p>A <code>setupSite()</code> f&#xFC;ggv&#xE9;nyben JavaScript seg&#xED;ts&#xE9;g&#xE9;vel keresd meg a <code>&lt;h1&gt;</code>-es c&#xED;msor al&#xE1; besz&#xFA;rt bekezd&#xE9;st, &#xE9;s tedd f&#xE9;lk&#xF6;v&#xE9;r bet&#x171;st&#xED;lus&#xFA;v&#xE1; (a <code>class=&quot;bold&quot;</code> attrib&#xFA;tum hozz&#xE1;rendel&#xE9;s&#xE9;vel)! <strong>(1,5 pont)</strong></p>
+</li>
+</ul>
+<h3 class="mume-header" id="2-a-sz%C3%A1mol%C3%B3g%C3%A9p-m%C5%B1k%C3%B6d%C5%91k%C3%A9pess%C3%A9-t%C3%A9tele-10-pont">2. A sz&#xE1;mol&#xF3;g&#xE9;p m&#x171;k&#xF6;d&#x151;k&#xE9;pess&#xE9; t&#xE9;tele (10 pont)</h3>
+
+<p>&#xCD;rd meg a &quot;Sz&#xE1;mol!&quot; gombra kattint&#xE1;skor megh&#xED;v&#xE1;sra ker&#xFC;l&#x151; <code>calculate()</code> f&#xFC;ggv&#xE9;ny t&#xF6;rzs&#xE9;t!</p>
+<ul>
+<li>
+<p>K&#xE9;rd le a sz&#xE1;mol&#xF3;g&#xE9;p &#x171;rlapon megadott h&#xE1;rom adatot (a k&#xE9;t sz&#xE1;mot &#xE9;s a m&#x171;veleti jelet)! <strong>(1 pont)</strong></p>
+</li>
+<li>
+<p>Ellen&#x151;rizd, hogy mindh&#xE1;rom &#x171;rlapmez&#x151; ki legyen t&#xF6;ltve adattal! Amennyiben valamelyik beviteli mez&#x151;t &#xFC;resen hagyta a felhaszn&#xE1;l&#xF3;, akkor jelen&#xED;ts meg egy hiba&#xFC;zenetet a weboldalon! <strong>(2 pont)</strong></p>
+</li>
+</ul>
+<div class="bordered-box border-green indented">
+<span class="green">Tipp:</span> A nem kit&#xF6;lt&#xF6;tt &#x171;rlapmez&#x151;k alap&#xE9;rt&#xE9;ke az &#xFC;res string.
+</div>
+<ul>
+<li>
+<p>Ha az &#x171;rlapmez&#x151;k megfelel&#x151;en lettek kit&#xF6;ltve, akkor v&#xE9;gezd el a be&#xED;rt sz&#xE1;m&#xED;t&#xE1;st! &#xCD;rass ki hiba&#xFC;zenetet, ha null&#xE1;val szeretn&#xE9;nk osztani vagy a n&#xE9;gy alapm&#x171;velett&#x151;l elt&#xE9;r&#x151; m&#x171;veleti jelet adunk meg! <strong>(5 pont)</strong></p>
+</li>
+<li>
+<p>A f&#xFC;ggv&#xE9;ny &#xED;rja be az <code>id=&quot;result&quot;</code> attrib&#xFA;tummal rendelkez&#x151; objektumba a kisz&#xE1;molt eredm&#xE9;nyt! <strong>(2 pont)</strong></p>
+</li>
+</ul>
+<h3 class="mume-header" id="3-sz%C3%A1m%C3%ADt%C3%A1si-el%C5%91zm%C3%A9nyek-t%C3%A1bl%C3%A1zat-9-pont">3. Sz&#xE1;m&#xED;t&#xE1;si el&#x151;zm&#xE9;nyek t&#xE1;bl&#xE1;zat (9 pont)</h3>
+
+<ul>
+<li>
+<p>Miut&#xE1;n a sz&#xE1;mol&#xF3;g&#xE9;ppel elv&#xE9;gz&#xFC;nk egy sz&#xE1;m&#xED;t&#xE1;st, f&#x171;zz hozz&#xE1; egy &#xFA;j sort az <code>id=&quot;history-table&quot;</code> attrib&#xFA;tummal rendelkez&#x151; t&#xE1;bl&#xE1;zathoz, az <code>addToHistory()</code> f&#xFC;ggv&#xE9;nnyel!</p>
+<ul>
+<li>A sor k&#xE9;t t&#xE1;bl&#xE1;zatcell&#xE1;t tartalmazzon: a sz&#xE1;m&#xED;t&#xE1;st (a k&#xE9;t sz&#xE1;mot &#xE9;s a m&#x171;veleti jelet), illetve az eredm&#xE9;nyt!</li>
+<li>A t&#xE1;bl&#xE1;zatot tartalmaz&#xF3; <code>&lt;div&gt;</code>-en szerepl&#x151; <code>class=&quot;hidden&quot;</code> attrib&#xFA;tum elt&#xE1;vol&#xED;t&#xE1;s&#xE1;val tedd l&#xE1;that&#xF3;v&#xE1; a t&#xE1;bl&#xE1;zatot &#xE9;s az alatta l&#xE9;v&#x151; gombot! <strong>(6 pont)</strong></li>
+</ul>
+</li>
+<li>
+<p>&#xCD;rd meg az &quot;El&#x151;zm&#xE9;nyek t&#xF6;rl&#xE9;se&quot; gombra kattint&#xE1;skor megh&#xED;v&#xF3;d&#xF3; <code>clearHistory()</code> f&#xFC;ggv&#xE9;ny t&#xF6;rzs&#xE9;t! A gomb megnyom&#xE1;sakor t&#xF6;r&#xF6;ld a t&#xE1;bl&#xE1;zatb&#xF3;l az &#xF6;sszes sort, &#xE9;s rejtsd el a t&#xE1;bl&#xE1;zatot tartalmaz&#xF3; <code>&lt;div&gt;</code>-et a weboldalr&#xF3;l (a <code>class=&quot;hidden&quot;</code> attrib&#xFA;tum seg&#xED;ts&#xE9;g&#xE9;vel)! <strong>(3 pont)</strong></p>
+</li>
+</ul>
 
       </div>
       

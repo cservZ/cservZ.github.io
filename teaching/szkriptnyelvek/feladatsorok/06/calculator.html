@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Számológép</title>
+    <meta charset="ISO-8859-1">
+
+    <!-- Ágyazd be a style.css nevű külső stílusfájlt a dokumentumba! -->
+</head>
+<body>
+    <h1 class="center" id="title">6. gyakorló feladatsor</h1>
+    <hr>
+
+    <!-- Szúrj be ide egy "HTML, CSS és JavaScript alapok" feliratú bekezdést, amely a class="center" attribútummal rendelkezik! -->
+
+    <div id="calculator">
+        <div class="grid">
+            <label for="num1">Első szám:</label>
+            <input type="number" id="num1">
+
+            <label for="op">Művelet:</label>
+            <input type="text" id="op">
+
+            <label for="num2">Második szám:</label>
+            <input type="number" id="num2">
+
+            <label></label>
+            <button onclick="calculate()">Számol!</button>
+        </div>
+    </div>
+
+    <div id="result" class="center"></div>
+
+    <div id="history" class="hidden">
+        <h2 class="center">Számítási előzmények</h2>
+        <table id="history-table"></table>
+        <button onclick="clearHistory()">Előzmények törlése</button>
+    </div>
+
+    <script>
+        // A weboldal kialakítását végző függvény
+
+        function setupSite() {
+
+        }
+
+        // Az űrlapot megadott művelet eredményét kiszámító és megjelenítő függvény
+
+        function calculate() {
+
+        }
+
+        // A számítás eredményét megjelenítő függvény
+
+        function addToHistory() {
+
+        }
+
+        // A számítási előzményeket törlő és elrejtő függvény
+
+        function clearHistory() {
+            
+        }
+
+        setupSite();
+    </script>
+</body>
+</html>
