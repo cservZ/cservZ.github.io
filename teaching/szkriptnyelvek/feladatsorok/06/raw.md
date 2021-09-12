@@ -8,7 +8,7 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
 
 <a href="./sample.png"><img src="sample.png" alt="Példa"></a>
 
-A feladatsor megoldásához szükséges kiinduló fájlok letölthetők [ide kattintva](./calculator.zip).
+A feladatsor megoldásához szükséges <span class="green">kiinduló fájlok</span> letölthetők [ide kattintva](./calculator.zip).
 
 
 ### 1. Az oldal kialakítása (11 pont)
