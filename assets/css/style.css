@@ -389,7 +389,7 @@ h3.heading {
   }
 }
 
-@media (max-height: 614px) {
+@media (max-height: 603px) {
   #sidebar img {
     display: none !important;
   }
