@@ -355,7 +355,7 @@ Készíts egy egyszerű számkitalálós játékot Python nyelven! A gép "gondo
 <span class="example">Példa:</span>
 
 ```html
-Gondoltam egy szamra 1 és 1000 kozott, talald ki, hogy melyikre! Eletek szama: 20
+Gondoltam egy szamra 1 es 1000 kozott, talald ki, hogy melyikre! Eletek szama: 20
 Tipp: 500
 Kisebb
 Tipp: 250
