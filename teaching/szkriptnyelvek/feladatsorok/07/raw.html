@@ -1,0 +1,384 @@
+<!DOCTYPE html><html><head>
+      <title>raw</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="szkriptnyelvek-7-gyakorl%C3%B3-feladatsor">Szkriptnyelvek - 7. gyakorl&#xF3; feladatsor</h1>
+
+<h2 class="mume-header" id="javascript-vez%C3%A9rl%C3%A9si-szerkezetek-f%C3%BCggv%C3%A9nyek-stringek">JavaScript vez&#xE9;rl&#xE9;si szerkezetek, f&#xFC;ggv&#xE9;nyek, stringek</h2>
+
+<div class="bordered-box border-red">
+    <span class="red">Figyelem!</span> Mindig j&#xF3;l olvassuk el a feladat sz&#xF6;veg&#xE9;t! Ha azt k&#xE9;ri a feladat, hogy &#xED;rasson ki valamit a f&#xFC;ggv&#xE9;ny a konzolra, akkor haszn&#xE1;ljuk a <code>console.log()</code>-ot, ha pedig vissza kell adnia a f&#xFC;ggv&#xE9;nynek valamit, akkor a <code>return</code> kulcssz&#xF3;t haszn&#xE1;ljuk!
+</div>
+<h3 class="mume-header" id="1-feladat-v%C3%A1ros-2-pont">1. feladat: V&#xE1;ros (2 pont)</h3>
+
+<p>Amikor egy v&#xE1;rosba l&#xE1;togatunk, egy &#xFC;dv&#xF6;zl&#x151; t&#xE1;bla fogad minket. &#xCD;rj egy <code>udvozol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy v&#xE1;ros nev&#xE9;t v&#xE1;rja param&#xE9;ter&#xFC;l, &#xE9;s ki&#xED;rja a konzolra az <code>Udvozoljuk {varosNeve} varosaban!</code> sz&#xF6;veget (a kapcsos z&#xE1;r&#xF3;jelek k&#xF6;z&#xE9; a param&#xE9;terben kapott v&#xE1;rosn&#xE9;v legyen behelyettes&#xED;tve)!</p>
+<p>&#xC9;rd el, hogy a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;nek ne legyen k&#xF6;telez&#x151; &#xE9;rt&#xE9;ket adni a f&#xFC;ggv&#xE9;nyh&#xED;v&#xE1;skor! Abban az esetben, ha nem adjuk meg a param&#xE9;ter &#xE9;rt&#xE9;k&#xE9;t, akkor a v&#xE1;ros neve legyen alapb&#xF3;l <code>Szeged</code>!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Mucsarocsoge&apos;
+<b>Output:</b> &apos;Udvozoljuk Mucsarocsoge varosaban!&apos;
+
+<b>Input:</b>
+<b>Output:</b> &apos;Udvozoljuk Szeged varosaban!&apos;
+</pre>
+<h3 class="mume-header" id="2-feladat-imposztor-3-pont">2. feladat: Imposztor (3 pont)</h3>
+
+<p>Dani a n&#xE9;pszer&#x171; <a href="http://www.innersloth.com/gameAmongUs.php">Among Us</a> j&#xE1;t&#xE9;kkal j&#xE1;tszik, amelynek egyes k&#xF6;reiben a j&#xE1;t&#xE9;kosok megpr&#xF3;b&#xE1;lj&#xE1;k kital&#xE1;lni, hogy k&#xF6;z&#xFC;l&#xFC;k kik az imposztorok. Egy k&#xF6;rben annak a sz&#xE1;zal&#xE9;kos val&#xF3;sz&#xED;n&#x171;s&#xE9;ge, hogy Dani imposztor lesz, a k&#xF6;vetkez&#x151; k&#xE9;plettel kaphat&#xF3; meg: <code>100 * (imposztorok sz&#xE1;ma / j&#xE1;t&#xE9;kosok sz&#xE1;ma)</code>.</p>
+<p>&#xCD;rj egy <code>imposztor</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely rendre a j&#xE1;t&#xE9;kosok sz&#xE1;m&#xE1;t &#xE9;s az imposztorok sz&#xE1;m&#xE1;t kapja param&#xE9;ter&#xFC;l (mindk&#xE9;t &#xE9;rt&#xE9;k garant&#xE1;ltan sz&#xE1;m t&#xED;pus&#xFA;)!</p>
+<ul>
+<li>Egy j&#xE1;t&#xE9;kban 2-10 j&#xE1;t&#xE9;kos, illetve 1-3 imposztor lehet. Ha a param&#xE9;terben kapott &#xE9;rt&#xE9;kek valamelyike nem felel meg ezeknek a megszor&#xED;t&#xE1;soknak, akkor a f&#xFC;ggv&#xE9;ny a <code>HIBA!</code> sz&#xF6;veggel t&#xE9;rjen vissza!</li>
+<li>Megfelel&#x151; param&#xE9;terek eset&#xE9;n a f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke a <code>Dani {N}% valoszinuseggel lesz imposztor.</code> sz&#xF6;veg legyen, ahol <code>{N}</code> a fenti k&#xE9;plet alapj&#xE1;n kisz&#xE1;molt sz&#xE1;zal&#xE9;k&#xE9;rt&#xE9;k, eg&#xE9;sz sz&#xE1;mra kerek&#xED;tve! A hagyom&#xE1;nyos matematikai kerek&#xED;t&#xE9;s szab&#xE1;lyait haszn&#xE1;ljuk!</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 7, 2
+<b>Return:</b> &apos;Dani 29% valoszinuseggel lesz imposztor.&apos;
+
+<b>Input:</b> 10, 4
+<b>Return:</b> &apos;HIBA!&apos;
+</pre>
+<h3 class="mume-header" id="3-feladat-k%C3%B6b%C3%B6sszeg-3-pont">3. feladat: K&#xF6;b&#xF6;sszeg (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>kobosszeg</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t eg&#xE9;sz sz&#xE1;mot kap param&#xE9;ter&#xFC;l: rendre egy z&#xE1;rt intervallum als&#xF3; &#xE9;s fels&#x151; v&#xE9;gpontj&#xE1;t! A f&#xFC;ggv&#xE9;ny adja vissza az intervallumba es&#x151; sz&#xE1;mok k&#xF6;b&#xE9;nek az &#xF6;sszeg&#xE9;t! (A v&#xE9;gpontok term&#xE9;szetesen m&#xE9;g beletartoznak az intervallumba.)</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 1, 3
+<b>Return:</b> 36
+
+<b>Input:</b> 10, 100
+<b>Return:</b> 25500475
+</pre>
+<h3 class="mume-header" id="4-feladat-callback-f%C3%BCggv%C3%A9ny-4-pont">4. feladat: Callback f&#xFC;ggv&#xE9;ny (4 pont)</h3>
+
+<p>Haszn&#xE1;ljuk fel az el&#x151;z&#x151; feladatban meg&#xED;rt <code>kobosszeg</code> f&#xFC;ggv&#xE9;nyt, miut&#xE1;n meggy&#x151;z&#x151;dt&#xFC;nk arr&#xF3;l, hogy helyes param&#xE9;terekkel h&#xED;vjuk meg azt!</p>
+<p>&#xCD;rj egy <code>kobosszegetMeghiv</code> f&#xFC;ggv&#xE9;nyt, amely 3 param&#xE9;tert v&#xE1;r: k&#xE9;t eg&#xE9;sz sz&#xE1;mot &#xE9;s egy callback f&#xFC;ggv&#xE9;nyt (ez most a <code>kobosszeg</code> f&#xFC;ggv&#xE9;ny lesz)! Amennyiben minden param&#xE9;ter megfelel&#x151; t&#xED;pus&#xFA; (k&#xE9;t sz&#xE1;m &#xE9;s egy f&#xFC;ggv&#xE9;ny), h&#xED;vd meg a param&#xE9;terben kapott callback f&#xFC;ggv&#xE9;nyt &#xFA;gy, hogy az els&#x151; param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a kisebbik, m&#xED;g a m&#xE1;sodik param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a nagyobbik legyen! A callback f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k&#xE9;vel t&#xE9;rj vissza!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 100, 10, kobosszeg
+<b>Return:</b> 25500475
+</pre>
+<h3 class="mume-header" id="5-feladat-teve-5-pont">5. feladat: Teve (5 pont)</h3>
+
+<p>A <a href="https://teveclub.hu/">TeveClub</a> oldalon virtu&#xE1;lisan nevelhet&#xFC;nk tev&#xE9;ket. Egy &#xFA;j teve ig&#xE9;nyl&#xE9;sekor meg kell adnunk a teve nev&#xE9;t &#xE9;s h&#xED;v&#xF3;jel&#xE9;t (ez kb. egy jelsz&#xF3;nak feleltethet&#x151; meg).</p>
+<p>&#xCD;rj egy <code>tevetIgenyel</code> f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a teve nev&#xE9;t &#xE9;s h&#xED;v&#xF3;jel&#xE9;t (sz&#xF6;veges adatok)! A f&#xFC;ggv&#xE9;nyben ellen&#x151;rizz&#xFC;k, hogy a megadott h&#xED;v&#xF3;jel megfelel&#x151; er&#x151;ss&#xE9;g&#x171;-e! Ezt a k&#xF6;vetkez&#x151;k&#xE9;ppen tegy&#xFC;k meg:</p>
+<ul>
+<li>Ha a h&#xED;v&#xF3;jel 6 karaktern&#xE9;l r&#xF6;videbb, akkor &#xED;rassuk ki a <code>Tul rovid hivojel!</code> hiba&#xFC;zenetet a konzolra!</li>
+<li>Ha a hossz megfelel&#x151;, de a h&#xED;v&#xF3;jel megegyezik a teve nev&#xE9;vel, akkor jelen&#xED;ts&#xFC;k meg a <code>Tul nyilvanvalo hivojel!</code> hiba&#xFC;zenetet a konzolon!</li>
+<li>Ha eddig nem volt hiba, viszont a h&#xED;v&#xF3;jel tartalmazza a <code>teve</code> sz&#xF6;veget b&#xE1;rmilyen form&#xE1;ban (kis- &#xE9;s nagybet&#x171;ket nem megk&#xFC;l&#xF6;nb&#xF6;ztetve), akkor &#xED;rassuk ki a <code>Tiltott szoveg a hivojelben!</code> hiba&#xFC;zenetet!</li>
+<li>Minden egy&#xE9;b esetben a <code>Sikeres teveigenyles!</code> sz&#xF6;veget jelen&#xED;ts&#xFC;k meg a k&#xE9;perny&#x151;n!</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;MyEpicCamel&apos;, &apos;epicTeve20&apos;
+<b>Output:</b> &apos;Tiltott szoveg a hivojelben!&apos;
+
+<b>Input:</b> &apos;Leenhurbertindrund&apos;, &apos;sivatag4life&apos;
+<b>Output:</b> &apos;Sikeres teveigenyles!&apos;
+</pre>
+<h3 class="mume-header" id="6-feladat-sz%C3%A1mjegyek-%C3%A1tlaga-5-pont">6. feladat: Sz&#xE1;mjegyek &#xE1;tlaga (5 pont)</h3>
+
+<p>&#xCD;rj egy <code>szamjegyAtlag</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy eg&#xE9;sz sz&#xE1;mot v&#xE1;r param&#xE9;ter&#xFC;l (ak&#xE1;r negat&#xED;v param&#xE9;ter is lehet), &#xE9;s visszaadja a sz&#xE1;mban tal&#xE1;lhat&#xF3; sz&#xE1;mjegyek &#xE1;tlag&#xE1;t (teh&#xE1;t osszuk el a sz&#xE1;mjegyek &#xF6;sszeg&#xE9;t a sz&#xE1;mjegyek darabsz&#xE1;m&#xE1;val)! Ha a f&#xFC;ggv&#xE9;ny nem sz&#xE1;m t&#xED;pus&#xFA; param&#xE9;tert kap, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k legyen <code>-1</code>!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 741258
+<b>Return:</b> 4.5
+
+<b>Input:</b> -97968
+<b>Return:</b> 7.8
+
+<b>Input:</b> &apos;kecske&apos;
+<b>Return:</b> -1
+</pre>
+<h3 class="mume-header" id="7-feladat-cenz%C3%BAra-3-pont">7. feladat: Cenz&#xFA;ra (3 pont)</h3>
+
+<p>Ninja az egyik Discord szerveren az indokolatlan tagelget&#xE9;seivel sikeresen mag&#xE1;ra harag&#xED;totta az egyik admint. Emiatt azt a b&#xFC;ntet&#xE9;st kapta, hogy mostant&#xF3;l az &#xFC;zenetei cenz&#xFA;r&#xE1;zva jelennek meg.</p>
+<p>&#xCD;rj egy <code>cenzura</code> f&#xFC;ggv&#xE9;nyt, amely Ninja egy &#xFC;zenet&#xE9;t kapja param&#xE9;ter&#xFC;l, &#xE9;s ezt &#xE1;talak&#xED;tja &#xFA;gy, hogy az &#xF6;sszes mag&#xE1;nhangz&#xF3;t lecser&#xE9;li a <code>*</code> (csillag) karakterre! A mag&#xE1;nhangz&#xF3;k vizsg&#xE1;lata sor&#xE1;n a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg! A param&#xE9;terben &#xE9;rkez&#x151; sz&#xF6;veg garant&#xE1;ltan nem tartalmaz &#xE9;kezetes bet&#x171;ket.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;He, miert igy jelennek meg az uzeneteim?&apos;
+<b>Return:</b> &apos;H*, m**rt *gy j*l*nn*k m*g *z *z*n*t**m?&apos;
+
+<b>Input:</b> &apos;Elhagyom ezt a csoportot, mert serto az elmult tobb mint 10 eves Discordos tapasztalatom es multammal szemben.&apos;
+<b>Return:</b> &apos;*lh*gy*m *zt * cs*p*rt*t, m*rt s*rt* *z *lm*lt t*bb m*nt 10 *v*s D*sc*rd*s t*p*szt*l*t*m *s m*lt*mm*l sz*mb*n.&apos;
+</pre>
+<h3 class="mume-header" id="8-feladat-karakterek-t%C3%B6bbsz%C3%B6r%C3%B6z%C3%A9se-4-pont">8. feladat: Karakterek t&#xF6;bbsz&#xF6;r&#xF6;z&#xE9;se (4 pont)</h3>
+
+<p>&#xCD;rj egy <code>karakterTobbszoroz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: egy sz&#xF6;veget &#xE9;s egy eg&#xE9;sz sz&#xE1;mot! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy sz&#xF6;veg, amit &#xFA;gy kapunk, hogy az els&#x151; param&#xE9;terben &#xE9;rkez&#x151; sz&#xF6;veg minden karakter&#xE9;t vessz&#xFC;k annyiszor, mint amennyi a m&#xE1;sodik param&#xE9;terben kapott sz&#xE1;m.</p>
+<p>A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke legyen a <code>HIBA!</code> sz&#xF6;veg, amennyiben...</p>
+<ul>
+<li>...valamelyik param&#xE9;ter t&#xED;pusa nem megfelel&#x151;</li>
+<li>...az els&#x151; param&#xE9;terben &#xE9;rkez&#x151; sz&#xF6;veg az &#xFC;res string</li>
+<li>...a m&#xE1;sodik param&#xE9;terben &#xE9;rkez&#x151; sz&#xE1;m 1-n&#xE9;l kisebb!</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Sanyi&apos;, 4
+<b>Return:</b> &apos;SSSSaaaannnnyyyyiiii&apos;
+
+<b>Input:</b> &apos;Bela&apos;, -1
+<b>Return:</b> &apos;HIBA!&apos;
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
