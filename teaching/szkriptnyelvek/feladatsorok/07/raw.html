@@ -268,7 +268,14 @@ pre[data-line] .line-highlight[data-end]:after {
 <div class="bordered-box border-red">
     <span class="red">Figyelem!</span> Mindig j&#xF3;l olvassuk el a feladat sz&#xF6;veg&#xE9;t! Ha azt k&#xE9;ri a feladat, hogy &#xED;rasson ki valamit a f&#xFC;ggv&#xE9;ny a konzolra, akkor haszn&#xE1;ljuk a <code>console.log()</code>-ot, ha pedig vissza kell adnia a f&#xFC;ggv&#xE9;nynek valamit, akkor a <code>return</code> kulcssz&#xF3;t haszn&#xE1;ljuk!
 </div>
-<h3 class="mume-header" id="1-feladat-v%C3%A1ros-2-pont">1. feladat: V&#xE1;ros (2 pont)</h3>
+<h3 class="mume-header" id="1-feladat-k%C3%A9zfog%C3%A1s-2-pont">1. feladat: K&#xE9;zfog&#xE1;s (2 pont)</h3>
+
+<p>Egy t&#xF6;bb tag&#xFA; bar&#xE1;ti t&#xE1;rsas&#xE1;gban mindenki mindenkivel kezet fog (nyilv&#xE1;n &#xF6;nmag&#xE1;val senki sem fog kezet, ennyire k&#xE9;ts&#xE9;gbeesettek az&#xE9;rt nem vagyunk). &#xCD;rj egy <code>kezfogas</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely a t&#xE1;rsas&#xE1;gban l&#xE9;v&#x151; emberek sz&#xE1;m&#xE1;t kapja param&#xE9;ter&#xFC;l, &#xE9;s visszaadja, hogy &#xF6;sszesen h&#xE1;ny k&#xE9;zfog&#xE1;s t&#xF6;rt&#xE9;nt!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 10
+<b>Return:</b> 45
+</pre>
+<h3 class="mume-header" id="2-feladat-v%C3%A1ros-2-pont">2. feladat: V&#xE1;ros (2 pont)</h3>
 
 <p>Amikor egy v&#xE1;rosba l&#xE1;togatunk, egy &#xFC;dv&#xF6;zl&#x151; t&#xE1;bla fogad minket. &#xCD;rj egy <code>udvozol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy v&#xE1;ros nev&#xE9;t v&#xE1;rja param&#xE9;ter&#xFC;l, &#xE9;s ki&#xED;rja a konzolra az <code>Udvozoljuk {varosNeve} varosaban!</code> sz&#xF6;veget (a kapcsos z&#xE1;r&#xF3;jelek k&#xF6;z&#xE9; a param&#xE9;terben kapott v&#xE1;rosn&#xE9;v legyen behelyettes&#xED;tve)!</p>
 <p>&#xC9;rd el, hogy a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;nek ne legyen k&#xF6;telez&#x151; &#xE9;rt&#xE9;ket adni a f&#xFC;ggv&#xE9;nyh&#xED;v&#xE1;skor! Abban az esetben, ha nem adjuk meg a param&#xE9;ter &#xE9;rt&#xE9;k&#xE9;t, akkor a v&#xE1;ros neve legyen alapb&#xF3;l <code>Szeged</code>!</p>
@@ -279,22 +286,21 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b>
 <b>Output:</b> &apos;Udvozoljuk Szeged varosaban!&apos;
 </pre>
-<h3 class="mume-header" id="2-feladat-imposztor-3-pont">2. feladat: Imposztor (3 pont)</h3>
+<h3 class="mume-header" id="3-feladat-kedves-ferenc-3-pont">3. feladat: Kedves Ferenc (3 pont)</h3>
 
-<p>Dani a n&#xE9;pszer&#x171; <a href="http://www.innersloth.com/gameAmongUs.php">Among Us</a> j&#xE1;t&#xE9;kkal j&#xE1;tszik, amelynek egyes k&#xF6;reiben a j&#xE1;t&#xE9;kosok megpr&#xF3;b&#xE1;lj&#xE1;k kital&#xE1;lni, hogy k&#xF6;z&#xFC;l&#xFC;k kik az imposztorok. Egy k&#xF6;rben annak a sz&#xE1;zal&#xE9;kos val&#xF3;sz&#xED;n&#x171;s&#xE9;ge, hogy Dani imposztor lesz, a k&#xF6;vetkez&#x151; k&#xE9;plettel kaphat&#xF3; meg: <code>100 * (imposztorok sz&#xE1;ma / j&#xE1;t&#xE9;kosok sz&#xE1;ma)</code>.</p>
-<p>&#xCD;rj egy <code>imposztor</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely rendre a j&#xE1;t&#xE9;kosok sz&#xE1;m&#xE1;t &#xE9;s az imposztorok sz&#xE1;m&#xE1;t kapja param&#xE9;ter&#xFC;l (mindk&#xE9;t &#xE9;rt&#xE9;k garant&#xE1;ltan sz&#xE1;m t&#xED;pus&#xFA;)!</p>
-<ul>
-<li>Egy j&#xE1;t&#xE9;kban 2-10 j&#xE1;t&#xE9;kos, illetve 1-3 imposztor lehet. Ha a param&#xE9;terben kapott &#xE9;rt&#xE9;kek valamelyike nem felel meg ezeknek a megszor&#xED;t&#xE1;soknak, akkor a f&#xFC;ggv&#xE9;ny a <code>HIBA!</code> sz&#xF6;veggel t&#xE9;rjen vissza!</li>
-<li>Megfelel&#x151; param&#xE9;terek eset&#xE9;n a f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke a <code>Dani {N}% valoszinuseggel lesz imposztor.</code> sz&#xF6;veg legyen, ahol <code>{N}</code> a fenti k&#xE9;plet alapj&#xE1;n kisz&#xE1;molt sz&#xE1;zal&#xE9;k&#xE9;rt&#xE9;k, eg&#xE9;sz sz&#xE1;mra kerek&#xED;tve! A hagyom&#xE1;nyos matematikai kerek&#xED;t&#xE9;s szab&#xE1;lyait haszn&#xE1;ljuk!</li>
-</ul>
+<p>Egy tudom&#xE1;nyos kutat&#xE1;s meg&#xE1;llap&#xED;totta, hogy a Ferenc nev&#x171; emberek kedvesek. &#xCD;rj egy <code>kedves</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy nevet kap param&#xE9;ter&#xFC;l! Ha a n&#xE9;v <code>Ferenc</code>, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza igaz, egy&#xE9;b n&#xE9;v eset&#xE9;n pedig hamis &#xE9;rt&#xE9;kkel! Ha a f&#xFC;ggv&#xE9;nyh&#xED;v&#xE1;skor nem adunk &#xE1;t param&#xE9;tert a f&#xFC;ggv&#xE9;nynek, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k legyen <code>null</code>!</p>
+<p><span class="red">A feladat megold&#xE1;sa sor&#xE1;n NE haszn&#xE1;lj default param&#xE9;ter &#xE9;rt&#xE9;ket! Ehelyett a gyakorlati jegyzetben t&#xE1;rgyalt m&#xF3;don ellen&#x151;rizd, hogy megadt&#xE1;k-e a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;nek &#xE9;rt&#xE9;k&#xE9;t!</span></p>
 <p><span class="example">P&#xE9;lda:</span></p>
-<pre class="language-html"><b>Input:</b> 7, 2
-<b>Return:</b> &apos;Dani 29% valoszinuseggel lesz imposztor.&apos;
+<pre class="language-html"><b>Input:</b> &apos;Ferenc&apos;
+<b>Return:</b> true
 
-<b>Input:</b> 10, 4
-<b>Return:</b> &apos;HIBA!&apos;
+<b>Input:</b> &apos;Bela&apos;
+<b>Return:</b> false
+
+<b>Input:</b> 
+<b>Return:</b> null
 </pre>
-<h3 class="mume-header" id="3-feladat-k%C3%B6b%C3%B6sszeg-3-pont">3. feladat: K&#xF6;b&#xF6;sszeg (3 pont)</h3>
+<h3 class="mume-header" id="4-feladat-k%C3%B6b%C3%B6sszeg-3-pont">4. feladat: K&#xF6;b&#xF6;sszeg (3 pont)</h3>
 
 <p>&#xCD;rj egy <code>kobosszeg</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t eg&#xE9;sz sz&#xE1;mot kap param&#xE9;ter&#xFC;l: rendre egy z&#xE1;rt intervallum als&#xF3; &#xE9;s fels&#x151; v&#xE9;gpontj&#xE1;t! A f&#xFC;ggv&#xE9;ny adja vissza az intervallumba es&#x151; sz&#xE1;mok k&#xF6;b&#xE9;nek az &#xF6;sszeg&#xE9;t! (A v&#xE9;gpontok term&#xE9;szetesen m&#xE9;g beletartoznak az intervallumba.)</p>
 <p><span class="example">P&#xE9;lda:</span></p>
@@ -304,7 +310,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> 10, 100
 <b>Return:</b> 25500475
 </pre>
-<h3 class="mume-header" id="4-feladat-callback-f%C3%BCggv%C3%A9ny-4-pont">4. feladat: Callback f&#xFC;ggv&#xE9;ny (4 pont)</h3>
+<h3 class="mume-header" id="5-feladat-callback-f%C3%BCggv%C3%A9ny-4-pont">5. feladat: Callback f&#xFC;ggv&#xE9;ny (4 pont)</h3>
 
 <p>Haszn&#xE1;ljuk fel az el&#x151;z&#x151; feladatban meg&#xED;rt <code>kobosszeg</code> f&#xFC;ggv&#xE9;nyt, miut&#xE1;n meggy&#x151;z&#x151;dt&#xFC;nk arr&#xF3;l, hogy helyes param&#xE9;terekkel h&#xED;vjuk meg azt!</p>
 <p>&#xCD;rj egy <code>kobosszegetMeghiv</code> f&#xFC;ggv&#xE9;nyt, amely 3 param&#xE9;tert v&#xE1;r: k&#xE9;t eg&#xE9;sz sz&#xE1;mot &#xE9;s egy callback f&#xFC;ggv&#xE9;nyt (ez most a <code>kobosszeg</code> f&#xFC;ggv&#xE9;ny lesz)! Amennyiben minden param&#xE9;ter megfelel&#x151; t&#xED;pus&#xFA; (k&#xE9;t sz&#xE1;m &#xE9;s egy f&#xFC;ggv&#xE9;ny), h&#xED;vd meg a param&#xE9;terben kapott callback f&#xFC;ggv&#xE9;nyt &#xFA;gy, hogy az els&#x151; param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a kisebbik, m&#xED;g a m&#xE1;sodik param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a nagyobbik legyen! A callback f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k&#xE9;vel t&#xE9;rj vissza!</p>
@@ -312,7 +318,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <pre class="language-html"><b>Input:</b> 100, 10, kobosszeg
 <b>Return:</b> 25500475
 </pre>
-<h3 class="mume-header" id="5-feladat-teve-5-pont">5. feladat: Teve (5 pont)</h3>
+<h3 class="mume-header" id="6-feladat-teve-5-pont">6. feladat: Teve (5 pont)</h3>
 
 <p>A <a href="https://teveclub.hu/">TeveClub</a> oldalon virtu&#xE1;lisan nevelhet&#xFC;nk tev&#xE9;ket. Egy &#xFA;j teve ig&#xE9;nyl&#xE9;sekor meg kell adnunk a teve nev&#xE9;t &#xE9;s h&#xED;v&#xF3;jel&#xE9;t (ez kb. egy jelsz&#xF3;nak feleltethet&#x151; meg).</p>
 <p>&#xCD;rj egy <code>tevetIgenyel</code> f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a teve nev&#xE9;t &#xE9;s h&#xED;v&#xF3;jel&#xE9;t (sz&#xF6;veges adatok)! A f&#xFC;ggv&#xE9;nyben ellen&#x151;rizz&#xFC;k, hogy a megadott h&#xED;v&#xF3;jel megfelel&#x151; er&#x151;ss&#xE9;g&#x171;-e! Ezt a k&#xF6;vetkez&#x151;k&#xE9;ppen tegy&#xFC;k meg:</p>
@@ -329,7 +335,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> &apos;Leenhurbertindrund&apos;, &apos;sivatag4life&apos;
 <b>Output:</b> &apos;Sikeres teveigenyles!&apos;
 </pre>
-<h3 class="mume-header" id="6-feladat-sz%C3%A1mjegyek-%C3%A1tlaga-5-pont">6. feladat: Sz&#xE1;mjegyek &#xE1;tlaga (5 pont)</h3>
+<h3 class="mume-header" id="7-feladat-sz%C3%A1mjegyek-%C3%A1tlaga-5-pont">7. feladat: Sz&#xE1;mjegyek &#xE1;tlaga (5 pont)</h3>
 
 <p>&#xCD;rj egy <code>szamjegyAtlag</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy eg&#xE9;sz sz&#xE1;mot v&#xE1;r param&#xE9;ter&#xFC;l (ak&#xE1;r negat&#xED;v param&#xE9;ter is lehet), &#xE9;s visszaadja a sz&#xE1;mban tal&#xE1;lhat&#xF3; sz&#xE1;mjegyek &#xE1;tlag&#xE1;t (teh&#xE1;t osszuk el a sz&#xE1;mjegyek &#xF6;sszeg&#xE9;t a sz&#xE1;mjegyek darabsz&#xE1;m&#xE1;val)! Ha a f&#xFC;ggv&#xE9;ny nem sz&#xE1;m t&#xED;pus&#xFA; param&#xE9;tert kap, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k legyen <code>-1</code>!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
@@ -342,7 +348,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> &apos;kecske&apos;
 <b>Return:</b> -1
 </pre>
-<h3 class="mume-header" id="7-feladat-cenz%C3%BAra-3-pont">7. feladat: Cenz&#xFA;ra (3 pont)</h3>
+<h3 class="mume-header" id="8-feladat-cenz%C3%BAra-3-pont">8. feladat: Cenz&#xFA;ra (3 pont)</h3>
 
 <p>Ninja az egyik Discord szerveren az indokolatlan tagelget&#xE9;seivel sikeresen mag&#xE1;ra harag&#xED;totta az egyik admint. Emiatt azt a b&#xFC;ntet&#xE9;st kapta, hogy mostant&#xF3;l az &#xFC;zenetei cenz&#xFA;r&#xE1;zva jelennek meg.</p>
 <p>&#xCD;rj egy <code>cenzura</code> f&#xFC;ggv&#xE9;nyt, amely Ninja egy &#xFC;zenet&#xE9;t kapja param&#xE9;ter&#xFC;l, &#xE9;s ezt &#xE1;talak&#xED;tja &#xFA;gy, hogy az &#xF6;sszes mag&#xE1;nhangz&#xF3;t lecser&#xE9;li a <code>*</code> (csillag) karakterre! A mag&#xE1;nhangz&#xF3;k vizsg&#xE1;lata sor&#xE1;n a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg! A param&#xE9;terben &#xE9;rkez&#x151; sz&#xF6;veg garant&#xE1;ltan nem tartalmaz &#xE9;kezetes bet&#x171;ket.</p>
@@ -353,7 +359,14 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> &apos;Elhagyom ezt a csoportot, mert serto az elmult tobb mint 10 eves Discordos tapasztalatom es multammal szemben.&apos;
 <b>Return:</b> &apos;*lh*gy*m *zt * cs*p*rt*t, m*rt s*rt* *z *lm*lt t*bb m*nt 10 *v*s D*sc*rd*s t*p*szt*l*t*m *s m*lt*mm*l sz*mb*n.&apos;
 </pre>
-<h3 class="mume-header" id="8-feladat-karakterek-t%C3%B6bbsz%C3%B6r%C3%B6z%C3%A9se-4-pont">8. feladat: Karakterek t&#xF6;bbsz&#xF6;r&#xF6;z&#xE9;se (4 pont)</h3>
+<h3 class="mume-header" id="9-feladat-bet%C5%B1csere-3-pont">9. feladat: Bet&#x171;csere (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>betucsere</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy sz&#xF6;veg, amit &#xFA;gy kapunk, hogy a param&#xE9;terben kapott sz&#xF6;vegben felcser&#xE9;lj&#xFC;k a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t ami az eredeti sz&#xF6;vegben kisbet&#x171; volt, az a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;kben nagybet&#x171; lesz &#xE9;s ford&#xED;tva).</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;SegITsEg! elROMloTt A cAPs LocK!&apos;
+<b>Return:</b> &apos;sEGitSeG! ELromLOtT a CapS lOCk!&apos;
+</pre>
+<h3 class="mume-header" id="10-feladat-karakterek-t%C3%B6bbsz%C3%B6r%C3%B6z%C3%A9se-4-pont">10. feladat: Karakterek t&#xF6;bbsz&#xF6;r&#xF6;z&#xE9;se (4 pont)</h3>
 
 <p>&#xCD;rj egy <code>karakterTobbszoroz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: egy sz&#xF6;veget &#xE9;s egy eg&#xE9;sz sz&#xE1;mot! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy sz&#xF6;veg, amit &#xFA;gy kapunk, hogy az els&#x151; param&#xE9;terben &#xE9;rkez&#x151; sz&#xF6;veg minden karakter&#xE9;t vessz&#xFC;k annyiszor, mint amennyi a m&#xE1;sodik param&#xE9;terben kapott sz&#xE1;m.</p>
 <p>A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke legyen a <code>HIBA!</code> sz&#xF6;veg, amennyiben...</p>

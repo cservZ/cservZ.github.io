@@ -7,7 +7,19 @@
 </div>
 
 
-### 1. feladat: Város (2 pont)
+### 1. feladat: Kézfogás (2 pont)
+
+Egy több tagú baráti társaságban mindenki mindenkivel kezet fog (nyilván önmagával senki sem fog kezet, ennyire kétségbeesettek azért nem vagyunk). Írj egy `kezfogas` nevű függvényt, amely a társaságban lévő emberek számát kapja paraméterül, és visszaadja, hogy összesen hány kézfogás történt!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 10
+<b>Return:</b> 45
+</pre>
+
+
+### 2. feladat: Város (2 pont)
 
 Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `udvozol` nevű függvényt, amely egy város nevét várja paraméterül, és kiírja a konzolra az `Udvozoljuk {varosNeve} varosaban!` szöveget (a kapcsos zárójelek közé a paraméterben kapott városnév legyen behelyettesítve)!
 
@@ -24,27 +36,27 @@ Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `u
 </pre>
 
 
-### 2. feladat: Imposztor (3 pont)
+### 3. feladat: Kedves Ferenc (3 pont)
 
-Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékkal játszik, amelynek egyes köreiben a játékosok megpróbálják kitalálni, hogy közülük kik az imposztorok. Egy körben annak a százalékos valószínűsége, hogy Dani imposztor lesz, a következő képlettel kapható meg: `100 * (imposztorok száma / játékosok száma)`.
+Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek. Írj egy `kedves` nevű függvényt, amely egy nevet kap paraméterül! Ha a név `Ferenc`, akkor a függvény térjen vissza igaz, egyéb név esetén pedig hamis értékkel! Ha a függvényhíváskor nem adunk át paramétert a függvénynek, akkor a visszatérési érték legyen `null`!
 
-Írj egy `imposztor` nevű függvényt, amely rendre a játékosok számát és az imposztorok számát kapja paraméterül (mindkét érték garantáltan szám típusú)!
-
-* Egy játékban 2-10 játékos, illetve 1-3 imposztor lehet. Ha a paraméterben kapott értékek valamelyike nem felel meg ezeknek a megszorításoknak, akkor a függvény a `HIBA!` szöveggel térjen vissza!
-* Megfelelő paraméterek esetén a függvény visszatérési értéke a `Dani {N}% valoszinuseggel lesz imposztor.` szöveg legyen, ahol `{N}` a fenti képlet alapján kiszámolt százalékérték, egész számra kerekítve! A hagyományos matematikai kerekítés szabályait használjuk!
+<span class="red">A feladat megoldása során NE használj default paraméter értéket! Ehelyett a gyakorlati jegyzetben tárgyalt módon ellenőrizd, hogy megadták-e a függvény paraméterének értékét!</span>
 
 <span class="example">Példa:</span>
 
 <pre class="language-html">
-<b>Input:</b> 7, 2
-<b>Return:</b> 'Dani 29% valoszinuseggel lesz imposztor.'
+<b>Input:</b> 'Ferenc'
+<b>Return:</b> true
 
-<b>Input:</b> 10, 4
-<b>Return:</b> 'HIBA!'
+<b>Input:</b> 'Bela'
+<b>Return:</b> false
+
+<b>Input:</b> 
+<b>Return:</b> null
 </pre>
 
 
-### 3. feladat: Köbösszeg (3 pont)
+### 4. feladat: Köbösszeg (3 pont)
 
 Írj egy `kobosszeg` nevű függvényt, amely két egész számot kap paraméterül: rendre egy zárt intervallum alsó és felső végpontját! A függvény adja vissza az intervallumba eső számok köbének az összegét! (A végpontok természetesen még beletartoznak az intervallumba.)
 
@@ -59,7 +71,7 @@ Dani a népszerű [Among Us](http://www.innersloth.com/gameAmongUs.php) játékk
 </pre>
 
 
-### 4. feladat: Callback függvény (4 pont)
+### 5. feladat: Callback függvény (4 pont)
 
 Használjuk fel az előző feladatban megírt `kobosszeg` függvényt, miután meggyőződtünk arról, hogy helyes paraméterekkel hívjuk meg azt!
 
@@ -73,7 +85,7 @@ Használjuk fel az előző feladatban megírt `kobosszeg` függvényt, miután m
 </pre>
 
 
-### 5. feladat: Teve (5 pont)
+### 6. feladat: Teve (5 pont)
 
 A [TeveClub](https://teveclub.hu/) oldalon virtuálisan nevelhetünk tevéket. Egy új teve igénylésekor meg kell adnunk a teve nevét és hívójelét (ez kb. egy jelszónak feleltethető meg).
 
@@ -95,7 +107,7 @@ A [TeveClub](https://teveclub.hu/) oldalon virtuálisan nevelhetünk tevéket. E
 </pre>
 
 
-### 6. feladat: Számjegyek átlaga (5 pont)
+### 7. feladat: Számjegyek átlaga (5 pont)
 
 Írj egy `szamjegyAtlag` nevű függvényt, amely egy egész számot vár paraméterül (akár negatív paraméter is lehet), és visszaadja a számban található számjegyek átlagát (tehát osszuk el a számjegyek összegét a számjegyek darabszámával)! Ha a függvény nem szám típusú paramétert kap, akkor a visszatérési érték legyen `-1`! 
 
@@ -113,7 +125,7 @@ A [TeveClub](https://teveclub.hu/) oldalon virtuálisan nevelhetünk tevéket. E
 </pre>
 
 
-### 7. feladat: Cenzúra (3 pont)
+### 8. feladat: Cenzúra (3 pont)
 
 Ninja az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen magára haragította az egyik admint. Emiatt azt a büntetést kapta, hogy mostantól az üzenetei cenzúrázva jelennek meg.
 
@@ -130,7 +142,19 @@ Ninja az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen mag�
 </pre>
 
 
-### 8. feladat: Karakterek többszörözése (4 pont)
+### 9. feladat: Betűcsere (3 pont)
+
+Írj egy `betucsere` nevű függvényt, amely egy szöveget kap paraméterül! A függvény visszatérési értéke egy szöveg, amit úgy kapunk, hogy a paraméterben kapott szövegben felcseréljük a kis- és nagybetűket (tehát ami az eredeti szövegben kisbetű volt, az a visszatérési értékben nagybetű lesz és fordítva).
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'SegITsEg! elROMloTt A cAPs LocK!'
+<b>Return:</b> 'sEGitSeG! ELromLOtT a CapS lOCk!'
+</pre>
+
+
+### 10. feladat: Karakterek többszörözése (4 pont)
 
 Írj egy `karakterTobbszoroz` nevű függvényt, amely két paramétert vár: egy szöveget és egy egész számot! A függvény visszatérési értéke egy szöveg, amit úgy kapunk, hogy az első paraméterben érkező szöveg minden karakterét vesszük annyiszor, mint amennyi a második paraméterben kapott szám.
 
