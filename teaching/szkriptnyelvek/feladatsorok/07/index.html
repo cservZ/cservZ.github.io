@@ -261,8 +261,159 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="javascript-vez%C3%A9rl%C3%A9si-szerkezetek-f%C3%BCggv%C3%A9nyek-stringek">JavaScript vez&#xE9;rl&#xE9;si szerkezetek, f&#xFC;ggv&#xE9;nyek, stringek</h2>
 
-<p>TODO</p>
+<div class="bordered-box border-red">
+    <span class="red">Figyelem!</span> Mindig j&#xF3;l olvassuk el a feladat sz&#xF6;veg&#xE9;t! Ha azt k&#xE9;ri a feladat, hogy &#xED;rasson ki valamit a f&#xFC;ggv&#xE9;ny a konzolra, akkor haszn&#xE1;ljuk a <code>console.log()</code>-ot, ha pedig vissza kell adnia a f&#xFC;ggv&#xE9;nynek valamit, akkor a <code>return</code> kulcssz&#xF3;t haszn&#xE1;ljuk!
+</div>
+<h3 class="mume-header" id="1-feladat-k%C3%A9zfog%C3%A1s-2-pont">1. feladat: K&#xE9;zfog&#xE1;s (2 pont)</h3>
 
+<p>Egy t&#xF6;bb tag&#xFA; bar&#xE1;ti t&#xE1;rsas&#xE1;gban mindenki mindenkivel kezet fog (nyilv&#xE1;n &#xF6;nmag&#xE1;val senki sem fog kezet, ennyire k&#xE9;ts&#xE9;gbeesettek az&#xE9;rt nem vagyunk). &#xCD;rj egy <code>kezfogas</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely a t&#xE1;rsas&#xE1;gban l&#xE9;v&#x151; emberek sz&#xE1;m&#xE1;t kapja param&#xE9;ter&#xFC;l, &#xE9;s visszaadja, hogy &#xF6;sszesen h&#xE1;ny k&#xE9;zfog&#xE1;s t&#xF6;rt&#xE9;nt!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 10
+<b>Return:</b> 45
+</pre>
+<h3 class="mume-header" id="2-feladat-v%C3%A1ros-2-pont">2. feladat: V&#xE1;ros (2 pont)</h3>
+
+<p>Amikor egy v&#xE1;rosba l&#xE1;togatunk, egy &#xFC;dv&#xF6;zl&#x151; t&#xE1;bla fogad minket. &#xCD;rj egy <code>udvozol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy v&#xE1;ros nev&#xE9;t v&#xE1;rja param&#xE9;ter&#xFC;l, &#xE9;s ki&#xED;rja a konzolra az <code>Udvozoljuk {varosNeve} varosaban!</code> sz&#xF6;veget (a kapcsos z&#xE1;r&#xF3;jelek k&#xF6;z&#xE9; a param&#xE9;terben kapott v&#xE1;rosn&#xE9;v legyen behelyettes&#xED;tve)!</p>
+<p>&#xC9;rd el, hogy a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;nek ne legyen k&#xF6;telez&#x151; &#xE9;rt&#xE9;ket adni a f&#xFC;ggv&#xE9;nyh&#xED;v&#xE1;skor! Abban az esetben, ha nem adjuk meg a param&#xE9;ter &#xE9;rt&#xE9;k&#xE9;t, akkor a v&#xE1;ros neve legyen alapb&#xF3;l <code>Szeged</code>!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Mucsarocsoge&apos;
+<b>Output:</b> &apos;Udvozoljuk Mucsarocsoge varosaban!&apos;
+
+<b>Input:</b>
+<b>Output:</b> &apos;Udvozoljuk Szeged varosaban!&apos;
+</pre>
+<h3 class="mume-header" id="3-feladat-kedves-ferenc-3-pont">3. feladat: Kedves Ferenc (3 pont)</h3>
+
+<p>Egy tudom&#xE1;nyos kutat&#xE1;s meg&#xE1;llap&#xED;totta, hogy a Ferenc nev&#x171; emberek kedvesek. &#xCD;rj egy <code>kedves</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy nevet kap param&#xE9;ter&#xFC;l! Ha a n&#xE9;v <code>Ferenc</code>, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza igaz, egy&#xE9;b n&#xE9;v eset&#xE9;n pedig hamis &#xE9;rt&#xE9;kkel! Ha a f&#xFC;ggv&#xE9;nyh&#xED;v&#xE1;skor nem adunk &#xE1;t param&#xE9;tert a f&#xFC;ggv&#xE9;nynek, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k legyen <code>null</code>!</p>
+<p><span class="red">A feladat megold&#xE1;sa sor&#xE1;n NE haszn&#xE1;lj default param&#xE9;ter &#xE9;rt&#xE9;ket! Ehelyett a gyakorlati jegyzetben t&#xE1;rgyalt m&#xF3;don ellen&#x151;rizd, hogy megadt&#xE1;k-e a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;nek &#xE9;rt&#xE9;k&#xE9;t!</span></p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Ferenc&apos;
+<b>Return:</b> true
+
+<b>Input:</b> &apos;Bela&apos;
+<b>Return:</b> false
+
+<b>Input:</b> 
+<b>Return:</b> null
+</pre>
+<h3 class="mume-header" id="4-feladat-k%C3%B6b%C3%B6sszeg-3-pont">4. feladat: K&#xF6;b&#xF6;sszeg (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>kobosszeg</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t eg&#xE9;sz sz&#xE1;mot kap param&#xE9;ter&#xFC;l: rendre egy z&#xE1;rt intervallum als&#xF3; &#xE9;s fels&#x151; v&#xE9;gpontj&#xE1;t! A f&#xFC;ggv&#xE9;ny adja vissza az intervallumba es&#x151; sz&#xE1;mok k&#xF6;b&#xE9;nek az &#xF6;sszeg&#xE9;t! (A v&#xE9;gpontok term&#xE9;szetesen m&#xE9;g beletartoznak az intervallumba.)</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 1, 3
+<b>Return:</b> 36
+
+<b>Input:</b> 10, 100
+<b>Return:</b> 25500475
+</pre>
+<h3 class="mume-header" id="5-feladat-callback-f%C3%BCggv%C3%A9ny-4-pont">5. feladat: Callback f&#xFC;ggv&#xE9;ny (4 pont)</h3>
+
+<p>Haszn&#xE1;ljuk fel az el&#x151;z&#x151; feladatban meg&#xED;rt <code>kobosszeg</code> f&#xFC;ggv&#xE9;nyt, miut&#xE1;n meggy&#x151;z&#x151;dt&#xFC;nk arr&#xF3;l, hogy helyes param&#xE9;terekkel h&#xED;vjuk meg azt!</p>
+<p>&#xCD;rj egy <code>kobosszegetMeghiv</code> f&#xFC;ggv&#xE9;nyt, amely 3 param&#xE9;tert v&#xE1;r: k&#xE9;t eg&#xE9;sz sz&#xE1;mot &#xE9;s egy callback f&#xFC;ggv&#xE9;nyt (ez most a <code>kobosszeg</code> f&#xFC;ggv&#xE9;ny lesz)! Amennyiben minden param&#xE9;ter megfelel&#x151; t&#xED;pus&#xFA; (k&#xE9;t sz&#xE1;m &#xE9;s egy f&#xFC;ggv&#xE9;ny), h&#xED;vd meg a param&#xE9;terben kapott callback f&#xFC;ggv&#xE9;nyt &#xFA;gy, hogy az els&#x151; param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a kisebbik, m&#xED;g a m&#xE1;sodik param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a nagyobbik legyen! A callback f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k&#xE9;vel t&#xE9;rj vissza!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 100, 10, kobosszeg
+<b>Return:</b> 25500475
+</pre>
+<h3 class="mume-header" id="6-feladat-teve-5-pont">6. feladat: Teve (5 pont)</h3>
+
+<p>A <a href="https://teveclub.hu/">TeveClub</a> oldalon virtu&#xE1;lisan nevelhet&#xFC;nk tev&#xE9;ket. Egy &#xFA;j teve ig&#xE9;nyl&#xE9;sekor meg kell adnunk a teve nev&#xE9;t &#xE9;s h&#xED;v&#xF3;jel&#xE9;t (ez kb. egy jelsz&#xF3;nak feleltethet&#x151; meg).</p>
+<p>&#xCD;rj egy <code>tevetIgenyel</code> f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a teve nev&#xE9;t &#xE9;s h&#xED;v&#xF3;jel&#xE9;t (sz&#xF6;veges adatok)! A f&#xFC;ggv&#xE9;nyben ellen&#x151;rizz&#xFC;k, hogy a megadott h&#xED;v&#xF3;jel megfelel&#x151; er&#x151;ss&#xE9;g&#x171;-e! Ezt a k&#xF6;vetkez&#x151;k&#xE9;ppen tegy&#xFC;k meg:</p>
+<ul>
+<li>Ha a h&#xED;v&#xF3;jel 6 karaktern&#xE9;l r&#xF6;videbb, akkor &#xED;rassuk ki a <code>Tul rovid hivojel!</code> hiba&#xFC;zenetet a konzolra!</li>
+<li>Ha a hossz megfelel&#x151;, de a h&#xED;v&#xF3;jel megegyezik a teve nev&#xE9;vel, akkor jelen&#xED;ts&#xFC;k meg a <code>Tul nyilvanvalo hivojel!</code> hiba&#xFC;zenetet a konzolon!</li>
+<li>Ha eddig nem volt hiba, viszont a h&#xED;v&#xF3;jel tartalmazza a <code>teve</code> sz&#xF6;veget b&#xE1;rmilyen form&#xE1;ban (kis- &#xE9;s nagybet&#x171;ket nem megk&#xFC;l&#xF6;nb&#xF6;ztetve), akkor &#xED;rassuk ki a <code>Tiltott szoveg a hivojelben!</code> hiba&#xFC;zenetet!</li>
+<li>Minden egy&#xE9;b esetben a <code>Sikeres teveigenyles!</code> sz&#xF6;veget jelen&#xED;ts&#xFC;k meg a k&#xE9;perny&#x151;n!</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;MyEpicCamel&apos;, &apos;epicTeve20&apos;
+<b>Output:</b> &apos;Tiltott szoveg a hivojelben!&apos;
+
+<b>Input:</b> &apos;Leenhurbertindrund&apos;, &apos;sivatag4life&apos;
+<b>Output:</b> &apos;Sikeres teveigenyles!&apos;
+</pre>
+<h3 class="mume-header" id="7-feladat-sz%C3%A1mjegyek-%C3%A1tlaga-5-pont">7. feladat: Sz&#xE1;mjegyek &#xE1;tlaga (5 pont)</h3>
+
+<p>&#xCD;rj egy <code>szamjegyAtlag</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy eg&#xE9;sz sz&#xE1;mot v&#xE1;r param&#xE9;ter&#xFC;l (ak&#xE1;r negat&#xED;v param&#xE9;ter is lehet), &#xE9;s visszaadja a sz&#xE1;mban tal&#xE1;lhat&#xF3; sz&#xE1;mjegyek &#xE1;tlag&#xE1;t (teh&#xE1;t osszuk el a sz&#xE1;mjegyek &#xF6;sszeg&#xE9;t a sz&#xE1;mjegyek darabsz&#xE1;m&#xE1;val)! Ha a f&#xFC;ggv&#xE9;ny nem sz&#xE1;m t&#xED;pus&#xFA; param&#xE9;tert kap, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k legyen <code>-1</code>!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 741258
+<b>Return:</b> 4.5
+
+<b>Input:</b> -97968
+<b>Return:</b> 7.8
+
+<b>Input:</b> &apos;kecske&apos;
+<b>Return:</b> -1
+</pre>
+<h3 class="mume-header" id="8-feladat-cenz%C3%BAra-3-pont">8. feladat: Cenz&#xFA;ra (3 pont)</h3>
+
+<p>Ninja az egyik Discord szerveren az indokolatlan tagelget&#xE9;seivel sikeresen mag&#xE1;ra harag&#xED;totta az egyik admint. Emiatt azt a b&#xFC;ntet&#xE9;st kapta, hogy mostant&#xF3;l az &#xFC;zenetei cenz&#xFA;r&#xE1;zva jelennek meg.</p>
+<p>&#xCD;rj egy <code>cenzura</code> f&#xFC;ggv&#xE9;nyt, amely Ninja egy &#xFC;zenet&#xE9;t kapja param&#xE9;ter&#xFC;l, &#xE9;s ezt &#xE1;talak&#xED;tja &#xFA;gy, hogy az &#xF6;sszes mag&#xE1;nhangz&#xF3;t lecser&#xE9;li a <code>*</code> (csillag) karakterre! A mag&#xE1;nhangz&#xF3;k vizsg&#xE1;lata sor&#xE1;n a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg! A param&#xE9;terben &#xE9;rkez&#x151; sz&#xF6;veg garant&#xE1;ltan nem tartalmaz &#xE9;kezetes bet&#x171;ket.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;He, miert igy jelennek meg az uzeneteim?&apos;
+<b>Return:</b> &apos;H*, m**rt *gy j*l*nn*k m*g *z *z*n*t**m?&apos;
+
+<b>Input:</b> &apos;Elhagyom ezt a csoportot, mert serto az elmult tobb mint 10 eves Discordos tapasztalatom es multammal szemben.&apos;
+<b>Return:</b> &apos;*lh*gy*m *zt * cs*p*rt*t, m*rt s*rt* *z *lm*lt t*bb m*nt 10 *v*s D*sc*rd*s t*p*szt*l*t*m *s m*lt*mm*l sz*mb*n.&apos;
+</pre>
+<h3 class="mume-header" id="9-feladat-bet%C5%B1csere-3-pont">9. feladat: Bet&#x171;csere (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>betucsere</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy sz&#xF6;veg, amit &#xFA;gy kapunk, hogy a param&#xE9;terben kapott sz&#xF6;vegben felcser&#xE9;lj&#xFC;k a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t ami az eredeti sz&#xF6;vegben kisbet&#x171; volt, az a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;kben nagybet&#x171; lesz &#xE9;s ford&#xED;tva).</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;SegITsEg! elROMloTt A cAPs LocK!&apos;
+<b>Return:</b> &apos;sEGitSeG! ELromLOtT a CapS lOCk!&apos;
+</pre>
+<h3 class="mume-header" id="10-feladat-python-3-pont">10. feladat: Python (3 pont)</h3>
+
+<p>Tomi kedvenc programoz&#xE1;si nyelve a Python. Amikor JavaScriptet kezdett el tanulni, akkor Tomi nagyon hi&#xE1;nyolta a nyelvb&#x151;l a Pythonb&#xF3;l ismer&#x151;s negat&#xED;v stringindexel&#xE9;st, ez&#xE9;rt &#xFA;gy d&#xF6;nt&#xF6;tt, hogy &#xED;r erre egy f&#xFC;ggv&#xE9;nyt.</p>
+<p>&#xCD;rj egy <code>python</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely rendre egy sz&#xF6;veget &#xE9;s egy (garant&#xE1;ltan eg&#xE9;sz) indexet kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny adja vissza a string adott index&#x171; karakter&#xE9;t &#xFA;gy, hogy a Pythonb&#xF3;l ismer&#x151;s negat&#xED;v indexel&#xE9;s is m&#x171;k&#xF6;dj&#xF6;n (ekkor a string v&#xE9;g&#xE9;t&#x151;l kezd&#xFC;nk el sz&#xE1;molni)! Amennyiben t&#xFA;l- vagy alulindexelj&#xFC;k a stringet, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k <code>undefined</code> legyen!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Lehet-e a Pythonos indexelest JavaScriptben szimulalni?&apos;, 0
+<b>Return:</b> &apos;L&apos;
+
+<b>Input:</b> &apos;Lehet-e a Pythonos indexelest JavaScriptben szimulalni?&apos;, -1
+<b>Return:</b> &apos;?&apos;
+
+<b>Input:</b> &apos;Lehet-e a Pythonos indexelest JavaScriptben szimulalni?&apos;, -2000
+<b>Return:</b> undefined
+</pre>
+<h3 class="mume-header" id="11-feladat-karakterek-t%C3%B6bbsz%C3%B6r%C3%B6z%C3%A9se-5-pont">11. feladat: Karakterek t&#xF6;bbsz&#xF6;r&#xF6;z&#xE9;se (5 pont)</h3>
+
+<p>&#xCD;rj egy <code>karakterTobbszoroz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget v&#xE1;r param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy sz&#xF6;veg, amit &#xFA;gy kapunk, hogy a param&#xE9;terben kapott sz&#xF6;veg minden karakter&#xE9;t le&#xED;rjuk annyiszor, mint ah&#xE1;nyadik a karakter a sz&#xF6;vegben (teh&#xE1;t az 1. karaktert 1-szer, a 2. karaktert 2-szer, a 3. karaktert 3-szor &#xE9;s &#xED;gy tov&#xE1;bb).</p>
+<p>Amennyiben a f&#xFC;ggv&#xE9;ny param&#xE9;tere nem string t&#xED;pus&#xFA; vagy a param&#xE9;terben kapott &#xE9;rt&#xE9;k az &#xFC;res string, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza a <code>HIBA!</code> sz&#xF6;veggel!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;sajt&apos;
+<b>Return:</b> &apos;saajjjtttt&apos;
+
+<b>Input:</b> true
+<b>Return:</b> &apos;HIBA!&apos;
+</pre>
+<h3 class="mume-header" id="12-feladat-h%C3%A1romsz%C3%B6g-6-pont">12. feladat: H&#xE1;romsz&#xF6;g (6 pont)</h3>
+
+<p>&#xCD;rj egy <code>haromszog</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy h&#xE1;romsz&#xF6;g 3 oldal&#xE1;nak hossz&#xE1;t kapja param&#xE9;ter&#xFC;l centim&#xE9;terben (mindh&#xE1;rom oldalhossz garant&#xE1;ltan sz&#xE1;m t&#xED;pus&#xFA;)!</p>
+<ul>
+<li>Ha valamelyik param&#xE9;ter negat&#xED;v, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza a <code>HIBA! Nem letezo haromszog!</code> sz&#xF6;veggel!</li>
+<li>Ha az oldalhosszak alapj&#xE1;n a h&#xE1;romsz&#xF6;g nem megszerkeszthet&#x151; (b&#x151;vebben l&#xE1;sd: k&#xE9;k doboz), akkor szint&#xE9;n t&#xE9;rjen vissza a f&#xFC;ggv&#xE9;ny a <code>HIBA! Nem letezo haromszog!</code> sz&#xF6;veggel!</li>
+<li>Minden egy&#xE9;b esetben a f&#xFC;ggv&#xE9;ny sz&#xE1;m&#xED;tsa ki a param&#xE9;terben kapott oldalhosszakkal rendelkez&#x151; h&#xE1;romsz&#xF6;g ker&#xFC;let&#xE9;t &#xE9;s ter&#xFC;let&#xE9;t <strong>2 tizedesjegy pontoss&#xE1;ggal</strong>, &#xE9;s adja vissza ezeket az adatokat egy <code>Kerulet: {kerulet} cm, terulet: {terulet} cm2</code> form&#xE1;tum&#xFA; sz&#xF6;vegben!</li>
+</ul>
+<div class="bordered-box border-blue">
+    <span class="blue">A feladat megold&#xE1;s&#xE1;hoz sz&#xFC;ks&#xE9;ges &#xF6;sszef&#xFC;gg&#xE9;sek:</span><br><br>
+    Egy h&#xE1;romsz&#xF6;g megszerkeszthet&#x151;, ha b&#xE1;rmely oldal&#xE1;nak hossza kisebb a m&#xE1;sik k&#xE9;t oldal hossz&#xE1;nak &#xF6;sszeg&#xE9;n&#xE9;l. Teh&#xE1;t: <img src="https://latex.codecogs.com/gif.latex?a &lt; b + c" class="inline"> &#xE9;s <img src="https://latex.codecogs.com/gif.latex?b &lt; a + c" class="inline"> &#xE9;s <img src="https://latex.codecogs.com/gif.latex?c &lt; a + b" class="inline">. <br><br>
+    H&#xE1;romsz&#xF6;g ker&#xFC;lete: <img src="https://latex.codecogs.com/gif.latex?K = a + b + c" class="inline">. <br><br>
+    H&#xE1;romsz&#xF6;g ter&#xFC;lete (H&#xE9;r&#xF3;n-k&#xE9;plet): <img src="https://latex.codecogs.com/gif.latex?\sqrt{s(s - a)(s - b)(s - c)}" class="inline">, ahol <img src="https://latex.codecogs.com/gif.latex?s = \frac{a + b + c}{2}" class="inline">.
+</div>
+<div class="bordered-box border-green">
+    <span class="green">Tipp:</span> A feladat megold&#xE1;s&#xE1;hoz hasznos lehet a <code>Math</code> objektum (<a href="https://www.w3schools.com/js/js_math.asp" target="_blank">link</a>) &#xE9;s a <code>toFixed()</code> met&#xF3;dus (<a href="https://www.w3schools.com/jsref/jsref_tofixed.asp" target="_blank">link</a>).
+</div>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 3, -1, 3
+<b>Return:</b> &apos;HIBA! Nem letezo haromszog!&apos;
+
+<b>Input:</b> 7, 4, 2
+<b>Return:</b> &apos;HIBA! Nem letezo haromszog!&apos;
+
+<b>Input:</b> 5, 4, 7
+<b>Return:</b> &apos;Kerulet: 16.00 cm, terulet: 9.80 cm2&apos;
+</pre>
       </div>
       
       

@@ -154,22 +154,71 @@ Ninja az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen mag�
 </pre>
 
 
-### 10. feladat: Karakterek többszörözése (4 pont)
+### 10. feladat: Python (3 pont)
 
-Írj egy `karakterTobbszoroz` nevű függvényt, amely két paramétert vár: egy szöveget és egy egész számot! A függvény visszatérési értéke egy szöveg, amit úgy kapunk, hogy az első paraméterben érkező szöveg minden karakterét vesszük annyiszor, mint amennyi a második paraméterben kapott szám.
+Tomi kedvenc programozási nyelve a Python. Amikor JavaScriptet kezdett el tanulni, akkor Tomi nagyon hiányolta a nyelvből a Pythonból ismerős negatív stringindexelést, ezért úgy döntött, hogy ír erre egy függvényt.
 
-A függvény visszatérési értéke legyen a `HIBA!` szöveg, amennyiben...
-
-* ...valamelyik paraméter típusa nem megfelelő
-* ...az első paraméterben érkező szöveg az üres string
-* ...a második paraméterben érkező szám 1-nél kisebb!
+Írj egy `python` nevű függvényt, amely rendre egy szöveget és egy (garantáltan egész) indexet kap paraméterül! A függvény adja vissza a string adott indexű karakterét úgy, hogy a Pythonból ismerős negatív indexelés is működjön (ekkor a string végétől kezdünk el számolni)! Amennyiben túl- vagy alulindexeljük a stringet, akkor a visszatérési érték `undefined` legyen!
 
 <span class="example">Példa:</span>
 
 <pre class="language-html">
-<b>Input:</b> 'Sanyi', 4
-<b>Return:</b> 'SSSSaaaannnnyyyyiiii'
+<b>Input:</b> 'Lehet-e a Pythonos indexelest JavaScriptben szimulalni?', 0
+<b>Return:</b> 'L'
 
-<b>Input:</b> 'Bela', -1
+<b>Input:</b> 'Lehet-e a Pythonos indexelest JavaScriptben szimulalni?', -1
+<b>Return:</b> '?'
+
+<b>Input:</b> 'Lehet-e a Pythonos indexelest JavaScriptben szimulalni?', -2000
+<b>Return:</b> undefined
+</pre>
+
+
+### 11. feladat: Karakterek többszörözése (5 pont)
+
+Írj egy `karakterTobbszoroz` nevű függvényt, amely egy szöveget vár paraméterül! A függvény visszatérési értéke egy szöveg, amit úgy kapunk, hogy a paraméterben kapott szöveg minden karakterét leírjuk annyiszor, mint ahányadik a karakter a szövegben (tehát az 1. karaktert 1-szer, a 2. karaktert 2-szer, a 3. karaktert 3-szor és így tovább).
+
+Amennyiben a függvény paramétere nem string típusú vagy a paraméterben kapott érték az üres string, akkor a függvény térjen vissza a `HIBA!` szöveggel!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'sajt'
+<b>Return:</b> 'saajjjtttt'
+
+<b>Input:</b> true
 <b>Return:</b> 'HIBA!'
+</pre>
+
+
+### 12. feladat: Háromszög (6 pont)
+
+Írj egy `haromszog` nevű függvényt, amely egy háromszög 3 oldalának hosszát kapja paraméterül centiméterben (mindhárom oldalhossz garantáltan szám típusú)!
+
+* Ha valamelyik paraméter negatív, akkor a függvény térjen vissza a `HIBA! Nem letezo haromszog!` szöveggel!
+* Ha az oldalhosszak alapján a háromszög nem megszerkeszthető (bővebben lásd: kék doboz), akkor szintén térjen vissza a függvény a `HIBA! Nem letezo haromszog!` szöveggel!
+* Minden egyéb esetben a függvény számítsa ki a paraméterben kapott oldalhosszakkal rendelkező háromszög kerületét és területét **2 tizedesjegy pontossággal**, és adja vissza ezeket az adatokat egy `Kerulet: {kerulet} cm, terulet: {terulet} cm2` formátumú szövegben!
+
+<div class="bordered-box border-blue">
+    <span class="blue">A feladat megoldásához szükséges összefüggések:</span><br><br>
+    Egy háromszög megszerkeszthető, ha bármely oldalának hossza kisebb a másik két oldal hosszának összegénél. Tehát: <img src="https://latex.codecogs.com/gif.latex?a < b + c" class="inline"> és <img src="https://latex.codecogs.com/gif.latex?b < a + c" class="inline"> és <img src="https://latex.codecogs.com/gif.latex?c < a + b" class="inline">. <br><br>
+    Háromszög kerülete: <img src="https://latex.codecogs.com/gif.latex?K = a + b + c" class="inline">. <br><br>
+    Háromszög területe (Hérón-képlet): <img src="https://latex.codecogs.com/gif.latex?\sqrt{s(s - a)(s - b)(s - c)}" class="inline">, ahol <img src="https://latex.codecogs.com/gif.latex?s = \frac{a + b + c}{2}" class="inline">.
+</div>
+
+<div class="bordered-box border-green">
+    <span class="green">Tipp:</span> A feladat megoldásához hasznos lehet a <code>Math</code> objektum (<a href="https://www.w3schools.com/js/js_math.asp" target="_blank">link</a>) és a <code>toFixed()</code> metódus (<a href="https://www.w3schools.com/jsref/jsref_tofixed.asp" target="_blank">link</a>).
+</div>
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 3, -1, 3
+<b>Return:</b> 'HIBA! Nem letezo haromszog!'
+
+<b>Input:</b> 7, 4, 2
+<b>Return:</b> 'HIBA! Nem letezo haromszog!'
+
+<b>Input:</b> 5, 4, 7
+<b>Return:</b> 'Kerulet: 16.00 cm, terulet: 9.80 cm2'
 </pre>
