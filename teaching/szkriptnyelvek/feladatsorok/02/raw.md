@@ -265,7 +265,7 @@ Hozz létre egy `mocking_spongebob` nevű függvényt, amely egy szöveget kap p
 
 ### 15. feladat: Szövegtömörítés (6 pont)
 
-Írj egy `tomorit` nevű függvényt, amely egy szöveget vár paraméterül! A függvény tömörítse a paraméterben kapott szöveget úgy, hogy az egymás után lévő ismétlődő karakterek helyett az ismétlődések számát és az ismétlődő karaktert jelenítse meg (így például az `aaabb` szövegből `3a2b` lesz)! A visszatérési érték a tömörített szöveg.
+Írj egy `tomorit` nevű függvényt, amely egy szöveget vár paraméterül! A függvény tömörítse a paraméterben kapott szöveget úgy, hogy az egymás után lévő ismétlődő karakterek helyett az ismétlődések számát és az ismétlődő karaktert jelenítse meg (így például az `aaabb` szövegből `3a2b` lesz)! A visszatérési érték a tömörített szöveg. A paraméterben kapott szöveg garantáltan legalább 1 karakter hosszú.
 
 <span class="example">Példa:</span>
 
