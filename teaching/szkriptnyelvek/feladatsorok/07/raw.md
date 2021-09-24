@@ -2,11 +2,6 @@
 
 ## JavaScript vezérlési szerkezetek, függvények, stringek
 
-<div class="bordered-box border-red">
-    <span class="red">Figyelem!</span> Mindig jól olvassuk el a feladat szövegét! Ha azt kéri a feladat, hogy írasson ki valamit a függvény a konzolra, akkor használjuk a <code>console.log()</code>-ot, ha pedig vissza kell adnia a függvénynek valamit, akkor a <code>return</code> kulcsszót használjuk!
-</div>
-
-
 ### 1. feladat: Kézfogás (2 pont)
 
 Egy több tagú baráti társaságban mindenki mindenkivel kezet fog (nyilván önmagával senki sem fog kezet, ennyire kétségbeesettek azért nem vagyunk). Írj egy `kezfogas` nevű függvényt, amely a társaságban lévő emberek számát kapja paraméterül, és visszaadja, hogy összesen hány kézfogás történt!
@@ -19,9 +14,24 @@ Egy több tagú baráti társaságban mindenki mindenkivel kezet fog (nyilván �
 </pre>
 
 
-### 2. feladat: Város (2 pont)
+### 2. feladat: Egyezés (2 pont)
 
-Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `udvozol` nevű függvényt, amely egy város nevét várja paraméterül, és kiírja a konzolra az `Udvozoljuk {varosNeve} varosaban!` szöveget (a kapcsos zárójelek közé a paraméterben kapott városnév legyen behelyettesítve)!
+Írj egy `megegyezik` nevű függvényt, amely két tetszőleges paramétert vár! A függvény adja vissza, hogy a két paraméter típusra és értékre is megegyezik-e!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 0, false
+<b>Return:</b> false
+
+<b>Input:</b> 42, 42
+<b>Return:</b> true
+</pre>
+
+
+### 3. feladat: Város (2 pont)
+
+Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `udvozol` nevű függvényt, amely egy város nevét várja paraméterül, és visszatér egy `Udvozoljuk {varosNeve} varosaban!` alakú szöveggel (a kapcsos zárójelek közé a paraméterben kapott városnév legyen behelyettesítve)!
 
 Érd el, hogy a függvény paraméterének ne legyen kötelező értéket adni a függvényhíváskor! Abban az esetben, ha nem adjuk meg a paraméter értékét, akkor a város neve legyen alapból `Szeged`!
 
@@ -29,14 +39,14 @@ Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `u
 
 <pre class="language-html">
 <b>Input:</b> 'Mucsarocsoge'
-<b>Output:</b> 'Udvozoljuk Mucsarocsoge varosaban!'
+<b>Return:</b> 'Udvozoljuk Mucsarocsoge varosaban!'
 
 <b>Input:</b>
-<b>Output:</b> 'Udvozoljuk Szeged varosaban!'
+<b>Return:</b> 'Udvozoljuk Szeged varosaban!'
 </pre>
 
 
-### 3. feladat: Kedves Ferenc (3 pont)
+### 4. feladat: Kedves Ferenc (3 pont)
 
 Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek. Írj egy `kedves` nevű függvényt, amely egy nevet kap paraméterül! Ha a név `Ferenc`, akkor a függvény térjen vissza igaz, egyéb név esetén pedig hamis értékkel! Ha a függvényhíváskor nem adunk át paramétert a függvénynek, akkor a visszatérési érték legyen `null`!
 
@@ -56,7 +66,7 @@ Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek.
 </pre>
 
 
-### 4. feladat: Köbösszeg (3 pont)
+### 5. feladat: Köbösszeg (3 pont)
 
 Írj egy `kobosszeg` nevű függvényt, amely két egész számot kap paraméterül: rendre egy zárt intervallum alsó és felső végpontját! A függvény adja vissza az intervallumba eső számok köbének az összegét! (A végpontok természetesen még beletartoznak az intervallumba.)
 
@@ -71,7 +81,7 @@ Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek.
 </pre>
 
 
-### 5. feladat: Callback függvény (4 pont)
+### 6. feladat: Callback függvény (4 pont)
 
 Használjuk fel az előző feladatban megírt `kobosszeg` függvényt, miután meggyőződtünk arról, hogy helyes paraméterekkel hívjuk meg azt!
 
@@ -85,29 +95,29 @@ Használjuk fel az előző feladatban megírt `kobosszeg` függvényt, miután m
 </pre>
 
 
-### 6. feladat: Teve (5 pont)
+### 7. feladat: Teve (5 pont)
 
 A [TeveClub](https://teveclub.hu/) oldalon virtuálisan nevelhetünk tevéket. Egy új teve igénylésekor meg kell adnunk a teve nevét és hívójelét (ez kb. egy jelszónak feleltethető meg).
 
-Írj egy `tevetIgenyel` függvényt, amely két paramétert vár: rendre a teve nevét és hívójelét (szöveges adatok)! A függvényben ellenőrizzük, hogy a megadott hívójel megfelelő erősségű-e! Ezt a következőképpen tegyük meg:
+Írj egy `tevetIgenyel` függvényt, amely két paramétert vár: rendre a teve nevét és hívójelét (szöveges adatok)! A függvényben ellenőrizd, hogy a megadott hívójel megfelelő erősségű-e! Ezt a következőképpen tedd meg:
 
-* Ha a hívójel 6 karakternél rövidebb, akkor írassuk ki a `Tul rovid hivojel!` hibaüzenetet a konzolra!
-* Ha a hossz megfelelő, de a hívójel megegyezik a teve nevével, akkor jelenítsük meg a `Tul nyilvanvalo hivojel!` hibaüzenetet a konzolon!
-* Ha eddig nem volt hiba, viszont a hívójel tartalmazza a `teve` szöveget bármilyen formában (kis- és nagybetűket nem megkülönböztetve), akkor írassuk ki a `Tiltott szoveg a hivojelben!` hibaüzenetet!
-* Minden egyéb esetben a `Sikeres teveigenyles!` szöveget jelenítsük meg a képernyőn!
+* Ha a hívójel 6 karakternél rövidebb, akkor a függvény térjen vissza a `Tul rovid hivojel!` hibaüzenettel!
+* Ha a hossz megfelelő, de a hívójel megegyezik a teve nevével, akkor a függvény térjen vissza a `Tul nyilvanvalo hivojel!` hibaüzenettel!
+* Ha eddig nem volt hiba, viszont a hívójel tartalmazza a `teve` szöveget bármilyen formában (kis- és nagybetűket nem megkülönböztetve), akkor a függvény térjen vissza a `Tiltott szoveg a hivojelben!` hibaüzenettel!
+* Minden egyéb esetben a `Sikeres teveigenyles!` szöveg legyen a visszatérési érték!
 
 <span class="example">Példa:</span>
 
 <pre class="language-html">
 <b>Input:</b> 'MyEpicCamel', 'epicTeve20'
-<b>Output:</b> 'Tiltott szoveg a hivojelben!'
+<b>Return:</b> 'Tiltott szoveg a hivojelben!'
 
 <b>Input:</b> 'Leenhurbertindrund', 'sivatag4life'
-<b>Output:</b> 'Sikeres teveigenyles!'
+<b>Return:</b> 'Sikeres teveigenyles!'
 </pre>
 
 
-### 7. feladat: Számjegyek átlaga (5 pont)
+### 8. feladat: Számjegyek átlaga (5 pont)
 
 Írj egy `szamjegyAtlag` nevű függvényt, amely egy egész számot vár paraméterül (akár negatív paraméter is lehet), és visszaadja a számban található számjegyek átlagát (tehát osszuk el a számjegyek összegét a számjegyek darabszámával)! Ha a függvény nem szám típusú paramétert kap, akkor a visszatérési érték legyen `-1`! 
 
@@ -125,7 +135,7 @@ A [TeveClub](https://teveclub.hu/) oldalon virtuálisan nevelhetünk tevéket. E
 </pre>
 
 
-### 8. feladat: Cenzúra (3 pont)
+### 9. feladat: Cenzúra (3 pont)
 
 Ninja az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen magára haragította az egyik admint. Emiatt azt a büntetést kapta, hogy mostantól az üzenetei cenzúrázva jelennek meg.
 
@@ -142,7 +152,38 @@ Ninja az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen mag�
 </pre>
 
 
-### 9. feladat: Betűcsere (3 pont)
+### 10. feladat: Színkód (3 pont)
+
+Ági a NASA-nál dolgozik webfejlesztőként. Egyik napon a NASA úgy döntött, hogy a CSS kódjaikban található összes hexadecimális színkódot át szeretnék írni decimális RGB-formátumra. Írj egy `konvertal` nevű függvényt, amely egy hexadecimális színkódot (string) vár paraméterben, és visszaadja a színnek megfelelő decimális RGB-kódot `rgb({vörös szín mennyisége}, {zöld szín mennyisége}, {kék szín mennyisége})` formátumban!
+
+<div class="bordered-box border-blue">
+    <span class="blue">A feladat megoldásához szükséges ismeretek:</span><br><br>
+    Egy hexadecimális színkód úgy néz ki, hogy <code>#</code> (kettőskereszt) karakter után szerepel 6 darab, 16-os számrendszerbeli számjegy - például <code>#FF0077</code> (az input mindig ilyen formátumú lesz, a hexadecimális színkódok tömörebb megadási módjával nem foglalkozunk).<br><br>
+    Egy hexadecimális színkód a következőképpen váltható át decimális RGB-formátumra:<br>
+    <ol>
+        <li>Átváltjuk a kettőskereszt után lévő 2 számjegyet 10-es számrendszerbe, ezzel megkapjuk a vörös szín mennyiségét.</li>
+        <li>Az ezután lévő 2 számjegyet is átváltjuk 10-es számrendszerbe, ezzel megkapjuk a zöld szín mennyiségét.</li>
+        <li>Az utolsó 2 számjegyet is átváltjuk 10-es számrendszerbe, ezzel megkapjuk a kék szín mennyiségét.</li>
+    </ol><br>
+    Például <code>#FF0077</code> decimális RGB-alakban: <code>rgb(255, 0, 119)</code>.
+</div>
+
+<div class="bordered-box border-green">
+    <span class="green">Tipp:</span> Keress rá az interneten, hogy hogyan lehet JavaScriptben egyszerűen átváltani egy hexadecimális (16-os számrendszerbeli) számot decimálisba (10-es számrendszerbe)!
+</div>
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> '#FF0077'
+<b>Return:</b> 'rgb(255, 0, 119)'
+
+<b>Input:</b> '#06C2E9'
+<b>Return:</b> 'rgb(6, 194, 233)'
+</pre>
+
+
+### 11. feladat: Betűcsere (3 pont)
 
 Írj egy `betucsere` nevű függvényt, amely egy szöveget kap paraméterül! A függvény visszatérési értéke egy szöveg, amit úgy kapunk, hogy a paraméterben kapott szövegben felcseréljük a kis- és nagybetűket (tehát ami az eredeti szövegben kisbetű volt, az a visszatérési értékben nagybetű lesz és fordítva).
 
@@ -154,9 +195,9 @@ Ninja az egyik Discord szerveren az indokolatlan tagelgetéseivel sikeresen mag�
 </pre>
 
 
-### 10. feladat: Python (3 pont)
+### 12. feladat: Python (3 pont)
 
-Tomi kedvenc programozási nyelve a Python. Amikor JavaScriptet kezdett el tanulni, akkor Tomi nagyon hiányolta a nyelvből a Pythonból ismerős negatív stringindexelést, ezért úgy döntött, hogy ír erre egy függvényt.
+Tomi kedvenc programozási nyelve a Python. Amikor JavaScriptet kezdett el tanulni, akkor Tomi nagyon hiányolta a nyelvből a Pythonból ismerős negatív string-indexelést, ezért úgy döntött, hogy ír erre egy függvényt.
 
 Írj egy `python` nevű függvényt, amely rendre egy szöveget és egy (garantáltan egész) indexet kap paraméterül! A függvény adja vissza a string adott indexű karakterét úgy, hogy a Pythonból ismerős negatív indexelés is működjön (ekkor a string végétől kezdünk el számolni)! Amennyiben túl- vagy alulindexeljük a stringet, akkor a visszatérési érték `undefined` legyen!
 
@@ -174,7 +215,7 @@ Tomi kedvenc programozási nyelve a Python. Amikor JavaScriptet kezdett el tanul
 </pre>
 
 
-### 11. feladat: Karakterek többszörözése (5 pont)
+### 13. feladat: Karakterek többszörözése (5 pont)
 
 Írj egy `karakterTobbszoroz` nevű függvényt, amely egy szöveget vár paraméterül! A függvény visszatérési értéke egy szöveg, amit úgy kapunk, hogy a paraméterben kapott szöveg minden karakterét leírjuk annyiszor, mint ahányadik a karakter a szövegben (tehát az 1. karaktert 1-szer, a 2. karaktert 2-szer, a 3. karaktert 3-szor és így tovább).
 
@@ -191,7 +232,7 @@ Amennyiben a függvény paramétere nem string típusú vagy a paraméterben kap
 </pre>
 
 
-### 12. feladat: Háromszög (6 pont)
+### 14. feladat: Háromszög (6 pont)
 
 Írj egy `haromszog` nevű függvényt, amely egy háromszög 3 oldalának hosszát kapja paraméterül centiméterben (mindhárom oldalhossz garantáltan szám típusú)!
 
@@ -207,7 +248,7 @@ Amennyiben a függvény paramétere nem string típusú vagy a paraméterben kap
 </div>
 
 <div class="bordered-box border-green">
-    <span class="green">Tipp:</span> A feladat megoldásához hasznos lehet a <code>Math</code> objektum (<a href="https://www.w3schools.com/js/js_math.asp" target="_blank">link</a>) és a <code>toFixed()</code> metódus (<a href="https://www.w3schools.com/jsref/jsref_tofixed.asp" target="_blank">link</a>).
+    <span class="green">Tipp:</span> Négyzetgyökvonást a <code>Math.sqrt()</code> függvénnyel végezhetünk, míg 2 tizedesjegyre kerekítésre használhatjuk a <code>toFixed()</code> metódust (<a href="https://www.w3schools.com/jsref/jsref_tofixed.asp" target="_blank">leírás és példa a metódussal kapcsolatban</a>).
 </div>
 
 <span class="example">Példa:</span>
@@ -221,4 +262,16 @@ Amennyiben a függvény paramétere nem string típusú vagy a paraméterben kap
 
 <b>Input:</b> 5, 4, 7
 <b>Return:</b> 'Kerulet: 16.00 cm, terulet: 9.80 cm2'
+</pre>
+
+
+### 15. feladat: Tömörített szöveg kibontása (6 pont)
+
+Írj egy `kibont` nevű függvényt, amely egy "tömörített" szöveget kap paraméterül, amit "kibont"! A függvény lépkedjen végig a paraméterben kapott szöveg karakterein, és ha számjegy jön, akkor vegye a következő karaktert annyiszor, mint amennyi a számjegy értéke, és az azt követő karakterrel folytassa a műveletet! A kibontott szöveg legyen a függvény visszatérési értéke!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 'Hah5o! Van i2t valaki3?'
+<b>Return:</b> 'Hahooooo! Van itt valaki???'
 </pre>
