@@ -2,6 +2,8 @@
 
 ## Python nyelvi alapok, vezérlési szerkezetek
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása letölthető <a href="./megoldas.zip" target="_blank">ide kattintva</a>.
+
 
 ### 1. feladat: Összefűzés (2 pont)
 
