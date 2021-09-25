@@ -265,9 +265,29 @@ Amennyiben a függvény paramétere nem string típusú vagy a paraméterben kap
 </pre>
 
 
-### 15. feladat: Tömörített szöveg kibontása (6 pont)
+### 15. feladat: Leghosszabb nyerőszéria (5 pont)
 
-Írj egy `kibont` nevű függvényt, amely egy "tömörített" szöveget kap paraméterül, amit "kibont"! A függvény lépkedjen végig a paraméterben kapott szöveg karakterein, és ha számjegy jön, akkor vegye a következő karaktert annyiszor, mint amennyi a számjegy értéke, és az azt követő karakterrel folytassa a műveletet! A kibontott szöveg legyen a függvény visszatérési értéke!
+Gábor a szabadidejében egy online csapatjátékkal játszik. A játék során feljegyzi, hogy a játék egyes köreiben a csapata győzött-e vagy veszített-e.
+
+Írj egy `leghosszabbNyeroszeria` nevű függvényt, amely a játék egyes köreinek eredményét elkódoló szöveget kap paraméterül! A paraméterben kapott szöveg csak `0` és `1` karaktereket tartalmaz: a `0` azt jelenti, hogy Gábor csapata az adott kört elveszítette, az `1` pedig azt, hogy megnyerte. A függvény adja vissza, hogy mennyi volt Gábor csapatának leghosszabb nyerőszériája a játékban (azaz milyen hosszú a paraméterben kapott szövegben a leghosszabb, **közvetlenül egymás utáni** `1`-esekből álló sorozat)!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> '0000100111000000110000101'
+<b>Return:</b> 3
+
+<b>Input:</b> '1101001111010000011110011'
+<b>Return:</b> 4
+
+<b>Input:</b> '0000000000000000000000000'
+<b>Return:</b> 0
+</pre>
+
+
+### 16. feladat: Tömörített szöveg kibontása (6 pont)
+
+Írj egy `kibont` nevű függvényt, amely egy tömörített szöveget kap paraméterül, amit "kibont"! A függvény lépkedjen végig a paraméterben kapott szöveg karakterein, és ha számjegy jön, akkor vegye a következő karaktert annyiszor, mint amennyi a számjegy értéke, és az azt követő karakterrel folytassa a műveletet! A kibontott szöveg legyen a függvény visszatérési értéke!
 
 <span class="example">Példa:</span>
 

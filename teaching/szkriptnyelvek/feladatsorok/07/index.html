@@ -445,9 +445,23 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> 5, 4, 7
 <b>Return:</b> &apos;Kerulet: 16.00 cm, terulet: 9.80 cm2&apos;
 </pre>
-<h3 class="mume-header" id="15-feladat-t%C3%B6m%C3%B6r%C3%ADtett-sz%C3%B6veg-kibont%C3%A1sa-6-pont">15. feladat: T&#xF6;m&#xF6;r&#xED;tett sz&#xF6;veg kibont&#xE1;sa (6 pont)</h3>
+<h3 class="mume-header" id="15-feladat-leghosszabb-nyer%C5%91sz%C3%A9ria-5-pont">15. feladat: Leghosszabb nyer&#x151;sz&#xE9;ria (5 pont)</h3>
 
-<p>&#xCD;rj egy <code>kibont</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy &quot;t&#xF6;m&#xF6;r&#xED;tett&quot; sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amit &quot;kibont&quot;! A f&#xFC;ggv&#xE9;ny l&#xE9;pkedjen v&#xE9;gig a param&#xE9;terben kapott sz&#xF6;veg karakterein, &#xE9;s ha sz&#xE1;mjegy j&#xF6;n, akkor vegye a k&#xF6;vetkez&#x151; karaktert annyiszor, mint amennyi a sz&#xE1;mjegy &#xE9;rt&#xE9;ke, &#xE9;s az azt k&#xF6;vet&#x151; karakterrel folytassa a m&#x171;veletet! A kibontott sz&#xF6;veg legyen a f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke!</p>
+<p>G&#xE1;bor a szabadidej&#xE9;ben egy online csapatj&#xE1;t&#xE9;kkal j&#xE1;tszik. A j&#xE1;t&#xE9;k sor&#xE1;n feljegyzi, hogy a j&#xE1;t&#xE9;k egyes k&#xF6;reiben a csapata gy&#x151;z&#xF6;tt-e vagy vesz&#xED;tett-e.</p>
+<p>&#xCD;rj egy <code>leghosszabbNyeroszeria</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely a j&#xE1;t&#xE9;k egyes k&#xF6;reinek eredm&#xE9;ny&#xE9;t elk&#xF3;dol&#xF3; sz&#xF6;veget kap param&#xE9;ter&#xFC;l! A param&#xE9;terben kapott sz&#xF6;veg csak <code>0</code> &#xE9;s <code>1</code> karaktereket tartalmaz: a <code>0</code> azt jelenti, hogy G&#xE1;bor csapata az adott k&#xF6;rt elvesz&#xED;tette, az <code>1</code> pedig azt, hogy megnyerte. A f&#xFC;ggv&#xE9;ny adja vissza, hogy mennyi volt G&#xE1;bor csapat&#xE1;nak leghosszabb nyer&#x151;sz&#xE9;ri&#xE1;ja a j&#xE1;t&#xE9;kban (azaz milyen hossz&#xFA; a param&#xE9;terben kapott sz&#xF6;vegben a leghosszabb, <strong>k&#xF6;zvetlen&#xFC;l egym&#xE1;s ut&#xE1;ni</strong> <code>1</code>-esekb&#x151;l &#xE1;ll&#xF3; sorozat)!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;0000100111000000110000101&apos;
+<b>Return:</b> 3
+
+<b>Input:</b> &apos;1101001111010000011110011&apos;
+<b>Return:</b> 4
+
+<b>Input:</b> &apos;0000000000000000000000000&apos;
+<b>Return:</b> 0
+</pre>
+<h3 class="mume-header" id="16-feladat-t%C3%B6m%C3%B6r%C3%ADtett-sz%C3%B6veg-kibont%C3%A1sa-6-pont">16. feladat: T&#xF6;m&#xF6;r&#xED;tett sz&#xF6;veg kibont&#xE1;sa (6 pont)</h3>
+
+<p>&#xCD;rj egy <code>kibont</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy t&#xF6;m&#xF6;r&#xED;tett sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amit &quot;kibont&quot;! A f&#xFC;ggv&#xE9;ny l&#xE9;pkedjen v&#xE9;gig a param&#xE9;terben kapott sz&#xF6;veg karakterein, &#xE9;s ha sz&#xE1;mjegy j&#xF6;n, akkor vegye a k&#xF6;vetkez&#x151; karaktert annyiszor, mint amennyi a sz&#xE1;mjegy &#xE9;rt&#xE9;ke, &#xE9;s az azt k&#xF6;vet&#x151; karakterrel folytassa a m&#x171;veletet! A kibontott sz&#xF6;veg legyen a f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> &apos;Hah5o! Van i2t valaki3?&apos;
 <b>Return:</b> &apos;Hahooooo! Van itt valaki???&apos;
