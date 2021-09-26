@@ -2,6 +2,8 @@
 
 ## Python függvények, stringek
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.py" target="_blank">ide kattintva</a>.
+
 
 ### 1. feladat: Abszolútérték-maximum (2 pont)
 
