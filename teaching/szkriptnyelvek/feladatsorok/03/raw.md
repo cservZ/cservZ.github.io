@@ -113,7 +113,7 @@ Kezeld le azt az esetet, amikor a függvény egy 2-nél kevesebb szóból álló
 
 ### 8. feladat: Sorozatok (6 pont)
 
-Ricsi nagyon szereti a sorozatokat... mármint a matematikai sorozatokat. Kedvencei a számtani és mértani sorozatok. Írj egy `sorozatok` nevű függvényt, amely egy számokból álló listát kap paraméterül! A függvény döntse el, hogy a listában szereplő számok számtani, illetve mértani sorozatot alkotnak-e!
+Ricsi nagyon szereti a sorozatokat... mármint a matematikai sorozatokat. Kedvencei a számtani és mértani sorozatok. Írj egy `sorozat` nevű függvényt, amely egy számokból álló listát kap paraméterül! A függvény döntse el, hogy a listában szereplő számok számtani, illetve mértani sorozatot alkotnak-e!
 
 Kezeld le azt az esetet, amikor a függvény paraméterében érkező lista 3-nál kevesebb elemet tartalmaz! Ekkor a visszatérési érték a `HIBA!` szöveg legyen! Egyéb hibakezeléssel nem kell foglalkoznod.
 
@@ -121,7 +121,7 @@ Kezeld le azt az esetet, amikor a függvény paraméterében érkező lista 3-n�
     <span class="green">Emlékeztető:</span>
     <ul>
     <li>Egy sorozatot akkor nevezünk számtani sorozatnak, ha a szomszédos elemek különbsége állandó (pl. 1, 3, 5, 7, 9 számtani sorozat, hiszen a szomszédos elemek különbsége mindenhol 2).</li>
-    <li>Egy sorozatot akkor nevezünk mértani sorozatnak, ha a szomszédos elemek hányadosa állandó (pl. 1, 2, 4, 8, 16 mértani sorozat, hiszen a szomszédos elemek hányadosa mindenhol 2)</li>
+    <li>Egy sorozatot akkor nevezünk mértani sorozatnak, ha a szomszédos elemek hányadosa állandó (pl. 1, 2, 4, 8, 16 mértani sorozat, hiszen a szomszédos elemek hányadosa mindenhol 2).</li>
     </ul>
 </div>
 
@@ -149,7 +149,7 @@ Kezeld le azt az esetet, amikor a függvény paraméterében érkező lista 3-n�
 
 A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, amely alapján leadhatják a rendelésüket. Az étteremben két kassza üzemel: egyiknél a páros, másiknál pedig a páratlan sorszámú rendeléseket szolgálják ki.
 
-Írj egy `kasszahoz_rendel` nevű függvény, amely egy olyan szöveget kap paraméterül, amely pontosvesszővel elválasztott (egész) számokat tartalmaz! A függvény visszatérési értéke egy 2-dimenziós lista, amely 2 részlistából áll: az első részlistába a páros, a második részlistába pedig a páratlan sorszámok kerülnek **növekvő sorrendben**.
+Írj egy `kasszahoz_rendel` nevű függvényt, amely egy olyan szöveget kap paraméterül, amely pontosvesszővel elválasztott (egész) számokat tartalmaz! A függvény visszatérési értéke egy 2-dimenziós lista, amely 2 részlistából áll: az első részlistába a páros, a második részlistába pedig a páratlan sorszámok kerülnek **növekvő sorrendben**.
 
 <span class="example">Példa:</span>
 
@@ -166,7 +166,7 @@ A kedvenc gyorséttermünkben a vásárlók belépés után sorszámot húznak, 
 
 Írj egy `matrix_osszead` nevű függvényt, amely két mátrixot (2-dimenziós listát) vár paraméterül, és kiszámítja ezen két mátrix összegét! A feladat megoldása során ne használj semmilyen beépített vagy külső Python csomagot!
 
-Fontos, hogy az összeadásnál mindkét mátrix dimenziószáma megegyezzen (pl. mindkét mátrix `n x m`-es, azaz `n` sorból és `m` oszlopból álljon). Ha a két mátrix dimenziószáma eltér, akkor a függvény térjen vissza egy üres listával! Ha a dimenziószámok megegyeznek, akkor a visszatérési érték a két mátrix összege legyen (ami szintén egy mátrix)!
+Fontos, hogy az összeadásnál mindkét mátrix dimenziószáma megegyezzen (pl. mindkét mátrix `n x m`-es legyen, azaz `n` sorból és `m` oszlopból álljon). Ha a két mátrix dimenziószáma eltér, akkor a függvény térjen vissza egy üres listával! Ha a dimenziószámok megegyeznek, akkor a visszatérési érték a két mátrix összege legyen (ami szintén egy mátrix)!
 
 <div class="bordered-box border-green">
     <span class="green">Segítség:</span> Két mátrix összegét úgy kapjuk, hogy az azonos indexeken lévő elemeket rendre összeadogatjuk. Például:

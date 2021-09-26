@@ -332,13 +332,13 @@ pre[data-line] .line-highlight[data-end]:after {
 </pre>
 <h3 class="mume-header" id="8-feladat-sorozatok-6-pont">8. feladat: Sorozatok (6 pont)</h3>
 
-<p>Ricsi nagyon szereti a sorozatokat... m&#xE1;rmint a matematikai sorozatokat. Kedvencei a sz&#xE1;mtani &#xE9;s m&#xE9;rtani sorozatok. &#xCD;rj egy <code>sorozatok</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xE1;mokb&#xF3;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny d&#xF6;ntse el, hogy a list&#xE1;ban szerepl&#x151; sz&#xE1;mok sz&#xE1;mtani, illetve m&#xE9;rtani sorozatot alkotnak-e!</p>
+<p>Ricsi nagyon szereti a sorozatokat... m&#xE1;rmint a matematikai sorozatokat. Kedvencei a sz&#xE1;mtani &#xE9;s m&#xE9;rtani sorozatok. &#xCD;rj egy <code>sorozat</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xE1;mokb&#xF3;l &#xE1;ll&#xF3; list&#xE1;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny d&#xF6;ntse el, hogy a list&#xE1;ban szerepl&#x151; sz&#xE1;mok sz&#xE1;mtani, illetve m&#xE9;rtani sorozatot alkotnak-e!</p>
 <p>Kezeld le azt az esetet, amikor a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;ben &#xE9;rkez&#x151; lista 3-n&#xE1;l kevesebb elemet tartalmaz! Ekkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>HIBA!</code> sz&#xF6;veg legyen! Egy&#xE9;b hibakezel&#xE9;ssel nem kell foglalkoznod.</p>
 <div class="bordered-box border-green">
     <span class="green">Eml&#xE9;keztet&#x151;:</span>
     <ul>
     <li>Egy sorozatot akkor nevez&#xFC;nk sz&#xE1;mtani sorozatnak, ha a szomsz&#xE9;dos elemek k&#xFC;l&#xF6;nbs&#xE9;ge &#xE1;lland&#xF3; (pl. 1, 3, 5, 7, 9 sz&#xE1;mtani sorozat, hiszen a szomsz&#xE9;dos elemek k&#xFC;l&#xF6;nbs&#xE9;ge mindenhol 2).</li>
-    <li>Egy sorozatot akkor nevez&#xFC;nk m&#xE9;rtani sorozatnak, ha a szomsz&#xE9;dos elemek h&#xE1;nyadosa &#xE1;lland&#xF3; (pl. 1, 2, 4, 8, 16 m&#xE9;rtani sorozat, hiszen a szomsz&#xE9;dos elemek h&#xE1;nyadosa mindenhol 2)</li>
+    <li>Egy sorozatot akkor nevez&#xFC;nk m&#xE9;rtani sorozatnak, ha a szomsz&#xE9;dos elemek h&#xE1;nyadosa &#xE1;lland&#xF3; (pl. 1, 2, 4, 8, 16 m&#xE9;rtani sorozat, hiszen a szomsz&#xE9;dos elemek h&#xE1;nyadosa mindenhol 2).</li>
     </ul>
 </div>
 <p><span class="example">P&#xE9;lda:</span></p>
@@ -360,7 +360,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="9-feladat-gyors%C3%A9tterem-4-pont">9. feladat: Gyors&#xE9;tterem (4 pont)</h3>
 
 <p>A kedvenc gyors&#xE9;tterm&#xFC;nkben a v&#xE1;s&#xE1;rl&#xF3;k bel&#xE9;p&#xE9;s ut&#xE1;n sorsz&#xE1;mot h&#xFA;znak, amely alapj&#xE1;n leadhatj&#xE1;k a rendel&#xE9;s&#xFC;ket. Az &#xE9;tteremben k&#xE9;t kassza &#xFC;zemel: egyikn&#xE9;l a p&#xE1;ros, m&#xE1;sikn&#xE1;l pedig a p&#xE1;ratlan sorsz&#xE1;m&#xFA; rendel&#xE9;seket szolg&#xE1;lj&#xE1;k ki.</p>
-<p>&#xCD;rj egy <code>kasszahoz_rendel</code> nev&#x171; f&#xFC;ggv&#xE9;ny, amely egy olyan sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amely pontosvessz&#x151;vel elv&#xE1;lasztott (eg&#xE9;sz) sz&#xE1;mokat tartalmaz! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy 2-dimenzi&#xF3;s lista, amely 2 r&#xE9;szlist&#xE1;b&#xF3;l &#xE1;ll: az els&#x151; r&#xE9;szlist&#xE1;ba a p&#xE1;ros, a m&#xE1;sodik r&#xE9;szlist&#xE1;ba pedig a p&#xE1;ratlan sorsz&#xE1;mok ker&#xFC;lnek <strong>n&#xF6;vekv&#x151; sorrendben</strong>.</p>
+<p>&#xCD;rj egy <code>kasszahoz_rendel</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amely pontosvessz&#x151;vel elv&#xE1;lasztott (eg&#xE9;sz) sz&#xE1;mokat tartalmaz! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy 2-dimenzi&#xF3;s lista, amely 2 r&#xE9;szlist&#xE1;b&#xF3;l &#xE1;ll: az els&#x151; r&#xE9;szlist&#xE1;ba a p&#xE1;ros, a m&#xE1;sodik r&#xE9;szlist&#xE1;ba pedig a p&#xE1;ratlan sorsz&#xE1;mok ker&#xFC;lnek <strong>n&#xF6;vekv&#x151; sorrendben</strong>.</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> &apos;42;38;45;40;41;39;44;43;46&apos;
 <b>Return:</b> [[38, 40, 42, 44, 46], [39, 41, 43, 45]]
@@ -371,7 +371,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <h3 class="mume-header" id="10-feladat-m%C3%A1trixok-%C3%B6sszead%C3%A1sa-6-pont">10. feladat: M&#xE1;trixok &#xF6;sszead&#xE1;sa (6 pont)</h3>
 
 <p>&#xCD;rj egy <code>matrix_osszead</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t m&#xE1;trixot (2-dimenzi&#xF3;s list&#xE1;t) v&#xE1;r param&#xE9;ter&#xFC;l, &#xE9;s kisz&#xE1;m&#xED;tja ezen k&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t! A feladat megold&#xE1;sa sor&#xE1;n ne haszn&#xE1;lj semmilyen be&#xE9;p&#xED;tett vagy k&#xFC;ls&#x151; Python csomagot!</p>
-<p>Fontos, hogy az &#xF6;sszead&#xE1;sn&#xE1;l mindk&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma megegyezzen (pl. mindk&#xE9;t m&#xE1;trix <code>n x m</code>-es, azaz <code>n</code> sorb&#xF3;l &#xE9;s <code>m</code> oszlopb&#xF3;l &#xE1;lljon). Ha a k&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma elt&#xE9;r, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza egy &#xFC;res list&#xE1;val! Ha a dimenzi&#xF3;sz&#xE1;mok megegyeznek, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a k&#xE9;t m&#xE1;trix &#xF6;sszege legyen (ami szint&#xE9;n egy m&#xE1;trix)!</p>
+<p>Fontos, hogy az &#xF6;sszead&#xE1;sn&#xE1;l mindk&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma megegyezzen (pl. mindk&#xE9;t m&#xE1;trix <code>n x m</code>-es legyen, azaz <code>n</code> sorb&#xF3;l &#xE9;s <code>m</code> oszlopb&#xF3;l &#xE1;lljon). Ha a k&#xE9;t m&#xE1;trix dimenzi&#xF3;sz&#xE1;ma elt&#xE9;r, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza egy &#xFC;res list&#xE1;val! Ha a dimenzi&#xF3;sz&#xE1;mok megegyeznek, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a k&#xE9;t m&#xE1;trix &#xF6;sszege legyen (ami szint&#xE9;n egy m&#xE1;trix)!</p>
 <div class="bordered-box border-green">
     <span class="green">Seg&#xED;ts&#xE9;g:</span> K&#xE9;t m&#xE1;trix &#xF6;sszeg&#xE9;t &#xFA;gy kapjuk, hogy az azonos indexeken l&#xE9;v&#x151; elemeket rendre &#xF6;sszeadogatjuk. P&#xE9;ld&#xE1;ul:
     <img src="./matrix_addition.png" alt="M&#xE1;trix &#xF6;sszead&#xE1;s">
