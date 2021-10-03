@@ -23,11 +23,11 @@ Hozz létre egy `Bor` osztályt, amely a `_fajta`, `_evjarat` és `_alkoholtarta
 
 * Írj get és set property-t a `_fajta` adattaghoz, `fajta` néven! A getter adja vissza az adattag értékét, a setter pedig állítsa be azt a paraméterben kapott értékre! **(2 pont)**
 
+* Írj get és set property-t az `_evjarat` adattaghoz, `evjarat` néven! **(1 pont)**
+
 * Írj get és set property-t az `_alkoholtartalom` adattaghoz is, `alkoholtartalom` néven! 
     * A setterben kezeld le, hogy csak 0 és 100 közötti valós szám lehessen az adattag értéke! 
     * Nem megfelelő típusú vagy értékű paraméter esetén dobj egy `BorospinceException` típusú kivételt, amit a `Nem megfelelo alkoholtartalom!` szöveggel inicializálj! **(2 pont)**
-
-* Írj get és set property-t az `_evjarat` adattaghoz, `evjarat` néven! **(1 pont)**
 
 * Írd át az osztály konstruktorát úgy, hogy az alkoholtartalom értéke itt is ellenőrizve legyen! **(1 pont)**
 
