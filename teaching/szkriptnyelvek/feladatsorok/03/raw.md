@@ -2,6 +2,8 @@
 
 ## Python adatszerkezetek: lista, dictionary
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.py" target="_blank">ide kattintva</a>.
+
 
 ### 1. feladat: Könyvespolc (2 pont)
 
