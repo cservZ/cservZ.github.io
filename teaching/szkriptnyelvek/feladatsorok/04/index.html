@@ -266,7 +266,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>Egy borospinc&#xE9;ben szekr&#xE9;nyek vannak, amelyek polcain borokat t&#xE1;rolnak. K&#xE9;sz&#xED;tsd el a <code>BorospinceException</code>, <code>Bor</code> &#xE9;s <code>Szekreny</code> oszt&#xE1;lyokat a feladatle&#xED;r&#xE1;s alapj&#xE1;n! A feladatok megold&#xE1;s&#xE1;t egyetlen Python szkriptbe k&#xE9;sz&#xED;tsd el!</p>
 <h4 class="mume-header" id="1-a-borospinceexception-oszt%C3%A1ly-2-pont">1. A <code>BorospinceException</code> oszt&#xE1;ly (2 pont)</h4>
 
-<p>Hozz l&#xE9;tre egy <code>BorospinceException</code> nev&#x171; kiv&#xE9;teloszt&#xE1;lyt, amely az <code>Exception</code> be&#xE9;p&#xED;tett kiv&#xE9;teloszt&#xE1;lyb&#xF3;l &#xF6;r&#xF6;kl&#x151;dj&#xF6;n! K&#xE9;sz&#xED;ts egy egyparam&#xE9;teres konstruktort az oszt&#xE1;lyon bel&#xFC;l, amely egy hiba&#xFC;zenetet v&#xE1;r param&#xE9;terben! A konstruktorban h&#xED;vd meg az &#x151;soszt&#xE1;ly konstruktor&#xE1;t &#xE9;s add &#xE1;t neki param&#xE9;terben a hiba&#xFC;zenetet!</p>
+<p>Hozz l&#xE9;tre egy <code>BorospinceException</code> nev&#x171; kiv&#xE9;teloszt&#xE1;lyt, amely az <code>Exception</code> be&#xE9;p&#xED;tett kiv&#xE9;teloszt&#xE1;lyb&#xF3;l &#xF6;r&#xF6;kl&#x151;dik! K&#xE9;sz&#xED;ts egy egyparam&#xE9;teres konstruktort az oszt&#xE1;lyon bel&#xFC;l, amely egy hiba&#xFC;zenetet v&#xE1;r param&#xE9;terben! A konstruktorban h&#xED;vd meg az &#x151;soszt&#xE1;ly konstruktor&#xE1;t &#xE9;s add &#xE1;t neki param&#xE9;terben a hiba&#xFC;zenetet!</p>
 <h4 class="mume-header" id="2-a-bor-oszt%C3%A1ly-13-pont">2. A <code>Bor</code> oszt&#xE1;ly (13 pont)</h4>
 
 <p>Hozz l&#xE9;tre egy <code>Bor</code> oszt&#xE1;lyt, amely a <code>_fajta</code>, <code>_evjarat</code> &#xE9;s <code>_alkoholtartalom</code> adattagokkal rendelkezik!</p>
@@ -289,6 +289,9 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 </li>
 <li>
+<p>&#xCD;rj get &#xE9;s set property-t az <code>_evjarat</code> adattaghoz, <code>evjarat</code> n&#xE9;ven! <strong>(1 pont)</strong></p>
+</li>
+<li>
 <p>&#xCD;rd &#xE1;t az oszt&#xE1;ly konstruktor&#xE1;t &#xFA;gy, hogy az alkoholtartalom &#xE9;rt&#xE9;ke itt is ellen&#x151;rizve legyen! <strong>(1 pont)</strong></p>
 </li>
 <li>
@@ -298,7 +301,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>Defini&#xE1;ld fel&#xFC;l az oszt&#xE1;lyban az <code>==</code> oper&#xE1;tor m&#x171;k&#xF6;d&#xE9;s&#xE9;t!</p>
 <ul>
 <li>Ha az adott objektumot egy m&#xE1;sik <code>Bor</code> objektummal szeretn&#xE9;nk &#xF6;sszehasonl&#xED;tani, akkor az oper&#xE1;tor adja vissza, hogy a k&#xE9;t bor fajt&#xE1;ja, &#xE9;vj&#xE1;rata &#xE9;s alkoholtartalma rendre megegyezik-e! A fajt&#xE1;k egyez&#xE9;s&#xE9;nek vizsg&#xE1;latakor a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg (teh&#xE1;t pl. <code>aszu</code> &#xE9;s <code>Aszu</code> ugyanaz a fajtan&#xE9;v)!</li>
-<li>Amennyiben a f&#xFC;ggv&#xE9;ny nem <code>Bor</code> t&#xED;pus&#xFA; param&#xE9;tert kap, akkor logikai hamis &#xE9;rt&#xE9;kkel t&#xE9;rjen vissza! <strong>(3 pont)</strong></li>
+<li>Amennyiben a f&#xFC;ggv&#xE9;ny nem <code>Bor</code> t&#xED;pus&#xFA; param&#xE9;tert kap, akkor logikai hamis &#xE9;rt&#xE9;kkel t&#xE9;rjen vissza! <strong>(2 pont)</strong></li>
 </ul>
 </li>
 </ul>
@@ -345,7 +348,7 @@ Bor(&apos;TOKAJI ASZU&apos;, 2015, 13.8)
 </div>
 <ul>
 <li>
-<p>&#xCD;rj egy <code>megisszak</code> met&#xF3;dust, amely egy <code>Bor</code> t&#xED;pus&#xFA; objektumot v&#xE1;r param&#xE9;terben! A met&#xF3;dus t&#xF6;r&#xF6;lje az adott bort a <code>borok</code> list&#xE1;b&#xF3;l, amennyiben az szerepel a list&#xE1;ban!</p>
+<p>&#xCD;rj egy <code>megisszak</code> met&#xF3;dust, amely egy <code>Bor</code> t&#xED;pus&#xFA; objektumot v&#xE1;r param&#xE9;terben! A met&#xF3;dus t&#xF6;r&#xF6;lje az adott bort a <code>borok</code> list&#xE1;b&#xF3;l, amennyiben az szerepel a list&#xE1;ban! Feltehetj&#xFC;k, hogy minden bor objektum egyszer fordul el&#x151; a szekr&#xE9;nyen.</p>
 <ul>
 <li>Ha a bor nem szerepel a list&#xE1;ban, akkor dobj egy <code>BorospinceException</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Bor nem talalhato!</code> sz&#xF6;veggel inicializ&#xE1;lj!</li>
 <li>Ha a met&#xF3;dus nem <code>Bor</code> t&#xED;pus&#xFA; param&#xE9;tert kap, akkor dobj egy <code>TypeError</code> t&#xED;pus&#xFA; kiv&#xE9;telt, amit a <code>Nem bor!</code> sz&#xF6;veggel inicializ&#xE1;lj! <strong>(3 pont)</strong></li>
@@ -355,7 +358,7 @@ Bor(&apos;TOKAJI ASZU&apos;, 2015, 13.8)
 <p>Defini&#xE1;ld fel&#xFC;l az objektum sz&#xF6;vegg&#xE9; alak&#xED;t&#xE1;s&#xE1;&#xE9;rt felel&#x151; met&#xF3;dust az oszt&#xE1;lyban!</p>
 <ul>
 <li>Amennyiben a <code>borok</code> lista &#xFC;res, akkor a met&#xF3;dus t&#xE9;rjen vissza az <code>Ez egy ures szekreny.</code> sz&#xF6;veggel!</li>
-<li>Ellenkez&#x151; esetben a met&#xF3;dus t&#xE9;rjen vissza egy olyan sz&#xF6;veggel, amely 1 vessz&#x151;vel &#xE9;s 1 sz&#xF3;k&#xF6;zzel elv&#xE1;lasztva tartalmazza az egyes borfajt&#xE1;k nev&#xE9;t &#xE9;s az azokb&#xF3;l megl&#xE9;v&#x151; mennyis&#xE9;get, <code>{darab} {fajta}</code> form&#xE1;tumban! A sz&#xF6;veg v&#xE9;g&#xE9;n ne legyen se vessz&#x151;, se sz&#xF3;k&#xF6;z! <strong>(3 pont)</strong></li>
+<li>Ellenkez&#x151; esetben a met&#xF3;dus t&#xE9;rjen vissza egy olyan sz&#xF6;veggel, amely 1 vessz&#x151;vel &#xE9;s 1 sz&#xF3;k&#xF6;zzel elv&#xE1;lasztva tartalmazza a szekr&#xE9;nyen l&#xE9;v&#x151; borfajt&#xE1;k nev&#xE9;t &#xE9;s az azokb&#xF3;l megl&#xE9;v&#x151; mennyis&#xE9;get, <code>{darab} {fajta}</code> form&#xE1;tumban! A sz&#xF6;veg v&#xE9;g&#xE9;n ne legyen se vessz&#x151;, se sz&#xF3;k&#xF6;z! <strong>(3 pont)</strong></li>
 </ul>
 </li>
 </ul>

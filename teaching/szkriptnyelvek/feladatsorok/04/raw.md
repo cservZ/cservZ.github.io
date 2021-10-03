@@ -10,7 +10,7 @@ Egy borospincében szekrények vannak, amelyek polcain borokat tárolnak. Kész�
 
 #### 1. A `BorospinceException` osztály (2 pont)
 
-Hozz létre egy `BorospinceException` nevű kivételosztályt, amely az `Exception` beépített kivételosztályból öröklődjön! Készíts egy egyparaméteres konstruktort az osztályon belül, amely egy hibaüzenetet vár paraméterben! A konstruktorban hívd meg az ősosztály konstruktorát és add át neki paraméterben a hibaüzenetet!
+Hozz létre egy `BorospinceException` nevű kivételosztályt, amely az `Exception` beépített kivételosztályból öröklődik! Készíts egy egyparaméteres konstruktort az osztályon belül, amely egy hibaüzenetet vár paraméterben! A konstruktorban hívd meg az ősosztály konstruktorát és add át neki paraméterben a hibaüzenetet!
 
 
 #### 2. A `Bor` osztály (13 pont)
@@ -27,13 +27,15 @@ Hozz létre egy `Bor` osztályt, amely a `_fajta`, `_evjarat` és `_alkoholtarta
     * A setterben kezeld le, hogy csak 0 és 100 közötti valós szám lehessen az adattag értéke! 
     * Nem megfelelő típusú vagy értékű paraméter esetén dobj egy `BorospinceException` típusú kivételt, amit a `Nem megfelelo alkoholtartalom!` szöveggel inicializálj! **(2 pont)**
 
+* Írj get és set property-t az `_evjarat` adattaghoz, `evjarat` néven! **(1 pont)**
+
 * Írd át az osztály konstruktorát úgy, hogy az alkoholtartalom értéke itt is ellenőrizve legyen! **(1 pont)**
 
 * Definiáld felül az osztályban az objektum szöveggé alakításáért felelő metódust úgy, hogy az a következő szöveggel térjen vissza: `{_fajta} (evjarat: {_evjarat}), melynek alkoholtartalma: {_alkoholtartalom}%` (a kapcsos zárójelek helyére értelemszerűen a megfelelő értékek legyenek behelyettesítve)! **(2 pont)**
 
 * Definiáld felül az osztályban az `==` operátor működését! 
     * Ha az adott objektumot egy másik `Bor` objektummal szeretnénk összehasonlítani, akkor az operátor adja vissza, hogy a két bor fajtája, évjárata és alkoholtartalma rendre megegyezik-e! A fajták egyezésének vizsgálatakor a kis- és nagybetűket ne különböztesd meg (tehát pl. `aszu` és `Aszu` ugyanaz a fajtanév)! 
-    * Amennyiben a függvény nem `Bor` típusú paramétert kap, akkor logikai hamis értékkel térjen vissza! **(3 pont)**
+    * Amennyiben a függvény nem `Bor` típusú paramétert kap, akkor logikai hamis értékkel térjen vissza! **(2 pont)**
 
 
 #### 3. A `Szekreny` osztály (25 pont)
@@ -69,13 +71,13 @@ Bor('TOKAJI ASZU', 2015, 13.8)
 </pre>
 </div>
 
-* Írj egy `megisszak` metódust, amely egy `Bor` típusú objektumot vár paraméterben! A metódus törölje az adott bort a `borok` listából, amennyiben az szerepel a listában! 
+* Írj egy `megisszak` metódust, amely egy `Bor` típusú objektumot vár paraméterben! A metódus törölje az adott bort a `borok` listából, amennyiben az szerepel a listában! Feltehetjük, hogy minden bor objektum egyszer fordul elő a szekrényen.
     * Ha a bor nem szerepel a listában, akkor dobj egy `BorospinceException` típusú kivételt, amit a `Bor nem talalhato!` szöveggel inicializálj! 
     * Ha a metódus nem `Bor` típusú paramétert kap, akkor dobj egy `TypeError` típusú kivételt, amit a `Nem bor!` szöveggel inicializálj! **(3 pont)**
 
 * Definiáld felül az objektum szöveggé alakításáért felelő metódust az osztályban! 
     * Amennyiben a `borok` lista üres, akkor a metódus térjen vissza az `Ez egy ures szekreny.` szöveggel!
-    * Ellenkező esetben a metódus térjen vissza egy olyan szöveggel, amely 1 vesszővel és 1 szóközzel elválasztva tartalmazza az egyes borfajták nevét és az azokból meglévő mennyiséget, `{darab} {fajta}` formátumban! A szöveg végén ne legyen se vessző, se szóköz! **(3 pont)**
+    * Ellenkező esetben a metódus térjen vissza egy olyan szöveggel, amely 1 vesszővel és 1 szóközzel elválasztva tartalmazza a szekrényen lévő borfajták nevét és az azokból meglévő mennyiséget, `{darab} {fajta}` formátumban! A szöveg végén ne legyen se vessző, se szóköz! **(3 pont)**
 
 <div class="bordered-box border-green indented">
 <span class="green">Tipp:</span> Használd fel a <code>statisztika</code> metódus visszatérési értékét!
