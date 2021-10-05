@@ -261,8 +261,105 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="a-javascript-fontosabb-adatszerkezetei">A JavaScript fontosabb adatszerkezetei</h2>
 
-<p>TODO</p>
+<h3 class="mume-header" id="1-feladat-sz%C3%A1mok-kiv%C3%A1logat%C3%A1sa-2-pont">1. feladat: Sz&#xE1;mok kiv&#xE1;logat&#xE1;sa (2 pont)</h3>
 
+<p>&#xCD;rj egy <code>szamokatKivalogat</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l, amely vegyesen t&#xE1;rol elt&#xE9;r&#x151; t&#xED;pus&#xFA; elemeket! A f&#xFC;ggv&#xE9;ny v&#xE1;logassa ki a param&#xE9;terben kapott t&#xF6;mb sz&#xE1;m t&#xED;pus&#xFA; elemeit egy &#xFA;j t&#xF6;mbbe, &#xE9;s t&#xE9;rjen vissza a sz&#xE1;mokat tartalmaz&#xF3; t&#xF6;mbbel!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [&apos;kecske&apos;, true, &apos;42&apos;, 32, -1, undefined, 3.14, [&apos;alma&apos;, &apos;banan&apos;]]
+<b>Return:</b> [32, -1, 3.14]
+</pre>
+<h3 class="mume-header" id="2-feladat-stringek-%C3%B6sszef%C5%B1z%C3%A9se-3-pont">2. feladat: Stringek &#xF6;sszef&#x171;z&#xE9;se (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>stringeketOsszefuz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l, amely vegyesen t&#xE1;rol elt&#xE9;r&#x151; t&#xED;pus&#xFA; elemeket! A f&#xFC;ggv&#xE9;ny f&#x171;zze &#xF6;ssze a t&#xF6;mbben tal&#xE1;lhat&#xF3; stringeket, &#xE9;s t&#xE9;rjen vissza az &#xF6;sszef&#x171;z&#xE9;s eredm&#xE9;ny&#xE9;vel!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [&apos;Java&apos;, null, [], &apos;Script&apos;, 123, &apos;4&apos;, &apos;life&apos;, undefined]
+<b>Return:</b> &apos;JavaScript4life&apos;
+</pre>
+<h3 class="mume-header" id="3-feladat-sz%C3%A9p-t%C3%B6mb-4-pont">3. feladat: &quot;Sz&#xE9;p t&#xF6;mb&quot; (4 pont)</h3>
+
+<p>Egy t&#xF6;mb&#xF6;t akkor mondunk sz&#xE9;pnek, ha csak azonos t&#xED;pus&#xFA; elemeket tartalmaz. &#xCD;rj egy <code>szepTomb</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy t&#xF6;mb&#xF6;t v&#xE1;r param&#xE9;terben, &#xE9;s visszaadja, hogy ez a t&#xF6;mb azonos t&#xED;pus&#xFA; elemeket t&#xE1;rol-e! Ha a param&#xE9;terben kapott &#xE9;rt&#xE9;k nem t&#xF6;mb t&#xED;pus&#xFA;, akkor hamissal t&#xE9;rjen vissza a f&#xFC;ggv&#xE9;ny!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [&apos;alma&apos;, &apos;korte&apos;, &apos;szilva&apos;, &apos;barack&apos;, &apos;palinka&apos;]
+<b>Return:</b> true
+
+<b>Input:</b> [10, 20, 30, 40, &apos;50&apos;, 60, 70]
+<b>Return:</b> false
+
+<b>Input:</b> []
+<b>Return:</b> true
+
+<b>Input:</b> &apos;YEE HAW!&apos;
+<b>Return:</b> false
+</pre>
+<h3 class="mume-header" id="4-feladat-t%C3%B6mbelemek-hatv%C3%A1nyoz%C3%A1sa-3-pont">4. feladat: T&#xF6;mbelemek hatv&#xE1;nyoz&#xE1;sa (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>hatvanyoz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: egy sz&#xE1;mokat t&#xE1;rol&#xF3; t&#xF6;mb&#xF6;t &#xE9;s egy sz&#xE1;mot! A f&#xFC;ggv&#xE9;ny emelje a t&#xF6;mbben l&#xE9;v&#x151; sz&#xE1;mokat a m&#xE1;sodik param&#xE9;terben kapott sz&#xE1;m &#xE1;ltal meghat&#xE1;rozott hatv&#xE1;nyukra, majd t&#xE9;rjen vissza a hatv&#xE1;nyoz&#xE1;s ut&#xE1;n kapott t&#xF6;mbbel!</p>
+<p>Ha valamelyik param&#xE9;ter t&#xED;pusa nem megfelel&#x151;, akkor a f&#xFC;ggv&#xE9;ny egy &#xFC;res t&#xF6;mbbel t&#xE9;rjen vissza!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [1, 4, 7, 2, 5], 3
+<b>Return:</b> [1, 64, 343, 8, 125]
+
+<b>Input:</b> &apos;buvarszivattyu&apos;, 5
+<b>Return:</b> []
+</pre>
+<h3 class="mume-header" id="5-feladat-full-stack-4-pont">5. feladat: Full stack (4 pont)</h3>
+
+<p>J&#xF3;n&#xE1;s, a csokigy&#xE1;ros el szeretn&#xE9; k&#xE9;sz&#xED;teni a v&#xE1;llalkoz&#xE1;s&#xE1;nak a weboldal&#xE1;t, ez&#xE9;rt webfejleszt&#x151;ket keres. A munk&#xE1;ra beadott jelentkez&#xE9;sek elb&#xED;r&#xE1;l&#xE1;sakor J&#xF3;n&#xE1;s el&#x151;nyben r&#xE9;szes&#xED;ti azokat a fejleszt&#x151;ket, akik a front-endhez &#xE9;s a back-endhez is &#xE9;rtenek (&quot;full stack fejleszt&#x151;k&quot;).</p>
+<p>&#xCD;rj egy <code>fullStack</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t sz&#xF6;veget kap param&#xE9;ter&#xFC;l: az els&#x151; sz&#xF6;vegben a front-end, m&#xED;g a m&#xE1;sodik sz&#xF6;vegben a back-end fejleszt&#x151;k nevei szerepelnek pontosvessz&#x151;kkel elv&#xE1;lasztva! A f&#xFC;ggv&#xE9;ny adja vissza egy t&#xF6;mbben azoknak a nev&#xE9;t, akik a front-end &#xE9;s back-end fejleszt&#x151;k k&#xF6;z&#xF6;tt is szerepelnek!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Zsiros B. Odon;Koaxk Abel;Heu Reka;Riz Otto&apos;, &apos;Riz Otto;Rabsz Olga;Trab Antal;Koaxk Abel;Winch Eszter&apos;
+<b>Return:</b> [&apos;Koaxk Abel&apos;, &apos;Riz Otto&apos;]
+
+<b>Input:</b> &apos;Citad Ella;Techno Kolos&apos;, &apos;Git Aron;Teask Anna&apos;
+<b>Return:</b> []
+</pre>
+<h3 class="mume-header" id="6-feladat-valaki-%C3%A9ppen-g%C3%A9pel-4-pont">6. feladat: Valaki &#xE9;ppen g&#xE9;pel... (4 pont)</h3>
+
+<p>Jani egy chatalkalmaz&#xE1;st fejleszt JavaScriptben. A chatben, amikor egy vagy t&#xF6;bb felhaszn&#xE1;l&#xF3; &#xE9;ppen g&#xE9;pel, akkor err&#x151;l ki&#xED;runk egy &#xFC;zenetet.</p>
+<p>&#xCD;rj egy <code>gepeles</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l. Ez a sz&#xF6;veg pontosvessz&#x151;kkel elv&#xE1;lasztva tartalmazza azoknak a felhaszn&#xE1;l&#xF3;knak a nev&#xE9;t, akik &#xE9;ppen g&#xE9;pelnek. Figyelj arra, hogy n&#xE9;h&#xE1;ny n&#xE9;v el&#xE9; &#xE9;s/vagy ut&#xE1;n n&#xE9;h&#xE1;ny f&#xF6;l&#xF6;sleges whitespace karakter ker&#xFC;lt!</p>
+<ul>
+<li>Amennyiben a param&#xE9;ter t&#xED;pusa nem megfelel&#x151; vagy a param&#xE9;terben az &#xFC;res string &#xE9;rkezik, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza a <code>HIBA!</code> sz&#xF6;veggel!</li>
+<li>Ha pontosan 1 ember g&#xE9;pel, akkor t&#xE9;rj&#xFC;nk vissza a <code>{username} eppen gepel...</code> sz&#xF6;veggel, ahol <code>{username}</code> a g&#xE9;pel&#x151; felhaszn&#xE1;l&#xF3; neve!</li>
+<li>Ha pontosan 2 ember g&#xE9;pel, akkor t&#xE9;rj&#xFC;nk vissza a <code>{username1} es {username2} eppen gepel...</code> sz&#xF6;veggel, ahol <code>{username1}</code> az els&#x151;, m&#xED;g <code>{username2}</code> a m&#xE1;sodik felhaszn&#xE1;l&#xF3; neve a pontosvessz&#x151;kkel elv&#xE1;lasztott adatok k&#xF6;z&#xFC;l!</li>
+<li>Ha 2-n&#xE9;l t&#xF6;bb ember g&#xE9;pel, akkor t&#xE9;rj&#xFC;nk vissza a <code>{username1}, {username2} es {N} tovabbi felhasznalo eppen gepel...</code> sz&#xF6;veggel, ahol <code>{username1}</code> &#xE9;s <code>{username2}</code> ugyanaz, mint az el&#x151;z&#x151; v&#xE1;zlatpontban, <code>{N}</code> pedig a t&#xF6;bbi g&#xE9;pel&#x151; felhaszn&#xE1;l&#xF3;nak a sz&#xE1;ma!</li>
+</ul>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;SuTi&apos;
+<b>Return:</b> &apos;SuTi eppen gepel...&apos;
+
+<b>Input:</b> &apos;szte4k;catman6     ;    Sziklas  ;          Aerosol;cservZenberg&apos;
+<b>Return:</b> &apos;szte4k, catman6 es 3 tovabbi felhasznalo eppen gepel...&apos;
+</pre>
+<h3 class="mume-header" id="7-feladat-%C3%B6t%C3%B6slott%C3%B3-4-pont">7. feladat: &#xD6;t&#xF6;slott&#xF3; (4 pont)</h3>
+
+<p>Erzsi n&#xE9;ni minden h&#xE9;ten j&#xE1;tszik az &#xF6;t&#xF6;slott&#xF3;n. A j&#xE1;t&#xE9;k sor&#xE1;n 90 sz&#xE1;mb&#xF3;l h&#xFA;znak ki 5 darab sz&#xE1;mot v&#xE9;letlenszer&#x171;en, &#xE9;s ezek k&#xF6;z&#xFC;l kell a j&#xE1;t&#xE9;kosoknak min&#xE9;l t&#xF6;bbet eltal&#xE1;lniuk. Erzsi n&#xE9;ni ezen a h&#xE9;ten a v&#xE9;letlenre b&#xED;zza az &#xF6;t sz&#xE1;m bejel&#xF6;l&#xE9;s&#xE9;t a lott&#xF3;szelv&#xE9;nyen.</p>
+<p>&#xCD;rj egy param&#xE9;ter n&#xE9;lk&#xFC;li <code>otoslotto</code> f&#xFC;ggv&#xE9;nyt, amely gener&#xE1;l 5 darab v&#xE9;letlensz&#xE1;mot 1 &#xE9;s 90 k&#xF6;z&#xF6;tt, &#xE9;s visszaadja ezeket egy t&#xF6;mbben, <strong>n&#xF6;vekv&#x151; sorrendben</strong>! &#xDC;gyelj arra, hogy a sz&#xE1;mok k&#xF6;z&#xF6;tt ne legyen ism&#xE9;tl&#x151;d&#xE9;s (minden sz&#xE1;mot csak egyszer jel&#xF6;lhet&#xFC;nk meg)!</p>
+<div class="bordered-box border-green">
+    <span class="green">Tippek:</span>
+    <ul>
+        <li>V&#xE9;letlensz&#xE1;mok gener&#xE1;l&#xE1;s&#xE1;ra <a href="https://www.w3schools.com/js/js_random.asp" target="_blank">itt</a> l&#xE1;thatunk p&#xE9;ld&#xE1;t.</li>
+        <li>JavaScriptben &#xE9;rdekes m&#xF3;don a t&#xF6;mb&#xF6;k <code>sort()</code> met&#xF3;dusa alapb&#xF3;l stringekre van megval&#xF3;s&#xED;tva. Ha sz&#xE1;mokat szeretn&#xE9;nk n&#xF6;vekv&#x151; sorrendbe rendezni, akkor ehhez <a href="https://www.w3schools.com/js/js_array_sort.asp" target="_blank">itt</a> tal&#xE1;lunk seg&#xED;ts&#xE9;get (&quot;numeric sort&quot; r&#xE9;sz).</li>
+    </ul>
+</div>
+<h3 class="mume-header" id="8-feladat-e-mail-c%C3%ADm-gener%C3%A1tor-5-pont">8. feladat: E-mail c&#xED;m gener&#xE1;tor (5 pont)</h3>
+
+<p>A Flying Duck Travels l&#xE9;git&#xE1;rsas&#xE1;g levelez&#x151; szolg&#xE1;ltat&#xE1;s&#xE1;val saj&#xE1;t e-mail fi&#xF3;kot hozhatunk l&#xE9;tre. A fi&#xF3;k l&#xE9;trehoz&#xE1;sakor megadjuk a teljes nev&#xFC;nket &#xE9;s a sz&#xFC;let&#xE9;si &#xE9;vet, majd ezekb&#x151;l a rendszer gener&#xE1;l egy javasolt e-mail c&#xED;met a k&#xF6;vetkez&#x151;k&#xE9;ppen:</p>
+<ul>
+<li>vessz&#xFC;k a teljes n&#xE9;vben szerepl&#x151; &#xF6;sszes n&#xE9;vnek az els&#x151; 3 bet&#x171;j&#xE9;t, csupa kisbet&#x171;vel (ha egy ilyen n&#xE9;v r&#xF6;videbb 3 bet&#x171;n&#xE9;l, akkor a teljes nevet vessz&#xFC;k)</li>
+<li>ezut&#xE1;n vessz&#xFC;k a sz&#xFC;let&#xE9;si &#xE9;v utols&#xF3; sz&#xE1;mjegy&#xE9;t</li>
+<li>v&#xE9;g&#xFC;l az &#xED;gy kapott azonos&#xED;t&#xF3;hoz hozz&#xE1;f&#x171;zz&#xFC;k a <code>@duck.com</code> sz&#xF6;veget.</li>
+</ul>
+<p>&#xCD;rj egy <code>emailCimetGeneral</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: a teljes nevet &#xE9;s a sz&#xFC;let&#xE9;si &#xE9;vet, &#xE9;s visszat&#xE9;r a fenti szab&#xE1;lyok alapj&#xE1;n legener&#xE1;lt e-mail c&#xED;mmel! A sz&#xFC;let&#xE9;si &#xE9;vet ne legyen k&#xF6;telez&#x151; megadni, alap&#xE9;rt&#xE9;ke legyen 1970! Hibakezel&#xE9;ssel nem kell foglalkoznod, feltessz&#xFC;k, hogy a param&#xE9;terek helyesek.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;Richard Paul Astley&apos;, 1966
+<b>Return:</b> &apos;ricpauast6@duck.com&apos;
+
+<b>Input:</b> &apos;Citad Ella&apos;
+<b>Return:</b> &apos;citell0@duck.com&apos;
+
+<b>Input:</b> &apos;Pablo Diego Jose Francisco de Paula Juan Nepomuceno Maria de los Remedios Cipriano de la Santisima Trinidad Ruiz y Picasso&apos;, 1881
+<b>Return:</b> &apos;pabdiejosfradepaujuanepmardelosremcipdelasantriruiypic1@duck.com&apos;
+</pre>
       </div>
       
       
