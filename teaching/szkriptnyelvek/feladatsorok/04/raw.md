@@ -113,7 +113,7 @@ bor2.alkoholtartalom = 12.0
 print(f'{bor2.fajta}, {bor2.evjarat}, {bor2.alkoholtartalom}')  # 'Egri bikaver, 2013, 12.0'
 
 print(bor1)                  # 'Tokaji aszu (evjarat: 2017), melynek alkoholtartalma: 13.5%'
-print(bor1 == Bor('ToKAJI ASZU', 2017, 13.5))   # True
+print(bor1 == Bor('TOKAJI ASZU', 2017, 13.5))   # True
 print(bor1 == bor2)                             # False
 print(bor1 == 'Hibas tipusu parameter!')        # False
 
