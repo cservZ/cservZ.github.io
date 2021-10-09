@@ -261,7 +261,7 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="python-f%C3%A1jlkezel%C3%A9s">Python - F&#xE1;jlkezel&#xE9;s</h2>
 
-<h3 class="mume-header" id="lej%C3%A1tsz%C3%A1si-lista-30-pont">Lej&#xE1;tsz&#xE1;si lista (30 pont)</h3>
+<h3 class="mume-header" id="lej%C3%A1tsz%C3%A1si-lista-40-pont">Lej&#xE1;tsz&#xE1;si lista (40 pont)</h3>
 
 <p>A <code>playlist.csv</code> &#xE1;llom&#xE1;ny (<a href="./input.zip" target="_blank">let&#xF6;lt&#xE9;s</a>) a telefonra let&#xF6;lt&#xF6;tt zen&#xE9;ink adatait tartalmazza. A f&#xE1;jl egyes soraiban szerepl&#x151;, pontosvessz&#x151;vel elv&#xE1;lasztott adatok rendre:</p>
 <ul>
@@ -319,12 +319,34 @@ pre[data-line] .line-highlight[data-end]:after {
 <p><span class="example">A  <code>04_kedvenc_mufaj.txt</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
 <pre class="language-html">POP
 </pre>
-<h4 class="mume-header" id="5-adott-el%C5%91ad%C3%B3-zen%C3%A9inek-list%C3%A1z%C3%A1sa-10-pont">5. Adott el&#x151;ad&#xF3; zen&#xE9;inek list&#xE1;z&#xE1;sa (10 pont)</h4>
+<h4 class="mume-header" id="5-zen%C3%A9k-hossza-el%C5%91ad%C3%B3nk%C3%A9nt-csoportos%C3%ADtva-6-pont">5. Zen&#xE9;k hossza el&#x151;ad&#xF3;nk&#xE9;nt csoportos&#xED;tva (6 pont)</h4>
 
-<p>&#xCD;rj egy <code>zeneket_listaz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a lej&#xE1;tsz&#xE1;si list&#xE1;t, &#xE9;s egy el&#x151;ad&#xF3; nev&#xE9;t!</p>
+<p>&#xCD;rj egy <code>zeneket_csoportosit</code> f&#xFC;ggv&#xE9;nyt, amely a lej&#xE1;tsz&#xE1;si list&#xE1;t v&#xE1;rja param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny sz&#xE1;m&#xED;tsa ki a lej&#xE1;tsz&#xE1;si list&#xE1;ban szerepl&#x151; &#xF6;sszes el&#x151;ad&#xF3;ra, hogy <strong>&#xF6;sszesen</strong> h&#xE1;ny m&#xE1;sodpercnyi zene tal&#xE1;lhat&#xF3; az inputban az adott el&#x151;ad&#xF3;t&#xF3;l! Az eredm&#xE9;nyt &#xED;rasd ki egy <code>05_osszegzes.txt</code> nev&#x171; sz&#xF6;veges f&#xE1;jlba, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban &#xFA;gy, hogy a kimeneti f&#xE1;jlban az el&#x151;ad&#xF3;nevek <strong>&#xE1;b&#xE9;c&#xE9; sorrendben</strong> szerepeljenek!</p>
+<p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
+<p><span class="example">A  <code>05_osszegzes.txt</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
+<pre class="language-html">Boney M. - osszesen 284 masodpercnyi zene
+Bonnie Tyler - osszesen 334 masodpercnyi zene
+Dragonforce - osszesen 445 masodpercnyi zene
+Dschinghis Khan - osszesen 460 masodpercnyi zene
+Foster The People - osszesen 253 masodpercnyi zene
+Gloryhammer - osszesen 265 masodpercnyi zene
+Gopnik McBlyat - osszesen 261 masodpercnyi zene
+Green Day - osszesen 288 masodpercnyi zene
+Imagine Dragons - osszesen 392 masodpercnyi zene
+Korpiklaani - osszesen 194 masodpercnyi zene
+Linkin Park - osszesen 219 masodpercnyi zene
+Nirvana - osszesen 279 masodpercnyi zene
+Powerwolf - osszesen 739 masodpercnyi zene
+Rick Astley - osszesen 213 masodpercnyi zene
+Smash Mouth - osszesen 237 masodpercnyi zene
+Steppenwolf - osszesen 216 masodpercnyi zene
+</pre>
+<h4 class="mume-header" id="6-adott-el%C5%91ad%C3%B3-zen%C3%A9inek-list%C3%A1z%C3%A1sa-10-pont">6. Adott el&#x151;ad&#xF3; zen&#xE9;inek list&#xE1;z&#xE1;sa (10 pont)</h4>
+
+<p>&#xCD;rj egy <code>zeneket_listaz</code> f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a lej&#xE1;tsz&#xE1;si list&#xE1;t, &#xE9;s egy el&#x151;ad&#xF3; nev&#xE9;t!</p>
 <ul>
 <li>
-<p>Hozz l&#xE9;tre egy <code>05_ELOADONEV_dalok.txt</code> sz&#xF6;veges f&#xE1;jlt, ahol <code>ELOADONEV</code> hely&#xE9;re a param&#xE9;ter&#xFC;l kapott el&#x151;ad&#xF3; neve ker&#xFC;lj&#xF6;n, csupa kisbet&#x171;kkel! A t&#xF6;bb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; el&#x151;ad&#xF3;nevekben a sz&#xF3;k&#xF6;z karaktereket cser&#xE9;ld le alulvon&#xE1;s karakterekre (&#xED;gy pl. <code>Imagine Dragons</code> el&#x151;ad&#xF3;n&#xE9;v eset&#xE9;n a f&#xE1;jln&#xE9;v <code>05_imagine_dragons_dalok.txt</code> lesz)! <strong>(3 pont)</strong></p>
+<p>Hozz l&#xE9;tre egy <code>06_eloadonev_dalok.txt</code> sz&#xF6;veges f&#xE1;jlt, ahol <code>eloadonev</code> hely&#xE9;re a param&#xE9;ter&#xFC;l kapott el&#x151;ad&#xF3; neve ker&#xFC;lj&#xF6;n, csupa kisbet&#x171;kkel! A t&#xF6;bb sz&#xF3;b&#xF3;l &#xE1;ll&#xF3; el&#x151;ad&#xF3;nevekben a sz&#xF3;k&#xF6;z karaktereket cser&#xE9;ld le alulvon&#xE1;s karakterekre (&#xED;gy pl. <code>Imagine Dragons</code> el&#x151;ad&#xF3;n&#xE9;v eset&#xE9;n a f&#xE1;jln&#xE9;v <code>06_imagine_dragons_dalok.txt</code> lesz)! <strong>(3 pont)</strong></p>
 </li>
 <li>
 <p>V&#xE1;logasd ki az adott el&#x151;ad&#xF3; zen&#xE9;it a lej&#xE1;tsz&#xE1;si list&#xE1;b&#xF3;l! Az el&#x151;ad&#xF3;n&#xE9;v keres&#xE9;sekor ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg a kis- &#xE9;s nagybet&#x171;ket (teh&#xE1;t pl. <code>Rick Astley</code> &#xE9;s <code>RICK ASTLEY</code> ugyanaz)! A kiv&#xE1;logatott zen&#xE9;ket &#xED;rasd ki az im&#xE9;nt l&#xE9;trehozott f&#xE1;jl egy-egy sor&#xE1;ba &#xFA;gy, hogy minden sor eset&#xE9;n pontosvessz&#x151;vel elv&#xE1;lasztva felsorolod a zene c&#xED;m&#xE9;t, m&#x171;faj&#xE1;t &#xE9;s hossz&#xE1;t! <strong>(5 pont)</strong></p>
@@ -335,23 +357,46 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
 <p><span class="example">P&#xE9;lda a f&#xFC;ggv&#xE9;ny m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
-<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> POWERWOLF
+<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> &apos;POWERWOLF&apos;
 
-<b>A 05_powerwolf_dalok.txt f&#xE1;jl tartalma:</b>
+<b>A 06_powerwolf_dalok.txt f&#xE1;jl tartalma:</b>
 Incense and Iron;metal;240
 Venom of Venus;metal;208
 Dancing With The Dead;metal;291
 </pre>
-<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> Imagine Dragons
+<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> &apos;Imagine Dragons&apos;
 
-<b>A 05_imagine_dragons_dalok.txt f&#xE1;jl tartalma:</b>
+<b>A 06_imagine_dragons_dalok.txt f&#xE1;jl tartalma:</b>
 Thunder;pop;204
 Radioactive;rock;188
 </pre>
-<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> Taylor Swift
+<pre class="language-html"><b>El&#x151;ad&#xF3; neve:</b> &apos;Taylor Swift&apos;
 
-<b>A 05_taylor_swift_dalok.txt f&#xE1;jl tartalma:</b>
+<b>A 06_taylor_swift_dalok.txt f&#xE1;jl tartalma:</b>
 Nincs ilyen eloado a lejatszasi listaban!
+</pre>
+<h4 class="mume-header" id="7-adott-el%C5%91ad%C3%B3k-zen%C3%A9inek-t%C3%B6rl%C3%A9se-4-pont">7. Adott el&#x151;ad&#xF3;k zen&#xE9;inek t&#xF6;rl&#xE9;se (4 pont)</h4>
+
+<p>&#xCD;rj egy <code>zeneket_torol</code> f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre a lej&#xE1;tsz&#xE1;si list&#xE1;t &#xE9;s egy el&#x151;ad&#xF3;neveket tartalmaz&#xF3; list&#xE1;t! A f&#xFC;ggv&#xE9;ny t&#xF6;r&#xF6;lje a lej&#xE1;tsz&#xE1;si list&#xE1;b&#xF3;l azoknak az el&#x151;ad&#xF3;knak az &#xF6;sszes dal&#xE1;t, akik neve szerepel a m&#xE1;sodik param&#xE9;terben kapott list&#xE1;ban! A t&#xF6;rl&#xE9;s ut&#xE1;ni dalok adatait &#xED;rasd ki egy <code>07_torolt.txt</code> nev&#x171; sz&#xF6;veges f&#xE1;jlba (olyan form&#xE1;tumban, mint ahogy azok a bemeneti f&#xE1;jlban is szerepelnek)!</p>
+<p>A f&#xE1;jlkezel&#xE9;s sor&#xE1;n &#xFC;gyelj arra, hogy a megnyitott f&#xE1;jl minden esetben biztons&#xE1;gosan le legyen z&#xE1;rva! Ehhez haszn&#xE1;ld a gyakorlaton tanult, kontextus-kezel&#x151;s megold&#xE1;st!</p>
+<p><span class="example">P&#xE9;lda a f&#xFC;ggv&#xE9;ny m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre class="language-html"><b>El&#x151;ad&#xF3;k nevei:</b> [&apos;Imagine Dragons&apos;, &apos;Rick Astley&apos;, &apos;Powerwolf&apos;]
+
+<b>A 07_torolt.txt f&#xE1;jl tartalma:</b>
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+Smash Mouth;All Star;rock;237
+Nirvana;Smells Like Teen Spirit;rock;279
+Gloryhammer;The Unicorn Invasion of Dundee;metal;265
+Dschinghis Khan;Moskau;pop;275
+Dschinghis Khan;Dschinghis Khan;pop;185
+Bonnie Tyler;Total Eclipse of the Heart;pop;334
+Gopnik McBlyat;Snakes In Tracksuits;hardbass;261
+Foster The People;Pumped Up Kicks;pop;253
+Linkin Park;In The End;rock;219
+Green Day;Boulevard of Broken Dreams;rock;288
+Korpiklaani;Ievan polkka;metal;194
 </pre>
       </div>
       

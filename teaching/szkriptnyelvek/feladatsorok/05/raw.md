@@ -3,7 +3,7 @@
 ## Python - Fájlkezelés
 
 
-### Lejátszási lista (30 pont)
+### Lejátszási lista (40 pont)
 
 A `playlist.csv` állomány (<a href="./input.zip" target="_blank">letöltés</a>) a telefonra letöltött zenéink adatait tartalmazza. A fájl egyes soraiban szereplő, pontosvesszővel elválasztott adatok rendre:
 
@@ -86,11 +86,39 @@ POP
 </pre>
 
 
-#### 5. Adott előadó zenéinek listázása (10 pont)
+#### 5. Zenék hossza előadónként csoportosítva (6 pont)
 
-Írj egy `zeneket_listaz` nevű függvényt, amely két paramétert vár: rendre a lejátszási listát, és egy előadó nevét!
+Írj egy `zeneket_csoportosit` függvényt, amely a lejátszási listát várja paraméterül! A függvény számítsa ki a lejátszási listában szereplő összes előadóra, hogy **összesen** hány másodpercnyi zene található az inputban az adott előadótól! Az eredményt írasd ki egy `05_osszegzes.txt` nevű szöveges fájlba, a példában látható formátumban úgy, hogy a kimeneti fájlban az előadónevek **ábécé sorrendben** szerepeljenek!
 
-* Hozz létre egy `05_ELOADONEV_dalok.txt` szöveges fájlt, ahol `ELOADONEV` helyére a paraméterül kapott előadó neve kerüljön, csupa kisbetűkkel! A több szóból álló előadónevekben a szóköz karaktereket cseréld le alulvonás karakterekre (így pl. `Imagine Dragons` előadónév esetén a fájlnév `05_imagine_dragons_dalok.txt` lesz)! **(3 pont)**
+A fájlkezelés során ügyelj arra, hogy a megnyitott fájl minden esetben biztonságosan le legyen zárva! Ehhez használd a gyakorlaton tanult, kontextus-kezelős megoldást!
+
+<span class="example">A  <code>05_osszegzes.txt</code> fájl elvárt tartalma:</span>
+
+<pre class="language-html">
+Boney M. - osszesen 284 masodpercnyi zene
+Bonnie Tyler - osszesen 334 masodpercnyi zene
+Dragonforce - osszesen 445 masodpercnyi zene
+Dschinghis Khan - osszesen 460 masodpercnyi zene
+Foster The People - osszesen 253 masodpercnyi zene
+Gloryhammer - osszesen 265 masodpercnyi zene
+Gopnik McBlyat - osszesen 261 masodpercnyi zene
+Green Day - osszesen 288 masodpercnyi zene
+Imagine Dragons - osszesen 392 masodpercnyi zene
+Korpiklaani - osszesen 194 masodpercnyi zene
+Linkin Park - osszesen 219 masodpercnyi zene
+Nirvana - osszesen 279 masodpercnyi zene
+Powerwolf - osszesen 739 masodpercnyi zene
+Rick Astley - osszesen 213 masodpercnyi zene
+Smash Mouth - osszesen 237 masodpercnyi zene
+Steppenwolf - osszesen 216 masodpercnyi zene
+</pre>
+
+
+#### 6. Adott előadó zenéinek listázása (10 pont)
+
+Írj egy `zeneket_listaz` függvényt, amely két paramétert vár: rendre a lejátszási listát, és egy előadó nevét!
+
+* Hozz létre egy `06_eloadonev_dalok.txt` szöveges fájlt, ahol `eloadonev` helyére a paraméterül kapott előadó neve kerüljön, csupa kisbetűkkel! A több szóból álló előadónevekben a szóköz karaktereket cseréld le alulvonás karakterekre (így pl. `Imagine Dragons` előadónév esetén a fájlnév `06_imagine_dragons_dalok.txt` lesz)! **(3 pont)**
 
 * Válogasd ki az adott előadó zenéit a lejátszási listából! Az előadónév keresésekor ne különböztesd meg a kis- és nagybetűket (tehát pl. `Rick Astley` és `RICK ASTLEY` ugyanaz)! A kiválogatott zenéket írasd ki az imént létrehozott fájl egy-egy sorába úgy, hogy minden sor esetén pontosvesszővel elválasztva felsorolod a zene címét, műfaját és hosszát! **(5 pont)**
 
@@ -101,25 +129,53 @@ A fájlkezelés során ügyelj arra, hogy a megnyitott fájl minden esetben bizt
 <span class="example">Példa a függvény működésére:</span>
 
 <pre class="language-html">
-<b>Előadó neve:</b> POWERWOLF
+<b>Előadó neve:</b> 'POWERWOLF'
 
-<b>A 05_powerwolf_dalok.txt fájl tartalma:</b>
+<b>A 06_powerwolf_dalok.txt fájl tartalma:</b>
 Incense and Iron;metal;240
 Venom of Venus;metal;208
 Dancing With The Dead;metal;291
 </pre>
 
 <pre class="language-html">
-<b>Előadó neve:</b> Imagine Dragons
+<b>Előadó neve:</b> 'Imagine Dragons'
 
-<b>A 05_imagine_dragons_dalok.txt fájl tartalma:</b>
+<b>A 06_imagine_dragons_dalok.txt fájl tartalma:</b>
 Thunder;pop;204
 Radioactive;rock;188
 </pre>
 
 <pre class="language-html">
-<b>Előadó neve:</b> Taylor Swift
+<b>Előadó neve:</b> 'Taylor Swift'
 
-<b>A 05_taylor_swift_dalok.txt fájl tartalma:</b>
+<b>A 06_taylor_swift_dalok.txt fájl tartalma:</b>
 Nincs ilyen eloado a lejatszasi listaban!
+</pre>
+
+#### 7. Adott előadók zenéinek törlése (4 pont)
+
+Írj egy `zeneket_torol` függvényt, amely két paramétert vár: rendre a lejátszási listát és egy előadóneveket tartalmazó listát! A függvény törölje a lejátszási listából azoknak az előadóknak az összes dalát, akik neve szerepel a második paraméterben kapott listában! A törlés utáni dalok adatait írasd ki egy `07_torolt.txt` nevű szöveges fájlba (olyan formátumban, mint ahogy azok a bemeneti fájlban is szerepelnek)!
+
+A fájlkezelés során ügyelj arra, hogy a megnyitott fájl minden esetben biztonságosan le legyen zárva! Ehhez használd a gyakorlaton tanult, kontextus-kezelős megoldást!
+
+<span class="example">Példa a függvény működésére:</span>
+
+<pre class="language-html">
+<b>Előadók nevei:</b> ['Imagine Dragons', 'Rick Astley', 'Powerwolf']
+
+<b>A 07_torolt.txt fájl tartalma:</b>
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+Smash Mouth;All Star;rock;237
+Nirvana;Smells Like Teen Spirit;rock;279
+Gloryhammer;The Unicorn Invasion of Dundee;metal;265
+Dschinghis Khan;Moskau;pop;275
+Dschinghis Khan;Dschinghis Khan;pop;185
+Bonnie Tyler;Total Eclipse of the Heart;pop;334
+Gopnik McBlyat;Snakes In Tracksuits;hardbass;261
+Foster The People;Pumped Up Kicks;pop;253
+Linkin Park;In The End;rock;219
+Green Day;Boulevard of Broken Dreams;rock;288
+Korpiklaani;Ievan polkka;metal;194
 </pre>
