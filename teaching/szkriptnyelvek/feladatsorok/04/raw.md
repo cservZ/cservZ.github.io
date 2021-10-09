@@ -81,7 +81,6 @@ Bor('TOKAJI ASZU', 2015, 13.8)
 
 <div class="bordered-box border-green indented">
 <span class="green">Tipp:</span> Használd fel a <code>statisztika</code> metódus visszatérési értékét!
-</pre>
 </div>
 
 <div class="bordered-box border-blue indented">

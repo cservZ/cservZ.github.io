@@ -92,6 +92,10 @@ POP
 
 A fájlkezelés során ügyelj arra, hogy a megnyitott fájl minden esetben biztonságosan le legyen zárva! Ehhez használd a gyakorlaton tanult, kontextus-kezelős megoldást!
 
+<div class="bordered-box border-green">
+    <span class="green">Tipp:</span> Keress rá az interneten, hogy hogyan lehet Pythonban egy dictionary kulcsait egyszerűen rendezni!
+</div>
+
 <span class="example">A  <code>05_osszegzes.txt</code> fájl elvárt tartalma:</span>
 
 <pre class="language-html">
