@@ -2,6 +2,8 @@
 
 ## Python - Objektumorientáltság, kivételkezelés
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.py" target="_blank">ide kattintva</a>.
+
 
 ### Borospince (40 pont)
 
