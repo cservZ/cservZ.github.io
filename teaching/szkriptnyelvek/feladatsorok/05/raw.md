@@ -158,7 +158,7 @@ Nincs ilyen eloado a lejatszasi listaban!
 
 #### 7. Adott előadók zenéinek törlése (4 pont)
 
-Írj egy `zeneket_torol` függvényt, amely két paramétert vár: rendre a lejátszási listát és egy előadóneveket tartalmazó listát! A függvény törölje a lejátszási listából azoknak az előadóknak az összes dalát, akik neve szerepel a második paraméterben kapott listában! A törlés utáni dalok adatait írasd ki egy `07_torolt.txt` nevű szöveges fájlba (olyan formátumban, mint ahogy azok a bemeneti fájlban is szerepelnek)!
+Írj egy `zeneket_torol` függvényt, amely két paramétert vár: rendre a lejátszási listát és egy előadóneveket tartalmazó listát! A függvény írja ki egy `07_torolt.txt` szöveges fájlba azoknak a zenéknek az adatait, amelyek előadója **nem szerepel** a második paraméterben kapott listában!
 
 A fájlkezelés során ügyelj arra, hogy a megnyitott fájl minden esetben biztonságosan le legyen zárva! Ehhez használd a gyakorlaton tanult, kontextus-kezelős megoldást!
 
