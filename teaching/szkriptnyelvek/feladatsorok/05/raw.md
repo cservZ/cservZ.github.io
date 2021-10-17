@@ -2,6 +2,8 @@
 
 ## Python - Fájlkezelés
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.zip" target="_blank">ide kattintva</a>.
+
 
 ### Lejátszási lista (40 pont)
 
