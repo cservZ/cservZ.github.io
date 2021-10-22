@@ -4,7 +4,7 @@ body {
 
     /* Állítsd át a weboldal háttérszínét az alapértelmezettről egy tetszőleges színre! */
 
-    /* Állítsd át weboldalon megjelenő tartalmak betűtípusát Arial-ra! */
+    /* Állítsd át weboldalon megjelenő tartalmak betűtípusát Arial-ra! Ha az Arial nincs telepítve a felhasználó gépén, akkor állíts be egy másik talp nélküli ("sans-serif") betűtípust! */
 }
 
 /* Alakítsd csupa nagybetűssé az id="title" attribútummal rendelkező oldalelemet! */
