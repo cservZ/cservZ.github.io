@@ -268,17 +268,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <pre class="language-html"><b>Input:</b> 10
 <b>Return:</b> 45
 </pre>
-<h3 class="mume-header" id="2-feladat-egyez%C3%A9s-2-pont">2. feladat: Egyez&#xE9;s (2 pont)</h3>
-
-<p>&#xCD;rj egy <code>megegyezik</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t tetsz&#x151;leges param&#xE9;tert v&#xE1;r! A f&#xFC;ggv&#xE9;ny adja vissza, hogy a k&#xE9;t param&#xE9;ter t&#xED;pusra &#xE9;s &#xE9;rt&#xE9;kre is megegyezik-e!</p>
-<p><span class="example">P&#xE9;lda:</span></p>
-<pre class="language-html"><b>Input:</b> 0, false
-<b>Return:</b> false
-
-<b>Input:</b> 42, 42
-<b>Return:</b> true
-</pre>
-<h3 class="mume-header" id="3-feladat-v%C3%A1ros-2-pont">3. feladat: V&#xE1;ros (2 pont)</h3>
+<h3 class="mume-header" id="2-feladat-v%C3%A1ros-2-pont">2. feladat: V&#xE1;ros (2 pont)</h3>
 
 <p>Amikor egy v&#xE1;rosba l&#xE1;togatunk, egy &#xFC;dv&#xF6;zl&#x151; t&#xE1;bla fogad minket. &#xCD;rj egy <code>udvozol</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy v&#xE1;ros nev&#xE9;t v&#xE1;rja param&#xE9;ter&#xFC;l, &#xE9;s visszat&#xE9;r egy <code>Udvozoljuk {varosNeve} varosaban!</code> alak&#xFA; sz&#xF6;veggel (a kapcsos z&#xE1;r&#xF3;jelek k&#xF6;z&#xE9; a param&#xE9;terben kapott v&#xE1;rosn&#xE9;v legyen behelyettes&#xED;tve)!</p>
 <p>&#xC9;rd el, hogy a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;nek ne legyen k&#xF6;telez&#x151; &#xE9;rt&#xE9;ket adni a f&#xFC;ggv&#xE9;nyh&#xED;v&#xE1;skor! Abban az esetben, ha nem adjuk meg a param&#xE9;ter &#xE9;rt&#xE9;k&#xE9;t, akkor a v&#xE1;ros neve legyen alapb&#xF3;l <code>Szeged</code>!</p>
@@ -289,7 +279,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b>
 <b>Return:</b> &apos;Udvozoljuk Szeged varosaban!&apos;
 </pre>
-<h3 class="mume-header" id="4-feladat-kedves-ferenc-3-pont">4. feladat: Kedves Ferenc (3 pont)</h3>
+<h3 class="mume-header" id="3-feladat-kedves-ferenc-3-pont">3. feladat: Kedves Ferenc (3 pont)</h3>
 
 <p>Egy tudom&#xE1;nyos kutat&#xE1;s meg&#xE1;llap&#xED;totta, hogy a Ferenc nev&#x171; emberek kedvesek. &#xCD;rj egy <code>kedves</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy nevet kap param&#xE9;ter&#xFC;l! Ha a n&#xE9;v <code>Ferenc</code>, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza igaz, egy&#xE9;b n&#xE9;v eset&#xE9;n pedig hamis &#xE9;rt&#xE9;kkel! Ha a f&#xFC;ggv&#xE9;nyh&#xED;v&#xE1;skor nem adunk &#xE1;t param&#xE9;tert a f&#xFC;ggv&#xE9;nynek, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k legyen <code>null</code>!</p>
 <p><span class="red">A feladat megold&#xE1;sa sor&#xE1;n NE haszn&#xE1;lj default param&#xE9;ter &#xE9;rt&#xE9;ket! Ehelyett a gyakorlati jegyzetben t&#xE1;rgyalt m&#xF3;don ellen&#x151;rizd, hogy megadt&#xE1;k-e a f&#xFC;ggv&#xE9;ny param&#xE9;ter&#xE9;nek &#xE9;rt&#xE9;k&#xE9;t!</span></p>
@@ -303,7 +293,16 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> 
 <b>Return:</b> null
 </pre>
-<h3 class="mume-header" id="5-feladat-k%C3%B6b%C3%B6sszeg-3-pont">5. feladat: K&#xF6;b&#xF6;sszeg (3 pont)</h3>
+<h3 class="mume-header" id="4-feladat-call-of-the-wild-2-pont">4. feladat: Call of the wild (2 pont)</h3>
+
+<p>Andris szeretn&#xE9; bemutatni Ferinek a JavaScript callback f&#xFC;ggv&#xE9;nyek m&#x171;k&#xF6;d&#xE9;s&#xE9;t egy egyszer&#x171; p&#xE9;ld&#xE1;n kereszt&#xFC;l.</p>
+<p>&#xCD;rj egy <code>call</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy m&#xE1;sik f&#xFC;ggv&#xE9;nyt v&#xE1;r param&#xE9;terben! Ha a param&#xE9;ter val&#xF3;ban f&#xFC;ggv&#xE9;ny t&#xED;pus&#xFA;, akkor h&#xED;vd meg azt a <code>call</code> f&#xFC;ggv&#xE9;nyen bel&#xFC;l (feltessz&#xFC;k, hogy a param&#xE9;terben kapott f&#xFC;ggv&#xE9;ny nem v&#xE1;r param&#xE9;tert)! Nem f&#xFC;ggv&#xE9;ny t&#xED;pus&#xFA; param&#xE9;ter eset&#xE9;n &#xED;rass ki hiba&#xFC;zenetet a konzolra!</p>
+<p><span class="example">P&#xE9;lda haszn&#xE1;lat:</span></p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">function</span> <span class="token function">wild</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&apos;Come to life, oh, master of the werewolves!&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token function">call</span><span class="token punctuation">(</span>wild<span class="token punctuation">)</span><span class="token punctuation">;</span>                   <span class="token comment">// Output: &apos;Come to life, oh, master of the werewolves!&apos;</span>
+<span class="token function">call</span><span class="token punctuation">(</span><span class="token string">&apos;let there = night&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// Output: &apos;HIBA! Nem egy fuggvenyt kaptam parameterben!&apos;</span>
+</pre><h3 class="mume-header" id="5-feladat-k%C3%B6b%C3%B6sszeg-3-pont">5. feladat: K&#xF6;b&#xF6;sszeg (3 pont)</h3>
 
 <p>&#xCD;rj egy <code>kobosszeg</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely k&#xE9;t eg&#xE9;sz sz&#xE1;mot kap param&#xE9;ter&#xFC;l: rendre egy z&#xE1;rt intervallum als&#xF3; &#xE9;s fels&#x151; v&#xE9;gpontj&#xE1;t! A f&#xFC;ggv&#xE9;ny adja vissza az intervallumba es&#x151; sz&#xE1;mok k&#xF6;b&#xE9;nek az &#xF6;sszeg&#xE9;t! (A v&#xE9;gpontok term&#xE9;szetesen m&#xE9;g beletartoznak az intervallumba.)</p>
 <p><span class="example">P&#xE9;lda:</span></p>
@@ -313,7 +312,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <b>Input:</b> 10, 100
 <b>Return:</b> 25500475
 </pre>
-<h3 class="mume-header" id="6-feladat-callback-f%C3%BCggv%C3%A9ny-4-pont">6. feladat: Callback f&#xFC;ggv&#xE9;ny (4 pont)</h3>
+<h3 class="mume-header" id="6-feladat-okosabb-k%C3%B6b%C3%B6sszeg-4-pont">6. feladat: &quot;Okosabb&quot; k&#xF6;b&#xF6;sszeg (4 pont)</h3>
 
 <p>Haszn&#xE1;ljuk fel az el&#x151;z&#x151; feladatban meg&#xED;rt <code>kobosszeg</code> f&#xFC;ggv&#xE9;nyt, miut&#xE1;n meggy&#x151;z&#x151;dt&#xFC;nk arr&#xF3;l, hogy helyes param&#xE9;terekkel h&#xED;vjuk meg azt!</p>
 <p>&#xCD;rj egy <code>kobosszegetMeghiv</code> f&#xFC;ggv&#xE9;nyt, amely 3 param&#xE9;tert v&#xE1;r: k&#xE9;t eg&#xE9;sz sz&#xE1;mot &#xE9;s egy callback f&#xFC;ggv&#xE9;nyt (ez most a <code>kobosszeg</code> f&#xFC;ggv&#xE9;ny lesz)! Amennyiben minden param&#xE9;ter megfelel&#x151; t&#xED;pus&#xFA; (k&#xE9;t sz&#xE1;m &#xE9;s egy f&#xFC;ggv&#xE9;ny), h&#xED;vd meg a param&#xE9;terben kapott callback f&#xFC;ggv&#xE9;nyt &#xFA;gy, hogy az els&#x151; param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a kisebbik, m&#xED;g a m&#xE1;sodik param&#xE9;tere a k&#xE9;t sz&#xE1;m k&#xF6;z&#xFC;l a nagyobbik legyen! A callback f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k&#xE9;vel t&#xE9;rj vissza!</p>
@@ -403,6 +402,9 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <b>Input:</b> &apos;Lehet-e a Pythonos indexelest JavaScriptben szimulalni?&apos;, -1
 <b>Return:</b> &apos;?&apos;
+
+<b>Input:</b> &apos;Lehet-e a Pythonos indexelest JavaScriptben szimulalni?&apos;, -45
+<b>Return:</b> &apos;P&apos;
 
 <b>Input:</b> &apos;Lehet-e a Pythonos indexelest JavaScriptben szimulalni?&apos;, -2000
 <b>Return:</b> undefined

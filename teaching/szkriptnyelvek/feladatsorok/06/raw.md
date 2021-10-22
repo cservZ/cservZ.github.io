@@ -2,13 +2,17 @@
 
 ## HTML és CSS ismétlés, JavaScript DOM-műveletek
 
+<div class="bordered-box border-green">
+<span class="green">Segítség:</span> A feladatsor megoldásához hasznos lehet <a href="../../js-dom" target="_blank">a JavaScript DOM-műveleteivel kapcsolatos jegyzetem</a>.
+</div>
+
 A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológépet, amely segítségével a 4 alapműveletet (összeadás, kivonás, szorzás, osztás) végezhetjük el. A számológép alatt egy táblázat található, amely a számítási előzményeinket tartalmazza.
+
+**A feladatsor megoldásához szükséges <span class="green">kiinduló fájlok</span> letölthetők [ide kattintva](./starter.zip).**
 
 <span class="example">Példa az elkészítendő weboldalra:</span>
 
 <a href="./sample.png"><img src="sample.png" alt="Példa"></a>
-
-A feladatsor megoldásához szükséges <span class="green">kiinduló fájlok</span> letölthetők [ide kattintva](./starter.zip).
 
 
 ### 1. Az oldal kialakítása (11 pont)
@@ -22,7 +26,7 @@ A feladatsor megoldásához szükséges <span class="green">kiinduló fájlok</s
 * CSS segítségével állítsd át a weboldal háttérszínét az alapértelmezettről egy tetszőleges színre! **(1 pont)**
 
 <div class="bordered-box border-green indented">
-<span class="green">Tipp:</span> A háttérszín kiválasztásához használhatjuk például <a href="https://htmlcolorcodes.com/color-picker/">ezt az online színválasztó eszközt</a>.
+<span class="green">Tipp:</span> A háttérszín kiválasztásához használhatjuk például <a href="https://htmlcolorcodes.com/color-picker/" target="_blank">ezt az online színválasztó eszközt</a>.
 </div>
 
 * CSS segítségével állítsd át a `<body>`-ban megjelenő összes szöveges tartalom betűtípusát Arial-ra! Ha az Arial nincs telepítve a felhasználó gépén, akkor állíts be egy másik talp nélküli ("sans-serif") betűtípust! **(1,5 pont)**

@@ -14,22 +14,7 @@ Egy több tagú baráti társaságban mindenki mindenkivel kezet fog (nyilván �
 </pre>
 
 
-### 2. feladat: Egyezés (2 pont)
-
-Írj egy `megegyezik` nevű függvényt, amely két tetszőleges paramétert vár! A függvény adja vissza, hogy a két paraméter típusra és értékre is megegyezik-e!
-
-<span class="example">Példa:</span>
-
-<pre class="language-html">
-<b>Input:</b> 0, false
-<b>Return:</b> false
-
-<b>Input:</b> 42, 42
-<b>Return:</b> true
-</pre>
-
-
-### 3. feladat: Város (2 pont)
+### 2. feladat: Város (2 pont)
 
 Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `udvozol` nevű függvényt, amely egy város nevét várja paraméterül, és visszatér egy `Udvozoljuk {varosNeve} varosaban!` alakú szöveggel (a kapcsos zárójelek közé a paraméterben kapott városnév legyen behelyettesítve)!
 
@@ -46,7 +31,7 @@ Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `u
 </pre>
 
 
-### 4. feladat: Kedves Ferenc (3 pont)
+### 3. feladat: Kedves Ferenc (3 pont)
 
 Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek. Írj egy `kedves` nevű függvényt, amely egy nevet kap paraméterül! Ha a név `Ferenc`, akkor a függvény térjen vissza igaz, egyéb név esetén pedig hamis értékkel! Ha a függvényhíváskor nem adunk át paramétert a függvénynek, akkor a visszatérési érték legyen `null`!
 
@@ -66,6 +51,22 @@ Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek.
 </pre>
 
 
+### 4. feladat: Call of the wild (2 pont)
+
+Andris szeretné bemutatni Ferinek a JavaScript callback függvények működését egy egyszerű példán keresztül.
+
+Írj egy `call` nevű függvényt, amely egy másik függvényt vár paraméterben! Ha a paraméter valóban függvény típusú, akkor hívd meg azt a `call` függvényen belül (feltesszük, hogy a paraméterben kapott függvény nem vár paramétert)! Nem függvény típusú paraméter esetén írass ki hibaüzenetet a konzolra!
+
+<span class="example">Példa használat:</span>
+
+```js
+function wild() { console.log('Come to life, oh, master of the werewolves!'); }
+
+call(wild);                   // Output: 'Come to life, oh, master of the werewolves!'
+call('let there = night');    // Output: 'HIBA! Nem egy fuggvenyt kaptam parameterben!'
+```
+
+
 ### 5. feladat: Köbösszeg (3 pont)
 
 Írj egy `kobosszeg` nevű függvényt, amely két egész számot kap paraméterül: rendre egy zárt intervallum alsó és felső végpontját! A függvény adja vissza az intervallumba eső számok köbének az összegét! (A végpontok természetesen még beletartoznak az intervallumba.)
@@ -81,7 +82,7 @@ Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek.
 </pre>
 
 
-### 6. feladat: Callback függvény (4 pont)
+### 6. feladat: "Okosabb" köbösszeg (4 pont)
 
 Használjuk fel az előző feladatban megírt `kobosszeg` függvényt, miután meggyőződtünk arról, hogy helyes paraméterekkel hívjuk meg azt!
 
@@ -209,6 +210,9 @@ Tomi kedvenc programozási nyelve a Python. Amikor JavaScriptet kezdett el tanul
 
 <b>Input:</b> 'Lehet-e a Pythonos indexelest JavaScriptben szimulalni?', -1
 <b>Return:</b> '?'
+
+<b>Input:</b> 'Lehet-e a Pythonos indexelest JavaScriptben szimulalni?', -45
+<b>Return:</b> 'P'
 
 <b>Input:</b> 'Lehet-e a Pythonos indexelest JavaScriptben szimulalni?', -2000
 <b>Return:</b> undefined
