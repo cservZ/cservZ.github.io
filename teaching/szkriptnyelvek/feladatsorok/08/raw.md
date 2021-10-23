@@ -209,3 +209,93 @@ Egy mátrix transzponáltját a mátrix sorainak és oszlopainak felcserélésé
 <b>Input:</b> [[1, 2, 3], [4, 5, 6]]
 <b>Return:</b> [[1, 4], [2, 5], [3, 6]]
 </pre>
+
+
+### 13. feladat: Számok csoportosítása (4 pont)
+
+Írj egy `szamokatCsoportosit` nevű függvényt, amely egy olyan szöveget kap paraméterül, amelyben pontosvesszőkkel elválasztott számok szerepelnek! A függvény csoportosítsa a szövegben szereplő számokat "pozitív", "nulla" és "negatív" kategóriába! A csoportosítás eredményét egy object-ben kell visszaadni, a példában látható formátumban.
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> '7;-4;-1;0;2;5;-8'
+<b>Return:</b> {pozitiv: [7, 2, 5], nulla: [0], negativ: [-4, -1, -8]}
+
+<b>Input:</b> '-1;-2;-3;-4;-5'
+<b>Return:</b> {pozitiv: [], nulla: [], negativ: [-1, -2, -3, -4, -5]}
+</pre>
+
+
+### 14. feladat: Statisztika (6 pont)
+
+Egy zárthelyi dolgozat után statisztikát készítünk az eredményekből. Ehhez ki szeretnénk számítani a ZH pontszámok átlagát, mediánját és terjedelmét.
+
+Írj egy `statisztika` nevű függvényt, amely egy ZH-n elért pontszámokat tartalmazó tömböt kap paraméterül! A függvény visszatérési értéke egy object, amely a következőképpen épül fel:
+
+* az `atlag` nevű property-jéhez tartozik a pontszámok átlaga
+* a `median` nevű property-jéhez tartozik a pontszámok mediánja (a sorbarendezett pontszámok közül a középső; ha páros darab pontszámunk van, akkor a két középső pontszám átlaga)
+* a `terjedelem` nevű property-jéhez tartozik a pontszámok terjedelme (a legnagyobb és a legkisebb pontszám különbsége).
+
+Ha a függvény nem tömb típusú paramétert kap, vagy a paraméterben kapott tömb 3-nál kevesebb elemet tartalmaz, akkor a visszatérési érték egy üres object legyen!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> [29, 48, 0, 36, 20]
+<b>Return:</b> {atlag: 26.6, median: 29, terjedelem: 48}
+
+<b>Input:</b> [42, 35, 23, 50, 46, 25, 50, 47, 18, 38]
+<b>Return:</b> {atlag: 37.4, median: 40, terjedelem: 32}
+
+<b>Input:</b> [38, 45]
+<b>Return:</b> {}
+</pre>
+
+
+### 15. feladat: Kérdőív (4 pont)
+
+Az egyik egyetemen egy online kérdőívben kérdezik meg az informatikusokat, hogy melyik tantárgy számukra a legnehezebb. A kérdésre adott válaszokat elmentik, majd ebből készítenek statisztikát.
+
+Írj egy `valaszokatOsszesit` nevű függvényt, amely egy tantárgyak nevét (stringek) tároló tömböt kap paraméterül! A függvény térjen vissza egy object-tel, amelyben tárold el, hogy melyik tantárgyra hány szavazat érkezett! A property-k a tantárgyak nevei, a hozzájuk tartozó értékek pedig a rájuk érkezett szavazatok száma.
+
+A tantárgyak nevében a kis- és nagybetűket ne különböztesd meg (tehát pl. `Kalkulus III` és `kalkulus iii` ugyanaz a tárgy), az eredmény object-ben minden tárgy neve csupa kisbetűkkel szerepeljen!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 
+[
+  'Indiszkret Matematika', 'Kalkulus III', 'Tavolito es valosagos szamitasok',
+  'kalkulus iii', 'tavolito es valosagos szamitasok',
+  'TAVOLITO ES VALOSAGOS SZAMITASOK', 'kalkulus iii', 'Kalkulus III', 
+  'Indiszkret Matematika', 'tAvOlItO Es vAlOsAgOs sZaMiTaSoK', 
+  'Kaveautomatak es informalis nyelvek', 'tavolito es valosagos szamitasok'
+]
+<br><b>Return:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+</pre>
+
+
+### 16. feladat: Legnehezebb tárgy (3 pont)
+
+Az előző feladatban szereplő kérdőívre kapott válaszok alapján meg szeretnénk határozni, hogy melyik tárgyat tekintette a legtöbb informatikus hallgató nehéznek.
+
+Írj egy `legnehezebbTargy` nevű függvényt, amely egy olyan object-et kap paraméterül, mint az előző feladatban megírt függvény visszatérési értéke (a property-k a tantárgyak nevei, az értékek pedig az egyes tantárgyakra érkezett szavazatok száma)! A függvény adja vissza, hogy melyik tantárgy kapta a legtöbb szavazatot! Amennyiben több tárgy is ugyanannyi szavazatot kapott, akkor közülük tetszőlegesen válassz egyet!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+<b>Return:</b> 'tavolito es valosagos szamitasok'
+</pre>
+
+
+### 17. feladat: Szavazat különbség (3 pont)
+
+Írj egy `szavazatKulonbseg` nevű függvényt, amely egy olyan object-et kap paraméterül, mint a 15. feladatban megírt függvény visszatérési értéke (tehát tantárgynév-szavazatszám párosokból áll az object)! A függvény adja vissza, hogy mekkora volt a különbség a legtöbb és a legkevesebb szavazat között (tehát vegye az object-ben szereplő legnagyobb és legkisebb érték különbségét)!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+<b>Return:</b> 4
+</pre>

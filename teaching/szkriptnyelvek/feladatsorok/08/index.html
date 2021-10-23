@@ -406,6 +406,67 @@ pre[data-line] .line-highlight[data-end]:after {
 <pre class="language-html"><b>Input:</b> [[1, 2, 3], [4, 5, 6]]
 <b>Return:</b> [[1, 4], [2, 5], [3, 6]]
 </pre>
+<h3 class="mume-header" id="13-feladat-sz%C3%A1mok-csoportos%C3%ADt%C3%A1sa-4-pont">13. feladat: Sz&#xE1;mok csoportos&#xED;t&#xE1;sa (4 pont)</h3>
+
+<p>&#xCD;rj egy <code>szamokatCsoportosit</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan sz&#xF6;veget kap param&#xE9;ter&#xFC;l, amelyben pontosvessz&#x151;kkel elv&#xE1;lasztott sz&#xE1;mok szerepelnek! A f&#xFC;ggv&#xE9;ny csoportos&#xED;tsa a sz&#xF6;vegben szerepl&#x151; sz&#xE1;mokat &quot;pozit&#xED;v&quot;, &quot;nulla&quot; &#xE9;s &quot;negat&#xED;v&quot; kateg&#xF3;ri&#xE1;ba! A csoportos&#xED;t&#xE1;s eredm&#xE9;ny&#xE9;t egy object-ben kell visszaadni, a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban.</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> &apos;7;-4;-1;0;2;5;-8&apos;
+<b>Return:</b> {pozitiv: [7, 2, 5], nulla: [0], negativ: [-4, -1, -8]}
+
+<b>Input:</b> &apos;-1;-2;-3;-4;-5&apos;
+<b>Return:</b> {pozitiv: [], nulla: [], negativ: [-1, -2, -3, -4, -5]}
+</pre>
+<h3 class="mume-header" id="14-feladat-statisztika-6-pont">14. feladat: Statisztika (6 pont)</h3>
+
+<p>Egy z&#xE1;rthelyi dolgozat ut&#xE1;n statisztik&#xE1;t k&#xE9;sz&#xED;t&#xFC;nk az eredm&#xE9;nyekb&#x151;l. Ehhez ki szeretn&#xE9;nk sz&#xE1;m&#xED;tani a ZH pontsz&#xE1;mok &#xE1;tlag&#xE1;t, medi&#xE1;nj&#xE1;t &#xE9;s terjedelm&#xE9;t.</p>
+<p>&#xCD;rj egy <code>statisztika</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy ZH-n el&#xE9;rt pontsz&#xE1;mokat tartalmaz&#xF3; t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy object, amely a k&#xF6;vetkez&#x151;k&#xE9;ppen &#xE9;p&#xFC;l fel:</p>
+<ul>
+<li>az <code>atlag</code> nev&#x171; property-j&#xE9;hez tartozik a pontsz&#xE1;mok &#xE1;tlaga</li>
+<li>a <code>median</code> nev&#x171; property-j&#xE9;hez tartozik a pontsz&#xE1;mok medi&#xE1;nja (a sorbarendezett pontsz&#xE1;mok k&#xF6;z&#xFC;l a k&#xF6;z&#xE9;ps&#x151;; ha p&#xE1;ros darab pontsz&#xE1;munk van, akkor a k&#xE9;t k&#xF6;z&#xE9;ps&#x151; pontsz&#xE1;m &#xE1;tlaga)</li>
+<li>a <code>terjedelem</code> nev&#x171; property-j&#xE9;hez tartozik a pontsz&#xE1;mok terjedelme (a legnagyobb &#xE9;s a legkisebb pontsz&#xE1;m k&#xFC;l&#xF6;nbs&#xE9;ge).</li>
+</ul>
+<p>Ha a f&#xFC;ggv&#xE9;ny nem t&#xF6;mb t&#xED;pus&#xFA; param&#xE9;tert kap, vagy a param&#xE9;terben kapott t&#xF6;mb 3-n&#xE1;l kevesebb elemet tartalmaz, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k egy &#xFC;res object legyen!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> [29, 48, 0, 36, 20]
+<b>Return:</b> {atlag: 26.6, median: 29, terjedelem: 48}
+
+<b>Input:</b> [42, 35, 23, 50, 46, 25, 50, 47, 18, 38]
+<b>Return:</b> {atlag: 37.4, median: 40, terjedelem: 32}
+
+<b>Input:</b> [38, 45]
+<b>Return:</b> {}
+</pre>
+<h3 class="mume-header" id="15-feladat-k%C3%A9rd%C5%91%C3%ADv-4-pont">15. feladat: K&#xE9;rd&#x151;&#xED;v (4 pont)</h3>
+
+<p>Az egyik egyetemen egy online k&#xE9;rd&#x151;&#xED;vben k&#xE9;rdezik meg az informatikusokat, hogy melyik tant&#xE1;rgy sz&#xE1;mukra a legnehezebb. A k&#xE9;rd&#xE9;sre adott v&#xE1;laszokat elmentik, majd ebb&#x151;l k&#xE9;sz&#xED;tenek statisztik&#xE1;t.</p>
+<p>&#xCD;rj egy <code>valaszokatOsszesit</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy tant&#xE1;rgyak nev&#xE9;t (stringek) t&#xE1;rol&#xF3; t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l! A f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza egy object-tel, amelyben t&#xE1;rold el, hogy melyik tant&#xE1;rgyra h&#xE1;ny szavazat &#xE9;rkezett! A property-k a tant&#xE1;rgyak nevei, a hozz&#xE1;juk tartoz&#xF3; &#xE9;rt&#xE9;kek pedig a r&#xE1;juk &#xE9;rkezett szavazatok sz&#xE1;ma.</p>
+<p>A tant&#xE1;rgyak nev&#xE9;ben a kis- &#xE9;s nagybet&#x171;ket ne k&#xFC;l&#xF6;nb&#xF6;ztesd meg (teh&#xE1;t pl. <code>Kalkulus III</code> &#xE9;s <code>kalkulus iii</code> ugyanaz a t&#xE1;rgy), az eredm&#xE9;ny object-ben minden t&#xE1;rgy neve csupa kisbet&#x171;kkel szerepeljen!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> 
+[
+  &apos;Indiszkret Matematika&apos;, &apos;Kalkulus III&apos;, &apos;Tavolito es valosagos szamitasok&apos;,
+  &apos;kalkulus iii&apos;, &apos;tavolito es valosagos szamitasok&apos;,
+  &apos;TAVOLITO ES VALOSAGOS SZAMITASOK&apos;, &apos;kalkulus iii&apos;, &apos;Kalkulus III&apos;, 
+  &apos;Indiszkret Matematika&apos;, &apos;tAvOlItO Es vAlOsAgOs sZaMiTaSoK&apos;, 
+  &apos;Kaveautomatak es informalis nyelvek&apos;, &apos;tavolito es valosagos szamitasok&apos;
+]
+<br><b>Return:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+</pre>
+<h3 class="mume-header" id="16-feladat-legnehezebb-t%C3%A1rgy-3-pont">16. feladat: Legnehezebb t&#xE1;rgy (3 pont)</h3>
+
+<p>Az el&#x151;z&#x151; feladatban szerepl&#x151; k&#xE9;rd&#x151;&#xED;vre kapott v&#xE1;laszok alapj&#xE1;n meg szeretn&#xE9;nk hat&#xE1;rozni, hogy melyik t&#xE1;rgyat tekintette a legt&#xF6;bb informatikus hallgat&#xF3; neh&#xE9;znek.</p>
+<p>&#xCD;rj egy <code>legnehezebbTargy</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan object-et kap param&#xE9;ter&#xFC;l, mint az el&#x151;z&#x151; feladatban meg&#xED;rt f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke (a property-k a tant&#xE1;rgyak nevei, az &#xE9;rt&#xE9;kek pedig az egyes tant&#xE1;rgyakra &#xE9;rkezett szavazatok sz&#xE1;ma)! A f&#xFC;ggv&#xE9;ny adja vissza, hogy melyik tant&#xE1;rgy kapta a legt&#xF6;bb szavazatot! Amennyiben t&#xF6;bb t&#xE1;rgy is ugyanannyi szavazatot kapott, akkor k&#xF6;z&#xFC;l&#xFC;k tetsz&#x151;legesen v&#xE1;lassz egyet!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+<b>Return:</b> &apos;tavolito es valosagos szamitasok&apos;
+</pre>
+<h3 class="mume-header" id="17-feladat-szavazat-k%C3%BCl%C3%B6nbs%C3%A9g-3-pont">17. feladat: Szavazat k&#xFC;l&#xF6;nbs&#xE9;g (3 pont)</h3>
+
+<p>&#xCD;rj egy <code>szavazatKulonbseg</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan object-et kap param&#xE9;ter&#xFC;l, mint a 15. feladatban meg&#xED;rt f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke (teh&#xE1;t tant&#xE1;rgyn&#xE9;v-szavazatsz&#xE1;m p&#xE1;rosokb&#xF3;l &#xE1;ll az object)! A f&#xFC;ggv&#xE9;ny adja vissza, hogy mekkora volt a k&#xFC;l&#xF6;nbs&#xE9;g a legt&#xF6;bb &#xE9;s a legkevesebb szavazat k&#xF6;z&#xF6;tt (teh&#xE1;t vegye az object-ben szerepl&#x151; legnagyobb &#xE9;s legkisebb &#xE9;rt&#xE9;k k&#xFC;l&#xF6;nbs&#xE9;g&#xE9;t)!</p>
+<p><span class="example">P&#xE9;lda:</span></p>
+<pre class="language-html"><b>Input:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+<b>Return:</b> 4
+</pre>
 
       </div>
       
