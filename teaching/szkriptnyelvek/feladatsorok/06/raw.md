@@ -19,7 +19,7 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
 
 * Alakítsd át a weboldal karakterkódolását úgy, hogy az ékezetes betűk is helyesen megjelenjenek! **(1 pont)**
 
-* A weboldalon található `<h1>`-es címsor alá szúrj be HTML-ben egy `HTML, CSS és JavaScript alapok` feliratú bekezdést, amely a `class="center"` attribútummal rendelkezzen! **(1,5 pont)**
+* A weboldalon található `<hr>` objektum alá szúrj be HTML-ben egy `HTML, CSS és JavaScript alapok` feliratú bekezdést, amely a `class="center"` attribútummal rendelkezzen! **(1,5 pont)**
 
 * Ágyazd be a style.css nevű külső stílusfájlt a HTML dokumentumba! A feladatsorban szereplő CSS formázásokat ebbe a fájlba írd bele! **(1 pont)**
 
@@ -37,7 +37,7 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
 
 * A `setupSite()` függvényben JavaScript segítségével keresd meg a weboldal tetején lévő `<h1>`-es címsort, és módosítsd a szöveges tartalmát a `Számológép` feliratra! **(1,5 pont)**
 
-* A `setupSite()` függvényben JavaScript segítségével keresd meg a `<h1>`-es címsor alá beszúrt bekezdést, és tedd félkövér betűstílusúvá (a `class="bold"` attribútum hozzárendelésével)! **(1,5 pont)**
+* A `setupSite()` függvényben JavaScript segítségével keresd meg a `<hr>` objektum alá beszúrt bekezdést, és tedd félkövér betűstílusúvá (a `class="bold"` attribútum hozzárendelésével)! **(1,5 pont)**
 
 
 ### 2. A számológép működőképessé tétele (10 pont)
