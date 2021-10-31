@@ -14,7 +14,23 @@ Egy több tagú baráti társaságban mindenki mindenkivel kezet fog (nyilván �
 </pre>
 
 
-### 2. feladat: Város (2 pont)
+### 2. feladat: Egyezés (2 pont)
+
+Írj egy `egyezes` nevű függvényt, amely két tetszőleges típusú paramétert vár! A függvény adja vissza, hogy a két paraméter **értékre és típusra is** megyezik-e!
+
+<span class="example">Példa:</span>
+
+<pre class="language-html">
+<b>Input:</b> 1, true
+<b>Return:</b> false
+
+<b>Input:</b> false, false
+<b>Return:</b> true
+</pre>
+
+
+
+### 3. feladat: Város (2 pont)
 
 Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `udvozol` nevű függvényt, amely egy város nevét várja paraméterül, és visszatér egy `Udvozoljuk {varosNeve} varosaban!` alakú szöveggel (a kapcsos zárójelek közé a paraméterben kapott városnév legyen behelyettesítve)!
 
@@ -31,7 +47,7 @@ Amikor egy városba látogatunk, egy üdvözlő tábla fogad minket. Írj egy `u
 </pre>
 
 
-### 3. feladat: Kedves Ferenc (3 pont)
+### 4. feladat: Kedves Ferenc (3 pont)
 
 Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek. Írj egy `kedves` nevű függvényt, amely egy nevet kap paraméterül! Ha a név `Ferenc`, akkor a függvény térjen vissza igaz, egyéb név esetén pedig hamis értékkel! Ha a függvényhíváskor nem adunk át paramétert a függvénynek, akkor a visszatérési érték legyen `null`!
 
@@ -49,22 +65,6 @@ Egy tudományos kutatás megállapította, hogy a Ferenc nevű emberek kedvesek.
 <b>Input:</b> 
 <b>Return:</b> null
 </pre>
-
-
-### 4. feladat: Call of the wild (2 pont)
-
-Andris szeretné bemutatni Ferinek a JavaScript callback függvények működését egy egyszerű példán keresztül.
-
-Írj egy `call` nevű függvényt, amely egy másik függvényt vár paraméterben! Ha a paraméter valóban függvény típusú, akkor hívd meg azt a `call` függvényen belül (feltesszük, hogy a paraméterben kapott függvény nem vár paramétert)! Nem függvény típusú paraméter esetén írass ki hibaüzenetet a konzolra!
-
-<span class="example">Példa használat:</span>
-
-```js
-function wild() { console.log('Come to life, oh, master of the werewolves!'); }
-
-call(wild);                   // Output: 'Come to life, oh, master of the werewolves!'
-call('let there = night');    // Output: 'HIBA! Nem egy fuggvenyt kaptam parameterben!'
-```
 
 
 ### 5. feladat: Köbösszeg (3 pont)
