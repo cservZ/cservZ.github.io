@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Számológép</title>
+
+    <!-- Alakítsd át a weboldal karakterkódolását úgy, hogy az ékezetes betűk is helyesen megjelenjenek! -->
+    <meta charset="UTF-8">
+
+    <!-- Ágyazd be a style.css nevű külső stílusfájlt a dokumentumba! -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="center" id="title">6. gyakorló feladatsor</h1>
+    <hr>
+
+    <!-- Szúrj be ide egy "HTML, CSS és JavaScript alapok" feliratú bekezdést, amely a class="center" attribútummal rendelkezik! -->
+    <p class="center">HTML, CSS és JavaScript alapok</p>
+
+    <div id="calculator">
+        <div class="grid">
+            <label for="num1">Első szám:</label>
+            <input type="number" id="num1">
+
+            <label for="op">Művelet:</label>
+            <input type="text" id="op">
+
+            <label for="num2">Második szám:</label>
+            <input type="number" id="num2">
+
+            <label></label>
+            <button onclick="calculate()">Számol!</button>
+        </div>
+    </div>
+
+    <div id="result" class="center"></div>
+
+    <div id="history" class="hidden">
+        <h2 class="center">Számítási előzmények</h2>
+        <table id="history-table"></table>
+        <button onclick="clearHistory()">Előzmények törlése</button>
+    </div>
+
+    <script>
+        // A weboldal kialakítását végző függvény
+
+        function setupSite() {
+            // A weboldal tetején lévő <h1>-es címsor szövegének módosítása
+
+            const heading = document.getElementById("title");   // Megkeressük a címsort az `id` attribútum értéke alapján
+            heading.innerText = "Számológép";                   // Módosítjuk a lekért elem belső szöveges tartalmát
+
+            // A weboldalon található bekezdés félkövér betűstílusúvá tétele
+
+            const paragraph = document.getElementsByTagName("p")[0];    // Megkeressük a bekezdést a tagnév alapján
+            paragraph.classList.add("bold");                            // A `class` attribútum értékéhez hozzávesszük a `bold` értéket
+        }
+
+        // Az űrlapon megadott művelet eredményét kiszámító és megjelenítő függvény
+
+        function calculate() {
+            // Megkeressük az `id="result"` attribútummal rendelkező objektumot. Ebbe fogjuk beleírni az eredményt
+
+            const resultDiv = document.getElementById("result");
+
+            // Lekérdezzük az űrlapmezőkbe írt értékeket a mezők `value` tulajdonságával. Az így lekért értékek alapból stringek!
+
+            const num1 = document.getElementById("num1").value;
+            const op = document.getElementById("op").value;
+            const num2 = document.getElementById("num2").value;
+
+            // Ha valamelyik űrlapmezőt üresen hagyták, akkor hibaüzenetet jelenítünk meg és kilépünk a függvényből
+
+            if (num1 === "" || op === "" || num2 === "") {
+                resultDiv.innerText = "HIBA! Mindhárom űrlapmezőt ki kell tölteni!";
+                return;
+            }
+
+            // Ha nem volt hiba, akkor elvégezzük a számítást
+
+            resultDiv.innerText = "";   // A korábban megjelenített hibaüzeneteket eltüntetjük a weboldalról
+
+            const a = Number(num1);     // A két beírt szám alapból stringként lett lekérve, ezért átkonvertáljuk őket számmá
+            const b = Number(num2);
+            let result;                 // Változó a számítás eredményének
+
+            switch (op) {               // A műveleti jel értékének függvényében elvégezzük a megfelelő számítást
+                case "+": result = a + b; break;
+                case "-": result = a - b; break;
+                case "*": result = a * b; break;
+                case "/": result = b === 0 ? "HIBA! Nullával osztás!" : a / b; break;   // Hibakezelés: 0-val osztás
+                default: result = "HIBA! Érvénytelen műveleti jel!";                    // Hibakezelés: hibás műveleti jel
+            }
+
+            // A számítás eredményét megjelenítjük az erre szolgáló <div>-ben
+            resultDiv.innerText = result;
+
+            // Minden elvégzett számítást beszúrunk a "Számítási előzmények" táblázatba az `addToHistory()` függvénnyel
+            addToHistory(a, op, b, result);
+        }
+
+        // A számítási előzményeket megjelenítő függvény
+
+        function addToHistory(num1, op, num2, result) {
+            // A számítást (`<num1> <op> <num2>`) és annak eredményét (`result`) beszúrjuk az "előzmények" táblázatba
+
+            const historyDiv = document.getElementById("history");             // A táblázatot tartalmazó <div> elem
+            const historyTable = document.getElementById("history-table");     // Az előzményeket tároló táblázat
+
+            const row = document.createElement("tr");           // Új táblázatsor létrehozása
+
+            const column1 = document.createElement("td");       // Az első oszlopcellába a számítás kerül
+            column1.innerText = num1 + " " + op + " " + num2;
+            const column2 = document.createElement("td");       // A második oszlopcellába a számítás eredménye kerül
+            column2.innerText = result;
+
+            row.append(column1, column2);       // Oszlopcellák beszúrása a DOM-ba a táblázatsor gyerekeiként
+            historyTable.append(row);           // Táblázatsor beszúrása a DOM-ba a táblázat gyerekeként
+
+            // Megjelenítjük a számítási előzményeket tároló <div>-et a `hidden` class-tulajdonság eltávolításával
+            historyDiv.classList.remove("hidden");
+        }
+
+        // A számítási előzményeket törlő és elrejtő függvény
+
+        function clearHistory() {
+            const historyDiv = document.getElementById("history");             // A táblázatot tartalmazó <div> elem
+            const historyTable = document.getElementById("history-table");     // Az előzményeket tároló táblázat
+
+            // Töröljük a számítási előzményeket tartalmazó táblázat összes sorát
+
+            while (historyTable.hasChildNodes()) {                  // Amíg van gyereke (sora) a táblázatnak...
+                historyTable.removeChild(historyTable.firstChild);  // ...mindig kitörlünk egy gyereket a DOM-ból
+            }
+
+            // Elrejtjük a számítási előzményeket tároló <div>-et a `hidden` class-tulajdonság segítségével
+            historyDiv.classList.add("hidden");
+        }
+
+        setupSite();
+    </script>
+</body>
+</html>

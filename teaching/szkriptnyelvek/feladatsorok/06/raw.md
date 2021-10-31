@@ -10,6 +10,8 @@ A feladat egy egyszerű weboldal elkészítése, amely tartalmaz egy számológ�
 
 **A feladatsor megoldásához szükséges <span class="green">kiinduló fájlok</span> letölthetők [ide kattintva](./starter.zip).**
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.zip" target="_blank">ide kattintva</a>.
+
 <span class="example">Példa az elkészítendő weboldalra:</span>
 
 <a href="./sample.png"><img src="sample.png" alt="Példa"></a>

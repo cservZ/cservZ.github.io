@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    /* Állítsd át a weboldal háttérszínét az alapértelmezettről egy tetszőleges színre! */
+    background-color: #F5DCFF;
+
+    /* Állítsd át weboldalon megjelenő tartalmak betűtípusát Arial-ra! Ha az Arial nincs telepítve a felhasználó gépén, akkor állíts be egy másik talp nélküli ("sans-serif") betűtípust! */
+    font-family: Arial, sans-serif;
+}
+
+/* Alakítsd csupa nagybetűssé az id="title" attribútummal rendelkező oldalelemet! */
+
+#title {
+    text-transform: uppercase;
+}
+
+/* Igazíts minden class="center" attribútummal rendelkező (szöveges) elemet vízszintesen középre! */
+
+.center {
+    text-align: center;
+}
+
+button {
+    background-color: #6AD061;            /* háttérszín */
+    color: #FFF;                          /* betűszín */
+    border: none;                         /* szegély eltüntetése */
+    outline: none;                        /* körvonal (amikor a gombra kattintunk) eltüntetése */
+    padding: 8px;                         /* térköz */
+}
+
+.bold {
+    font-weight: bold;                    /* félkövérré tétel */
+}
+
+#calculator {
+    background-color: #FFF;
+    border: 3px solid black;              /* 3 pixel széles folytonos fekete szegély */
+    width: 500px;                         /* szélesség */
+    margin: 20px auto;                    /* margó */
+    padding: 10px;
+}
+
+.grid {
+    display: grid;                        /* rácsos elrendezés (grid layout) kialakítása: sorok, azokon belül oszlopok */
+    grid-template-columns: auto auto;     /* minden sorban 2 oszlopunk lesz: ezek szélessége automatikusan lesz kiszámítva (auto) */
+    grid-gap: 10px;                       /* a rács elemei közötti helyköz */
+}
+
+.grid button {
+    width: 100px;
+    margin-left: auto;                    /* az objektum vízszintesen jobbra igazítása */
+}
+
+#history {
+    width: 500px;
+    margin: 40px auto;
+}
+
+#history button {
+    width: 100%;                          /* a gomb szélessége az őt tartalmazó elem teljes szélessége */
+}
+
+.hidden {
+    display: none;                        /* objektum eltüntetése */
+}
+
+table {
+    background-color: #FFF;
+    border: 1px solid black;
+    border-collapse: collapse;            /* táblázatszegélyek összevonása */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+td {
+    width: 50%;                           /* a táblázatcellák szélessége a táblázat teljes szélességének a fele */
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
