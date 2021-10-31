@@ -261,8 +261,145 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="objektumorient%C3%A1lts%C3%A1g-javascriptben">Objektumorient&#xE1;lts&#xE1;g JavaScriptben</h2>
 
-<p>TODO</p>
+<h3 class="mume-header" id="pizz%C3%A1z%C3%B3-50-pont">Pizz&#xE1;z&#xF3; (50 pont)</h3>
 
+<p>Levente egy pizz&#xE1;z&#xF3;t &#xFC;zemeltet, aminek el szeretn&#xE9; k&#xE9;sz&#xED;teni a weboldal&#xE1;t. Ehhez el&#x151;sz&#xF6;r modellezni szeretn&#xE9; a pizz&#xE1;z&#xF3;val kapcsolatos fontosabb fogalmakat. K&#xE9;sz&#xED;tsd el az <code>Etel</code>, <code>Pizza</code> &#xE9;s <code>Vasarlo</code> oszt&#xE1;lyokat JavaScript nyelven a feladatle&#xED;r&#xE1;s alapj&#xE1;n!</p>
+<h4 class="mume-header" id="1-az-etel-oszt%C3%A1ly-13-pont">1. Az <code>Etel</code> oszt&#xE1;ly (13 pont)</h4>
+
+<p>Hozz l&#xE9;tre egy <code>Etel</code> nev&#x171; oszt&#xE1;lyt, amelynek legyen 3 adattagja: <code>nev</code> (az &#xE9;tel neve), <code>_kaloriaSzam</code> (az &#xE9;telben tal&#xE1;lhat&#xF3; kal&#xF3;ri&#xE1;k sz&#xE1;ma) &#xE9;s egy <code>_fogyaszthato</code> nev&#x171; logikai adattag (ez mondja meg azt, hogy az &#xE9;tel fogyaszthat&#xF3;-e vagy sem)! <strong>(1 pont)</strong></p>
+<ul>
+<li>
+<p>A konstruktor az &#xE9;tel nev&#xE9;t &#xE9;s az &#xE9;telben tal&#xE1;lhat&#xF3; kal&#xF3;ri&#xE1;k sz&#xE1;m&#xE1;t v&#xE1;rja param&#xE9;terben (ilyen sorrendben), &#xE9;s ezekkel inicializ&#xE1;lja a <code>nev</code> &#xE9;s <code>_kaloriaSzam</code> adattagokat. A <code>_fogyaszthato</code> adattag &#xE9;rt&#xE9;k&#xE9;t minden esetben <code>true</code>-ra &#xE1;ll&#xED;tsa be a konstruktor! <strong>(3 pont)</strong></p>
+</li>
+<li>
+<p>K&#xE9;sz&#xED;ts get &#xE9;s set property-t a <code>_kaloriaSzam</code> adattaghoz, <code>kaloriaSzam</code> n&#xE9;ven! A getter adja vissza az adattag &#xE9;rt&#xE9;k&#xE9;t, a setter pedig ellen&#x151;rizze, hogy az adattag ne vehessen fel negat&#xED;v &#xE9;rt&#xE9;ket! Negat&#xED;v param&#xE9;ter eset&#xE9;n a setter &#xE1;ll&#xED;tsa be 0-ra a kal&#xF3;riasz&#xE1;m &#xE9;rt&#xE9;k&#xE9;t! <strong>(3 pont)</strong></p>
+</li>
+<li>
+<p>K&#xE9;sz&#xED;ts get &#xE9;s set property-t a <code>_fogyaszthato</code> adattaghoz is, <code>fogyaszthato</code> n&#xE9;ven! A setter az adattag &#xE9;rt&#xE9;k&#xE9;nek be&#xE1;ll&#xED;t&#xE1;sa el&#x151;tt ellen&#x151;rizze, hogy boolean t&#xED;pus&#xFA; param&#xE9;tert kap-e! Ha igen, &#xE1;ll&#xED;tsa be az adattag &#xE9;rt&#xE9;k&#xE9;t a param&#xE9;terre! Ha nem, akkor <code>false</code>-ra &#xE1;ll&#xED;tsa be az adattag &#xE9;rt&#xE9;k&#xE9;t! <strong>(3 pont)</strong></p>
+</li>
+<li>
+<p>&#xCD;rd &#xE1;t az oszt&#xE1;ly konstruktor&#xE1;t &#xFA;gy, hogy a <code>_kaloriaSzam</code> adattag &#xE9;rt&#xE9;ke itt is ugyan&#xFA;gy legyen be&#xE1;ll&#xED;tva, mint a <code>kaloriaSzam</code> setterben! <strong>(1 pont)</strong></p>
+</li>
+<li>
+<p>&#xCD;rj egy param&#xE9;ter n&#xE9;lk&#xFC;li <code>info</code> met&#xF3;dust, amely a k&#xF6;vetkez&#x151; form&#xE1;tum&#xFA; sz&#xF6;veggel t&#xE9;rjen vissza: <code>{nev} ({_kaloriaSzam} kaloria), fogyaszthato: {igen/nem}</code> !</p>
+<ul>
+<li>Az utols&#xF3; kifejez&#xE9;s hely&#xE9;re az <code>igen</code> sz&#xF6;veg ker&#xFC;lj&#xF6;n, ha a <code>_fogyaszthato</code> adattag &#xE9;rt&#xE9;ke igaz, egy&#xE9;bk&#xE9;nt pedig a <code>nem</code> sz&#xF6;veget helyettes&#xED;tsd be! <strong>(2 pont)</strong></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="2-a-pizza-oszt%C3%A1ly-23-pont">2. A <code>Pizza</code> oszt&#xE1;ly (23 pont)</h4>
+
+<p>K&#xE9;sz&#xED;ts egy <code>Pizza</code> nev&#x171; oszt&#xE1;lyt, amely az <code>Etel</code> oszt&#xE1;lyb&#xF3;l &#xF6;r&#xF6;kl&#x151;dik! Az &#xF6;r&#xF6;k&#xF6;lt adattagokon k&#xED;v&#xFC;l a pizza rendelkezzen m&#xE9;g egy <code>_ar</code> &#xE9;s egy <code>feltetek</code> adattaggal is! Az <code>_ar</code> a pizza &#xE1;r&#xE1;t jelenti, a <code>feltetek</code> adattag pedig egy t&#xF6;mb, ami a pizz&#xE1;n tal&#xE1;lhat&#xF3; felt&#xE9;tek neveit fogja t&#xE1;rolni. <strong>(1 pont)</strong></p>
+<ul>
+<li>
+<p>&#xCD;rd meg az oszt&#xE1;ly konstruktor&#xE1;t, amelynek param&#xE9;terei rendre a pizza neve, a pizz&#xE1;ban tal&#xE1;lhat&#xF3; kal&#xF3;ri&#xE1;k sz&#xE1;ma &#xE9;s a pizz&#xE1; &#xE1;ra! Az &#xE1;rra vonatkoz&#xF3; param&#xE9;ter &#xE9;rt&#xE9;k&#xE9;t ne legyen k&#xF6;telez&#x151; megadni az oszt&#xE1;ly p&#xE9;ld&#xE1;nyos&#xED;t&#xE1;sakor, alap&#xE9;rt&#xE9;ke legyen 1500!</p>
+<ul>
+<li>H&#xED;vd meg az &#x151;soszt&#xE1;ly konstruktor&#xE1;t a megfelel&#x151; param&#xE9;terek &#xE1;tad&#xE1;s&#xE1;val! Ha a pizza nev&#xE9;nek a v&#xE9;g&#xE9;n nem szerepel a <code>pizza</code> sz&#xF6;veg, akkor f&#x171;zd azt hozz&#xE1; az &#xE9;tel nev&#xE9;hez egy sz&#xF3;k&#xF6;zzel az &#x151;skonstruktor h&#xED;v&#xE1;sa sor&#xE1;n (pl. a <code>hawaii</code> sz&#xF6;vegb&#x151;l <code>hawaii pizza</code> lesz)!</li>
+<li>A harmadik konstruktor param&#xE9;ter alapj&#xE1;n inicializ&#xE1;ld az <code>_ar</code> adattagot!</li>
+<li>A <code>feltetek</code> adattagot minden esetben egy &#xFC;res t&#xF6;mbbel inicializ&#xE1;ld! <strong>(5 pont)</strong></li>
+</ul>
+</li>
+<li>
+<p>K&#xE9;sz&#xED;ts get &#xE9;s set property-t az <code>_ar</code> adattaghoz, <code>ar</code> n&#xE9;ven! A setterben ellen&#x151;rizd, hogy az adattag ne vehessen fel negat&#xED;v &#xE9;rt&#xE9;ket! Negat&#xED;v param&#xE9;ter eset&#xE9;n az &#xE1;r &#xE9;rt&#xE9;ke legyen 1000! <strong>(2 pont)</strong></p>
+</li>
+<li>
+<p>&#xCD;rd &#xE1;t az oszt&#xE1;ly konstruktor&#xE1;t &#xFA;gy, hogy az &#xE1;r &#xE9;rt&#xE9;ke itt is &#xFA;gy legyen be&#xE1;ll&#xED;tva, mint a setterben! <strong>(1 pont)</strong></p>
+</li>
+<li>
+<p>&#xCD;rj egy param&#xE9;ter n&#xE9;lk&#xFC;li <code>megromlik</code> met&#xF3;dust, amely &#xE1;ll&#xED;tsa a <code>_fogyaszthato</code> adattag &#xE9;rt&#xE9;k&#xE9;t hamisra, &#xE9;s &#xED;rja ki a konzolra, hogy <code>A pizza megromlott.</code> ! <strong>(2 pont)</strong></p>
+</li>
+<li>
+<p>&#xCD;rj egy <code>feltetetFelvesz</code> nev&#x171; met&#xF3;dust, amely egy pizzafelt&#xE9;tet reprezent&#xE1;l&#xF3; object-et kap param&#xE9;ter&#xFC;l! Az object a k&#xF6;vetkez&#x151;k&#xE9;ppen &#xE9;p&#xFC;l fel: a <code>nev</code> property-hez tartozik a felt&#xE9;t neve, &#xE9;s a <code>kaloria</code> property-hez tartozik a felt&#xE9;tben tal&#xE1;lhat&#xF3; kal&#xF3;ri&#xE1;k sz&#xE1;ma (pl. <code>{ nev: &apos;sajt&apos;, kaloria: 90 }</code>).</p>
+<ul>
+<li>Ha a param&#xE9;ter nem object t&#xED;pus&#xFA;, vagy a <code>nev</code> &#xE9;s <code>kaloria</code> property-k valamelyike hi&#xE1;nyzik az object-b&#x151;l, akkor &#xED;rasd ki a konzolra a <code>HIBA! Nem egy feltet!</code> hiba&#xFC;zenetet!</li>
+<li>Ha a param&#xE9;ter megfelel&#x151; t&#xED;pus&#xFA; &#xE9;s a megfelel&#x151; property-k is megvannak, akkor ellen&#x151;rizd, hogy a felt&#xE9;t neve (<code>nev</code> property-hez tartoz&#xF3; &#xE9;rt&#xE9;k) sz&#xF6;veges t&#xED;pus&#xFA;, a kal&#xF3;riasz&#xE1;m (<code>kaloria</code> property-hez tartoz&#xF3; &#xE9;rt&#xE9;k) pedig sz&#xE1;m t&#xED;pus&#xFA; legyen! Hib&#xE1;s t&#xED;pus eset&#xE9;n &#xED;rasd ki a konzolra a <code>HIBA! Nem megfelelo tipus!</code> hiba&#xFC;zenetet!</li>
+<li>Ha eddig nem volt hiba, de m&#xE1;r van ilyen nev&#x171; felt&#xE9;t&#xFC;nk a <code>feltetek</code> t&#xF6;mbben, akkor &#xED;rasd ki a <code>HIBA! Mar van ilyen feltet!</code> hiba&#xFC;zenetet a konzolra!</li>
+<li>Ha eddig nem volt hiba, akkor sz&#xFA;rd be a param&#xE9;terben kapott felt&#xE9;t <strong>nev&#xE9;t</strong> a <code>feltetek</code> t&#xF6;mb v&#xE9;g&#xE9;re! N&#xF6;veld meg a <code>_kaloriaSzam</code> adattag &#xE9;rt&#xE9;k&#xE9;t a felt&#xE9;tben tal&#xE1;lhat&#xF3; kal&#xF3;ri&#xE1;k sz&#xE1;m&#xE1;val, valamint az &#xE1;r &#xE9;rt&#xE9;k&#xE9;t is n&#xF6;veld meg 100-zal! V&#xE9;g&#xFC;l &#xED;rasd ki a konzolra a <code>Feltet felvetel sikeres!</code> sz&#xF6;veget! <strong>(9 pont)</strong></li>
+</ul>
+</li>
+<li>
+<p>Defini&#xE1;ld fel&#xFC;l az &#x151;soszt&#xE1;ly <code>info</code> met&#xF3;dus&#xE1;t &#xFA;gy, hogy az a k&#xF6;vetkez&#x151; form&#xE1;tum&#xFA; sz&#xF6;veggel t&#xE9;rjen vissza: <code>{nev} ({_kaloriaSzam} kaloria), fogyaszthato: {igen/nem}, ar: {_ar} forint, feltetek: {feltetSorozat}</code>, ahol <code>feltetSorozat</code> a felt&#xE9;tek neveit tartalmaz&#xF3; sz&#xF6;veg!</p>
+<ul>
+<li>P&#xE9;ld&#xE1;ul, ha a <code>feltetek</code> t&#xF6;mb tartalma <code>[&apos;sonka&apos;, &apos;kukorica&apos;, &apos;sajt&apos;]</code>, akkor a felt&#xE9;teket tartalmaz&#xF3; sz&#xF6;veg: <code>sonka, kukorica, sajt</code>.</li>
+<li>Amennyiben a felt&#xE9;teket t&#xE1;rol&#xF3; t&#xF6;mb &#xFC;res, akkor a felt&#xE9;tek felsorol&#xE1;s&#xE1;t vegy&#xFC;k ki a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;kb&#x151;l (az &#xED;gy kapott sz&#xF6;veg: <code>{nev} ({_kaloriaSzam} kaloria), fogyaszthato: {igen/nem}, ar: {_ar} forint</code>)! <strong>(3 pont)</strong></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="3-a-vasarlo-oszt%C3%A1ly-14-pont">3. A <code>Vasarlo</code> oszt&#xE1;ly (14 pont)</h4>
+
+<p>&#xCD;rj egy <code>Vasarlo</code> nev&#x171; oszt&#xE1;lyt, amelynek legyen 3 adattagja: <code>nev</code> (a v&#xE1;s&#xE1;rl&#xF3; neve), <code>penz</code> (a v&#xE1;s&#xE1;rl&#xF3; p&#xE9;nz&#xE9;nek mennyis&#xE9;ge) &#xE9;s egy <code>rendelesek</code> nev&#x171; t&#xF6;mb, amely a v&#xE1;s&#xE1;rl&#xF3; rendel&#xE9;seit t&#xE1;rolja! <strong>(1 pont)</strong></p>
+<ul>
+<li>
+<p>&#xCD;rd meg az oszt&#xE1;ly konstruktor&#xE1;t, amely rendre a v&#xE1;s&#xE1;rl&#xF3; nev&#xE9;t &#xE9;s p&#xE9;nz&#xE9;nek mennyis&#xE9;g&#xE9;t kapja param&#xE9;ter&#xFC;l, &#xE9;s ezek alapj&#xE1;n inicializ&#xE1;lja a <code>nev</code> &#xE9;s <code>penz</code> adattagokat! A <code>rendelesek</code> adattagot minden esetben egy &#xFC;res t&#xF6;mbbel inicializ&#xE1;lja a konstruktor! <strong>(3 pont)</strong></p>
+</li>
+<li>
+<p>&#xCD;rj egy <code>pizzatRendel</code> met&#xF3;dust, amely egy <code>Pizza</code> t&#xED;pus&#xFA; objektumot v&#xE1;r param&#xE9;terben!</p>
+<ul>
+<li>Nem megfelel&#x151; t&#xED;pus&#xFA; param&#xE9;ter eset&#xE9;n &#xED;rasd ki a konzolra a <code>HIBA! Nem pizza!</code> hiba&#xFC;zenetet!</li>
+<li>Ha a param&#xE9;ter t&#xED;pusa megfelel&#x151;, akkor n&#xE9;zd meg, hogy a v&#xE1;s&#xE1;rl&#xF3;nak van-e legal&#xE1;bb annyi p&#xE9;nze, mint amennyi a param&#xE9;terben kapott pizza &#xE1;ra! Ha nincs, akkor &#xED;rasd ki a konzolra a <code>HIBA! Nincs eleg penz!</code> hiba&#xFC;zenetet!</li>
+<li>Term&#xE9;szetesen olyan pizz&#xE1;t ne tudjunk rendelni, ami m&#xE1;r megromlott! Amennyiben a param&#xE9;terben kapott pizza nem fogyaszthat&#xF3;, akkor &#xED;rasd ki a konzolra a <code>HIBA! Nem eheto pizza!</code> hiba&#xFC;zenetet!</li>
+<li>Ha eddig nem volt hiba, akkor a v&#xE1;s&#xE1;rl&#xF3; meg tudja rendelni a pizz&#xE1;t.
+<ul>
+<li>Cs&#xF6;kkentsd a <code>penz</code> adattag &#xE9;rt&#xE9;k&#xE9;t a pizza &#xE1;r&#xE1;val!</li>
+<li>Sz&#xFA;rd be a param&#xE9;terben kapott pizza <strong>nev&#xE9;t</strong> a <code>rendelesek</code> t&#xF6;mb v&#xE9;g&#xE9;re!</li>
+<li>&#xCD;rasd ki a konzolra a <code>Sikeres rendeles!</code> sz&#xF6;veget! <strong>(6 pont)</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>&#xCD;rj egy param&#xE9;ter n&#xE9;lk&#xFC;li <code>pizzakatListaz</code> met&#xF3;dust! A met&#xF3;dus visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy sz&#xF6;veg, amely vessz&#x151;kkel elv&#xE1;lasztva, <code>{mennyis&#xE9;g} darab {pizzanev}</code> form&#xE1;ban felsorolva tartalmazza azt, hogy az egyes pizzafajt&#xE1;kb&#xF3;l mennyit rendelt a v&#xE1;s&#xE1;rl&#xF3; (<code>rendelesek</code> t&#xF6;mb)!</p>
+<ul>
+<li>P&#xE9;ld&#xE1;ul, ha a <code>rendelesek</code> t&#xF6;mb <code>[&apos;hawaii pizza&apos;, &apos;dupla sajtos pizza&apos;, &apos;hawaii pizza&apos;]</code>, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>2 darab hawaii pizza, 1 darab dupla sajtos pizza</code> sz&#xF6;veg.</li>
+<li>Amennyiben a <code>rendelesek</code> t&#xF6;mb &#xFC;res, akkor a visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;k a <code>Nincs rendeles!</code> sz&#xF6;veg legyen! <strong>(4 pont)</strong></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="p%C3%A9lda-a-k%C3%B3d-m%C5%B1k%C3%B6d%C3%A9s%C3%A9re">P&#xE9;lda a k&#xF3;d m&#x171;k&#xF6;d&#xE9;s&#xE9;re</h4>
+
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> etel1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Etel</span><span class="token punctuation">(</span><span class="token string">&apos;alma&apos;</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> etel2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Etel</span><span class="token punctuation">(</span><span class="token string">&apos;sajt&apos;</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+etel1<span class="token punctuation">.</span><span class="token property-access">kaloriaSzam</span> <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+etel2<span class="token punctuation">.</span><span class="token property-access">fogyaszthato</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>etel1<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// Etel { nev: &apos;alma&apos;, _kaloriaSzam: 50, _fogyaszthato: true }</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>etel2<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// Etel { nev: &apos;sajt&apos;, _kaloriaSzam: 0, _fogyaszthato: false }</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>etel1<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &apos;alma (50 kaloria), fogyaszthato: igen&apos;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>etel2<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &apos;sajt (0 kaloria), fogyaszthato: nem&apos;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&apos;----------------------------------------------------------------------------------------------------&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> p1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pizza</span><span class="token punctuation">(</span><span class="token string">&apos;hawaii&apos;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">1800</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> p2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pizza</span><span class="token punctuation">(</span><span class="token string">&apos;sonkas-kukoricas pizza&apos;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+p1<span class="token punctuation">.</span><span class="token property-access">ar</span> <span class="token operator">=</span> <span class="token number">2000</span><span class="token punctuation">;</span>
+
+p1<span class="token punctuation">.</span><span class="token method function property-access">megromlik</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                       <span class="token comment">// &apos;A pizza megromlott.&apos;</span>
+p1<span class="token punctuation">.</span><span class="token method function property-access">feltetetFelvesz</span><span class="token punctuation">(</span><span class="token string">&apos;sajt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                           <span class="token comment">// &apos;HIBA! Nem egy feltet!&apos;</span>
+p1<span class="token punctuation">.</span><span class="token method function property-access">feltetetFelvesz</span><span class="token punctuation">(</span><span class="token punctuation">{</span>nev<span class="token operator">:</span> <span class="token string">&apos;sajt&apos;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                    <span class="token comment">// &apos;HIBA! Nem egy feltet!&apos;</span>
+p1<span class="token punctuation">.</span><span class="token method function property-access">feltetetFelvesz</span><span class="token punctuation">(</span><span class="token punctuation">{</span>nev<span class="token operator">:</span> <span class="token string">&apos;sajt&apos;</span><span class="token punctuation">,</span> kaloria<span class="token operator">:</span> <span class="token string">&apos;otven&apos;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &apos;HIBA! Nem megfelelo tipus!&apos;</span>
+p1<span class="token punctuation">.</span><span class="token method function property-access">feltetetFelvesz</span><span class="token punctuation">(</span><span class="token punctuation">{</span>nev<span class="token operator">:</span> <span class="token string">&apos;sajt&apos;</span><span class="token punctuation">,</span> kaloria<span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// &apos;Feltet felvetel sikeres!&apos;</span>
+p1<span class="token punctuation">.</span><span class="token method function property-access">feltetetFelvesz</span><span class="token punctuation">(</span><span class="token punctuation">{</span>nev<span class="token operator">:</span> <span class="token string">&apos;sajt&apos;</span><span class="token punctuation">,</span> kaloria<span class="token operator">:</span> <span class="token number">70</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// &apos;HIBA! Mar van ilyen feltet!&apos;</span>
+p1<span class="token punctuation">.</span><span class="token method function property-access">feltetetFelvesz</span><span class="token punctuation">(</span><span class="token punctuation">{</span>nev<span class="token operator">:</span> <span class="token string">&apos;sonka&apos;</span><span class="token punctuation">,</span> kaloria<span class="token operator">:</span> <span class="token number">120</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// &apos;Feltet felvetel sikeres!&apos;</span>
+p1<span class="token punctuation">.</span><span class="token method function property-access">feltetetFelvesz</span><span class="token punctuation">(</span><span class="token punctuation">{</span>nev<span class="token operator">:</span> <span class="token string">&apos;kukorica&apos;</span><span class="token punctuation">,</span> kaloria<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// &apos;Feltet felvetel sikeres!&apos;</span>
+
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &apos;hawaii pizza (1200 kaloria), fogyaszthato: nem, ar: 2300 forint, feltetek: sajt, sonka, kukorica&apos;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>p2<span class="token punctuation">.</span><span class="token method function property-access">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &apos;sonkas-kukoricas pizza (1000 kaloria), fogyaszthato: igen, ar: 1500 forint&apos;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&apos;----------------------------------------------------------------------------------------------------&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> v1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Vasarlo</span><span class="token punctuation">(</span><span class="token string">&apos;Sanyi&apos;</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> v2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Vasarlo</span><span class="token punctuation">(</span><span class="token string">&apos;Bela&apos;</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+v1<span class="token punctuation">.</span><span class="token method function property-access">pizzatRendel</span><span class="token punctuation">(</span><span class="token string">&apos;valami pizza&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                        <span class="token comment">// &apos;HIBA! Nem pizza!&apos;</span>
+v1<span class="token punctuation">.</span><span class="token method function property-access">pizzatRendel</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span>                                    <span class="token comment">// &apos;HIBA! Nem eheto pizza!&apos;</span>
+v1<span class="token punctuation">.</span><span class="token method function property-access">pizzatRendel</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span><span class="token punctuation">;</span>                                    <span class="token comment">// &apos;Sikeres rendeles!&apos;</span>
+v1<span class="token punctuation">.</span><span class="token method function property-access">pizzatRendel</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Pizza</span><span class="token punctuation">(</span><span class="token string">&apos;negysajtos&apos;</span><span class="token punctuation">,</span> <span class="token number">1200</span><span class="token punctuation">,</span> <span class="token number">1200</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// &apos;Sikeres rendeles!&apos;</span>
+v1<span class="token punctuation">.</span><span class="token method function property-access">pizzatRendel</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span><span class="token punctuation">;</span>                                    <span class="token comment">// &apos;Sikeres rendeles!&apos;</span>
+v1<span class="token punctuation">.</span><span class="token method function property-access">pizzatRendel</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span><span class="token punctuation">;</span>                                    <span class="token comment">// &apos;HIBA! Nincs eleg penz!&apos;</span>
+
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>v1<span class="token punctuation">.</span><span class="token property-access">penz</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                               <span class="token comment">// 800</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>v2<span class="token punctuation">.</span><span class="token property-access">penz</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                               <span class="token comment">// 10000</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>v1<span class="token punctuation">.</span><span class="token method function property-access">pizzakatListaz</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   <span class="token comment">// &apos;2 darab sonkas-kukoricas pizza, 1 darab negysajtos pizza&apos;</span>
+<span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>v2<span class="token punctuation">.</span><span class="token method function property-access">pizzakatListaz</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                   <span class="token comment">// &apos;Nincs rendeles!&apos;</span>
+</pre>
       </div>
       
       
