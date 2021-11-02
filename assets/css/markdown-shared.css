@@ -49,7 +49,11 @@ li {
     border-color: blue;
 }
 
-.red, .orange, .green, .blue, .example {
+.border-black {
+    border-color: black;
+}
+
+.red, .orange, .green, .blue, .black, .example {
     font-weight: bold !important;
 }
 
@@ -67,6 +71,10 @@ li {
 
 .blue, .blue code {
     color: blue !important;
+}
+
+.black, .black code {
+    color: black !important;
 }
 
 .example, .example code {
