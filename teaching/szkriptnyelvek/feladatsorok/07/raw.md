@@ -291,7 +291,7 @@ Gábor a szabadidejében egy online csapatjátékkal játszik. A játék során 
 
 ### 16. feladat: Tömörített szöveg kibontása (6 pont)
 
-Írj egy `kibont` nevű függvényt, amely egy tömörített szöveget kap paraméterül, amit "kibont"! A függvény lépkedjen végig a paraméterben kapott szöveg karakterein, és ha számjegy jön, akkor vegye a következő karaktert annyiszor, mint amennyi a számjegy értéke, és az azt követő karakterrel folytassa a műveletet! A kibontott szöveg legyen a függvény visszatérési értéke!
+Írj egy `kibont` nevű függvényt, amely egy tömörített szöveget kap paraméterül, amit "kibont"! A függvény lépkedjen végig a paraméterben kapott szöveg karakterein, és ha számjegy jön, akkor vegye a következő karaktert annyiszor, mint amennyi a számjegy értéke, és az azt követő karakterrel folytassa a műveletet! A kibontott szöveg legyen a függvény visszatérési értéke! Feltehetjük, hogy az inputban egy számjegy után mindig szerepel legalább 1 karakter.
 
 <span class="example">Példa:</span>
 
