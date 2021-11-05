@@ -271,7 +271,7 @@ A tantárgyak nevében a kis- és nagybetűket ne különböztesd meg (tehát pl
   'Indiszkret Matematika', 'tAvOlItO Es vAlOsAgOs sZaMiTaSoK', 
   'Kaveautomatak es informalis nyelvek', 'tavolito es valosagos szamitasok'
 ]
-<br><b>Return:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+<br><b>Return:</b> {'indiszkret matematika': 2, 'kalkulus iii': 4, 'tavolito es valosagos szamitasok': 5, 'kaveautomatak es informalis nyelvek': 1}
 </pre>
 
 
@@ -284,7 +284,7 @@ Az előző feladatban szereplő kérdőívre kapott válaszok alapján meg szere
 <span class="example">Példa:</span>
 
 <pre class="language-html">
-<b>Input:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+<b>Input:</b> {'indiszkret matematika': 2, 'kalkulus iii': 4, 'tavolito es valosagos szamitasok': 5, 'kaveautomatak es informalis nyelvek': 1}
 <b>Return:</b> 'tavolito es valosagos szamitasok'
 </pre>
 
@@ -296,6 +296,6 @@ Az előző feladatban szereplő kérdőívre kapott válaszok alapján meg szere
 <span class="example">Példa:</span>
 
 <pre class="language-html">
-<b>Input:</b> {indiszkret matematika: 2, kalkulus iii: 4, tavolito es valosagos szamitasok: 5, kaveautomatak es informalis nyelvek: 1}
+<b>Input:</b> {'indiszkret matematika': 2, 'kalkulus iii': 4, 'tavolito es valosagos szamitasok': 5, 'kaveautomatak es informalis nyelvek': 1}
 <b>Return:</b> 4
 </pre>
