@@ -1,17 +1,42 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <title>Aszinkron JavaScript</title>
-    <meta charset="UTF-8">
-</head>
 <body>
-    <script>
-        const user = {id: 1, username: "cservZ", male: true, roles: ["Web Developer", "Professional Procrastinator"]};
+  <!-- Ha erre a gombra kattintunk, akkor lekérdezzük az API-ban szereplő felhasználók adatait. -->
+  <button onclick="getUserData()">Felhasználók adatainak lekérdezése</button>
 
-        const jsonString = JSON.stringify(user);            // object -> JSON
-        console.log(jsonString);
-        const retrievedUser = JSON.parse(jsonString);       // JSON -> object
-        console.log(retrievedUser);
-    </script>
+  <!-- Ebben a div-ben fogjuk megjeleníteni a lekérdezett felhasználói adatokat. -->
+  <div id="data-container"></div>
+
+  <script>
+    // Ez a függvény kérdezi le az API-tól a felhasználók adatait.
+
+    function getUserData() {
+      // Ez lesz a HTTP kérés objektumunk, amivel a webszerverhez fordulunk az adatért.
+      const request = new XMLHttpRequest();
+
+      // Megadhatjuk, hogy egy JSON formátumú adatot fogunk visszakapni a szervertől. Ekkor nem kell 
+      // majd használni a JSON.parse-t, mert alapból JavaScript formátumra lesz konvertálva az adat.
+      request.responseType = "json";
+
+      // HTTP GET kérés indítása a felhasználók adatait tartalmazó URL-re.
+      request.open("GET", "https://jsonplaceholder.typicode.com/users");
+
+      // Megadjuk a callback függvényt, ami az aszinkron adatok megérkezésekor kerül majd meghívásra.
+      request.onload = () => {
+        // A felhasználók adatainak lekérdezése.
+        const users = request.response;
+
+        // A lekérdezett adatok megjelenítése a weboldalon.
+        
+        const dataContainer = document.getElementById("data-container");
+
+        for (let user of users) {
+          const userContainer = document.createElement("div");
+          userContainer.innerHTML = `<h3>${user.name}</h3><p>${user.email}</p>`;
+          dataContainer.append(userContainer);
+        }
+      };
+
+      // Elküldjük a kérést a szervernek.
+      request.send();
+    }
+  </script>
 </body>
-</html>
