@@ -1,10 +1,10 @@
 # Szkriptnyelvek - 8. gyakorló feladatsor
 
-## A JavaScript fontosabb adatszerkezetei
+## JavaScript adatszerkezetek: tömb, object
 
 ### 1. feladat: Számok kiválogatása (2 pont)
 
-Írj egy `szamokatKivalogat` nevű függvényt, amely egy olyan tömböt kap paraméterül, amely vegyesen tárol eltérő típusú elemeket! A függvény válogassa ki a paraméterben kapott tömb szám típusú elemeit egy új tömbbe, és térjen vissza a számokat tartalmazó tömbbel!
+Írj egy `szamokatKivalogat` nevű függvényt, amely egy olyan tömböt kap paraméterül, amely eltérő típusú elemeket tárol! A függvény adja vissza a paraméterben kapott tömb szám típusú elemeit egy új tömbben!
 
 <span class="example">Példa:</span>
 
@@ -16,7 +16,7 @@
 
 ### 2. feladat: Stringek összefűzése (3 pont)
 
-Írj egy `stringeketOsszefuz` nevű függvényt, amely egy olyan tömböt kap paraméterül, amely vegyesen tárol eltérő típusú elemeket! A függvény fűzze össze a tömbben található stringeket, és térjen vissza az összefűzés eredményével!
+Írj egy `stringeketOsszefuz` nevű függvényt, amely egy olyan tömböt kap paraméterül, amely eltérő típusú elemeket tárol! A függvény fűzze össze a tömbben található stringeket, és térjen vissza az összefűzés eredményével!
 
 <span class="example">Példa:</span>
 
@@ -100,9 +100,7 @@ Jónás, a csokigyáros el szeretné készíteni a vállalkozásának a weboldal
 
 ### 7. feladat: Valaki éppen gépel... (4 pont)
 
-Jani egy chatalkalmazást fejleszt JavaScriptben. A chatben, amikor egy vagy több felhasználó éppen gépel, akkor erről kiírunk egy üzenetet.
-
-Írj egy `gepeles` nevű függvényt, amely egy szöveget kap paraméterül. Ez a szöveg pontosvesszőkkel elválasztva tartalmazza azoknak a felhasználóknak a nevét, akik éppen gépelnek. Figyelj arra, hogy néhány név elé és/vagy után néhány fölösleges whitespace karakter került!
+Jani egy chatalkalmazást fejleszt JavaScriptben. A chatben mindig kiírunk egy üzenetet arról, ha egy vagy több felhasználó éppen gépel. Írj egy `gepeles` nevű függvényt, amely egy szöveget kap paraméterül! Ez a szöveg pontosvesszőkkel elválasztva tartalmazza az éppen gépelő felhasználóknak a nevét. Figyelj arra, hogy néhány név elé és/vagy után néhány fölösleges whitespace karakter került, amiket először el kell távolítani!
 
 * Amennyiben a paraméter típusa nem megfelelő vagy a paraméterben az üres string érkezik, akkor a függvény térjen vissza a `HIBA!` szöveggel!
 * Ha pontosan 1 ember gépel, akkor térjünk vissza a `{username} eppen gepel...` szöveggel, ahol `{username}` a gépelő felhasználó neve!
@@ -117,6 +115,9 @@ Jani egy chatalkalmazást fejleszt JavaScriptben. A chatben, amikor egy vagy tö
 
 <b>Input:</b> 'szte4k;catman6     ;    Sziklas  ;          Aerosol;cservZenberg'
 <b>Return:</b> 'szte4k, catman6 es 3 tovabbi felhasznalo eppen gepel...'
+
+<b>Input:</b> ''
+<b>Return:</b> 'HIBA!'
 </pre>
 
 
@@ -137,9 +138,9 @@ Erzsi néni minden héten játszik az ötöslottón. A játék során 90 számb�
 
 ### 9. feladat: E-mail cím generátor (5 pont)
 
-A Flying Duck Travels légitársaság levelező szolgáltatásával saját e-mail fiókot hozhatunk létre. A fiók létrehozásakor megadjuk a teljes nevünket és a születési évet, majd ezekből a rendszer generál egy javasolt e-mail címet a következőképpen:
+A Flying Duck Travels légitársaság levelező szolgáltatásával saját e-mail fiókot hozhatunk létre. A fiók létrehozásakor megadjuk a teljes nevünket és a születési évünket, majd ezekből a rendszer generál egy javasolt e-mail címet a következőképpen:
 
-* vesszük a teljes névben szereplő összes névnek az első 3 betűjét, csupa kisbetűvel (ha egy ilyen név rövidebb 3 betűnél, akkor a teljes nevet vesszük)
+* vesszük a teljes névben szereplő összes szóközzel elválasztott névnek az első 3 betűjét, csupa kisbetűvel (ha egy ilyen string rövidebb 3 betűnél, akkor a teljes stringet vesszük)
 * ezután vesszük a születési év utolsó számjegyét
 * végül az így kapott azonosítóhoz hozzáfűzzük a `@duck.com` szöveget.
 
@@ -178,7 +179,7 @@ Fanni a barátnőivel egyszámjátékot játszik. Ennek a lényege, hogy mindenk
 
 ### 11. feladat: Fájlok rendszerezése (4 pont)
 
-A számítógépünkön egy adott mappában tároljuk a Szkriptnyelvek kurzushoz kapcsolódó fájljainkat. Mivel a mappánk tartalma elég kaotikus, szeretnénk egy kicsit rendszerezni a benne lévő fájlokat.
+A számítógépünkön egy adott mappában tároljuk a Szkriptnyelvek kurzushoz kapcsolódó fájljainkat. Mivel a mappánk tartalma elég kaotikus, ezért szeretnénk egy kicsit rendszerezni a benne lévő fájlokat.
 
 Írj egy `fajlokatRendszerez` nevű függvényt, amely egy tömböt vár paraméterben! A tömb tartalmazza a mappában található fájlok neveit, kiterjesztéssel együtt. A függvény visszatérési értéke egy kétdimenziós tömb, amelynek...
 

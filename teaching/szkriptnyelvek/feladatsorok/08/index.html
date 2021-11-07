@@ -259,18 +259,18 @@ pre[data-line] .line-highlight[data-end]:after {
       <div class="mume markdown-preview  ">
       <h1 class="mume-header" id="szkriptnyelvek-8-gyakorl%C3%B3-feladatsor">Szkriptnyelvek - 8. gyakorl&#xF3; feladatsor</h1>
 
-<h2 class="mume-header" id="a-javascript-fontosabb-adatszerkezetei">A JavaScript fontosabb adatszerkezetei</h2>
+<h2 class="mume-header" id="javascript-adatszerkezetek-t%C3%B6mb-object">JavaScript adatszerkezetek: t&#xF6;mb, object</h2>
 
 <h3 class="mume-header" id="1-feladat-sz%C3%A1mok-kiv%C3%A1logat%C3%A1sa-2-pont">1. feladat: Sz&#xE1;mok kiv&#xE1;logat&#xE1;sa (2 pont)</h3>
 
-<p>&#xCD;rj egy <code>szamokatKivalogat</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l, amely vegyesen t&#xE1;rol elt&#xE9;r&#x151; t&#xED;pus&#xFA; elemeket! A f&#xFC;ggv&#xE9;ny v&#xE1;logassa ki a param&#xE9;terben kapott t&#xF6;mb sz&#xE1;m t&#xED;pus&#xFA; elemeit egy &#xFA;j t&#xF6;mbbe, &#xE9;s t&#xE9;rjen vissza a sz&#xE1;mokat tartalmaz&#xF3; t&#xF6;mbbel!</p>
+<p>&#xCD;rj egy <code>szamokatKivalogat</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l, amely elt&#xE9;r&#x151; t&#xED;pus&#xFA; elemeket t&#xE1;rol! A f&#xFC;ggv&#xE9;ny adja vissza a param&#xE9;terben kapott t&#xF6;mb sz&#xE1;m t&#xED;pus&#xFA; elemeit egy &#xFA;j t&#xF6;mbben!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> [&apos;kecske&apos;, true, &apos;42&apos;, 32, -1, undefined, 3.14, [&apos;alma&apos;, &apos;banan&apos;]]
 <b>Return:</b> [32, -1, 3.14]
 </pre>
 <h3 class="mume-header" id="2-feladat-stringek-%C3%B6sszef%C5%B1z%C3%A9se-3-pont">2. feladat: Stringek &#xF6;sszef&#x171;z&#xE9;se (3 pont)</h3>
 
-<p>&#xCD;rj egy <code>stringeketOsszefuz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l, amely vegyesen t&#xE1;rol elt&#xE9;r&#x151; t&#xED;pus&#xFA; elemeket! A f&#xFC;ggv&#xE9;ny f&#x171;zze &#xF6;ssze a t&#xF6;mbben tal&#xE1;lhat&#xF3; stringeket, &#xE9;s t&#xE9;rjen vissza az &#xF6;sszef&#x171;z&#xE9;s eredm&#xE9;ny&#xE9;vel!</p>
+<p>&#xCD;rj egy <code>stringeketOsszefuz</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy olyan t&#xF6;mb&#xF6;t kap param&#xE9;ter&#xFC;l, amely elt&#xE9;r&#x151; t&#xED;pus&#xFA; elemeket t&#xE1;rol! A f&#xFC;ggv&#xE9;ny f&#x171;zze &#xF6;ssze a t&#xF6;mbben tal&#xE1;lhat&#xF3; stringeket, &#xE9;s t&#xE9;rjen vissza az &#xF6;sszef&#x171;z&#xE9;s eredm&#xE9;ny&#xE9;vel!</p>
 <p><span class="example">P&#xE9;lda:</span></p>
 <pre class="language-html"><b>Input:</b> [&apos;Java&apos;, null, [], &apos;Script&apos;, 123, &apos;4&apos;, &apos;life&apos;, undefined]
 <b>Return:</b> &apos;JavaScript4life&apos;
@@ -326,8 +326,7 @@ pre[data-line] .line-highlight[data-end]:after {
 </pre>
 <h3 class="mume-header" id="7-feladat-valaki-%C3%A9ppen-g%C3%A9pel-4-pont">7. feladat: Valaki &#xE9;ppen g&#xE9;pel... (4 pont)</h3>
 
-<p>Jani egy chatalkalmaz&#xE1;st fejleszt JavaScriptben. A chatben, amikor egy vagy t&#xF6;bb felhaszn&#xE1;l&#xF3; &#xE9;ppen g&#xE9;pel, akkor err&#x151;l ki&#xED;runk egy &#xFC;zenetet.</p>
-<p>&#xCD;rj egy <code>gepeles</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l. Ez a sz&#xF6;veg pontosvessz&#x151;kkel elv&#xE1;lasztva tartalmazza azoknak a felhaszn&#xE1;l&#xF3;knak a nev&#xE9;t, akik &#xE9;ppen g&#xE9;pelnek. Figyelj arra, hogy n&#xE9;h&#xE1;ny n&#xE9;v el&#xE9; &#xE9;s/vagy ut&#xE1;n n&#xE9;h&#xE1;ny f&#xF6;l&#xF6;sleges whitespace karakter ker&#xFC;lt!</p>
+<p>Jani egy chatalkalmaz&#xE1;st fejleszt JavaScriptben. A chatben mindig ki&#xED;runk egy &#xFC;zenetet arr&#xF3;l, ha egy vagy t&#xF6;bb felhaszn&#xE1;l&#xF3; &#xE9;ppen g&#xE9;pel. &#xCD;rj egy <code>gepeles</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy sz&#xF6;veget kap param&#xE9;ter&#xFC;l! Ez a sz&#xF6;veg pontosvessz&#x151;kkel elv&#xE1;lasztva tartalmazza az &#xE9;ppen g&#xE9;pel&#x151; felhaszn&#xE1;l&#xF3;knak a nev&#xE9;t. Figyelj arra, hogy n&#xE9;h&#xE1;ny n&#xE9;v el&#xE9; &#xE9;s/vagy ut&#xE1;n n&#xE9;h&#xE1;ny f&#xF6;l&#xF6;sleges whitespace karakter ker&#xFC;lt, amiket el&#x151;sz&#xF6;r el kell t&#xE1;vol&#xED;tani!</p>
 <ul>
 <li>Amennyiben a param&#xE9;ter t&#xED;pusa nem megfelel&#x151; vagy a param&#xE9;terben az &#xFC;res string &#xE9;rkezik, akkor a f&#xFC;ggv&#xE9;ny t&#xE9;rjen vissza a <code>HIBA!</code> sz&#xF6;veggel!</li>
 <li>Ha pontosan 1 ember g&#xE9;pel, akkor t&#xE9;rj&#xFC;nk vissza a <code>{username} eppen gepel...</code> sz&#xF6;veggel, ahol <code>{username}</code> a g&#xE9;pel&#x151; felhaszn&#xE1;l&#xF3; neve!</li>
@@ -340,6 +339,9 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <b>Input:</b> &apos;szte4k;catman6     ;    Sziklas  ;          Aerosol;cservZenberg&apos;
 <b>Return:</b> &apos;szte4k, catman6 es 3 tovabbi felhasznalo eppen gepel...&apos;
+
+<b>Input:</b> &apos;&apos;
+<b>Return:</b> &apos;HIBA!&apos;
 </pre>
 <h3 class="mume-header" id="8-feladat-%C3%B6t%C3%B6slott%C3%B3-4-pont">8. feladat: &#xD6;t&#xF6;slott&#xF3; (4 pont)</h3>
 
@@ -354,9 +356,9 @@ pre[data-line] .line-highlight[data-end]:after {
 </div>
 <h3 class="mume-header" id="9-feladat-e-mail-c%C3%ADm-gener%C3%A1tor-5-pont">9. feladat: E-mail c&#xED;m gener&#xE1;tor (5 pont)</h3>
 
-<p>A Flying Duck Travels l&#xE9;git&#xE1;rsas&#xE1;g levelez&#x151; szolg&#xE1;ltat&#xE1;s&#xE1;val saj&#xE1;t e-mail fi&#xF3;kot hozhatunk l&#xE9;tre. A fi&#xF3;k l&#xE9;trehoz&#xE1;sakor megadjuk a teljes nev&#xFC;nket &#xE9;s a sz&#xFC;let&#xE9;si &#xE9;vet, majd ezekb&#x151;l a rendszer gener&#xE1;l egy javasolt e-mail c&#xED;met a k&#xF6;vetkez&#x151;k&#xE9;ppen:</p>
+<p>A Flying Duck Travels l&#xE9;git&#xE1;rsas&#xE1;g levelez&#x151; szolg&#xE1;ltat&#xE1;s&#xE1;val saj&#xE1;t e-mail fi&#xF3;kot hozhatunk l&#xE9;tre. A fi&#xF3;k l&#xE9;trehoz&#xE1;sakor megadjuk a teljes nev&#xFC;nket &#xE9;s a sz&#xFC;let&#xE9;si &#xE9;v&#xFC;nket, majd ezekb&#x151;l a rendszer gener&#xE1;l egy javasolt e-mail c&#xED;met a k&#xF6;vetkez&#x151;k&#xE9;ppen:</p>
 <ul>
-<li>vessz&#xFC;k a teljes n&#xE9;vben szerepl&#x151; &#xF6;sszes n&#xE9;vnek az els&#x151; 3 bet&#x171;j&#xE9;t, csupa kisbet&#x171;vel (ha egy ilyen n&#xE9;v r&#xF6;videbb 3 bet&#x171;n&#xE9;l, akkor a teljes nevet vessz&#xFC;k)</li>
+<li>vessz&#xFC;k a teljes n&#xE9;vben szerepl&#x151; &#xF6;sszes sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott n&#xE9;vnek az els&#x151; 3 bet&#x171;j&#xE9;t, csupa kisbet&#x171;vel (ha egy ilyen string r&#xF6;videbb 3 bet&#x171;n&#xE9;l, akkor a teljes stringet vessz&#xFC;k)</li>
 <li>ezut&#xE1;n vessz&#xFC;k a sz&#xFC;let&#xE9;si &#xE9;v utols&#xF3; sz&#xE1;mjegy&#xE9;t</li>
 <li>v&#xE9;g&#xFC;l az &#xED;gy kapott azonos&#xED;t&#xF3;hoz hozz&#xE1;f&#x171;zz&#xFC;k a <code>@duck.com</code> sz&#xF6;veget.</li>
 </ul>
@@ -384,7 +386,7 @@ pre[data-line] .line-highlight[data-end]:after {
 </pre>
 <h3 class="mume-header" id="11-feladat-f%C3%A1jlok-rendszerez%C3%A9se-4-pont">11. feladat: F&#xE1;jlok rendszerez&#xE9;se (4 pont)</h3>
 
-<p>A sz&#xE1;m&#xED;t&#xF3;g&#xE9;p&#xFC;nk&#xF6;n egy adott mapp&#xE1;ban t&#xE1;roljuk a Szkriptnyelvek kurzushoz kapcsol&#xF3;d&#xF3; f&#xE1;jljainkat. Mivel a mapp&#xE1;nk tartalma el&#xE9;g kaotikus, szeretn&#xE9;nk egy kicsit rendszerezni a benne l&#xE9;v&#x151; f&#xE1;jlokat.</p>
+<p>A sz&#xE1;m&#xED;t&#xF3;g&#xE9;p&#xFC;nk&#xF6;n egy adott mapp&#xE1;ban t&#xE1;roljuk a Szkriptnyelvek kurzushoz kapcsol&#xF3;d&#xF3; f&#xE1;jljainkat. Mivel a mapp&#xE1;nk tartalma el&#xE9;g kaotikus, ez&#xE9;rt szeretn&#xE9;nk egy kicsit rendszerezni a benne l&#xE9;v&#x151; f&#xE1;jlokat.</p>
 <p>&#xCD;rj egy <code>fajlokatRendszerez</code> nev&#x171; f&#xFC;ggv&#xE9;nyt, amely egy t&#xF6;mb&#xF6;t v&#xE1;r param&#xE9;terben! A t&#xF6;mb tartalmazza a mapp&#xE1;ban tal&#xE1;lhat&#xF3; f&#xE1;jlok neveit, kiterjeszt&#xE9;ssel egy&#xFC;tt. A f&#xFC;ggv&#xE9;ny visszat&#xE9;r&#xE9;si &#xE9;rt&#xE9;ke egy k&#xE9;tdimenzi&#xF3;s t&#xF6;mb, amelynek...</p>
 <ul>
 <li>...els&#x151; eleme a <code>py</code> kiterjeszt&#xE9;s&#x171; f&#xE1;jlok neveit tartalmaz&#xF3; t&#xF6;mb</li>
