@@ -2,6 +2,8 @@
 
 ## JavaScript vezérlési szerkezetek, függvények, stringek
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.js" target="_blank">ide kattintva</a>.
+
 ### 1. feladat: Kézfogás (2 pont)
 
 Egy több tagú baráti társaságban mindenki mindenkivel kezet fog (nyilván önmagával senki sem fog kezet, ennyire kétségbeesettek azért nem vagyunk). Írj egy `kezfogas` nevű függvényt, amely a társaságban lévő emberek számát kapja paraméterül, és visszaadja, hogy összesen hány kézfogás történt!
