@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Aszinkron JavaScript</title>
+    <meta charset="UTF-8">
+    <style>
+        button { padding: 5px; }
+        .delete-btn { background-color: red; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Aszinkron adatlekérdezés JavaScriptben</h1>
+    <p>Lekérdezzük néhány felhasználó posztjait egy <a href="https://jsonplaceholder.typicode.com/" target="_blank">webszervertől</a>.</p>
+    <p>Válaszd ki az adatlekérdezés módját a megfelelő gombra való kattintással!</p>
+
+    <button onclick="loadPostsWithPromises(displayPosts)">Promise</button>
+    <button onclick="loadPostsWithAsyncAwait(displayPosts)">Az async és await kulcsszavak</button>
+    <button onclick="clearData()" class="delete-btn">A megjelenített adatok eltüntetése</button>
+
+    <!-- Ebben a div-ben fogjuk megjeleníteni a lekérdezett felhasználókat és a posztjaikat. -->
+    <div id="data-container"></div>
+
+    <script>
+        const url1 = "https://jsonplaceholder.typicode.com/users";  // URL a felhasználók adataihoz.
+        const url2 = "https://jsonplaceholder.typicode.com/posts";  // URL a posztok adataihoz.
+
+        // A felhasználók és azok posztjainak lekérdezése Promise segítségével.
+
+        function loadPostsWithPromises(callback) {
+            let users;
+            let posts;
+
+            fetch(url1).then(users => users.json()).then(parsedUsers => {   // Felhasználók adatainak lekérése.
+                users = parsedUsers;            // A felhasználók adatait elmentjük a users változóba.
+                return fetch(url2);
+            }).then(posts => posts.json()).then(parsedPosts => {            // A felhasználói adatok lekérése után a posztok adatait is lekérjük.
+                posts = parsedPosts;            // A posztok adatait elmentjük a posts változóba.
+                callback(users, posts);         // Meghívjuk a felhasználók és a posztok megjelenítéséért felelő callback függvényt.
+            }).catch(error => console.log("[HIBA]", error.message));        // Hibakezelés.
+        }
+
+        //  A felhasználók és azok posztjainak lekérdezése az async és await kulcsszavak segítségével.
+
+        async function loadPostsWithAsyncAwait(callback) {
+            try {
+                const users = await fetch(url1);                    // Felhasználók adatainak lekérése és eltárolása.
+                const parsedUsers = await users.json();
+                const posts = await fetch(url2);                    // Posztok adatainak lekérése és eltárolása (ekkor már a felhasználók adatai megérkeztek).
+                const parsedPosts = await posts.json();
+
+                callback(parsedUsers, parsedPosts);                 // Meghívjuk a felhasználók és a posztok megjelenítéséért felelő callback függvényt.
+            } catch (error) {                                       // Hibakezelés.
+                console.log("[HIBA]", error.message);
+            }
+        }
+
+        // A lekérdezett adatok weboldalon való megjelenítéséért felelő függvény (ő lesz a callback függvényünk).
+
+        function displayPosts(users, posts) {
+            const dataContainer = document.getElementById("data-container");
+            dataContainer.innerHTML = "";
+
+            for (let user of users) {                               // Felhasználók tömbjének bejárása.
+                const container = document.createElement("div");
+                container.innerHTML = `<h3>${user.name} posztjai:</h3>`;
+
+                const userPosts = posts.filter(post => post.userId === user.id);    // Kiválogatjuk az aktuális felhasználó posztjait.
+
+                for (let userPost of userPosts) {                   // A felhasználó posztjainak bejárása és megjelenítése az oldalon.
+                    const paragraph = document.createElement("p");
+                    paragraph.innerText = userPost.title;
+                    container.append(paragraph);
+                }
+
+                dataContainer.append(container);
+            }
+        }
+
+        // A weboldalon megjelenített adatok eltüntetését végző függvény.
+
+        function clearData() {
+            document.getElementById("data-container").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

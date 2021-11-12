@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Aszinkron JavaScript</title>
+    <meta charset="UTF-8">
+    <style>
+        button { padding: 5px; }
+        .delete-btn { background-color: red; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Aszinkron adatlekérdezés JavaScriptben</h1>
+    <p>Lekérdezzük néhány felhasználó adatait egy <a href="https://jsonplaceholder.typicode.com/" target="_blank">webszervertől</a>.</p>
+    <p>Válaszd ki az adatlekérdezés módját a megfelelő gombra való kattintással!</p>
+
+    <button onclick="loadUsersWithCallbacks(displayUsers)">Hagyományos callback függvény</button>
+    <button onclick="loadUsersWithPromises(displayUsers)">Promise</button>
+    <button onclick="loadUsersWithAsyncAwait(displayUsers)">Az async és await kulcsszavak</button>
+    <button onclick="clearData()" class="delete-btn">A megjelenített adatok eltüntetése</button>
+
+    <!-- Ebben a div-ben fogjuk megjeleníteni a lekérdezett felhasználói adatokat. -->
+    <div id="data-container"></div>
+
+    <script>
+        const url = "https://jsonplaceholder.typicode.com/users";   // Az URL, ahonnan lekérjük az adatokat.
+
+        // A felhasználók adatainak lekérdezése hagyományos callback függvény segítségével.
+
+        function loadUsersWithCallbacks(callback) {
+            const request = new XMLHttpRequest();       // A kérés objektum, amivel a szerverhez fordulunk.
+            request.responseType = "json";              // A szervertől érkező válasz JSON formátumú lesz.
+            request.open("GET", url);                   // Egy HTTP GET kérést nyitunk az adott URL-re.
+
+            request.onreadystatechange = () => {        // Mi történjen a válasz megérkezésekor?
+                // Ha minden rendben volt, akkor meghívjuk a callback függvényt a lekérdezett adatokkal.
+                if (request.readyState === 4 && request.status === 200)
+                    callback(request.response);
+            };
+
+            request.send();                             // A kérés elküldése a szervernek.
+        }
+
+        // A felhasználók adatainak lekérdezése Promise segítségével.
+
+        function loadUsersWithPromises(callback) {
+            fetch(url).then(resp => resp.json())                    // A lekért adatokat JavaScript formátumra alakítjuk.
+                      .then(parsedUsers => callback(parsedUsers))   // A JavaScript formátumú adatokat megjelenítjük az oldalon.
+                      .catch(error => console.log("[HIBA]", error.message));  // Az esetleges hibákat lekezeljük.
+        }
+
+        // A felhasználók adatainak lekérdezése az async és await kulcsszavak segítségével.
+
+        async function loadUsersWithAsyncAwait(callback) {
+            try {
+                const users = await fetch(url);           // Felhasználói adatok lekérdezése.
+                const parsedUsers = await users.json();   // A lekért adatokat JavaScript formátumra alakítjuk.
+                displayUsers(parsedUsers);                // A JavaScript formátumú adatokat megjelenítjük az oldalon.
+            } catch (error) {                             // Hibakezelés.
+                console.log(error.message);
+            }
+        }
+
+        // A lekérdezett adatok weboldalon való megjelenítéséért felelő függvény (ő lesz a callback függvényünk).
+
+        function displayUsers(users) {
+            const dataContainer = document.getElementById("data-container");  // A felhasználók adatait tároló div.
+            dataContainer.innerHTML = "";              // A div-ben szereplő esetleges korábbi adatok eltüntetése.
+
+            for (let user of users) {                  // Az egyes felhasználók adatainak megjelenítése.
+                const userContainer = document.createElement("div");
+                userContainer.innerHTML = `<h3>${user.name}</h3><p>Email: ${user.email}</p>`;
+                dataContainer.append(userContainer);
+            }
+        }
+
+        // A weboldalon megjelenített adatok eltüntetését végző függvény.
+
+        function clearData() {
+            document.getElementById("data-container").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
