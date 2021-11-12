@@ -38,6 +38,8 @@ console.log("Egy másik rövid ideig tartó kiíratás");
 <img src="./img/async-code-output.png" alt="Aszinkron programkód kimenete">
 </div>
 
+> **Megjegyzés:** A `setTimeout()` akkor is később futna le, mint a szinkron kódrészünk, ha 0 másodperc hosszú lenne a kódba berakott "szünet".
+
 Az aszinkron programozás egyik fő motivációja a felhasználói élmény (user experience) javítása. Ha például van egy webes alkalmazásunk, amely valamilyen adatlekérést végez (pl. adatbázisból kér le adatokat), akkor az adatlekérés aszinkron módon történő kezelésével elérhetjük, hogy a felhasználó továbbra is gond nélkül használhassa az alkalmazásunkat, amíg az adatlekérés fut a háttérben (így nem "fagy le" az alkalmazás az adat megérkezéséig).
 
 
@@ -61,7 +63,7 @@ A HTTP kéréseknek két fő fajtáját különböztetjük meg:
 * A <span class="red">`GET`-kérések</span> segítségével jellemzően egy erőforrást kérünk el a szervertől (ebben a jegyzetben csak ilyen típusú HTTP kérésekre fogunk példát nézni).
 * A <span class="red">`POST`-kérések</span> segítségével jellemzően adatot továbbítunk a szerver felé (pl. egy kitöltött űrlap adatait).
 
-Manapság az interneten elérhető rengeteg különféle <span class="red">API</span> (Application Programming Interface = alkalmazásprogramozási felület), amik bárki által felhasználható, nyilvános adatokat tesznek elérhetővé a fejlesztők számára. Mi most egy felhasználói mintaadatokat rendelkezésünkre bocsátó API-t fogunk használni, de ezen kívül természetesen rengeteg hasznos API megtalálható a weben (pl. aktuális időjárással kapcsolatos adatok, menetrendekkel kapcsolatos információk, véletlenszerű macskás/kutyás képek stb.).
+Manapság az interneten elérhető rengeteg különböző <span class="red">API</span> (Application Programming Interface = alkalmazásprogramozási felület), amik különféle adatokat tesznek elérhetővé a fejlesztők számára. Mi most egy felhasználói mintaadatokat rendelkezésünkre bocsátó API-t fogunk használni, de ezen kívül természetesen rengeteg hasznos API megtalálható a weben (pl. aktuális időjárással kapcsolatos adatok, menetrendekkel kapcsolatos információk, véletlenszerű macskás/kutyás képek stb.).
 
 
 ### 2.2. A JSON formátum
@@ -111,7 +113,7 @@ console.log(retrievedUser);
 
 ### 2.3. A JavaScript lehetőségei aszinkron adatlekérésre
 
-Legyen az a feladatunk, hogy kérdezzük le aszinkron módon a **[https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)** URL-en található felhasználói adatokat a böngészőben, JavaScript segítségével!
+Legyen az a feladatunk, hogy kérdezzük le aszinkron módon a **[https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)** URL-en található, JSON formátumú felhasználói adatokat a böngészőben, JavaScript segítségével!
 
 Az alábbiakban megnézünk 3 módszert, aminek segítségével lehetőségünk van aszinkron adatlekérésre JavaScriptben. Ezek közül a Promise-ok és az `async`/`await` kulcsszavak a mai napig gyakran használatosak (a callback függvények kevésbé - hamarosan látni fogjuk, hogy miért).
 
@@ -151,7 +153,7 @@ A HTTP kérés indításához az <span class="red">`XMLHttpRequest`</span> objek
 * A `responseType` adattaggal megadhatjuk a szervertől várt válasz típusát. Például, ha megmondjuk, hogy JSON formátumú választ várunk, akkor a válaszban szereplő adatok alapból JavaScript formátumban fognak rendelkezésünkre állni (nem kell őket `JSON.parse()`-szal konvertálgatni).
 * A `send()` metódussal ténylegesen elküldjük a kérést a szerver felé.
 * Az `onreadystatechange` eseménykezelő értékeként megadható egy olyan függvény, amely akkor kerül meghívásra, ha a HTTP kérés állapota (`readyState` adattag) megváltozik (pl. megérkezett a szervertől az adat).
-    * Ha a `readyState` adattag értéke 4, akkor a szerverhez indított HTTP kérés végbement.
+    * Ha a `readyState` adattag értéke 4, akkor a szervertől a válasz megérkezett.
     * Ha a `status` adattag értéke 200, akkor a válasz sikeresen megérkezett (`200 OK` státuszkód).
 
 <span class="green">A callback függvénnyel megvalósított adatfeldolgozás kódja:</span>
@@ -226,7 +228,7 @@ A callback hell tehát egy igen jelentős és gyakran felmerülő probléma a ca
 
 #### 2.3.2. Promise-ok
 
-A <span class="red">Promise</span>-ok ("ígéretek") az ECMAScript6 (ES6) szabványban kerültek bevezetésre az aszinkron adatkezelés megkönnyítése céljából. Egy Promise tulajdonképpen egy objektum, amely egy olyan aszinkron adatot reprezentál, ami jelen pillanatban még nem ismert, de a későbbiek során ismertté válhat (pl. miután a HTTP kérésünk elküldését követően megkapjuk a felhasználók adatait a webszervertől, akkor ezek az adatok ismertté válnak).
+A <span class="red">Promise</span>-ok ("ígéretek") az ECMAScript6 (ES6) szabványban kerültek bevezetésre az aszinkron adatkezelés megkönnyítése céljából. Egy Promise tulajdonképpen egy objektum, amely egy olyan aszinkron adatot reprezentál, ami kezdetben még nem ismert, de a későbbiek során ismertté válhat (pl. amikor a HTTP kérésünk elküldését követően megkapjuk a felhasználók adatait a webszervertől, akkor ezek az adatok ismertté válnak).
 
 A Promise-oknak <span class="red">3 lehetséges állapot</span>a létezik:
 
@@ -290,7 +292,7 @@ Láttuk, hogy a Promise-ok segítségével hatékonyan lehet aszinkron adatokat 
 
 1. Ismételten fel fogjuk használni a felhasználói adatokat megjelenítő `displayUsers()` függvényt, ezért kimásoljuk annak a kódját a callback-es példából.
 1. Az adatlekérést végző `loadUsers()` függvényben most a `fetch()` függvényt ([részletes referencia](https://developer.mozilla.org/en-US/docs/Web/API/fetch)) fogjuk felhasználni a felhasználói adatok lekérésére. Ez a függvény egy Promise-t ad vissza.
-1. Ha az adatot tartalmazó szerver-válasz rendben megérkezett, akkor a kapott Promise `then()` ágában feldolgozzuk azt.
+1. Ha az adatot tartalmazó szerver-válasz rendben megérkezett, akkor a megkapott Promise `then()` ágában feldolgozzuk azt.
     - Ehhez először meghívjuk a kapott szerver-válasz `json()` metódusát, ami JavaScript formátumra konvertálja át a kapott adatot. Ez a metódus szintén egy Promise-szal tér vissza.
     - A `json()` metódushoz tartozó Promise `then()` ágában már egy JavaScript formátumra alakított adattal dolgozunk (a felhasználók tömbjével). Ezt megjeleníthetjük a weboldalon.
 1. Ha valamilyen hiba történt, akkor a kapott Promise `catch()` ágában kiíratjuk a hibaüzenetet.
@@ -333,7 +335,7 @@ Láttuk, hogy a Promise-ok segítségével hatékonyan lehet aszinkron adatokat 
 
 Az ES6 szabványban bevezetett <span class="orange">Promise-ok megoldást jelentenek a korábban látott callback hell problémájára</span>. 
 
-Hasonlítsuk össze az alábbi két kódkezdeményt!! A bal oldalon látható a callback függvényekkel történő megvalósítás, míg a jobb oldalon Promise-okat használunk. Világos, hogy a bal oldalon látható, "szétcsúszó" kóddal ellentétben a Promise-okat használó, jobb oldali kód lényegesen esztétikusabb lesz.
+Hasonlítsuk össze az alábbi két kódkezdeményt!! A bal oldalon látható a callback függvényekkel történő megvalósítás, míg a jobb oldalon Promise-okat használunk. Világos, hogy a bal oldalon látható, "szétcsúszó" kóddal ellentétben a Promise-okat használó, jobb oldali kód lényegesen könnyebben kezelhető lesz.
 
 <a href="./img/promises.png"><img src="./img/promises.png" alt="Callback hell megoldása Promise-okkal"></a>
 
@@ -344,7 +346,7 @@ A Promise-ok megoldást jelentenek a callback hell kapcsán tárgyalt, kódismé
 Beláttuk, hogy a Promise-ok egy hatékony megoldást nyújtanak a callback hell problémájára, viszont sajnos a Promise-oknak is van némi "szépséghibájuk":
 
 * Ha nagyon sok `then()` ágat láncolunk egymás után (mint pl. a fentebb szereplő ábrán), akkor a kódunk előbb-utóbb nehezen olvashatóvá válik.
-* Ha meg akarjuk osztani a lekérdezett adatainkat a Promise-ok között, akkor ez egy kissé körülményes: az egyes `then()` ágakban ki kell mentenünk egy-egy változóba a lekérdezett adatot.
+* Ha meg akarjuk osztani a lekérdezett adatainkat a `then()` ágak között, akkor ez egy kissé körülményes: az egyes `then()` ágakban ki kell mentenünk egy-egy változóba a lekérdezett adatot.
 
 <span class="example">Példa:</span> Ahhoz, hogy a lekérdezett felhasználókat később, a posztokat lekérő kódrészben is felhasználhassuk, ki kell menteni a felhasználói adatokat egy változóba.
 
@@ -365,9 +367,9 @@ A következő fejezetben azt fogjuk megnézni, hogy az `async` és `await` kulcs
 
 #### 2.3.3. Az `async` és `await` kulcsszavak
 
-Az ECMAScript8 (ES8) szabványban kerültek bevezetésre az <span class="red">`async` és `await` kulcsszavak</span>, amelyek célja az aszinkron adatfeldolgozás "szebbé tétele". Segítségükkel az aszinkron kódunk úgy fog kinézni a szemlélő számára, mintha szinkron kód lenne.
+Az ECMAScript8 (ES8) szabványban kerültek bevezetésre az <span class="red">`async` és `await` kulcsszavak</span>, amelyek célja az aszinkron adatfeldolgozás "szebbé tétele". Segítségükkel az aszinkron kódunk úgy fog kinézni a kódunkat szemlélő fejlesztők számára, mintha szinkron kód lenne.
 
-Az <span class="red">`async`</span> kulcsszó egy függvény elé írva azt csinálja, hogy a függvény által visszaadott értéket automatikus "becsomagolja" egy Promise-ba, és ezzel a Promise-szal fogunk visszatérni.
+Az <span class="red">`async`</span> kulcsszó egy függvény elé írva azt csinálja, hogy a függvény által visszaadott értéket automatikusan "becsomagolja" egy Promise-ba, és a függvény ezzel a Promise-szal fog visszatérni.
 
 <span class="example">Példa:</span> Az `async` kulcsszóval ellátott függvények egy Promise-ként adják vissza a visszatérési értéket. Tehát a bal oldalon látható kód leegyszerűsíthető a jobb oldalon látott kódra.
 
@@ -385,27 +387,27 @@ Az <span class="red">`async`</span> kulcsszó egy függvény elé írva azt csin
 > console.log(myPromise === asyncReturn());   // false
 > ```
 
-Az `async` kulcsszóval ellátott függvényeken belüli aszinkron műveletek <span class="orange">előtt</span> használhatjuk az <span class="red">`await`</span> kulcsszót. Ennek a hatására <span class="orange">megvárjuk, amíg megkapjuk a választ a szervertől, és csak ezután megyünk tovább a következő utasítás végrehajtására</span> ("szinkron működés látszata").
+Az `async` kulcsszóval ellátott függvényeken belüli aszinkron műveletek <span class="orange">előtt</span> használhatjuk az <span class="red">`await`</span> kulcsszót. Ennek a hatására <span class="orange">megvárjuk, amíg az aszinkron művelet végbemegy, és csak ezután megyünk tovább a következő utasítás végrehajtására</span> ("szinkron működés látszata").
 
 <div class="bordered-box border-red">
 <span class="red">Figyelem!</span> Az <code>await</code> kulcsszót kizárólag <code>async</code> függvényeken belül használhatjuk! Ha egy függvényben szerepel legalább 1 <code>await</code> utasítás, akkor a függvényt kötelezően el kell látni az <code>async</code> kulcsszóval! (Fordítva ez egyébként nem igaz: bármikor írhatunk olyan <code>async</code> függvényt, amiben nem szerepel <code>await</code>.)
 </div>
 
-<span class="example">Példa:</span> Az `async` és `await` kulcsszavak használatával is feldolgozható a `sendData()` függvény által visszaadott Promise objektum. Ekkor a hibakezelést hagyományos `try`-`catch` ágakkal végezzük.
+<span class="example">Példa:</span> Az `async` és `await` kulcsszavak használatával is feldolgozható a `sendData()` függvény által visszaadott Promise objektum. Ekkor a hibakezelést hagyományos `try`-`catch` blokkokkal végezzük.
 
 ![Az async és await kulcsszavak használata](./img/async-await-example.png)
 
 
 ##### Aszinkron adatlekérés `async` és `await` használatával
 
-<span class="example">Feladat:</span> Kérdezzük le a korábbiakban használt API-ban szereplő felhasználók adatait, ezúttal az `async` és `await` használatával! A lekért adatokat jelenítsük is meg a weboldalon!
+<span class="example">Feladat:</span> Kérdezzük le a korábbiakban használt API-ban szereplő felhasználók adatait, ezúttal az `async` és `await` kulcsszavak használatával! A lekért adatokat jelenítsük is meg a weboldalon!
 
 <div class="bordered-box border-green">
 <span class="green">A feladat megoldásának lépései</span> <br>
 
-1. A megoldás nagyon fog hasonlítani a Promise-okkal megvalósított adatlekéréshez, ezért a korábbiakban látott Promise-os megoldás forráskódjából érdemes kiindulni, azt fogjuk átírni.
+1. A megoldás nagyon fog hasonlítani a "sima" Promise-okkal megvalósított adatlekéréshez, ezért a korábbiakban látott Promise-os megoldás forráskódjából érdemes kiindulni, azt fogjuk átírni.
 1. Az adatlekérést végző `loadUsers()` függvényben két dolgot fogunk átírni:
-    * A `fetch()` és a `json()` metódusok által visszaadott Promise-ok feldolgozása során az `await` kulcsszóval "várjuk meg" az aszinkron műveletek végbemenését.
+    * A `fetch()` és a `json()` metódusok által visszaadott Promise-ok feldolgozása során most az `await` kulcsszóval "várjuk meg" az aszinkron műveletek végbemenését.
     * A `loadUsers()` függvényt el kell látnunk az `async` kulcsszóval, hiszen a függvényen belül használtuk az `await` kulcssszót.
 </div>
 
@@ -445,9 +447,9 @@ Az `async` kulcsszóval ellátott függvényeken belüli aszinkron műveletek <s
 
 ##### A Promise-ok és az `async`/`await` összehasonlítása
 
-Vegyük a szokásos példánkat: a felhasználók adatainak lekérdezése után kérdezzük le a felhasználók posztjait is, majd a posztok lekérdezése után kérdezzük le a posztokhoz tartozó kommenteket!
+Vegyük a korábban emlegetett példánkat: a felhasználók adatainak lekérdezése után kérdezzük le a felhasználók posztjait is, majd a posztok lekérdezése után kérdezzük le a posztokhoz tartozó kommenteket!
 
-A bal oldalon látható a feladat Promise-okkal történő megvalósítása, míg a jobb oldali kódkezdeményben az `async` és `await` kulcsszavak használatával oldjuk meg a feladatot.
+A bal oldalon látható a feladat Promise-okkal történő vázlatos megvalósítása, míg a jobb oldali kódkezdeményben az `async` és `await` kulcsszavak használatával oldjuk meg a feladatot.
 
 <a href="./img/async-await-vs-promises.png"><img src="./img/async-await-vs-promises.png" alt="Az async/await és a Promise-ok összehasonlítása"></a>
 
@@ -457,11 +459,11 @@ Látható, hogy a Promise-os megvalósításhoz képest <span class="orange">az 
 * <span class="orange">...az aszinkron műveletek közötti adatmegosztás is egyszerűen megvalósítható</span> (a korábban lekérdezett adatokat a `parsedUsers`, `parsedPosts` és `parsedComments` változókban bármikor el tudjuk érni).
 
 <div class="bordered-box border-blue">
-<span class="blue">A <code>Promise.all()</code> metódus (egy gyorsítási lehetőség független aszinkron adatok esetén)</span><br><br>
+<span class="blue">A <code>Promise.all()</code> metódus - egy gyorsítási lehetőség független aszinkron adatok esetén</span><br><br>
 
-A fenti `async`/`await`-es kódunkban <span class="orange">az adataink nem függetlenek egymástól</span>: először le kell kérdeznünk a felhasználókat, majd csak eztán tudjuk feldolgozni a felhasználói posztokat, és csak ezután térhetünk át a posztokra érkezett kommentek feldolgozásával.
+A fenti `async`/`await`-es kódunkban <span class="orange">az aszinkron adataink nem függetlenek egymástól</span>: először le kell kérdeznünk a felhasználókat, majd csak eztán tudjuk feldolgozni a felhasználók posztjait, és csak ezután térhetünk át a posztokra érkezett kommentek feldolgozásával (tehát mindig szükségünk van az "előző" adatra).
 
-Abban az esetben, ha <span class="orange">több, egymástól független adat</span> iránt indítunk lekérdezést, akkor <span class="orange">a kód futása gyorsítható</span>, ha nem egymás után kérjük le az aszinkron adatokat. A <span class="red">`Promise.all()` metódus</span>nak Promise-oknak egy tömbjét adjuk meg paraméterben, amiket a metódus <span class="orange">egyidejűleg</span> kezel (tehát nem várunk arra, hogy egy korábbi Promise-t feldolgozzunk, hanem több Promise-t dolgozunk fel egyszerre).
+Abban az esetben, ha <span class="orange">több, egymástól független adat</span> iránt indítanánk lekérdezést, akkor <span class="orange">a kód futása gyorsítható</span> lenne, ha nem sorban, egymás után kérnénk le az aszinkron adatokat. Ekkor a <span class="red">`Promise.all()` metódus</span>nak Promise-ok tömbjét adjuk meg paraméterben, amiket a metódus <span class="orange">egyidejűleg</span> kezel (tehát nem várunk arra, hogy egy korábbi Promise-t feldolgozzunk, hanem több Promise-t dolgozunk fel egyszerre).
 
 [A Promise.all() részletes dokumentációja, példákkal.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 </div>
