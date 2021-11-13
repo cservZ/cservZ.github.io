@@ -30,7 +30,7 @@
     * Ha az állomány neve még nem szerepel a `tartalom` tömbben, akkor szúrd be az állomány nevét a tömb végére, és növeld meg a `_meret` adattag értékét az állomány méretével!
     * Ha az állomány neve már szerepel a `tartalom` tömbben, akkor írasd ki a konzolra a `Hiba! Mar letezo allomany!` üzenetet! Ebben az esetben ne módosítsd az objektum adattagjait! **(4 pont)**
 
-* Írj egy paraméter nélküli `info` metódust, amely a következő formátumú szöveggel tér vissza: `{nev} mappa, {_meret} bajt, {allomanyokSzama} allomany` (ahol az `allomanyokSzama` a `tartalom` lista hossza)! **(2 pont)**
+* Írj egy paraméter nélküli `info` metódust, amely a következő formátumú szöveggel tér vissza: `{nev} mappa, {_meret} bajt, {allomanyokSzama} allomany` (ahol az `allomanyokSzama` a `tartalom` tömb hossza)! **(2 pont)**
 
 
 ## Mémes mappa (12 pont)
@@ -39,6 +39,6 @@
 
 * A konstruktor itt is a mappa nevét és méretét várja paraméterben! A méret paraméter értékét ne legyen kötelező megadni, alapértéke legyen 420! Inicializáld az osztály adattagjait az ősosztály konstruktorának megfelelő meghívásával! **(4 pont)**
 
-* Definiáld felül az ősosztály `allomanytFelvesz` metódusát! A metódus csak a `jpg`, `png` és `gif` kiterjesztésű állományokat engedje felvenni a mappába! A kiterjesztés alatt a legutolsó pont karakter utáni szöveget értjük. A kiterjesztés vizsgálatakor a kis- és nagybetűket nem különböztetjük meg (pl. `be.txt` és `KI.TXT` mindketten txt kiterjesztésűek). **(4 pont)**
+* Definiáld felül az ősosztály `allomanytFelvesz` metódusát! A metódus csak a `jpg`, `png` és `mp4` kiterjesztésű állományokat engedje felvenni a mappába! A kiterjesztés alatt a legutolsó pont karakter utáni szöveget értjük. A kiterjesztés vizsgálatakor a kis- és nagybetűket nem különböztetjük meg (pl. `be.txt` és `KI.TXT` mindketten txt kiterjesztésűek). **(4 pont)**
 
-* Írj egy paraméter nélküli `memeketTorol` metódust, amely ürítse ki a `tartalom` listát, és a `_meret` adattag értékét állítsa be 0-ra! **(2 pont)**
+* Írj egy paraméter nélküli `memeketTorol` metódust, amely ürítse ki a `tartalom` tömböt, és a `_meret` adattag értékét állítsa be 0-ra! **(2 pont)**
