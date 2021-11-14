@@ -65,7 +65,7 @@ Készíts egy `Pizza` nevű osztályt, amely az `Etel` osztályból öröklődik
         * Szúrd be a paraméterben kapott pizza **nevét** a `rendelesek` tömb végére!
         * Írasd ki a konzolra a `Sikeres rendeles!` szöveget! **(6 pont)**
 
-* Írj egy paraméter nélküli `pizzakatListaz` metódust! A metódus visszatérési értéke egy szöveg, amely vesszőkkel elválasztva, `{mennyiség} darab {pizzanev}` formában felsorolva tartalmazza azt, hogy az egyes pizzafajtákból mennyit rendelt a vásárló (`rendelesek` tömb)!
+* Írj egy paraméter nélküli `pizzakatListaz` metódust! A metódus visszatérési értéke egy szöveg, amely vesszőkkel elválasztva, `{mennyiseg} darab {pizzanev}` formában felsorolva tartalmazza azt, hogy az egyes pizzafajtákból mennyit rendelt a vásárló (`rendelesek` tömb)!
     * Például, ha a `rendelesek` tömb `['hawaii pizza', 'dupla sajtos pizza', 'hawaii pizza']`, akkor a visszatérési érték a `2 darab hawaii pizza, 1 darab dupla sajtos pizza` szöveg.
     * Amennyiben a `rendelesek` tömb üres, akkor a visszatérési érték a `Nincs rendeles!` szöveg legyen! **(4 pont)**
 

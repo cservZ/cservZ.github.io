@@ -2,6 +2,8 @@
 
 ## JavaScript adatszerkezetek: tömb, object
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.js" target="_blank">ide kattintva</a>.
+
 ### 1. feladat: Számok kiválogatása (2 pont)
 
 Írj egy `szamokatKivalogat` nevű függvényt, amely egy olyan tömböt kap paraméterül, amely eltérő típusú elemeket tárol! A függvény adja vissza a paraméterben kapott tömb szám típusú elemeit egy új tömbben!
