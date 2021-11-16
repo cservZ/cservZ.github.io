@@ -27,8 +27,8 @@
 * Írd át az osztály konstruktorát úgy, hogy a méret értéke itt is ugyanúgy legyen beállítva, mint a setterben! **(2 pont)**
 
 * Írj egy `allomanytFelvesz` metódust, amely két paramétert vár: rendre egy állomány nevét és méretét!
-    * Ha az állomány neve még nem szerepel a `tartalom` tömbben, akkor szúrd be az állomány nevét a tömb végére, és növeld meg a `_meret` adattag értékét az állomány méretével!
-    * Ha az állomány neve már szerepel a `tartalom` tömbben, akkor írasd ki a konzolra a `Hiba! Mar letezo allomany!` üzenetet! Ebben az esetben ne módosítsd az objektum adattagjait! **(4 pont)**
+    * Ha az állomány neve már szerepel a `tartalom` tömbben, akkor írasd ki a konzolra a `Hiba! Mar letezo allomany!` üzenetet! Ebben az esetben ne módosítsd az objektum adattagjait!
+    * Ha az állomány neve még nem szerepel a `tartalom` tömbben, akkor szúrd be az állomány nevét a tömb végére, és növeld meg a `_meret` adattag értékét az állomány méretével! **(4 pont)**
 
 * Írj egy paraméter nélküli `info` metódust, amely a következő formátumú szöveggel tér vissza: `{nev} mappa, {_meret} bajt, {allomanyokSzama} allomany` (ahol az `allomanyokSzama` a `tartalom` tömb hossza)! **(2 pont)**
 
