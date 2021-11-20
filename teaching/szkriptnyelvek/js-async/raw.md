@@ -122,7 +122,7 @@ Az alábbiakban megnézünk 3 módszert, aminek segítségével lehetőségünk 
 
 A <span class="red">callback függvények</span>et már jól ismerjük a korábbi JavaScriptes tanulmányainkból. Ezek <span class="orange">olyan függvények, amelyeket egy másik függvénynek adunk paraméterül</span>. Természetesen a callback függvényt meg is tudjuk hívni abban a függvényben, amely paraméterül kapja azt.
 
-Ebben a jegyzetben a callback függvények megadására az ECMAScript6 (ES6) szabványban bevezetett <span class="red">arrow function</span>-öket fogjuk használni. Ha esetlegesen valakinek ez a fogalom idegen, akkor érdemes lehet elolvasni a gyakorlati jegyzet ide vonatkozó részét ([link](https://okt.sed.hu/szkriptnyelvek/gyakorlat/gyak9/#javascript-fuggvenyek-egyeb-megadasi-modjai)).
+Ebben a jegyzetben a callback függvények megadására az ECMAScript6 (ES6) szabványban bevezetett <span class="red">arrow function</span>-öket fogjuk használni. Ha esetlegesen valakinek ez a fogalom idegen, akkor érdemes lehet elolvasni a gyakorlati jegyzet ide vonatkozó részét ([link](https://okt.sed.hu/szkriptnyelvek/gyakorlat/js/09_js_functions/#javascript-fuggvenyek-egyeb-megadasi-modjai)).
 
 <span class="example">Példa:</span> A korábban látott `setTimeout()` függvény első paraméterében egy callback függvényt adtunk meg, ami a megadott idő lejárta után került meghívásra.
 
