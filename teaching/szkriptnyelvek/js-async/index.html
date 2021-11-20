@@ -368,7 +368,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>Az <code>onreadystatechange</code> esem&#xE9;nykezel&#x151; &#xE9;rt&#xE9;kek&#xE9;nt megadhat&#xF3; egy olyan f&#xFC;ggv&#xE9;ny, amely akkor ker&#xFC;l megh&#xED;v&#xE1;sra, ha a HTTP k&#xE9;r&#xE9;s &#xE1;llapota (<code>readyState</code> adattag) megv&#xE1;ltozik (pl. meg&#xE9;rkezett a szervert&#x151;l az adat).
 <ul>
 <li>Ha a <code>readyState</code> adattag &#xE9;rt&#xE9;ke 4, akkor a szervert&#x151;l a v&#xE1;lasz meg&#xE9;rkezett.</li>
-<li>Ha a <code>status</code> adattag &#xE9;rt&#xE9;ke 200, akkor a v&#xE1;lasz sikeresen meg&#xE9;rkezett (<code>200 OK</code> st&#xE1;tuszk&#xF3;d).</li>
+<li>Ha a <code>status</code> adattag &#xE9;rt&#xE9;ke 200, akkor az adatok hiba n&#xE9;lk&#xFC;l meg&#xE9;rkeztek (<code>200 OK</code> st&#xE1;tuszk&#xF3;d).</li>
 </ul>
 </li>
 </ul>
@@ -491,7 +491,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="green">A feladat megold&#xE1;s&#xE1;nak l&#xE9;p&#xE9;sei</span> <br>
 <ol>
 <li>Ism&#xE9;telten fel fogjuk haszn&#xE1;lni a felhaszn&#xE1;l&#xF3;i adatokat megjelen&#xED;t&#x151; <code>displayUsers()</code> f&#xFC;ggv&#xE9;nyt, ez&#xE9;rt kim&#xE1;soljuk annak a k&#xF3;dj&#xE1;t a callback-es p&#xE9;ld&#xE1;b&#xF3;l.</li>
-<li>Az adatlek&#xE9;r&#xE9;st v&#xE9;gz&#x151; <code>loadUsers()</code> f&#xFC;ggv&#xE9;nyben most a <code>fetch()</code> f&#xFC;ggv&#xE9;nyt (<a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch">r&#xE9;szletes referencia</a>) fogjuk felhaszn&#xE1;lni a felhaszn&#xE1;l&#xF3;i adatok lek&#xE9;r&#xE9;s&#xE9;re. Ez a f&#xFC;ggv&#xE9;ny egy Promise-t ad vissza.</li>
+<li>Az adatlek&#xE9;r&#xE9;st v&#xE9;gz&#x151; <code>loadUsers()</code> f&#xFC;ggv&#xE9;nyben most a <code>fetch()</code> f&#xFC;ggv&#xE9;nyt fogjuk felhaszn&#xE1;lni a felhaszn&#xE1;l&#xF3;i adatok lek&#xE9;r&#xE9;s&#xE9;re (<a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch">r&#xE9;szletes referencia</a>). Ez a f&#xFC;ggv&#xE9;ny egy Promise-t ad vissza.</li>
 <li>Ha az adatot tartalmaz&#xF3; szerver-v&#xE1;lasz rendben meg&#xE9;rkezett, akkor a megkapott Promise <code>then()</code> &#xE1;g&#xE1;ban feldolgozzuk azt.
 <ul>
 <li>Ehhez el&#x151;sz&#xF6;r megh&#xED;vjuk a kapott szerver-v&#xE1;lasz <code>json()</code> met&#xF3;dus&#xE1;t, ami JavaScript form&#xE1;tumra konvert&#xE1;lja &#xE1;t a kapott adatot. Ez a met&#xF3;dus szint&#xE9;n egy Promise-szal t&#xE9;r vissza.</li>
@@ -602,7 +602,7 @@ pre[data-line] .line-highlight[data-end]:after {
       <span class="token keyword control-flow keyword-try">try</span> <span class="token punctuation">{</span>
         <span class="token keyword keyword-const">const</span> users <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// Felhaszn&#xE1;l&#xF3;i adatok lek&#xE9;rdez&#xE9;se.</span>
         <span class="token keyword keyword-const">const</span> parsedUsers <span class="token operator">=</span> <span class="token keyword control-flow keyword-await">await</span> users<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// A lek&#xE9;rt adatokat JavaScript form&#xE1;tumra alak&#xED;tjuk.</span>
-        <span class="token function">displayUsers</span><span class="token punctuation">(</span>parsedUsers<span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token comment">// A JavaScript form&#xE1;tum&#xFA; adatokat megjelen&#xED;tj&#xFC;k az oldalon.</span>
+        <span class="token function">callback</span><span class="token punctuation">(</span>parsedUsers<span class="token punctuation">)</span><span class="token punctuation">;</span>                    <span class="token comment">// A JavaScript form&#xE1;tum&#xFA; adatokat megjelen&#xED;tj&#xFC;k az oldalon.</span>
       <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-catch">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>                           <span class="token comment">// Hibakezel&#xE9;s.</span>
         <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token property-access">message</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span>

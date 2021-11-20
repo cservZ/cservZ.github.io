@@ -54,7 +54,7 @@
             try {
                 const users = await fetch(url);           // Felhasználói adatok lekérdezése.
                 const parsedUsers = await users.json();   // A lekért adatokat JavaScript formátumra alakítjuk.
-                displayUsers(parsedUsers);                // A JavaScript formátumú adatokat megjelenítjük az oldalon.
+                callback(parsedUsers);                    // A JavaScript formátumú adatokat megjelenítjük az oldalon.
             } catch (error) {                             // Hibakezelés.
                 console.log(error.message);
             }

@@ -154,7 +154,7 @@ A HTTP kérés indításához az <span class="red">`XMLHttpRequest`</span> objek
 * A `send()` metódussal ténylegesen elküldjük a kérést a szerver felé.
 * Az `onreadystatechange` eseménykezelő értékeként megadható egy olyan függvény, amely akkor kerül meghívásra, ha a HTTP kérés állapota (`readyState` adattag) megváltozik (pl. megérkezett a szervertől az adat).
     * Ha a `readyState` adattag értéke 4, akkor a szervertől a válasz megérkezett.
-    * Ha a `status` adattag értéke 200, akkor a válasz sikeresen megérkezett (`200 OK` státuszkód).
+    * Ha a `status` adattag értéke 200, akkor az adatok hiba nélkül megérkeztek (`200 OK` státuszkód).
 
 <span class="green">A callback függvénnyel megvalósított adatfeldolgozás kódja:</span>
 
@@ -291,7 +291,7 @@ Láttuk, hogy a Promise-ok segítségével hatékonyan lehet aszinkron adatokat 
 <span class="green">A feladat megoldásának lépései</span> <br>
 
 1. Ismételten fel fogjuk használni a felhasználói adatokat megjelenítő `displayUsers()` függvényt, ezért kimásoljuk annak a kódját a callback-es példából.
-1. Az adatlekérést végző `loadUsers()` függvényben most a `fetch()` függvényt ([részletes referencia](https://developer.mozilla.org/en-US/docs/Web/API/fetch)) fogjuk felhasználni a felhasználói adatok lekérésére. Ez a függvény egy Promise-t ad vissza.
+1. Az adatlekérést végző `loadUsers()` függvényben most a `fetch()` függvényt fogjuk felhasználni a felhasználói adatok lekérésére ([részletes referencia](https://developer.mozilla.org/en-US/docs/Web/API/fetch)). Ez a függvény egy Promise-t ad vissza.
 1. Ha az adatot tartalmazó szerver-válasz rendben megérkezett, akkor a megkapott Promise `then()` ágában feldolgozzuk azt.
     - Ehhez először meghívjuk a kapott szerver-válasz `json()` metódusát, ami JavaScript formátumra konvertálja át a kapott adatot. Ez a metódus szintén egy Promise-szal tér vissza.
     - A `json()` metódushoz tartozó Promise `then()` ágában már egy JavaScript formátumra alakított adattal dolgozunk (a felhasználók tömbjével). Ezt megjeleníthetjük a weboldalon.
@@ -425,7 +425,7 @@ Az `async` kulcsszóval ellátott függvényeken belüli aszinkron műveletek <s
       try {
         const users = await fetch(url);           // Felhasználói adatok lekérdezése.
         const parsedUsers = await users.json();   // A lekért adatokat JavaScript formátumra alakítjuk.
-        displayUsers(parsedUsers);                // A JavaScript formátumú adatokat megjelenítjük az oldalon.
+        callback(parsedUsers);                    // A JavaScript formátumú adatokat megjelenítjük az oldalon.
       } catch (error) {                           // Hibakezelés.
         console.log(error.message);
       }
