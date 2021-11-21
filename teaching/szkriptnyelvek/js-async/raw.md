@@ -367,7 +367,7 @@ A következő fejezetben azt fogjuk megnézni, hogy az `async` és `await` kulcs
 
 #### 2.3.3. Az `async` és `await` kulcsszavak
 
-Az ECMAScript8 (ES8) szabványban kerültek bevezetésre az <span class="red">`async` és `await` kulcsszavak</span>, amelyek célja az aszinkron adatfeldolgozás "szebbé tétele". Segítségükkel az aszinkron kódunk úgy fog kinézni a kódunkat szemlélő fejlesztők számára, mintha szinkron kód lenne.
+Az ECMAScript8 (ES8) szabványban kerültek bevezetésre az <span class="red">`async` és `await` kulcsszavak</span>, amelyek célja a Promise-ok kezelésének "szebbé tétele". Segítségükkel az aszinkron kódunk úgy fog kinézni a kódunkat szemlélő fejlesztők számára, mintha szinkron kód lenne.
 
 Az <span class="red">`async`</span> kulcsszó egy függvény elé írva azt csinálja, hogy a függvény által visszaadott értéket automatikusan "becsomagolja" egy Promise-ba, és a függvény ezzel a Promise-szal fog visszatérni.
 
