@@ -40,7 +40,7 @@ console.log("Egy másik rövid ideig tartó kiíratás");
 
 > **Megjegyzés:** A `setTimeout()` akkor is később futna le, mint a szinkron kódrészünk, ha 0 másodperc hosszú lenne a kódba berakott "szünet".
 
-Az aszinkron programozás egyik fő motivációja a felhasználói élmény (user experience) javítása. Ha például van egy webes alkalmazásunk, amely valamilyen adatlekérést végez (pl. adatbázisból kér le adatokat), akkor az adatlekérés aszinkron módon történő kezelésével elérhetjük, hogy a felhasználó továbbra is gond nélkül használhassa az alkalmazásunkat, amíg az adatlekérés fut a háttérben (így nem "fagy le" az alkalmazás az adat megérkezéséig).
+Az aszinkron programozás egyik fő motivációja a felhasználói élmény (user experience) javítása. Ha például van egy webes alkalmazásunk, amely valamilyen adatlekérést végez (pl. egy szervertől kér le adatokat), akkor az adatlekérés aszinkron módon történő kezelésével elérhetjük, hogy a felhasználó továbbra is gond nélkül használhassa az alkalmazásunkat, amíg az adatlekérés fut a háttérben (így nem "fagy le" az alkalmazás az adat megérkezéséig).
 
 
 ## 2. Aszinkron JavaScript
@@ -58,7 +58,7 @@ Ha az alkalmazásunkban szeretnénk egy webszervertől elkérni valamilyen erőf
 
 A szerver a megkapott HTTP kérést feldolgozza, és arra egy <span class="red">HTTP válasz</span>t küld vissza. Amennyiben "minden rendben volt", akkor a szerver visszaküldi a böngészőnknek a kért erőforrást a válaszüzenetben. Ekkor a HTTP válaszban szereplő <span class="red">státuszkód</span> a `200 OK`. Ha valamilyen hiba történt a kliens-szerver kommunikáció során, akkor a HTTP válaszban egy `200 OK`-tól eltérő státuszkód szerepel (pl. `404 Not Found`, ha a kért erőforrás nem található a szerveren).
 
-A HTTP kéréseknek két fő fajtáját különböztetjük meg:
+A két leggyakoribb HTTP kérés típus:
 
 * A <span class="red">`GET`-kérések</span> segítségével jellemzően egy erőforrást kérünk el a szervertől (ebben a jegyzetben csak ilyen típusú HTTP kérésekre fogunk példát nézni).
 * A <span class="red">`POST`-kérések</span> segítségével jellemzően adatot továbbítunk a szerver felé (pl. egy kitöltött űrlap adatait).
