@@ -223,7 +223,7 @@ Látható, hogy az egymásba ágyazott callback függvények hatására a kódun
 
 Az egymásba ágyazott callback-ek esetén egy másik probléma a hibakezelés kérdése. Ha le szeretnénk kezelni az aszinkron adatlekérések során adódó hibákat (pl. ha nem érkezik meg a szervertől a lekért adat), akkor minden ilyen aszinkron adatlekérésnél külön meg kellene néznünk egy `if`-fel, hogy történt-e valami hiba, ezáltal a hibakezelő kódrészt többször is megismételnénk.
 
-A callback hell tehát egy igen jelentős és gyakran felmerülő probléma a callback függvényekkel kapcsolatban, ami miatt <span class="orange">manapság már nem szoktak hagyományos callback függvényeket használni aszinkron adatok feldolgozására</span>! A hagyományos callback függvények helyett például használhatjuk az úgynevezett Promise-okat, amik már megoldják a callback hell problémáját (a következő fejezetben megnézzük, hogy hogyan).
+A callback hell tehát egy igen jelentős és gyakran felmerülő probléma a callback függvényekkel kapcsolatban, ami miatt <span class="orange">manapság már nem szoktak hagyományos callback függvényeket használni aszinkron adatok lekérésére</span>! A hagyományos callback függvények helyett például használhatjuk az úgynevezett Promise-okat, amik már megoldják a callback hell problémáját (a következő fejezetben megnézzük, hogy hogyan).
 
 
 #### 2.3.2. Promise-ok
