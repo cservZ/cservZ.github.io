@@ -2,6 +2,7 @@
 
 ## Objektumorientáltság JavaScriptben
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.js" target="_blank">ide kattintva</a>.
 
 ### Pizzázó (50 pont)
 
