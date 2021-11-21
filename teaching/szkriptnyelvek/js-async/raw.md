@@ -274,7 +274,7 @@ function sendData() {
 
 // Az aszinkron adat feldolgozását végző függvény.
 function getData() {
-  // Ha minden rendben volt, kiíratjuk a kapott adotot a `then()` ágban, hiba esetén pedig
+  // Ha minden rendben volt, kiíratjuk a kapott adatot a `then()` ágban, hiba esetén pedig
   // a megkapott hibaüzenetet íratjuk ki a `catch()` ágban.
   sendData().then(data => console.log(data)).catch(error => console.log("[HIBA]", error.message));
 }
@@ -291,8 +291,8 @@ Láttuk, hogy a Promise-ok segítségével hatékonyan lehet aszinkron adatokat 
 <span class="green">A feladat megoldásának lépései</span> <br>
 
 1. Ismételten fel fogjuk használni a felhasználói adatokat megjelenítő `displayUsers()` függvényt, ezért kimásoljuk annak a kódját a callback-es példából.
-1. Az adatlekérést végző `loadUsers()` függvényben most a `fetch()` függvényt fogjuk felhasználni a felhasználói adatok lekérésére ([részletes referencia](https://developer.mozilla.org/en-US/docs/Web/API/fetch)). Ez a függvény egy Promise-t ad vissza.
-1. Ha az adatot tartalmazó szerver-válasz rendben megérkezett, akkor a megkapott Promise `then()` ágában feldolgozzuk azt.
+1. Az adatlekérést végző `loadUsers()` függvényben most a <span class="red">`fetch()` függvény</span>t fogjuk felhasználni a felhasználói adatok lekérésére ([részletes referencia](https://developer.mozilla.org/en-US/docs/Web/API/fetch)). Ez a függvény egy Promise-t ad vissza.
+1. Ha az adatot tartalmazó szerver-válasz rendben megérkezett, akkor a `fetch()` által visszaadott Promise `then()` ágában feldolgozzuk azt.
     - Ehhez először meghívjuk a kapott szerver-válasz `json()` metódusát, ami JavaScript formátumra konvertálja át a kapott adatot. Ez a metódus szintén egy Promise-szal tér vissza.
     - A `json()` metódushoz tartozó Promise `then()` ágában már egy JavaScript formátumra alakított adattal dolgozunk (a felhasználók tömbjével). Ezt megjeleníthetjük a weboldalon.
 1. Ha valamilyen hiba történt, akkor a kapott Promise `catch()` ágában kiíratjuk a hibaüzenetet.
@@ -335,7 +335,7 @@ Láttuk, hogy a Promise-ok segítségével hatékonyan lehet aszinkron adatokat 
 
 Az ES6 szabványban bevezetett <span class="orange">Promise-ok megoldást jelentenek a korábban látott callback hell problémájára</span>. 
 
-Hasonlítsuk össze az alábbi két kódkezdeményt!! A bal oldalon látható a callback függvényekkel történő megvalósítás, míg a jobb oldalon Promise-okat használunk. Világos, hogy a bal oldalon látható, "szétcsúszó" kóddal ellentétben a Promise-okat használó, jobb oldali kód lényegesen könnyebben kezelhető lesz.
+Hasonlítsuk össze az alábbi két kódkezdeményt! A bal oldalon látható a callback függvényekkel történő megvalósítás, míg a jobb oldalon Promise-okat használunk. Világos, hogy a bal oldalon látható, "szétcsúszó" kóddal ellentétben a Promise-okat használó, jobb oldali kód lényegesen könnyebben kezelhető lesz.
 
 <a href="./img/promises.png"><img src="./img/promises.png" alt="Callback hell megoldása Promise-okkal"></a>
 
