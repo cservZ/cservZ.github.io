@@ -6,6 +6,8 @@
 <span class="green">Segítség:</span> A feladatsor megoldásához hasznos lehet <a href="../../js-async" target="_blank">az aszinkron JavaScripttel kapcsolatos jegyzetem</a>.
 </div>
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.zip" target="_blank">ide kattintva</a>.
+
 
 ### Aszinkron adatlekérdezés Promise-ok használatával (10 pont)
 
