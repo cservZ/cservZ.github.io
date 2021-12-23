@@ -1,0 +1,733 @@
+<!DOCTYPE html><html><head>
+      <title>Pipeline megoldás</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="../../../../assets/img/icon.png">
+      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="oper%C3%A1ci%C3%B3s-rendszerek-gyakorlat">Oper&#xE1;ci&#xF3;s rendszerek gyakorlat</h1>
+
+<h2 class="mume-header" id="pipeline-gyakorl%C3%B3-feladatok-egy-lehets%C3%A9ges-megold%C3%A1s">Pipeline gyakorl&#xF3; feladatok - Egy lehets&#xE9;ges megold&#xE1;s</h2>
+
+<p>A kedvenc zen&#xE9;ink adatait egy <code>playlist.csv</code> nev&#x171; &#xE1;llom&#xE1;nyban t&#xE1;roljuk (<a href="./inputs.zip">let&#xF6;lt&#xE9;s</a>). A f&#xE1;jl egyes soraiban szerepl&#x151;, pontosvessz&#x151;vel elv&#xE1;lasztott adatok sorban:</p>
+<ul>
+<li>a zene el&#x151;ad&#xF3;j&#xE1;nak neve</li>
+<li>a zene c&#xED;me</li>
+<li>a zene m&#x171;faja</li>
+<li>a zene hossza m&#xE1;sodpercekben.</li>
+</ul>
+<p>A bemeneti f&#xE1;jl els&#x151; sora egy fejl&#xE9;csor, amit nem kell feldolgozni (csup&#xE1;n t&#xE1;j&#xE9;koztat&#xF3; jelleggel b&#xED;r). Oldd meg az al&#xE1;bbi feladatokat <strong>cs&#x151;vezet&#xE9;k (pipeline)</strong> haszn&#xE1;lat&#xE1;val!</p>
+<h3 class="mume-header" id="1-a-fejl%C3%A9csor-elt%C3%A1vol%C3%ADt%C3%A1sa-2-pont">1. A fejl&#xE9;csor elt&#xE1;vol&#xED;t&#xE1;sa (2 pont)</h3>
+
+<p>A bemeneti f&#xE1;jl els&#x151; sor&#xE1;ban szerepl&#x151; fejl&#xE9;cet nem szeretn&#xE9;nk feldolgozni. Egy alkalmas Linux parancs seg&#xED;ts&#xE9;g&#xE9;vel hozz l&#xE9;tre egy <code>playlist2.csv</code> nev&#x171; &#xE1;llom&#xE1;nyt, amelybe &#xED;rd bele a <code>playlist.csv</code> f&#xE1;jl tartalm&#xE1;t <strong>az els&#x151; sor n&#xE9;lk&#xFC;l</strong>!</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Azokn&#xE1;l a pipeline-os feladatokn&#xE1;l, amelyekben egy bemeneti f&#xE1;jl feldolgoz&#xE1;sa a feladat, els&#x151; l&#xE9;p&#xE9;sben c&#xE9;lszer&#x171; lehet a feldolgozand&#xF3; f&#xE1;jl tartalm&#xE1;t ki&#xED;ratni a k&#xE9;perny&#x151;re a <code>cat</code> paranccsal.
+<pre>&gt; cat playlist.csv
+Eloado;Cim;Mufaj;Hossz (masodpercekben)
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+...
+</pre>
+<p>Az els&#x151; sorban szerepl&#x151; fejl&#xE9;c elt&#xE1;vol&#xED;t&#xE1;sa megoldhat&#xF3; a gyakorlati anyagban is t&#xE1;rgyalt <code>tail -n &lt;+sz&#xE1;m&gt;</code> paranccsal, amely a <code>sz&#xE1;m</code>-adik sort&#xF3;l kezdve &#xED;rja ki a f&#xE1;jl tartalm&#xE1;t. Mivel most az els&#x151; sort&#xF3;l szeretn&#xE9;nk megszabadulni, ez&#xE9;rt a m&#xE1;sodik sort&#xF3;l kezd&#x151;d&#x151;en fogjuk ki&#xED;ratni a f&#xE1;jlban tal&#xE1;lhat&#xF3; tartalmat.</p>
+<p>Egy pipeline seg&#xED;ts&#xE9;g&#xE9;vel f&#x171;zz&#xFC;k hozz&#xE1; a <code>cat playlist.csv</code> parancshoz a <code>tail -n +2</code> parancsot (hiszen a <code>cat</code> parancs kimenet&#xE9;n (a f&#xE1;jl tartalm&#xE1;n) szeretn&#xE9;nk v&#xE9;grehajtani az els&#x151; sor &quot;elt&#xE1;vol&#xED;t&#xE1;s&#xE1;t&quot; v&#xE9;gz&#x151; parancsot)!</p>
+<pre>&gt; cat playlist.csv | tail -n +2
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+...
+</pre>
+<p>Remek, most m&#xE1;r megkaptuk a bemeneti f&#xE1;jl tartalm&#xE1;t az els&#x151; sor n&#xE9;lk&#xFC;l! M&#xE1;r csak annyi a feladatunk, hogy az els&#x151; sor &quot;kidob&#xE1;sa&quot; ut&#xE1;n kapott tartalmat bele&#xED;rjuk egy <code>playlist2.csv</code> f&#xE1;jlba.</p>
+<p>A <code>&gt;</code> oper&#xE1;torral egyszer&#x171;en bele&#xED;rhatjuk az elk&#xE9;sz&#xED;tett pipeline kimenet&#xE9;t egy megadott nev&#x171; f&#xE1;jlba. Ha a kimeneti f&#xE1;jl nem l&#xE9;tezik, akkor ez a konstrukci&#xF3; automatikusan l&#xE9;trehozza azt, &#xE9;s bele&#xED;rja a kimenetet.</p>
+<p>A feladat megold&#xE1;sa teh&#xE1;t (ellen&#x151;rz&#xE9;sk&#xE9;ppen ki&#xED;ratva a l&#xE9;trehozott f&#xE1;jl tartalm&#xE1;t):</p>
+<pre>&gt; cat playlist.csv | tail -n +2 &gt; playlist2.csv
+
+&gt; cat playlist2.csv
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+Powerwolf;Incense and Iron;metal;240
+Smash Mouth;All Star;rock;237
+Nirvana;Smells Like Teen Spirit;rock;279
+Gloryhammer;The Unicorn Invasion of Dundee;metal;265
+Powerwolf;We Are The Wild;metal;221
+Imagine Dragons;Radioactive;rock;188
+Dschinghis Khan;Moskau;pop;275
+Dschinghis Khan;Dschinghis Khan;pop;185
+Bonnie Tyler;Total Eclipse of the Heart;pop;334
+Gopnik McBlyat;Snakes In Tracksuits;hardbass;261
+John Farnham;Thunder In Your Heart;rock;234
+Ismeretlen;Perfectly Cut Screamz;metal;20
+</pre>
+</div>
+<h3 class="mume-header" id="2-a-zen%C3%A9k-sz%C3%A1ma-1-pont">2. A zen&#xE9;k sz&#xE1;ma (1 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny zene adatait tartalmazza a bemeneti f&#xE1;jl! Teh&#xE1;t azt kell ki&#xED;ratni, hogy az el&#x151;z&#x151; feladatban l&#xE9;trehozott <code>playlist2.csv</code> h&#xE1;ny sorb&#xF3;l &#xE1;ll!</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Ebben a feladatban (&#xE9;s egy&#xE9;bk&#xE9;nt a h&#xE1;tral&#xE9;v&#x151; feladatok mindegyik&#xE9;ben) a <code>playlist2.csv</code> f&#xE1;jllal fogunk dolgozni. Els&#x151; l&#xE9;p&#xE9;sk&#xE9;nt megint ki&#xED;rathatjuk a f&#xE1;jl tartalm&#xE1;t, ezzel biztosan nem rontunk el semmit.
+<pre>&gt; cat playlist2.csv
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+...
+</pre>
+<p>A feladatunk megsz&#xE1;molni, hogy h&#xE1;ny sorb&#xF3;l &#xE1;ll a f&#xE1;jl. Ha egy pipeline-os feladatban valamit sz&#xE1;molni kell, akkor jusson esz&#xFC;nkbe a <code>wc</code> parancs! Ennek a fontosabb kapcsol&#xF3;i, amiket a gyakorlaton t&#xE1;rgyalunk:</p>
+<ul>
+    <li><code>-l</code>: a sorok sz&#xE1;ma a f&#xE1;jlban</li>
+    <li><code>-w</code>: a szavak sz&#xE1;ma a f&#xE1;jlban</li>
+    <li><code>-c</code>: a b&#xE1;jtok sz&#xE1;ma a f&#xE1;jlban</li>.
+</ul>
+<p>Mivel mi a sorok sz&#xE1;m&#xE1;ra vagyunk k&#xED;v&#xE1;ncsiak, ez&#xE9;rt nek&#xFC;nk a <code>-l</code> kapcsol&#xF3; fog kelleni. Egy pipeline seg&#xED;ts&#xE9;g&#xE9;vel f&#x171;zz&#xFC;k hozz&#xE1; a <code>cat playlist2.csv</code> parancshoz a <code>wc -l</code> parancsot (hiszen a <code>cat</code> parancs kimenet&#xE9;n szeretn&#xE9;nk v&#xE9;grehajtani a sorok megsz&#xE1;mol&#xE1;s&#xE1;t)!</p>
+<p>A feladat megold&#xE1;sa teh&#xE1;t:</p>
+<pre>&gt; cat playlist2.csv | wc -l
+17
+</pre>
+</div>
+<h3 class="mume-header" id="3-az-el%C5%91ad%C3%B3k-sz%C3%A1ma-4-pont">3. Az el&#x151;ad&#xF3;k sz&#xE1;ma (4 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny <strong>k&#xFC;l&#xF6;nb&#xF6;z&#x151;</strong> el&#x151;ad&#xF3; neve szerepel a bemeneti f&#xE1;jlban!</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Kiindul&#xE1;sk&#xE9;ppen megint &#xED;rassuk ki a <code>playlist2.csv</code> f&#xE1;jl tartalm&#xE1;t!
+<pre>&gt; cat playlist2.csv
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+...
+</pre>
+<p>Az el&#x151;ad&#xF3;k nevei minden sorban a legels&#x151;k a pontosvessz&#x151;vel elv&#xE1;lasztott adatok k&#xF6;z&#xFC;l. A <code>cut</code> paranccsal feldarabolhatjuk a f&#xE1;jl sorait oszlopokra adott karakterek ment&#xE9;n, &#xE9;s lek&#xE9;rhetj&#xFC;k egy (vagy t&#xF6;bb) oszlop tartalm&#xE1;t.</p>
+<ul>
+    <li>A <code>-d</code> (&quot;delimiter&quot;) kapcsol&#xF3;val megadjuk, hogy milyen karakterek ment&#xE9;n szeretn&#xE9;nk darabolni. Ez most a pontosvessz&#x151; lesz, hiszen a f&#xE1;jl soraiban szerepl&#x151; adatok pontosvessz&#x151;vel vannak elv&#xE1;lasztva.</li>
+    <li>A <code>-f</code> (&quot;fields&quot;) kapcsol&#xF3;val megadjuk, hogy a feldarabol&#xE1;s ut&#xE1;n h&#xE1;nyadik oszlopot szeretn&#xE9;nk lek&#xE9;rni. Most az els&#x151; oszlop fog kelleni, hiszen ez tartalmazza az el&#x151;ad&#xF3;k nev&#xE9;t.</li>
+</ul>
+<p>A pipeline-unk eddig a k&#xF6;vetkez&#x151;k&#xE9;ppen n&#xE9;z ki:</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1
+Rick Astley
+Imagine Dragons
+Dragonforce
+Boney M.
+Steppenwolf
+Powerwolf
+Smash Mouth
+Nirvana
+Gloryhammer
+Powerwolf
+Imagine Dragons
+Dschinghis Khan
+Dschinghis Khan
+Bonnie Tyler
+...
+</pre>
+<p>Nagyszer&#x171;, megvannak az el&#x151;ad&#xF3;k nevei! L&#xE1;that&#xF3; viszont, hogy a parancs kimenet&#xE9;ben n&#xE9;h&#xE1;ny el&#x151;ad&#xF3; neve t&#xF6;bbsz&#xF6;r is szerepel (pl. &quot;Imagine Dragons&quot;, &quot;Powerwolf&quot;, &quot;Dschinghis Khan&quot;). Mivel a feladat sz&#xF6;vege a <b>k&#xFC;l&#xF6;nb&#xF6;z&#x151;</b> el&#x151;ad&#xF3;k sz&#xE1;m&#xE1;ra k&#xED;v&#xE1;ncsi, ez&#xE9;rt j&#xF3; lenne ezeket az ism&#xE9;tl&#x151;d&#xE9;seket megsz&#xFC;ntetn&#xFC;nk.</p>
+<p>Az els&#x151; gondolatunk a <code>uniq</code> parancs lehet:</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1 | uniq
+Rick Astley
+Imagine Dragons
+Dragonforce
+Boney M.
+Steppenwolf
+Powerwolf
+Smash Mouth
+Nirvana
+Gloryhammer
+Powerwolf
+Imagine Dragons
+Dschinghis Khan
+Bonnie Tyler
+...
+</pre>
+<p>H&#xE1;t, ez k&#xF6;zel sem lett t&#xF6;k&#xE9;letes, hiszen az &quot;Imagine Dragons&quot; &#xE9;s &quot;Powerwolf&quot; el&#x151;ad&#xF3;nevek m&#xE9;g mindig el&#x151;fordulnak t&#xF6;bbsz&#xF6;r is. Egyed&#xFC;l a &quot;Dschinghis Khan&quot; ism&#xE9;tl&#x151;d&#xE9;s&#xE9;t siker&#xFC;lt megsz&#xFC;ntetn&#xFC;nk a <code>uniq</code> haszn&#xE1;lat&#xE1;val.</p>
+<p>Mi&#xE9;rt van ez &#xED;gy? A <span class="red"><code>uniq</code></span>-r&#xF3;l fontos tudni, hogy <span class="red">csak a k&#xF6;zvetlen&#xFC;l egym&#xE1;s ut&#xE1;ni ism&#xE9;tl&#x151;d&#xE9;s&#xE9;ket sz&#xFC;nteti meg</span>. Mivel a bemeneti f&#xE1;jlban az egyik &quot;Dschinghis Khan&quot; k&#xF6;zvetlen&#xFC;l a m&#xE1;sik &quot;Dschinghis Khan&quot; ut&#xE1;n szerepelt, ez&#xE9;rt ezzel a <code>uniq</code> &#xE9;ppen el tudott b&#xE1;nni.</p>
+<p>Hogyan lehetne vajon el&#xE9;rni, hogy ne csak az egym&#xE1;s ut&#xE1;ni ism&#xE9;tl&#x151;d&#xE9;seket, hanem az &#xF6;sszes ism&#xE9;tl&#x151;d&#xE9;st megsz&#xFC;ntess&#xFC;k? Erre a k&#xF6;vetkez&#x151; tr&#xFC;kk&#xF6;t tudjuk haszn&#xE1;lni: a <code>sort</code> paranccsal el&#x151;sz&#xF6;r &#xE1;b&#xE9;c&#xE9; sorrendbe rendezz&#xFC;k az el&#x151;ad&#xF3;k neveit (&#xED;gy az ism&#xE9;tl&#x151;d&#x151; el&#x151;ad&#xF3;nevek garant&#xE1;ltan k&#xF6;zvetlen&#xFC;l egym&#xE1;st fogj&#xE1;k k&#xF6;vetni), majd csak ezut&#xE1;n haszn&#xE1;ljuk a <code>uniq</code>-ot.</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1 | sort | uniq
+Boney M.
+Bonnie Tyler
+Dragonforce
+Dschinghis Khan
+Gloryhammer
+Gopnik McBlyat
+Imagine Dragons
+Ismeretlen
+John Farnham
+Nirvana
+Powerwolf
+Rick Astley
+Smash Mouth
+Steppenwolf
+</pre>
+<p>Szuper, most m&#xE1;r mindenki neve csak egyszer fordul el&#x151;! M&#xE1;r csak meg kell mondani, hogy h&#xE1;ny el&#x151;ad&#xF3;t kaptunk &#xED;gy, teh&#xE1;t l&#xE9;nyeg&#xE9;ben azt kell megsz&#xE1;molni, hogy az eddigi pipeline kimenete h&#xE1;ny sorb&#xF3;l &#xE1;ll. Erre a kor&#xE1;bban t&#xE1;rgyalt <code>wc -l</code> parancsot haszn&#xE1;lhatjuk.</p>
+<p>A feladat megold&#xE1;sa teh&#xE1;t:</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1 | sort | uniq | wc -l
+14
+</pre>
+</div>
+<h3 class="mume-header" id="4-a-tizedik-zene-3-pont">4. A tizedik zene (3 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra a <code>playlist2.csv</code> f&#xE1;jl 10. sor&#xE1;ban tal&#xE1;lhat&#xF3; zen&#xE9;nek a c&#xED;m&#xE9;t!</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Ha egy f&#xE1;jl bizonyos sor&#xE1;t (vagy sorait) szeretn&#xE9;nk csak ki&#xED;ratni, akkor eml&#xE9;kezz&#xFC;nk vissza a <code>head</code> &#xE9;s <code>tail</code> parancsokra:
+<ul>
+    <li><code>head -&lt;sz&#xE1;m&gt;</code>: ki&#xED;rja egy t&#xF6;bb sorb&#xF3;l &#xE1;ll&#xF3; sz&#xF6;veg els&#x151; <code>&lt;sz&#xE1;m&gt;</code> darab sor&#xE1;t</li>
+    <li><code>tail -&lt;sz&#xE1;m&gt;</code>: ki&#xED;rja egy t&#xF6;bb sorb&#xF3;l &#xE1;ll&#xF3; sz&#xF6;veg utols&#xF3; <code>&lt;sz&#xE1;m&gt;</code> darab sor&#xE1;t.</li>
+</ul>
+<p>Induljunk ki abb&#xF3;l, hogy ki&#xED;ratjuk a f&#xE1;jl tartalm&#xE1;t a <code>cat</code> paranccsal, majd vessz&#xFC;k a f&#xE1;jl tartalm&#xE1;b&#xF3;l az els&#x151; 10 sort a <code>head -10</code> paranccsal!</p>
+<pre>&gt; cat playlist2.csv | head -10
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+Powerwolf;Incense and Iron;metal;240
+Smash Mouth;All Star;rock;237
+Nirvana;Smells Like Teen Spirit;rock;279
+Gloryhammer;The Unicorn Invasion of Dundee;metal;265
+Powerwolf;We Are The Wild;metal;221
+</pre>
+<p>Nek&#xFC;nk most viszont nem az els&#x151; 10 sorra, hanem csup&#xE1;n a tizedik sorra van sz&#xFC;ks&#xE9;g&#xFC;nk. Egy kis gondolkod&#xE1;ssal r&#xE1;j&#xF6;het&#xFC;nk, hogy ha az els&#x151; 10 sorb&#xF3;l vessz&#xFC;k az utols&#xF3; sort, akkor pont a tizedik sort fogjuk megkapni. A <code>tail -1</code> paranccsal megkaphatjuk az el&#x151;z&#x151; pipeline kimenet&#xE9;nek az utols&#xF3; sor&#xE1;t.</p>
+<pre>&gt; cat playlist2.csv | head -10 | tail -1
+Powerwolf;We Are The Wild;metal;221
+</pre>
+<p>Ok&#xE9;, a nehez&#xE9;n t&#xFA;lvagyunk, m&#xE1;r csak az eredm&#xE9;ny&#xFC;l kapott sorb&#xF3;l kellene lek&#xE9;rn&#xFC;nk a zene c&#xED;m&#xE9;t. Ez m&#xE1;r viszonylag egyszer&#x171;: a <code>cut</code> paranccsal feldaraboljuk a sort pontosvessz&#x151;k ment&#xE9;n, &#xE9;s vessz&#xFC;k a zenec&#xED;met tartalmaz&#xF3; 2. oszlopot.</p>
+<p>A feladat megold&#xE1;sa teh&#xE1;t:</p>
+<pre>&gt; cat playlist2.csv | head -10 | tail -1 | cut -d &apos;;&apos; -f 2
+We Are The Wild
+</pre>
+</div>
+<h3 class="mume-header" id="5-a-leghosszabb-zene-3-pont">5. A leghosszabb zene (3 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra a bemeneti f&#xE1;jlban tal&#xE1;lhat&#xF3; leghosszabb zene hossz&#xE1;t (m&#xE1;sodpercekben)!</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Haladjunk ism&#xE9;t kisebb l&#xE9;p&#xE9;sekben! Mivel ism&#xE9;t a <code>playlist2.csv</code>-b&#x151;l szeretn&#xE9;nk ki&#xED;ratni valamit (a leghosszabb zene hossz&#xE1;t), ez&#xE9;rt kiindul&#xE1;sk&#xE9;ppen ki&#xED;rathatjuk a teljes f&#xE1;jl tartalm&#xE1;t.
+<pre>&gt; cat playlist2.csv
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Dragonforce;Through the Fire and Flames;metal;445
+Boney M.;Rasputin;pop;284
+Steppenwolf;Born To Be Wild;rock;216
+...
+</pre>
+<p>Mivel minden sorb&#xF3;l csak a zene hossza &#xE9;rdekel minket, ez&#xE9;rt a <code>cut</code> paranccsal ism&#xE9;telten feldarabolhatjuk a sorok tartalm&#xE1;t pontosvessz&#x151;k ment&#xE9;n. A zene hossz&#xE1;t a 4. oszlop tartalmazza, ez&#xE9;rt ezt fogjuk lek&#xE9;rni.</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 4
+213
+204
+445
+284
+216
+...
+</pre>
+<p>Ok&#xE9;, megkaptuk a zen&#xE9;k hossz&#xE1;t m&#xE1;sodpercekben. Ahhoz, hogy meg tudjuk &#xE1;llap&#xED;tani, hogy h&#xE1;ny m&#xE1;sodperc hossz&#xFA; a leghosszabb zene, rendezn&#xFC;nk kell a zen&#xE9;k hossz&#xE1;t. Ha rendezni szeretn&#xE9;nk valamit, akkor az els&#x151; gondolatunk a <code>sort</code> parancs lehet.</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 4 | sort
+185
+188
+20
+204
+213
+216
+221
+...
+</pre>
+<p>Ha megfigyelj&#xFC;k a fenti pipeline kiment&#xE9;t, akkor egy &#xE9;rdekes jelens&#xE9;get l&#xE1;thatunk: a <code>sort</code> a 20-as &#xE9;rt&#xE9;ket a 188 &#xE9;s a 204 k&#xF6;z&#xE9; rendezte. Ennek az az oka, hogy a <span class="red"><code>sort</code> parancs alap&#xE9;rtelmez&#xE9;s szerint sz&#xF6;vegekk&#xE9;nt kezeli a rendezend&#x151; elemeket, ez&#xE9;rt &#xE1;b&#xE9;c&#xE9; sorrendbe rendezi azokat</span> (ha belegondolunk, akkor a furcsas&#xE1;g, amit fentebb kaptunk, egy &#xE9;rv&#xE9;nyes &#xE1;b&#xE9;c&#xE9; sorrend).</p>
+<p>A sz&#xE1;m t&#xED;pus&#xFA; adatokat viszont term&#xE9;szetesen nem &#xE1;b&#xE9;c&#xE9; sorrendbe, hanem n&#xF6;vekv&#x151; sorrendbe szeretn&#xE9;nk rendezni. Ebben az esetben (ha sz&#xE1;mokat rendez&#xFC;nk) haszn&#xE1;ljuk a <code>sort</code> parancs <code>-n</code> (&quot;numeric sort&quot;) kapcsol&#xF3;j&#xE1;t!</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 4 | sort -n
+20
+185
+188
+204
+213
+216
+221
+234
+237
+240
+261
+265
+275
+279
+284
+334
+445
+</pre>
+<p>Remek, &#xED;gy m&#xE1;r t&#xE9;nylegesen n&#xF6;vekv&#x151; sorrendbe raktuk a zen&#xE9;k hossz&#xE1;t! M&#xE1;r csak a leghosszabb zene hossz&#xE1;t kell lek&#xE9;rn&#xFC;nk, ami a n&#xF6;vekv&#x151; sorrendben szerepl&#x151; sz&#xE1;mok k&#xF6;z&#xFC;l az utols&#xF3; lesz. Az utols&#xF3; sz&#xE1;m lek&#xE9;r&#xE9;s&#xE9;hez haszn&#xE1;ljuk a kor&#xE1;bban t&#xE1;rgyalt <code>tail -1</code> parancsot!</p>
+<p>A feladat megold&#xE1;sa teh&#xE1;t:</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 4 | sort -n | tail -1
+445
+</pre>
+</div>
+<h3 class="mume-header" id="6-pop-zen%C3%A9k-sz%C3%A1ma-2-pont">6. Pop zen&#xE9;k sz&#xE1;ma (2 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny olyan zene van a bemeneti f&#xE1;jlban, amelynek m&#x171;faja <code>pop</code>! Feltehetj&#xFC;k, hogy a bemeneti f&#xE1;jl egyes soraiban a <code>pop</code> sz&#xF6;veg csak a m&#x171;fajok oszlop&#xE1;ban fordul el&#x151;.</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Vil&#xE1;gos, hogy ebben a <code>playlist2.csv</code> f&#xE1;jlb&#xF3;l csak azokra a sorokra van sz&#xFC;ks&#xE9;g&#xFC;nk, amelyek tartalmazz&#xE1;k a <code>pop</code> sz&#xF6;veget (hiszen csak a popzen&#xE9;k &#xE9;rdekelnek minket).
+<p>Ha egy f&#xE1;jl bizonyos sorair&#xF3;l szeretn&#xE9;nk eld&#xF6;nteni, hogy illeszkednek-e egy megadott mint&#xE1;ra, akkor az <code>egrep</code> parancsot haszn&#xE1;ljuk. A parancs els&#x151; param&#xE9;tere a minta, amire illeszt&#xFC;nk (amilyen sz&#xF6;veget keres&#xFC;nk a f&#xE1;jl soraiban), a m&#xE1;sodik param&#xE9;ter pedig a vizsg&#xE1;lt f&#xE1;jl neve.</p>
+<pre>&gt; egrep &apos;pop&apos; playlist2.csv
+Rick Astley;Never Gonna Give You Up;pop;213
+Imagine Dragons;Thunder;pop;204
+Boney M.;Rasputin;pop;284
+Dschinghis Khan;Moskau;pop;275
+Dschinghis Khan;Dschinghis Khan;pop;185
+Bonnie Tyler;Total Eclipse of the Heart;pop;334
+</pre>
+<p>L&#xE1;that&#xF3;, hogy a parancs hat&#xE1;s&#xE1;ra m&#xE1;r csak a pop zen&#xE9;k adatai jelennek meg a konzolon. M&#xE1;r csak meg kell sz&#xE1;molnunk, hogy h&#xE1;ny zen&#xE9;t kaptunk eredm&#xE9;ny&#xFC;l. Ezt a szok&#xE1;sos m&#xF3;don, a <code>wc -l</code> paranccsal tehetj&#xFC;k meg (megsz&#xE1;moljuk, hogy az el&#x151;z&#x151; pipeline h&#xE1;ny soros kimenetet adott eredm&#xE9;ny&#xFC;l):</p>
+<pre>&gt; egrep &apos;pop&apos; playlist2.csv | wc -l
+6
+</pre>
+<p><span class="black">Megjegyz&#xE9;s:</span> Az <code>egrep</code> parancsnak van egy <code>-c</code> (&quot;count&quot;) kapcsol&#xF3;ja is, ami megmondja, hogy h&#xE1;ny sort v&#xE1;logatott ki a parancs. Ennek a haszn&#xE1;lat&#xE1;val a fenti megold&#xE1;s egy picit egyszer&#x171;s&#xED;thet&#x151;.</p>
+<pre>&gt; egrep -c &apos;pop&apos; playlist2.csv
+6
+</pre>
+</div>
+<h3 class="mume-header" id="7-a-leghosszabb-rockzene-3-pont">7. A leghosszabb rockzene (3 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny m&#xE1;sodperc hossz&#xFA; a leghosszabb olyan zene, amelynek m&#x171;faja <code>rock</code>! Feltehetj&#xFC;k, hogy a bemeneti f&#xE1;jl egyes soraiban a <code>rock</code> sz&#xF6;veg csak a m&#x171;fajok oszlop&#xE1;ban fordul el&#x151;.</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Ez a feladat nagyon hasonl&#xED;t az 5. feladatra, csup&#xE1;n annyi a k&#xFC;l&#xF6;nbs&#xE9;g, hogy most nem az &#xF6;sszes zene k&#xF6;z&#xFC;l akarjuk megkeresni a leghosszabbat, hanem csak a rockzen&#xE9;k k&#xF6;z&#xFC;l.
+<p>El&#x151;sz&#xF6;r is v&#xE1;logassuk ki a <code>playlist2.csv</code>-b&#x151;l a rockzen&#xE9;ket! Ehhez az <code>egrep</code> paranccsal keress&#xFC;k meg az &#xF6;sszes olyan sort a f&#xE1;jlban, amely tartalmazza a <code>rock</code> sz&#xF6;veget!</p>
+<pre>&gt; egrep &apos;rock&apos; playlist2.csv
+Steppenwolf;Born To Be Wild;rock;216
+Smash Mouth;All Star;rock;237
+Nirvana;Smells Like Teen Spirit;rock;279
+Imagine Dragons;Radioactive;rock;188
+John Farnham;Thunder In Your Heart;rock;234
+</pre>
+<p>Rendben, most m&#xE1;r kiv&#xE1;logattuk az &#xF6;sszes rockzen&#xE9;t. M&#xE1;r csak meg kell hat&#xE1;roznunk ezek k&#xF6;z&#xFC;l a leghosszabb zen&#xE9;nek a hossz&#xE1;t. Az 5. feladat alapj&#xE1;n ezt a k&#xF6;vetkez&#x151;k&#xE9;ppen tehetj&#xFC;k meg:</p>
+<ol>
+    <li>Lek&#xE9;rdezz&#xFC;k az egyes rockzen&#xE9;k hossz&#xE1;t, ami a pontosvessz&#x151;kkel elv&#xE1;lasztott adatok k&#xF6;z&#xFC;l a 4. lesz minden sorban (<code>cut -d &apos;;&apos; -f 4</code>).</li>
+    <li>N&#xF6;vekv&#x151; sorrendbe rendezz&#xFC;k a zen&#xE9;k hossz&#xE1;t (<code>sort -n</code>).</li>
+    <li>Vessz&#xFC;k a n&#xF6;vekv&#x151; sorrendbe rendezett &#xE9;rt&#xE9;kek k&#xF6;z&#xFC;l az utols&#xF3;t (<code>tail -1</code>).</li>
+</ol>
+<p>A feladat megold&#xE1;sa teh&#xE1;t:</p>
+<pre>&gt; egrep &apos;rock&apos; playlist2.csv | cut -d &apos;;&apos; -f 4 | sort -n | tail -1
+279
+</pre>
+</div>
+<h3 class="mume-header" id="8-thunder-heart-7-pont">8. Thunder, Heart (7 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja egy <code>out.txt</code> nev&#x171; f&#xE1;jlba azoknak a zen&#xE9;knek a c&#xED;m&#xE9;t <strong>csupa nagybet&#x171;kkel</strong>, <strong>&#xE1;b&#xE9;c&#xE9; sorrendben</strong>, amelyek tartalmazz&#xE1;k a <code>Thunder</code> vagy <code>Heart</code> sz&#xF6;vegek legal&#xE1;bb egyik&#xE9;t! Feltehetj&#xFC;k, hogy a bemeneti f&#xE1;jl egyes soraiban ez a k&#xE9;t sz&#xF6;veg csak a zen&#xE9;k c&#xED;m&#xE9;ben fordul el&#x151;. <strong>(5 pont)</strong></p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Itt m&#xE1;r el&#xE9;g sok mindent kell csin&#xE1;lni. Az egyszer&#x171;s&#xE9;g kedv&#xE9;&#xE9;rt egyel&#x151;re m&#xE9;g nem foglalkozunk a f&#xE1;jlba &#xED;r&#xE1;ssal, csup&#xE1;n a pipeline-t pr&#xF3;b&#xE1;ljuk meg&#xED;rni.
+<p>Mivel ism&#xE9;t csak a f&#xE1;jl bizonyos sorai kellenek nek&#xFC;nk, ez&#xE9;rt tov&#xE1;bbra is az <code>egrep</code> parancs lesz a bar&#xE1;tunk. Ha egy feladatban nem csak 1 mint&#xE1;ra illeszt&#xFC;nk (most kap&#xE1;sb&#xF3;l 2 sz&#xF6;veget is keres&#xFC;nk a f&#xE1;jl soraiban: a &quot;Thunder&quot; &#xE9;s a &quot;Heart&quot; sz&#xF6;vegeket), akkor &#xE9;rdemes haszn&#xE1;lni az <code>egrep</code> parancs <code>-e</code> kapcsol&#xF3;j&#xE1;t ezek megad&#xE1;sakor.</p>
+<pre>&gt; egrep -e &apos;Thunder&apos; -e &apos;Heart&apos; playlist2.csv
+Imagine Dragons;Thunder;pop;204
+Bonnie Tyler;Total Eclipse of the Heart;pop;334
+John Farnham;Thunder In Your Heart;rock;234
+</pre>
+<p>L&#xE1;that&#xF3;, hogy t&#xE9;nylegesen csak azokat a zen&#xE9;ket kaptuk meg, amelyek c&#xED;me tartalmazza a &quot;Thunder&quot; &#xE9;s a &quot;Heart&quot; sz&#xF6;vegek legal&#xE1;bb egyik&#xE9;t. A feladat a zen&#xE9;k c&#xED;meire k&#xED;v&#xE1;ncsi, ez&#xE9;rt a zen&#xE9;k c&#xED;m&#xE9;t a <code>cut</code> paranccsal lek&#xE9;rdezz&#xFC;k (a zenec&#xED;m a pontosvessz&#x151;kkel elv&#xE1;lasztott adatok k&#xF6;z&#xFC;l minden sorban a m&#xE1;sodik).</p>
+<pre>&gt; egrep -e &apos;Thunder&apos; -e &apos;Heart&apos; playlist2.csv | cut -d &apos;;&apos; -f 2
+Thunder
+Total Eclipse of the Heart
+Thunder In Your Heart
+</pre>
+<p>A k&#xF6;vetkez&#x151; feladatunk az lenne, hogy az &#xED;gy kapott kimenetet csupa nagybet&#x171;ss&#xE9; alak&#xED;tsuk. Ezt a <code>tr a-z A-Z</code> paranccsal tehetj&#xFC;k meg, ami &#xE1;talak&#xED;tja a sz&#xF6;vegben szerepl&#x151; &#xF6;sszes kibet&#x171;t (a-z) nagybet&#x171;v&#xE9; (A-Z).</p>
+<pre>&gt; egrep -e &apos;Thunder&apos; -e &apos;Heart&apos; playlist2.csv | cut -d &apos;;&apos; -f 2 | tr a-z A-Z
+THUNDER
+TOTAL ECLIPSE OF THE HEART
+THUNDER IN YOUR HEART
+</pre>
+<p>V&#xE9;gezet&#xFC;l, &#xE1;b&#xE9;c&#xE9; sorrendbe kell rendezn&#xFC;nk az &#xED;gy kapott, nagybet&#x171;s&#xED;tett zenec&#xED;meket. Ezt a kor&#xE1;bban l&#xE1;tott <code>sort</code> paranccsal tudjuk megtenni.</p>
+<pre>&gt; egrep -e &apos;Thunder&apos; -e &apos;Heart&apos; playlist2.csv | cut -d &apos;;&apos; -f 2 | tr a-z A-Z | sort
+THUNDER
+THUNDER IN YOUR HEART
+TOTAL ECLIPSE OF THE HEART
+</pre>
+<p>Remek, most m&#xE1;r a pipeline-nal k&#xE9;szen vagyunk, ki&#xED;rattuk a megfelel&#x151; zen&#xE9;k c&#xED;m&#xE9;t csupa nagybet&#x171;kkel, &#xE1;b&#xE9;c&#xE9; sorrendben a konzolra. M&#xE1;r csak annyi a dolgunk, hogy a kapott kimenetet beleir&#xE1;ny&#xED;tsuk egy <code>out.txt</code> nev&#x171; f&#xE1;jlba a kor&#xE1;bban l&#xE1;tott <code>&gt;</code> oper&#xE1;torral.</p>
+<p>A feladat megold&#xE1;sa teh&#xE1;t (ellen&#x151;rz&#xE9;sk&#xE9;ppen ki&#xED;ratva a l&#xE9;trehozott f&#xE1;jl tartalm&#xE1;t):</p>
+<pre>&gt; egrep -e &apos;Thunder&apos; -e &apos;Heart&apos; playlist2.csv | cut -d &apos;;&apos; -f 2 | tr a-z A-Z | sort &gt; out.txt
+
+&gt; cat out.txt
+THUNDER
+THUNDER IN YOUR HEART
+TOTAL ECLIPSE OF THE HEART
+</pre>
+</div>
+<p>Az <code>out.txt</code> f&#xE1;jlra vonatkoz&#xF3; jogosults&#xE1;gokat &#xE1;ll&#xED;tsd be a k&#xF6;vetkez&#x151;k szerint:</p>
+<ul>
+<li>A tulajdonosnak csak olvas&#xE1;si &#xE9;s &#xED;r&#xE1;si joga legyen a f&#xE1;jlra!</li>
+<li>A csoportnak szint&#xE9;n csak olvas&#xE1;si &#xE9;s &#xED;r&#xE1;si joga legyen a f&#xE1;jlra!</li>
+<li>A &quot;t&#xF6;bbiek&quot; ne rendelkezzenek semmilyen jogosults&#xE1;ggal a f&#xE1;jlra vonatkoz&#xF3;an! <strong>(2 pont)</strong></li>
+</ul>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Ez a feladatr&#xE9;sz tulajdonk&#xE9;ppen m&#xE1;r nem is a pipeline-okhoz kapcsol&#xF3;dik, hanem a jogosults&#xE1;gok kezel&#xE9;s&#xE9;hez. List&#xE1;zzuk ki az im&#xE9;nt l&#xE9;trehozott <code>out.txt</code> adatait r&#xE9;szletesen, az <code>ls -l</code> paranccsal!
+<pre>&gt; ls -l out.txt
+-rw-r--r-- 1 cservz cservz 57 Dec 23 13:40 out.txt
+</pre>
+<p>A list&#xE1;z&#xE1;s els&#x151; oszlop&#xE1;ban tal&#xE1;lhat&#xF3; <code>-rw-r--r--</code> sz&#xF6;veg fog minket &#xE9;rdekelni, ez k&#xF3;dolja el a k&#xFC;l&#xF6;nb&#xF6;z&#x151; felhaszn&#xE1;l&#xF3;i csoportok jogosults&#xE1;gait a f&#xE1;jlra vonatkoz&#xF3;an:</p>
+<ul>
+    <li>A legels&#x151; k&#xF6;t&#x151;jel azt jelenti, hogy ez egy k&#xF6;z&#xF6;ns&#xE9;ges f&#xE1;jl (ha itt k&#xF6;t&#x151;jel helyett <code>d</code> bet&#x171; szerepelne, akkor egy k&#xF6;nyvt&#xE1;rral lenne dolgunk).</li>
+    <li>A k&#xF6;vetkez&#x151; 3 karakter a f&#xE1;jl tulajdonos&#xE1;nak a jogosults&#xE1;gait k&#xF3;dolja.</li>
+    <li>A k&#xF6;vetkez&#x151; 3 karakter a csoport a jogosults&#xE1;gait jelenti.</li>
+    <li>Az utols&#xF3; 3 karakter mindenki m&#xE1;s jogosults&#xE1;gait &#xED;rja le a f&#xE1;jlra vonatkoz&#xF3;an.</li>
+</ul>
+<p>Az egyes felhaszn&#xE1;l&#xF3;i csoportoknak a jogosults&#xE1;gait az <code>rwx</code> karakterh&#xE1;rmas jelzi. Ezek rendre az olvas&#xE1;si (<code>read</code>), &#xED;r&#xE1;si (<code>write</code>) &#xE9;s futtat&#xE1;si (<code>execute</code>) jogosults&#xE1;gokat jel&#xF6;lik a f&#xE1;jlra vonatkoz&#xF3;an. Ha valamelyik karakter hely&#xE9;n k&#xF6;t&#x151;jel szerepel, akkor az azt jelenti, hogy olyan jogosults&#xE1;ga nincs az adott felhaszn&#xE1;l&#xF3;i csoportnak az &#xE1;llom&#xE1;nyra.</p>
+<p>A <code>chmod</code> paranccsal megv&#xE1;ltoztathatjuk a f&#xE1;jlra vonatkoz&#xF3; jogosults&#xE1;gokat:</p>
+<ul>
+    <li>El&#x151;sz&#xF6;r megadjuk, hogy melyik felhaszn&#xE1;l&#xF3;i csoport jogosults&#xE1;gait szeretn&#xE9;nk m&#xF3;dos&#xED;tani: <code>u</code> (&quot;user&quot;, a tulajdonos), <code>g</code> (&quot;group&quot;, a csoport), <code>o</code> (&quot;others&quot;, a t&#xF6;bbiek), <code>a</code> (&quot;all&quot;, mindenki).</li>
+    <li>Ezut&#xE1;n megmondjuk, hogy adni (<code>+</code>) vagy elvenni (<code>-</code>) szeretn&#xE9;nk jogosults&#xE1;got.</li>
+    <li>V&#xE9;g&#xFC;l megadjuk az odaadni/elvenni k&#xED;v&#xE1;nt jogosults&#xE1;got jel&#xF6;l&#x151; karaktert (<code>r</code>, <code>w</code>, <code>x</code>).</li>
+</ul>
+<p>A f&#xE1;jl tulajdons&#xE1;g&#xE1;nak csak olvas&#xE1;si &#xE9;s &#xED;r&#xE1;si jogot kell adnunk a feladatle&#xED;r&#xE1;s alapj&#xE1;n. Ha megn&#xE9;zz&#xFC;k az <code>ls -l</code> kimenet&#xE9;t, akkor l&#xE1;that&#xF3;, hogy ezzel m&#xE1;r k&#xE9;szen is vagyunk, hiszen a tulajdonos jogosults&#xE1;gai: <code>rw-</code> (olvas&#xE1;si &#xE9;s &#xED;r&#xE1;si joga van, de futtat&#xE1;si joga nincs).</p>
+<p>A csoportnak szint&#xE9;n csak olvas&#xE1;si &#xE9;s &#xED;r&#xE1;si joga kell, hogy legyen a f&#xE1;jlra. A csoport jogosults&#xE1;gai: <code>r--</code>, teh&#xE1;t csak az olvas&#xE1;si jog van meg. Adjunk &#xED;r&#xE1;si jogot (<code>w</code>) a csoportnak (<code>g</code>) a f&#xE1;jlra!</p>
+<pre>&gt; chmod g+w out.txt
+</pre>
+<p>A t&#xF6;bbiek jogosults&#xE1;ga a f&#xE1;jlra vonatkoz&#xF3;an: <code>r--</code>, ami olvas&#xE1;si jogosults&#xE1;got jelent. Mivel a feladat azt k&#xE9;rte, hogy a t&#xF6;bbiek ne rendelkezzenek semmilyen jogosults&#xE1;ggal, ez&#xE9;rt az olvas&#xE1;si jogot (<code>r</code>) el kell venn&#xFC;nk a t&#xF6;bbiekt&#x151;l (mivel jogot vesz&#xFC;nk el, itt pluszjel helyett m&#xED;nuszjelet haszn&#xE1;lunk).</p>
+<pre>&gt; chmod o-r out.txt
+</pre>
+<p>A f&#xE1;jlra vonatkoz&#xF3; jogosults&#xE1;gok most m&#xE1;r megfelelnek a feladatle&#xED;r&#xE1;snak.</p>
+<pre>&gt; ls -l out.txt
+-rw-rw---- 1 cservz cservz 57 Dec 23 13:40 out.txt
+</pre>
+</div>
+<h3 class="mume-header" id="9-nap%C3%B3leon-k%C3%B3dol%C3%A1s-3-pont">9. Nap&#xF3;leon-k&#xF3;dol&#xE1;s (3 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami a <code>playlist2.csv</code> f&#xE1;jlban tal&#xE1;lhat&#xF3; el&#x151;ad&#xF3;neveket &#xE9;s zenec&#xED;meket Nap&#xF3;leon-k&#xF3;dol&#xE1;ssal titkos&#xED;tja, &#xE9;s a titkos&#xED;tott adatokat bele&#xED;rja egy <code>napoleon_encoded.csv</code> nev&#x171; &#xE1;llom&#xE1;nyba!</p>
+<p>A Nap&#xF3;leon-k&#xF3;dol&#xE1;s minden egyes kis- &#xE9;s nagybet&#x171;t megv&#xE1;ltoztat &#xFA;gy, hogy helyettes&#xED;ti az &#xE1;b&#xE9;c&#xE9;ben ut&#xE1;na k&#xF6;vetkez&#x151; bet&#x171;vel. Teh&#xE1;t az <code>a</code> bet&#x171;b&#x151;l <code>b</code> bet&#x171; lesz, a <code>g</code>-b&#x151;l <code>h</code>, a <code>z</code> ut&#xE1;n pedig ism&#xE9;t <code>a</code> bet&#x171; k&#xF6;vetkezik. A k&#xF3;dol&#xE1;s csak a bet&#x171;ket m&#xF3;dos&#xED;tja, az egy&#xE9;b karaktereket (pl. sz&#xF3;k&#xF6;z, pontosvessz&#x151;, sz&#xE1;mjegyek, speci&#xE1;lis &#xED;r&#xE1;sjelek) nem. Feltehetj&#xFC;k, hogy az inputban szerepl&#x151; bet&#x171;kben nem szerepelnek &#xE9;kezetek.</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Most csak az el&#x151;ad&#xF3;nevek &#xE9;s a zenec&#xED;mek &#xE9;rdekelnek minket, teh&#xE1;t el&#x151;sz&#xF6;r lek&#xE9;rj&#xFC;k az els&#x151; k&#xE9;t oszlopot a f&#xE1;jlb&#xF3;l a <code>cut</code> parancs seg&#xED;ts&#xE9;g&#xE9;vel.
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1-2
+Rick Astley;Never Gonna Give You Up
+Imagine Dragons;Thunder
+Dragonforce;Through the Fire and Flames
+Boney M.;Rasputin
+Steppenwolf;Born To Be Wild
+...
+</pre>
+<p>Ha egy-egy karaktert szeretn&#xE9;nk lecser&#xE9;lni valamilyen m&#xE1;sik karakterre, akkor a <code>tr</code> (&quot;transform&quot;) parancsot haszn&#xE1;ljuk. Vele m&#xE1;r tal&#xE1;lkoztunk az el&#x151;z&#x151; feladatban, ott a kisbet&#x171;ket alak&#xED;tottuk &#xE1;t nagybet&#x171;kk&#xE9;.</p>
+<p>Most az &#xF6;sszes bet&#x171;t le szeretn&#xE9;nk cser&#xE9;lni az &#xE1;b&#xE9;c&#xE9;ben ut&#xE1;na k&#xF6;vetkez&#x151;re.</p>
+<ul>
+    <li>A <code>tr</code> parancs els&#x151; param&#xE9;ter&#xE9;ben megadjuk a lecser&#xE9;lend&#x151; bet&#x171;ket, ami az &#xF6;sszes kisbet&#x171; &#xE9;s &#xF6;sszes nagybet&#x171; lesz: <code>a-zA-Z</code>.</li>
+    <li>A m&#xE1;sodik param&#xE9;terben megadjuk, hogy az el&#x151;z&#x151; param&#xE9;terben megadott bet&#x171;ket rendre milyen m&#xE1;s bet&#x171;kre cser&#xE9;lj&#xFC;k le. Itt a k&#xF6;vetkez&#x151;t adjuk meg: <code>b-zaB-ZA</code> (teh&#xE1;t &quot;a&quot; helyett &quot;b&quot; lesz, &quot;b&quot; helyett &quot;c&quot;, &quot;y&quot; helyett &quot;z&quot;, &quot;z&quot; helyett pedig &quot;a&quot; - ugyanezt fel&#xED;rjuk a nagybet&#x171;kre is).</li>
+</ul>
+<p>Az el&#x151;ad&#xF3;neveket &#xE9;s zenec&#xED;meket Nap&#xF3;leon-k&#xF3;dol&#xE1;ssal titkos&#xED;t&#xF3; pipeline teh&#xE1;t:</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1-2 | tr a-zA-Z b-zaB-ZA
+Sjdl Btumfz;Ofwfs Hpoob Hjwf Zpv Vq
+Jnbhjof Esbhpot;Uivoefs
+Esbhpogpsdf;Uispvhi uif Gjsf boe Gmbnft
+Cpofz N.;Sbtqvujo
+Tufqqfoxpmg;Cpso Up Cf Xjme
+...
+</pre>
+<p>Az &#xED;gy kapott kimenetet m&#xE1;r csak bele kell &#xED;rnunk egy <code>napoleon_encoded.csv</code> f&#xE1;jlba. A feladat megold&#xE1;sa teh&#xE1;t:</p>
+<pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1-2 | tr a-zA-Z b-zaB-ZA &gt; napoleon_encoded.csv
+
+&gt; cat napoleon_encoded.csv
+Sjdl Btumfz;Ofwfs Hpoob Hjwf Zpv Vq
+Jnbhjof Esbhpot;Uivoefs
+Esbhpogpsdf;Uispvhi uif Gjsf boe Gmbnft
+Cpofz N.;Sbtqvujo
+Tufqqfoxpmg;Cpso Up Cf Xjme
+Qpxfsxpmg;Jodfotf boe Jspo
+Tnbti Npvui;Bmm Tubs
+Ojswbob;Tnfmmt Mjlf Uffo Tqjsju
+Hmpszibnnfs;Uif Vojdpso Jowbtjpo pg Evoeff
+Qpxfsxpmg;Xf Bsf Uif Xjme
+Jnbhjof Esbhpot;Sbejpbdujwf
+Etdijohijt Libo;Nptlbv
+Etdijohijt Libo;Etdijohijt Libo
+Cpoojf Uzmfs;Upubm Fdmjqtf pg uif Ifbsu
+Hpqojl NdCmzbu;Toblft Jo Usbdltvjut
+Kpio Gbsoibn;Uivoefs Jo Zpvs Ifbsu
+Jtnfsfumfo;Qfsgfdumz Dvu Tdsfbna
+</pre>
+</div>
+<h3 class="mume-header" id="10-nap%C3%B3leon-k%C3%B3dol%C3%A1s-visszafejt%C3%A9se-2-pont">10. Nap&#xF3;leon-k&#xF3;dol&#xE1;s visszafejt&#xE9;se (2 pont)</h3>
+
+<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami az el&#x151;z&#x151; feladatban l&#xE9;trehozott <code>napoleon_encoded.csv</code> f&#xE1;jl adatait visszafejti (dek&#xF3;dolja a Nap&#xF3;leon-k&#xF3;dol&#xE1;st), &#xE9;s a visszafejtett adatokat bele&#xED;rja a <code>napoleon_decoded.csv</code> nev&#x171; &#xE1;llom&#xE1;nyba!</p>
+<div class="bordered-box border-black">
+<span class="black">Megold&#xE1;s:</span> Itt l&#xE9;nyeg&#xE9;ben csak annyi a feladatunk, hogy a kor&#xE1;bban l&#xE9;trehozott <code>napoleon_encoded.csv</code> f&#xE1;jl tartalm&#xE1;t visszafejts&#xFC;k, &#xE9;s a &quot;dek&#xF3;dolt&quot; tartalmat beletegy&#xFC;k egy <code>napoleon_decoded.csv</code> nev&#x171; f&#xE1;jlba.
+<p>A Nap&#xF3;leon-k&#xF3;dol&#xE1;s visszafejt&#xE9;se &#xFA;gy t&#xF6;rt&#xE9;nik, hogy a <code>tr</code> paranccsal az &#xE1;b&#xE9;c&#xE9; &#xF6;sszes kis- &#xE9;s nagybet&#x171;j&#xE9;t lecser&#xE9;lj&#xFC;k az &#x151;t megel&#x151;z&#x151; bet&#x171;re (&quot;a&quot; helyett &quot;z&quot;-t &#xED;runk, &quot;b&quot; helyett &quot;a&quot;-t, &quot;z&quot; helyett &quot;y&quot;-t): <code>tr a-zA-Z za-yZA-Y</code>.</p>
+<p>A feladat megold&#xE1;sa teh&#xE1;t:</p>
+<pre>&gt; cat napoleon_encoded.csv | tr a-zA-Z za-yZA-Y &gt; napoleon_decoded.csv
+
+&gt; cat napoleon_decoded.csv
+Rick Astley;Never Gonna Give You Up
+Imagine Dragons;Thunder
+Dragonforce;Through the Fire and Flames
+Boney M.;Rasputin
+Steppenwolf;Born To Be Wild
+Powerwolf;Incense and Iron
+Smash Mouth;All Star
+Nirvana;Smells Like Teen Spirit
+Gloryhammer;The Unicorn Invasion of Dundee
+Powerwolf;We Are The Wild
+Imagine Dragons;Radioactive
+Dschinghis Khan;Moskau
+Dschinghis Khan;Dschinghis Khan
+Bonnie Tyler;Total Eclipse of the Heart
+Gopnik McBlyat;Snakes In Tracksuits
+John Farnham;Thunder In Your Heart
+Ismeretlen;Perfectly Cut Screamz
+</pre>
+</div>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

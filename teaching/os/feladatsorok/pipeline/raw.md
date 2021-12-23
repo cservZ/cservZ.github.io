@@ -107,7 +107,7 @@ Az `out.txt` fájlra vonatkozó jogosultságokat állítsd be a következők sze
 
 Írj csővezetéket, ami a `playlist2.csv` fájlban található előadóneveket és zenecímeket Napóleon-kódolással titkosítja, és a titkosított adatokat beleírja egy `napoleon_encoded.csv` nevű állományba!
 
-A Napóleon-kódolás minden egyes kis- és nagybetűt megváltoztat úgy, hogy helyettesíti az ábécében utána követkető betűvel. Tehát az `a` betűből `b` betű lesz, a `g`-ből `h`, a `z` után pedig ismét `a` betű következik. A kódolás csak a betűket módosítja, az egyéb karaktereket (pl. szóköz, pontosvessző, számjegyek, speciális írásjelek) nem. Feltehetjük, hogy az inputban szereplő betűkben nem szerepelnek ékezetek.
+A Napóleon-kódolás minden egyes kis- és nagybetűt megváltoztat úgy, hogy helyettesíti az ábécében utána következő betűvel. Tehát az `a` betűből `b` betű lesz, a `g`-ből `h`, a `z` után pedig ismét `a` betű következik. A kódolás csak a betűket módosítja, az egyéb karaktereket (pl. szóköz, pontosvessző, számjegyek, speciális írásjelek) nem. Feltehetjük, hogy az inputban szereplő betűkben nem szerepelnek ékezetek.
 
 <span class="example">A <code>napoleon_encoded.csv</code> fájl elvárt tartalma:</span>
 
