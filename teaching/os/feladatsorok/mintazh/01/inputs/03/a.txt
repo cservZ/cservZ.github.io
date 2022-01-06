@@ -1,0 +1,3 @@
+Ez egy olyan txt kiterjesztesu fajl, amelyben 
+szerepel a kutya szoveg. Emiatt ennek a fajlnak 
+a tartalmat bele kell irni a kimeneti allomanyba.

@@ -1,0 +1,3 @@
+Ebben a fajlban csak macska van, igy
+ennek a tartalma nem kerul bele
+a kimeneti allomanyba.

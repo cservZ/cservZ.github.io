@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{alltt}
+\setlength\parindent{0pt}
+\setlength{\parskip}{1em}
+
+\geometry{
+    a4paper,
+    left=20mm,
+    right=20mm,
+    top=20mm,
+}
+
+\begin{document}
+\title{\vspace{-22mm}Operációs rendszerek gyakorlat}
+\author{}
+\date{\vspace{-2mm}2. zárthelyi dolgozat - Minta}
+
+\maketitle
+
+\section*{Általános tudnivalók}
+\begin{itemize}
+    \item A feladatok megoldására 50 perc áll rendelkezésre.
+    \item A megoldásokat az \texttt{1.awk}, \texttt{2.awk}, illetve \texttt{3.awk} fájlokba kell elkészíteni.
+    \item A megoldást tartalmazó fájlokat helyezd egy \texttt{VEZETEKNEV\_KERESZTNEV} nevű mappába (értelemszerűen a saját adataid behelyettesítésével)! A mappát egyetlen tömörített ZIP fájlként töltsd fel a CooSpace rendszerébe \texttt{VEZETEKNEV\_KERESZTNEV.zip} néven!
+\end{itemize}
+
+\section*{1. feladat: Fájlméret összegző (6 pont)}
+Írj AWK szkriptet \texttt{1.awk} néven, amely egy olyan fájlt kap paraméterben, amelynek minden sora két, pontosvesszővel elválasztott adatot tartalmaz: rendre egy fájl nevét és méretét! A szkript keresse meg a paraméterben kapott fájlban azokat a sorokat, amelyekben a fájlnév a következőképeen épül fel:
+\begin{itemize}
+    \item A fájlnév elején pontosan 4 darab kisbetű szerepel.
+    \item Ezután legalább 1 darab számjegy következik.
+    \item Rögtön ezután a \texttt{.png} vagy \texttt{.jpg} kiterjesztések valamelyike szerepel. A fájl neve pontosan itt ér véget, tehát az ennél bővebb fájlnevek nem fogadhatók el.
+\end{itemize}
+
+Írasd ki a fenti feltételeknek megfelelő fájlok neveit a konzolra! Írasd ki azt is, hogy a megtalált fájlok mérete összesen mekkora!
+
+\textbf{Példa:}
+
+\begin{alltt}
+> ./1.awk 01/files.csv
+dogs2.jpg 
+pepe123456.png 
+meme2021.jpg 
+yeet55.jpg 
+---------------------------------------------- 
+A megtalalt fajlok merete osszesen 409374 bajt
+\end{alltt}
+
+\section*{2. feladat: Leghosszabb szó (6 pont)}
+
+Írj AWK szkriptet \texttt{2.awk} néven, amely egy olyan fájlt kap paraméterben, amely egy több soros szöveget tartalmaz! A szkript írja ki a konzolra a bemeneti fájlban található leghosszabb szót \textbf{csupa nagybetűkkel}! A szövegben található írásjelekkel nem kell foglalkoznod, ezeket is nyugodtan számold bele a szavak hosszába!
+
+\textbf{Példa:}
+\begin{alltt}
+> ./2.awk masodik/post.txt
+HALLGATOTARSAIET
+\end{alltt}
+
+\section*{3. feladat: Jelesek száma (8 pont)}
+
+Írj AWK szkriptet \texttt{3.awk} néven, amely egy olyan fájlt kap paraméterül, ami az Operációs rendszerek gyakorlaton elért hallgatói eredményeket tartalmazza! Minden sorban 5 darab, pontosvesszővel elválasztott adat található: rendre a hallgató neve, szakja, az 1. ZH pontszáma, a 2. ZH pontszáma és a plusz pontok száma. A szkript határozza meg, hogy a különféle szakokon hány jeles született! \textbf{A feladat megoldása során használj tömböt} (tehát ne csak a példafájlban szereplő szaknevek esetén működjön jól a szkript)!
+
+Egy hallgató akkor kap jelest a gyakorlaton, ha a ZH-kon elért pontoknak és a plusz pontoknak összege \textbf{legalább 35 pont}. A fájl első sora egy fejlécsor, ezt a program ne dolgozza fel!
+
+\textbf{Példa:}
+\begin{alltt}
+> ./3.awk harmadik/points.csv
+Proginfo szakon 3 hallgato kapott jelest 
+Uzemmernok szakon 1 hallgato kapott jelest 
+Gazdinfo szakon 2 hallgato kapott jelest 
+Mernokinfo szakon 2 hallgato kapott jelest
+\end{alltt}
+
+\textbf{Jó munkát!}
+\end{document}

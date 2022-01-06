@@ -1,0 +1,95 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[magyar]{babel}
+\usepackage{t1enc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{alltt}
+\setlength\parindent{0pt}
+\setlength{\parskip}{1em}
+
+\geometry{
+    a4paper,
+    left=20mm,
+    right=20mm,
+    top=20mm,
+}
+
+\begin{document}
+\title{\vspace{-22mm}Operációs rendszerek gyakorlat}
+\author{}
+\date{\vspace{-2mm}1. zárthelyi dolgozat - Minta}
+
+\maketitle
+
+\section*{Általános tudnivalók}
+\begin{itemize}
+    \item A feladatok megoldására 50 perc áll rendelkezésre.
+    \item A megoldásokat az \texttt{1.sh}, \texttt{2.sh}, illetve \texttt{3.sh} fájlokba kell elkészíteni.
+    \item A megoldást tartalmazó fájlokat helyezd egy \texttt{VEZETEKNEV\_KERESZTNEV} nevű mappába (értelemszerűen a saját adataid behelyettesítésével)! A mappát egyetlen tömörített ZIP fájlként töltsd fel a CooSpace rendszerébe \texttt{VEZETEKNEV\_KERESZTNEV.zip} néven!
+\end{itemize}
+
+\section*{1. feladat: Zümi (6 pont)}
+A \texttt{users.csv} fájl Discord felhasználók adatait tartalmazza. Az egyes sorokban szereplő, pontosvesszőkkel elválasztott adatok: a felhasználói azonosító (\texttt{felhasználónév\#tagcímke} formátumban), a felhasználó szakja és állapota.
+
+Írj csővezetéket egy \texttt{1.sh} nevű állományba, amely a parancssori paraméterben érkező fájlból kiírja az \texttt{uzemmernok} szakos hallgatók felhasználónevét ábécé sorrendben (a tagcímke nélkül)! Feltehetjük, hogy a bemeneti fájlban az \texttt{uzemmernok} szöveg csak a szakok között fordul elő.
+
+\textbf{Példa:}
+
+\begin{alltt}
+> cat 01/users.csv
+laszti#4121;proginfo;online
+float#0466;mernokinfo;offline
+zum_zum#1234;uzemmernok;offline
+the_serbian_lemon#2773;proginfo;online
+egermutato57#6969;gazdinfo;offline
+szte2k1#9572;mernokinfo;online
+happyzumi#1024;uzemmernok;online
+
+> ./1.sh 01/users.csv
+happyzumi
+zum_zum
+\end{alltt}
+
+\section*{2. feladat: Abszolútérték-összeg (6 pont)}
+Írj BASH szkriptet \texttt{2.sh} néven, amely kiírja a konzolra a parancssori paraméterben kapott számok abszolútértékének összegét (tehát először venni kell minden számnak az abszolútértékét, és ezeket az abszolútértékeket kell összeadni)! Hibakezeléssel nem kell foglalkoznod, feltesszük, hogy a program paraméterezése helyes.
+
+\textbf{Példa:}
+
+\begin{alltt}
+> ./2.sh 7 -4 -1 0 2 -5 8 3
+A parameterek abszolutertekenek osszege: 30
+\end{alltt}
+
+\section*{3. feladat: Az ember legjobb barátja (8 pont)}
+Írj BASH szkriptet \texttt{3.sh} néven, amely beleírja egy \texttt{out.dat} fájlba a paraméterben kapott mappa összes olyan \texttt{txt} állományának tartalmát, amely tartalmazza a \texttt{kutya} szöveget!
+
+Még a program elején vizsgáld meg, hogy a kapott paraméter mappa-e! Abban az esetben, ha nem mappa, akkor lépjen ki a program 42-es hibakóddal!
+
+\textbf{Példa:}
+
+\begin{alltt}
+> ls 03
+a.txt   b.txt   c.php   d.txt
+
+> ./3.sh 03
+
+> cat out.dat
+Ez egy olyan txt kiterjesztesu fajl, amelyben 
+szerepel a kutya szoveg. Emiatt ennek a fajlnak 
+a tartalmat bele kell irni a kimeneti allomanyba.
+"Egy kutya tiz evvel meghosszabbithatja az eletunket. 
+A szeretet, a gyengedseg, a torodes es a barati kapcsolat, 
+amit egy kutya jelent, mersekli a stressz negativ hatasait."
+- David R. Hawkins
+\end{alltt}
+
+\textbf{Jó munkát!}
+\end{document}
