@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Pipeline gyakorló feladatok</title>
+      <title>BASH gyakorló feladatok</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="../../../../assets/img/icon.png">
@@ -259,124 +259,133 @@ pre[data-line] .line-highlight[data-end]:after {
       <div class="mume markdown-preview  ">
       <h1 class="mume-header" id="oper%C3%A1ci%C3%B3s-rendszerek-gyakorlat">Oper&#xE1;ci&#xF3;s rendszerek gyakorlat</h1>
 
-<h2 class="mume-header" id="pipeline-gyakorl%C3%B3-feladatok-30-pont">Pipeline gyakorl&#xF3; feladatok (30 pont)</h2>
+<h2 class="mume-header" id="bash-gyakorl%C3%B3-feladatok-30-pont">BASH gyakorl&#xF3; feladatok (30 pont)</h2>
 
 <div class="bordered-box border-blue">
-    <span class="blue">Megjegyz&#xE9;s:</span> A feladatsor megold&#xE1;s&#xE1;hoz az L1, L2 &#xE9;s L3 anyagr&#xE9;szek ismerete sz&#xFC;ks&#xE9;ges.
+    <span class="blue">Megjegyz&#xE9;s:</span> A feladatsor megold&#xE1;s&#xE1;hoz a B1, B2 &#xE9;s B3 anyagr&#xE9;szek ismerete sz&#xFC;ks&#xE9;ges. A feladatsorhoz tartoz&#xF3; bemeneti f&#xE1;jlok let&#xF6;lthet&#x151;k <a href="./inputs.zip" target="_blank">ide kattintva</a>.
 </div>
-<p>A kedvenc zen&#xE9;ink adatait egy <code>playlist.csv</code> nev&#x171; &#xE1;llom&#xE1;nyban t&#xE1;roljuk (<a href="./inputs.zip">let&#xF6;lt&#xE9;s</a>). A f&#xE1;jl egyes soraiban szerepl&#x151;, pontosvessz&#x151;vel elv&#xE1;lasztott adatok sorban:</p>
+<h3 class="mume-header" id="1-feladat-egyszer%C5%B1-spambot-2-pont">1. feladat: Egyszer&#x171; spambot (2 pont)</h3>
+
+<p>&#xCD;rj BASH szkriptet <code>1.sh</code> n&#xE9;ven, amely k&#xE9;t param&#xE9;tert kap: rendre egy sz&#xF3;t &#xE9;s egy sz&#xE1;mot! Ha a sz&#xE1;m 1-n&#xE9;l kisebb, akkor &#xED;rasd ki a <code>HIBA!</code> sz&#xF6;veget a konzolra! Ellenkez&#x151; esetben &#xED;rasd ki az els&#x151; param&#xE9;terben kapott sz&#xF3;t annyiszor, mint amennyi a m&#xE1;sodik param&#xE9;terben kapott sz&#xE1;m!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./1.sh kecskesajt -1
+HIBA!
+
+&gt; ./1.sh kecskesajt 4
+kecskesajt
+kecskesajt
+kecskesajt
+kecskesajt
+</pre><h3 class="mume-header" id="2-feladat-cserebere-2-pont">2. feladat: Cserebere (2 pont)</h3>
+
+<p>&#xCD;rj BASH szkriptet <code>2.sh</code> n&#xE9;ven, amely k&#xE9;t f&#xE1;jl el&#xE9;r&#xE9;si &#xFA;tvonal&#xE1;t kapja param&#xE9;ter&#xFC;l! A program cser&#xE9;lje meg a param&#xE9;terben kapott k&#xE9;t f&#xE1;jl tartalm&#xE1;t!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./2.sh inputs/rick_roll.txt inputs/all_star.txt
+
+&gt; cat inputs/rick_roll.txt
+Hey now, you&apos;re an all-star, get your game on, go play
+Hey now, you&apos;re a rock star, get the show on, get paid
+And all that glitters is gold
+Only shooting stars break the mold
+
+&gt; cat inputs/all_star.txt
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+</pre><h3 class="mume-header" id="3-feladat-sz%C3%B6veg-keres%C3%A9se-f%C3%A1jlban-3-pont">3. feladat: Sz&#xF6;veg keres&#xE9;se f&#xE1;jlban (3 pont)</h3>
+
+<p>&#xCD;rj BASH szkriptet <code>3.sh</code> n&#xE9;ven, amely k&#xE9;t param&#xE9;tert v&#xE1;r: rendre egy f&#xE1;jl el&#xE9;r&#xE9;si &#xFA;tvonal&#xE1;t &#xE9;s egy stringet! A szkript v&#xE1;logassa ki az els&#x151; param&#xE9;terben kapott f&#xE1;jlnak azon sorait, amelyek b&#xE1;rmilyen form&#xE1;ban (a kis- &#xE9;s nagybet&#x171;ket nem megk&#xFC;l&#xF6;nb&#xF6;ztetve, ak&#xE1;r r&#xE9;szstringk&#xE9;nt is) tartalmazz&#xE1;k a m&#xE1;sodik param&#xE9;terben kapott stringet! Ezeket a sorokat a program &#xED;rja bele egy <code>result.dat</code> nev&#x171; &#xE1;llom&#xE1;nyba!</p>
+<div class="bordered-box border-green">
+    <span class="green">Tipp:</span> A <code>man</code> paranccsal vagy a <code>--help</code> kapcsol&#xF3;val keresd meg, hogy a f&#xE1;jlban val&#xF3; mintailleszt&#xE9;st (keres&#xE9;st) v&#xE9;gz&#x151; parancsnak mely kapcsol&#xF3;j&#xE1;val lehet a kis- &#xE9;s nagybet&#x171;ket <strong>nem</strong> megk&#xFC;l&#xF6;nb&#xF6;ztetni a mintailleszt&#xE9;skor!
+</div>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; cat inputs/meow.txt
+Ebben a sorban szerepel egy macska, illetve meg egy macska.
+Ebben a sorban nem, itt csak kutyak, lovak es unikornisok vannak.
+Ebben a sorban egyetlen allat sincs.
+Az egyik babona, hogy a FEKETE MACSKA balszerencset hoz.
+A hazimacska a macskafelek koze tartozo kisebb termetu allat.
+Lehetne meg tobb peldamondatot is kitalalni, de az a baj, hogy lusta vagyok.
+
+&gt; ./3.sh inputs/meow.txt macska
+
+&gt; cat result.dat
+Ebben a sorban szerepel egy macska, illetve meg egy macska.
+Az egyik babona, hogy a FEKETE MACSKA balszerencset hoz.
+A hazimacska a macskafelek koze tartozo kisebb termetu allat.
+</pre><h3 class="mume-header" id="4-feladat-a-java-m%C3%A9g-csak-most-j%C3%B6n-3-pont">4. feladat: A Java m&#xE9;g csak most j&#xF6;n (3 pont)</h3>
+
+<p>&#xCD;rj BASH szkriptet <code>4.sh</code> n&#xE9;ven, amely <code>FAJLNEV.KITERJESZTES</code> form&#xE1;tum&#xFA; f&#xE1;jlneveket kap param&#xE9;ter&#xFC;l (teh&#xE1;t a n&#xE9;vben egyetlen pont karakter szerepel, ami el&#x151;tt a f&#xE1;jl neve, ut&#xE1;na pedig a f&#xE1;jl kiterjeszt&#xE9;se szerepel)! A szkript sz&#xE1;molja meg, hogy h&#xE1;ny <code>java</code> kiterjeszt&#xE9;s&#x171; f&#xE1;jl &#xE9;rkezik param&#xE9;terben! A kiterjeszt&#xE9;s vizsg&#xE1;latakor a kis- &#xE9;s nagybet&#x171;ket <strong>ne</strong> k&#xFC;l&#xF6;nb&#xF6;ztesd meg (teh&#xE1;t pl. <code>Macska.java</code> &#xE9;s <code>MAIN.JAVA</code> ugyan&#xFA;gy <code>java</code> kiterjeszt&#xE9;s&#x171;)!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./4.sh Macska.java Bolygo.java kecske.txt java.html MAIN.JAVA
+3 darab Java fajlt kaptam parameterben.
+</pre><h3 class="mume-header" id="5-feladat-p%C3%A1ros-%C3%B6sszeg-p%C3%A1ratlan-szorzat-5-pont">5. feladat: P&#xE1;ros &#xF6;sszeg, p&#xE1;ratlan szorzat (5 pont)</h3>
+
+<p>&#xCD;rj BASH szkriptet <code>5.sh</code> n&#xE9;ven, amely eg&#xE9;sz sz&#xE1;mokat v&#xE1;r param&#xE9;ter&#xFC;l! A szkript &#xED;rja ki a param&#xE9;terben kapott &#xE9;rt&#xE9;kek k&#xF6;z&#xFC;l a p&#xE1;ros sz&#xE1;mok &#xF6;sszeg&#xE9;t, valamint a p&#xE1;ratlan sz&#xE1;mok szorzat&#xE1;t! Amennyiben a szkriptet parancssori param&#xE9;terek n&#xE9;lk&#xFC;l akarjuk futtatni, akkor &#xED;rasd ki a <code>HIBA!</code> sz&#xF6;veget a konzolra! Egy&#xE9;b hibakezel&#xE9;ssel nem kell foglalkoznod.</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./5.sh 7 4 1 -2 8 5
+A paros szamok osszege: 10
+A paratlan szamok szorzata: 35
+
+&gt; ./5.sh
+HIBA!
+</pre><h3 class="mume-header" id="6-feladat-szavak-sz%C3%A1m%C3%A1nak-%C3%B6sszege-5-pont">6. feladat: Szavak sz&#xE1;m&#xE1;nak &#xF6;sszege (5 pont)</h3>
+
+<p>&#xCD;rj BASH szkriptet <code>6.sh</code> n&#xE9;ven, amely egy k&#xF6;nyvt&#xE1;r el&#xE9;r&#xE9;si &#xFA;tvonal&#xE1;t v&#xE1;rja param&#xE9;terben! A szkript &#xED;rja ki a konzolra a p&#xE9;ld&#xE1;ban l&#xE1;that&#xF3; form&#xE1;tumban, hogy a param&#xE9;terben kapott k&#xF6;nyvt&#xE1;r <code>txt</code> kiterjeszt&#xE9;s&#x171; f&#xE1;jljaiban &#xF6;sszesen h&#xE1;ny sz&#xF3; tal&#xE1;lhat&#xF3;! Amennyiben nem egy k&#xF6;nyvt&#xE1;r el&#xE9;r&#xE9;si &#xFA;tvonala &#xE9;rkezik param&#xE9;terben, akkor &#xED;rass ki hiba&#xFC;zenetet &#xE9;s a program l&#xE9;pjen ki 11-es hibak&#xF3;ddal!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./6.sh inputs/
+A(z) all_star.txt fajlban talalhato szavak szama: 35
+A(z) meow.txt fajlban talalhato szavak szama: 58
+A(z) rick_roll.txt fajlban talalhato szavak szama: 34
+------------------------------------------------------
+A txt-fajlokban levo szavak szama osszesen: 127
+
+&gt; ./6.sh inputs/rick_roll.txt
+HIBA! Nem egy konyvtar eleresi utvonalat adtad meg!
+
+&gt; echo $?       # Program kil&#xE9;p&#xE9;si k&#xF3;dj&#xE1;nak ki&#xED;rat&#xE1;sa.
+11
+</pre><h3 class="mume-header" id="7-feladat-legt%C3%B6bb-sor-4-pont">7. feladat: Legt&#xF6;bb sor (4 pont)</h3>
+
+<p>&#xCD;rj BASH szkriptet <code>7.sh</code> n&#xE9;ven, amely egy k&#xF6;nyvt&#xE1;r el&#xE9;r&#xE9;si &#xFA;tvonal&#xE1;t v&#xE1;rja param&#xE9;terben! A szkript &#xED;rja ki a konzolra a param&#xE9;terben kapott k&#xF6;nyvt&#xE1;rban tal&#xE1;lhat&#xF3;, legt&#xF6;bb sorb&#xF3;l &#xE1;ll&#xF3; <code>php</code> kiterjeszt&#xE9;s&#x171; f&#xE1;jlnak a nev&#xE9;t! Ha t&#xF6;bb f&#xE1;jl is ugyanannyi sorb&#xF3;l &#xE1;ll, akkor k&#xF6;z&#xFC;l&#xFC;k az &#xE1;b&#xE9;c&#xE9; sorrendben hamarabb szerepl&#x151; f&#xE1;jlnevet v&#xE1;laszd!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./7.sh inputs/
+2.php
+</pre><h3 class="mume-header" id="8-feladat-gondoltam-egy-sz%C3%A1mra-6-pont">8. feladat: Gondoltam egy sz&#xE1;mra (6 pont)</h3>
+
+<p>K&#xE9;sz&#xED;ts egy egyszer&#x171; sz&#xE1;mkital&#xE1;l&#xF3;s j&#xE1;t&#xE9;kot egy <code>8.sh</code> nev&#x171; f&#xE1;jlba! A g&#xE9;p &quot;gondol&quot; egy sz&#xE1;mra 1 &#xE9;s 1000 k&#xF6;z&#xF6;tt (az 1 &#xE9;s az 1000 is m&#xE9;g beletartozik a lehets&#xE9;ges sz&#xE1;mok intervallum&#xE1;ba), &#xE9;s a felhaszn&#xE1;l&#xF3; ezt a sz&#xE1;mot pr&#xF3;b&#xE1;lja meg min&#xE9;l kevesebb pr&#xF3;b&#xE1;lkoz&#xE1;ssal kital&#xE1;lni. A felhaszn&#xE1;l&#xF3;nak a j&#xE1;t&#xE9;k elej&#xE9;n 20 &#xE9;lete (pr&#xF3;b&#xE1;lkoz&#xE1;si lehet&#x151;s&#xE9;ge) van.</p>
 <ul>
-<li>a zene el&#x151;ad&#xF3;j&#xE1;nak neve</li>
-<li>a zene c&#xED;me</li>
-<li>a zene m&#x171;faja</li>
-<li>a zene hossza m&#xE1;sodpercekben.</li>
+<li>Hozz l&#xE9;tre egy-egy v&#xE1;ltoz&#xF3;t a felhaszn&#xE1;l&#xF3; &#xE9;leteinek (ennek az &#xE9;rt&#xE9;ke kezdetben legyen 20) &#xE9;s a g&#xE9;p &#xE1;ltal gondolt sz&#xE1;mnak!</li>
+<li>A j&#xE1;t&#xE9;k sor&#xE1;n minden k&#xF6;rben olvasd be a felhaszn&#xE1;l&#xF3; aktu&#xE1;lis tippj&#xE9;t a konzolr&#xF3;l!</li>
+<li>Ha a felhaszn&#xE1;l&#xF3; nem tal&#xE1;lja el a gondolt sz&#xE1;mot, akkor &#xED;rasd ki, hogy a gondolt sz&#xE1;m kisebb-e vagy nagyobb-e a felhaszn&#xE1;l&#xF3; tippj&#xE9;n&#xE9;l! Ekkor cs&#xF6;kkentsd a felhaszn&#xE1;l&#xF3; &#xE9;leteinek sz&#xE1;m&#xE1;t 1-gyel!</li>
+<li>Ha a felhaszn&#xE1;l&#xF3; eltal&#xE1;lja a gondolt sz&#xE1;mot, akkor a j&#xE1;t&#xE9;knak v&#xE9;ge, &#xE9;s a felhaszn&#xE1;l&#xF3; nyert. Ebben az esetben &#xED;rasd ki a <code>Gratulalok, nyertel!</code> sz&#xF6;veget, a kital&#xE1;lt sz&#xE1;mot &#xE9;s a megmaradt &#xE9;letek sz&#xE1;m&#xE1;t a konzolra!</li>
+<li>Ha elfogynak a felhaszn&#xE1;l&#xF3; &#xE9;letei, akkor a j&#xE1;t&#xE9;knak v&#xE9;ge, &#xE9;s a felhaszn&#xE1;l&#xF3; vesz&#xED;t. Ebben az esetben &#xED;rasd ki a <code>Sajnos nem nyertel!</code> sz&#xF6;veget &#xE9;s a gondolt sz&#xE1;mot a konzolra!</li>
 </ul>
-<p>A bemeneti f&#xE1;jl els&#x151; sora egy fejl&#xE9;csor, amit nem kell feldolgozni (csup&#xE1;n t&#xE1;j&#xE9;koztat&#xF3; jelleggel b&#xED;r). Oldd meg az al&#xE1;bbi feladatokat <strong>cs&#x151;vezet&#xE9;k (pipeline)</strong> haszn&#xE1;lat&#xE1;val!</p>
-<blockquote>
-<p><strong>Megold&#xE1;s:</strong> A feladatsor egy lehets&#xE9;ges megold&#xE1;sa el&#xE9;rhet&#x151; <a href="./megoldas.html" target="_blank">ide kattintva</a>.</p>
-</blockquote>
-<h3 class="mume-header" id="1-a-fejl%C3%A9csor-elt%C3%A1vol%C3%ADt%C3%A1sa-2-pont">1. A fejl&#xE9;csor elt&#xE1;vol&#xED;t&#xE1;sa (2 pont)</h3>
-
-<p>A bemeneti f&#xE1;jl els&#x151; sor&#xE1;ban szerepl&#x151; fejl&#xE9;cet nem szeretn&#xE9;nk feldolgozni. Egy alkalmas Linux parancs seg&#xED;ts&#xE9;g&#xE9;vel hozz l&#xE9;tre egy <code>playlist2.csv</code> nev&#x171; &#xE1;llom&#xE1;nyt, amelybe &#xED;rd bele a <code>playlist.csv</code> f&#xE1;jl tartalm&#xE1;t <strong>az els&#x151; sor n&#xE9;lk&#xFC;l</strong>!</p>
-<p><span class="example">A <code>playlist2.csv</code> &#xE1;llom&#xE1;ny elv&#xE1;rt tartalma:</span></p>
-<pre data-role="codeBlock" data-info class="language-"><code>Rick Astley;Never Gonna Give You Up;pop;213
-Imagine Dragons;Thunder;pop;204
-Dragonforce;Through the Fire and Flames;metal;445
-Boney M.;Rasputin;pop;284
-Steppenwolf;Born To Be Wild;rock;216
-Powerwolf;Incense and Iron;metal;240
-Smash Mouth;All Star;rock;237
-Nirvana;Smells Like Teen Spirit;rock;279
-Gloryhammer;The Unicorn Invasion of Dundee;metal;265
-Powerwolf;We Are The Wild;metal;221
-Imagine Dragons;Radioactive;rock;188
-Dschinghis Khan;Moskau;pop;275
-Dschinghis Khan;Dschinghis Khan;pop;185
-Bonnie Tyler;Total Eclipse of the Heart;pop;334
-Gopnik McBlyat;Snakes In Tracksuits;hardbass;261
-John Farnham;Thunder In Your Heart;rock;234
-Ismeretlen;Perfectly Cut Screamz;metal;20
-</code></pre><h3 class="mume-header" id="2-a-zen%C3%A9k-sz%C3%A1ma-1-pont">2. A zen&#xE9;k sz&#xE1;ma (1 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny zene adatait tartalmazza a bemeneti f&#xE1;jl! Teh&#xE1;t azt kell ki&#xED;ratni, hogy az el&#x151;z&#x151; feladatban l&#xE9;trehozott <code>playlist2.csv</code> h&#xE1;ny sorb&#xF3;l &#xE1;ll!</p>
-<p><span class="example">Az elv&#xE1;rt kimenet:</span> <code>17</code></p>
-<h3 class="mume-header" id="3-az-el%C5%91ad%C3%B3k-sz%C3%A1ma-4-pont">3. Az el&#x151;ad&#xF3;k sz&#xE1;ma (4 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny <strong>k&#xFC;l&#xF6;nb&#xF6;z&#x151;</strong> el&#x151;ad&#xF3; neve szerepel a bemeneti f&#xE1;jlban!</p>
-<p><span class="example">Az elv&#xE1;rt kimenet:</span> <code>14</code></p>
-<h3 class="mume-header" id="4-a-tizedik-zene-3-pont">4. A tizedik zene (3 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra a <code>playlist2.csv</code> f&#xE1;jl 10. sor&#xE1;ban tal&#xE1;lhat&#xF3; zen&#xE9;nek a c&#xED;m&#xE9;t!</p>
-<p><span class="example">Az elv&#xE1;rt kimenet:</span> <code>We Are The Wild</code></p>
-<h3 class="mume-header" id="5-a-leghosszabb-zene-3-pont">5. A leghosszabb zene (3 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra a bemeneti f&#xE1;jlban tal&#xE1;lhat&#xF3; leghosszabb zene hossz&#xE1;t (m&#xE1;sodpercekben)!</p>
-<p><span class="example">Az elv&#xE1;rt kimenet:</span> <code>445</code></p>
-<h3 class="mume-header" id="6-pop-zen%C3%A9k-sz%C3%A1ma-2-pont">6. Pop zen&#xE9;k sz&#xE1;ma (2 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny olyan zene van a bemeneti f&#xE1;jlban, amelynek m&#x171;faja <code>pop</code>! Feltehetj&#xFC;k, hogy a bemeneti f&#xE1;jl egyes soraiban a <code>pop</code> sz&#xF6;veg csak a m&#x171;fajok oszlop&#xE1;ban fordul el&#x151;.</p>
-<p><span class="example">Az elv&#xE1;rt kimenet:</span> <code>6</code></p>
-<h3 class="mume-header" id="7-a-leghosszabb-rockzene-3-pont">7. A leghosszabb rockzene (3 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny m&#xE1;sodperc hossz&#xFA; a leghosszabb olyan zene, amelynek m&#x171;faja <code>rock</code>! Feltehetj&#xFC;k, hogy a bemeneti f&#xE1;jl egyes soraiban a <code>rock</code> sz&#xF6;veg csak a m&#x171;fajok oszlop&#xE1;ban fordul el&#x151;.</p>
-<p><span class="example">Az elv&#xE1;rt kimenet:</span> <code>279</code></p>
-<h3 class="mume-header" id="8-thunder-heart-7-pont">8. Thunder, Heart (7 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja egy <code>out.txt</code> nev&#x171; f&#xE1;jlba azoknak a zen&#xE9;knek a c&#xED;m&#xE9;t <strong>csupa nagybet&#x171;kkel</strong>, <strong>&#xE1;b&#xE9;c&#xE9; sorrendben</strong>, amelyek tartalmazz&#xE1;k a <code>Thunder</code> vagy <code>Heart</code> sz&#xF6;vegek legal&#xE1;bb egyik&#xE9;t! Feltehetj&#xFC;k, hogy a bemeneti f&#xE1;jl egyes soraiban ez a k&#xE9;t sz&#xF6;veg csak a zen&#xE9;k c&#xED;m&#xE9;ben fordul el&#x151;. <strong>(5 pont)</strong></p>
-<p><span class="example">Az <code>out.txt</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
-<pre data-role="codeBlock" data-info class="language-"><code>THUNDER
-THUNDER IN YOUR HEART
-TOTAL ECLIPSE OF THE HEART
-</code></pre><p>Az <code>out.txt</code> f&#xE1;jlra vonatkoz&#xF3; jogosults&#xE1;gokat &#xE1;ll&#xED;tsd be a k&#xF6;vetkez&#x151;k szerint:</p>
-<ul>
-<li>A tulajdonosnak csak olvas&#xE1;si &#xE9;s &#xED;r&#xE1;si joga legyen a f&#xE1;jlra!</li>
-<li>A csoportnak szint&#xE9;n csak olvas&#xE1;si &#xE9;s &#xED;r&#xE1;si joga legyen a f&#xE1;jlra!</li>
-<li>A &quot;t&#xF6;bbiek&quot; ne rendelkezzenek semmilyen jogosults&#xE1;ggal a f&#xE1;jlra vonatkoz&#xF3;an! <strong>(2 pont)</strong></li>
-</ul>
-<h3 class="mume-header" id="9-nap%C3%B3leon-k%C3%B3dol%C3%A1s-3-pont">9. Nap&#xF3;leon-k&#xF3;dol&#xE1;s (3 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami a <code>playlist2.csv</code> f&#xE1;jlban tal&#xE1;lhat&#xF3; el&#x151;ad&#xF3;neveket &#xE9;s zenec&#xED;meket Nap&#xF3;leon-k&#xF3;dol&#xE1;ssal titkos&#xED;tja, &#xE9;s a titkos&#xED;tott adatokat bele&#xED;rja egy <code>napoleon_encoded.csv</code> nev&#x171; &#xE1;llom&#xE1;nyba!</p>
-<p>A Nap&#xF3;leon-k&#xF3;dol&#xE1;s minden egyes kis- &#xE9;s nagybet&#x171;t megv&#xE1;ltoztat &#xFA;gy, hogy helyettes&#xED;ti az &#xE1;b&#xE9;c&#xE9;ben ut&#xE1;na k&#xF6;vetkez&#x151; bet&#x171;vel. Teh&#xE1;t az <code>a</code> bet&#x171;b&#x151;l <code>b</code> bet&#x171; lesz, a <code>g</code>-b&#x151;l <code>h</code>, a <code>z</code> ut&#xE1;n pedig ism&#xE9;t <code>a</code> bet&#x171; k&#xF6;vetkezik. A k&#xF3;dol&#xE1;s csak a bet&#x171;ket m&#xF3;dos&#xED;tja, az egy&#xE9;b karaktereket (pl. sz&#xF3;k&#xF6;z, pontosvessz&#x151;, sz&#xE1;mjegyek, speci&#xE1;lis &#xED;r&#xE1;sjelek) nem. Feltehetj&#xFC;k, hogy az inputban szerepl&#x151; bet&#x171;kben nem szerepelnek &#xE9;kezetek.</p>
-<p><span class="example">A <code>napoleon_encoded.csv</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
-<pre data-role="codeBlock" data-info class="language-"><code>Sjdl Btumfz;Ofwfs Hpoob Hjwf Zpv Vq
-Jnbhjof Esbhpot;Uivoefs
-Esbhpogpsdf;Uispvhi uif Gjsf boe Gmbnft
-Cpofz N.;Sbtqvujo
-Tufqqfoxpmg;Cpso Up Cf Xjme
-Qpxfsxpmg;Jodfotf boe Jspo
-Tnbti Npvui;Bmm Tubs
-Ojswbob;Tnfmmt Mjlf Uffo Tqjsju
-Hmpszibnnfs;Uif Vojdpso Jowbtjpo pg Evoeff
-Qpxfsxpmg;Xf Bsf Uif Xjme
-Jnbhjof Esbhpot;Sbejpbdujwf
-Etdijohijt Libo;Nptlbv
-Etdijohijt Libo;Etdijohijt Libo
-Cpoojf Uzmfs;Upubm Fdmjqtf pg uif Ifbsu
-Hpqojl NdCmzbu;Toblft Jo Usbdltvjut
-Kpio Gbsoibn;Uivoefs Jo Zpvs Ifbsu
-Jtnfsfumfo;Qfsgfdumz Dvu Tdsfbna
-</code></pre><h3 class="mume-header" id="10-nap%C3%B3leon-k%C3%B3dol%C3%A1s-visszafejt%C3%A9se-2-pont">10. Nap&#xF3;leon-k&#xF3;dol&#xE1;s visszafejt&#xE9;se (2 pont)</h3>
-
-<p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami az el&#x151;z&#x151; feladatban l&#xE9;trehozott <code>napoleon_encoded.csv</code> f&#xE1;jl adatait visszafejti (dek&#xF3;dolja a Nap&#xF3;leon-k&#xF3;dol&#xE1;st), &#xE9;s a visszafejtett adatokat bele&#xED;rja a <code>napoleon_decoded.csv</code> nev&#x171; &#xE1;llom&#xE1;nyba!</p>
-<p><span class="example">A <code>napoleon_decoded.csv</code> f&#xE1;jl elv&#xE1;rt tartalma:</span></p>
-<pre data-role="codeBlock" data-info class="language-"><code>Rick Astley;Never Gonna Give You Up
-Imagine Dragons;Thunder
-Dragonforce;Through the Fire and Flames
-Boney M.;Rasputin
-Steppenwolf;Born To Be Wild
-Powerwolf;Incense and Iron
-Smash Mouth;All Star
-Nirvana;Smells Like Teen Spirit
-Gloryhammer;The Unicorn Invasion of Dundee
-Powerwolf;We Are The Wild
-Imagine Dragons;Radioactive
-Dschinghis Khan;Moskau
-Dschinghis Khan;Dschinghis Khan
-Bonnie Tyler;Total Eclipse of the Heart
-Gopnik McBlyat;Snakes In Tracksuits
-John Farnham;Thunder In Your Heart
-Ismeretlen;Perfectly Cut Screamz
-</code></pre>
+<div class="bordered-box border-green">
+    <span class="green">Megjegyz&#xE9;s:</span> A g&#xE9;p &#xE1;ltal gondolt sz&#xE1;m nyugodtan lehet egy el&#x151;re r&#xF6;gz&#xED;tett &#xE9;rt&#xE9;k. Ha valaki szeretn&#xE9;, v&#xE9;letlensz&#xE1;m gener&#xE1;l&#xE1;st is haszn&#xE1;lhat, err&#x151;l <a href="https://stackoverflow.com/questions/1194882/how-to-generate-random-number-in-bash/1195035" target="_blank">ezen a linken</a> olvashatunk.
+</div>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./8.sh
+Gondoltam egy szamra 1 &#xE9;s 1000 kozott, talald ki melyikre! Eletek szama: 20
+Tipp: 500 
+Kisebb 
+Tipp: 250 
+Nagyobb 
+Tipp: 350 
+Nagyobb 
+Tipp: 400 
+Nagyobb 
+Tipp: 450 
+Kisebb 
+Tipp: 420
+--------------------------------
+Gratulalok, nyertel! 
+A gondolt szam valoban 420 volt. 
+Megmaradt eletek: 15.
+</pre>
       </div>
       
       

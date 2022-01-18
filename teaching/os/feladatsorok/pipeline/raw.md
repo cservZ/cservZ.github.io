@@ -15,6 +15,8 @@ A kedvenc zenéink adatait egy `playlist.csv` nevű állományban tároljuk ([le
 
 A bemeneti fájl első sora egy fejlécsor, amit nem kell feldolgozni (csupán tájékoztató jelleggel bír). Oldd meg az alábbi feladatokat **csővezeték (pipeline)** használatával!
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása elérhető <a href="./megoldas.html" target="_blank">ide kattintva</a>.
+
 
 ### 1. A fejlécsor eltávolítása (2 pont)
 
