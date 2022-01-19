@@ -3,8 +3,10 @@
 ## BASH gyakorló feladatok (30 pont)
 
 <div class="bordered-box border-blue">
-    <span class="blue">Megjegyzés:</span> A feladatsor megoldásához a B1, B2 és B3 anyagrészek ismerete szükséges. A feladatsorhoz tartozó bemeneti fájlok letölthetők <a href="./inputs.zip" target="_blank">ide kattintva</a>.
+    <span class="blue">Megjegyzés:</span> A feladatsor megoldásához a B1, B2 és B3 anyagrészek ismerete szükséges.
 </div>
+
+A feladatsorhoz tartozó **bemeneti fájlok** letölthetők <a href="./inputs.zip" target="_blank">ide kattintva</a>.
 
 
 ### 1. feladat: Egyszerű spambot (2 pont)
@@ -80,13 +82,13 @@ A hazimacska a macskafelek koze tartozo kisebb termetu allat.
 
 ### 4. feladat: A Java még csak most jön (3 pont)
 
-Írj BASH szkriptet `4.sh` néven, amely `FAJLNEV.KITERJESZTES` formátumú fájlneveket kap paraméterül (tehát a névben egyetlen pont karakter szerepel, ami előtt a fájl neve, utána pedig a fájl kiterjesztése szerepel)! A szkript számolja meg, hogy hány `java` kiterjesztésű fájl érkezik paraméterben! A kiterjesztés vizsgálatakor a kis- és nagybetűket <strong>ne</strong> különböztesd meg (tehát pl. `Macska.java` és `MAIN.JAVA` ugyanúgy `java` kiterjesztésű)!
+Írj BASH szkriptet `4.sh` néven, amely `FAJLNEV.KITERJESZTES` formátumú állományneveket kap paraméterül (tehát a névben egyetlen pont karakter található, ami előtt a fájl neve, utána pedig a fájl kiterjesztése szerepel)! A szkript számolja meg, hogy hány `java` kiterjesztésű fájl érkezik paraméterben! A kiterjesztés vizsgálatakor a kis- és nagybetűket <strong>ne</strong> különböztesd meg (tehát pl. `Macska.java` és `MAIN.JAVA` ugyanúgy `java` kiterjesztésű)!
 
 <span class="example">Példa a szkript működésére:</span>
 
 ```html
 > ./4.sh Macska.java Bolygo.java kecske.txt java.html MAIN.JAVA
-3 darab Java fajlt kaptam parameterben.
+3 darab Java kiterjesztesu fajlt kaptam parameterben.
 ```
 
 
@@ -151,14 +153,14 @@ Készíts egy egyszerű számkitalálós játékot egy `8.sh` nevű fájlba! A g
 * Ha elfogynak a felhasználó életei, akkor a játéknak vége, és a felhasználó veszít. Ebben az esetben írasd ki a `Sajnos nem nyertel!` szöveget és a gondolt számot a konzolra!
 
 <div class="bordered-box border-green">
-    <span class="green">Megjegyzés:</span> A gép által gondolt szám nyugodtan lehet egy előre rögzített érték. Ha valaki szeretné, véletlenszám generálást is használhat, erről <a href="https://stackoverflow.com/questions/1194882/how-to-generate-random-number-in-bash/1195035" target="_blank">ezen a linken</a> olvashatunk.
+    <span class="green">Megjegyzés:</span> A gép által gondolt szám nyugodtan lehet egy előre rögzített érték. Ha valaki szeretné, véletlenszám generálást is használhat, amiről <a href="https://stackoverflow.com/questions/1194882/how-to-generate-random-number-in-bash/1195035" target="_blank">ezen a linken</a> olvashatunk.
 </div>
 
 <span class="example">Példa a szkript működésére:</span>
 
 ```html
 > ./8.sh
-Gondoltam egy szamra 1 és 1000 kozott, talald ki melyikre! Eletek szama: 20
+Gondoltam egy szamra 1 és 1000 kozott, talald ki, melyikre! Eletek szama: 20
 Tipp: 500 
 Kisebb 
 Tipp: 250 
