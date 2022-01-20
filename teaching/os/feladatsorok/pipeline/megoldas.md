@@ -498,7 +498,7 @@ A <code>chmod</code> paranccsal megváltoztathatjuk a fájlra vonatkozó jogosul
     <li>Végül megadjuk az odaadni/elvenni kívánt jogosultságot jelölő karaktert (<code>r</code>, <code>w</code>, <code>x</code>).</li>
 </ul>
 
-A fájl tulajdonságának csak olvasási és írási jogot kell adnunk a feladatleírás alapján. Ha megnézzük az <code>ls -l</code> kimenetét, akkor látható, hogy ezzel már készen is vagyunk, hiszen a tulajdonos jogosultságai: <code>rw-</code> (olvasási és írási joga van, de futtatási joga nincs).
+A fájl tulajdonosának csak olvasási és írási jogot kell adnunk a feladatleírás alapján. Ha megnézzük az <code>ls -l</code> kimenetét, akkor látható, hogy ezzel már készen is vagyunk, hiszen a tulajdonos jogosultságai: <code>rw-</code> (olvasási és írási joga van, de futtatási joga nincs).
 
 A csoportnak szintén csak olvasási és írási joga kell, hogy legyen a fájlra. A csoport jogosultságai: <code>r--</code>, tehát csak az olvasási jog van meg. Adjunk írási jogot (<code>w</code>) a csoportnak (<code>g</code>) a fájlra!
 
