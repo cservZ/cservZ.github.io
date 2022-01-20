@@ -1,10 +1,9 @@
 <!DOCTYPE html><html><head>
-      <title>Pipeline megoldás</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="../../../../assets/img/icon.png">
-      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">
-      
+  <title>Pipeline megoldás</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../../../assets/img/icon.png">
+  <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">      
       
       
       
@@ -518,7 +517,7 @@ Steppenwolf;Born To Be Wild;rock;216
 
 <p>&#xCD;rj cs&#x151;vezet&#xE9;ket, ami ki&#xED;rja a konzolra, hogy h&#xE1;ny olyan zene van a bemeneti f&#xE1;jlban, amelynek m&#x171;faja <code>pop</code>! Feltehetj&#xFC;k, hogy a bemeneti f&#xE1;jl egyes soraiban a <code>pop</code> sz&#xF6;veg csak a m&#x171;fajok oszlop&#xE1;ban fordul el&#x151;.</p>
 <div class="bordered-box border-black">
-<span class="black">Megold&#xE1;s:</span> Vil&#xE1;gos, hogy ebben a <code>playlist2.csv</code> f&#xE1;jlb&#xF3;l csak azokra a sorokra van sz&#xFC;ks&#xE9;g&#xFC;nk, amelyek tartalmazz&#xE1;k a <code>pop</code> sz&#xF6;veget (hiszen csak a popzen&#xE9;k &#xE9;rdekelnek minket).
+<span class="black">Megold&#xE1;s:</span> Vil&#xE1;gos, hogy ebben a feladatban a <code>playlist2.csv</code> f&#xE1;jlb&#xF3;l csak azokra a sorokra van sz&#xFC;ks&#xE9;g&#xFC;nk, amelyek tartalmazz&#xE1;k a <code>pop</code> sz&#xF6;veget (hiszen csak a popzen&#xE9;k &#xE9;rdekelnek minket).
 <p>Ha egy f&#xE1;jl bizonyos sorair&#xF3;l szeretn&#xE9;nk eld&#xF6;nteni, hogy illeszkednek-e egy megadott mint&#xE1;ra, akkor az <code>egrep</code> parancsot haszn&#xE1;ljuk. A parancs els&#x151; param&#xE9;tere a minta, amire illeszt&#xFC;nk (amilyen sz&#xF6;veget keres&#xFC;nk a f&#xE1;jl soraiban), a m&#xE1;sodik param&#xE9;ter pedig a vizsg&#xE1;lt f&#xE1;jl neve.</p>
 <pre>&gt; egrep &apos;pop&apos; playlist2.csv
 Rick Astley;Never Gonna Give You Up;pop;213
@@ -550,7 +549,7 @@ Nirvana;Smells Like Teen Spirit;rock;279
 Imagine Dragons;Radioactive;rock;188
 John Farnham;Thunder In Your Heart;rock;234
 </pre>
-<p>Rendben, most m&#xE1;r kiv&#xE1;logattuk az &#xF6;sszes rockzen&#xE9;t. M&#xE1;r csak meg kell hat&#xE1;roznunk ezek k&#xF6;z&#xFC;l a leghosszabb zen&#xE9;nek a hossz&#xE1;t. Az 5. feladat alapj&#xE1;n ezt a k&#xF6;vetkez&#x151;k&#xE9;ppen tehetj&#xFC;k meg:</p>
+<p>Rendben, most m&#xE1;r kiv&#xE1;logattuk az &#xF6;sszes rockzen&#xE9;t. M&#xE1;r csak meg kell hat&#xE1;roznunk ezek k&#xF6;z&#xFC;l a leghosszabb zen&#xE9;nek a hossz&#xE1;t. Az 5. feladat megold&#xE1;sa alapj&#xE1;n ezt a k&#xF6;vetkez&#x151;k&#xE9;ppen tehetj&#xFC;k meg:</p>
 <ol>
     <li>Lek&#xE9;rdezz&#xFC;k az egyes rockzen&#xE9;k hossz&#xE1;t, ami a pontosvessz&#x151;kkel elv&#xE1;lasztott adatok k&#xF6;z&#xFC;l a 4. lesz minden sorban (<code>cut -d &apos;;&apos; -f 4</code>).</li>
     <li>N&#xF6;vekv&#x151; sorrendbe rendezz&#xFC;k a zen&#xE9;k hossz&#xE1;t (<code>sort -n</code>).</li>
@@ -655,7 +654,7 @@ Steppenwolf;Born To Be Wild
 <p>Most az &#xF6;sszes bet&#x171;t le szeretn&#xE9;nk cser&#xE9;lni az &#xE1;b&#xE9;c&#xE9;ben ut&#xE1;na k&#xF6;vetkez&#x151;re.</p>
 <ul>
     <li>A <code>tr</code> parancs els&#x151; param&#xE9;ter&#xE9;ben megadjuk a lecser&#xE9;lend&#x151; bet&#x171;ket, ami az &#xF6;sszes kisbet&#x171; &#xE9;s &#xF6;sszes nagybet&#x171; lesz: <code>a-zA-Z</code>.</li>
-    <li>A m&#xE1;sodik param&#xE9;terben megadjuk, hogy az el&#x151;z&#x151; param&#xE9;terben megadott bet&#x171;ket rendre milyen m&#xE1;s bet&#x171;kre cser&#xE9;lj&#xFC;k le. Itt a k&#xF6;vetkez&#x151;t adjuk meg: <code>b-zaB-ZA</code> (teh&#xE1;t &quot;a&quot; helyett &quot;b&quot; lesz, &quot;b&quot; helyett &quot;c&quot;, &quot;y&quot; helyett &quot;z&quot;, &quot;z&quot; helyett pedig &quot;a&quot; - ugyanezt fel&#xED;rjuk a nagybet&#x171;kre is).</li>
+    <li>A m&#xE1;sodik param&#xE9;terben megadjuk, hogy az el&#x151;z&#x151; param&#xE9;terben megadott bet&#x171;ket rendre milyen m&#xE1;s bet&#x171;kre cser&#xE9;lj&#xFC;k le. Itt a k&#xF6;vetkez&#x151;t adjuk meg: <code>b-zaB-ZA</code> (hiszen &quot;a&quot; helyett &quot;b&quot; lesz, &quot;b&quot; helyett &quot;c&quot;, &quot;y&quot; helyett &quot;z&quot;, &quot;z&quot; helyett pedig &quot;a&quot; - ugyanezt fel&#xED;rjuk a nagybet&#x171;kre is).</li>
 </ul>
 <p>Az el&#x151;ad&#xF3;neveket &#xE9;s zenec&#xED;meket Nap&#xF3;leon-k&#xF3;dol&#xE1;ssal titkos&#xED;t&#xF3; pipeline teh&#xE1;t:</p>
 <pre>&gt; cat playlist2.csv | cut -d &apos;;&apos; -f 1-2 | tr a-zA-Z b-zaB-ZA

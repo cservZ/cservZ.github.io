@@ -9,7 +9,7 @@
 A feladatsorhoz tartozó **bemeneti fájlok** letölthetők <a href="./inputs.zip" target="_blank">ide kattintva</a>.
 
 
-### 1. feladat: Egyszerű spambot (2 pont)
+### 1. Egyszerű spambot (2 pont)
 
 Írj BASH szkriptet `1.sh` néven, amely két paramétert kap: rendre egy szót és egy számot! Ha a szám 1-nél kisebb, akkor írasd ki a `HIBA!` szöveget a konzolra! Ellenkező esetben írasd ki az első paraméterben kapott szót annyiszor, mint amennyi a második paraméterben kapott szám!
 
@@ -27,7 +27,7 @@ kecskesajt
 ```
 
 
-### 2. feladat: Cserebere (2 pont)
+### 2. Cserebere (2 pont)
 
 Írj BASH szkriptet `2.sh` néven, amely két fájl elérési útvonalát kapja paraméterül! A program cserélje meg a paraméterben kapott két fájl tartalmát!
 
@@ -52,7 +52,7 @@ Never gonna tell a lie and hurt you
 ```
 
 
-### 3. feladat: Szöveg keresése fájlban (3 pont)
+### 3. Szöveg keresése fájlban (3 pont)
 
 Írj BASH szkriptet `3.sh` néven, amely két paramétert vár: rendre egy fájl elérési útvonalát és egy stringet! A szkript válogassa ki az első paraméterben kapott fájlnak azon sorait, amelyek bármilyen formában (a kis- és nagybetűket nem megkülönböztetve, akár részstringként is) tartalmazzák a második paraméterben kapott stringet! Ezeket a sorokat a program írja bele egy `result.dat` nevű állományba!
 
@@ -80,7 +80,7 @@ A hazimacska a macskafelek koze tartozo kisebb termetu allat.
 ```
 
 
-### 4. feladat: A Java még csak most jön (3 pont)
+### 4. A Java még csak most jön (3 pont)
 
 Írj BASH szkriptet `4.sh` néven, amely `FAJLNEV.KITERJESZTES` formátumú állományneveket kap paraméterül (tehát a névben egyetlen pont karakter található, ami előtt a fájl neve, utána pedig a fájl kiterjesztése szerepel)! A szkript számolja meg, hogy hány `java` kiterjesztésű fájl érkezik paraméterben! A kiterjesztés vizsgálatakor a kis- és nagybetűket <strong>ne</strong> különböztesd meg (tehát pl. `Macska.java` és `MAIN.JAVA` ugyanúgy `java` kiterjesztésű)!
 
@@ -92,7 +92,7 @@ A hazimacska a macskafelek koze tartozo kisebb termetu allat.
 ```
 
 
-### 5. feladat: Páros összeg, páratlan szorzat (5 pont)
+### 5. Páros összeg, páratlan szorzat (5 pont)
 
 Írj BASH szkriptet `5.sh` néven, amely egész számokat vár paraméterül! A szkript írja ki a paraméterben kapott értékek közül a páros számok összegét, valamint a páratlan számok szorzatát! Amennyiben a szkriptet parancssori paraméterek nélkül akarjuk futtatni, akkor írasd ki a `HIBA!` szöveget a konzolra! Egyéb hibakezeléssel nem kell foglalkoznod.
 
@@ -108,7 +108,7 @@ HIBA!
 ```
 
 
-### 6. feladat: Szavak számának összege (5 pont)
+### 6. Szavak számának összege (5 pont)
 
 Írj BASH szkriptet `6.sh` néven, amely egy könyvtár elérési útvonalát várja paraméterben! A szkript írja ki a konzolra a példában látható formátumban, hogy a paraméterben kapott könyvtár `txt` kiterjesztésű fájljaiban összesen hány szó található! Amennyiben nem egy könyvtár elérési útvonala érkezik paraméterben, akkor írass ki hibaüzenetet és a program lépjen ki 11-es hibakóddal!
 
@@ -130,7 +130,7 @@ HIBA! Nem egy konyvtar eleresi utvonalat adtad meg!
 ```
 
 
-### 7. feladat: Legtöbb sor (4 pont)
+### 7. Legtöbb sor (4 pont)
 
 Írj BASH szkriptet `7.sh` néven, amely egy könyvtár elérési útvonalát várja paraméterben! A szkript írja ki a konzolra a paraméterben kapott könyvtárban található, legtöbb sorból álló `php` kiterjesztésű fájlnak a nevét! Ha több fájl is ugyanannyi sorból áll, akkor közülük az ábécé sorrendben hamarabb szereplő fájlnevet válaszd!
 
@@ -142,7 +142,7 @@ HIBA! Nem egy konyvtar eleresi utvonalat adtad meg!
 ```
 
 
-### 8. feladat: Gondoltam egy számra (6 pont)
+### 8. Gondoltam egy számra (6 pont)
 
 Készíts egy egyszerű számkitalálós játékot egy `8.sh` nevű fájlba! A gép "gondol" egy számra 1 és 1000 között (az 1 és az 1000 is még beletartozik a lehetséges számok intervallumába), és a felhasználó ezt a számot próbálja meg minél kevesebb próbálkozással kitalálni. A felhasználónak a játék elején 20 élete (próbálkozási lehetősége) van.
 

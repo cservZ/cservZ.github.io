@@ -343,7 +343,7 @@ A feladat megoldása tehát:
 Írj csővezetéket, ami kiírja a konzolra, hogy hány olyan zene van a bemeneti fájlban, amelynek műfaja `pop`! Feltehetjük, hogy a bemeneti fájl egyes soraiban a `pop` szöveg csak a műfajok oszlopában fordul elő.
 
 <div class="bordered-box border-black">
-<span class="black">Megoldás:</span> Világos, hogy ebben a <code>playlist2.csv</code> fájlból csak azokra a sorokra van szükségünk, amelyek tartalmazzák a <code>pop</code> szöveget (hiszen csak a popzenék érdekelnek minket).
+<span class="black">Megoldás:</span> Világos, hogy ebben a feladatban a <code>playlist2.csv</code> fájlból csak azokra a sorokra van szükségünk, amelyek tartalmazzák a <code>pop</code> szöveget (hiszen csak a popzenék érdekelnek minket).
 
 Ha egy fájl bizonyos sorairól szeretnénk eldönteni, hogy illeszkednek-e egy megadott mintára, akkor az <code>egrep</code> parancsot használjuk. A parancs első paramétere a minta, amire illesztünk (amilyen szöveget keresünk a fájl soraiban), a második paraméter pedig a vizsgált fájl neve.
 
@@ -391,7 +391,7 @@ Imagine Dragons;Radioactive;rock;188
 John Farnham;Thunder In Your Heart;rock;234
 </pre>
 
-Rendben, most már kiválogattuk az összes rockzenét. Már csak meg kell határoznunk ezek közül a leghosszabb zenének a hosszát. Az 5. feladat alapján ezt a következőképpen tehetjük meg:
+Rendben, most már kiválogattuk az összes rockzenét. Már csak meg kell határoznunk ezek közül a leghosszabb zenének a hosszát. Az 5. feladat megoldása alapján ezt a következőképpen tehetjük meg:
 
 <ol>
     <li>Lekérdezzük az egyes rockzenék hosszát, ami a pontosvesszőkkel elválasztott adatok közül a 4. lesz minden sorban (<code>cut -d ';' -f 4</code>).</li>
@@ -546,7 +546,7 @@ Most az összes betűt le szeretnénk cserélni az ábécében utána következ�
 
 <ul>
     <li>A <code>tr</code> parancs első paraméterében megadjuk a lecserélendő betűket, ami az összes kisbetű és összes nagybetű lesz: <code>a-zA-Z</code>.</li>
-    <li>A második paraméterben megadjuk, hogy az előző paraméterben megadott betűket rendre milyen más betűkre cseréljük le. Itt a következőt adjuk meg: <code>b-zaB-ZA</code> (tehát "a" helyett "b" lesz, "b" helyett "c", "y" helyett "z", "z" helyett pedig "a" - ugyanezt felírjuk a nagybetűkre is).</li>
+    <li>A második paraméterben megadjuk, hogy az előző paraméterben megadott betűket rendre milyen más betűkre cseréljük le. Itt a következőt adjuk meg: <code>b-zaB-ZA</code> (hiszen "a" helyett "b" lesz, "b" helyett "c", "y" helyett "z", "z" helyett pedig "a" - ugyanezt felírjuk a nagybetűkre is).</li>
 </ul>
 
 Az előadóneveket és zenecímeket Napóleon-kódolással titkosító pipeline tehát:
