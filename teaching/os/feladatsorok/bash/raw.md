@@ -8,6 +8,8 @@
 
 A feladatsorhoz tartozó **bemeneti fájlok** letölthetők <a href="./inputs.zip" target="_blank">ide kattintva</a>.
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása letölthető <a href="./megoldas.zip" target="_blank">ide kattintva</a>.
+
 
 ### 1. Egyszerű spambot (2 pont)
 
