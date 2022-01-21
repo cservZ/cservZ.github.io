@@ -23,7 +23,7 @@ Válogasd ki a fájlból egy-egy **reguláris kifejezéssel** azokat a tevéket,
 1. ...a `teve` szöveggel kezdődik, ami után pontosan 2 számjegy szerepel, és a teve neve itt ér végét (tehát az ennél bővebb nevek nem fogadhatók el)! **(1 pont)**
 1. ...a `teve` szöveggel kezdődik, ami után legalább 1, de legfeljebb 5 számjegy következik, és a teve neve itt ér véget (tehát az ennél bővebb nevek nem fogadhatók el)! **(1 pont)**
 1. ...csak nagybetűket és alulvonás (`_`) karaktereket tartalmaz! **(2 pont)**
-1. ...a `teve` szöveggel kezdődik, ami után tetszőleges mennyiségű (akár 0 darab) tetszőleges karakter következik, majd a név egy számjegyre végződik! **(2 pont)**
+1. ...a `teve` szöveggel kezdődik, ami után tetszőleges mennyiségű (akár 0 darab) tetszőleges karakter következik, majd a név számjegyre végződik! **(2 pont)**
 1. ...a `teve` szöveggel kezdődik, ami után vagy szerepel alulvonás vagy nem, majd legalább 1 betű vagy számjegy következik, majd közvetlenül ezután egy számjegy jelzi a teve nevének végét! **(3 pont)**
 1. ...**nem** az angol ábécé valamely magánhangzójával kezdődik! **(1 pont)**
 1. ...páratlan sok karakterből áll! **(3 pont)**

@@ -1,6 +1,6 @@
 # Operációs rendszerek gyakorlat
 
-## Reguláris kifejezéseses feladatok - Egy lehetséges megoldás
+## Reguláris kifejezéses feladatok - Egy lehetséges megoldás
 
 <div class="bordered-box border-blue">
     <span class="blue">Megjegyzés:</span> A feladatsor megoldásához az A1 anyagrész (azon belül is a reguláris kifejezésekről szóló alfejezet) ismerete szükséges.
@@ -173,7 +173,7 @@ Magyarázat: Nagybetűkből és alulvonás karakterekből szeretnénk tetszőleg
 </div>
 
 
-<span>9.</span> ...a `teve` szöveggel kezdődik, ami után tetszőleges mennyiségű (akár 0 darab) tetszőleges karakter következik, majd a név egy számjegyre végződik! **(2 pont)**
+<span>9.</span> ...a `teve` szöveggel kezdődik, ami után tetszőleges mennyiségű (akár 0 darab) tetszőleges karakter következik, majd a név számjegyre végződik! **(2 pont)**
 
 <div class="bordered-box border-black">
 <span class="black">Megoldás:</span>
@@ -192,7 +192,7 @@ Magyarázat:
 <ul>
     <li>A <code>^teve</code> azt mondja meg, hogy a sor a <code>teve</code> szöveggel kezdődik (ezt már tudjuk).</li>
     <li>Egy darab tetszőleges karakter jele a <code>.</code> (pont) a reguláris kifejezések világában. Mivel a 0 darab tetszőleges karakter is jó, ezért itt a "tetszőleges mennyiség" alatt a <code>*</code>-ot értjük (nem a <code>+</code>-t). Érdemes az egyértelműség kedvéért bezárójelezni azt a részkifejezést, amire a <code>*</code> vonatkozik.</li>
-    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor egy számjegyre kell, hogy végződjön.</li>
+    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor számjegyre kell, hogy végződjön.</li>
 </ul>
 </div>
 
@@ -215,7 +215,7 @@ Magyarázat:
     <li>A <code>^teve</code> azt mondja meg, hogy a sor a <code>teve</code> szöveggel kezdődik (ezt már tudjuk).</li>
     <li>A "vagy szerepel X, vagy nem"-re a speciális szimbólumunk a <code>?</code> (kérdőjel). Érdemes az egyértelműség kedvéért bezárójelezni azt a részkifejezést, amire a <code>?</code> vonatkozik.</li>
     <li>A <code>[A-Za-z0-9]+</code> azt mondja meg, hogy betűből (itt a nagybetűk és kisbetűk is játszanak) vagy számjegyből legalább 1 darabnak szerepelnie kell.</li>
-    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor egy számjegyre kell, hogy végződjön (ezt már tudjuk).</li>
+    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor számjegyre kell, hogy végződjön (ezt már tudjuk).</li>
 </ul>
 </div>
 
@@ -242,7 +242,7 @@ Magyarázat:
 <span class="red">t</span>eve7
 </pre>
 
-Magyarázat: Ebben a feladatban az egyetlen újdonság a szögletes zárójeleken belül használt "kalapjel". A <code>[^HALMAZ]</code> azt jelenti, hogy a <code>HALMAZ</code>-ban <strong>nem szereplő</strong> karaktereket keressük. Mivel most a "nem magánhangzók" érdekeltek minket, ezért a <code>HALMAZ</code> helyén az angol ábécé magánhangzóit adtuk meg.
+Magyarázat: Ebben a feladatban az egyetlen újdonság a szögletes zárójeleken belül használt "kalapjel". A <code>[^HALMAZ]</code> azt jelenti, hogy a <code>HALMAZ</code>-ban <strong>nem szereplő</strong> karaktereket keressük. Mivel most a "nem magánhangzók" érdekelnek minket, ezért a <code>HALMAZ</code> helyén az angol ábécé magánhangzóit adjuk meg.
 </div>
 
 

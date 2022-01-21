@@ -3,7 +3,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="../../../../assets/img/icon.png">
-      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">      
+      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">  
+      
       
       
       
@@ -258,7 +259,7 @@ pre[data-line] .line-highlight[data-end]:after {
       <div class="mume markdown-preview  ">
       <h1 class="mume-header" id="oper%C3%A1ci%C3%B3s-rendszerek-gyakorlat">Oper&#xE1;ci&#xF3;s rendszerek gyakorlat</h1>
 
-<h2 class="mume-header" id="regul%C3%A1ris-kifejez%C3%A9seses-feladatok-egy-lehets%C3%A9ges-megold%C3%A1s">Regul&#xE1;ris kifejez&#xE9;seses feladatok - Egy lehets&#xE9;ges megold&#xE1;s</h2>
+<h2 class="mume-header" id="regul%C3%A1ris-kifejez%C3%A9ses-feladatok-egy-lehets%C3%A9ges-megold%C3%A1s">Regul&#xE1;ris kifejez&#xE9;ses feladatok - Egy lehets&#xE9;ges megold&#xE1;s</h2>
 
 <div class="bordered-box border-blue">
     <span class="blue">Megjegyz&#xE9;s:</span> A feladatsor megold&#xE1;s&#xE1;hoz az A1 anyagr&#xE9;sz (azon bel&#xFC;l is a regul&#xE1;ris kifejez&#xE9;sekr&#x151;l sz&#xF3;l&#xF3; alfejezet) ismerete sz&#xFC;ks&#xE9;ges.
@@ -381,7 +382,7 @@ my <span class="red">epic</span> camel with wings and lazer eyes
 </pre>
 <p>Magyar&#xE1;zat: Nagybet&#x171;kb&#x151;l &#xE9;s alulvon&#xE1;s karakterekb&#x151;l szeretn&#xE9;nk tetsz&#x151;legesen sokat, de legal&#xE1;bb 1-et mindenk&#xE9;ppen (<code>[A-Z_]+</code> r&#xE9;szkifejez&#xE9;s). Tov&#xE1;bb&#xE1; szeretn&#xE9;nk, ha a teljes sor csak ezeket a karaktereket tartalmazn&#xE1; (ez&#xE9;rt ki&#xED;rjuk a kifejez&#xE9;s elej&#xE9;re a <code>^</code>-ot, a v&#xE9;g&#xE9;re pedig a <code>$</code>-et).</p>
 </div>
-<p><span>9.</span> ...a <code>teve</code> sz&#xF6;veggel kezd&#x151;dik, ami ut&#xE1;n tetsz&#x151;leges mennyis&#xE9;g&#x171; (ak&#xE1;r 0 darab) tetsz&#x151;leges karakter k&#xF6;vetkezik, majd a n&#xE9;v egy sz&#xE1;mjegyre v&#xE9;gz&#x151;dik! <strong>(2 pont)</strong></p>
+<p><span>9.</span> ...a <code>teve</code> sz&#xF6;veggel kezd&#x151;dik, ami ut&#xE1;n tetsz&#x151;leges mennyis&#xE9;g&#x171; (ak&#xE1;r 0 darab) tetsz&#x151;leges karakter k&#xF6;vetkezik, majd a n&#xE9;v sz&#xE1;mjegyre v&#xE9;gz&#x151;dik! <strong>(2 pont)</strong></p>
 <div class="bordered-box border-black">
 <span class="black">Megold&#xE1;s:</span>
 <pre>&gt; egrep --color &apos;^teve(.)*[0-9]$&apos; camels.txt
@@ -396,7 +397,7 @@ my <span class="red">epic</span> camel with wings and lazer eyes
 <ul>
     <li>A <code>^teve</code> azt mondja meg, hogy a sor a <code>teve</code> sz&#xF6;veggel kezd&#x151;dik (ezt m&#xE1;r tudjuk).</li>
     <li>Egy darab tetsz&#x151;leges karakter jele a <code>.</code> (pont) a regul&#xE1;ris kifejez&#xE9;sek vil&#xE1;g&#xE1;ban. Mivel a 0 darab tetsz&#x151;leges karakter is j&#xF3;, ez&#xE9;rt itt a &quot;tetsz&#x151;leges mennyis&#xE9;g&quot; alatt a <code>*</code>-ot &#xE9;rtj&#xFC;k (nem a <code>+</code>-t). &#xC9;rdemes az egy&#xE9;rtelm&#x171;s&#xE9;g kedv&#xE9;&#xE9;rt bez&#xE1;r&#xF3;jelezni azt a r&#xE9;szkifejez&#xE9;st, amire a <code>*</code> vonatkozik.</li>
-    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor egy sz&#xE1;mjegyre kell, hogy v&#xE9;gz&#x151;dj&#xF6;n.</li>
+    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor sz&#xE1;mjegyre kell, hogy v&#xE9;gz&#x151;dj&#xF6;n.</li>
 </ul>
 </div>
 <p><span>10.</span> ...a <code>teve</code> sz&#xF6;veggel kezd&#x151;dik, ami ut&#xE1;n vagy szerepel alulvon&#xE1;s vagy nem, majd legal&#xE1;bb 1 bet&#x171; vagy sz&#xE1;mjegy k&#xF6;vetkezik, majd k&#xF6;zvetlen&#xFC;l ezut&#xE1;n egy sz&#xE1;mjegy jelzi a teve nev&#xE9;nek v&#xE9;g&#xE9;t! <strong>(3 pont)</strong></p>
@@ -413,7 +414,7 @@ my <span class="red">epic</span> camel with wings and lazer eyes
     <li>A <code>^teve</code> azt mondja meg, hogy a sor a <code>teve</code> sz&#xF6;veggel kezd&#x151;dik (ezt m&#xE1;r tudjuk).</li>
     <li>A &quot;vagy szerepel X, vagy nem&quot;-re a speci&#xE1;lis szimb&#xF3;lumunk a <code>?</code> (k&#xE9;rd&#x151;jel). &#xC9;rdemes az egy&#xE9;rtelm&#x171;s&#xE9;g kedv&#xE9;&#xE9;rt bez&#xE1;r&#xF3;jelezni azt a r&#xE9;szkifejez&#xE9;st, amire a <code>?</code> vonatkozik.</li>
     <li>A <code>[A-Za-z0-9]+</code> azt mondja meg, hogy bet&#x171;b&#x151;l (itt a nagybet&#x171;k &#xE9;s kisbet&#x171;k is j&#xE1;tszanak) vagy sz&#xE1;mjegyb&#x151;l legal&#xE1;bb 1 darabnak szerepelnie kell.</li>
-    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor egy sz&#xE1;mjegyre kell, hogy v&#xE9;gz&#x151;dj&#xF6;n (ezt m&#xE1;r tudjuk).</li>
+    <li>A <code>[0-9]$</code> azt mondja meg, hogy a sor sz&#xE1;mjegyre kell, hogy v&#xE9;gz&#x151;dj&#xF6;n (ezt m&#xE1;r tudjuk).</li>
 </ul>
 </div>
 <p><span>11.</span> ...<strong>nem</strong> az angol &#xE1;b&#xE9;c&#xE9; valamely mag&#xE1;nhangz&#xF3;j&#xE1;val kezd&#x151;dik! <strong>(1 pont)</strong></p>
@@ -435,7 +436,7 @@ my <span class="red">epic</span> camel with wings and lazer eyes
 <span class="red">t</span>eve_4ever
 <span class="red">t</span>eve7
 </pre>
-<p>Magyar&#xE1;zat: Ebben a feladatban az egyetlen &#xFA;jdons&#xE1;g a sz&#xF6;gletes z&#xE1;r&#xF3;jeleken bel&#xFC;l haszn&#xE1;lt &quot;kalapjel&quot;. A <code>[^HALMAZ]</code> azt jelenti, hogy a <code>HALMAZ</code>-ban <strong>nem szerepl&#x151;</strong> karaktereket keress&#xFC;k. Mivel most a &quot;nem mag&#xE1;nhangz&#xF3;k&quot; &#xE9;rdekeltek minket, ez&#xE9;rt a <code>HALMAZ</code> hely&#xE9;n az angol &#xE1;b&#xE9;c&#xE9; mag&#xE1;nhangz&#xF3;it adtuk meg.</p>
+<p>Magyar&#xE1;zat: Ebben a feladatban az egyetlen &#xFA;jdons&#xE1;g a sz&#xF6;gletes z&#xE1;r&#xF3;jeleken bel&#xFC;l haszn&#xE1;lt &quot;kalapjel&quot;. A <code>[^HALMAZ]</code> azt jelenti, hogy a <code>HALMAZ</code>-ban <strong>nem szerepl&#x151;</strong> karaktereket keress&#xFC;k. Mivel most a &quot;nem mag&#xE1;nhangz&#xF3;k&quot; &#xE9;rdekelnek minket, ez&#xE9;rt a <code>HALMAZ</code> hely&#xE9;n az angol &#xE1;b&#xE9;c&#xE9; mag&#xE1;nhangz&#xF3;it adjuk meg.</p>
 </div>
 <p><span>12.</span> ...p&#xE1;ratlan sok karakterb&#x151;l &#xE1;ll! <strong>(3 pont)</strong></p>
 <div class="bordered-box border-black">
