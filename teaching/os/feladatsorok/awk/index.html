@@ -1,0 +1,404 @@
+<!DOCTYPE html><html><head>
+      <title>AWK gyakorló feladatok</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="../../../../assets/img/icon.png">
+      <link rel="stylesheet" href="../../../../assets/css/markdown-shared.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="oper%C3%A1ci%C3%B3s-rendszerek-gyakorlat">Oper&#xE1;ci&#xF3;s rendszerek gyakorlat</h1>
+
+<h2 class="mume-header" id="awk-gyakorl%C3%B3-feladatok-30-pont">AWK gyakorl&#xF3; feladatok (30 pont)</h2>
+
+<div class="bordered-box border-blue">
+    <span class="blue">Megjegyz&#xE9;s:</span> A feladatsor megold&#xE1;s&#xE1;hoz az A1, A2 &#xE9;s A3 anyagr&#xE9;szek ismerete sz&#xFC;ks&#xE9;ges.
+</div>
+<p>A feladatsorhoz tartoz&#xF3; <strong>bemeneti f&#xE1;jlok</strong> let&#xF6;lthet&#x151;k <a href="./inputs.zip" target="_blank">ide kattintva</a>.</p>
+<h3 class="mume-header" id="1-m%C3%A9rn%C3%B6kinformatikusok-2-pont">1. M&#xE9;rn&#xF6;kinformatikusok (2 pont)</h3>
+
+<p>A <code>01_users.csv</code> f&#xE1;jl Discord felhaszn&#xE1;l&#xF3;k adatait tartalmazza. Az egyes sorokban szerepl&#x151;, pontosvessz&#x151;vel elv&#xE1;lasztott adatok rendre: a felhaszn&#xE1;l&#xF3; neve, szakja &#xE9;s &#xE1;llapota.</p>
+<p>&#xCD;rj AWK szkriptet <code>1.awk</code> n&#xE9;ven, amely a param&#xE9;terben &#xE9;rkez&#x151; f&#xE1;jlb&#xF3;l ki&#xED;ratja a <strong><code>mernokinfo</code> szakos</strong> felhaszn&#xE1;l&#xF3;k felhaszn&#xE1;l&#xF3;nev&#xE9;t &#xE9;s &#xE1;llapot&#xE1;t, k&#xF6;t&#x151;jellel elv&#xE1;lasztva! &#xDC;gyelj arra, hogy a <code>mernokinfo</code> sz&#xF6;veg nem csak a szakok k&#xF6;z&#xF6;tt fordulhat el&#x151; a f&#xE1;jlban!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./1.awk inputs/01_users.csv
+Float - elfoglalt
+szte2k &#x2013; online
+</pre><h3 class="mume-header" id="2-macsk%C3%A1s-vide%C3%B3k-3-pont">2. Macsk&#xE1;s vide&#xF3;k (3 pont)</h3>
+
+<p>M&#xE1;rk szereti a macsk&#xE1;kat, ez&#xE9;rt a sz&#xE1;m&#xED;t&#xF3;g&#xE9;p&#xE9;n is t&#xE1;rol macsk&#xE1;s vide&#xF3;kat. A <code>02_contents.txt</code> &#xE1;llom&#xE1;ny tartalmazza az <code>ls -l</code> parancs kimenet&#xE9;nek egy r&#xE9;sz&#xE9;t, m&#xE9;gpedig M&#xE1;rk mapp&#xE1;inak &#xE9;s f&#xE1;jljainak az adatait. Ezek k&#xF6;z&#xFC;l szeretn&#xE9;nk kiv&#xE1;logatni a macsk&#xE1;s vide&#xF3;k neveit az al&#xE1;bbi szempontok szerint:</p>
+<ul>
+<li>Az <code>ls -l</code> kimenet&#xE9;ben az 1. oszlop k&#xF6;t&#x151;jellel kell, hogy kezd&#x151;dj&#xF6;n (hiszen f&#xE1;jlokr&#xF3;l van sz&#xF3;) &#xC9;S</li>
+<li>Az &#xE1;llom&#xE1;ny nev&#xE9;nek (9. oszlop) a <code>macska</code> sz&#xF6;veggel kell kezd&#x151;dnie, ami ut&#xE1;n tetsz&#x151;leges mennyis&#xE9;g&#x171; (ak&#xE1;r 0 darab) bet&#x171;/sz&#xE1;m/alulvon&#xE1;s/pont karakter szerepelhet, majd ezut&#xE1;n a <code>.mp4</code> sz&#xF6;veg jelzi a f&#xE1;jln&#xE9;v v&#xE9;g&#xE9;t.</li>
+</ul>
+<p>&#xCD;rj AWK szkriptet <code>2.awk</code> n&#xE9;ven, amely ki&#xED;ratja a param&#xE9;terben kapott f&#xE1;jlb&#xF3;l a fenti szempontok alapj&#xE1;n megtal&#xE1;lt macsk&#xE1;s vide&#xF3;k nev&#xE9;t! Azt is &#xED;rasd ki, hogy h&#xE1;ny ilyen vide&#xF3;t tal&#xE1;lt a szkripted!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./2.awk inputs/02_contents.txt
+macska.mp4
+macska123.mp4
+macska_01.cute.mp4
+macska_jancsi.mp4
+-----------------------------------
+4 macskas videot talaltam.
+</pre><h3 class="mume-header" id="3-%C3%B6sszpontsz%C3%A1m-3-pont">3. &#xD6;sszpontsz&#xE1;m (3 pont)</h3>
+
+<p>A <code>03_scores.csv</code> &#xE1;llom&#xE1;ny egy online j&#xE1;t&#xE9;k aktu&#xE1;lis &#xE1;ll&#xE1;s&#xE1;t tartalmazza. A f&#xE1;jl soraiban szerepl&#x151;, pontosvessz&#x151;vel elv&#xE1;lasztott adatok rendre: a j&#xE1;t&#xE9;kos neve, orsz&#xE1;ga &#xE9;s pontsz&#xE1;ma.</p>
+<p>&#xCD;rj AWK szkriptet <code>3.awk</code> n&#xE9;ven, amely &#xF6;sszeadja a param&#xE9;terben kapott f&#xE1;jlb&#xF3;l azoknak a j&#xE1;t&#xE9;kosoknak a pontsz&#xE1;m&#xE1;t, akiknek a neve a k&#xF6;vetkez&#x151;k&#xE9;ppen &#xE9;p&#xFC;l fel:</p>
+<ul>
+<li>A n&#xE9;v elej&#xE9;n opcion&#xE1;lisan szerepel az <code>[admin]</code> sz&#xF6;veg (teh&#xE1;t vagy szerepel, vagy nem)</li>
+<li>Ezut&#xE1;n legal&#xE1;bb 1 darab bet&#x171;, sz&#xE1;m, sz&#xF3;k&#xF6;z, alulvon&#xE1;s vagy pont karakter k&#xF6;vetkezik</li>
+<li>Ezut&#xE1;n legal&#xE1;bb 2 darab sz&#xE1;mjegy szerepel, ami ut&#xE1;n a j&#xE1;t&#xE9;kosn&#xE9;v v&#xE9;get &#xE9;r.</li>
+</ul>
+<p>A szkript kimenete a fenti szempontoknak megfelel&#x151; n&#xE9;vvel rendelkez&#x151; j&#xE1;t&#xE9;kosok &#xF6;sszpontsz&#xE1;ma.</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./3.awk inputs/03_scores.csv
+102250
+</pre><h3 class="mume-header" id="4-idegess%C3%A9g-detektor-3-pont">4. Idegess&#xE9;g detektor (3 pont)</h3>
+
+<p>&#xCD;rj AWK szkriptet <code>4.awk</code> n&#xE9;ven, amely ki&#xED;rja a param&#xE9;terben kapott &#xE1;llom&#xE1;nyb&#xF3;l azokat a szavakat, amelyek:</p>
+<ul>
+<li>1 karaktern&#xE9;l hosszabbak &#xC9;S</li>
+<li>Csupa nagybet&#x171;ket tartalmaznak, majd a sz&#xF3; v&#xE9;g&#xE9;n opcion&#xE1;lisan egyetlen &#xED;r&#xE1;sjel (pont, felki&#xE1;lt&#xF3;jel, k&#xE9;rd&#x151;jel vagy vessz&#x151;) szerepelhet (teh&#xE1;t vagy szerepel &#xED;r&#xE1;sjel a sz&#xF3; v&#xE9;g&#xE9;n, vagy nem)!</li>
+</ul>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./4.awk inputs/04_post.txt
+KEDVES 
+FERENC! 
+VELEMENYEM 
+VAN, 
+HALALLAL 
+BUNTETHETO. 
+LATOTT 
+MEG 
+IS 
+HALADJA 
+SEMMI
+</pre><h3 class="mume-header" id="5-mocking-spongebob-4-pont">5. Mocking SpongeBob (4 pont)</h3>
+
+<p>Ki ne eml&#xE9;kezne az al&#xE1;bbi meme template-re &#xE9;s annak jellegzetes sz&#xF6;vegform&#xE1;tum&#xE1;ra?</p>
+<p><img src="./meme.jpg" alt="Mocking SpongeBob"></p>
+<p>&#xCD;rj AWK szkriptet <code>5.awk</code> n&#xE9;ven, amely egy t&#xF6;bb soros sz&#xF6;veges f&#xE1;jlt kap param&#xE9;ter&#xFC;l, amelynek minden sora sz&#xF3;k&#xF6;zzel elv&#xE1;lasztott szavakat tartalmaz! A szkript &#xED;rja ki a f&#xE1;jl tartalm&#xE1;t &#xFA;gy, hogy a kis- &#xE9;s nagybet&#x171;k felv&#xE1;ltva k&#xF6;vess&#xE9;k egym&#xE1;st (mint ahogy az a fenti k&#xE9;pen l&#xE1;that&#xF3;)!</p>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./5.awk inputs/05_rick_roll.txt
+NeVeR GoNnA GiVe yOu uP
+NeVeR GoNnA LeT YoU DoWn
+NeVeR GoNnA RuN ArOuNd aNd dEsErT YoU
+NeVeR GoNnA MaKe yOu cRy
+NeVeR GoNnA SaY GoOdByE
+NeVeR GoNnA TeLl a lIe aNd hUrT YoU
+</pre><h3 class="mume-header" id="6-%C3%A1tlagok-5-pont">6. &#xC1;tlagok (5 pont)</h3>
+
+<p>A <code>06_points.csv</code> &#xE1;llom&#xE1;ny az Oper&#xE1;ci&#xF3;s rendszerek gyakorlaton meg&#xED;ratott 1. ZH eredm&#xE9;nyeit tartalmazza. Minden sorban egy-egy csoport hallgat&#xF3;i &#xE1;ltal el&#xE9;rt pontsz&#xE1;mok tal&#xE1;lhat&#xF3;k, pontosvessz&#x151;vel elv&#xE1;lasztva.</p>
+<p>&#xCD;rj AWK szkriptet <code>6.awk</code> n&#xE9;ven, amely meghat&#xE1;rozza a param&#xE9;terben kapott f&#xE1;jl alapj&#xE1;n...</p>
+<ul>
+<li>...az egyes csoportok pontsz&#xE1;m&#xE1;nak az &#xE1;tlag&#xE1;t</li>
+<li>...a legjobb &#xE1;tlagot, ami egy csoporton bel&#xFC;l sz&#xFC;letett</li>
+<li>...a f&#xE1;jlban szerepl&#x151; &#xF6;sszes pontsz&#xE1;m &#xE1;tlag&#xE1;t!</li>
+</ul>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./6.awk inputs/06_points.csv
+A(z) 1. csoport atlaga: 10.13 pont
+A(z) 2. csoport atlaga: 9.0 pont
+A(z) 3. csoport atlaga: 15.0 pont
+A(z) 4. csoport atlaga: 10.89 pont
+A(z) 5. csoport atlaga: 11.67 pont
+-------------------------------------------
+A legjobb csoportatlag: 15.0 pont
+Az osszes pontszam atlaga: 12.05 pont
+</pre><h3 class="mume-header" id="7-kiterjeszt%C3%A9s-statisztika-4-pont">7. Kiterjeszt&#xE9;s statisztika (4 pont)</h3>
+
+<p>&#xCD;rj AWK szkriptet <code>7.awk</code> n&#xE9;ven, amely egy olyan f&#xE1;jlt kap param&#xE9;terben, ami az <code>ls -l</code> parancs egy kimenet&#xE9;t tartalmazza! A program &#xED;rja ki a 9. oszlopban tal&#xE1;lhat&#xF3; &#xE1;llom&#xE1;nynevek alapj&#xE1;n, hogy az egyes kiterjeszt&#xE9;sekb&#x151;l mennyi fordul el&#x151;! <strong>A feladat megold&#xE1;sa sor&#xE1;n haszn&#xE1;lj t&#xF6;mb&#xF6;t</strong> (teh&#xE1;t ne csak a p&#xE9;ldainputban szerepl&#x151; kiterjeszt&#xE9;sekre m&#x171;k&#xF6;dj&#xF6;n j&#xF3;l a szkripted)!</p>
+<p>A kiterjeszt&#xE9;st a kis- &#xE9;s nagybet&#x171;kt&#x151;l f&#xFC;ggetlen&#xFC;l vizsg&#xE1;ld (teh&#xE1;t pl. <code>file1.txt</code> &#xE9;s <code>FILE2.TXT</code> ugyan&#xFA;gy <code>txt</code> kiterjeszt&#xE9;s&#x171;ek)! A program kimenet&#xE9;ben minden kiterjeszt&#xE9;s csupa kisbet&#x171;kkel szerepeljen!</p>
+<p>Az egyszer&#x171;s&#xE9;g kedv&#xE9;&#xE9;rt feltessz&#xFC;k a k&#xF6;vetkez&#x151;ket:</p>
+<ul>
+<li>A bemenetben csak f&#xE1;jlok adatai szerepelnek, k&#xF6;nyvt&#xE1;rak garant&#xE1;ltan nem fordulnak el&#x151;.</li>
+<li>A bemenetben tal&#xE1;lhat&#xF3; &#xE1;llom&#xE1;nyok nevei garant&#xE1;ltan csak 1 darab pont karaktert tartalmaznak, ami el&#x151;tt a f&#xE1;jln&#xE9;v, ut&#xE1;na pedig a kiterjeszt&#xE9;s szerepel (<code>fajlnev.kiterjesztes</code>).</li>
+</ul>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./7.awk inputs/07_files.txt
+1 darab csv fajl 
+3 darab awk fajl 
+4 darab txt fajl 
+2 darab sh fajl
+</pre><h3 class="mume-header" id="8-matekos-6-pont">8. Matekos (6 pont)</h3>
+
+<p>A <code>08_results.csv</code> f&#xE1;jl egy k&#xF6;z&#xE9;piskolai matematikai csapatverseny adatait tartalmazza. Minden sorban 3 adat szerepel pontosvessz&#x151;vel elv&#xE1;lasztva: rendre a versenyz&#x151; neve, a versenyz&#x151; csapat&#xE1;nak neve, valamint a versenyz&#x151; &#xE1;ltal el&#xE9;rt egy&#xE9;ni pontsz&#xE1;m.</p>
+<p>&#xCD;rj AWK szkriptet <code>8.awk</code> n&#xE9;ven, amely &#xF6;sszesz&#xE1;molja, hogy a bemeneti f&#xE1;jlban az egyes csapatok h&#xE1;ny pontot &#xE9;rtek el (teh&#xE1;t &#xF6;ssze kell adni az adott csapatban versenyz&#x151; di&#xE1;kok pontsz&#xE1;mait), majd ki&#xED;rja, hogy melyik csapat &#xE9;rte el a legt&#xF6;bb pontot! <strong>A feladat megold&#xE1;sa sor&#xE1;n haszn&#xE1;lj t&#xF6;mb&#xF6;t</strong> (teh&#xE1;t ne csak a p&#xE9;ldainputban szerepl&#x151; csapatnevekre m&#x171;k&#xF6;dj&#xF6;n j&#xF3;l a szkripted)!</p>
+<p>A feladat megold&#xE1;sa sor&#xE1;n figyelj a k&#xF6;vetkez&#x151;kre:</p>
+<ul>
+<li>A bemeneti f&#xE1;jl els&#x151; sora egy fejl&#xE9;cet tartalmaz, ezt a program ne dolgozza fel!</li>
+<li>A csapatnevet a kis- &#xE9;s nagybet&#x171;kt&#x151;l f&#xFC;ggetlen&#xFC;l vizsg&#xE1;ld (teh&#xE1;t pl. <code>kalkulustak</code> &#xE9;s <code>Kalkulustak</code> ugyanaz a csapatn&#xE9;v)! A ki&#xED;rat&#xE1;sban a csapatn&#xE9;v csupa nagybet&#x171;kkel szerepeljen!</li>
+</ul>
+<p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>
+<pre data-role="codeBlock" data-info="html" class="language-html">&gt; ./8.awk inputs/08_results.csv
+OSZTALYELSO TAN(ULOK) csapat pontszama: 200 
+NEGYOLDALAS TETELBIZONYITAS csapat pontszama: 150 
+KALKULUSTAK csapat pontszama: 270 
+ALGEBRUH csapat pontszama: 42 
+3.14RATES OF THE CARIBBEAN csapat pontszama: 100 
+PITAGORASZ JOBBKEZEI csapat pontszama: 100 
+------------------------------------------------- 
+A legtobb pontot elero csapat: KALKULUSTAK
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

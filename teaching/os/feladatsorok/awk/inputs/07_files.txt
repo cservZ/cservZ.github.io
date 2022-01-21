@@ -1,0 +1,11 @@
+total 22
+-rw-r--r-- 1 cservz cservz  233 Apr  3 13:34 1.awk
+-rw-r--r-- 1 cservz cservz  199 Apr  3 13:34 2.awk
+-rw-r--r-- 1 cservz cservz  448 Apr  3 13:35 3.awk
+-rw-r--r-- 1 cservz cservz 2046 Apr  3 13:36 COMPLEX.SH
+-rw-r--r-- 1 cservz cservz 1820 Apr  3 13:39 FILE2.TXT
+-rw-r--r-- 1 cservz cservz  703 Apr  3 13:36 SIMPLE.SH
+-rw-r--r-- 1 cservz cservz 1586 Apr  3 13:38 file1.txt
+-rw-r--r-- 1 cservz cservz 1028 Apr  3 13:39 file3.txt
+-rw-r--r-- 1 cservz cservz  155 Apr  3 13:39 file4.txt
+-rw-r--r-- 1 cservz cservz   91 Apr  3 13:38 test.csv
