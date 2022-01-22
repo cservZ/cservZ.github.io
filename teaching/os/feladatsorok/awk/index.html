@@ -265,6 +265,9 @@ pre[data-line] .line-highlight[data-end]:after {
     <span class="blue">Megjegyz&#xE9;s:</span> A feladatsor megold&#xE1;s&#xE1;hoz az A1, A2 &#xE9;s A3 anyagr&#xE9;szek ismerete sz&#xFC;ks&#xE9;ges.
 </div>
 <p>A feladatsorhoz tartoz&#xF3; <strong>bemeneti f&#xE1;jlok</strong> let&#xF6;lthet&#x151;k <a href="./inputs.zip" target="_blank">ide kattintva</a>.</p>
+<blockquote>
+<p><strong>Megold&#xE1;s:</strong> A feladatsor egy lehets&#xE9;ges megold&#xE1;sa let&#xF6;lthet&#x151; <a href="./megoldas.zip" target="_blank">ide kattintva</a>.</p>
+</blockquote>
 <h3 class="mume-header" id="1-m%C3%A9rn%C3%B6kinformatikusok-2-pont">1. M&#xE9;rn&#xF6;kinformatikusok (2 pont)</h3>
 
 <p>A <code>01_users.csv</code> f&#xE1;jl Discord felhaszn&#xE1;l&#xF3;k adatait tartalmazza. Az egyes sorokban szerepl&#x151;, pontosvessz&#x151;vel elv&#xE1;lasztott adatok rendre: a felhaszn&#xE1;l&#xF3; neve, szakja &#xE9;s &#xE1;llapota.</p>
@@ -278,7 +281,7 @@ szte2k &#x2013; online
 <p>M&#xE1;rk szereti a macsk&#xE1;kat, ez&#xE9;rt a sz&#xE1;m&#xED;t&#xF3;g&#xE9;p&#xE9;n is t&#xE1;rol macsk&#xE1;s vide&#xF3;kat. A <code>02_contents.txt</code> &#xE1;llom&#xE1;ny tartalmazza az <code>ls -l</code> parancs kimenet&#xE9;nek egy r&#xE9;sz&#xE9;t, m&#xE9;gpedig M&#xE1;rk mapp&#xE1;inak &#xE9;s f&#xE1;jljainak az adatait. Ezek k&#xF6;z&#xFC;l szeretn&#xE9;nk kiv&#xE1;logatni a macsk&#xE1;s vide&#xF3;k neveit az al&#xE1;bbi szempontok szerint:</p>
 <ul>
 <li>Az <code>ls -l</code> kimenet&#xE9;ben az 1. oszlop k&#xF6;t&#x151;jellel kell, hogy kezd&#x151;dj&#xF6;n (hiszen f&#xE1;jlokr&#xF3;l van sz&#xF3;) &#xC9;S</li>
-<li>Az &#xE1;llom&#xE1;ny nev&#xE9;nek (9. oszlop) a <code>macska</code> sz&#xF6;veggel kell kezd&#x151;dnie, ami ut&#xE1;n tetsz&#x151;leges mennyis&#xE9;g&#x171; (ak&#xE1;r 0 darab) bet&#x171;/sz&#xE1;m/alulvon&#xE1;s/pont karakter szerepelhet, majd ezut&#xE1;n a <code>.mp4</code> sz&#xF6;veg jelzi a f&#xE1;jln&#xE9;v v&#xE9;g&#xE9;t.</li>
+<li>Az &#xE1;llom&#xE1;ny nev&#xE9;nek (9. oszlop) a <code>macska</code> sz&#xF6;veggel kell kezd&#x151;dnie, ami ut&#xE1;n tetsz&#x151;leges mennyis&#xE9;g&#x171; (ak&#xE1;r 0 darab) bet&#x171;/sz&#xE1;mjegy/alulvon&#xE1;s/pont karakter szerepelhet, majd ezut&#xE1;n a <code>.mp4</code> sz&#xF6;veg jelzi a f&#xE1;jln&#xE9;v v&#xE9;g&#xE9;t.</li>
 </ul>
 <p>&#xCD;rj AWK szkriptet <code>2.awk</code> n&#xE9;ven, amely ki&#xED;ratja a param&#xE9;terben kapott f&#xE1;jlb&#xF3;l a fenti szempontok alapj&#xE1;n megtal&#xE1;lt macsk&#xE1;s vide&#xF3;k nev&#xE9;t! Azt is &#xED;rasd ki, hogy h&#xE1;ny ilyen vide&#xF3;t tal&#xE1;lt a szkripted!</p>
 <p><span class="example">P&#xE9;lda a szkript m&#x171;k&#xF6;d&#xE9;s&#xE9;re:</span></p>

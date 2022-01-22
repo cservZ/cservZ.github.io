@@ -8,6 +8,8 @@
 
 A feladatsorhoz tartozó **bemeneti fájlok** letölthetők <a href="./inputs.zip" target="_blank">ide kattintva</a>.
 
+> **Megoldás:** A feladatsor egy lehetséges megoldása letölthető <a href="./megoldas.zip" target="_blank">ide kattintva</a>.
+
 
 ### 1. Mérnökinformatikusok (2 pont)
 
@@ -28,7 +30,7 @@ szte2k – online
 Márk szereti a macskákat, ezért a számítógépén is tárol macskás videókat. A `02_contents.txt` állomány tartalmazza az `ls -l` parancs kimenetének egy részét, mégpedig Márk mappáinak és fájljainak az adatait. Ezek közül szeretnénk kiválogatni a macskás videók neveit az alábbi szempontok szerint:
 
 * Az `ls -l` kimenetében az 1. oszlop kötőjellel kell, hogy kezdődjön (hiszen fájlokról van szó) ÉS
-* Az állomány nevének (9. oszlop) a `macska` szöveggel kell kezdődnie, ami után tetszőleges mennyiségű (akár 0 darab) betű/szám/alulvonás/pont karakter szerepelhet, majd ezután a `.mp4` szöveg jelzi a fájlnév végét.
+* Az állomány nevének (9. oszlop) a `macska` szöveggel kell kezdődnie, ami után tetszőleges mennyiségű (akár 0 darab) betű/számjegy/alulvonás/pont karakter szerepelhet, majd ezután a `.mp4` szöveg jelzi a fájlnév végét.
 
 Írj AWK szkriptet `2.awk` néven, amely kiíratja a paraméterben kapott fájlból a fenti szempontok alapján megtalált macskás videók nevét! Azt is írasd ki, hogy hány ilyen videót talált a szkripted!
 
