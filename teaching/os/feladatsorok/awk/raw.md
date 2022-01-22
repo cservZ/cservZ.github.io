@@ -125,13 +125,13 @@ A `06_points.csv` állomány az Operációs rendszerek gyakorlaton megíratott 1
 
 ```html
 > ./6.awk inputs/06_points.csv
-A(z) 1. csoport atlaga: 10.13 pont
-A(z) 2. csoport atlaga: 9.0 pont
-A(z) 3. csoport atlaga: 15.0 pont
+A(z) 1. csoport atlaga: 10.12 pont
+A(z) 2. csoport atlaga: 9.00 pont
+A(z) 3. csoport atlaga: 15.00 pont
 A(z) 4. csoport atlaga: 10.89 pont
 A(z) 5. csoport atlaga: 11.67 pont
 -------------------------------------------
-A legjobb csoportatlag: 15.0 pont
+A legjobb csoportatlag: 15.00 pont
 Az osszes pontszam atlaga: 12.05 pont
 ```
 
