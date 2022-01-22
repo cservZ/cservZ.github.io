@@ -52,7 +52,7 @@ A `03_scores.csv` állomány egy online játék aktuális állását tartalmazza
 Írj AWK szkriptet `3.awk` néven, amely összeadja a paraméterben kapott fájlból azoknak a játékosoknak a pontszámát, akiknek a neve a következőképpen épül fel:
 
 * A név elején opcionálisan szerepel az `[admin]` szöveg (tehát vagy szerepel, vagy nem)
-* Ezután legalább 1 darab betű, szám, szóköz, alulvonás vagy pont karakter következik
+* Ezután legalább 1 darab betű, számjegy, szóköz, alulvonás vagy pont karakter következik
 * Ezután legalább 2 darab számjegy szerepel, ami után a játékosnév véget ér.
 
 A szkript kimenete a fenti szempontoknak megfelelő névvel rendelkező játékosok összpontszáma.
@@ -102,12 +102,12 @@ Ki ne emlékezne az alábbi meme template-re és annak jellegzetes szövegformá
 
 ```html
 > ./5.awk inputs/05_rick_roll.txt
-NeVeR GoNnA GiVe yOu uP
-NeVeR GoNnA LeT YoU DoWn
-NeVeR GoNnA RuN ArOuNd aNd dEsErT YoU
-NeVeR GoNnA MaKe yOu cRy
-NeVeR GoNnA SaY GoOdByE
-NeVeR GoNnA TeLl a lIe aNd hUrT YoU
+NeVeR gOnNa GiVe YoU uP
+NeVeR gOnNa LeT yOu DoWn
+NeVeR gOnNa RuN aRoUnD aNd DeSeRt YoU
+NeVeR gOnNa MaKe YoU cRy
+NeVeR gOnNa SaY gOoDbYe
+NeVeR gOnNa TeLl A lIe AnD hUrT yOu
 ```
 
 
