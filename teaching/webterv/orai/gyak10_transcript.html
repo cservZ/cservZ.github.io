@@ -1,0 +1,346 @@
+<!DOCTYPE html><html><head>
+      <title>gyak10_transcript</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="../../../assets/css/markdown-shared.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="webtervez%C3%A9s-10-gyakorlat">Webtervez&#xE9;s - 10. gyakorlat</h1>
+
+<h2 class="mume-header" id="az-%C3%B3rai-feladatunk">Az &#xF3;rai feladatunk</h2>
+
+<p>Az eheti &#xF3;r&#xE1;n &#xFA;jb&#xF3;l el&#x151;vessz&#xFC;k a m&#xE1;r j&#xF3;l ismert projekt&#xFC;nket, az Irinyi Pizz&#xE1;z&#xF3; weboldal&#xE1;t.</p>
+<p>Az eddigi gyakorlatok sor&#xE1;n m&#xE1;r megval&#xF3;s&#xED;tottuk a regisztr&#xE1;ci&#xF3;t (profilk&#xE9;p felt&#xF6;lt&#xE9;ssel), a bejelentkez&#xE9;st, valamint volt sz&#xF3; a menetk&#xF6;vet&#xE9;sr&#x151;l. Eml&#xE9;keztet&#x151;k&#xE9;ppen: a menetk&#xF6;vet&#xE9;st mi arra haszn&#xE1;ltuk, hogy miut&#xE1;n a felhaszn&#xE1;l&#xF3; sikeresen bejelentkezett, akkor a <code>$_SESSION</code> t&#xF6;mbbe egy <code>user</code> kulcssal beleraktuk azt a <code>Felhasznalo</code> objektumot, ami a bejelentkezett felhaszn&#xE1;l&#xF3;t reprezent&#xE1;lja (ily m&#xF3;don a bel&#xE9;pett felhaszn&#xE1;l&#xF3; adatait a <code>$_SESSION[&quot;user&quot;]</code> indexel&#xE9;ssel el tudtuk &#xE9;rni az egyes aloldalakon).</p>
+<p>Az eheti feladatunk a pizzarendel&#xE9;s megval&#xF3;s&#xED;t&#xE1;sa lenne. Szeretn&#xE9;nk el&#xE9;rni, hogy a bejelentkezett felhaszn&#xE1;l&#xF3;k...</p>
+<ul>
+<li>...tudjanak pizz&#xE1;kat a kosarukba tenni</li>
+<li>...a kosarukb&#xF3;l ki tudjanak t&#xF6;r&#xF6;lni pizz&#xE1;kat</li>
+<li>...a kos&#xE1;r tartalm&#xE1;t meg tudj&#xE1;k rendelni (a rendel&#xE9;seket az <code>admin</code> nev&#x171; felhaszn&#xE1;l&#xF3; fogja megkapni, &#xE9;s &#x151; fogja tudni kiszolg&#xE1;lni a be&#xE9;rkez&#x151; rendel&#xE9;seket).</li>
+</ul>
+<h3 class="mume-header" id="1-kos%C3%A1rba-t%C3%A9tel">1. Kos&#xE1;rba t&#xE9;tel</h3>
+
+<p>A <strong>pizza.php</strong> oldalon bet&#xF6;ltj&#xFC;k a pizzak.txt f&#xE1;jlban t&#xE1;rolt pizz&#xE1;k adatait a <code>$pizzak</code> v&#xE1;ltoz&#xF3;ba (ez egy <code>Pizza</code> t&#xED;pus&#xFA; objektumokat t&#xE1;rol&#xF3; t&#xF6;mb lesz), majd egy t&#xE1;bl&#xE1;zatban ki&#xED;ratjuk az egyes pizz&#xE1;k adatait.</p>
+<h4 class="mume-header" id="11-a-kos%C3%A1rba-gomb-elrejt%C3%A9se-a-nem-bejelentkezett-felhaszn%C3%A1l%C3%B3k-el%C5%91l">1.1. A &quot;Kos&#xE1;rba&quot; gomb elrejt&#xE9;se a nem bejelentkezett felhaszn&#xE1;l&#xF3;k el&#x151;l</h4>
+
+<p>Azt szeretn&#xE9;nk, hogy csak bejelentkezett felhaszn&#xE1;l&#xF3;k tudjanak a kosarukba tenni pizz&#xE1;kat. Rejts&#xFC;k el a nem bel&#xE9;pett felhaszn&#xE1;l&#xF3;k el&#x151;l az egyes sorok utols&#xF3; cell&#xE1;j&#xE1;ban megjelen&#x151; &quot;Kos&#xE1;rba&quot; gombot (ehhez csak meg kell n&#xE9;zn&#xFC;nk, hogy be lett-e &#xE1;ll&#xED;tva a <code>$_SESSION[&quot;user&quot;]</code> &#xE9;rt&#xE9;ke)!</p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pizza-table<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+    ...
+    <span class="token prolog">&lt;?php if (isset($_SESSION[&quot;user&quot;])) { ?&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>Kos&#xE1;rba t&#xE9;tel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
+    <span class="token prolog">&lt;?php } ?&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token prolog">&lt;?php foreach ($pizzak as $pizza) { ?&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+    ...
+    <span class="token prolog">&lt;?php if (isset($_SESSION[&quot;user&quot;])) { ?&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pizza.php<span class="token punctuation">&quot;</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>GET<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hidden<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pizza-name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>&lt;?php echo $pizza-&gt;getNev(); ?&gt;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>add-to-cart-btn<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Kos&#xE1;rba<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+    <span class="token prolog">&lt;?php } ?&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token prolog">&lt;?php } ?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+</pre><h4 class="mume-header" id="12-a-kos%C3%A1rba-t%C3%A9tel-funkci%C3%B3-megtervez%C3%A9se">1.2. A kos&#xE1;rba t&#xE9;tel funkci&#xF3; megtervez&#xE9;se</h4>
+
+<p>N&#xE9;zz&#xFC;k meg a kos&#xE1;rba t&#xE9;telt elv&#xE9;gz&#x151; HTML &#x171;rlap forr&#xE1;sk&#xF3;dj&#xE1;t!</p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pizza.php<span class="token punctuation">&quot;</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>GET<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>hidden<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pizza-name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>&lt;?php echo $pizza-&gt;getNev(); ?&gt;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>add-to-cart-btn<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Kos&#xE1;rba<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</pre><p>L&#xE1;that&#xF3;, hogy az &#x171;rlapot a jelenlegi PHP f&#xE1;jlban, a pizza.php-ban fogjuk feldolgozni. Mivel GET-tel tov&#xE1;bb&#xED;tjuk az &#x171;rlapot, ez&#xE9;rt az adatok az URL-ben lesznek tov&#xE1;bb&#xED;tva. Az &#x171;rlapon tal&#xE1;lunk egy rejtett mez&#x151;t, amit a felhaszn&#xE1;l&#xF3; nem fog l&#xE1;tni, csup&#xE1;n arra szolg&#xE1;l, hogy tov&#xE1;bb&#xED;tsuk annak a pizz&#xE1;nak a nev&#xE9;t, amit kos&#xE1;rba szeretne tenni a felhaszn&#xE1;l&#xF3;.</p>
+<p>A webes projekt&#xFC;nkben minden felhaszn&#xE1;l&#xF3; rendelkezik egy saj&#xE1;t kos&#xE1;rral. A <code>Felhasznalo</code> oszt&#xE1;ly <code>$kosar</code> adattagja egy t&#xF6;mb, amely a megrendelt pizz&#xE1;k adatait fogja t&#xE1;rolni. A felhaszn&#xE1;l&#xF3; kosar&#xE1;nak tartalm&#xE1;t a cart.php oldalon fogjuk megjelen&#xED;teni. A kos&#xE1;r tartalm&#xE1;nak a megjelen&#xED;t&#xE9;se valami ilyesmi lesz:</p>
+<p><img src="./img/cart.png" alt="Kosaram"></p>
+<p>Amennyiben egy pizz&#xE1;b&#xF3;l t&#xF6;bbet rendel&#xFC;nk - p&#xE9;ld&#xE1;ul sonk&#xE1;s-kukoric&#xE1;s pizz&#xE1;b&#xF3;l rendel&#xFC;nk h&#xE1;rmat -, akkor nem azt fogjuk csin&#xE1;lni, hogy 3-szor megjelen&#xED;tj&#xFC;k a sonk&#xE1;s-kukoric&#xE1;s pizz&#xE1;t a &quot;Kosaram&quot; t&#xE1;bl&#xE1;zatban. Ehelyett azt fogjuk csin&#xE1;lni, hogy minden pizzafajta eset&#xE9;n sz&#xE1;montartjuk, hogy az adott pizz&#xE1;b&#xF3;l &#xF6;sszesen mennyit rendelt a felhaszn&#xE1;l&#xF3;, &#xE9;s ez&#xE9;rt mennyit kell fizetnie (teh&#xE1;t l&#xE9;nyeg&#xE9;ben a kos&#xE1;rba tett pizz&#xE1;kat nev&#xFC;k alapj&#xE1;n csoportos&#xED;tjuk.)</p>
+<p>A <code>KosarItem</code> oszt&#xE1;ly seg&#xED;ts&#xE9;g&#xE9;vel tudjuk elt&#xE1;rolni, hogy egy adott nev&#x171; pizz&#xE1;b&#xF3;l mennyit rendelt a felhaszn&#xE1;l&#xF3;, &#xE9;s ennyi pizz&#xE1;&#xE9;rt mennyit kell fizetnie. Az oszt&#xE1;ly konstruktora egy pizz&#xE1;t &#xE9;s egy mennyis&#xE9;g &#xE9;rt&#xE9;ket v&#xE1;r param&#xE9;terben (az ut&#xF3;bbi param&#xE9;tert nem k&#xF6;telez&#x151; megadni, annak alap&#xE9;rt&#xE9;ke 1). A <code>$nev</code> adattagot a pizza nev&#xE9;vel, a <code>$mennyiseg</code> adattagot a param&#xE9;terben kapott mennyis&#xE9;g &#xE9;rt&#xE9;kkel, az <code>$ar</code> adattagot pedig a pizza &#xE1;r&#xE1;nak &#xE9;s a mennyis&#xE9;gnek a szorzat&#xE1;val inicializ&#xE1;ljuk (hiszen <code>$mennyiseg</code>-szer kell kifizetnie a felhaszn&#xE1;l&#xF3;nak a pizza &#xE1;r&#xE1;t).</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">KosarItem</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-private">private</span> <span class="token keyword type-declaration keyword-string">string</span> <span class="token variable">$nev</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-private">private</span> <span class="token keyword type-declaration keyword-int">int</span> <span class="token variable">$mennyiseg</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-private">private</span> <span class="token keyword type-declaration keyword-int">int</span> <span class="token variable">$ar</span><span class="token punctuation">;</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-function">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token class-name type-declaration">Pizza</span> <span class="token variable">$pizza</span><span class="token punctuation">,</span> <span class="token keyword type-hint keyword-int">int</span> <span class="token variable">$mennyiseg</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token this">$this</span><span class="token operator">-&gt;</span><span class="token property">nev</span> <span class="token operator">=</span> <span class="token variable">$pizza</span><span class="token operator">-&gt;</span><span class="token function">getNev</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token this">$this</span><span class="token operator">-&gt;</span><span class="token property">mennyiseg</span> <span class="token operator">=</span> <span class="token variable">$mennyiseg</span><span class="token punctuation">;</span>
+    <span class="token this">$this</span><span class="token operator">-&gt;</span><span class="token property">ar</span> <span class="token operator">=</span> <span class="token this">$this</span><span class="token operator">-&gt;</span><span class="token property">mennyiseg</span> <span class="token operator">*</span> <span class="token variable">$pizza</span><span class="token operator">-&gt;</span><span class="token function">getAr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</pre><p>A felhaszn&#xE1;l&#xF3;k kosar&#xE1;ban ilyen, <code>KosarItem</code> t&#xED;pus&#xFA; objektumokat fogunk t&#xE1;rolni.</p>
+<p>TODO</p>
+<h4 class="mume-header" id="13-a-kos%C3%A1rba-t%C3%A9tel-funkci%C3%B3-megval%C3%B3s%C3%ADt%C3%A1sa">1.3. A kos&#xE1;rba t&#xE9;tel funkci&#xF3; megval&#xF3;s&#xED;t&#xE1;sa</h4>
+
+<p>TODO</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
