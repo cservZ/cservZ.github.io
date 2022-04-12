@@ -4,23 +4,23 @@
 
 Az eheti órán újból elővesszük a már jól ismert projektünket, az Irinyi Pizzázó weboldalát. 
 
-Az eddigi gyakorlatok során már megvalósítottuk a regisztrációt (profilkép feltöltéssel), a bejelentkezést, valamint volt szó a menetkövetésről. Emlékeztetőképpen: a menetkövetést mi arra használtuk, hogy miután a felhasználó sikeresen bejelentkezett, akkor a `$_SESSION` tömbbe egy `user` kulccsal beleraktuk azt a `Felhasznalo` objektumot, ami a bejelentkezett felhasználót reprezentálja (ily módon a belépett felhasználó adatait a `$_SESSION["user"]` indexeléssel el tudtuk érni az egyes aloldalakon).
+Az eddigi gyakorlatok során már megvalósítottuk a regisztrációt (profilkép feltöltéssel), a bejelentkezést, valamint volt szó a menetkövetésről is. Emlékeztetőképpen: a menetkövetést mi arra használtuk, hogy miután a felhasználó sikeresen bejelentkezett a login.php-ban, akkor a `$_SESSION` tömbbe egy `user` kulccsal beleraktuk azt a `Felhasznalo` objektumot, ami a bejelentkezett felhasználót reprezentálja. Ily módon a belépett felhasználó adatait a `$_SESSION["user"]` indexeléssel el tudtuk érni az egyes aloldalakon.
 
 Az eheti feladatunk a pizzarendelés megvalósítása lenne. Szeretnénk elérni, hogy a bejelentkezett felhasználók...
 
 * ...tudjanak pizzákat a kosarukba tenni
 * ...a kosarukból ki tudjanak törölni pizzákat
-* ...a kosár tartalmát meg tudják rendelni (a rendeléseket az `admin` nevű felhasználó fogja megkapni, és ő fogja tudni kiszolgálni azokat).
+* ...a kosár tartalmát meg tudják rendelni (a rendeléseket majd az `admin` nevű felhasználó fogja megkapni, és ő fogja tudni kiszolgálni azokat).
 
 
 ### 1. Kosárba tétel
 
-A **pizza.php** oldalon betöltjük a pizzak.txt fájlban tárolt pizzák adatait a `$pizzak` változóba (ez egy `Pizza` típusú objektumokat tároló tömb lesz), majd egy táblázatban kiíratjuk az egyes pizzák adatait.
+A **pizza.php** oldalon betöltjük a pizzak.txt fájlban tárolt pizzákat a `$pizzak` változóba (ez egy `Pizza` típusú objektumokat tároló tömb lesz), majd egy táblázatban kiíratjuk az egyes pizzák adatait.
 
 
 #### 1.1. A "Kosárba" gomb elrejtése a nem bejelentkezett felhasználók elől
 
-Azt szeretnénk, hogy csak bejelentkezett felhasználók tudjanak a kosarukba tenni pizzákat. Rejtsük el a nem belépett felhasználók elől az egyes sorok utolsó cellájában megjelenő "Kosárba" gombot (ehhez csak meg kell néznünk, hogy be lett-e állítva a `$_SESSION["user"]` értéke)!
+Azt szeretnénk elérni, hogy csak bejelentkezett felhasználók tudjanak a kosarukba tenni pizzákat. Rejtsük el a nem belépett felhasználók elől az egyes táblázatsorok utolsó cellájában megjelenő "Kosárba" gombot (ehhez csak meg kell néznünk, hogy be lett-e állítva a `$_SESSION["user"]` értéke)!
 
 ```php
 <table id="pizza-table">
@@ -58,7 +58,7 @@ Nézzük meg a kosárba tételt elvégző HTML űrlap forráskódját!
 </form>
 ```
 
-Látható, hogy az űrlapot a jelenlegi PHP fájlban, a pizza.php-ban fogjuk feldolgozni. Mivel GET-tel továbbítjuk az űrlapot, ezért az adatok az URL-ben lesznek továbbítva. Az űrlapon találunk egy rejtett mezőt, amit a felhasználó nem fog látni, csupán arra szolgál, hogy továbbítsuk annak a pizzának a nevét, amit kosárba szeretne tenni a felhasználó.
+Látható, hogy az űrlapot a jelenlegi PHP fájlban, a pizza.php-ban fogjuk feldolgozni. Mivel GET-tel továbbítjuk az űrlapot, ezért az űrlapadatok az URL-ben lesznek továbbítva. Az űrlapon találunk egy rejtett beviteli mezőt (ezt a felhasználó nem fogja látni), amely arra szolgál, hogy továbbítsuk a szervernek annak a pizzának a nevét, amit a felhasználó a kosarába szeretne tenni.
 
 A webes projektünkben minden felhasználó rendelkezik egy saját kosárral. A `Felhasznalo` osztály `$kosar` adattagja egy tömb, amely a megrendelt pizzák adatait fogja tárolni. A felhasználó kosarának tartalmát a cart.php oldalon fogjuk megjeleníteni. A kosár tartalmának a megjelenítése valami ilyesmi lesz:
 
@@ -90,9 +90,9 @@ class KosarItem {
 
 A felhasználók kosarában ilyen, `KosarItem` típusú objektumokat fogunk tárolni.
 
-Egy `KosarItem` kosárba tételét a `Felhasznalo` osztályban definiált `kosarbaTesz()` metódus fogja megvalósítani, amely a `$kosar` tömb tartalmát módosítja. A kosárba tételnél továbbra is ügyelünk arra, hogy pizzafajtánként csoportosítsuk a kosárban lévő árukat, így minden item (kosárba tett pizza) neve pontosan egyszer fog szerepelni a kosárban.
+Egy `KosarItem` kosárba tételét a `Felhasznalo` osztályban definiált `kosarbaTesz()` metódus fogja megvalósítani, amely a `$kosar` tömb tartalmát módosítja. A kosárba tételnél továbbra is ügyelünk arra, hogy pizzafajtánként csoportosítsuk a kosárban lévő pizzákat, így minden item (kosárba tett pizza) neve pontosan egyszer fog szerepelni a kosárban.
 
-* Ha már szerepelt egy adott nevű item a kosárban, akkor nem teszünk a kosárba egy új itemet, hiszen ekkor elegendő a már meglévő item adatait (mennyiségét és árát) módosítanunk.
+* Ha már szerepel egy adott nevű item a kosárban, akkor az itemet nem tesszük bele újból a kosárba. Ekkor elegendő a már kosárban lévő item adatait (mennyiségét és árát) módosítanunk.
 * Ha a kosárban még nem szerepel egy adott nevű item, akkor egy új itemet teszünk a `$kosar` tömbbe.
 
 ```php
@@ -129,7 +129,7 @@ Az elméleti megtervezés után valósítsuk is meg a kosárba tétel funkciót!
 1. Lekérdezzük a `name="pizza-name"` attribútumal rendelkező mező értékét, azaz a kosárba teendő pizza nevét.
 1. Megkeressük az összes pizza adatát tároló `$pizzak` tömbben azt a pizzát, amelynek a neve megegyezik a kosárba teendő pizza nevével. Ezzel a pizzával létrehozunk egy új `KosarItem` objektumot, amit a `Felhasznalo` osztály `kosarbaTesz()` metódusával belerakunk a bejelentkezett felhasználó kosarába.
 1. Mivel a bejelentkezett felhasználó kosarának tartalma módosult, ezért a felhasználók adatait tároló felhasznalok.txt fájl tartalmát frissítjük a fuggvenyek.php-ban definiált `felhasznalokModositasa()` függvénnyel.
-1. A pizza kosárba tételét követően újratöltjük az oldalt. (Az oldal újratöltésekor a múlt héten látott módon belerakunk az URL-ben egy `siker` kulcsot, aminek segítségével később kiíratunk egy üzenetet a felhasználónak a kosárba tétel sikerességéről.)
+1. A pizza kosárba tételét követően újratöltjük az oldalt. Az oldal újratöltésekor a múlt héten látott módon belerakunk az URL-be egy `siker` kulcsot, aminek segítségével a forráskódban később kiíratunk egy üzenetet a felhasználónak a kosárba tétel sikerességéről.
 
 ```php
 if (isset($_SESSION["user"]) && isset($_GET["add-to-cart-btn"])) {
@@ -153,7 +153,7 @@ if (isset($_SESSION["user"]) && isset($_GET["add-to-cart-btn"])) {
 }
 ```
 
-Nézzük meg a fuggvenyek.php-ban definiált `felhasznalokModositasa()` függvényt! Ez annyit csinál, hogy az 1. paraméterben kapott fájlból (felhasznalok.txt) betölti az összes regisztrált felhasználó adatát, felhasználónév alapján megkeresi a felhasználók között a 2. paraméterben kapott felhasználót (akiknek a kosarát módosítjuk), frissíti ennek a felhasználónak az adatait, majd a módosított felhasználók tömböt elmenti az 1. paraméterben kapott fájlba.
+Nézzük meg a fuggvenyek.php-ban definiált `felhasznalokModositasa()` függvényt! Ez annyit csinál, hogy az 1. paraméterben kapott fájlból (felhasznalok.txt) betölti az összes regisztrált felhasználó adatát, felhasználónév alapján megkeresi a felhasználók között a 2. paraméterben kapott felhasználót (akiknek a kosarát módosítjuk), frissíti ennek a felhasználónak az adatait, majd a módosított `$felhasználok` tömböt elmenti az 1. paraméterben kapott fájlba.
 
 ```php
 function felhasznalokModositasa(string $fajlnev, Felhasznalo $modositandoFelhasznalo) {
@@ -188,7 +188,7 @@ $felhasznalo = $_SESSION["user"];
 $kosar = $felhasznalo->getKosar();
 ```
 
-Amennyiben a kosár nem üres, akkor megjelenítjük a kosárban lévő itemek adatait egy táblázatban (a `KosarItem` osztály gettereinek meghívásával). Egyébként, ha a kosár üres, akkor az "A kosarad jelenleg üres!" üzenetet íratjuk ki.
+Amennyiben a kosár nem üres, akkor megjelenítjük a kosárban lévő itemek adatait egy táblázatban (az adatokat a `KosarItem` osztály publikus gettereinek meghívásával érhetjük el). Egyébként, ha a kosár üres, akkor az "A kosarad jelenleg üres!" üzenetet íratjuk ki.
 
 ```php
 <?php if (count($kosar) > 0) { ?>
@@ -222,7 +222,7 @@ Amennyiben a kosár nem üres, akkor megjelenítjük a kosárban lévő itemek a
 <?php } ?>
 ```
 
-Azért, hogy a felhasználónak megkönnyítsük a dolgát, a fuggvenyek.php-ban definiált `vegosszeg()` függvénnyel kiszámítjuk a kosárban lévő itemekért fizetendő teljes összeget. A függvény működésének értelmezése valószínűleg senki számára nem lesz nehéz, aki megcsinálta a progalapot. :)
+Azért, hogy a felhasználóbarátok legyünk, a fuggvenyek.php-ban definiált `vegosszeg()` függvénnyel kiszámítjuk a kosárban lévő itemekért fizetendő teljes összeget. A függvény működésének értelmezése valószínűleg senki olyan számára nem lesz nehéz, aki túlélte a progalapot. :)
 
 ```php
 function vegosszeg(array $kosar) {
@@ -253,7 +253,7 @@ Látható, hogy a `name="item-name"` attribútummal rendelkező rejtett mezővel
 1. Kérdezzük le, hogy mi a törlendő item neve!
 1. Egy `$ujKosar` nevű tömbben gyűjtsük össze azokat a kosárbeli itemeket, amiket meg akarunk tartani (azaz amiket NEM akarunk törölni a kosárból)!
 1. A felhasználó kosarát állítsuk be az `$ujKosar` változó értékére! 
-1. Mivel frissítettük a bejelentkezett felhasználó kosarát, ezért a `felhasznalokModositasa()` függvénnyel mentsük el a módosításokat a felhasznalok.txt-ben, majd töltsük újra az oldalt!
+1. Mivel frissítettük a bejelentkezett felhasználó kosarát, ezért a `felhasznalokModositasa()` függvénnyel mentsük el a módosításokat a felhasznalok.txt-be, majd töltsük újra az oldalt!
 
 ```php
 if (isset($_GET["delete-from-cart-btn"])) {
@@ -285,7 +285,7 @@ if (isset($_GET["delete-from-cart-btn"])) {
 
 A rendeléseket objektumorientáltan fogjuk kezelni: minden rendelés egy `Rendeles` típusú objektum lesz. Ezeket a rendeléseket a rendelesek.txt-ben fogjuk tárolni a jól megszokott módon, szerializált formában.
 
-A `Rendeles` osztály megtekintésével láthatjuk, hogy minden rendelésről eltároljuk a rendelést feladó felhasználó nevét (`$megrendelo` adattag), a megrendelt itemeket (`$rendelesTartalma` adattag - ez lényegében a kosár tartalma lesz), a rendelés dátumát (`$rendelesDatuma` adattag - ez az aktuális dátum lesz), valamint azt, hogy a rendelést teljesítette-e már az admin (`$teljesitett` adattag).
+A `Rendeles` osztályra rápillantva láthatjuk, hogy minden rendelésről eltároljuk a rendelést feladó felhasználó nevét (`$megrendelo` adattag), a megrendelt itemeket (`$rendelesTartalma` adattag - ez lényegében a kosár tartalma lesz), a rendelés dátumát (`$rendelesDatuma` adattag - ez az aktuális dátum lesz), valamint azt, hogy a rendelést teljesítette-e már az admin (`$teljesitett` adattag).
 
 ```php
 class Rendeles {
@@ -299,13 +299,14 @@ class Rendeles {
     $this->rendelesTartalma = $rendelesTartalma;
     // Alapértelmezett módon egyik rendelés sincs teljesítve.
     $this->teljesitett = false;
-    // A rendelés dátuma az aktuális dátum és időpont lesz (itt a DateTime egy beépített osztály).
+    // A rendelés dátuma az aktuális dátum és időpont lesz (itt a DateTime egy beépített PHP osztály).
     $this->rendelesDatuma = new DateTime();
-    // A dátumokat és időpontokat budapesti ("magyar") időzóna szeretnénk kezelni.
+    // A dátumokat és időpontokat budapesti ("magyar") idő szerint fogjuk kezelni.
     $this->rendelesDatuma->setTimezone(new DateTimeZone("Europe/Budapest")); 
   }
 
   // Getterek és setterek...
+}
 ```
 
 A cart.php-ba visszatérve egy megrendelést az alábbi lépések követésével fogunk feldolgozni: 
@@ -313,7 +314,7 @@ A cart.php-ba visszatérve egy megrendelést az alábbi lépések követésével
 1. Töltsük be a rendelesek.txt-ből az összes rendelés adatát az `adatokBetoltese()` függvénnyel!
 1. Hozzunk létre egy új, `Rendeles` típusú objektumot, amit a bejelentkezett felhasználó felhasználónevével és kosarának tartalmával inicializáljunk! Ezt a rendelést fűzzük hozzá az összes rendelést tároló tömbhöz!
 1. Mentsük el az új rendeléssel kibővített, rendeléseket tároló tömböt a rendelesek.txt-be az `adatokMentese()` függvénnyel!
-1. Mivel a felhasználó megrendelte a kosár tartalmát, ezért ürítsük ki a kosarat!
+1. Mivel a felhasználó megrendelte a kosár tartalmát, ezért ürítsük ki a felhasználó kosarát!
 1. Mivel módosítottuk a bejelentkezett felhasználó kosarát, ezért mentsük el a felhasznalok.txt-be ezt a módosítást a `felhasznalokModositasa()` függvénnyel!
 1. Töltsük újra az oldalt! Az URL-ben elhelyezett `siker` kulcs jelezze a rendelés sikerességét!
 
