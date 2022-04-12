@@ -14,10 +14,6 @@
       
       
       <style>
-      /**
- * prism.js Github theme based on GitHub's theme.
- * @author Sam Clarke
- */
 code[class*="language-"],
 pre[class*="language-"] {
   color: #333;
@@ -273,6 +269,9 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>...a kosarukb&#xF3;l ki tudjanak t&#xF6;r&#xF6;lni pizz&#xE1;kat</li>
 <li>...a kos&#xE1;r tartalm&#xE1;t meg tudj&#xE1;k rendelni (a rendel&#xE9;seket majd az <code>admin</code> nev&#x171; felhaszn&#xE1;l&#xF3; fogja megkapni, &#xE9;s &#x151; fogja tudni kiszolg&#xE1;lni azokat).</li>
 </ul>
+<blockquote>
+<p><strong>Megjegyz&#xE9;s:</strong> A k&#xE9;sz &#xF3;rai projekt let&#xF6;lthet&#x151; <a href="https://drive.google.com/file/d/1LR8XpALtZl-JDiHHjq5jgSksR74yUIUL/view?usp=sharing" target="_blank">ide kattintva</a>.</p>
+</blockquote>
 <h3 class="mume-header" id="1-kos%C3%A1rba-t%C3%A9tel">1. Kos&#xE1;rba t&#xE9;tel</h3>
 
 <p>A <strong>pizza.php</strong> oldalon bet&#xF6;ltj&#xFC;k a pizzak.txt f&#xE1;jlban t&#xE1;rolt pizz&#xE1;kat a <code>$pizzak</code> v&#xE1;ltoz&#xF3;ba (ez egy <code>Pizza</code> t&#xED;pus&#xFA; objektumokat t&#xE1;rol&#xF3; t&#xF6;mb lesz), majd egy t&#xE1;bl&#xE1;zatban ki&#xED;ratjuk az egyes pizz&#xE1;k adatait.</p>
@@ -483,7 +482,7 @@ pre[data-line] .line-highlight[data-end]:after {
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>order-btn<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Rendel&#xE9;s<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
 </pre><p>A rendel&#xE9;seket objektumorient&#xE1;ltan fogjuk kezelni: minden rendel&#xE9;s egy <code>Rendeles</code> t&#xED;pus&#xFA; objektum lesz. Ezeket a rendel&#xE9;seket a rendelesek.txt-ben fogjuk t&#xE1;rolni a j&#xF3;l megszokott m&#xF3;don, szerializ&#xE1;lt form&#xE1;ban.</p>
-<p>A <code>Rendeles</code> oszt&#xE1;lyra r&#xE1;pillantva l&#xE1;thatjuk, hogy minden rendel&#xE9;sr&#x151;l elt&#xE1;roljuk a rendel&#xE9;st felad&#xF3; felhaszn&#xE1;l&#xF3; nev&#xE9;t (<code>$megrendelo</code> adattag), a megrendelt itemeket (<code>$rendelesTartalma</code> adattag - ez l&#xE9;nyeg&#xE9;ben a kos&#xE1;r tartalma lesz), a rendel&#xE9;s d&#xE1;tum&#xE1;t (<code>$rendelesDatuma</code> adattag - ez az aktu&#xE1;lis d&#xE1;tum lesz), valamint azt, hogy a rendel&#xE9;st teljes&#xED;tette-e m&#xE1;r az admin (<code>$teljesitett</code> adattag).</p>
+<p>A <code>Rendeles</code> oszt&#xE1;lyra r&#xE1;pillantva l&#xE1;thatjuk, hogy minden rendel&#xE9;sr&#x151;l elt&#xE1;roljuk a rendel&#xE9;st felad&#xF3; felhaszn&#xE1;l&#xF3; nev&#xE9;t (<code>$megrendelo</code> adattag), a megrendelt itemeket (<code>$rendelesTartalma</code> adattag - ez l&#xE9;nyeg&#xE9;ben a kos&#xE1;r tartalma lesz), a rendel&#xE9;s d&#xE1;tum&#xE1;t (<code>$rendelesDatuma</code> adattag - ez az aktu&#xE1;lis d&#xE1;tum &#xE9;s id&#x151;pont lesz), valamint azt, hogy a rendel&#xE9;st teljes&#xED;tette-e m&#xE1;r az admin (<code>$teljesitett</code> adattag).</p>
 <pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-class">class</span> <span class="token class-name-definition class-name">Rendeles</span> <span class="token punctuation">{</span>
   <span class="token keyword keyword-private">private</span> <span class="token keyword type-declaration keyword-string">string</span> <span class="token variable">$megrendelo</span><span class="token punctuation">;</span>
   <span class="token keyword keyword-private">private</span> <span class="token keyword type-declaration keyword-array">array</span> <span class="token variable">$rendelesTartalma</span><span class="token punctuation">;</span>
@@ -556,7 +555,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <span class="token punctuation">}</span>
 </pre><h4 class="mume-header" id="32-a-rendel%C3%A9sek-kilist%C3%A1z%C3%A1sa">3.2. A rendel&#xE9;sek kilist&#xE1;z&#xE1;sa</h4>
 
-<p>Az orders.php-ban t&#xF6;lts&#xFC;k be a kor&#xE1;bban sokat haszn&#xE1;lt <code>adatokBetoltese()</code> f&#xFC;ggv&#xE9;nnyel a rendel&#xE9;sek adatait a rendelesek.txt-b&#x151;l! A rendel&#xE9;seket v&#xE1;logassuk sz&#xE9;t &quot;teljes&#xED;tett&quot; &#xE9;s &quot;nem teljes&#xED;tett&quot; rendel&#xE9;sekre annak f&#xFC;ggv&#xE9;ny&#xE9;ben, hogy a <code>$teljesitett</code> adattag &#xE9;rt&#xE9;ke igaz-e vagy sem (<code>getTeljesitett()</code> getter)!</p>
+<p>Az orders.php-ban t&#xF6;lts&#xFC;k be a kor&#xE1;bban sokat haszn&#xE1;lt <code>adatokBetoltese()</code> f&#xFC;ggv&#xE9;nnyel a rendel&#xE9;sek adatait a rendelesek.txt-b&#x151;l! A rendel&#xE9;seket v&#xE1;logassuk sz&#xE9;t &quot;teljes&#xED;tett&quot; &#xE9;s &quot;nem teljes&#xED;tett&quot; rendel&#xE9;sekre annak f&#xFC;ggv&#xE9;ny&#xE9;ben, hogy a <code>$teljesitett</code> adattag &#xE9;rt&#xE9;ke igaz-e vagy sem (<code>isTeljesitett()</code> getter)!</p>
 <pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$rendelesek</span> <span class="token operator">=</span> <span class="token function">adatokBetoltese</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;data/rendelesek.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token variable">$teljesitettRendelesek</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token variable">$nemTeljesitettRendelesek</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -620,7 +619,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p><a href="./img/orders.png"><img src="./img/orders.png" alt="A rendel&#xE9;seket list&#xE1;z&#xF3; oldal"></a></p>
 <p>A fenti k&#xF3;dr&#xE9;szletben alapvet&#x151;en k&#xE9;t dolgot fontos megeml&#xED;teni:</p>
 <ul>
-<li>A rendel&#xE9;sek id&#x151;pontj&#xE1;t sz&#xF6;vegg&#xE9; alak&#xED;tva jelen&#xED;tj&#xFC;k meg <code>&#xC9;V-H&#xD3;NAP-NAP &#xD3;RA:PERC:M&#xC1;SODPERC</code> form&#xE1;tumban. Ezt &#xFA;gy val&#xF3;s&#xED;tjuk meg, hogy haszn&#xE1;ljuk a d&#xE1;tumok &#xE9;s id&#x151;pontok reprezent&#xE1;l&#xE1;s&#xE1;ra haszn&#xE1;lt <code>DateTime</code> objektum <code>format()</code> met&#xF3;dus&#xE1;t, amelynek param&#xE9;terek&#xE9;nt megadjuk a megjelen&#xED;tend&#x151; form&#xE1;tumot (<code>&quot;Y-m-d H:i:s&quot;</code>).</li>
+<li>A rendel&#xE9;sek id&#x151;pontj&#xE1;t sz&#xF6;vegg&#xE9; alak&#xED;tva jelen&#xED;tj&#xFC;k meg <code>&#xC9;V-H&#xD3;NAP-NAP &#xD3;RA:PERC:M&#xC1;SODPERC</code> form&#xE1;tumban. Ezt &#xFA;gy val&#xF3;s&#xED;tjuk meg, hogy haszn&#xE1;ljuk a d&#xE1;tumok &#xE9;s id&#x151;pontok reprezent&#xE1;l&#xE1;s&#xE1;ra szolg&#xE1;l&#xF3; <code>DateTime</code> objektum <code>format()</code> met&#xF3;dus&#xE1;t, amelynek param&#xE9;terek&#xE9;nt megadjuk a megjelen&#xED;tend&#x151; form&#xE1;tumot (<code>&quot;Y-m-d H:i:s&quot;</code>).</li>
 <li>A rendel&#xE9;sek tartalma egy <code>KosarItem</code> objektumokat t&#xE1;rol&#xF3; t&#xF6;mb. Ennek a t&#xF6;mbnek az elemeit a 7. gyakorlaton tanult <code>implode()</code> f&#xFC;ggv&#xE9;nnyel egyes&#xED;tj&#xFC;k egy sz&#xF6;vegg&#xE9; (az egyes itemeket egy sort&#xF6;r&#xE9;s fogja elv&#xE1;lasztani). Az <code>implode()</code> h&#xED;v&#xE1;s&#xE1;nak hat&#xE1;s&#xE1;ra a kos&#xE1;rban l&#xE9;v&#x151; itemek automatikusan sz&#xF6;vegg&#xE9; lesznek alak&#xED;tva, azaz a <code>KosarItem</code> oszt&#xE1;lyban defini&#xE1;lt <code>__toString()</code> met&#xF3;dus ker&#xFC;l megh&#xED;v&#xE1;sra.</li>
 </ul>
 <h4 class="mume-header" id="33-rendel%C3%A9sek-teljes%C3%ADt%C3%A9se">3.3. Rendel&#xE9;sek teljes&#xED;t&#xE9;se</h4>

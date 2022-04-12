@@ -12,6 +12,8 @@ Az eheti feladatunk a pizzarendelés megvalósítása lenne. Szeretnénk elérni
 * ...a kosarukból ki tudjanak törölni pizzákat
 * ...a kosár tartalmát meg tudják rendelni (a rendeléseket majd az `admin` nevű felhasználó fogja megkapni, és ő fogja tudni kiszolgálni azokat).
 
+> **Megjegyzés:** A kész órai projekt letölthető <a href="https://drive.google.com/file/d/1LR8XpALtZl-JDiHHjq5jgSksR74yUIUL/view?usp=sharing" target="_blank">ide kattintva</a>.
+
 
 ### 1. Kosárba tétel
 
@@ -285,7 +287,7 @@ if (isset($_GET["delete-from-cart-btn"])) {
 
 A rendeléseket objektumorientáltan fogjuk kezelni: minden rendelés egy `Rendeles` típusú objektum lesz. Ezeket a rendeléseket a rendelesek.txt-ben fogjuk tárolni a jól megszokott módon, szerializált formában.
 
-A `Rendeles` osztályra rápillantva láthatjuk, hogy minden rendelésről eltároljuk a rendelést feladó felhasználó nevét (`$megrendelo` adattag), a megrendelt itemeket (`$rendelesTartalma` adattag - ez lényegében a kosár tartalma lesz), a rendelés dátumát (`$rendelesDatuma` adattag - ez az aktuális dátum lesz), valamint azt, hogy a rendelést teljesítette-e már az admin (`$teljesitett` adattag).
+A `Rendeles` osztályra rápillantva láthatjuk, hogy minden rendelésről eltároljuk a rendelést feladó felhasználó nevét (`$megrendelo` adattag), a megrendelt itemeket (`$rendelesTartalma` adattag - ez lényegében a kosár tartalma lesz), a rendelés dátumát (`$rendelesDatuma` adattag - ez az aktuális dátum és időpont lesz), valamint azt, hogy a rendelést teljesítette-e már az admin (`$teljesitett` adattag).
 
 ```php
 class Rendeles {
@@ -377,7 +379,7 @@ if ($_SESSION["user"]->getFelhasznalonev() !== "admin") {   // Ha nem az admin v
 
 #### 3.2. A rendelések kilistázása
 
-Az orders.php-ban töltsük be a korábban sokat használt `adatokBetoltese()` függvénnyel a rendelések adatait a rendelesek.txt-ből! A rendeléseket válogassuk szét "teljesített" és "nem teljesített" rendelésekre annak függvényében, hogy a `$teljesitett` adattag értéke igaz-e vagy sem (`getTeljesitett()` getter)!
+Az orders.php-ban töltsük be a korábban sokat használt `adatokBetoltese()` függvénnyel a rendelések adatait a rendelesek.txt-ből! A rendeléseket válogassuk szét "teljesített" és "nem teljesített" rendelésekre annak függvényében, hogy a `$teljesitett` adattag értéke igaz-e vagy sem (`isTeljesitett()` getter)!
 
 ```php
 $rendelesek = adatokBetoltese("data/rendelesek.txt");
@@ -451,7 +453,7 @@ Végsősoron majd valami ilyesmit fogunk látni a fenti kódrészlet eredmények
 
 A fenti kódrészletben alapvetően két dolgot fontos megemlíteni:
 
-* A rendelések időpontját szöveggé alakítva jelenítjük meg `ÉV-HÓNAP-NAP ÓRA:PERC:MÁSODPERC` formátumban. Ezt úgy valósítjuk meg, hogy használjuk a dátumok és időpontok reprezentálására használt `DateTime` objektum `format()` metódusát, amelynek paramétereként megadjuk a megjelenítendő formátumot (`"Y-m-d H:i:s"`).
+* A rendelések időpontját szöveggé alakítva jelenítjük meg `ÉV-HÓNAP-NAP ÓRA:PERC:MÁSODPERC` formátumban. Ezt úgy valósítjuk meg, hogy használjuk a dátumok és időpontok reprezentálására szolgáló `DateTime` objektum `format()` metódusát, amelynek paramétereként megadjuk a megjelenítendő formátumot (`"Y-m-d H:i:s"`).
 * A rendelések tartalma egy `KosarItem` objektumokat tároló tömb. Ennek a tömbnek az elemeit a 7. gyakorlaton tanult `implode()` függvénnyel egyesítjük egy szöveggé (az egyes itemeket egy sortörés fogja elválasztani). Az `implode()` hívásának hatására a kosárban lévő itemek automatikusan szöveggé lesznek alakítva, azaz a `KosarItem` osztályban definiált `__toString()` metódus kerül meghívásra.
 
 
