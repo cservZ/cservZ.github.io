@@ -62,7 +62,7 @@ Látható, hogy az űrlapot a jelenlegi PHP fájlban, a pizza.php-ban fogjuk fel
 
 A webes projektünkben minden felhasználó rendelkezik egy saját kosárral. A `Felhasznalo` osztály `$kosar` adattagja egy tömb, amely a megrendelt pizzák adatait fogja tárolni. A felhasználó kosarának tartalmát a cart.php oldalon fogjuk megjeleníteni. A kosár tartalmának a megjelenítése valami ilyesmi lesz:
 
-![Kosaram](./img/cart.png)
+[![A kosár tartalmának listázása](./img/cart.png)](./img/cart.png)
 
 Amennyiben egy pizzából többet rendelünk - például sonkás-kukoricás pizzából rendelünk hármat -, akkor nem azt fogjuk csinálni, hogy 3-szor megjelenítjük a sonkás-kukoricás pizzát a "Kosaram" táblázatban. Ehelyett azt fogjuk csinálni, hogy minden pizzafajta esetén számontartjuk, hogy az adott pizzából összesen mennyit rendelt a felhasználó, és ezért mennyit kell fizetnie (tehát lényegében a kosárba tett pizzákat nevük alapján csoportosítjuk.)
 
@@ -333,6 +333,164 @@ if (isset($_GET["order-btn"])) {
 ```
 
 
-### 3. Rendelések megjelenítése az admin számára
+### 3. A "Rendelések" oldal működőképessé tétele
 
-TODO
+Végezetül ebben a fejezetben az **orders.php** oldalt fogjuk működőképessé tenni. Ez az oldal a beérkező rendelések megjelenítését valósítja meg. El fogjuk érni azt is, hogy ezt az oldalt csak az admin felhasználó tekinthesse meg.
+
+
+#### 3.1. Eltérő navigációs menü az admin felhasználónak
+
+Ha az admin felhasználó adataival belépünk a weboldalra (felhasználónév: `admin`, jelszó: `Macska123`), akkor a navigációs menüben a "Kosaram" menüpont helyett egy "Rendelések" menüpontot szeretnénk megjeleníteni, ami az orders.php oldalra navigál minket. Ehhez át kell írnunk a fuggvenyek.php-ban a navigációs menü generálását végző `navigacioGeneralasa()` függvényt.
+
+```php
+function navigacioGeneralasa(string $aktualisOldal) {
+  // ...
+  if (isset($_SESSION["user"])) {
+    if ($_SESSION["user"]->getFelhasznalonev() === "admin") {
+      echo "<li" . ($aktualisOldal === "orders" ? " class='active'" : "") . ">" .
+        "<a href='orders.php'>Rendelések</a>" .
+      "</li>";
+    } else {
+      echo "<li" . ($aktualisOldal === "cart" ? " class='active'" : "") . ">" .
+        "<a href='cart.php'>Kosaram</a>" .
+      "</li>";
+    }
+    // ...
+  } else {
+    // ...
+  }
+}
+```
+
+Az orders.php elején ellenőrizzük, hogy az admin felhasználói fiókkal vagyunk-e belépve. Amennyiben nem, akkor irányítsuk át a felhasználót egy másik oldalra!
+
+```php
+if (!isset($_SESSION["user"])) {                            // Ha egyáltalán nincs belépve a felhasználó...
+  header("Location: login.php");
+}
+
+if ($_SESSION["user"]->getFelhasznalonev() !== "admin") {   // Ha nem az admin van belépve...
+  header("Location: index.php");
+}
+```
+
+
+#### 3.2. A rendelések kilistázása
+
+Az orders.php-ban töltsük be a korábban sokat használt `adatokBetoltese()` függvénnyel a rendelések adatait a rendelesek.txt-ből! A rendeléseket válogassuk szét "teljesített" és "nem teljesített" rendelésekre annak függvényében, hogy a `$teljesitett` adattag értéke igaz-e vagy sem (`getTeljesitett()` getter)!
+
+```php
+$rendelesek = adatokBetoltese("data/rendelesek.txt");
+$teljesitettRendelesek = [];
+$nemTeljesitettRendelesek = [];
+
+foreach ($rendelesek as $rendeles) {
+  if ($rendeles->isTeljesitett()) {
+    $teljesitettRendelesek[] = $rendeles;
+  } else {
+    $nemTeljesitettRendelesek[] = $rendeles;
+  }
+}
+```
+
+Az oldalon először a nem teljesített, majd pedig a teljesített rendelések adatait fogjuk megjeleníteni egy-egy táblázatban. A nem teljesített rendelések esetén megjelenítünk egy "Teljesítés" gombot is az admin felhasználó számára, amivel majd az adott rendelést teljesíteni tudja.
+
+```php
+<?php if (count($rendelesek) > 0) { ?>
+  <?php if (count($nemTeljesitettRendelesek) > 0) { ?>
+    <h2 class="center">Aktív (nem teljesített) rendelések</h2>
+    <table>
+      <tr>
+        <th>Rendelést feladó felhasználó</th>
+        <th>Rendelés dátuma</th>
+        <th>Rendelés tartalma</th>
+        <th></th>
+      </tr>
+      <?php foreach ($nemTeljesitettRendelesek as $rendeles) { ?>
+      <tr>
+        <td><?php echo $rendeles->getMegrendelo(); ?></td>
+        <td><?php echo $rendeles->getRendelesDatuma()->format("Y-m-d H:i:s"); ?></td>
+        <td><?php echo implode("<br>", $rendeles->getRendelesTartalma()); ?></td>
+        <td>
+          <form action="orders.php" method="GET" class="complete-order-form">
+            <input type="hidden" name="orderer" value="<?php echo $rendeles->getMegrendelo(); ?>">
+            <input type="hidden" name="order-date" value="<?php echo $rendeles->getRendelesDatuma()->format('Y-m-d H:i:s'); ?>">
+            <input type="submit" name="complete-order-btn" value="Teljesítés">
+          </form>
+        </td>
+      </tr>
+      <?php } ?>
+    </table>
+  <?php } ?>
+  <?php if (count($teljesitettRendelesek) > 0) { ?>
+    <hr>
+    <h2 class="center">Teljesített rendelések</h2>
+    <table>
+        <tr>
+          <th>Rendelést feladó felhasználó</th>
+          <th>Rendelés dátuma</th>
+          <th>Rendelés tartalma</th>
+        </tr>
+        <?php foreach ($teljesitettRendelesek as $rendeles) { ?>
+        <tr>
+          <td><?php echo $rendeles->getMegrendelo(); ?></td>
+          <td><?php echo $rendeles->getRendelesDatuma()->format("Y-m-d H:i:s"); ?></td>
+          <td><?php echo implode("<br>", $rendeles->getRendelesTartalma()); ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+  <?php } ?>
+<?php } else { ?>
+  <p class="center strong">Még egyetlen rendelés sem érkezett!</p>
+<?php } ?>
+```
+
+Végsősoron majd valami ilyesmit fogunk látni a fenti kódrészlet eredményeként:
+
+[![A rendeléseket listázó oldal](./img/orders.png)](./img/orders.png)
+
+A fenti kódrészletben alapvetően két dolgot fontos megemlíteni:
+
+* A rendelések időpontját szöveggé alakítva jelenítjük meg `ÉV-HÓNAP-NAP ÓRA:PERC:MÁSODPERC` formátumban. Ezt úgy valósítjuk meg, hogy használjuk a dátumok és időpontok reprezentálására használt `DateTime` objektum `format()` metódusát, amelynek paramétereként megadjuk a megjelenítendő formátumot (`"Y-m-d H:i:s"`).
+* A rendelések tartalma egy `KosarItem` objektumokat tároló tömb. Ennek a tömbnek az elemeit a 7. gyakorlaton tanult `implode()` függvénnyel egyesítjük egy szöveggé (az egyes itemeket egy sortörés fogja elválasztani). Az `implode()` hívásának hatására a kosárban lévő itemek automatikusan szöveggé lesznek alakítva, azaz a `KosarItem` osztályban definiált `__toString()` metódus kerül meghívásra.
+
+
+#### 3.3. Rendelések teljesítése
+
+Érjük el, hogy az admin felhasználónak legyen lehetősége a még nem teljesített rendeléseket teljesítenie! A "Teljesítés" gombot tartalmazó űrlap HTML forráskódja minden rendelés esetén a következő:
+
+```html
+<form action="orders.php" method="GET" class="complete-order-form">
+  <input type="hidden" name="orderer" value="<?php echo $rendeles->getMegrendelo(); ?>">
+  <input type="hidden" name="order-date" value="<?php echo $rendeles->getRendelesDatuma()->format('Y-m-d H:i:s'); ?>">
+  <input type="submit" name="complete-order-btn" value="Teljesítés">
+</form>
+```
+
+A rendeléseket két adattag alapján fogjuk azonosítani: a rendelést leadó felhasználó neve és a rendelés időpontja alapján (feltehetjük, hogy ugyanabban az időpillanatban ugyanaz a felhasználó nem ad le több rendelést). Emiatt az űrlapunkon két rejtett mező lesz, amelyekben ezt a két információt továbbítjuk.
+
+A rendelés teljesítését a következő lépésekkel valósíthatjuk meg:
+
+1. Kérdezzük le a rejtett mezőkből a rendelést feladó felhasználó nevét és a rendelés időpontját!
+1. Az összes rendelés adatát tároló `$rendelesek` tömbben keressük meg a megadott megrendelővel és leadási időponttal rendelkező rendelést!
+1. Az előző pontban megtalált megrendelés `$teljesitett` adattagját állítsuk igazra!
+1. Az `adatokMentese()` függvénnyel mentsük el a módosított `$rendelesek` tömböt a rendelesek.txt-be, majd ezt követően töltsük újra az oldalt!
+
+```php
+if (isset($_GET["complete-order-btn"])) {
+  $megrendelo = $_GET["orderer"];                       // 1. lépés
+  $rendelesDatuma = $_GET["order-date"];
+
+  // MEGJEGYZÉS: Mivel a foreach-ciklusban itt is csak annyit csinálunk, hogy egy objektum adattagját módosítjuk egy setter
+  // hívással, ezért a $rendeles ciklusváltozó elé nem kell &-jelet írnunk.
+
+  foreach ($rendelesek as $rendeles) {                // 2. lépés
+    if ($rendeles->getMegrendelo() === $megrendelo && $rendeles->getRendelesDatuma()->format("Y-m-d H:i:s") === $rendelesDatuma) {
+      $rendeles->setTeljesitett(true);                // 3. lépés
+    }
+  }
+
+  adatokMentese("data/rendelesek.txt", $rendelesek);  // 4. lépés
+  header("Location: orders.php");
+}
+```
