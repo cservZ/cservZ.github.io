@@ -72,10 +72,6 @@ section p {
 
 /* === NAVIGATION === */
 
-nav {
-    background: #3c31dd;
-}
-
 .navbar .navbar-brand {
     letter-spacing: 2px;
 }
@@ -176,7 +172,7 @@ nav {
     transition: all 0.2s;
 }
 
-tr:first-of-type th, tr:first-of-type td {
+tr:last-of-type th, tr:last-of-type td {
     border: none;
 }
 
@@ -211,6 +207,9 @@ tr:first-of-type th, tr:first-of-type td {
 .accordion-body h5 {
     font-weight: 600;
     font-size: 100%;
+}
+
+.accordion-body h5:not(:first-of-type) {
     margin-top: 15px;
 }
 
@@ -230,6 +229,13 @@ tr:first-of-type th, tr:first-of-type td {
     }
 }
 
+@media only screen and (max-width: 956px) {
+    section:not(#landing) {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
 @media only screen and (max-width: 620px) {
     #about .btn {
         width: 100% !important;
@@ -238,8 +244,12 @@ tr:first-of-type th, tr:first-of-type td {
 
 @media only screen and (max-width: 510px) {
     section:not(#landing) {
-        padding-left: 10vw;
-        padding-right: 10vw;
+        padding-left: 7.5vw;
+        padding-right: 7.5vw;
+    }
+
+    nav, section, .accordion-body, footer {
+        font-size: 90%;
     }
 
     .typewriter h1 {
@@ -248,7 +258,7 @@ tr:first-of-type th, tr:first-of-type td {
 }
 
 @media only screen and (max-width: 366px) {
-    nav, section, footer {
+    nav, section, .accordion-body, footer {
         font-size: 80%;
     }
 
