@@ -38,7 +38,7 @@ section p {
 /* === SOME CUSTOM UTILITY CLASSES === */
 
 .custom-primary {
-    background: rgb(0, 28, 51);
+    background: #001c33;
 }
 
 .custom-secondary {
@@ -64,7 +64,7 @@ section p {
 /* === NAVIGATION === */
 
 nav {
-    background: rgb(42, 46, 53);
+    background: #3c31dd;
 }
 
 .navbar .navbar-brand {
@@ -103,7 +103,7 @@ nav {
 }
 
 .wave .shape-fill-01 {
-    fill: rgb(0, 28, 51);
+    fill: #001c33;
 }
 
 .wave .shape-fill-02 {
